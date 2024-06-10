@@ -3,7 +3,13 @@
 $CurrentCity = file_get_contents('https://ipapi.co/'.get_client_ip().'/city/');
 
 
-echo $CurrentCity;
+//echo $CurrentCity;
+
+$CityList = array();
+
+$CityList['Noida'] = 'noida';
+$CityList['New Delhi'] = 'newdelhi';
+$CityList['Ghaziabad'] = 'ghaziabad';
 
 
 function get_client_ip()
