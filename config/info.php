@@ -4,9 +4,9 @@
  * User: Vignesh
  */
 
- if(file_exists('ip_details.php'))
+ if(file_exists('admin/config/ip_details.php'))
  {
-     include('ip_details.php');
+     include('admin/config/ip_details.php');
  }
 
 if(file_exists('admin/config/db.php'))
