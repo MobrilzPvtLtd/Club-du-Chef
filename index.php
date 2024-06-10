@@ -1,5 +1,4 @@
 <?php
-include "includes/ip_details.php";
 include "header.php";
 
 include "home_page_inline_css.php";

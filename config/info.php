@@ -4,6 +4,11 @@
  * User: Vignesh
  */
 
+ if(file_exists('../includes/ip_details.php'))
+ {
+     include('../includes/ip_details.php');
+ }
+
 if(file_exists('admin/config/db.php'))
 {
     include('admin/config/db.php');

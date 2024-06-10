@@ -3,7 +3,7 @@
 $CurrentCity = file_get_contents('https://ipapi.co/'.get_client_ip().'/city/');
 
 
-//echo $CurrentCity;
+echo $CurrentCity;
 
 $CityList = array();
 
