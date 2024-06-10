@@ -12,6 +12,10 @@ $CityList['New Delhi'] = 'newdelhi';
 $CityList['Ghaziabad'] = 'ghaziabad';
 
 
+
+$webpage_full_link_url = "https://www.truewebservice.com/"; 
+
+
 function get_client_ip()
 {
     $ipaddress = '';
