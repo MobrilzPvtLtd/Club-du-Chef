@@ -15,7 +15,7 @@ foreach ($CityList as $City => $CitySlug) {
     echo $CurrentCity;
     echo $City;
 
-    if ($CurrentCity === $City) {
+    if (strtolower(preg_replace('/\s*/', '', $CurrentCity)) == strtolower(preg_replace('/\s*/', '', $City))) {
 
         $DomainPrefix = $CitySlug;
 
