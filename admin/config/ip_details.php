@@ -30,7 +30,7 @@ echo $FullHostname = $DomainPrefix . '.truewebservice.com';
 
 echo $_SERVER['HTTP_HOST'];
 
-
+// Check if its diffent then redirect to that sub domian
 
 $webpage_full_link_url = "https://www.truewebservice.com/";
 
