@@ -12,10 +12,10 @@ $CityList['Ghaziabad'] = 'ghaziabad';
 
 foreach ($CityList as $City => $CitySlug) {
 
-    echo $CurrentCity;
-    echo $City;
+    $CurrentCity = strtolower(preg_replace('/\s*/', '', $CurrentCity));
+    $City = strtolower(preg_replace('/\s*/', '', $City));
 
-    if (strtolower(preg_replace('/\s*/', '', $CurrentCity)) == strtolower(preg_replace('/\s*/', '', $City))) {
+    if ( $CurrentCity ==  $City) {
 
         $DomainPrefix = $CitySlug;
 
@@ -28,7 +28,7 @@ foreach ($CityList as $City => $CitySlug) {
 }
 
 // Now make full hostname name
-
+echo '<br/>';
 echo $FullHostname = $DomainPrefix . '.truewebservice.com';
 
 echo $_SERVER['HTTP_HOST'];
