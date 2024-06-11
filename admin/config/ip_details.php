@@ -14,7 +14,7 @@ foreach ($CityList as $City => $CitySlug) {
 
     echo $CitySlug;
 
-    if ($CurrentCity == $City) {
+    if ($CurrentCity === $City) {
 
         $DomainPrefix = $CitySlug;
 
