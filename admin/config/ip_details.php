@@ -10,16 +10,16 @@ $CityList['Noida'] = 'noida';
 $CityList['New Delhi'] = 'newdelhi';
 $CityList['Ghaziabad'] = 'ghaziabad';
 
-echo $CurrentCity = strtolower(preg_replace('/\s*/', '', $CurrentCity));
+$CurrentCity = strtolower(preg_replace('/\s*/', '', $CurrentCity));
 
-echo '<br/>=============<br/>';
+//echo '<br/>=============<br/>';
 
 foreach ($CityList as $City => $CitySlug) {
 
-   
-    echo $City = strtolower(preg_replace('/\s*/', '', $City));
 
-    if ( $CurrentCity ==  $City) {
+    // echo $City = strtolower(preg_replace('/\s*/', '', $City));
+
+    if ($CurrentCity == $City) {
 
         $DomainPrefix = $CitySlug;
 
@@ -34,14 +34,22 @@ foreach ($CityList as $City => $CitySlug) {
 }
 
 // Now make full hostname name
-echo '<br/>=============<br/>';
-echo $FullHostname = $DomainPrefix . '.truewebservice.com';
+//echo '<br/>=============<br/>';
+$FullHostname = $DomainPrefix . '.truewebservice.com';
 
-echo $_SERVER['HTTP_HOST'];
+//echo $_SERVER['HTTP_HOST'];
+
 
 // Check if its diffent then redirect to that sub domian
 
-$webpage_full_link_url = "https://www.truewebservice.com/";
+$webpage_full_link_url = "https://" . $FullHostname;
+
+if ($FullHostname != $_SERVER['HTTP_HOST']) {
+    header('Location: ' . $webpage_full_link_url);
+    exit;
+}
+
+
 
 
 function get_client_ip()
