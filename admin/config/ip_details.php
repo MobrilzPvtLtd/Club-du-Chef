@@ -12,7 +12,7 @@ $CityList['Ghaziabad'] = 'ghaziabad';
 
 foreach ($CityList as $City => $CitySlug) {
 
-    echo $City;
+    echo $CitySlug;
 
     if ($CurrentCity == $City) {
 
