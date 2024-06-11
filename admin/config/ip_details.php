@@ -12,6 +12,8 @@ $CityList['Ghaziabad'] = 'ghaziabad';
 
 foreach ($CityList as $City => $CitySlug) {
 
+    echo $City;
+
     if ($CurrentCity == $City) {
 
         $DomainPrefix = $CitySlug;
