@@ -12,9 +12,11 @@ $CityList['Ghaziabad'] = 'ghaziabad';
 
 echo $CurrentCity = strtolower(preg_replace('/\s*/', '', $CurrentCity));
 
+echo '=============<br/>';
+
 foreach ($CityList as $City => $CitySlug) {
 
-   echo '<br/>';
+   
     echo $City = strtolower(preg_replace('/\s*/', '', $City));
 
     if ( $CurrentCity ==  $City) {
