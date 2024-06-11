@@ -17,7 +17,7 @@ echo $CurrentCity.'<br/>=============<br/>';
 foreach ($CityList as $City => $CitySlug) {
 
 
-    // echo $City = strtolower(preg_replace('/\s*/', '', $City));
+    $City = strtolower(preg_replace('/\s*/', '', $City));
 
     if ($CurrentCity == $City) {
 
