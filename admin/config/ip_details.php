@@ -1,9 +1,8 @@
 <?php
 
-$CurrentCity = file_get_contents('https://ipapi.co/'.get_client_ip().'/city/');
+$CurrentCity = file_get_contents('https://ipapi.co/' . get_client_ip() . '/city/');
 
-
-echo $CurrentCity;
+//echo $CurrentCity;
 
 $CityList = array();
 
@@ -11,9 +10,29 @@ $CityList['Noida'] = 'noida';
 $CityList['New Delhi'] = 'newdelhi';
 $CityList['Ghaziabad'] = 'ghaziabad';
 
+foreach ($CityList as $City => $CitySlug) {
+
+    if ($CurrentCity == $City) {
+
+        $DomainPrefix = $CitySlug;
+
+    } else {
+
+        $DomainPrefix = 'www';
+
+    }
+
+}
+
+// Now make full hostname name
+
+echo $FullHostname = $DomainPrefix . '.truewebservice.com';
+
+echo $_SERVER['HTTP_HOST'];
 
 
-$webpage_full_link_url = "https://www.truewebservice.com/"; 
+
+$webpage_full_link_url = "https://www.truewebservice.com/";
 
 
 function get_client_ip()
