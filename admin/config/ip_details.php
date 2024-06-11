@@ -23,7 +23,7 @@ foreach ($CityList as $City => $CitySlug) {
 
         $DomainPrefix = $CitySlug;
 
-        echo 'match';
+        break;
 
     } else {
 
