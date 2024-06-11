@@ -42,7 +42,7 @@ $FullHostname = $DomainPrefix . '.truewebservice.com';
 
 // Check if its diffent then redirect to that sub domian
 
-$webpage_full_link_url = "https://" . $FullHostname.'/';
+echo $webpage_full_link_url = "https://" . $FullHostname.'/';
 
 if ($FullHostname !== $_SERVER['HTTP_HOST']) {
     header('Location: ' . $webpage_full_link_url);
