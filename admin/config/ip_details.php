@@ -12,7 +12,7 @@ $CityList['Ghaziabad'] = 'ghaziabad';
 
 $CurrentCity = strtolower(preg_replace('/\s*/', '', $CurrentCity));
 
-echo $CurrentCity.'<br/>=============<br/>';
+//echo $CurrentCity.'<br/>=============<br/>';
 
 foreach ($CityList as $City => $CitySlug) {
 
@@ -42,7 +42,7 @@ $FullHostname = $DomainPrefix . '.truewebservice.com';
 
 // Check if its diffent then redirect to that sub domian
 
-echo $webpage_full_link_url = "https://" . $FullHostname.'/';
+$webpage_full_link_url = "https://" . $FullHostname.'/';
 
 if ($FullHostname !== $_SERVER['HTTP_HOST']) {
     header('Location: ' . $webpage_full_link_url);
