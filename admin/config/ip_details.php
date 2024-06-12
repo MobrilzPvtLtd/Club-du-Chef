@@ -9,6 +9,7 @@ $CityList = array();
 $CityList['Noida'] = 'noida';
 $CityList['New Delhi'] = 'newdelhi';
 $CityList['Ghaziabad'] = 'ghaziabad';
+$CityList['Delhi'] = 'delhi';
 
 $CurrentCity = strtolower(preg_replace('/\s*/', '', $CurrentCity));
 
