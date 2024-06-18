@@ -4,9 +4,9 @@
  * User: Vignesh
  */
 
- if(file_exists('admin/config/ip_details.php'))
+ if(file_exists('admin/config/subdomain_rout.php'))
  {
-     include('admin/config/ip_details.php');
+     include('admin/config/subdomain_rout.php');
  }
 
 if(file_exists('admin/config/db.php'))
