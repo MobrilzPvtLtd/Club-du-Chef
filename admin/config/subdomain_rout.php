@@ -5,11 +5,11 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 
-if (!exit($_SESSION['city'])) {
-    $cityCode = 'www';
+if (isset($_SESSION['city'])) {
+    $cityCode = $_SESSION['city'];
 } else {
 
-    $cityCode = $_SESSION['city'];
+    $cityCode = 'www';
 }
 
-$webpage_full_link_url = "https://".$cityCode.".truewebservice.com/";
+$webpage_full_link_url = "https://" . $cityCode . ".truewebservice.com/";
