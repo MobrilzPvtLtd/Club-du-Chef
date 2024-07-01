@@ -49,7 +49,7 @@ echo $webpage_full_link_url = "https://" . $FullHostname.'/';
 
 echo  '<br/>';
 
-echo $webpage_full_link_url;
+echo $_SERVER['HTTP_HOST'];
 
 if ($FullHostname !== $_SERVER['HTTP_HOST']) {
     //header('Location: ' . $webpage_full_link_url);
