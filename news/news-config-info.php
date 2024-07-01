@@ -1,5 +1,8 @@
 <?php
-
+if(file_exists('../admin/config/subdomain_rout.php'))
+{
+    include('../admin/config/subdomain_rout.php');
+}
 if(file_exists('../admin/config/db.php'))
 {
     include('../admin/config/db.php');
