@@ -1,8 +1,10 @@
 <?php
 
 if (session_status() === PHP_SESSION_NONE) {
+    session_name("city");
+    session_set_cookie_params(0, '/', '.truewebservice.com');
     session_start();
-}
+    }
 
 
 $CityList['All Cities'] = 'www';
@@ -11,12 +13,13 @@ $CityList['Delhi'] = 'delhi';
 $CityList['Ghaziabad'] = 'ghaziabad';
 
 
-if (isset($_SESSION['city'])) {
-    $CurrentCity = $_SESSION['city'];
-} else {
-
-    $CurrentCity = 'www';
-}
+// if ($_SESSION['city']) {
+//     dd(123);
+//     $CurrentCity = $_SESSION['city'];
+// } else {
+//     dd("abcd");
+//     $CurrentCity = 'www';
+// }
 
 
 foreach ($CityList as $City => $CitySlug) {

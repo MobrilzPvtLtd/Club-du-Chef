@@ -1,6 +1,8 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) {
-    session_start();
+session_name("city");
+session_set_cookie_params(0, '/', '.truewebservice.com');
+session_start();
 }
 
 $city = $_REQUEST['city'];
