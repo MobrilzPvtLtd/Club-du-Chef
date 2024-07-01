@@ -265,7 +265,7 @@ if (isset($_GET['preview']) && isset($_GET['q']) && isset($_GET['type']) && isse
                                                         $Selected = '';
                                                     }
 
-                                                    echo '<option value="' . $CitySlug . ''.$Selected.">' . $City . '</option>';
+                                                    echo '<option value="' . $CitySlug . ''.$Selected.'">' . $City . '</option>';
 
                                                 } ?>
                                             </select>
