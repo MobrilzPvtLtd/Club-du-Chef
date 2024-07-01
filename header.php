@@ -246,7 +246,7 @@ if (isset($_GET['preview']) && isset($_GET['q']) && isset($_GET['type']) && isse
                                                         .done(function (data) {
                                                             data = jQuery.parseJSON(data);
                                                             if (data.status == 1) {
-                                                               // location.reload();
+                                                                location.reload();
 
                                                             } else {
                                                                 console.log('Issues in city name changes');
@@ -258,12 +258,7 @@ if (isset($_GET['preview']) && isset($_GET['q']) && isset($_GET['type']) && isse
 
                                                 <?php foreach ($CityList as $City => $CitySlug) {
 
-                                                    if($DomainPrefix == $CitySlug)
-                                                    {
-                                                        $Selected = ' selected';
-                                                    }
-
-                                                    echo '<option value="' . $CitySlug . ''.$Selected.'">' . $City . '</option>';
+                                                    echo '<option value="' . $CitySlug . '">' . $City . '</option>';
 
                                                 } ?>
                                             </select>
