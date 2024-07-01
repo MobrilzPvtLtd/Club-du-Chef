@@ -245,7 +245,12 @@ if (isset($_GET['preview']) && isset($_GET['q']) && isset($_GET['type']) && isse
                                                     $.post("<?php echo $webpage_full_link_url; ?>/admin/config/updateCity.php", { city: city })
                                                         .done(function (data) {
                                                             data = jQuery.parseJSON(data);
-                                                            console.log(data.status);
+                                                            if (data.status == 1) {
+                                                                location.reload();
+
+                                                            } else {
+                                                                console.log('Issues in city name changes');
+                                                            }
                                                         });
                                                 }
                                             </script>
