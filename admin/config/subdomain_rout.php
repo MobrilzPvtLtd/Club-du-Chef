@@ -52,7 +52,7 @@ $webpage_full_link_url = "https://" . $FullHostname.'/';
 // Remove more then 1 slases //
 
 
-$webpage_full_link_url = str_replace(':/','://', trim(preg_replace('/\/+/', '/', $webpage_full_link_url), '/'));
+//$webpage_full_link_url = str_replace(':/','://', trim(preg_replace('/\/+/', '/', $webpage_full_link_url), '/'));
 
 // Full url with uri
 
