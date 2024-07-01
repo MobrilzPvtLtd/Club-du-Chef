@@ -220,7 +220,7 @@ if (isset($_GET['preview']) && isset($_GET['q']) && isset($_GET['type']) && isse
                                 ?>
                                 <ul class="bl">
                                     <li>
-                                        <select name="city">
+                                        <select name="city" onchange="ChangeCity(this.value)">
                                         <option value="www">All Cities</option>
                                         <option value="noida">Noida</option>
                                         <option value="delhi">Delhi</option>
