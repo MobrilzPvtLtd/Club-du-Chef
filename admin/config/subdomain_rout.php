@@ -47,7 +47,9 @@ $FullHostname = $DomainPrefix . '.truewebservice.com';
 
 $webpage_full_link_url = "https://" . $FullHostname.'/';
 
+echo $webpage_full_link_url;
+
 if ($FullHostname !== $_SERVER['HTTP_HOST']) {
-    header('Location: ' . $webpage_full_link_url);
+    //header('Location: ' . $webpage_full_link_url);
     exit;
 }
