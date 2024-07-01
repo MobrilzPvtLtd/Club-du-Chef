@@ -258,12 +258,12 @@ if (isset($_GET['preview']) && isset($_GET['q']) && isset($_GET['type']) && isse
 
                                                 <?php foreach ($CityList as $City => $CitySlug) {
 
-                                                    if($_SESSION['city'] == $CitySlug)
+                                                    if($DomainPrefix == $CitySlug)
                                                     {
-                                                        $Selected = 'selected';
+                                                        $Selected = ' selected';
                                                     }
 
-                                                    echo '<option value="' . $CitySlug . ' '.$Selected.'">' . $City . '</option>';
+                                                    echo '<option value="' . $CitySlug . ''.$Selected.'">' . $City . '</option>';
 
                                                 } ?>
                                             </select>
