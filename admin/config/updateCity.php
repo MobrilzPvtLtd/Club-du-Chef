@@ -1,4 +1,7 @@
 <?php
+
+$CityName = [];
+
 $city = $_REQUEST['city'];
 
 $_SESSION['city'] = $city;

@@ -249,10 +249,12 @@ if (isset($_GET['preview']) && isset($_GET['q']) && isset($_GET['type']) && isse
                                                 }
                                             </script>
                                             <select name="city" onchange="ChangeCity(this.value)">
-                                                <option value="www">All Cities</option>
-                                                <option value="noida">Noida</option>
-                                                <option value="delhi">Delhi</option>
-                                                <option value="ghaziabad">Ghaziabad</option>
+
+                                            <?php foreach($CityName as $CityCode=>$City){
+
+                                                echo '<option value="'.$CityCode.'">'.$City.'</option>';
+
+                                            } ?>
                                             </select>
 
 
