@@ -1,5 +1,5 @@
 <?php
-$city = $_REQUEST;
+$city = $_REQUEST['city'];
 
-print_r($city);
+echo $city;
 ?>
