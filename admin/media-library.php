@@ -645,8 +645,8 @@ if (isset($_GET["q"])) {
                         <!--                                    <div class="inp-ttip">-->
                         <!--                                        <ul>-->
                         <!--                                            <li><b>User</b>: John smith</li>-->
-                        <!--                                            <li><b>Page</b>: https://bizbookdirectorytemplate.com/listing/happy-facial-new-york</li>-->
-                        <!--                                            <li><b>Image path</b>: https://bizbookdirectorytemplate.com/images/listings/99073s7.jpeg</li>-->
+                        <!--                                            <li><b>Page</b>: https://truewebservice.com/listing/happy-facial-new-york</li>-->
+                        <!--                                            <li><b>Image path</b>: https://truewebservice.com/images/listings/99073s7.jpeg</li>-->
                         <!--                                            <li><b>Date</b>: 12 Dec 2022</li>-->
                         <!--                                        </ul>-->
                         <!--                                    </div>-->
@@ -657,8 +657,8 @@ if (isset($_GET["q"])) {
                         <!--                                    <div class="inp-ttip">-->
                         <!--                                        <ul>-->
                         <!--                                            <li><b>User</b>: John smith</li>-->
-                        <!--                                            <li><b>Page</b>: https://bizbookdirectorytemplate.com/listing/happy-facial-new-york</li>-->
-                        <!--                                            <li><b>Image path</b>: https://bizbookdirectorytemplate.com/images/listings/99073s7.jpeg</li>-->
+                        <!--                                            <li><b>Page</b>: https://truewebservice.com/listing/happy-facial-new-york</li>-->
+                        <!--                                            <li><b>Image path</b>: https://truewebservice.com/images/listings/99073s7.jpeg</li>-->
                         <!--                                            <li><b>Date</b>: 12 Dec 2022</li>-->
                         <!--                                        </ul>-->
                         <!--                                    </div>-->
@@ -669,8 +669,8 @@ if (isset($_GET["q"])) {
                         <!--                                    <div class="inp-ttip">-->
                         <!--                                        <ul>-->
                         <!--                                            <li><b>User</b>: John smith</li>-->
-                        <!--                                            <li><b>Page</b>: https://bizbookdirectorytemplate.com/listing/happy-facial-new-york</li>-->
-                        <!--                                            <li><b>Image path</b>: https://bizbookdirectorytemplate.com/images/listings/99073s7.jpeg</li>-->
+                        <!--                                            <li><b>Page</b>: https://truewebservice.com/listing/happy-facial-new-york</li>-->
+                        <!--                                            <li><b>Image path</b>: https://truewebservice.com/images/listings/99073s7.jpeg</li>-->
                         <!--                                            <li><b>Date</b>: 12 Dec 2021</li>-->
                         <!--                                        </ul>-->
                         <!--                                    </div>-->
