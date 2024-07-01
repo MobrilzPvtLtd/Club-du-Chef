@@ -5,10 +5,10 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 
-$CityName['www'] = 'All Cities';
-$CityName['noida'] = 'Noida';
-$CityName['delhi'] = 'Delhi';
-$CityName['ghaziabad'] = 'Ghaziabad';
+$CityList['All Cities'] = 'www';
+$CityList['Noida'] = 'noida';
+$CityList['Delhi'] = 'delhi';
+$CityList['Ghaziabad'] = 'ghaziabad';
 
 
 if (isset($_SESSION['city'])) {

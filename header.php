@@ -250,7 +250,7 @@ if (isset($_GET['preview']) && isset($_GET['q']) && isset($_GET['type']) && isse
                                             </script>
                                             <select name="city" onchange="ChangeCity(this.value)">
 
-                                            <?php foreach($CityName as $CityCode=>$City){
+                                            <?php foreach($CityList as $City=>$CityCode){
 
                                                 echo '<option value="'.$CityCode.'">'.$City.'</option>';
 
