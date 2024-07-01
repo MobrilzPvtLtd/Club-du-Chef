@@ -242,7 +242,10 @@ if (isset($_GET['preview']) && isset($_GET['q']) && isset($_GET['type']) && isse
                                         <li>
                                             <script>
                                                 function ChangeCity(city) {
-                                                    console.log(city);
+                                                    $.post("<?php echo $webpage_full_link_url; ?>/admin/config/updateCity.php", { name: "John", time: "2pm" })
+                                                        .done(function (data) {
+                                                            console.log("Data Loaded: " + data);
+                                                        });
                                                 }
                                             </script>
                                             <select name="city" onchange="ChangeCity(this.value)">
