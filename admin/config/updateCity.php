@@ -1,3 +1,5 @@
 <?php
-echo $city = $_REQUEST;
+$city = $_REQUEST;
+
+print_r($city);
 ?>
