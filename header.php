@@ -220,6 +220,13 @@ if (isset($_GET['preview']) && isset($_GET['q']) && isset($_GET['type']) && isse
                                 ?>
                                 <ul class="bl">
                                     <li>
+                                        <select name="city">
+                                        <option value="noida">Noida</option>
+                                        <option value="delhi">Delhi</option>
+                                        <option value="ghaziabad">Ghaziabad</option>
+                                    </select>
+                                </li>
+                                    <li>
                                         <a href="<?php echo $webpage_full_link; ?>pricing-details"><?php echo $BIZBOOK['ADD_BUSINESS']; ?></a>
                                     </li>
                                     <li>
