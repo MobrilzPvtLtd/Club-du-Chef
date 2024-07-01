@@ -244,7 +244,8 @@ if (isset($_GET['preview']) && isset($_GET['q']) && isset($_GET['type']) && isse
                                                 function ChangeCity(city) {
                                                     $.post("<?php echo $webpage_full_link_url; ?>/admin/config/updateCity.php", { city: city })
                                                         .done(function (data) {
-                                                            console.log("Data Loaded: " + data);
+                                                            data = jQuery.parseJSON(data);
+                                                            console.log(data.status);
                                                         });
                                                 }
                                             </script>
