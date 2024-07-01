@@ -45,7 +45,9 @@ $FullHostname = $DomainPrefix . '.truewebservice.com';
 
 // Check if its diffent then redirect to that sub domian
 
-echo $webpage_full_link_url = "https://" . $FullHostname.'/';
+$webpage_full_link_url = "https://" . $FullHostname.'/';
+
+echo $FullHostname;
 
 echo  '<br/>';
 
