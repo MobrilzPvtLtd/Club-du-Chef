@@ -12,7 +12,7 @@ $CityList['Delhi'] = 'delhi';
 $CityList['Ghaziabad'] = 'ghaziabad';
 
 
-if ($_SESSION['city']) {
+if (isset($_SESSION['city'])) {
 
 $CurrentCity = $_SESSION['city'];
 } else {
