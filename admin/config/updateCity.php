@@ -3,7 +3,7 @@ $city = $_REQUEST['city'];
 
 echo $city;
 
-if (!exit($_SESSION['city'])) {
+if (isset($_SESSION['city'])) {
     $_SESSION['city'] = $city;
 } else {
 
