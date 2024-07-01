@@ -221,6 +221,7 @@ if (isset($_GET['preview']) && isset($_GET['q']) && isset($_GET['type']) && isse
                                 <ul class="bl">
                                     <li>
                                         <select name="city">
+                                        <option value="www">All Cities</option>
                                         <option value="noida">Noida</option>
                                         <option value="delhi">Delhi</option>
                                         <option value="ghaziabad">Ghaziabad</option>
