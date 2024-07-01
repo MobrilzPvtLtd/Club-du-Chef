@@ -13,10 +13,10 @@ $CityList['Ghaziabad'] = 'ghaziabad';
 
 
 if ($_SESSION['city']) {
-dd(123);
+
 $CurrentCity = $_SESSION['city'];
 } else {
-dd("abcd");
+
 $CurrentCity = 'www';
 }
 
