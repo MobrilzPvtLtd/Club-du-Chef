@@ -49,18 +49,25 @@ $FullHostname = $DomainPrefix . '.truewebservice.com';
 
 $webpage_full_link_url = "https://" . $FullHostname.'/';
 
-// Remove more then 1 slases //
-
-
-//$webpage_full_link_url = str_replace(':/','://', trim(preg_replace('/\/+/', '/', $webpage_full_link_url), '/'));
-
-//$webpage_full_link_url = preg_replace('/(\/+)/','/',$webpage_full_link_url);
 
 // Full url with uri
 
 $FullUri = $webpage_full_link_url.$_SERVER['REQUEST_URI'];
 
+//URL fixing removing extra shlases
+
+$FullUri = removeabunchofslashes($FullUri);
+
 if ($FullHostname !== $_SERVER['HTTP_HOST']) {
 header('Location: ' . $FullUri);
 // exit;
 }
+
+
+
+function removeabunchofslashes($url){
+    $explode = explode('://',$url);
+    while(strpos($explode[1],'//'))
+      $explode[1] = str_replace('//','/',$explode[1]);
+    return implode('://',$explode);
+  }
