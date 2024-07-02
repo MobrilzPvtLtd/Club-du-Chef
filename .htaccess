@@ -67,9 +67,9 @@ RewriteRule ^news-all/([^/]*)$ %{ENV:BASE_PATH}news/news-all.php?category=$1 [L,
 RewriteRule ^place/([^/]*)$ %{ENV:BASE_PATH}places/place-details.php?code=$1 [L]
 
 #All Listing page URl rewritten
-RewriteRule ^all-listing/([^/]*)$ %/all-listing.php?category=$1 [L]
+RewriteRule ^all-listing/([^/]*)$ %{ENV:BASE_PATH}all-listing.php?category=$1 [L]
 
-RewriteRule ^all-listing/([^/]*)/([^/]*)$ %/all-listing.php?category=$1&&subcategory=$2 [L]
+RewriteRule ^all-listing/([^/]*)/([^/]*)$ %{ENV:BASE_PATH}all-listing.php?category=$1&&subcategory=$2 [L]
 
 #All Products page URl rewritten
 RewriteRule ^all-products/([^/]*)$ %{ENV:BASE_PATH}all-products.php?category=$1 [L]
