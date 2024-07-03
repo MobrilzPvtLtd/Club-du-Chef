@@ -7,7 +7,7 @@ include "home_page_inline_css.php";
 
 <?php
 
-//include "template/home/www.php";
+include "template/home/www.php";
 ?>
 
 
