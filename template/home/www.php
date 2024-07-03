@@ -1,6 +1,6 @@
 <?php
 
-//include "home_page_top_section.php";
+include "home_page_top_section.php";
 
 if ($current_home_page != '2' && $current_home_page != '3'){
 

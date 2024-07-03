@@ -7,7 +7,16 @@ include "home_page_inline_css.php";
 
 <?php
 
-include "template/home/www.php";
+// Know current city
+
+if(isset($_SESSION['city']))
+{
+    $CurrentCity = $_SESSION['city'];
+}else{
+    $CurrentCity = 'www';
+}
+
+include "template/home/".$CurrentCity.".php";
 ?>
 
 
