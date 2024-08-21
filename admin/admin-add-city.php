@@ -81,7 +81,7 @@ include "header.php";
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery-ui.js"></script>
     <script src="../js/select-opt.js"></script>
-    <script src="js/admin-custom.js"></script>
+    
 </body>
 
 </html>
