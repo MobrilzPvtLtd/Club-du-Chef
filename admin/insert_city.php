@@ -95,8 +95,8 @@ VALUES ('$city_name','$state_id','$curDate')");
 
         $_SESSION['status_msg'] = "Oops!! Something Went Wrong Try Later!!!";
 
-        header('Location: admin-add-city.php');
-        exit;
+      //  header('Location: admin-add-city.php');
+       // exit;
     }
 
 }
