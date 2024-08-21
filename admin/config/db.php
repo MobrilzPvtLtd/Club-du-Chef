@@ -25,7 +25,9 @@ or die('Unable to connect to MySQL');
 $selected = mysqli_select_db($conn, DB_NAME)
 or die('Unable to connect to Database');
 
-session_start(); # Session start. #
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 $timezone = "Asia/Calcutta";
 if (function_exists('date_default_timezone_set')) date_default_timezone_set($timezone);
