@@ -7,19 +7,19 @@
 include "config/info.php";
 if (isset($_POST['city_submit'])) {
 
-    if($_POST['city_name'] != NULL){
+    if ($_POST['city_name'] != NULL) {
         $cnt = count($_POST['city_name']);
     }
     $country_id = $_POST['country_id'];
 
-// *********** if Count of city name is zero means redirect starts ********
+    // *********** if Count of city name is zero means redirect starts ********
 
     if ($cnt == 0) {
         header('Location: admin-add-city.php');
         exit;
     }
 
-// *********** if Count of city name is zero means redirect ends ********
+    // *********** if Count of city name is zero means redirect ends ********
 
     for ($i = 0; $i < $cnt; $i++) {
 
@@ -29,7 +29,7 @@ if (isset($_POST['city_submit'])) {
         $state_rs = mysqli_query($conn, $state_sql);
         while ($state_row = mysqli_fetch_array($state_rs)) {
 
-//************ city Name Already Exist Check Starts ***************
+            //************ city Name Already Exist Check Starts ***************
 
 
             $city_name_exist_check = mysqli_query($conn, "SELECT * FROM " . TBL . "cities  WHERE city_name='" . $city_name . "' AND state_id='" . $state_row['state_id'] . "' ");
@@ -46,20 +46,20 @@ if (isset($_POST['city_submit'])) {
             }
         }
 
-//************ city Name Already Exist Check Ends ***************
+        //************ city Name Already Exist Check Ends ***************
 //echo "<pre>";
-//print_r($_FILES['city_image']);
+//print_r($_FILES['city_logo_1']);
 
-//die();
+        //die();
 
 
-        $_FILES['city_image']['name'][$i];
+        $_FILES['city_logo_1']['name'][$i];
 
-        if (!empty($_FILES['city_image']['name'][$i])) {
-            $file = rand(1000, 100000) . $_FILES['city_image']['name'][$i];
-            $file_loc = $_FILES['city_image']['tmp_name'][$i];
-            $file_size = $_FILES['city_image']['size'][$i];
-            $file_type = $_FILES['city_image']['type'][$i];
+        if (!empty($_FILES['city_logo_1']['name'][$i])) {
+            $file = rand(1000, 100000) . $_FILES['city_logo_1']['name'][$i];
+            $file_loc = $_FILES['city_logo_1']['tmp_name'][$i];
+            $file_size = $_FILES['city_logo_1']['size'][$i];
+            $file_type = $_FILES['city_logo_1']['type'][$i];
             $allowed = array("image/jpeg", "image/pjpeg", "image/png", "image/gif", "image/webp", "image/svg", "application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.wordprocessingml.template");
             if (in_array($file_type, $allowed)) {
                 $folder = "../images/cityimage/";
@@ -67,9 +67,9 @@ if (isset($_POST['city_submit'])) {
                 $new_file_name = strtolower($file);
                 $event_image = str_replace(' ', '-', $new_file_name);
                 //move_uploaded_file($file_loc, $folder . $event_image);
-                $city_image = compressImage($event_image, $file_loc, $folder, $new_size);
+                $city_logo_1 = compressImage($event_image, $file_loc, $folder, $new_size);
             } else {
-                $city_image = '';
+                $city_logo_1 = '';
             }
         }
 
@@ -101,19 +101,20 @@ VALUES ('$city_name','$city_slug','$state_id','$curDate')");
 
         $_SESSION['status_msg'] = "Oops!! Something Went Wrong Try Later!!!";
 
-      //  header('Location: admin-add-city.php');
+        //  header('Location: admin-add-city.php');
         exit;
     }
 
 }
 
-function generateSlug($string) {
+function generateSlug($string)
+{
     // Lowercase the string
     $string = strtolower($string);
 
     // Check if the string contains any spaces
     if (strpos($string, ' ') === false) {
-        return $string; 
+        return $string;
     }
 
     // Replace non-alphanumeric characters with hyphens

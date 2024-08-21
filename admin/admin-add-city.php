@@ -30,6 +30,7 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
+                                                            <label>Country Name</label>
                                                             <select name="country_id" required="required"
                                                                 id="country_id" class="chosen-select form-control">
                                                                 <option value="">Choose Country</option>
@@ -53,6 +54,7 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
+                                                            <label>City Name</label>
                                                             <input type="text" name="city_name[]" class="form-control"
                                                                 placeholder="City name *" required>
                                                         </div>
@@ -63,8 +65,108 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input type="file" name="city_image[]" class="form-control"
-                                                                placeholder="City image">
+                                                            <label>City Logo 1</label>
+                                                            <input type="file" name="city_logo_1[]" class="form-control"
+                                                                placeholder="Logo 1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label>City Logo 2</label>
+                                                            <input type="file" name="city_logo_2[]" class="form-control"
+                                                                placeholder="Logo 2">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Ad Image 1</label>
+                                                            <input type="file" name="ad_image_1[]" class="form-control"
+                                                                placeholder="Ad 1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Ad Image 2</label>
+                                                            <input type="file" name="ad_image_2[]" class="form-control"
+                                                                placeholder="Ad 2">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Ad Image 3</label>
+                                                            <input type="file" name="ad_image_3[]" class="form-control"
+                                                                placeholder="Ad 3">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Ad Image 4</label>
+                                                            <input type="file" name="ad_image_4[]" class="form-control"
+                                                                placeholder="Ad 4">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Ad Image 5</label>
+                                                            <input type="file" name="ad_image_5[]" class="form-control"
+                                                                placeholder="Ad 5">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Ad Image 6</label>
+                                                            <input type="file" name="ad_image_6[]" class="form-control"
+                                                                placeholder="Ad 6">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Ad Image 7</label>
+                                                            <input type="file" name="ad_image_7[]" class="form-control"
+                                                                placeholder="Ad 7">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Ad Image 8</label>
+                                                            <input type="file" name="ad_image_8[]" class="form-control"
+                                                                placeholder="Ad 8">
                                                         </div>
                                                     </div>
                                                 </div>

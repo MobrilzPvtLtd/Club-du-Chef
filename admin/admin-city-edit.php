@@ -45,8 +45,18 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input type="file" name="city_image[]" class="form-control"
-                                                                placeholder="City image">
+                                                            <input type="file" name="city_logo_1[]" class="form-control"
+                                                                placeholder="Logo 1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <input type="file" name="city_logo_2[]" class="form-control"
+                                                                placeholder="Logo 2">
                                                         </div>
                                                     </div>
                                                 </div>
