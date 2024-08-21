@@ -11,8 +11,8 @@
 ob_start();
 
 define('DB_HOSTNAME', 'localhost');
-define('DB_USERNAME', 'clubdu');//ENTER YOUR DB USERNAME
-define('DB_PASSWORD', '0v%29R0ux');//ENTER YOUR DB PASSWORD
+//define('DB_USERNAME', 'clubdu');//ENTER YOUR DB USERNAME
+//define('DB_PASSWORD', '0v%29R0ux');//ENTER YOUR DB PASSWORD
 
 define('DB_USERNAME', 'root');//ENTER YOUR DB USERNAME
 define('DB_PASSWORD', '');//ENTER YOUR DB PASSWORD
