@@ -47,10 +47,10 @@ if (isset($_POST['city_submit'])) {
         }
 
 //************ city Name Already Exist Check Ends ***************
+//echo "<pre>";
+//print_r($_FILES['city_image']);
 
-print_r($_FILES['city_image']);
-
-die();
+//die();
 
 
         $_FILES['city_image']['name'][$i];
