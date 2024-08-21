@@ -57,8 +57,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $city_image = $city_image_old;
         }
 
+        $city_slug = generateSlug($city_name);
 
-        $sql = mysqli_query($conn, "UPDATE  " . TBL . "cities SET city_name='" . $city_name . "'
+
+        $sql = mysqli_query($conn, "UPDATE  " . TBL . "cities SET city_name='" . $city_name . "', city_slug='" . $city_slug . "'
      where city_id='" . $city_id . "'");
 
         if ($sql) {
@@ -84,5 +86,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     header('Location: admin-all-city.php');
     exit;
+}
+
+
+function generateSlug($string) {
+    // Lowercase the string
+    $string = strtolower($string);
+
+    // Check if the string contains any spaces
+    if (strpos($string, ' ') === false) {
+        return $string; 
+    }
+
+    // Replace non-alphanumeric characters with hyphens
+    $string = preg_replace('/[^a-z0-9]+/', '-', $string);
+
+    // Trim leading and trailing hyphens
+    $string = trim($string, '-');
+
+    // Additional check to remove a hyphen at the end if present
+    if (substr($string, -1) === '-') {
+        $string = substr($string, 0, -1);
+    }
+
+    return $string;
+
 }
 ?>

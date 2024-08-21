@@ -79,8 +79,10 @@ if (isset($_POST['city_submit'])) {
 
         $state_id = $state_roww['state_id'];
 
-        $sql = mysqli_query($conn, "INSERT INTO  " . TBL . "cities (city_name,state_id,city_cdt)
-VALUES ('$city_name','$state_id','$curDate')");
+        $city_slug = generateSlug($city_name);
+
+        $sql = mysqli_query($conn, "INSERT INTO  " . TBL . "cities (city_name,city_slug,state_id,city_cdt)
+VALUES ('$city_name','$city_slug','$state_id','$curDate')");
 
 
     }
@@ -102,6 +104,30 @@ VALUES ('$city_name','$state_id','$curDate')");
       //  header('Location: admin-add-city.php');
         exit;
     }
+
+}
+
+function generateSlug($string) {
+    // Lowercase the string
+    $string = strtolower($string);
+
+    // Check if the string contains any spaces
+    if (strpos($string, ' ') === false) {
+        return $string; 
+    }
+
+    // Replace non-alphanumeric characters with hyphens
+    $string = preg_replace('/[^a-z0-9]+/', '-', $string);
+
+    // Trim leading and trailing hyphens
+    $string = trim($string, '-');
+
+    // Additional check to remove a hyphen at the end if present
+    if (substr($string, -1) === '-') {
+        $string = substr($string, 0, -1);
+    }
+
+    return $string;
 
 }
 ?>
