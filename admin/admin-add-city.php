@@ -34,9 +34,7 @@ include "header.php";
                                                         //Countries Query
                                                             foreach (getAllCountries() as $countries_row) {
                                                                 ?>
-                                                                <option <?php if ($_SESSION['country_id'] == $countries_row['country_id']) {
-                                                                    echo "selected";
-                                                                } ?>
+                                                                <option <?php // if ($_SESSION['country_id'] == $countries_row['country_id']) { echo "selected"; } ?>
                                                                     value="<?php echo $countries_row['country_id']; ?>"><?php echo $countries_row['country_name']; ?></option>
                                                                 <?php
                                                         }
