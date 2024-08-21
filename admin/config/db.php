@@ -15,6 +15,10 @@ define('DB_PASSWORD', '0v%29R0ux');//ENTER YOUR DB PASSWORD
 define('DB_NAME', 'clubdu');//ENTER YOUR DB NAME
 
 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 $webpage_full_link_url = $_SESSION['webpage_full_link_url'];  #Important Please Paste your WebPage Full URL (i.e https://truewebservice.com/)
 
 
@@ -26,9 +30,7 @@ or die('Unable to connect to MySQL');
 $selected = mysqli_select_db($conn, DB_NAME)
 or die('Unable to connect to Database');
 
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+
 
 $timezone = "Asia/Calcutta";
 if (function_exists('date_default_timezone_set')) date_default_timezone_set($timezone);
