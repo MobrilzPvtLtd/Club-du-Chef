@@ -114,6 +114,11 @@ function generateSlug($string) {
     // Trim leading and trailing hyphens
     $string = trim($string, '-');
 
+    // Additional check to remove a hyphen at the end if present
+    if (substr($string, -1) === '-') {
+        $string = substr($string, 0, -1);
+    }
+
     return $string;
 }
 ?>
