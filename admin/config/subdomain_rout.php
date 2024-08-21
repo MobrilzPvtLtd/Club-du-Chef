@@ -58,6 +58,9 @@ $FullUri = $webpage_full_link_url.$_SERVER['REQUEST_URI'];
 
 $FullUri = removeabunchofslashes($FullUri);
 
+
+$_SESSION['webpage_full_link_url'] = $FullUri;
+
 if ($FullHostname !== $_SERVER['HTTP_HOST']) {
 header('Location: ' . $FullUri);
 // exit;

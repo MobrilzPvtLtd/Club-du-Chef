@@ -4,16 +4,14 @@
  * User: Vignesh
  */
 
-
+ if(file_exists('admin/config/subdomain_rout.php'))
+ {
+     include('admin/config/subdomain_rout.php');
+ }
 
 if(file_exists('admin/config/db.php'))
 {
     include('admin/config/db.php');
-}
-
-if(file_exists('admin/config/subdomain_rout.php'))
-{
-    include('admin/config/subdomain_rout.php');
 }
 
 if (file_exists('admin/classes/index.function.php')) {

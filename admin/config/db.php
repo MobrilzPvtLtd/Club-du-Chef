@@ -14,7 +14,7 @@ define('DB_PASSWORD', '0v%29R0ux');//ENTER YOUR DB PASSWORD
 define('DB_NAME', 'clubdu');//ENTER YOUR DB NAME
 
 
-//$webpage_full_link_url = "https://www.truewebservice.com/";  #Important Please Paste your WebPage Full URL (i.e https://truewebservice.com/)
+$webpage_full_link_url = $_SESSION['webpage_full_link_url'];  #Important Please Paste your WebPage Full URL (i.e https://truewebservice.com/)
 
 
 # Connection to the database. #
