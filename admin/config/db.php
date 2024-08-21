@@ -6,7 +6,7 @@
 
 # Prevent warning. #
 //error_reporting(E_ALL ^ E_NOTICE);
-error_reporting(0);
+//error_reporting(0);
 ob_start();
 
 define('DB_HOSTNAME', 'localhost');
