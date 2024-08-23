@@ -47,10 +47,7 @@ if (isset($_POST['city_submit'])) {
         }
 
         //************ city Name Already Exist Check Ends ***************
-        echo "<pre>";
-        print_r($_REQUEST);
-
-         die();
+        
 
         $allowed_types = array(
             "image/jpeg", "image/pjpeg", "image/png", "image/gif", "image/webp",
@@ -88,6 +85,11 @@ if (isset($_POST['city_submit'])) {
             }
             return '';
         }
+
+        echo "<pre>";
+        print_r($_REQUEST);
+
+         die();
         
         $i = isset($i) ? intval($i) : 0;
         
