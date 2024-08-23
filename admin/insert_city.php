@@ -97,10 +97,10 @@ if (isset($_POST['city_submit'])) {
             $ad_images[] = processFile('ad_image_' . $j, $i);
         }        
 
-        echo "<pre>";
-        print_r($ad_images);
+       // echo "<pre>";
+      //  print_r($ad_images);
 
-         die();
+       //  die();
 
         $state_sql_1 = "SELECT * FROM  " . TBL . "states where country_id='" . $country_id . "' LIMIT 1";
         $state_rs_1 = mysqli_query($conn, $state_sql_1);
@@ -110,8 +110,8 @@ if (isset($_POST['city_submit'])) {
 
         $city_slug = generateSlug($city_name);
 
-        $sql = mysqli_query($conn, "INSERT INTO  " . TBL . "cities (city_name,city_slug,state_id,city_cdt,city_logo_1,city_logo_2,ad_image_1,ad_image_2,ad_image_3,ad_image_4,ad_image_5,ad_image_6,ad_image_7,ad_image_8)
-        VALUES ('$city_name','$city_slug','$state_id','$curDate','$city_logo_1','$city_logo_2','$ad_images[0]','$ad_images[1]','$ad_images[2]','$ad_images[3]','$ad_images[4]','$ad_images[5]','$ad_images[6]','$ad_images[7]')");
+        $sql = mysqli_query($conn, "INSERT INTO  " . TBL . "cities (city_name,city_slug,state_id,city_cdt,city_logo_1,city_logo_2)
+        VALUES ('$city_name','$city_slug','$state_id','$curDate','$city_logo_1','$city_logo_2')");
     }
 
 
