@@ -48,9 +48,9 @@ if (isset($_POST['city_submit'])) {
 
         //************ city Name Already Exist Check Ends ***************
         //echo "<pre>";
-        print_r($_FILES['city_logo_1']);
+        // print_r($_FILES['city_logo_1']);
 
-        die();
+        // die();
 
         $allowed_types = array(
             "image/jpeg", "image/pjpeg", "image/png", "image/gif", "image/webp",
