@@ -47,31 +47,51 @@ if (isset($_POST['city_submit'])) {
         }
 
         //************ city Name Already Exist Check Ends ***************
-//echo "<pre>";
-//print_r($_FILES['city_logo_1']);
+        //echo "<pre>";
+        //print_r($_FILES['city_logo_1']);
 
         //die();
 
+        function processFile($fileInputName, $index) {
+            global $allowed_types; 
+            $file_name_key = $_FILES[$fileInputName]['name'][$index];
+            if (!empty($file_name_key)) {
+                $file_name = rand(1000, 100000) . $_FILES[$fileInputName]['name'][$index];
+                $file_loc = $_FILES[$fileInputName]['tmp_name'][$index];
+                $file_size = $_FILES[$fileInputName]['size'][$index];
+                $file_type = $_FILES[$fileInputName]['type'][$index];
 
-        $_FILES['city_logo_1']['name'][$i];
-
-        if (!empty($_FILES['city_logo_1']['name'][$i])) {
-            $file = rand(1000, 100000) . $_FILES['city_logo_1']['name'][$i];
-            $file_loc = $_FILES['city_logo_1']['tmp_name'][$i];
-            $file_size = $_FILES['city_logo_1']['size'][$i];
-            $file_type = $_FILES['city_logo_1']['type'][$i];
-            $allowed = array("image/jpeg", "image/pjpeg", "image/png", "image/gif", "image/webp", "image/svg", "application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.wordprocessingml.template");
-            if (in_array($file_type, $allowed)) {
-                $folder = "../images/cityimage/";
-                $new_size = $file_size / 1024;
-                $new_file_name = strtolower($file);
-                $event_image = str_replace(' ', '-', $new_file_name);
-                //move_uploaded_file($file_loc, $folder . $event_image);
-                $city_logo_1 = compressImage($event_image, $file_loc, $folder, $new_size);
-            } else {
-                $city_logo_1 = '';
+                if (in_array($file_type, $allowed_types)) {
+                    $folder = "../images/cityimage/";
+                    $new_size = $file_size / 1024;
+                    $new_file_name = strtolower($file_name);
+                    $event_image = str_replace(' ', '-', $new_file_name);
+                    return compressImage($event_image, $file_loc, $folder, $new_size);
+                } else {
+                    return '';
+                }
             }
+            return '';
         }
+
+        $allowed_types = array(
+            "image/jpeg", "image/pjpeg", "image/png", "image/gif", "image/webp",
+            "image/svg+xml", "application/pdf", "application/msword",
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.template"
+        );
+
+        $city_logo_1 = processFile('city_logo_1', $i);
+        $city_logo_2 = processFile('city_logo_2', $i);
+        $ad_image_1 = processFile('ad_image_1', $i);
+        $ad_image_2 = processFile('ad_image_2', $i);
+        $ad_image_3 = processFile('ad_image_3', $i);
+        $ad_image_4 = processFile('ad_image_4', $i);
+        $ad_image_5 = processFile('ad_image_5', $i);
+        $ad_image_6 = processFile('ad_image_6', $i);
+        $ad_image_7 = processFile('ad_image_7', $i);
+        $ad_image_8 = processFile('ad_image_8', $i);
+
 
         $state_sql_1 = "SELECT * FROM  " . TBL . "states where country_id='" . $country_id . "' LIMIT 1";
         $state_rs_1 = mysqli_query($conn, $state_sql_1);
@@ -81,10 +101,8 @@ if (isset($_POST['city_submit'])) {
 
         $city_slug = generateSlug($city_name);
 
-        $sql = mysqli_query($conn, "INSERT INTO  " . TBL . "cities (city_name,city_slug,state_id,city_cdt)
-VALUES ('$city_name','$city_slug','$state_id','$curDate')");
-
-
+        $sql = mysqli_query($conn, "INSERT INTO  " . TBL . "cities (city_name,city_slug,state_id,city_cdt,city_logo_1,city_logo_2,ad_image_1,ad_image_2,ad_image_3,ad_image_4,ad_image_5,ad_image_6,ad_image_7,ad_image_8)
+        VALUES ('$city_name','$city_slug','$state_id','$curDate','$city_logo_1','$city_logo_2','$ad_image_1','$ad_image_2','$ad_image_3','$ad_image_4','$ad_image_5','$ad_image_6','$ad_image_7','$ad_image_8')");
     }
 
 

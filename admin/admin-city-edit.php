@@ -43,21 +43,170 @@ include "header.php";
                                             </li>
                                             <li>
                                                 <div class="row">
-                                                    <div class="col-md-12">
+                                                    <div class="col-md-9">
                                                         <div class="form-group">
-                                                            <input type="file" name="city_logo_1[]" class="form-control"
-                                                                placeholder="Logo 1">
+                                                            <input type="file" name="city_logo_1[]" class="form-control" placeholder="Logo 1">
                                                         </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <img src="<?php echo $slash; ?>images/cityimage/<?php if ($row['city_logo_1'] != NULL || !empty($row['city_logo_1'])) {
+                                                            echo $row['city_logo_1'];
+                                                        } else {
+                                                            echo "ads1.jpg";
+                                                        } ?>" alt="" width="100px">
                                                     </div>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="row">
-                                                    <div class="col-md-12">
+                                                    <div class="col-md-9">
                                                         <div class="form-group">
                                                             <input type="file" name="city_logo_2[]" class="form-control"
                                                                 placeholder="Logo 2">
                                                         </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <img src="<?php echo $slash; ?>images/cityimage/<?php if ($row['city_logo_2'] != NULL || !empty($row['city_logo_2'])) {
+                                                            echo $row['city_logo_2'];
+                                                        } else {
+                                                            echo "ads1.jpg";
+                                                        } ?>" alt="" width="100px">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <div class="form-group">
+                                                            <input type="file" name="ad_image_1[]" class="form-control"
+                                                                placeholder="Ad 1">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <img src="<?php echo $slash; ?>images/cityimage/<?php if ($row['ad_image_1'] != NULL || !empty($row['ad_image_1'])) {
+                                                            echo $row['ad_image_1'];
+                                                        } else {
+                                                            echo "ads1.jpg";
+                                                        } ?>" alt="" width="100px">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <div class="form-group">
+                                                            <input type="file" name="ad_image_2[]" class="form-control"
+                                                                placeholder="Ad 2">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <img src="<?php echo $slash; ?>images/cityimage/<?php if ($row['ad_image_2'] != NULL || !empty($row['ad_image_2'])) {
+                                                            echo $row['ad_image_2'];
+                                                        } else {
+                                                            echo "ads1.jpg";
+                                                        } ?>" alt="" width="100px">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <div class="form-group">
+                                                            <input type="file" name="ad_image_3[]" class="form-control"
+                                                                placeholder="Ad 3">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <img src="<?php echo $slash; ?>images/cityimage/<?php if ($row['ad_image_3'] != NULL || !empty($row['ad_image_3'])) {
+                                                            echo $row['ad_image_3'];
+                                                        } else {
+                                                            echo "ads1.jpg";
+                                                        } ?>" alt="" width="100px">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <div class="form-group">
+                                                            <input type="file" name="ad_image_4[]" class="form-control"
+                                                                placeholder="Ad 4">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <img src="<?php echo $slash; ?>images/cityimage/<?php if ($row['ad_image_4'] != NULL || !empty($row['ad_image_4'])) {
+                                                            echo $row['ad_image_4'];
+                                                        } else {
+                                                            echo "ads1.jpg";
+                                                        } ?>" alt="" width="100px">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <div class="form-group">
+                                                            <input type="file" name="ad_image_5[]" class="form-control"
+                                                                placeholder="Ad 5">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <img src="<?php echo $slash; ?>images/cityimage/<?php if ($row['ad_image_5'] != NULL || !empty($row['ad_image_5'])) {
+                                                            echo $row['ad_image_5'];
+                                                        } else {
+                                                            echo "ads1.jpg";
+                                                        } ?>" alt="" width="100px">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <div class="form-group">
+                                                            <input type="file" name="ad_image_6[]" class="form-control"
+                                                                placeholder="Ad 6">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <img src="<?php echo $slash; ?>images/cityimage/<?php if ($row['ad_image_6'] != NULL || !empty($row['ad_image_6'])) {
+                                                            echo $row['ad_image_6'];
+                                                        } else {
+                                                            echo "ads1.jpg";
+                                                        } ?>" alt="" width="100px">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <div class="form-group">
+                                                            <input type="file" name="ad_image_7[]" class="form-control"
+                                                                placeholder="Ad 7">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <img src="<?php echo $slash; ?>images/cityimage/<?php if ($row['ad_image_7'] != NULL || !empty($row['ad_image_7'])) {
+                                                            echo $row['ad_image_7'];
+                                                        } else {
+                                                            echo "ads1.jpg";
+                                                        } ?>" alt="" width="100px">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <div class="form-group">
+                                                            <input type="file" name="ad_image_8[]" class="form-control"
+                                                                placeholder="Ad 8">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <img src="<?php echo $slash; ?>images/cityimage/<?php if ($row['ad_image_8'] != NULL || !empty($row['ad_image_8'])) {
+                                                            echo $row['ad_image_8'];
+                                                        } else {
+                                                            echo "ads1.jpg";
+                                                        } ?>" alt="" width="100px">
                                                     </div>
                                                 </div>
                                             </li>
