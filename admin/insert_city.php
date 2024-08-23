@@ -52,45 +52,51 @@ if (isset($_POST['city_submit'])) {
 
         //die();
 
-        function processFile($fileInputName, $index) {
-            global $allowed_types; 
-            $file_name_key = $_FILES[$fileInputName]['name'][$index];
-            if (!empty($file_name_key)) {
-                $file_name = rand(1000, 100000) . $_FILES[$fileInputName]['name'][$index];
-                $file_loc = $_FILES[$fileInputName]['tmp_name'][$index];
-                $file_size = $_FILES[$fileInputName]['size'][$index];
-                $file_type = $_FILES[$fileInputName]['type'][$index];
-
-                if (in_array($file_type, $allowed_types)) {
-                    $folder = "../images/cityimage/";
-                    $new_size = $file_size / 1024;
-                    $new_file_name = strtolower($file_name);
-                    $event_image = str_replace(' ', '-', $new_file_name);
-                    return compressImage($event_image, $file_loc, $folder, $new_size);
-                } else {
-                    return '';
-                }
-            }
-            return '';
-        }
-
         $allowed_types = array(
             "image/jpeg", "image/pjpeg", "image/png", "image/gif", "image/webp",
             "image/svg+xml", "application/pdf", "application/msword",
             "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
             "application/vnd.openxmlformats-officedocument.wordprocessingml.template"
         );
-
+        
+        function processFile($fileInputName, $index) {
+            global $allowed_types;
+        
+            if (isset($_FILES[$fileInputName])) {
+                $file_name_key = $_FILES[$fileInputName]['name'][$index];
+                if (!empty($file_name_key)) {
+                    $file_name = rand(1000, 100000) . '-' . basename($file_name_key);
+                    $file_loc = $_FILES[$fileInputName]['tmp_name'][$index];
+                    $file_size = $_FILES[$fileInputName]['size'][$index];
+                    $file_type = $_FILES[$fileInputName]['type'][$index];
+        
+                    if (in_array($file_type, $allowed_types)) {
+                        $folder = "../images/cityimage/";
+                        $new_size = $file_size / 1024; // size in KB
+                        $new_file_name = strtolower($file_name);
+                        $event_image = str_replace(' ', '-', $new_file_name);
+                        
+                        if (!is_dir($folder)) {
+                            mkdir($folder, 0777, true);
+                        }
+        
+                        return compressImage($event_image, $file_loc, $folder, $new_size);
+                    } else {
+                        return '';
+                    }
+                }
+            }
+            return '';
+        }
+        
+        $i = isset($i) ? intval($i) : 0;
+        
         $city_logo_1 = processFile('city_logo_1', $i);
         $city_logo_2 = processFile('city_logo_2', $i);
-        $ad_image_1 = processFile('ad_image_1', $i);
-        $ad_image_2 = processFile('ad_image_2', $i);
-        $ad_image_3 = processFile('ad_image_3', $i);
-        $ad_image_4 = processFile('ad_image_4', $i);
-        $ad_image_5 = processFile('ad_image_5', $i);
-        $ad_image_6 = processFile('ad_image_6', $i);
-        $ad_image_7 = processFile('ad_image_7', $i);
-        $ad_image_8 = processFile('ad_image_8', $i);
+        $ad_images = [];
+        for ($j = 1; $j <= 8; $j++) {
+            $ad_images[] = processFile('ad_image_' . $j, $i);
+        }        
 
 
         $state_sql_1 = "SELECT * FROM  " . TBL . "states where country_id='" . $country_id . "' LIMIT 1";
@@ -102,15 +108,13 @@ if (isset($_POST['city_submit'])) {
         $city_slug = generateSlug($city_name);
 
         $sql = mysqli_query($conn, "INSERT INTO  " . TBL . "cities (city_name,city_slug,state_id,city_cdt,city_logo_1,city_logo_2,ad_image_1,ad_image_2,ad_image_3,ad_image_4,ad_image_5,ad_image_6,ad_image_7,ad_image_8)
-        VALUES ('$city_name','$city_slug','$state_id','$curDate','$city_logo_1','$city_logo_2','$ad_image_1','$ad_image_2','$ad_image_3','$ad_image_4','$ad_image_5','$ad_image_6','$ad_image_7','$ad_image_8')");
+        VALUES ('$city_name','$city_slug','$state_id','$curDate','$city_logo_1','$city_logo_2','$ad_images[0]','$ad_images[1]','$ad_images[2]','$ad_images[3]','$ad_images[4]','$ad_images[5]','$ad_images[6]','$ad_images[7]')");
     }
 
 
     if ($sql) {
 
         $_SESSION['status_msg'] = "City(s) has been Added Successfully!!!";
-
-
         header('Location: admin-all-city.php');
         exit;
 
