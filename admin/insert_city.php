@@ -86,10 +86,7 @@ if (isset($_POST['city_submit'])) {
             return '';
         }
 
-        echo "<pre>";
-        print_r($_REQUEST);
-
-         die();
+       
         
         $i = isset($i) ? intval($i) : 0;
         
@@ -99,6 +96,11 @@ if (isset($_POST['city_submit'])) {
         for ($j = 1; $j <= 8; $j++) {
             $ad_images[] = processFile('ad_image_' . $j, $i);
         }        
+
+        echo "<pre>";
+        print_r($ad_images);
+
+         die();
 
         $state_sql_1 = "SELECT * FROM  " . TBL . "states where country_id='" . $country_id . "' LIMIT 1";
         $state_rs_1 = mysqli_query($conn, $state_sql_1);
