@@ -130,7 +130,7 @@ if (isset($_POST['city_submit'])) {
         $_SESSION['status_msg'] = "Oops!! Something Went Wrong Try Later!!!";
 
         //  header('Location: admin-add-city.php');
-        exit;
+        //exit;
     }
 
 }
