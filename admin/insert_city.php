@@ -110,8 +110,8 @@ if (isset($_POST['city_submit'])) {
 
         $city_slug = generateSlug($city_name);
 
-        $sql = mysqli_query($conn, "INSERT INTO  " . TBL . "cities (city_name,city_slug,state_id,city_cdt,city_logo_1,city_logo_2)
-        VALUES ('$city_name','$city_slug','$state_id','$curDate','$city_logo_1','$city_logo_2')");
+        $sql = mysqli_query($conn, "INSERT INTO  " . TBL . "cities (city_name,city_slug,state_id)
+        VALUES ('$city_name','$city_slug','$state_id')");
     }
 
 
