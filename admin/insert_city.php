@@ -114,6 +114,7 @@ if (isset($_POST['city_submit'])) {
         VALUES ('$city_name','$city_slug','$state_id')");
     }
 
+    print_r($sql);
 
     if ($sql) {
 
