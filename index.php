@@ -16,7 +16,9 @@ if(isset($_SESSION['city']))
     $CurrentCity = 'www';
 }
 
-// include "template/home/".$CurrentCity.".php";
+if ($CurrentCity = $_SESSION['city']) {
+    include "template/home/".$CurrentCity.".php";
+}
 ?>
 
 

@@ -24,7 +24,7 @@ if (!$citys) {
 
 $CityList['All Cities'] = 'www';
 foreach ($citys as $city) {
-  $CityList[$city['city_name']] = $city['city_name'];
+  $CityList[$city['city_name']] = $city['city_slug'];
 }
 // $CityList['Noida'] = 'noida';
 // $CityList['Delhi'] = 'delhi';
