@@ -418,11 +418,28 @@ to{background-position:100% 0}
 .blog-head .ban-search ul{margin:0 auto;display:table}
 .blog-head .ban-search ul li.sr-sea input{border-radius:30px;box-shadow:0 5px 41px -14px rgba(60,63,66,.32);color:#40454a;max-width:100%;width:384px;border:1px solid #e9e9ef;font-weight:600}
 .ban-ql{margin:0 auto;display:table;width:90%;position:relative;margin-top:-175px}
-.ban-ql ul{margin:0 auto;display:table;width:100%}
+.ban-ql ul{margin: 0 auto;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, minmax(300px, 4fr));
+    row-gap: 15px;}
 .ban-ql ul li{float:left;width:25%;padding: 0 15px;}
-.ban-ql ul li div{transition:all .5s ease;color:#000;background:#fff;text-align:center;padding:25px 20px 27px;position:relative;overflow:hidden;box-shadow: 0 3px 9px -4px #0000008f;border-radius:15px}
+.ban-ql ul li div{transition: all .5s ease;
+    color: #000;
+    background: #fff;
+    text-align: center;
+    padding: 25px 20px 27px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 3px 9px -4px #0000008f;
+    border-radius: 15px;
+    width: 17vw;
+    height: 16vw;}
 .ban-ql ul li div:hover{transition:all .2s ease;transform:translateY(-5px);box-shadow:0 11px 45px -13px rgba(37,39,42,0.67);z-index:9}
-.ban-ql ul li div img{width:60px;background:#fff;padding:6px;border-radius:15px}
+.ban-ql ul li div img .cityimg{width:60px;background:#fff;padding:6px;border-radius:15px}
+.ban-ql ul li div img{border-radius: 15px;
+    aspect-ratio: 16 / 9;
+}
 .ban-ql ul li div h4{font-size:16px;font-weight:600;margin:12px 0 15px;color:#243c50}
 .ban-ql ul li div p{display:block;font-size:12px;padding-bottom:5px;font-weight:500;color:#818181;margin-bottom:0;padding-bottom:18px}
 .ban-ql ul li div a{padding:4px 7px;border-radius:30px;font-size:12px;border:1px dashed #fff;box-shadow:0 0 0 3px #151f31;color:#fff}

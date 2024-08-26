@@ -16,9 +16,14 @@ if(isset($_SESSION['city']))
     $CurrentCity = 'www';
 }
 
-if ($CurrentCity = $_SESSION['city']) {
-    include "template/home/".$CurrentCity.".php";
-}
+// $templateFile = "template/home/" . $CurrentCity . ".php";
+include "template/home/www.php";
+
+// if (file_exists($templateFile)) {
+//     include $templateFile;
+// } else {
+//     include "template/home/www.php";
+// }
 ?>
 
 

@@ -97,11 +97,20 @@ if (isset($_GET['preview']) && isset($_GET['q']) && isset($_GET['type']) && isse
                         <div class="row">
                             <div class="hom-nav <?php if (!isset($_SESSION['user_name']) && empty($_SESSION['user_name'])) {
                             } else { ?> db-open <?php } ?>"><!--MOBILE MENU-->
-                                <a href="<?php echo $webpage_full_link; ?>" class="top-log"><img
-                                        src="<?php echo $slash; ?>images/home/<?php echo $footer_row['header_logo']; ?>"
-                                        <?php if ($footer_row['header_logo_width'] != NULL || $footer_row['header_logo_height'] != NULL) { ?>style="<?php if ($footer_row['header_logo_width'] != NULL) { ?>width: <?php echo $footer_row['header_logo_width']; ?>; <?php }
-                                                 if ($footer_row['header_logo_height'] != NULL) { ?>height: <?php echo $footer_row['header_logo_height']; ?>;<?php } ?>"
-                                        <?php } ?> alt="" class="ic-logo"></a>
+                                <a href="<?php echo $webpage_full_link; ?>" class="top-log">
+                                    <img src="<?php echo $slash; ?>images/home/<?php echo $footer_row['header_logo']; ?>"
+                                    <?php if ($footer_row['header_logo_width'] != NULL || $footer_row['header_logo_height'] != NULL) { ?>style="<?php if ($footer_row['header_logo_width'] != NULL) { ?>width: <?php echo $footer_row['header_logo_width']; ?>; <?php }
+                                                if ($footer_row['header_logo_height'] != NULL) { ?>height: <?php echo $footer_row['header_logo_height']; ?>;<?php } ?>"
+                                    <?php } ?> alt="" class="ic-logo">
+                                </a>
+
+                                <a href="<?php echo $webpage_full_link; ?>" class="top-log" style="margin-left: 20px;">
+                                    <img src="<?php echo $slash; ?>images/home/<?php echo $footer_row['header_logo']; ?>"
+                                    <?php if ($footer_row['header_logo_width'] != NULL || $footer_row['header_logo_height'] != NULL) { ?>style="<?php if ($footer_row['header_logo_width'] != NULL) { ?>width: <?php echo $footer_row['header_logo_width']; ?>; <?php }
+                                                if ($footer_row['header_logo_height'] != NULL) { ?>height: <?php echo $footer_row['header_logo_height']; ?>;<?php } ?>"
+                                    <?php } ?> alt="" class="ic-logo">
+                                </a>
+
                                 <div class="menu">
                                     <h4><?php echo $BIZBOOK['EXPLORE']; ?></h4>
                                 </div>
