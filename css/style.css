@@ -366,7 +366,7 @@ to{background-position:100% 0}
 .hom-nav .ic-logo{width:200px;margin-top:10px}
 .hom-nav .bl{float:right;margin:0;padding-top:4px}
 .hom-nav .bl li{float:left;margin-left:10px;font-weight:500}
-.hom-nav .bl li a{color:#fff;cursor:pointer;font-weight:500;font-size:12px;line-height:49px;padding:5px 6px;border-radius:5px;float:left;display:inline-block;line-height:24px}
+.hom-nav .bl li a{color:#000;cursor:pointer;font-weight:500;font-size:12px;line-height:49px;padding:5px 6px;border-radius:5px;float:left;display:inline-block;line-height:24px}
 .hom-nav .bl li:last-child a{color:#fff;border-radius:5px;margin-left:10px;padding:5px 15px}
 .hom-nav .bl li:last-child a:hover{background:#1834bf;border:1px solid #0a2192}
 .al{float:right;display:none;position:relative}
