@@ -388,6 +388,10 @@ to{background-position:100% 0}
 .ban-search ul li.sr-cit{width:20%;display:none}
 .ban-search ul li.sr-cit .chosen-container a div{}
 .ban-search ul li .chosen-container a div:before{top:28px}
+.bl select {
+    border: none;
+    padding-top: 2px;
+}
 .ban-search ul li{}
 .ban-search li select{outline:none}
 .ban-search li:nth-child(1) select{border-radius:10px 0 0 10px}
