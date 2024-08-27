@@ -341,7 +341,7 @@ div#review_success{border:1px solid #91ff94;border-radius:4px;background:#e5ffe5
 .dir-ani-btn:active:after{padding:0;margin:0;opacity:1;transition:0}
 .top-log{float:left}
 .top-log img{}
-.top-ser{float:left;width:33%;padding:6px 0 0 40px}
+.top-ser{float:left;width:20%;padding:20px 0 0 0px}
 .top-ser form{width:100%;position:relative}
 .top-ser form ul{}
 .top-ser form ul li{}
