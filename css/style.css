@@ -367,7 +367,7 @@ to{background-position:100% 0}
 .hom-nav .bl{float:right;margin:0;padding-top: 20px !important;display: flex!important;align-items: center !important;}
 .hom-nav .bl li{float:left;margin-left:10px;font-weight:500}
 .hom-nav .bl li a{color:#000;cursor:pointer;font-weight:500;font-size:12px;line-height:49px;padding:5px 6px;border-radius:5px;float:left;display:inline-block;line-height:24px}
-.hom-nav .bl li:last-child a{color:#fff;border-radius:5px;margin-left:10px;padding:5px 15px}
+.hom-nav .bl li:last-child a{color:#fff;border-radius:5px;margin-left:10px;padding:5px 15px;background-color: #007bff !important;}
 .hom-nav .bl li:last-child a:hover{background:#1834bf;border:1px solid #0a2192}
 .al{float:right;display:none;position:relative}
 .al:after{transition:all .5s ease;right:-12px;top:10px;color:#aaadaf;filter:invert(1);width:10px;height:10px;opacity:0}
