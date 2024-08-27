@@ -37,6 +37,25 @@ if (isset($_GET['preview']) && isset($_GET['q']) && isset($_GET['type']) && isse
 } else {
     $current_home_page = $footer_row['admin_home_page']; //To set Homepage type.
 }
+$CurrentCity = isset($_SESSION['city']) ? $_SESSION['city'] : 'www';
+$imageShow = false; 
+$images = []; 
+
+foreach (getAllCities() as $city) {
+    if ($CurrentCity == $city['city_slug']) {
+        for ($j = 1; $j <= 2; $j++) {
+            $imageKey = 'city_logo_' . $j;
+            if (isset($city[$imageKey]) && !empty($city[$imageKey])) {
+                $imageUrl = htmlspecialchars($webpage_full_link . 'images/cityimage/' . $city[$imageKey]);
+                $images[] = $imageUrl;
+                $imageShow = true; 
+            }
+        }
+        if ($imageShow) {
+            break;
+        }
+    }
+}
 
 ?>
 <!doctype html>
@@ -97,19 +116,31 @@ if (isset($_GET['preview']) && isset($_GET['q']) && isset($_GET['type']) && isse
                         <div class="row">
                             <div class="hom-nav <?php if (!isset($_SESSION['user_name']) && empty($_SESSION['user_name'])) {
                             } else { ?> db-open <?php } ?>"><!--MOBILE MENU-->
-                                <a href="<?php echo $webpage_full_link; ?>" class="top-log">
-                                    <img src="<?php echo $slash; ?>images/home/<?php echo $footer_row['header_logo']; ?>"
-                                    <?php if ($footer_row['header_logo_width'] != NULL || $footer_row['header_logo_height'] != NULL) { ?>style="<?php if ($footer_row['header_logo_width'] != NULL) { ?>width: <?php echo $footer_row['header_logo_width']; ?>; <?php }
-                                                if ($footer_row['header_logo_height'] != NULL) { ?>height: <?php echo $footer_row['header_logo_height']; ?>;<?php } ?>"
-                                    <?php } ?> alt="" class="ic-logo">
-                                </a>
+                                <?php if ($imageShow && !empty($images)): ?>
+                                    <?php foreach ($images as $imageUrl): ?>
+                                        <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log" style="margin-left: 20px;">
+                                            <img src="<?php echo $imageUrl; ?>" alt="" class="ic-logo">
+                                        </a>
+                                    <?php endforeach; ?>
+                                <?php else: ?>
+                                    <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log">
+                                        <img src="<?php echo htmlspecialchars($slash . 'images/home/' . $footer_row['header_logo']); ?>"
+                                            <?php if ($footer_row['header_logo_width'] !== NULL || $footer_row['header_logo_height'] !== NULL): ?>
+                                                style="<?php if ($footer_row['header_logo_width'] !== NULL): ?>width: <?php echo htmlspecialchars($footer_row['header_logo_width']); ?>; <?php endif; ?>
+                                                    <?php if ($footer_row['header_logo_height'] !== NULL): ?>height: <?php echo htmlspecialchars($footer_row['header_logo_height']); ?>;<?php endif; ?>"
+                                            <?php endif; ?> 
+                                            alt="" class="ic-logo">
+                                    </a>
 
-                                <a href="<?php echo $webpage_full_link; ?>" class="top-log" style="margin-left: 20px;">
-                                    <img src="<?php echo $slash; ?>images/home/<?php echo $footer_row['header_logo']; ?>"
-                                    <?php if ($footer_row['header_logo_width'] != NULL || $footer_row['header_logo_height'] != NULL) { ?>style="<?php if ($footer_row['header_logo_width'] != NULL) { ?>width: <?php echo $footer_row['header_logo_width']; ?>; <?php }
-                                                if ($footer_row['header_logo_height'] != NULL) { ?>height: <?php echo $footer_row['header_logo_height']; ?>;<?php } ?>"
-                                    <?php } ?> alt="" class="ic-logo">
-                                </a>
+                                    <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log" style="margin-left: 20px;">
+                                        <img src="<?php echo htmlspecialchars($slash . 'images/home/' . $footer_row['header_logo']); ?>"
+                                            <?php if ($footer_row['header_logo_width'] !== NULL || $footer_row['header_logo_height'] !== NULL): ?>
+                                                style="<?php if ($footer_row['header_logo_width'] !== NULL): ?>width: <?php echo htmlspecialchars($footer_row['header_logo_width']); ?>; <?php endif; ?>
+                                                    <?php if ($footer_row['header_logo_height'] !== NULL): ?>height: <?php echo htmlspecialchars($footer_row['header_logo_height']); ?>;<?php endif; ?>"
+                                            <?php endif; ?> 
+                                            alt="" class="ic-logo">
+                                    </a>
+                                <?php endif; ?>
 
                                 <div class="menu">
                                     <h4><?php echo $BIZBOOK['EXPLORE']; ?></h4>
