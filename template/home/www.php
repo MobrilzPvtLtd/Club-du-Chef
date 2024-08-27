@@ -2,18 +2,36 @@
 
 include "home_page_top_section.php";
 $CurrentCity = isset($_SESSION['city']) ? $_SESSION['city'] : 'www';
+$imageShow = false; 
+$images = []; 
+
+foreach (getAllCities() as $city) {
+    if ($CurrentCity == $city['city_slug']) {
+        for ($j = 1; $j <= 8; $j++) {
+            $imageKey = 'ad_image_' . $j;
+            if (isset($city[$imageKey]) && !empty($city[$imageKey])) {
+                $imageUrl = htmlspecialchars($webpage_full_link . 'images/cityimage/' . $city[$imageKey]);
+                $images[] = $imageUrl;
+                $imageShow = true; 
+            }
+        }
+        if ($imageShow) {
+            break;
+        }
+    }
+}
+
 if ($current_home_page != '2' && $current_home_page != '3') {
 ?>
-
     <div class="ban-ql">
         <div class="container">
             <div class="row">
-            <?php 
-                if ($CurrentCity == 'www') {
-            ?>
+                <?php 
+                    if ($CurrentCity == 'www' || !$imageShow) {
+                ?>
                 <ul>
                     <?php
-                    foreach (getAllHomePageTopSection() as $home_page_top_section_row) {
+                        foreach (getAllHomePageTopSection() as $home_page_top_section_row) {
                     ?>
                         <li>
                             <div>
@@ -28,28 +46,22 @@ if ($current_home_page != '2' && $current_home_page != '3') {
                             </div>
                         </li>
                     <?php
-                    }
+                        }
                     ?>
                 </ul>
-            <?php
-            } else {
-            ?>
+                <?php
+                    } else {
+                ?> 
                 <ul>
                     <?php
-                    foreach (getAllCities() as $city) {
-                        for ($j = 1; $j <= 8; $j++) {
-                            $imageKey = 'ad_image_' . $j;
-                            if ($CurrentCity == $city['city_slug'] && isset($city[$imageKey])) {
-                                $imageUrl = htmlspecialchars($webpage_full_link . 'images/cityimage/' . $city[$imageKey]);
-                                echo '<li><div style="padding: 0;height: 9vw;"><img src="' . $imageUrl . '" alt=""></div></li>';
-                            }
-                        }
+                    foreach ($images as $imageUrl) {
+                        echo '<li><div style="padding: 0; height: 9vw;"><img src="' . $imageUrl . '" alt=""></div></li>';
                     }
                     ?>
                 </ul>
-            <?php
-            }
-            ?>
+                <?php
+                    }
+                ?>
             </div>
         </div>
     </div>
