@@ -250,7 +250,7 @@ div#review_success{border:1px solid #91ff94;border-radius:4px;background:#e5ffe5
 .hom-more-modu .plac-hom-box a i{vertical-align:middle;font-size:18px;position:relative;left:3px}
 .menu{margin-right:20px;float:left;margin-right:20px;border-left:1px solid #4f6171;padding:5px 5px 5px 12px;margin-left:20px;margin-top:25px;cursor:pointer;position:relative}
 .menu:after,.pmenu-cat ul li a:before,.al:after{content:'';background:url(../images/icon/svg/down-arrow.svg);transition:all .5s ease}
-.menu:after{color:#fff;right:-16px;top:9px;width:10px;height:10px;filter:invert(1)}
+.menu:after{color:#fff;right:-16px;top:9px;width:10px;height:10px;}
 .menu.ani:after{transform:rotate(180deg)}
 .menu h4{color:#000;font-size:13px;margin:0;font-weight:500}
 .menu i{width:32px;height:32px;text-align:center;cursor:pointer;position:absolute;top:8px;padding-top:3px;border-radius:50px;box-shadow:0 0 0 #4274eb;animation:pulse 1.5s infinite;color:#fff}
