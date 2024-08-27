@@ -32,37 +32,42 @@ foreach ($citys as $city) {
 
 
 if (isset($_SESSION['city'])) {
-
 $CurrentCity = $_SESSION['city'];
 } else {
-
 $CurrentCity = 'www';
 }
 
-
-foreach ($CityList as $City => $CitySlug) {
-
-
-$City = strtolower(preg_replace('/\s*/', '', $City));
-
-if ($CurrentCity == $City) {
-
-    $DomainPrefix = $CitySlug;
-
-    break;
-
-} else {
-
-    $DomainPrefix = 'www';
-
+function normalizeCity($city) {
+  $city = strtolower($city);
+  
+  $city = preg_replace('/\s+/', '', $city); 
+  $city = str_replace('-', '', $city);
+  
+  return $city;
 }
 
+$CurrentCityNormalized = normalizeCity($CurrentCity);
+
+$DomainPrefix = 'www';
+
+foreach ($CityList as $City => $CitySlug) {
+  // $City = strtolower(preg_replace('/\s*/', '', $City));
+  $CityNormalized = normalizeCity($City);
+  if ($CurrentCityNormalized == $CityNormalized) {
+      $DomainPrefix = $CitySlug;
+      break; 
+  }
+// if ($CurrentCity == $City) {
+//     $DomainPrefix = $CitySlug;
+//     break;
+// } else {
+//     $DomainPrefix = 'www';
+// }
 }
 
 $FullHostname = $DomainPrefix . '.truewebservice.com';
 
 //echo $_SERVER['HTTP_HOST'];
-
 
 // Check if its diffent then redirect to that sub domian
 

@@ -297,7 +297,6 @@ foreach (getAllCities() as $city) {
                                             <select name="city" onchange="ChangeCity(this.value)">
 
                                                 <?php foreach ($CityList as $City => $CitySlug) {
-
                                                     if($DomainPrefix == $CitySlug)
                                                     {
                                                         $Selected = ' selected';
@@ -309,8 +308,6 @@ foreach (getAllCities() as $city) {
 
                                                 } ?>
                                             </select>
-
-
                                         </li>
                                         <li>
                                             <a
