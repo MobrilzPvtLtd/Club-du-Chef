@@ -7,6 +7,10 @@ if(file_exists('admin/config/db-config.php'))
 {
   include('admin/config/db-config.php');
 }
+if(file_exists('../admin/config/db-config.php'))
+{
+  include('../admin/config/db-config.php');
+}
 
 $CityList = array();
 

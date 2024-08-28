@@ -3,6 +3,10 @@ if(file_exists('admin/config/db-config.php'))
 {
   include('admin/config/db-config.php');
 }
+if(file_exists('../admin/config/db-config.php'))
+{
+  include('../admin/config/db-config.php');
+}
 
 if (session_status() === PHP_SESSION_NONE) {
 session_name("city");
