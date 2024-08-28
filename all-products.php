@@ -25,7 +25,6 @@ $inner = $w = '';
 $order = 'ORDER BY';
 
 if (isset($_GET['category']) && !empty($_REQUEST['category'])) {
-
     $category_search_slug1 = str_replace('.php', '', $_GET['category']);
 
     $category_search_slug = str_replace('-', ' ', $category_search_slug1);
@@ -138,7 +137,8 @@ if (!empty($price_check)) {
 
 //Price Check Ends
 
-$discount_check = $_REQUEST['discount'];
+// $discount_check = $_REQUEST['discount'];
+$discount_check = isset($_REQUEST['discount']) ? $_REQUEST['discount'] : 0;
 //Discount Check starts
 if (!empty($discount_check)) {
 
@@ -226,9 +226,9 @@ if (!empty($w)) {
                                     }
                                     ?>
                                     <ul>
-                                        <li><a href="<?php echo $webpage_full_link; ?>"><?php echo $BIZBOOK['HOME']; ?></a></li>
+                                        <li><a href="/"><?php echo $BIZBOOK['HOME']; ?></a></li>
                                         <li>
-                                            <a href="<?php echo $webpage_full_link . 'all-products'; ?>"><?php echo $BIZBOOK['ALL_CATEGORY']; ?></a>
+                                            <a href="/all-products"><?php echo $BIZBOOK['ALL_CATEGORY']; ?></a>
                                         </li>
                                         <?php
                                         if (isset($_GET['category']) && !empty($_REQUEST['category'])) {
@@ -237,7 +237,8 @@ if (!empty($w)) {
                                                 <a href="<?php echo $ALL_PRODUCTS_URL . urlModifier($category_search_slug); ?>"><?php echo $category_search_name; ?></a>
                                             </li>
                                             <?php
-                                        } ?>
+                                        } 
+                                        ?>
                                     </ul>
                         </div>
                     </div>
@@ -512,7 +513,7 @@ if (!empty($w)) {
                                             <span><?php echo $BIZBOOK['AD']; ?></span>
 
                                             <img
-                                                    src="<?php echo $slash; ?>/images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
+                                                    src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
                                                         echo $ad_enquiry_photo;
                                                     } else {
                                                         echo "ads1.jpg";
@@ -552,7 +553,8 @@ if (!empty($w)) {
                                   id="<?php echo strtolower($category_search_slug1); ?>"
                                   data-id="<?php echo (!isset($_GET['category'])) ? 1 : 2; ?>"
                                   data-type="category"><?php echo $category_search_name; ?></span>
-                        <?php } ?>
+                        <?php } 
+                        ?>
 
                         <!-- //Filter Sub category name   -->
                         <?php
@@ -710,10 +712,10 @@ if (!empty($w)) {
                                         <div class="all-pro-box">
                                             <div class="all-pro-img">
                                                 <img loading="lazy"
-                                                     src="<?php echo $slash; ?><?php if ($productrow['gallery_image'] != NULL || !empty($productrow['gallery_image'])) {
-                                                         echo "images/products/" . array_shift(explode(',', $productrow['gallery_image']));
+                                                     src="<?php if ($productrow['gallery_image'] != NULL || !empty($productrow['gallery_image'])) {
+                                                         echo "/images/products/" . array_shift(explode(',', $productrow['gallery_image']));
                                                      } else {
-                                                         echo "images/listings/" . $footer_row['listing_default_image'];
+                                                         echo "/images/listings/" . $footer_row['listing_default_image'];
                                                      } ?>">
                                             </div>
                                             <div class="all-pro-txt">
@@ -736,8 +738,6 @@ if (!empty($w)) {
                                                class="pro-view-full"></a>
                                         </div>
                                     </li>
-
-
                                     <?php
                                 }
                             } else {
@@ -784,18 +784,18 @@ include "footer.php";
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="<?php echo $slash; ?>/js/jquery.min.js"></script>
-<script src="<?php echo $slash; ?>/js/popper.min.js"></script>
-<script src="<?php echo $slash; ?>/js/bootstrap.min.js"></script>
-<script src="<?php echo $slash; ?>/js/jquery-ui.js"></script>
-<script src="<?php echo $slash; ?>/js/select-opt.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery-ui.js"></script>
+<script src="/js/select-opt.js"></script>
 <script type="text/javascript">var webpage_full_link = '<?php echo $webpage_full_link;?>';</script>
 <script type="text/javascript">var login_url = '<?php echo $LOGIN_URL;?>';</script>
-<script src="<?php echo $slash; ?>/js/custom.js"></script>
-<script src="<?php echo $slash; ?>/js/product_filter.js"></script>
-<script src="<?php echo $slash; ?>/js/jquery.validate.min.js"></script>
-<script src="<?php echo $slash; ?>/js/custom_validation.js"></script>
-<script src="<?php echo $slash; ?>/js/jquery.simplePagination.min.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/product_filter.js"></script>
+<script src="/js/jquery.validate.min.js"></script>
+<script src="/js/custom_validation.js"></script>
+<script src="/js/jquery.simplePagination.min.js"></script>
 <script>
 
     var items = $(".products-wrapper .products-item");
