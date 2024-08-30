@@ -142,7 +142,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $verification_link = checkUniqueVerificationLink(generateAlphabetsOnlyRandomString(112));
 
-        $webpage_full_link_with_verification_link = $webpage_full_link . "activate?q=" . $verification_link;
+        $webpage_full_link_with_verification_link = "activate?q=" . $verification_link;
 
         $verification_status = 1; //**** If 0 means Activated 1 Means Not activated **//
 
