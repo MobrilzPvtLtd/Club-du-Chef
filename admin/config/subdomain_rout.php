@@ -9,8 +9,12 @@ if(file_exists('../admin/config/db-config.php'))
 }
 
 if (session_status() === PHP_SESSION_NONE) {
-session_name("city");
-session_set_cookie_params(0, '/', '.truewebservice.com');
+  session_name("city");
+  if($_SERVER['SERVER_NAME'] == 'localhost') {
+    session_set_cookie_params(0, '/', 'localhost');
+  }else{
+    session_set_cookie_params(0, '/', '.truewebservice.com');
+  }
 session_start();
 }
 
@@ -69,13 +73,21 @@ foreach ($CityList as $City => $CitySlug) {
 // }
 }
 
-$FullHostname = $DomainPrefix . '.truewebservice.com';
+if($_SERVER['SERVER_NAME'] == 'localhost') {
+  $FullHostname = 'localhost';
+}else{
+  $FullHostname = $DomainPrefix . '.truewebservice.com';
+}
 
 //echo $_SERVER['HTTP_HOST'];
 
 // Check if its diffent then redirect to that sub domian
 
-$webpage_full_link_url = "https://" . $FullHostname.'/';
+if($_SERVER['SERVER_NAME'] == 'localhost') {
+  $webpage_full_link_url = "http://" . $FullHostname.'/';
+}else{
+  $webpage_full_link_url = "http://" . $FullHostname.'/';
+}
 
 
 // Full url with uri

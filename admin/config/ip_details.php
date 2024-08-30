@@ -60,14 +60,22 @@ foreach ($CityList as $City => $CitySlug) {
 
 // Now make full hostname name
 //echo '<br/>=============<br/>';
-$FullHostname = $DomainPrefix . '.truewebservice.com';
+if($_SERVER['SERVER_NAME'] == 'localhost') {
+    $FullHostname = 'localhost';
+}else{
+    $FullHostname = $DomainPrefix . '.truewebservice.com';
+}
 
 //echo $_SERVER['HTTP_HOST'];
 
 
 // Check if its diffent then redirect to that sub domian
 
-$webpage_full_link_url = "https://" . $FullHostname.'/';
+if($_SERVER['SERVER_NAME'] == 'localhost') {
+    $webpage_full_link_url = "http://" . $FullHostname.'/';
+}else{
+    $webpage_full_link_url = "https://" . $FullHostname.'/';
+}
 
 if ($FullHostname !== $_SERVER['HTTP_HOST']) {
     header('Location: ' . $webpage_full_link_url);
