@@ -86,7 +86,7 @@ if($_SERVER['SERVER_NAME'] == 'localhost') {
 if($_SERVER['SERVER_NAME'] == 'localhost') {
   $webpage_full_link_url = "http://" . $FullHostname.'/';
 }else{
-  $webpage_full_link_url = "http://" . $FullHostname.'/';
+  $webpage_full_link_url = "https://" . $FullHostname.'/';
 }
 
 
