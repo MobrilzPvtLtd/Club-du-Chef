@@ -1,4 +1,9 @@
 <?php
+$current_job_page = $current_job_page ?? '';
+$current_expert_page = $current_expert_page ?? '';
+$current_news_page = $current_news_page ?? '';
+$current_place_page = $current_place_page ?? '';
+
 if ($current_page == "company-profile.php" || $current_page == "profile.php" || $current_page == "event-details.php"
     || $current_page == "blog-details.php" || $current_page == "product-details.php" || $current_page == "listing-details.php"
     || $current_page == "all-listing.php" || $current_page == "filter_listing.php"

@@ -16,7 +16,14 @@ if(isset($_SESSION['city']))
     $CurrentCity = 'www';
 }
 
-include "template/home/".$CurrentCity.".php";
+// $templateFile = "template/home/" . $CurrentCity . ".php";
+include "template/home/www.php";
+
+// if (file_exists($templateFile)) {
+//     include $templateFile;
+// } else {
+//     include "template/home/www.php";
+// }
 ?>
 
 
@@ -26,18 +33,18 @@ include "footer.php";
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="<?php echo $webpage_full_link; ?>js/jquery.min.js"></script>
-<script src="<?php echo $webpage_full_link; ?>js/popper.min.js"></script>
-<script src="<?php echo $webpage_full_link; ?>js/bootstrap.min.js"></script>
-<script src="<?php echo $webpage_full_link; ?>js/jquery-ui.js"></script>
-<script src="<?php echo $webpage_full_link; ?>js/select-opt.js"></script>
-<script src="<?php echo $webpage_full_link; ?>js/blazy.min.js"></script>
+<script src="<?php echo $webpage_full_link; ?>/js/jquery.min.js"></script>
+<script src="<?php echo $webpage_full_link; ?>/js/popper.min.js"></script>
+<script src="<?php echo $webpage_full_link; ?>/js/bootstrap.min.js"></script>
+<script src="<?php echo $webpage_full_link; ?>/js/jquery-ui.js"></script>
+<script src="<?php echo $webpage_full_link; ?>/js/select-opt.js"></script>
+<script src="<?php echo $webpage_full_link; ?>/js/blazy.min.js"></script>
 <script type="text/javascript">var webpage_full_link = '<?php echo $webpage_full_link;?>';</script>
 <script type="text/javascript">var login_url = '<?php echo $LOGIN_URL;?>';</script>
-<script src="<?php echo $webpage_full_link; ?>js/slick.js"></script>
-<script src="<?php echo $webpage_full_link; ?>js/custom.js"></script>
-<script src="<?php echo $webpage_full_link; ?>js/jquery.validate.min.js"></script>
-<script src="<?php echo $webpage_full_link; ?>js/custom_validation.js"></script>
+<script src="<?php echo $webpage_full_link; ?>/js/slick.js"></script>
+<script src="<?php echo $webpage_full_link; ?>/js/custom.js"></script>
+<script src="<?php echo $webpage_full_link; ?>/js/jquery.validate.min.js"></script>
+<script src="<?php echo $webpage_full_link; ?>/js/custom_validation.js"></script>
 <?php
 include "home_page_inline_js.php"
 ?>

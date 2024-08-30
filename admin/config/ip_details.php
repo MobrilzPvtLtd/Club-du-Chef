@@ -3,13 +3,37 @@
 $CurrentCity = file_get_contents('https://ipapi.co/' . get_client_ip() . '/city/');
 
 //echo $CurrentCity;
+if(file_exists('admin/config/db-config.php'))
+{
+  include('admin/config/db-config.php');
+}
+if(file_exists('../admin/config/db-config.php'))
+{
+  include('../admin/config/db-config.php');
+}
 
 $CityList = array();
 
-$CityList['Noida'] = 'noida';
-$CityList['New Delhi'] = 'newdelhi';
-$CityList['Ghaziabad'] = 'ghaziabad';
-$CityList['Delhi'] = 'delhi';
+if (!isset($conn) || !$conn) {
+die('Database connection is not established.');
+}
+
+// Use the TBL constant
+$sql = "SELECT * FROM " . TBL . "cities GROUP BY city_name ORDER BY city_id DESC";
+$citys = mysqli_query($conn, $sql);
+
+if (!$citys) {
+die('Error: ' . mysqli_error($conn));
+}
+
+foreach ($citys as $city) {
+$CityList[$city['city_name']] = $city['city_slug'];
+}
+
+// $CityList['Noida'] = 'noida';
+// $CityList['New Delhi'] = 'newdelhi';
+// $CityList['Ghaziabad'] = 'ghaziabad';
+// $CityList['Delhi'] = 'delhi';
 
 $CurrentCity = strtolower(preg_replace('/\s*/', '', $CurrentCity));
 
