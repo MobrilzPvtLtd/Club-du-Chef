@@ -147,19 +147,9 @@ define('SMS_PWORD', '123'); # SMS PASSWORD.
 define('SENDER_ID', 'BIZGO'); # SMS PASSWORD.
 
 # Data Array
-// $data_array = array();
-
-// $data_array['website_url'] = $webpage_full_link;
-
-$parsed_url = parse_url($webpage_full_link);
-
-$base_url = $parsed_url['scheme'] . '://' . $parsed_url['host'] . '/';
-
 $data_array = array();
-$data_array['website_url'] = $base_url;
 
-// print_r($base_url);
-// die();
+$data_array['website_url'] = $webpage_full_link;
 
 ##### Page Redirect URl's
 
@@ -169,49 +159,49 @@ $footer_row = mysqli_fetch_array($footer_rs);
 
 $slash = '/';
 
-$ALL_LISTING_URL = $base_url.$footer_row['all_listing_page_url'].$slash;
+$ALL_LISTING_URL = $webpage_full_link.$footer_row['all_listing_page_url'].$slash;
 
-$ALL_LISTING_URL_WITHOUT_SLASH = $base_url.$footer_row['all_listing_page_url'];
+$ALL_LISTING_URL_WITHOUT_SLASH = $webpage_full_link.$footer_row['all_listing_page_url'];
 
-$ALL_PRODUCTS_URL = $base_url.$footer_row['all_products_page_url'].$slash;
+$ALL_PRODUCTS_URL = $webpage_full_link.$footer_row['all_products_page_url'].$slash;
 
-$ALL_JOBS_URL = $base_url.$footer_row['all_jobs_page_url'].$slash;
+$ALL_JOBS_URL = $webpage_full_link.$footer_row['all_jobs_page_url'].$slash;
 
-$ALL_EXPERTS_URL = $base_url.$footer_row['all_experts_page_url'].$slash;
+$ALL_EXPERTS_URL = $webpage_full_link.$footer_row['all_experts_page_url'].$slash;
 
-$ALL_NEWS_URL = $base_url.$footer_row['all_news_page_url'].$slash;
+$ALL_NEWS_URL = $webpage_full_link.$footer_row['all_news_page_url'].$slash;
 
-$PROFILE_URL = $base_url.$footer_row['profile_page_url'].$slash;
+$PROFILE_URL = $webpage_full_link.$footer_row['profile_page_url'].$slash;
 
-$LISTING_URL = $base_url.$footer_row['listing_page_url'].$slash;
+$LISTING_URL = $webpage_full_link.$footer_row['listing_page_url'].$slash;
 
-$JOB_URL = $base_url.$footer_row['job_page_url'].$slash;
+$JOB_URL = $webpage_full_link.$footer_row['job_page_url'].$slash;
 
-$SERVICE_EXPERT_URL = $base_url.$footer_row['service_expert_page_url'].$slash;
+$SERVICE_EXPERT_URL = $webpage_full_link.$footer_row['service_expert_page_url'].$slash;
 
-$NEWS_DETAIL_URL = $base_url.$footer_row['news_page_url'].$slash;
+$NEWS_DETAIL_URL = $webpage_full_link.$footer_row['news_page_url'].$slash;
 
-$PLACE_DETAIL_URL = $base_url.$footer_row['place_page_url'].$slash;
+$PLACE_DETAIL_URL = $webpage_full_link.$footer_row['place_page_url'].$slash;
 
-$JOB_PROFILE_URL = $base_url.$footer_row['job_profile_page_url'].$slash;
+$JOB_PROFILE_URL = $webpage_full_link.$footer_row['job_profile_page_url'].$slash;
 
-$JOB_PROFILE_CREATION_URL = $base_url.'jobs/'.$footer_row['job_profile_creation_page_url'].$slash;
+$JOB_PROFILE_CREATION_URL = $webpage_full_link.'jobs/'.$footer_row['job_profile_creation_page_url'].$slash;
 
-$JOB_PROFILE_CREATION_URL_WITHOUT_SLASH = $base_url.'jobs/'.$footer_row['job_profile_creation_page_url'];
+$JOB_PROFILE_CREATION_URL_WITHOUT_SLASH = $webpage_full_link.'jobs/'.$footer_row['job_profile_creation_page_url'];
 
-$EVENT_URL = $base_url.$footer_row['event_page_url'].$slash;
+$EVENT_URL = $webpage_full_link.$footer_row['event_page_url'].$slash;
 
-$BLOG_URL = $base_url.$footer_row['blog_page_url'].$slash;
+$BLOG_URL = $webpage_full_link.$footer_row['blog_page_url'].$slash;
 
-$PRODUCT_URL = $base_url.$footer_row['product_page_url'].$slash;
+$PRODUCT_URL = $webpage_full_link.$footer_row['product_page_url'].$slash;
 
-$COMPANY_URL = $base_url.$footer_row['company_page_url'].$slash;
+$COMPANY_URL = $webpage_full_link.$footer_row['company_page_url'].$slash;
 
-$TARGET_LISTING_URL = $base_url.$footer_row['target_listing_page_url'].$slash;
+$TARGET_LISTING_URL = $webpage_full_link.$footer_row['target_listing_page_url'].$slash;
 
-$EBOOK_URL = $base_url.$footer_row['ebook_page_url'].$slash;
+$EBOOK_URL = $webpage_full_link.$footer_row['ebook_page_url'].$slash;
 
-$GENERAL_PROMOTION_URL = $base_url.$footer_row['promotion_page_url'].$slash;
+$GENERAL_PROMOTION_URL = $webpage_full_link.$footer_row['promotion_page_url'].$slash;
 
 $SHYIRAMO = 'install1';
 
@@ -220,7 +210,7 @@ $SHYIRAMO = 'install1';
 $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
 $CurPageURL = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; 
 
-$LOGIN_URL = $base_url.'login?src='.$CurPageURL;
+$LOGIN_URL = $webpage_full_link.'login?src='.$CurPageURL;
 
 //if($footer_row['admin_install_flag'] == 0) { kwohereza($SHYIRAMO); }
 
