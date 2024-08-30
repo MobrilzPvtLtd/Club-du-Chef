@@ -70,15 +70,15 @@ foreach (getAllCities() as $city) {
     <link href="https://fonts.googleapis.com/css?family=Oswald:700|Source+Sans+Pro:300,400,600,700&display=swap"
         rel="stylesheet">
     <!--== WEB ICON FONTS ==-->
-    <link rel="preload" as="font" href="/css/icon.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="<?php echo $slash; ?>/css/icon.woff2" type="font/woff2" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--== CSS FILES ==-->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/css/jquery-ui.css">
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="/css/theme-color.php">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="<?php echo $slash; ?>/css/jquery-ui.css">
+    <link rel="stylesheet" href="<?php echo $slash; ?>/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $slash; ?>/css/theme-color.php">
+    <link rel="stylesheet" type="text/css" href="<?php echo $slash; ?>/css/style.css">
+    <link rel="stylesheet" href="<?php echo $slash; ?>/css/fonts.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -123,8 +123,8 @@ foreach (getAllCities() as $city) {
                                         </a>
                                     <?php endforeach; ?>
                                 <?php else: ?>
-                                    <a href="/" class="top-log">
-                                        <img src="<?php echo htmlspecialchars('/images/home/' . $footer_row['header_logo']); ?>"
+                                    <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log">
+                                        <img src="<?php echo htmlspecialchars($slash . '/images/home/' . $footer_row['header_logo']); ?>"
                                             <?php if ($footer_row['header_logo_width'] !== NULL || $footer_row['header_logo_height'] !== NULL): ?>
                                                 style="<?php if ($footer_row['header_logo_width'] !== NULL): ?>width: <?php echo htmlspecialchars($footer_row['header_logo_width']); ?>; <?php endif; ?>
                                                     <?php if ($footer_row['header_logo_height'] !== NULL): ?>height: <?php echo htmlspecialchars($footer_row['header_logo_height']); ?>;<?php endif; ?>"
@@ -132,8 +132,8 @@ foreach (getAllCities() as $city) {
                                             alt="" class="ic-logo">
                                     </a>
 
-                                    <a href="/" class="top-log" style="margin-left: 15px;">
-                                        <img src="<?php echo htmlspecialchars('/images/home/' . $footer_row['header_logo']); ?>"
+                                    <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log" style="margin-left: 15px;">
+                                        <img src="<?php echo htmlspecialchars($slash . '/images/home/' . $footer_row['header_logo']); ?>"
                                             <?php if ($footer_row['header_logo_width'] !== NULL || $footer_row['header_logo_height'] !== NULL): ?>
                                                 style="<?php if ($footer_row['header_logo_width'] !== NULL): ?>width: <?php echo htmlspecialchars($footer_row['header_logo_width']); ?>; <?php endif; ?>
                                                     <?php if ($footer_row['header_logo_height'] !== NULL): ?>height: <?php echo htmlspecialchars($footer_row['header_logo_height']); ?>;<?php endif; ?>"

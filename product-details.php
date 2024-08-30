@@ -83,7 +83,7 @@ $plan_type_row = getPlanType($user_plan); //User Plan Type Database Fetch
                                 <div class="carousel-item <?php if ($p == 1) {
                                     echo "active";
                                 } ?>">
-                                    <img loading="lazy" src="/images/products/<?php echo $item; ?>"
+                                    <img loading="lazy" src="<?php echo $slash; ?>images/products/<?php echo $item; ?>"
                                          alt="<?php echo $item; ?>">
                                 </div>
                                 <?php
@@ -199,7 +199,7 @@ $plan_type_row = getPlanType($user_plan); //User Plan Type Database Fetch
                     <div class="pro-pbox-6 pro-pbox-com">
                         <h4><?php echo $BIZBOOK['CREATED_BY']; ?></h4>
                         <div class="pro-bad-sml">
-                            <img loading="lazy" src="/images/user/<?php if (($usersqlrow['profile_image'] == NULL) || empty($usersqlrow['profile_image'])) {
+                            <img loading="lazy" src="<?php echo $slash; ?>images/user/<?php if (($usersqlrow['profile_image'] == NULL) || empty($usersqlrow['profile_image'])) {
                                 echo $footer_row['user_default_image'];
                             } else {
                                 echo $usersqlrow['profile_image'];
@@ -235,7 +235,7 @@ $plan_type_row = getPlanType($user_plan); //User Plan Type Database Fetch
                         <li>
                             <div class="plac-hom-box">
                                 <div class="plac-hom-box-im">
-                                <img loading="lazy" src="/images/products/<?php echo array_shift(explode(',', $productErow['gallery_image'])); ?>" alt="">
+                                <img loading="lazy" src="<?php echo $slash; ?>images/products/<?php echo array_shift(explode(',', $productErow['gallery_image'])); ?>" alt="">
                                 <h4><?php echo $productErow['product_name']; ?></h4>
                                 </div>
                                 <div class="plac-hom-box-txt">
@@ -382,16 +382,16 @@ include "footer.php";
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="/js/jquery.min.js"></script>
-<script src="/js/popper.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/jquery-ui.js"></script>
-<script src="/js/slick.js"></script>
+<script src="<?php echo $slash; ?>js/jquery.min.js"></script>
+<script src="<?php echo $slash; ?>js/popper.min.js"></script>
+<script src="<?php echo $slash; ?>js/bootstrap.min.js"></script>
+<script src="<?php echo $slash; ?>js/jquery-ui.js"></script>
+<script src="<?php echo $slash; ?>js/slick.js"></script>
 <script type="text/javascript">var webpage_full_link = '<?php echo $webpage_full_link;?>';</script>
 <script type="text/javascript">var login_url = '<?php echo $LOGIN_URL;?>';</script>
-<script src="/js/custom.js"></script>
-<script src="/js/jquery.validate.min.js"></script>
-<script src="/js/custom_validation.js"></script>
+<script src="<?php echo $slash; ?>js/custom.js"></script>
+<script src="<?php echo $slash; ?>js/jquery.validate.min.js"></script>
+<script src="<?php echo $slash; ?>js/custom_validation.js"></script>
 <script>
 $('.multiple-items1').slick({
         dots: true,
