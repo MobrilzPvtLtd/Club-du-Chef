@@ -102,22 +102,7 @@
     </div>
 </section>
 <!-- END -->
-<!-- <?php 
-// if($footer_row['admin_install_flag'] == 1) { unlink("install1.php"); unlink("install2.php"); }
-if ($footer_row['admin_install_flag'] == 1) {
-    if (file_exists("install1.php")) {
-        unlink("install1.php");
-    } else {
-        error_log("File 'install1.php' does not exist and could not be deleted.");
-    }
-
-    if (file_exists("install2.php")) {
-        unlink("install2.php");
-    } else {
-        error_log("File 'install2.php' does not exist and could not be deleted.");
-    }
-} 
-?> -->
+<?php if($footer_row['admin_install_flag'] == 1) { unlink("install1.php"); unlink("install2.php"); } ?>
 <section class="<?php if($footer_row['admin_language']== 2){ echo "lg-arb";}?> wed-hom-footer">
     <div class="container">
         <div class="row foot-supp">
