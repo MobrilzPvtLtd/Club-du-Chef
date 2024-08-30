@@ -248,11 +248,11 @@ div#review_success{border:1px solid #91ff94;border-radius:4px;background:#e5ffe5
 .hom-more-modu .plac-hom-box h4{font-size:32px;font-weight:600;padding:0;position:relative;left:initial;padding-bottom:15px}
 .hom-more-modu .plac-hom-box a{background:var(--blue);color:#fff;font-size:14px;font-weight:500;padding:10px 22px 10px 25px;position:relative;display:inline-block;z-index:1}
 .hom-more-modu .plac-hom-box a i{vertical-align:middle;font-size:18px;position:relative;left:3px}
-.menu{margin-right:20px;float:left;margin-right:20px;border-left:1px solid #4f6171;padding:5px 5px 5px 12px;margin-left:20px;margin-top:25px;cursor:pointer;position:relative}
+.menu{margin-right:20px;float:left;margin-right:20px;border-left:1px solid #4f6171;padding:5px 5px 5px 12px;margin-left:20px;margin-top:10px;cursor:pointer;position:relative}
 .menu:after,.pmenu-cat ul li a:before,.al:after{content:'';background:url(../images/icon/svg/down-arrow.svg);transition:all .5s ease}
-.menu:after{color:#fff;right:-16px;top:9px;width:10px;height:10px;}
+.menu:after{color:#fff;right:-16px;top:9px;width:10px;height:10px;filter:invert(1)}
 .menu.ani:after{transform:rotate(180deg)}
-.menu h4{color:#000;font-size:13px;margin:0;font-weight:500}
+.menu h4{color:#fff;font-size:13px;margin:0;font-weight:500}
 .menu i{width:32px;height:32px;text-align:center;cursor:pointer;position:absolute;top:8px;padding-top:3px;border-radius:50px;box-shadow:0 0 0 #4274eb;animation:pulse 1.5s infinite;color:#fff}
 .ad-head{transition:all .5s ease;padding:5px 2%;position:fixed;top:0;z-index:20;width:100%;background:#fff;box-shadow:0 1px 16px -8px rgba(42,42,42,0.8)}
 .pulse{box-shadow:0 0 0 rgba(204,169,44,0.4);animation:pulse 1.5s infinite}
@@ -341,7 +341,7 @@ div#review_success{border:1px solid #91ff94;border-radius:4px;background:#e5ffe5
 .dir-ani-btn:active:after{padding:0;margin:0;opacity:1;transition:0}
 .top-log{float:left}
 .top-log img{}
-.top-ser{float:left;width:20%;padding:20px 0 0 0px}
+.top-ser{float:left;width:33%;padding:6px 0 0 40px}
 .top-ser form{width:100%;position:relative}
 .top-ser form ul{}
 .top-ser form ul li{}
@@ -359,15 +359,15 @@ to{background-position:100% 0}
 .hom-top .container{position:relative}
 .hom-head:before{content:'';position:absolute;width:100%;height:100%;left:0;right:0;top:0;bottom:0;background:#00000073}
 .hom-head:after{content:'';position:absolute;width:100%;height:150px;left:0;bottom:0;background:url(../images/cloud.svg) #fff0;background-size:cover}
-.hom-top{transition:all .5s ease;padding:3px 0 7px;position:fixed;z-index:20;width:100%;background-color:#fff !important;box-shadow:0 8px 18px -8px rgba(42,42,42,0.63);transition:all .5s ease;top:0;left:0;right:0}
+.hom-top{transition:all .5s ease;padding:3px 0 7px;position:fixed;z-index:20;width:100%;background:#090b52;box-shadow:0 8px 18px -8px rgba(42,42,42,0.63);transition:all .5s ease;top:0;left:0;right:0}
 .hom-top.dmact{background:#180f5e;box-shadow:0 11px 18px -8px rgba(42,42,42,0.63);position:fixed;top:0;left:0}
 .hom-top.dmact.act{top:0}
 .hom-nav{width:100%;float:left}
 .hom-nav .ic-logo{width:200px;margin-top:10px}
-.hom-nav .bl{float:right;margin:0;padding-top: 20px !important;display: flex!important;align-items: center !important;}
+.hom-nav .bl{float:right;margin:0;padding-top:4px}
 .hom-nav .bl li{float:left;margin-left:10px;font-weight:500}
-.hom-nav .bl li a{color:#000;cursor:pointer;font-weight:500;font-size:12px;line-height:49px;padding:5px 6px;border-radius:5px;float:left;display:inline-block;line-height:24px}
-.hom-nav .bl li:last-child a{color:#fff;border-radius:5px;margin-left:10px;padding:5px 15px;background-color: #007bff !important;}
+.hom-nav .bl li a{color:#fff;cursor:pointer;font-weight:500;font-size:12px;line-height:49px;padding:5px 6px;border-radius:5px;float:left;display:inline-block;line-height:24px}
+.hom-nav .bl li:last-child a{color:#fff;border-radius:5px;margin-left:10px;padding:5px 15px}
 .hom-nav .bl li:last-child a:hover{background:#1834bf;border:1px solid #0a2192}
 .al{float:right;display:none;position:relative}
 .al:after{transition:all .5s ease;right:-12px;top:10px;color:#aaadaf;filter:invert(1);width:10px;height:10px;opacity:0}
@@ -388,7 +388,6 @@ to{background-position:100% 0}
 .ban-search ul li.sr-cit{width:20%;display:none}
 .ban-search ul li.sr-cit .chosen-container a div{}
 .ban-search ul li .chosen-container a div:before{top:28px}
-.bl select {border: none !important;padding-top: 2px !important;cursor: pointer !important;}
 .ban-search ul li{}
 .ban-search li select{outline:none}
 .ban-search li:nth-child(1) select{border-radius:10px 0 0 10px}
@@ -419,28 +418,11 @@ to{background-position:100% 0}
 .blog-head .ban-search ul{margin:0 auto;display:table}
 .blog-head .ban-search ul li.sr-sea input{border-radius:30px;box-shadow:0 5px 41px -14px rgba(60,63,66,.32);color:#40454a;max-width:100%;width:384px;border:1px solid #e9e9ef;font-weight:600}
 .ban-ql{margin:0 auto;display:table;width:90%;position:relative;margin-top:-175px}
-.ban-ql ul{margin: 0 auto;
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(4, minmax(300px, 4fr));
-    row-gap: 15px;}
+.ban-ql ul{margin:0 auto;display:table;width:100%}
 .ban-ql ul li{float:left;width:25%;padding: 0 15px;}
-.ban-ql ul li div{transition: all .5s ease;
-    color: #000;
-    background: #fff;
-    text-align: center;
-    padding: 25px 20px 27px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 3px 9px -4px #0000008f;
-    border-radius: 15px;
-    width: 17vw;
-    height: 16vw;}
+.ban-ql ul li div{transition:all .5s ease;color:#000;background:#fff;text-align:center;padding:25px 20px 27px;position:relative;overflow:hidden;box-shadow: 0 3px 9px -4px #0000008f;border-radius:15px}
 .ban-ql ul li div:hover{transition:all .2s ease;transform:translateY(-5px);box-shadow:0 11px 45px -13px rgba(37,39,42,0.67);z-index:9}
-.ban-ql ul li div img .cityimg{width:60px;background:#fff;padding:6px;border-radius:15px}
-.ban-ql ul li div img{border-radius: 15px;
-    aspect-ratio: 16 / 9;
-}
+.ban-ql ul li div img{width:60px;background:#fff;padding:6px;border-radius:15px}
 .ban-ql ul li div h4{font-size:16px;font-weight:600;margin:12px 0 15px;color:#243c50}
 .ban-ql ul li div p{display:block;font-size:12px;padding-bottom:5px;font-weight:500;color:#818181;margin-bottom:0;padding-bottom:18px}
 .ban-ql ul li div a{padding:4px 7px;border-radius:30px;font-size:12px;border:1px dashed #fff;box-shadow:0 0 0 3px #151f31;color:#fff}

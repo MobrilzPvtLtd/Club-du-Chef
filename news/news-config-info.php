@@ -1,11 +1,11 @@
 <?php
-if(file_exists('../admin/config/db.php'))
-{
-    include('../admin/config/db.php');
-}
 if(file_exists('../admin/config/subdomain_rout.php'))
 {
     include('../admin/config/subdomain_rout.php');
+}
+if(file_exists('../admin/config/db.php'))
+{
+    include('../admin/config/db.php');
 }
 
 if (file_exists('../admin/classes/index.function.php')) {
@@ -43,7 +43,7 @@ if($footer_row['admin_language']== 1) {
 
 $current_page = basename($_SERVER['PHP_SELF']);
 
-$news_base = '/';
+$news_base = 'news/';
 
 $current_news_page = $news_base.$current_page;
 ?>

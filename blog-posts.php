@@ -67,7 +67,7 @@ if (isset($_REQUEST['sort_by']) && !empty($_REQUEST['sort_by'])) {
                     <li>
                         <div class="blog-sli-box">
                             <div class="lhs">
-                                <img loading="lazy" src="/images/blogs/<?php echo $top_blog_row['blog_image']; ?>" alt="">
+                                <img loading="lazy" src="images/blogs/<?php echo $top_blog_row['blog_image']; ?>" alt="">
                             </div>
 
                             <div class="rhs">
@@ -76,7 +76,7 @@ if (isset($_REQUEST['sort_by']) && !empty($_REQUEST['sort_by'])) {
                                 <div class="auth">
                                     <img loading="lazy"
                                          src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                         data-src="<?php echo $slash; ?>/images/user/<?php if (($top_user_details_row['profile_image'] == NULL) || empty($top_user_details_row['profile_image'])) {
+                                         data-src="<?php echo $slash; ?>images/user/<?php if (($top_user_details_row['profile_image'] == NULL) || empty($top_user_details_row['profile_image'])) {
                                              echo $footer_row['user_default_image'];
                                          } else {
                                              echo $top_user_details_row['profile_image'];
@@ -151,7 +151,7 @@ if (isset($_REQUEST['sort_by']) && !empty($_REQUEST['sort_by'])) {
                                 <span><?php echo $BIZBOOK['AD']; ?></span>
 
                                 <img
-                                        src="<?php echo $slash; ?>/images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
+                                        src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
                                             echo $ad_enquiry_photo;
                                         } else {
                                             echo "ads1.jpg";
@@ -216,7 +216,7 @@ if (isset($_REQUEST['sort_by']) && !empty($_REQUEST['sort_by'])) {
                         <li class="blog-item">
                             <div class="pro-eve-box">
                                 <div>
-                                    <img loading="lazy" data-src="/images/blogs/<?php echo $blogrow['blog_image']; ?>"
+                                    <img loading="lazy" data-src="images/blogs/<?php echo $blogrow['blog_image']; ?>"
                                          src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                                          class="b-lazy" alt="">
                                 </div>
@@ -297,16 +297,16 @@ include "footer.php";
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="<?php echo $slash; ?>/js/jquery.min.js"></script>
-<script src="<?php echo $slash; ?>/js/popper.min.js"></script>
-<script src="<?php echo $slash; ?>/js/bootstrap.min.js"></script>
-<script src="<?php echo $slash; ?>/js/jquery-ui.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-ui.js"></script>
 <script src="<?php echo $slash; ?>js/select-opt.js"></script>
 <script src="<?php echo $slash; ?>js/blazy.min.js"></script>
 <script type="text/javascript">var webpage_full_link = '<?php echo $webpage_full_link;?>';</script>
 <script type="text/javascript">var login_url = '<?php echo $LOGIN_URL;?>';</script>
-<script src="<?php echo $slash; ?>/js/slick.js"></script>
-<script src="<?php echo $slash; ?>/js/custom.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/custom.js"></script>
 <script src="<?php echo $slash; ?>js/blog_filter.js"></script>
 <script src="<?php echo $slash; ?>js/blazy.min.js"></script>
 <script>

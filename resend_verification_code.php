@@ -33,7 +33,7 @@ if (mysqli_num_rows($activation) > 0) {
 
         $verification_code = $activation_row['verification_code'];
 
-        $webpage_full_link_with_verification_link = "activate?q=" . $verification_link;
+        $webpage_full_link_with_verification_link = $webpage_full_link . "activate?q=" . $verification_link;
 
 
         //****************************    Admin Primary email fetch starts    *************************

@@ -109,7 +109,7 @@ if (isset($_REQUEST['calendar-date']) && !empty($_REQUEST['calendar-date'])  && 
                 <li>
                     <div class="news-hban-box">
                         <div class="im">
-                            <img loading="lazy" src="/images/events/<?php echo $top_event_row['event_image']; ?>" alt="">
+                            <img loading="lazy" src="images/events/<?php echo $top_event_row['event_image']; ?>" alt="">
                         </div>
                         <div class="txt">
                             <span class="news-cate"><?php echo $BIZBOOK['EVENT_TOP_EVENTS']; ?></span><br>
@@ -228,7 +228,7 @@ if (isset($_REQUEST['calendar-date']) && !empty($_REQUEST['calendar-date'])  && 
                                 <span><?php echo $BIZBOOK['AD']; ?></span>
 
                                 <img
-                                        src="<?php echo $slash; ?>/images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
+                                        src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
                                             echo $ad_enquiry_photo;
                                         } else {
                                             echo "ads1.jpg";
@@ -334,7 +334,7 @@ if (isset($_REQUEST['calendar-date']) && !empty($_REQUEST['calendar-date'])  && 
                         <li class="events-item">
                             <div class="eve-box">
                                 <div>
-                                    <img loading="lazy" data-src="/images/events/<?php echo $eventrow['event_image']; ?>"
+                                    <img loading="lazy" data-src="images/events/<?php echo $eventrow['event_image']; ?>"
                                          src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                                          class="b-lazy"
                                          alt="">
@@ -418,18 +418,18 @@ include "footer.php";
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="<?php echo $slash; ?>/js/jquery.min.js"></script>
-<script src="<?php echo $slash; ?>/js/popper.min.js"></script>
-<script src="<?php echo $slash; ?>/js/bootstrap.min.js"></script>
-<script src="<?php echo $slash; ?>/js/jquery-ui.js"></script>
-<script src="<?php echo $slash; ?>/js/select-opt.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/select-opt.js"></script>
 <script type="text/javascript">var webpage_full_link = '<?php echo $webpage_full_link;?>';</script>
 <script type="text/javascript">var login_url = '<?php echo $LOGIN_URL;?>';</script>
-<script src="<?php echo $slash; ?>/js/slick.js"></script>
+<script src="js/slick.js"></script>
 <script src="<?php echo $slash; ?>js/blazy.min.js"></script>
-<script src="<?php echo $slash; ?>/js/custom.js"></script>
+<script src="js/custom.js"></script>
 <script src="<?php echo $slash; ?>js/event_filter.js"></script>
-<!--<script src="<?php echo $slash; ?>/js/jquery.simplePagination.min.js"></script>-->
+<!--<script src="js/jquery.simplePagination.min.js"></script>-->
 <script>
     $(document).ready(function () {
         var bLazy = new Blazy({});

@@ -1,6 +1,6 @@
 <!-- START -->
 
-<span class="btn-ser-need-ani"><img loading="lazy" src="<?php echo $slash; ?>/images/icon/help.png" alt=""></span>
+<span class="btn-ser-need-ani"><img loading="lazy" src="<?php echo $slash; ?>images/icon/help.png" alt=""></span>
 
 <div class="ani-quo-form">
     <i class="material-icons ani-req-clo">close</i>
@@ -102,22 +102,7 @@
     </div>
 </section>
 <!-- END -->
-<!-- <?php 
-// if($footer_row['admin_install_flag'] == 1) { unlink("install1.php"); unlink("install2.php"); }
-if ($footer_row['admin_install_flag'] == 1) {
-    if (file_exists("install1.php")) {
-        unlink("install1.php");
-    } else {
-        error_log("File 'install1.php' does not exist and could not be deleted.");
-    }
-
-    if (file_exists("install2.php")) {
-        unlink("install2.php");
-    } else {
-        error_log("File 'install2.php' does not exist and could not be deleted.");
-    }
-} 
-?> -->
+<?php if($footer_row['admin_install_flag'] == 1) { unlink("install1.php"); unlink("install2.php"); } ?>
 <section class="<?php if($footer_row['admin_language']== 2){ echo "lg-arb";}?> wed-hom-footer">
     <div class="container">
         <div class="row foot-supp">
@@ -198,9 +183,9 @@ if ($footer_row['admin_install_flag'] == 1) {
             <div class="col-md-4 fot-app">
                 <h4><?php echo $BIZBOOK['FOOTER-DOWNLOAD-FREE-MOBILE-APPS']; ?></h4>
                 <ul>
-                    <li><a href="<?php echo $footer_row['mobile_app_andriod']; ?>"><img loading="lazy" src="<?php echo $slash; ?>/images/gstore.png" alt=""></a>
+                    <li><a href="<?php echo $footer_row['mobile_app_andriod']; ?>"><img loading="lazy" src="<?php echo $slash; ?>images/gstore.png" alt=""></a>
                     </li>
-                    <li><a href="<?php echo $footer_row['mobile_app_ios']; ?>"><img loading="lazy" src="<?php echo $slash; ?>/images/astore.png" alt=""></a>
+                    <li><a href="<?php echo $footer_row['mobile_app_ios']; ?>"><img loading="lazy" src="<?php echo $slash; ?>images/astore.png" alt=""></a>
                     </li>
                 </ul>
             </div>
@@ -208,11 +193,11 @@ if ($footer_row['admin_install_flag'] == 1) {
             <div class="col-md-4 fot-soc">
                 <h4><?php echo $BIZBOOK['FOOTER-SOCIAL-MEDIA']; ?></h4>
                 <ul>
-                    <li><a target="_blank" href="<?php echo $footer_row['footer_linked_in']; ?>"><img loading="lazy" src="<?php echo $slash; ?>/images/social/1.png" alt=""></a></li>
-                    <li><a target="_blank" href="<?php echo $footer_row['footer_twitter']; ?>"><img loading="lazy" src="<?php echo $slash; ?>/images/social/2.png" alt=""></a></li>
-                    <li><a target="_blank" href="<?php echo $footer_row['footer_fb']; ?>"><img loading="lazy" src="<?php echo $slash; ?>/images/social/3.png" alt=""></a></li>
-                    <li><a target="_blank" href="<?php echo $footer_row['footer_whatsapp']; ?>"><img loading="lazy" src="<?php echo $slash; ?>/images/social/4.png" alt=""></a></li>
-                    <li><a target="_blank" href="<?php echo $footer_row['footer_youtube']; ?>"><img loading="lazy" src="<?php echo $slash; ?>/images/social/5.png" alt=""></a></li>
+                    <li><a target="_blank" href="<?php echo $footer_row['footer_linked_in']; ?>"><img loading="lazy" src="<?php echo $slash; ?>images/social/1.png" alt=""></a></li>
+                    <li><a target="_blank" href="<?php echo $footer_row['footer_twitter']; ?>"><img loading="lazy" src="<?php echo $slash; ?>images/social/2.png" alt=""></a></li>
+                    <li><a target="_blank" href="<?php echo $footer_row['footer_fb']; ?>"><img loading="lazy" src="<?php echo $slash; ?>images/social/3.png" alt=""></a></li>
+                    <li><a target="_blank" href="<?php echo $footer_row['footer_whatsapp']; ?>"><img loading="lazy" src="<?php echo $slash; ?>images/social/4.png" alt=""></a></li>
+                    <li><a target="_blank" href="<?php echo $footer_row['footer_youtube']; ?>"><img loading="lazy" src="<?php echo $slash; ?>images/social/5.png" alt=""></a></li>
                 </ul>
             </div>
         </div>
@@ -248,48 +233,48 @@ if ($footer_row['admin_install_flag'] == 1) {
 <div class="fqui-menu">
 <ul>
     <?php if ($footer_row['admin_listing_show'] == 1) { ?>
-        <li><a href="<?php echo $webpage_full_link; ?>" ><img  src="<?php echo $slash; ?>/images/icon/shop.png"><?php echo $BIZBOOK['HOME']; ?></a></li>
+        <li><a href="<?php echo $webpage_full_link; ?>" ><img  src="<?php echo $slash; ?>images/icon/shop.png"><?php echo $BIZBOOK['HOME']; ?></a></li>
         <li><a href="<?php echo $webpage_full_link; ?>all-category"
-                class="act"><img        src="<?php echo $slash; ?>/images/icon/shop.png"><?php echo $BIZBOOK['ALL_SERVICES']; ?>
+                class="act"><img        src="<?php echo $slash; ?>images/icon/shop.png"><?php echo $BIZBOOK['ALL_SERVICES']; ?>
             </a></li>
     <?php }
     if ($footer_row['admin_expert_show'] == 1) { ?>
         <li><a href="<?php echo $webpage_full_link; ?>service-experts"
-                class="act"><img        src="<?php echo $slash; ?>/images/icon/expert.png"><?php echo $BIZBOOK['SERVICE-EXPERTS']; ?>
+                class="act"><img        src="<?php echo $slash; ?>images/icon/expert.png"><?php echo $BIZBOOK['SERVICE-EXPERTS']; ?>
             </a></li>
     <?php }
     if ($footer_row['admin_job_show'] == 1) { ?>
-        <li><a href="<?php echo $webpage_full_link; ?>jobs" class="act"><img        src="<?php echo $slash; ?>/images/icon/employee.png"><?php echo $BIZBOOK['JOBS']; ?>
+        <li><a href="<?php echo $webpage_full_link; ?>jobs" class="act"><img        src="<?php echo $slash; ?>images/icon/employee.png"><?php echo $BIZBOOK['JOBS']; ?>
             </a></li>
     <?php }
     if ($footer_row['admin_place_show'] == 1) { ?>
         <li><a href="<?php echo $webpage_full_link; ?>places"
-                class="act"><img        src="<?php echo $slash; ?>/images/places/icons/hot-air-balloon.png"><?php echo $BIZBOOK['PLACE-MENU']; ?>
+                class="act"><img        src="<?php echo $slash; ?>images/places/icons/hot-air-balloon.png"><?php echo $BIZBOOK['PLACE-MENU']; ?>
             </a></li>
     <?php }
     if ($footer_row['admin_news_show'] == 1) { ?>
-        <li><a href="<?php echo $webpage_full_link; ?>news"><img        src="<?php echo $slash; ?>/images/icon/news.png"><?php echo $BIZBOOK['NEWS-MAGA']; ?>
+        <li><a href="<?php echo $webpage_full_link; ?>news"><img        src="<?php echo $slash; ?>images/icon/news.png"><?php echo $BIZBOOK['NEWS-MAGA']; ?>
             </a></li>
     <?php }
     if ($footer_row['admin_event_show'] == 1) { ?>
-        <li><a href="<?php echo $webpage_full_link; ?>events"><img        src="<?php echo $slash; ?>/images/icon/calendar.png"><?php echo $BIZBOOK['EVENTS']; ?>
+        <li><a href="<?php echo $webpage_full_link; ?>events"><img        src="<?php echo $slash; ?>images/icon/calendar.png"><?php echo $BIZBOOK['EVENTS']; ?>
             </a></li>
     <?php }
     if ($footer_row['admin_product_show'] == 1) { ?>
-        <li><a href="<?php echo $webpage_full_link; ?>all-products"><img        src="<?php echo $slash; ?>/images/icon/cart.png"><?php echo $BIZBOOK['PRODUCTS']; ?>
+        <li><a href="<?php echo $webpage_full_link; ?>all-products"><img        src="<?php echo $slash; ?>images/icon/cart.png"><?php echo $BIZBOOK['PRODUCTS']; ?>
             </a></li>
     <?php }
     if ($footer_row['admin_coupon_show'] == 1) { ?>
-        <li><a href="<?php echo $webpage_full_link; ?>coupons"><img        src="<?php echo $slash; ?>/images/icon/coupons.png"><?php echo $BIZBOOK['COUPONS_AND_DEALS']; ?>
+        <li><a href="<?php echo $webpage_full_link; ?>coupons"><img        src="<?php echo $slash; ?>images/icon/coupons.png"><?php echo $BIZBOOK['COUPONS_AND_DEALS']; ?>
             </a></li>
     <?php }
     if ($footer_row['admin_blog_show'] == 1) { ?>
-        <li><a href="<?php echo $webpage_full_link; ?>blog-posts"><img        src="<?php echo $slash; ?>/images/icon/blog1.png"><?php echo $BIZBOOK['BLOGS']; ?>
+        <li><a href="<?php echo $webpage_full_link; ?>blog-posts"><img        src="<?php echo $slash; ?>images/icon/blog1.png"><?php echo $BIZBOOK['BLOGS']; ?>
             </a></li>
     <?php } ?>
-    <li><a href="<?php echo $webpage_full_link; ?>community"><img    src="<?php echo $slash; ?>/images/icon/11.png"><?php echo $BIZBOOK['COMMUNITY']; ?>
+    <li><a href="<?php echo $webpage_full_link; ?>community"><img    src="<?php echo $slash; ?>images/icon/11.png"><?php echo $BIZBOOK['COMMUNITY']; ?>
         </a></li>
-        <li><span class="btn-ser-need-ani"><img loading="lazy" src="<?php echo $slash; ?>/images/icon/how1.png"><?php echo $BIZBOOK['SUPPORT']; ?></span></li>
+        <li><span class="btn-ser-need-ani"><img loading="lazy" src="<?php echo $slash; ?>images/icon/how1.png"><?php echo $BIZBOOK['SUPPORT']; ?></span></li>
 </ul>
 </div>
 <!-- END -->

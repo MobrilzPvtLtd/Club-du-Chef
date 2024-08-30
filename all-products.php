@@ -512,7 +512,7 @@ if (!empty($w)) {
                                             <span><?php echo $BIZBOOK['AD']; ?></span>
 
                                             <img
-                                                    src="<?php echo $slash; ?>/images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
+                                                    src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
                                                         echo $ad_enquiry_photo;
                                                     } else {
                                                         echo "ads1.jpg";
@@ -784,18 +784,18 @@ include "footer.php";
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="<?php echo $slash; ?>/js/jquery.min.js"></script>
-<script src="<?php echo $slash; ?>/js/popper.min.js"></script>
-<script src="<?php echo $slash; ?>/js/bootstrap.min.js"></script>
-<script src="<?php echo $slash; ?>/js/jquery-ui.js"></script>
-<script src="<?php echo $slash; ?>/js/select-opt.js"></script>
+<script src="<?php echo $slash; ?>js/jquery.min.js"></script>
+<script src="<?php echo $slash; ?>js/popper.min.js"></script>
+<script src="<?php echo $slash; ?>js/bootstrap.min.js"></script>
+<script src="<?php echo $slash; ?>js/jquery-ui.js"></script>
+<script src="<?php echo $slash; ?>js/select-opt.js"></script>
 <script type="text/javascript">var webpage_full_link = '<?php echo $webpage_full_link;?>';</script>
 <script type="text/javascript">var login_url = '<?php echo $LOGIN_URL;?>';</script>
-<script src="<?php echo $slash; ?>/js/custom.js"></script>
-<script src="<?php echo $slash; ?>/js/product_filter.js"></script>
-<script src="<?php echo $slash; ?>/js/jquery.validate.min.js"></script>
-<script src="<?php echo $slash; ?>/js/custom_validation.js"></script>
-<script src="<?php echo $slash; ?>/js/jquery.simplePagination.min.js"></script>
+<script src="<?php echo $slash; ?>js/custom.js"></script>
+<script src="<?php echo $slash; ?>js/product_filter.js"></script>
+<script src="<?php echo $slash; ?>js/jquery.validate.min.js"></script>
+<script src="<?php echo $slash; ?>js/custom_validation.js"></script>
+<script src="<?php echo $slash; ?>js/jquery.simplePagination.min.js"></script>
 <script>
 
     var items = $(".products-wrapper .products-item");

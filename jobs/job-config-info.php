@@ -45,7 +45,7 @@ if($footer_row['admin_language']== 1) {
 
 $current_page = basename($_SERVER['PHP_SELF']);
 
-$job_base = '/';
+$job_base = 'jobs/';
 
 $current_job_page = $job_base.$current_page;
 ?>

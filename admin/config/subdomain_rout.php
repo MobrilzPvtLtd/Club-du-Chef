@@ -1,12 +1,4 @@
 <?php
-if(file_exists('admin/config/db-config.php'))
-{
-  include('admin/config/db-config.php');
-}
-if(file_exists('../admin/config/db-config.php'))
-{
-  include('../admin/config/db-config.php');
-}
 
 if (session_status() === PHP_SESSION_NONE) {
 session_name("city");
@@ -14,64 +6,44 @@ session_set_cookie_params(0, '/', '.truewebservice.com');
 session_start();
 }
 
-if (!isset($conn) || !$conn) {
-  die('Database connection is not established.');
-}
-
-// Use the TBL constant
-$sql = "SELECT * FROM " . TBL . "cities GROUP BY city_name ORDER BY city_id DESC";
-$citys = mysqli_query($conn, $sql);
-
-if (!$citys) {
-  die('Error: ' . mysqli_error($conn));
-}
-
 $CityList['All Cities'] = 'www';
-foreach ($citys as $city) {
-  $CityList[$city['city_name']] = $city['city_slug'];
-}
-// $CityList['Noida'] = 'noida';
-// $CityList['Delhi'] = 'delhi';
-// $CityList['Ghaziabad'] = 'ghaziabad';
+$CityList['Noida'] = 'noida';
+$CityList['Delhi'] = 'delhi';
+$CityList['Ghaziabad'] = 'ghaziabad';
 
 
 if (isset($_SESSION['city'])) {
+
 $CurrentCity = $_SESSION['city'];
 } else {
+
 $CurrentCity = 'www';
 }
 
-function normalizeCity($city) {
-  $city = strtolower($city);
-  
-  $city = preg_replace('/\s+/', '', $city); 
-  $city = str_replace('-', '', $city);
-  
-  return $city;
-}
-
-$CurrentCityNormalized = normalizeCity($CurrentCity);
-
-$DomainPrefix = 'www';
 
 foreach ($CityList as $City => $CitySlug) {
-  // $City = strtolower(preg_replace('/\s*/', '', $City));
-  $CityNormalized = normalizeCity($City);
-  if ($CurrentCityNormalized == $CityNormalized) {
-      $DomainPrefix = $CitySlug;
-      break; 
-  }
-// if ($CurrentCity == $City) {
-//     $DomainPrefix = $CitySlug;
-//     break;
-// } else {
-//     $DomainPrefix = 'www';
-// }
+
+
+$City = strtolower(preg_replace('/\s*/', '', $City));
+
+if ($CurrentCity == $City) {
+
+    $DomainPrefix = $CitySlug;
+
+    break;
+
+} else {
+
+    $DomainPrefix = 'www';
+
+}
+
 }
 
 $FullHostname = $DomainPrefix . '.truewebservice.com';
 
 //echo $_SERVER['HTTP_HOST'];
+
 
 // Check if its diffent then redirect to that sub domian
 

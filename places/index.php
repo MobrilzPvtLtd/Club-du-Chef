@@ -11,6 +11,7 @@ if (file_exists('../config/places_page_authentication.php')) {
 <?php
 if (isset($_GET['category'])) {
 
+
     $category_search_slug1 = str_replace('-', ' ', $_GET['category']);
 
     $category_search_slug = str_replace('.php', '', $category_search_slug1);
@@ -124,7 +125,7 @@ if (isset($_GET['category'])) {
                             <li>
                                 <div class="plac-hom-box">
                                     <div class="plac-hom-box-im">
-                                        <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>/places/images/places/<?php echo explode(',', $placerow['place_gallery_image'])[0]; ?>" alt="">
+                                        <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>places/images/places/<?php echo explode(',', $placerow['place_gallery_image'])[0]; ?>" alt="">
                                         <h4><?php echo stripslashes($placerow['place_name']); ?></h4>
                                     </div>
                                     <div class="plac-hom-box-txt">
@@ -232,17 +233,17 @@ include "../footer.php";
 ?>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="<?php echo $slash; ?>/js/jquery.min.js"></script>
-<script src="<?php echo $slash; ?>/js/popper.min.js"></script>
-<script src="<?php echo $slash; ?>/js/bootstrap.min.js"></script>
-<script src="<?php echo $slash; ?>/js/jquery-ui.js"></script>
-<script src="<?php echo $slash; ?>/js/select-opt.js"></script>
-<script src="<?php echo $slash; ?>/js/blazy.min.js"></script>
+<script src="<?php echo $slash; ?>js/jquery.min.js"></script>
+<script src="<?php echo $slash; ?>js/popper.min.js"></script>
+<script src="<?php echo $slash; ?>js/bootstrap.min.js"></script>
+<script src="<?php echo $slash; ?>js/jquery-ui.js"></script>
+<script src="<?php echo $slash; ?>js/select-opt.js"></script>
+<script src="<?php echo $slash; ?>js/blazy.min.js"></script>
 <script type="text/javascript">var webpage_full_link ='<?php echo $webpage_full_link;?>';</script>
 <script type="text/javascript">var login_url ='<?php echo $LOGIN_URL;?>';</script>
-<script src="<?php echo $slash; ?>/js/custom.js"></script>
-<script src="<?php echo $slash; ?>/js/jquery.validate.min.js"></script>
-<script src="<?php echo $slash; ?>/js/custom_validation.js"></script>
+<script src="<?php echo $slash; ?>js/custom.js"></script>
+<script src="<?php echo $slash; ?>js/jquery.validate.min.js"></script>
+<script src="<?php echo $slash; ?>js/custom_validation.js"></script>
 </body>
 
 </html>

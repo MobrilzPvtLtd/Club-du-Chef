@@ -67,7 +67,7 @@ if($footer_row['admin_coupon_show'] != 1) {
                                     <div class="coup-box-1">
                                         <div class="s1">
                                             <div class="lhs">
-                                                <img loading="lazy" src="/images/user/<?php echo $couponrow['coupon_photo']; ?>">
+                                                <img loading="lazy" src="images/user/<?php echo $couponrow['coupon_photo']; ?>">
                                             </div>
                                             <div class="rhs">
                                                 <h4><?php echo $couponrow['coupon_name']; ?></h4>
@@ -120,15 +120,15 @@ include "footer.php";
 ?>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="<?php echo $slash; ?>/js/jquery.min.js"></script>
-<script src="<?php echo $slash; ?>/js/popper.min.js"></script>
-<script src="<?php echo $slash; ?>/js/bootstrap.min.js"></script>
-<script src="<?php echo $slash; ?>/js/jquery-ui.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-ui.js"></script>
 <script type="text/javascript">var webpage_full_link = '<?php echo $webpage_full_link;?>';</script>
 <script type="text/javascript">var login_url = '<?php echo $LOGIN_URL;?>';</script>
-<script src="<?php echo $slash; ?>/js/custom.js"></script>
-<script src="<?php echo $slash; ?>/js/jquery.validate.min.js"></script>
-<script src="<?php echo $slash; ?>/js/custom_validation.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/custom_validation.js"></script>
 <script>
     $(document).ready(function () {
         $(".get-coup-act").click(function () {

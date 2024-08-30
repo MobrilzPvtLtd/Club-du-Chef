@@ -75,7 +75,7 @@ if (file_exists('../config/news_page_authentication.php')) {
                     $get_ad_row = getAds($ad_position_id);
                     $ad_enquiry_photo = $get_ad_row['ad_enquiry_photo'];
                     ?>
-                    <a href="<?php echo stripslashes($get_ad_row['ad_link']); ?>"><img loading="lazy" src="<?php echo $slash; ?>/images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
+                    <a href="<?php echo stripslashes($get_ad_row['ad_link']); ?>"><img loading="lazy" src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
                             echo $ad_enquiry_photo;
                         } else {
                             echo "ads1.png";
@@ -422,18 +422,18 @@ include "../footer.php";
 ?>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="<?php echo $slash; ?>/js/jquery.min.js"></script>
-<script src="<?php echo $slash; ?>/js/popper.min.js"></script>
-<script src="<?php echo $slash; ?>/js/bootstrap.min.js"></script>
-<script src="<?php echo $slash; ?>/js/jquery-ui.js"></script>
-<script src="<?php echo $slash; ?>/js/select-opt.js"></script>
-<script src="<?php echo $slash; ?>/js/blazy.min.js"></script>
+<script src="<?php echo $slash; ?>js/jquery.min.js"></script>
+<script src="<?php echo $slash; ?>js/popper.min.js"></script>
+<script src="<?php echo $slash; ?>js/bootstrap.min.js"></script>
+<script src="<?php echo $slash; ?>js/jquery-ui.js"></script>
+<script src="<?php echo $slash; ?>js/select-opt.js"></script>
+<script src="<?php echo $slash; ?>js/blazy.min.js"></script>
 <script type="text/javascript">var webpage_full_link = '<?php echo $webpage_full_link;?>';</script>
 <script type="text/javascript">var login_url = '<?php echo $LOGIN_URL;?>';</script>
-<script src="<?php echo $slash; ?>/js/slick.js"></script>
-<script src="<?php echo $slash; ?>/js/custom.js"></script>
-<script src="<?php echo $slash; ?>/js/jquery.validate.min.js"></script>
-<script src="<?php echo $slash; ?>/js/custom_validation.js"></script>
+<script src="<?php echo $slash; ?>js/slick.js"></script>
+<script src="<?php echo $slash; ?>js/custom.js"></script>
+<script src="<?php echo $slash; ?>js/jquery.validate.min.js"></script>
+<script src="<?php echo $slash; ?>js/custom_validation.js"></script>
 <script>
     $('.multiple-items1').slick({
         infinite: true,
