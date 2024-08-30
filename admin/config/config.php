@@ -147,9 +147,15 @@ define('SMS_PWORD', '123'); # SMS PASSWORD.
 define('SENDER_ID', 'BIZGO'); # SMS PASSWORD.
 
 # Data Array
-$data_array = array();
+$parsed_url = parse_url($webpage_full_link);
+$webpage_full_link = $parsed_url['scheme'] . '://' . $parsed_url['host'] . '/';
 
+$data_array = array();
 $data_array['website_url'] = $webpage_full_link;
+
+// $data_array = array();
+
+// $data_array['website_url'] = $webpage_full_link;
 
 ##### Page Redirect URl's
 
