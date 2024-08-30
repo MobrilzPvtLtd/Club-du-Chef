@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 include "home_page_top_section.php";
 
@@ -153,3 +154,6 @@ include "home_page_mid_section.php"
     </div>
 </div>
 <!-- END -->
+=======
+<h3>Noida template</h3>
+>>>>>>> parent of 5bd0250 (db-config page create and city fetch from database in dropdown)

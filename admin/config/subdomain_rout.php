@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 if(file_exists('admin/config/db-config.php'))
 {
   include('admin/config/db-config.php');
@@ -7,6 +8,8 @@ if(file_exists('../admin/config/db-config.php'))
 {
   include('../admin/config/db-config.php');
 }
+=======
+>>>>>>> parent of 5bd0250 (db-config page create and city fetch from database in dropdown)
 
 if (session_status() === PHP_SESSION_NONE) {
 session_name("city");
@@ -14,25 +17,19 @@ session_set_cookie_params(0, '/', '.truewebservice.com');
 session_start();
 }
 
-if (!isset($conn) || !$conn) {
-  die('Database connection is not established.');
-}
-
-// Use the TBL constant
-$sql = "SELECT * FROM " . TBL . "cities GROUP BY city_name ORDER BY city_id DESC";
-$citys = mysqli_query($conn, $sql);
-
-if (!$citys) {
-  die('Error: ' . mysqli_error($conn));
-}
-
 $CityList['All Cities'] = 'www';
+<<<<<<< HEAD
 foreach ($citys as $city) {
   $CityList[$city['city_name']] = $city['city_slug'];
 }
 // $CityList['Noida'] = 'noida';
 // $CityList['Delhi'] = 'delhi';
 // $CityList['Ghaziabad'] = 'ghaziabad';
+=======
+$CityList['Noida'] = 'noida';
+$CityList['Delhi'] = 'delhi';
+$CityList['Ghaziabad'] = 'ghaziabad';
+>>>>>>> parent of 5bd0250 (db-config page create and city fetch from database in dropdown)
 
 
 if (isset($_SESSION['city'])) {
