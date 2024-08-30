@@ -1,1 +1,0 @@
-<h3>Delhi template</h3>

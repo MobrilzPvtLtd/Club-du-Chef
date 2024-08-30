@@ -1,1 +1,0 @@
-<h3>Ghaziabad template</h3>
