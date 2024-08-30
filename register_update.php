@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by Vignesh.
  * User: Vignesh
@@ -50,13 +51,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $user_plan = '';
 
             $user_points = 0;
-
         } elseif ($user_type == "job seeker") {
 
             $user_plan = '';
 
             $user_points = 0;
-
         } elseif ($user_type == "Service provider") {
 
             $user_plan = $_POST["user_plan"];
@@ -67,7 +66,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $plan_type_row = mysqli_fetch_array($rs_plan_type);
 
             $user_points = $plan_type_row['plan_type_points'];
-
         }
         $register_mode = "Direct";
         $user_status = "Inactive";
@@ -142,12 +140,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $verification_link = checkUniqueVerificationLink(generateAlphabetsOnlyRandomString(112));
 
-        $webpage_full_link_with_verification_link = "activate?q=" . $verification_link;
+        $webpage_full_link_with_verification_link = $base_url . "activate?q=" . $verification_link;
+        // print_r($webpage_full_link_with_verification_link);
+        // die();
 
         $verification_status = 1; //**** If 0 means Activated 1 Means Not activated **//
 
 
-//************ Email Already Exist Check Starts ***************
+        //************ Email Already Exist Check Starts ***************
 
 
         $email_exist_check = mysqli_query($conn, "SELECT * FROM " . TBL . "users WHERE email_id = '$email_id' ");
@@ -170,12 +170,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 header('Location: login?login=register');
                 exit();
             }
-
         }
 
-//************ Email Already Exist Check Ends ***************
+        //************ Email Already Exist Check Ends ***************
 
-//************ Mobile Number Already Exist Check Starts ***************
+        //************ Mobile Number Already Exist Check Starts ***************
 
 
         $mobile_exist_check = mysqli_query($conn, "SELECT * FROM " . TBL . "users  WHERE mobile_number = '$mobile_number' ");
@@ -197,10 +196,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 header('Location: login?login=register');
                 exit();
             }
-
         }
 
-//************ Mobile Number Already Exist Check Ends ***************
+        //************ Mobile Number Already Exist Check Ends ***************
 
         $qry = "INSERT INTO " . TBL . "users 
 					(first_name, last_name, email_id, mobile_number, password, user_type, user_plan, register_mode, user_address, profile_image
@@ -253,7 +251,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $USER_INSERT_ADMIN_SUBJECT = $BIZBOOK['USER_INSERT_ADMIN_SUBJECT'];
 
-//****************************    Admin email starts    *************************
+            //****************************    Admin email starts    *************************
 
             $to = $admin_email;
             $subject = "$admin_site_name $USER_INSERT_ADMIN_SUBJECT";
@@ -263,8 +261,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $mail_template_admin = $admin_sql_fetch_row['mail_template'];
 
-            $message1 = stripslashes(str_replace(array('\'.$admin_site_name.\'', '\' . $first_name . \'', '\' . $email_id . \'', '\' . $password . \'', '\'.$admin_footer_copyright.\'', '\'.$admin_address.\'', '\'.$webpage_full_link.\'', '\'.$webpage_full_link_with_login.\'', '\'.$admin_primary_email.\''),
-                array('' . $admin_site_name . '', '' . $first_name . '', '' . $email_id . '', '' . $star_password . '', '' . $admin_footer_copyright . '', '' . $admin_address . '', '' . $webpage_full_link . '', '' . $webpage_full_link_with_login . '', '' . $admin_primary_email . ''), $mail_template_admin));
+            $message1 = stripslashes(str_replace(
+                array('\'.$admin_site_name.\'', '\' . $first_name . \'', '\' . $email_id . \'', '\' . $password . \'', '\'.$admin_footer_copyright.\'', '\'.$admin_address.\'', '\'.$webpage_full_link.\'', '\'.$webpage_full_link_with_login.\'', '\'.$admin_primary_email.\''),
+                array('' . $admin_site_name . '', '' . $first_name . '', '' . $email_id . '', '' . $star_password . '', '' . $admin_footer_copyright . '', '' . $admin_address . '', '' . $webpage_full_link . '', '' . $webpage_full_link_with_login . '', '' . $admin_primary_email . ''),
+                $mail_template_admin
+            ));
 
             $headers = "From: " . "$email_id" . "\r\n";
             $headers .= "Reply-To: " . "$email_id" . "\r\n";
@@ -275,9 +276,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             mail($to, $subject, $message1, $headers); //admin email
 
 
-//****************************    Admin email ends    *************************
+            //****************************    Admin email ends    *************************
 
-//****************************    Client email starts    *************************
+            //****************************    Client email starts    *************************
 
             $to1 = $email_id;
             $USER_INSERT_CLIENT_SUBJECT = $BIZBOOK['USER_INSERT_CLIENT_SUBJECT'];
@@ -288,8 +289,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $mail_template_client = $client_sql_fetch_row['mail_template'];
 
-            $message2 = stripslashes(str_replace(array('\'.$admin_site_name.\'', '\' . $first_name . \'', '\' . $email_id . \'', '\' . $password . \'', '\'.$admin_footer_copyright.\'', '\'.$admin_address.\'', '\'.$webpage_full_link.\'', '\'.$webpage_full_link_with_login.\'', '\'.$verify_code.\'', '\'.$webpage_full_link_with_verification_link.\'', '\'.$admin_primary_email.\''),
-                array('' . $admin_site_name . '', '' . $first_name . '', '' . $email_id . '', '' . $star_password . '', '' . $admin_footer_copyright . '', '' . $admin_address . '', '' . $webpage_full_link . '', '' . $webpage_full_link_with_login . '', '' . $verification_code . '', '' . $webpage_full_link_with_verification_link . '', '' . $admin_primary_email . ''), $mail_template_client));
+            $message2 = stripslashes(str_replace(
+                array('\'.$admin_site_name.\'', '\' . $first_name . \'', '\' . $email_id . \'', '\' . $password . \'', '\'.$admin_footer_copyright.\'', '\'.$admin_address.\'', '\'.$webpage_full_link.\'', '\'.$webpage_full_link_with_login.\'', '\'.$verify_code.\'', '\'.$webpage_full_link_with_verification_link.\'', '\'.$admin_primary_email.\''),
+                array('' . $admin_site_name . '', '' . $first_name . '', '' . $email_id . '', '' . $star_password . '', '' . $admin_footer_copyright . '', '' . $admin_address . '', '' . $webpage_full_link . '', '' . $webpage_full_link_with_login . '', '' . $verification_code . '', '' . $webpage_full_link_with_verification_link . '', '' . $admin_primary_email . ''),
+                $mail_template_client
+            ));
 
             $headers1 = "From: " . "$admin_email" . "\r\n";
             $headers1 .= "Reply-To: " . "$admin_email" . "\r\n";
@@ -299,7 +303,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             mail($to1, $subject1, $message2, $headers1); //admin email
 
-//****************************    client email ends    *************************
+            //****************************    client email ends    *************************
 
 
             if ($mode_path == "XeBaCk_MoDeX_PATHXHU") {
@@ -315,7 +319,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 header('Location: login?login=register');
                 exit();
             }
-
         } else {
 
 
@@ -332,7 +335,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 exit();
             }
         }
-
     }
 } else {
 
