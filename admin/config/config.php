@@ -199,7 +199,7 @@ $EVENT_URL = $webpage_full_link.$footer_row['event_page_url'].$slash;
 
 $BLOG_URL = $webpage_full_link.$footer_row['blog_page_url'].$slash;
 
-$PRODUCT_URL = $footer_row['product_page_url'].$slash;
+$PRODUCT_URL = $webpage_full_link.$footer_row['product_page_url'].$slash;
 
 $COMPANY_URL = $webpage_full_link.$footer_row['company_page_url'].$slash;
 

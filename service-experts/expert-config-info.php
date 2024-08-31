@@ -45,7 +45,7 @@ if($footer_row['admin_language']== 1) {
 
 $current_page = basename($_SERVER['PHP_SELF']);
 
-$expert_base = '/';
+$expert_base = 'service-experts/';
 
 $current_expert_page = $expert_base.$current_page;
 ?>
