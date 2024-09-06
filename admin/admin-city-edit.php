@@ -57,11 +57,6 @@ include "header.php";
                                                             echo "ads1.jpg";
                                                         } ?>" alt="" width="100px" style="margin-top: 40px;">
                                                     </div>
-                                                    <div class="col-md-12 mt-2">
-                                                        <div class="form-group">
-                                                            <input type="text" name="logo_1_link" class="form-control" value="<?php echo $row['logo_1_link']; ?>" placeholder="City Logo 1 Link...">
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </li>
                                             <li>
@@ -69,7 +64,7 @@ include "header.php";
                                                     <div class="col-md-9">
                                                         <div class="form-group">
                                                             <label>City Logo 2</label>
-                                                            <input type="file" name="city_logo_2[]" class="form-control" value="<?php echo $row['logo_1_link']; ?>" placeholder="Logo 2">
+                                                            <input type="file" name="city_logo_2[]" class="form-control" placeholder="Logo 2">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3">
@@ -79,11 +74,6 @@ include "header.php";
                                                             echo "ads1.jpg";
                                                         } ?>" alt="" width="100px" style="margin-top: 40px;">
                                                     </div>
-                                                    <div class="col-md-12 mt-2">
-                                                        <div class="form-group">
-                                                            <input type="text" name="logo_2_link" class="form-control" value="<?php echo $row['logo_2_link']; ?>" placeholder="City Logo 2 Link...">
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </li>
                                             <li>
@@ -91,7 +81,7 @@ include "header.php";
                                                     <div class="col-md-9">
                                                         <div class="form-group">
                                                             <label>Ad Image 1</label>
-                                                            <input type="file" name="ad_image_1[]" class="form-control" value="<?php echo $row['logo_1_link']; ?>" placeholder="Ad 1">
+                                                            <input type="file" name="ad_image_1[]" class="form-control" placeholder="Ad 1">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3">
@@ -113,7 +103,7 @@ include "header.php";
                                                     <div class="col-md-9">
                                                         <div class="form-group">
                                                             <label>Ad Image 2</label>
-                                                            <input type="file" name="ad_image_2[]" class="form-control" value="<?php echo $row['logo_1_link']; ?>" placeholder="Ad 2">
+                                                            <input type="file" name="ad_image_2[]" class="form-control" placeholder="Ad 2">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3">

@@ -70,12 +70,6 @@ include "header.php";
                                                                 placeholder="Logo 1">
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-12 mt-2">
-                                                        <div class="form-group">
-                                                            <input type="text" name="logo_1_link" class="form-control"
-                                                                placeholder="City Logo 1 Link...">
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </li>
                                             <li>
@@ -84,12 +78,6 @@ include "header.php";
                                                         <div class="form-group">
                                                             <label>City Logo 2</label>
                                                             <input type="file" name="city_logo_2[]" class="form-control" placeholder="Logo 2">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12 mt-2">
-                                                        <div class="form-group">
-                                                            <input type="text" name="logo_2_link" class="form-control"
-                                                                placeholder="City Logo 2 Link...">
                                                         </div>
                                                     </div>
                                                 </div>

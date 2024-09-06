@@ -84,9 +84,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $ad_image_6 = processFile('ad_image_6', 0, $existing_files['ad_image_6']);
         $ad_image_7 = processFile('ad_image_7', 0, $existing_files['ad_image_7']);
         $ad_image_8 = processFile('ad_image_8', 0, $existing_files['ad_image_8']);
-
-        $logo_1_link = $_POST['logo_1_link'];
-        $logo_2_link = $_POST['logo_2_link'];
         
         $images_link = [];
         for ($l = 1; $l <= 8; $l++) {
@@ -95,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $city_slug = generateSlug($city_name);
 
-        $sql = mysqli_query($conn, "UPDATE  " . TBL . "cities SET city_name='" . $city_name . "', city_slug='" . $city_slug . "',city_logo_1='" . $city_logo_1 . "',city_logo_2='" . $city_logo_2 . "',ad_image_1='" . $ad_image_1 . "',ad_image_2='" . $ad_image_2 . "',ad_image_3='" . $ad_image_3 . "',ad_image_4='" . $ad_image_4 . "',ad_image_5='" . $ad_image_5 . "',ad_image_6='" . $ad_image_6 . "',ad_image_7='" . $ad_image_7 . "',ad_image_8='" . $ad_image_8 . "',logo_1_link='" . $logo_1_link . "',logo_2_link='" . $logo_2_link . "',image_1_link='" . $images_link[0] . "',image_2_link='" . $images_link[1] . "',image_3_link='" . $images_link[2] . "',image_4_link='" . $images_link[3] . "',image_5_link='" . $images_link[4] . "',image_6_link='" . $images_link[5] . "',image_7_link='" . $images_link[6] . "',image_8_link='" . $images_link[7] . "' where city_id='" . $city_id . "'");
+        $sql = mysqli_query($conn, "UPDATE  " . TBL . "cities SET city_name='" . $city_name . "', city_slug='" . $city_slug . "',city_logo_1='" . $city_logo_1 . "',city_logo_2='" . $city_logo_2 . "',ad_image_1='" . $ad_image_1 . "',ad_image_2='" . $ad_image_2 . "',ad_image_3='" . $ad_image_3 . "',ad_image_4='" . $ad_image_4 . "',ad_image_5='" . $ad_image_5 . "',ad_image_6='" . $ad_image_6 . "',ad_image_7='" . $ad_image_7 . "',ad_image_8='" . $ad_image_8 . "',image_1_link='" . $images_link[0] . "',image_2_link='" . $images_link[1] . "',image_3_link='" . $images_link[2] . "',image_4_link='" . $images_link[3] . "',image_5_link='" . $images_link[4] . "',image_6_link='" . $images_link[5] . "',image_7_link='" . $images_link[6] . "',image_8_link='" . $images_link[7] . "' where city_id='" . $city_id . "'");
 
         if ($sql) {
 
