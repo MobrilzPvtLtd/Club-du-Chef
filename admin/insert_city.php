@@ -96,8 +96,16 @@ if (isset($_POST['city_submit'])) {
         $ad_images = [];
         for ($j = 1; $j <= 8; $j++) {
             $ad_images[] = processFile('ad_image_' . $j, $i);
-        }        
+        } 
 
+        $logo_1_link = $_POST['logo_1_link'];
+        $logo_2_link = $_POST['logo_2_link'];
+        
+        $images_link = [];
+        for ($l = 1; $l <= 8; $l++) {
+            $images_link[] = $_POST['image_' . $l . '_link'];
+        }
+        
         $state_sql_1 = "SELECT * FROM  " . TBL . "states where country_id='" . $country_id . "' LIMIT 1";
         $state_rs_1 = mysqli_query($conn, $state_sql_1);
         $state_roww = mysqli_fetch_array($state_rs_1);
@@ -106,8 +114,8 @@ if (isset($_POST['city_submit'])) {
 
         $city_slug = generateSlug($city_name);
 
-        $sql = mysqli_query($conn, "INSERT INTO  " . TBL . "cities (city_name,city_slug,state_id,city_cdt,city_logo_1,city_logo_2,ad_image_1,ad_image_2,ad_image_3,ad_image_4,ad_image_5,ad_image_6,ad_image_7,ad_image_8)
-        VALUES ('$city_name','$city_slug','$state_id','$curDate','$city_logo_1','$city_logo_2','$ad_images[0]','$ad_images[1]','$ad_images[2]','$ad_images[3]','$ad_images[4]','$ad_images[5]','$ad_images[6]','$ad_images[7]')");
+        $sql = mysqli_query($conn, "INSERT INTO  " . TBL . "cities (city_name,city_slug,state_id,city_cdt,city_logo_1,city_logo_2,ad_image_1,ad_image_2,ad_image_3,ad_image_4,ad_image_5,ad_image_6,ad_image_7,ad_image_8,logo_1_link,logo_2_link,image_1_link,image_2_link,image_3_link,image_4_link,image_5_link,image_6_link,image_7_link,image_8_link)
+        VALUES ('$city_name','$city_slug','$state_id','$curDate','$city_logo_1','$city_logo_2','$ad_images[0]','$ad_images[1]','$ad_images[2]','$ad_images[3]','$ad_images[4]','$ad_images[5]','$ad_images[6]','$ad_images[7]','$logo_1_link','$logo_2_link','$images_link[0]','$images_link[1]','$images_link[2]','$images_link[3]','$images_link[4]','$images_link[5]','$images_link[6]','$images_link[7]')");
     }
 
 

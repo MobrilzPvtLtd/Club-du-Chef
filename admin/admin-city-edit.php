@@ -34,6 +34,7 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
+                                                            <label>City Name</label>
                                                             <input type="text" name="city_name"
                                                                 value="<?php echo $row['city_name']; ?>"
                                                                 class="form-control" placeholder="city name *" required>
@@ -45,6 +46,7 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-9">
                                                         <div class="form-group">
+                                                            <label>City Logo 1</label>
                                                             <input type="file" name="city_logo_1[]" class="form-control" placeholder="Logo 1">
                                                         </div>
                                                     </div>
@@ -53,7 +55,12 @@ include "header.php";
                                                             echo $row['city_logo_1'];
                                                         } else {
                                                             echo "ads1.jpg";
-                                                        } ?>" alt="" width="100px">
+                                                        } ?>" alt="" width="100px" style="margin-top: 40px;">
+                                                    </div>
+                                                    <div class="col-md-12 mt-2">
+                                                        <div class="form-group">
+                                                            <input type="text" name="logo_1_link" class="form-control" value="<?php echo $row['logo_1_link']; ?>" placeholder="City Logo 1 Link...">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -61,8 +68,8 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-9">
                                                         <div class="form-group">
-                                                            <input type="file" name="city_logo_2[]" class="form-control"
-                                                                placeholder="Logo 2">
+                                                            <label>City Logo 2</label>
+                                                            <input type="file" name="city_logo_2[]" class="form-control" value="<?php echo $row['logo_1_link']; ?>" placeholder="Logo 2">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3">
@@ -70,7 +77,12 @@ include "header.php";
                                                             echo $row['city_logo_2'];
                                                         } else {
                                                             echo "ads1.jpg";
-                                                        } ?>" alt="" width="100px">
+                                                        } ?>" alt="" width="100px" style="margin-top: 40px;">
+                                                    </div>
+                                                    <div class="col-md-12 mt-2">
+                                                        <div class="form-group">
+                                                            <input type="text" name="logo_2_link" class="form-control" value="<?php echo $row['logo_2_link']; ?>" placeholder="City Logo 2 Link...">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -78,8 +90,8 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-9">
                                                         <div class="form-group">
-                                                            <input type="file" name="ad_image_1[]" class="form-control"
-                                                                placeholder="Ad 1">
+                                                            <label>Ad Image 1</label>
+                                                            <input type="file" name="ad_image_1[]" class="form-control" value="<?php echo $row['logo_1_link']; ?>" placeholder="Ad 1">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3">
@@ -87,7 +99,12 @@ include "header.php";
                                                             echo $row['ad_image_1'];
                                                         } else {
                                                             echo "ads1.jpg";
-                                                        } ?>" alt="" width="100px">
+                                                        } ?>" alt="" width="100px" style="margin-top: 40px;">
+                                                    </div>
+                                                    <div class="col-md-12 mt-2">
+                                                        <div class="form-group">
+                                                            <input type="text" name="image_1_link" class="form-control" value="<?php echo $row['image_1_link']; ?>" placeholder="Ad Image 1 Link...">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -95,8 +112,8 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-9">
                                                         <div class="form-group">
-                                                            <input type="file" name="ad_image_2[]" class="form-control"
-                                                                placeholder="Ad 2">
+                                                            <label>Ad Image 2</label>
+                                                            <input type="file" name="ad_image_2[]" class="form-control" value="<?php echo $row['logo_1_link']; ?>" placeholder="Ad 2">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3">
@@ -104,7 +121,12 @@ include "header.php";
                                                             echo $row['ad_image_2'];
                                                         } else {
                                                             echo "ads1.jpg";
-                                                        } ?>" alt="" width="100px">
+                                                        } ?>" alt="" width="100px" style="margin-top: 40px;">
+                                                    </div>
+                                                    <div class="col-md-12 mt-2">
+                                                        <div class="form-group">
+                                                            <input type="text" name="image_2_link" class="form-control" value="<?php echo $row['image_2_link']; ?>" placeholder="Ad Image 2 Link...">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -112,6 +134,7 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-9">
                                                         <div class="form-group">
+                                                            <label>Ad Image 3</label>
                                                             <input type="file" name="ad_image_3[]" class="form-control"
                                                                 placeholder="Ad 3">
                                                         </div>
@@ -121,7 +144,12 @@ include "header.php";
                                                             echo $row['ad_image_3'];
                                                         } else {
                                                             echo "ads1.jpg";
-                                                        } ?>" alt="" width="100px">
+                                                        } ?>" alt="" width="100px" style="margin-top: 40px;">
+                                                    </div>
+                                                    <div class="col-md-12 mt-2">
+                                                        <div class="form-group">
+                                                            <input type="text" name="image_3_link" class="form-control" value="<?php echo $row['image_3_link']; ?>" placeholder="Ad Image 3 Link...">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -129,6 +157,7 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-9">
                                                         <div class="form-group">
+                                                            <label>Ad Image 4</label>
                                                             <input type="file" name="ad_image_4[]" class="form-control"
                                                                 placeholder="Ad 4">
                                                         </div>
@@ -138,7 +167,12 @@ include "header.php";
                                                             echo $row['ad_image_4'];
                                                         } else {
                                                             echo "ads1.jpg";
-                                                        } ?>" alt="" width="100px">
+                                                        } ?>" alt="" width="100px" style="margin-top: 40px;">
+                                                    </div>
+                                                    <div class="col-md-12 mt-2">
+                                                        <div class="form-group">
+                                                            <input type="text" name="image_4_link" class="form-control" value="<?php echo $row['image_4_link']; ?>" placeholder="Ad Image 4 Link...">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -146,6 +180,7 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-9">
                                                         <div class="form-group">
+                                                            <label>Ad Image 5</label>
                                                             <input type="file" name="ad_image_5[]" class="form-control"
                                                                 placeholder="Ad 5">
                                                         </div>
@@ -155,7 +190,12 @@ include "header.php";
                                                             echo $row['ad_image_5'];
                                                         } else {
                                                             echo "ads1.jpg";
-                                                        } ?>" alt="" width="100px">
+                                                        } ?>" alt="" width="100px" style="margin-top: 40px;">
+                                                    </div>
+                                                    <div class="col-md-12 mt-2">
+                                                        <div class="form-group">
+                                                            <input type="text" name="image_5_link" class="form-control" value="<?php echo $row['image_5_link']; ?>" placeholder="Ad Image 5 Link...">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -163,6 +203,7 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-9">
                                                         <div class="form-group">
+                                                            <label>Ad Image 6</label>
                                                             <input type="file" name="ad_image_6[]" class="form-control"
                                                                 placeholder="Ad 6">
                                                         </div>
@@ -172,7 +213,12 @@ include "header.php";
                                                             echo $row['ad_image_6'];
                                                         } else {
                                                             echo "ads1.jpg";
-                                                        } ?>" alt="" width="100px">
+                                                        } ?>" alt="" width="100px" style="margin-top: 40px;">
+                                                    </div>
+                                                    <div class="col-md-12 mt-2">
+                                                        <div class="form-group">
+                                                            <input type="text" name="image_6_link" class="form-control" value="<?php echo $row['image_6_link']; ?>" placeholder="Ad Image 6 Link...">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -180,6 +226,7 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-9">
                                                         <div class="form-group">
+                                                            <label>Ad Image 7</label>
                                                             <input type="file" name="ad_image_7[]" class="form-control"
                                                                 placeholder="Ad 7">
                                                         </div>
@@ -189,7 +236,12 @@ include "header.php";
                                                             echo $row['ad_image_7'];
                                                         } else {
                                                             echo "ads1.jpg";
-                                                        } ?>" alt="" width="100px">
+                                                        } ?>" alt="" width="100px" style="margin-top: 40px;">
+                                                    </div>
+                                                    <div class="col-md-12 mt-2">
+                                                        <div class="form-group">
+                                                            <input type="text" name="image_7_link" class="form-control" value="<?php echo $row['image_7_link']; ?>" placeholder="Ad Image 7 Link...">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -197,6 +249,7 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-9">
                                                         <div class="form-group">
+                                                            <label>Ad Image 8</label>
                                                             <input type="file" name="ad_image_8[]" class="form-control"
                                                                 placeholder="Ad 8">
                                                         </div>
@@ -206,7 +259,12 @@ include "header.php";
                                                             echo $row['ad_image_8'];
                                                         } else {
                                                             echo "ads1.jpg";
-                                                        } ?>" alt="" width="100px">
+                                                        } ?>" alt="" width="100px" style="margin-top: 40px;">
+                                                    </div>
+                                                    <div class="col-md-12 mt-2">
+                                                        <div class="form-group">
+                                                            <input type="text" name="image_8_link" class="form-control" value="<?php echo $row['image_8_link']; ?>" placeholder="Ad Image 8 Link...">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>

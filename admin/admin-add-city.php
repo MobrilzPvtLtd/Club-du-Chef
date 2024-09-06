@@ -70,6 +70,12 @@ include "header.php";
                                                                 placeholder="Logo 1">
                                                         </div>
                                                     </div>
+                                                    <div class="col-md-12 mt-2">
+                                                        <div class="form-group">
+                                                            <input type="text" name="logo_1_link" class="form-control"
+                                                                placeholder="City Logo 1 Link...">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </li>
                                             <li>
@@ -77,8 +83,13 @@ include "header.php";
                                                     <div class="col-md-12">
                                                         <div class="form-group">
                                                             <label>City Logo 2</label>
-                                                            <input type="file" name="city_logo_2[]" class="form-control"
-                                                                placeholder="Logo 2">
+                                                            <input type="file" name="city_logo_2[]" class="form-control" placeholder="Logo 2">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 mt-2">
+                                                        <div class="form-group">
+                                                            <input type="text" name="logo_2_link" class="form-control"
+                                                                placeholder="City Logo 2 Link...">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -92,6 +103,12 @@ include "header.php";
                                                                 placeholder="Ad 1">
                                                         </div>
                                                     </div>
+                                                    <div class="col-md-12 mt-2">
+                                                        <div class="form-group">
+                                                            <input type="text" name="image_1_link" class="form-control"
+                                                                placeholder="Ad Image 1 Link...">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </li>
                                             <li>
@@ -101,6 +118,12 @@ include "header.php";
                                                             <label>Ad Image 2</label>
                                                             <input type="file" name="ad_image_2[]" class="form-control"
                                                                 placeholder="Ad 2">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 mt-2">
+                                                        <div class="form-group">
+                                                            <input type="text" name="image_2_link" class="form-control"
+                                                                placeholder="Ad Image 2 Link...">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -114,6 +137,12 @@ include "header.php";
                                                                 placeholder="Ad 3">
                                                         </div>
                                                     </div>
+                                                    <div class="col-md-12 mt-2">
+                                                        <div class="form-group">
+                                                            <input type="text" name="image_3_link" class="form-control"
+                                                                placeholder="Ad Image 3 Link...">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </li>
                                             <li>
@@ -123,6 +152,12 @@ include "header.php";
                                                             <label>Ad Image 4</label>
                                                             <input type="file" name="ad_image_4[]" class="form-control"
                                                                 placeholder="Ad 4">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 mt-2">
+                                                        <div class="form-group">
+                                                            <input type="text" name="image_4_link" class="form-control"
+                                                                placeholder="Ad Image 4 Link...">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -136,6 +171,12 @@ include "header.php";
                                                                 placeholder="Ad 5">
                                                         </div>
                                                     </div>
+                                                    <div class="col-md-12 mt-2">
+                                                        <div class="form-group">
+                                                            <input type="text" name="image_5_link" class="form-control"
+                                                                placeholder="Ad Image 5 Link...">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </li>
                                             <li>
@@ -145,6 +186,12 @@ include "header.php";
                                                             <label>Ad Image 6</label>
                                                             <input type="file" name="ad_image_6[]" class="form-control"
                                                                 placeholder="Ad 6">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 mt-2">
+                                                        <div class="form-group">
+                                                            <input type="text" name="image_6_link" class="form-control"
+                                                                placeholder="Ad Image 6 Link...">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -158,6 +205,12 @@ include "header.php";
                                                                 placeholder="Ad 7">
                                                         </div>
                                                     </div>
+                                                    <div class="col-md-12 mt-2">
+                                                        <div class="form-group">
+                                                            <input type="text" name="image_7_link" class="form-control"
+                                                                placeholder="Ad Image 7 Link...">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </li>
                                             <li>
@@ -167,6 +220,12 @@ include "header.php";
                                                             <label>Ad Image 8</label>
                                                             <input type="file" name="ad_image_8[]" class="form-control"
                                                                 placeholder="Ad 8">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 mt-2">
+                                                        <div class="form-group">
+                                                            <input type="text" name="image_8_link" class="form-control"
+                                                                placeholder="Ad Image 8 Link...">
                                                         </div>
                                                     </div>
                                                 </div>
