@@ -36,42 +36,64 @@ include "header.php";
     <div class="str all-cate-pg">
         <div class="container">
             <div class="row">
-                <div class="sh-all-scat">
-
-                    <?php
-                    foreach (getAllCategoriesPos() as $category_sql_row) {
-                        ?>
-                        <ul id="tail-re">
-                            <li>
-                                <div class="sh-all-scat-box">
-                                    <div class="lhs">
-                                        <img loading="lazy" src="images/services/<?php echo $category_sql_row['category_image']; ?>"
-                                             alt="">
-                                    </div>
-                                    <div class="rhs">
-                                        <h4>
-                                            <a href="<?php echo $ALL_LISTING_URL . urlModifier($category_sql_row['category_slug']); ?>"><?php echo $category_sql_row['category_name']; ?> </a><span><?php echo AddingZero_BeforeNumber(getCountCategoryListing($category_sql_row['category_id'])); ?></span>
-                                        </h4>
-                                        <ol>
-                                            <?php
-                                            foreach (getCategorySubCategories($category_sql_row['category_id']) as $sub_category_sql_row) {
-                                                ?>
-                                                <li>
-                                                    <a href="<?php echo $ALL_LISTING_URL . urlModifier($category_sql_row['category_slug']); ?>/<?php echo urlModifier($sub_category_sql_row['sub_category_slug']); ?>"><?php echo $sub_category_sql_row['sub_category_name']; ?>
-                                                        <span><?php echo AddingZero_BeforeNumber(getCountSubCategoryListing($sub_category_sql_row['sub_category_id'])); ?></span></a>
-                                                </li>
-                                                <?php
-                                            }
-                                            ?>
-                                        </ol>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                <div class="col-md-9">
+                    <div class="sh-all-scat">
                         <?php
-                    }
-                    ?>
-
+                        foreach (getAllCategoriesPos() as $category_sql_row) {
+                            ?>
+                            <ul id="tail-re">
+                                <li>
+                                    <div class="sh-all-scat-box">
+                                        <div class="lhs">
+                                            <img loading="lazy" src="images/services/<?php echo $category_sql_row['category_image']; ?>"
+                                                 alt="">
+                                        </div>
+                                        <div class="rhs">
+                                            <h4>
+                                                <a href="<?php echo $ALL_LISTING_URL . urlModifier($category_sql_row['category_slug']); ?>"><?php echo $category_sql_row['category_name']; ?> </a><span><?php echo AddingZero_BeforeNumber(getCountCategoryListing($category_sql_row['category_id'])); ?></span>
+                                            </h4>
+                                            <ol>
+                                                <?php
+                                                foreach (getCategorySubCategories($category_sql_row['category_id']) as $sub_category_sql_row) {
+                                                    ?>
+                                                    <li>
+                                                        <a href="<?php echo $ALL_LISTING_URL . urlModifier($category_sql_row['category_slug']); ?>/<?php echo urlModifier($sub_category_sql_row['sub_category_slug']); ?>"><?php echo $sub_category_sql_row['sub_category_name']; ?>
+                                                            <span><?php echo AddingZero_BeforeNumber(getCountSubCategoryListing($sub_category_sql_row['sub_category_id'])); ?></span></a>
+                                                    </li>
+                                                    <?php
+                                                }
+                                                ?>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <?php
+                        }
+                        ?>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="sh-all-scat">
+                        <?php
+                        foreach ($images as $index => $imageUrl) {
+                            $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
+                            ?>
+                            <a href="<?php echo $link; ?>" target="_blank">
+                            <ul id="tail-re">
+                                <li>
+                                    <div class="sh-all-scat-box">
+                                        <div class="lhs" style="width: 250px;">
+                                            <img src="<?php echo $imageUrl; ?>" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            </a>
+                            <?php
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>

@@ -39,18 +39,39 @@ if (isset($_GET['preview']) && isset($_GET['q']) && isset($_GET['type']) && isse
 }
 $CurrentCity = isset($_SESSION['city']) ? $_SESSION['city'] : 'www';
 $imageShow = false; 
-$images = []; 
+$imagesLogo = []; 
+$images = [];
+$imageLinks = [];
 
 foreach (getAllCities() as $city) {
     if ($CurrentCity == $city['city_slug']) {
+        // Process city logos
         for ($j = 1; $j <= 2; $j++) {
             $imageKey = 'city_logo_' . $j;
             if (isset($city[$imageKey]) && !empty($city[$imageKey])) {
                 $imageUrl = htmlspecialchars($webpage_full_link . 'images/cityimage/' . $city[$imageKey]);
-                $images[] = $imageUrl;
+                $imagesLogo[] = $imageUrl;
                 $imageShow = true; 
             }
         }
+
+        // Process advertisement images and links
+        for ($j = 1; $j <= 8; $j++) {
+            $imageKey = 'ad_image_' . $j;
+            $imageLinkKey = 'image_' . $j . '_link';
+            
+            if (isset($city[$imageKey]) && !empty($city[$imageKey])) {
+                $imageUrl = htmlspecialchars($webpage_full_link . 'images/cityimage/' . $city[$imageKey]);
+                $images[] = $imageUrl;
+
+                if (isset($city[$imageLinkKey]) && !empty($city[$imageLinkKey])) {
+                    $imageLinks[] = htmlspecialchars($city[$imageLinkKey]);
+                } 
+
+                $imageShow = true;
+            }
+        }
+
         if ($imageShow) {
             break;
         }
@@ -116,8 +137,8 @@ foreach (getAllCities() as $city) {
                         <div class="row">
                             <div class="hom-nav <?php if (!isset($_SESSION['user_name']) && empty($_SESSION['user_name'])) {
                             } else { ?> db-open <?php } ?>"><!--MOBILE MENU-->
-                                <?php if ($imageShow && !empty($images)): ?>
-                                    <?php foreach ($images as $imageUrl): ?>
+                                <?php if ($imageShow && !empty($imagesLogo)): ?>
+                                    <?php foreach ($imagesLogo as $imageUrl): ?>
                                         <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log">
                                             <img src="<?php echo $imageUrl; ?>" alt="" class="ic-logo">
                                         </a>

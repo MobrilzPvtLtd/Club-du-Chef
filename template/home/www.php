@@ -1,35 +1,6 @@
 <?php
 
 include "home_page_top_section.php";
-$CurrentCity = isset($_SESSION['city']) ? $_SESSION['city'] : 'www';
-$images = [];
-$imageLink = ''; 
-$imageShow = false;
-$linkShow = false;
-
-foreach (getAllCities() as $city) {
-    if ($CurrentCity == $city['city_slug']) {
-        for ($j = 1; $j <= 8; $j++) {
-            $imageKey = 'ad_image_' . $j;
-            $imageLinkKey = 'image_' . $j . '_link';
-            
-            if (isset($city[$imageKey]) && !empty($city[$imageKey])) {
-                $imageUrl = htmlspecialchars($webpage_full_link . 'images/cityimage/' . $city[$imageKey]);
-                $images[] = $imageUrl;
-                $imageShow = true;
-            }
-            
-            if (isset($city[$imageLinkKey]) && !empty($city[$imageLinkKey])) {
-                $imageLink = htmlspecialchars($city[$imageLinkKey]);
-                $linkShow = true;
-            }
-        }
-        
-        if ($imageShow || $linkShow) {
-            break;
-        }
-    }
-}
 
 if ($current_home_page != '2' && $current_home_page != '3') {
 ?>
@@ -64,8 +35,9 @@ if ($current_home_page != '2' && $current_home_page != '3') {
                 ?> 
                 <ul>
                     <?php
-                    foreach ($images as $imageUrl) {
-                        echo '<li><div style="padding: 0; height: 9vw;"><a href="' . $imageLink . '"><img src="' . $imageUrl . '" alt=""></a></div></li>';
+                    foreach ($images as $index => $imageUrl) {
+                        $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
+                        echo '<a href="' . $link . '" target="_blank"><li><div style="padding: 0; height: 9vw;"><img src="' . $imageUrl . '" alt=""></div></li></a>';
                     }
                     ?>
                 </ul>
