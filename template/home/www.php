@@ -111,10 +111,10 @@ if ($current_home_page != '2' && $current_home_page != '3') {
                             ?>
                         </ul>
                     </div>
-                    <div class="hom-cate-more"">
-                <?php if ($current_home_page == '1' || $current_home_page == '2') { ?>
-                    <a href=" all-category" class="cta-new-blue"><?php echo $BIZBOOK['HOM-VI-ALL-SER']; ?></a>
-                    <?php } ?>
+                    <div class="hom-cate-more">
+                        <?php if ($current_home_page == '1' || $current_home_page == '2') { ?>
+                        <a href=" all-category" class="cta-new-blue"><?php echo $BIZBOOK['HOM-VI-ALL-SER']; ?></a>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
