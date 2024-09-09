@@ -301,7 +301,7 @@ foreach (getAllCities() as $city) {
                                     <li>
                                         <script>
                                             function ChangeCity(city) {
-                                                $.post("admin/config/updateCity.php", { city: city })
+                                                $.post("../admin/config/updateCity.php", { city: city })
                                                     .done(function (data) {
                                                         data = jQuery.parseJSON(data);
                                                         if (data.status == 1) {
