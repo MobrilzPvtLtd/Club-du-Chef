@@ -260,7 +260,7 @@ if (isset($query['city']) && !empty($query['city'])) {
                             <?php if ($all_listing_filter_row['service_filter'] == "Active") {
                                 ?>
                                 <!--START-->
-                                <!-- <div class="filt-alist-near">
+                                <div class="filt-alist-near">
                                     <div class="tit">
                                         <h4><?php echo $BIZBOOK['ALL-LISTING-TOP-SERVICE-PROVIDERS']; ?></h4></div>
                                     <div class="near-ser-list top-ser-secti-prov">
@@ -302,12 +302,12 @@ if (isset($query['city']) && !empty($query['city'])) {
                                             ?>
                                         </ul>
                                     </div>
-                                </div> -->
+                                </div>
 
                                 <!--END-->
 
                                 <!--START-->
-                                <!-- <div class="filt-com lhs-cate">
+                                <div class="filt-com lhs-cate">
                                     <h4><?php echo $BIZBOOK['CITIES']; ?></h4>
                                     <div class="dropdown">
 
@@ -339,7 +339,7 @@ if (isset($query['city']) && !empty($query['city'])) {
                                             ?>
                                         </select>
                                     </div>
-                                </div> -->
+                                </div>
 
                                 <!--START-->
                                 <div class="filt-com lhs-search">
@@ -717,7 +717,7 @@ if (isset($query['city']) && !empty($query['city'])) {
                     </div>-->
                         <!-- END LISTING INN FILTER -->
                         <!--ADS-->
-                        <!-- <div class="ban-ati-com ads-all-list">
+                        <div class="ban-ati-com ads-all-list">
                             <?php
                             $ad_position_id = 2;   //Ad position on All Listing page Top
                             $get_ad_row = getAds($ad_position_id);
@@ -729,77 +729,8 @@ if (isset($query['city']) && !empty($query['city'])) {
                                         } else {
                                             echo "59040boat-728x90.png";
                                         } ?>"></a>
-                        </div> -->
+                        </div>
                         <!--ADS-->
-                        <!-- <div class="listng-res">
-                            <div class="sh-all-scat">
-                            <div class="col-md-4">
-                                <?php
-                                foreach ($images as $index => $imageUrl) {
-                                $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
-                                ?>
-                                        <a href="<?php echo $link; ?>" target="_blank">
-                                        <ul id="tail-re">
-                                            <li>
-                                                <div class="sh-all-scat-box">
-                                                    <div class="lhs" style="width: 250px;">
-                                                        <img src="<?php echo $imageUrl; ?>" alt="">
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        </a>
-                                <?php
-                                }
-                                ?>
-                            </div>
-                        </div>
-                        </div> -->
-
-                        <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <?php
-                                $item_count = count($images);
-                                $items_per_row = 3; 
-                                $rows = ceil($item_count / $items_per_row);
-
-                                for ($i = 0; $i < $rows; $i++) {
-                                    $activeClass = ($i === 0) ? 'active' : ''; 
-                                    echo '<div class="carousel-item ' . $activeClass . '">';
-                                    echo '<div class="row">';
-                                    for ($j = 0; $j < $items_per_row && $i * $items_per_row + $j < $item_count; $j++) {
-                                        $index = $i * $items_per_row + $j;
-                                        $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
-                                        $imageUrl = htmlspecialchars($images[$index]);
-                                        ?>
-                                        <div class="col-md-4">
-                                            <a href="<?php echo $link; ?>" target="_blank">
-                                                <div style="padding: 0; height: 200px; overflow: hidden;">
-                                                    <img class="d-block w-100 h-100" src="<?php echo $imageUrl; ?>" alt="" style="object-fit: cover;">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <?php
-                                    }
-                                    // If fewer images than items per row, ensure remaining columns are hidden
-                                    if ($item_count < $items_per_row) {
-                                        echo '<div class="col-md-' . (12 / $items_per_row) * ($items_per_row - $item_count % $items_per_row) . '"></div>';
-                                    }
-                                    echo '</div>'; // End row
-                                    echo '</div>'; // End carousel-item
-                                }
-                                ?>
-                            </div>
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-
 
                         <!--RESULTS SELECTED FILTER-->
                         <div class="listng-res">
@@ -825,13 +756,13 @@ if (isset($query['city']) && !empty($query['city'])) {
                             <div class="list-res-selt">
 
                                 <!-- //Filter Category name   -->
-                                <!-- <?php
+                                <?php
                                 if (isset($_GET['category']) && !empty($_GET['category'])) { ?>
                                     <span class="listing-filters-span"
                                           id="<?php echo strtolower($category_search_slug1); ?>"
                                           data-id="<?php echo (!isset($_GET['category'])) ? 1 : 2; ?>"
                                           data-type="category"><?php echo $category_search_name; ?></span>
-                                <?php } ?> -->
+                                <?php } ?>
 
                                 <!-- //Filter Sub category name   -->
                                 <?php
@@ -1202,12 +1133,12 @@ if (isset($query['city']) && !empty($query['city'])) {
                                 } else {
                                     ?>
                                     <span style="    font-size: 21px;
-                color: #bfbfbf;
-                letter-spacing: 1px;
-                /* background: #525252; */
-                text-shadow: 0px 0px 2px #fff;
-                text-transform: uppercase;
-                margin-top: 5%;"><?php echo $BIZBOOK['LISTINGS_NO_LISTINGS_MESSAGE']; ?></span>
+    color: #bfbfbf;
+    letter-spacing: 1px;
+    /* background: #525252; */
+    text-shadow: 0px 0px 2px #fff;
+    text-transform: uppercase;
+    margin-top: 5%;"><?php echo $BIZBOOK['LISTINGS_NO_LISTINGS_MESSAGE']; ?></span>
                                     <?php
                                 }
                                 ?>
