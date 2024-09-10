@@ -40,7 +40,7 @@ if (isset($_GET['category']) && !empty($_REQUEST['category'])) {
 
     $WHERE[] = "FIND_IN_SET($category_id, t1.category_id)";
 
-    categorypageview($category_id); //Function To Find Page View
+    //categorypageview($category_id); //Function To Find Page View
 
 }
 
@@ -204,90 +204,6 @@ if (isset($query['city']) && !empty($query['city'])) {
     $city_search_query = "AND FIND_IN_SET($city_id, city_id)";
 }
 ?>
-
-<style>
-    .slick-slide {
-        margin: 0px 8px;
-    }
-
-    .slick-slide img {
-        width: 100%;
-    }
-
-    .slick-list {
-        position: relative;
-        display: block;
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-    }
-
-    .slick-list:focus {
-        outline: none;
-    }
-
-    .slick-list.dragging {
-        cursor: pointer;
-        cursor: hand;
-    }
-
-    .slick-slider .slick-track,
-    .slick-slider .slick-list {
-        -webkit-transform: translate3d(0, 0, 0);
-        -moz-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-        -o-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-
-    .slick-track {
-        position: relative;
-        top: 0;
-        left: 0;
-        display: block;
-    }
-
-    .slick-track:before,
-    .slick-track:after {
-        display: table;
-        content: '';
-    }
-
-    .slick-track:after {
-        clear: both;
-    }
-
-    .slick-loading .slick-track {
-        visibility: hidden;
-    }
-
-    .slick-slide {
-        display: none;
-        float: left;
-        height: 100%;
-        min-height: 1px;
-    }
-
-    [dir='rtl'] .slick-slide {
-        float: right;
-    }
-
-    .slick-slide img {
-        display: block;
-    }
-
-    .slick-slide.slick-loading img {
-        display: none;
-    }
-
-    .slick-slide.dragging img {
-        pointer-events: none;
-    }
-
-    .slick-initialized .slick-slide {
-        display: block;
-    }
-</style>
 
 <!-- START -->
 <section>
@@ -740,7 +656,7 @@ if (isset($query['city']) && !empty($query['city'])) {
                 }
                 ?>
                 <div class="col-md-9">
-                    <div class="container mt-5 col-md-12">
+                    <div class="container mt-5 col-md-12" style="width: 95%;">
                         <section class="logos-slider slider">
                             <!-- <div class="row"> -->
                                 <!-- <ul> -->

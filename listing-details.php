@@ -40,7 +40,7 @@ if ($listing_id == NULL && empty($listing_id)) {
     header("Location: $redirect_url");  //Redirect When No Listing Found in Table
 }
 
-listingpageview($listing_id); //Function To Find Page View
+//listingpageview($listing_id); //Function To Find Page View
 
 $usersqlrow = getUser($list_user_id); // To Fetch particular User Data
 
@@ -163,7 +163,7 @@ $review_count = getCountListingReview($listing_id); //Listing Reviews Count
 
 <section class="<?php if ($footer_row['admin_language'] == 2) {
     echo "lg-arb";
-} ?> list-pg-bg">
+    } ?> list-pg-bg">
     <div class="container">
         <div class="row">
             <div class="com-padd">
@@ -180,6 +180,7 @@ $review_count = getCountListingReview($listing_id); //Listing Reviews Count
                         </ul>
                     </div>
                 </div>
+                
                 <div class="list-pg-rt">
                     <div class="pglist-bg pglist-p-com">
                         <div class="pg-list-ban-info-23">
@@ -377,218 +378,215 @@ $review_count = getCountListingReview($listing_id); //Listing Reviews Count
 
                     <!--LISTING DETAILS: LEFT PART 8-->
                     <?php
-                    if ((!empty($listrow['listing_info_question']))) {
-                        ?>
-                        <!--LISTING DETAILS: LEFT PART 9-->
-                        <div class="pglist-p3 pglist-bg pglist-p-com">
-                            <div class="pglist-p-com-ti">
-                                <h3><span><?php echo $BIZBOOK['COMPANY']; ?></span> <?php echo $BIZBOOK['INFO']; ?></h3>
-                            </div>
-                            <div class="list-pg-inn-sp">
-                                <div class="list-work-hrs">
-                                    <?php
-                                    $today_is_open = strtolower(date('D')) . '_is_open';
-                                    $today_open_time = strtolower(date('D')) . '_open_time';
-                                    $today_close_time = strtolower(date('D')) . '_close_time';
-                                    ?>
-                                    <div class="today"><b>Working hours</b><span
-                                                class="status"><?php if ($listrow[$today_is_open] == 1) {
-                                                echo "Open";
-                                            } else {
-                                                echo "Closed";
-                                            } ?></span><?php if ($listrow[$today_is_open] == 1) { ?><span
-                                                class="time"><?php if ($listrow[$today_open_time] != NULL) {
-                                            echo $listrow[$today_open_time];
-                                        } ?> - <?php if ($listrow[$today_close_time] != NULL) {
-                                            echo $listrow[$today_close_time];
-                                        } ?></span><?php } ?></div>
-                                    <div class="timing">
-                                        <ul>
-                                            <li>Sunday: <span class="time"><?php if ($listrow['sun_is_open'] == 1) {
-                                                        if ($listrow['sun_open_time'] != NULL) {
-                                                            echo $listrow['sun_open_time'];
-                                                        } else {
-                                                            echo "-";
-                                                        } ?> - <?php if ($listrow['sun_close_time'] != NULL) {
-                                                            echo $listrow['sun_close_time'];
-                                                        } else {
-                                                            echo "-";
-                                                        }
-                                                    } else {
-                                                        echo "Closed";
-                                                    } ?></span></li>
-                                            <li>Monday: <span class="time"><?php if ($listrow['mon_is_open'] == 1) {
-                                                        if ($listrow['mon_open_time'] != NULL) {
-                                                            echo $listrow['mon_open_time'];
-                                                        } else {
-                                                            echo "-";
-                                                        } ?> - <?php if ($listrow['mon_close_time'] != NULL) {
-                                                            echo $listrow['mon_close_time'];
-                                                        } else {
-                                                            echo "-";
-                                                        }
-                                                    } else {
-                                                        echo "Closed";
-                                                    } ?></span></li>
-                                            <li>Tuesday: <span class="time"><?php if ($listrow['tue_is_open'] == 1) {
-                                                        if ($listrow['tue_open_time'] != NULL) {
-                                                            echo $listrow['tue_open_time'];
-                                                        } else {
-                                                            echo "-";
-                                                        } ?> - <?php if ($listrow['tue_close_time'] != NULL) {
-                                                            echo $listrow['tue_close_time'];
-                                                        } else {
-                                                            echo "-";
-                                                        }
-                                                    } else {
-                                                        echo "Closed";
-                                                    } ?></span></li>
-                                            <li>Wednesday: <span class="time"><?php if ($listrow['wed_is_open'] == 1) {
-                                                        if ($listrow['wed_open_time'] != NULL) {
-                                                            echo $listrow['wed_open_time'];
-                                                        } else {
-                                                            echo "-";
-                                                        } ?> - <?php if ($listrow['wed_close_time'] != NULL) {
-                                                            echo $listrow['wed_close_time'];
-                                                        } else {
-                                                            echo "-";
-                                                        }
-                                                    } else {
-                                                        echo "Closed";
-                                                    } ?></span></li>
-                                            <li>Thursday: <span class="time"><?php if ($listrow['thu_is_open'] == 1) {
-                                                        if ($listrow['thu_open_time'] != NULL) {
-                                                            echo $listrow['thu_open_time'];
-                                                        } else {
-                                                            echo "-";
-                                                        } ?> - <?php if ($listrow['thu_close_time'] != NULL) {
-                                                            echo $listrow['thu_close_time'];
-                                                        } else {
-                                                            echo "-";
-                                                        }
-                                                    } else {
-                                                        echo "Closed";
-                                                    } ?></span></li>
-                                            <li>Friday: <span class="time"><?php if ($listrow['fri_is_open'] == 1) {
-                                                        if ($listrow['fri_open_time'] != NULL) {
-                                                            echo $listrow['fri_open_time'];
-                                                        } else {
-                                                            echo "-";
-                                                        } ?> - <?php if ($listrow['fri_close_time'] != NULL) {
-                                                            echo $listrow['fri_close_time'];
-                                                        } else {
-                                                            echo "-";
-                                                        }
-                                                    } else {
-                                                        echo "Closed";
-                                                    } ?></span></li>
-                                            <li>Saturday: <span class="time"><?php if ($listrow['sat_is_open'] == 1) {
-                                                        if ($listrow['sat_open_time'] != NULL) {
-                                                            echo $listrow['sat_open_time'];
-                                                        } else {
-                                                            echo "-";
-                                                        } ?> - <?php if ($listrow['sat_close_time'] != NULL) {
-                                                            echo $listrow['sat_close_time'];
-                                                        } else {
-                                                            echo "-";
-                                                        }
-                                                    } else {
-                                                        echo "Closed";
-                                                    } ?></span></li>
-                                        </ul>
-                                    </div>
+                        if ((!empty($listrow['listing_info_question']))) {
+                            ?>
+                            <!--LISTING DETAILS: LEFT PART 9-->
+                            <div class="pglist-p3 pglist-bg pglist-p-com">
+                                <div class="pglist-p-com-ti">
+                                    <h3><span><?php echo $BIZBOOK['COMPANY']; ?></span> <?php echo $BIZBOOK['INFO']; ?></h3>
                                 </div>
-                                <div class="list-pg-oth-info">
-                                    <ul>
+                                <div class="list-pg-inn-sp">
+                                    <div class="list-work-hrs">
                                         <?php
-                                        $listings_a_row_listing_info_question_Array = explode(',', $listrow['listing_info_question']);
-                                        $listings_a_row_listing_info_answer_Array = explode(',', $listrow['listing_info_answer']);
-
-                                        $zipped = array_map(null, $listings_a_row_listing_info_question_Array, $listings_a_row_listing_info_answer_Array);
-
-                                        foreach ($zipped as $tuple) {
-                                            $tuple[0]; // Info question
-                                            $tuple[1]; // Info Answer
-                                            if ($tuple[0] != NULL) {
-                                                ?>
-                                                <li><?php echo $tuple[0]; ?> <span><?php echo $tuple[1]; ?></span></li>
-                                                <?php
-                                            }
-                                        }
+                                        $today_is_open = strtolower(date('D')) . '_is_open';
+                                        $today_open_time = strtolower(date('D')) . '_open_time';
+                                        $today_close_time = strtolower(date('D')) . '_close_time';
                                         ?>
-                                    </ul>
-                                </div>
-
-                                <?php
-
-                                //To Check whether listing owner made listing guarantee is visible
-
-                                $setting_guarantee_show = $usersqlrow['setting_guarantee_show'];
-                                if ($user_details_row['user_type'] == 'Service provider' && $setting_guarantee_show == 0) {
-                                    ?>
-
-                                    <div class="list-pg-guar">
+                                        <div class="today"><b>Working hours</b><span
+                                                    class="status"><?php if ($listrow[$today_is_open] == 1) {
+                                                    echo "Open";
+                                                } else {
+                                                    echo "Closed";
+                                                } ?></span><?php if ($listrow[$today_is_open] == 1) { ?><span
+                                                    class="time"><?php if ($listrow[$today_open_time] != NULL) {
+                                                echo $listrow[$today_open_time];
+                                            } ?> - <?php if ($listrow[$today_close_time] != NULL) {
+                                                echo $listrow[$today_close_time];
+                                            } ?></span><?php } ?></div>
+                                        <div class="timing">
+                                            <ul>
+                                                <li>Sunday: <span class="time"><?php if ($listrow['sun_is_open'] == 1) {
+                                                            if ($listrow['sun_open_time'] != NULL) {
+                                                                echo $listrow['sun_open_time'];
+                                                            } else {
+                                                                echo "-";
+                                                            } ?> - <?php if ($listrow['sun_close_time'] != NULL) {
+                                                                echo $listrow['sun_close_time'];
+                                                            } else {
+                                                                echo "-";
+                                                            }
+                                                        } else {
+                                                            echo "Closed";
+                                                        } ?></span></li>
+                                                <li>Monday: <span class="time"><?php if ($listrow['mon_is_open'] == 1) {
+                                                            if ($listrow['mon_open_time'] != NULL) {
+                                                                echo $listrow['mon_open_time'];
+                                                            } else {
+                                                                echo "-";
+                                                            } ?> - <?php if ($listrow['mon_close_time'] != NULL) {
+                                                                echo $listrow['mon_close_time'];
+                                                            } else {
+                                                                echo "-";
+                                                            }
+                                                        } else {
+                                                            echo "Closed";
+                                                        } ?></span></li>
+                                                <li>Tuesday: <span class="time"><?php if ($listrow['tue_is_open'] == 1) {
+                                                            if ($listrow['tue_open_time'] != NULL) {
+                                                                echo $listrow['tue_open_time'];
+                                                            } else {
+                                                                echo "-";
+                                                            } ?> - <?php if ($listrow['tue_close_time'] != NULL) {
+                                                                echo $listrow['tue_close_time'];
+                                                            } else {
+                                                                echo "-";
+                                                            }
+                                                        } else {
+                                                            echo "Closed";
+                                                        } ?></span></li>
+                                                <li>Wednesday: <span class="time"><?php if ($listrow['wed_is_open'] == 1) {
+                                                            if ($listrow['wed_open_time'] != NULL) {
+                                                                echo $listrow['wed_open_time'];
+                                                            } else {
+                                                                echo "-";
+                                                            } ?> - <?php if ($listrow['wed_close_time'] != NULL) {
+                                                                echo $listrow['wed_close_time'];
+                                                            } else {
+                                                                echo "-";
+                                                            }
+                                                        } else {
+                                                            echo "Closed";
+                                                        } ?></span></li>
+                                                <li>Thursday: <span class="time"><?php if ($listrow['thu_is_open'] == 1) {
+                                                            if ($listrow['thu_open_time'] != NULL) {
+                                                                echo $listrow['thu_open_time'];
+                                                            } else {
+                                                                echo "-";
+                                                            } ?> - <?php if ($listrow['thu_close_time'] != NULL) {
+                                                                echo $listrow['thu_close_time'];
+                                                            } else {
+                                                                echo "-";
+                                                            }
+                                                        } else {
+                                                            echo "Closed";
+                                                        } ?></span></li>
+                                                <li>Friday: <span class="time"><?php if ($listrow['fri_is_open'] == 1) {
+                                                            if ($listrow['fri_open_time'] != NULL) {
+                                                                echo $listrow['fri_open_time'];
+                                                            } else {
+                                                                echo "-";
+                                                            } ?> - <?php if ($listrow['fri_close_time'] != NULL) {
+                                                                echo $listrow['fri_close_time'];
+                                                            } else {
+                                                                echo "-";
+                                                            }
+                                                        } else {
+                                                            echo "Closed";
+                                                        } ?></span></li>
+                                                <li>Saturday: <span class="time"><?php if ($listrow['sat_is_open'] == 1) {
+                                                            if ($listrow['sat_open_time'] != NULL) {
+                                                                echo $listrow['sat_open_time'];
+                                                            } else {
+                                                                echo "-";
+                                                            } ?> - <?php if ($listrow['sat_close_time'] != NULL) {
+                                                                echo $listrow['sat_close_time'];
+                                                            } else {
+                                                                echo "-";
+                                                            }
+                                                        } else {
+                                                            echo "Closed";
+                                                        } ?></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="list-pg-oth-info">
                                         <ul>
-                                            <li>
-                                                <div class="list-pg-guar-img"><img
-                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                            class="b-lazy"
-                                                            data-src="<?php echo $slash; ?>images/icon/g2.png" alt=""
-                                                            loading="lazy"/></div>
-                                                <h4><?php echo $BIZBOOK['LISTING_DETAILS_CLAIM_THIS_BUSINESS']; ?></h4>
-                                                <span data-toggle="modal" data-target="#claim"
-                                                      class="clim-edit"><?php echo $BIZBOOK['LISTING_DETAILS_SUGGEST_AN_EDIT']; ?></span>
-                                            </li>
+                                            <?php
+                                            $listings_a_row_listing_info_question_Array = explode(',', $listrow['listing_info_question']);
+                                            $listings_a_row_listing_info_answer_Array = explode(',', $listrow['listing_info_answer']);
+
+                                            $zipped = array_map(null, $listings_a_row_listing_info_question_Array, $listings_a_row_listing_info_answer_Array);
+
+                                            foreach ($zipped as $tuple) {
+                                                $tuple[0]; // Info question
+                                                $tuple[1]; // Info Answer
+                                                if ($tuple[0] != NULL) {
+                                                    ?>
+                                                    <li><?php echo $tuple[0]; ?> <span><?php echo $tuple[1]; ?></span></li>
+                                                    <?php
+                                                }
+                                            }
+                                            ?>
                                         </ul>
                                     </div>
+
                                     <?php
-                                }
-                                ?>
-                            </div>
-                        </div>
-                        <!--END LISTING DETAILS: LEFT PART 9-->
-                        <?php
-                    }
-                    ?>
 
-                    <?php
+                                    //To Check whether listing owner made listing guarantee is visible
 
-                    //To Check whether listing owner made profile is visible
+                                    $setting_guarantee_show = $usersqlrow['setting_guarantee_show'];
+                                    if ($user_details_row['user_type'] == 'Service provider' && $setting_guarantee_show == 0) {
+                                        ?>
 
-                    $setting_profile_show = $usersqlrow['setting_profile_show'];
-                    if ($setting_profile_show == 0) {
-
-                        ?>
-                        <!--LISTING DETAILS: LEFT PART 7-->
-                        <div class="ld-rhs-pro pglist-bg pglist-p-com">
-                            <div class="pglist-p-com-ti">
-                                <h3>
-                                    <span><?php echo $BIZBOOK['LISTING']; ?></span> <?php echo $BIZBOOK['CREATED_BY']; ?>
-                                </h3>
-                            </div>
-                            <div class="lis-pro-badg-23">
-                                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                     class="b-lazy"
-                                     data-src="<?php echo $slash; ?>images/user/<?php if (($usersqlrow['profile_image'] == NULL) || empty($usersqlrow['profile_image'])) {
-                                         echo $footer_row['user_default_image'];
-                                     } else {
-                                         echo $usersqlrow['profile_image'];
-                                     } ?>" alt="" loading="lazy">
-                                <div>
-                                    <!--<span class="rat" alt="User rating">4.2</span>-->
-                                    <h4><?php echo $usersqlrow['first_name']; ?></h4>
-                                    <p>Member since <?php $user_date = $usersqlrow['user_cdt'];;
-                                        $user_date1 = strtotime($user_date);
-                                        echo date("M Y", $user_date1); ?></p>
+                                        <div class="list-pg-guar">
+                                            <ul>
+                                                <li>
+                                                    <div class="list-pg-guar-img"><img
+                                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                                class="b-lazy"
+                                                                data-src="<?php echo $slash; ?>images/icon/g2.png" alt=""
+                                                                loading="lazy"/></div>
+                                                    <h4><?php echo $BIZBOOK['LISTING_DETAILS_CLAIM_THIS_BUSINESS']; ?></h4>
+                                                    <span data-toggle="modal" data-target="#claim"
+                                                        class="clim-edit"><?php echo $BIZBOOK['LISTING_DETAILS_SUGGEST_AN_EDIT']; ?></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <?php
+                                    }
+                                    ?>
                                 </div>
-                                <a href="<?php echo $PROFILE_URL . urlModifier($usersqlrow['user_slug']); ?>"
-                                   class="fclick"
-                                   target="_blank">&nbsp;</a>
                             </div>
-                        </div>
-                        <!--END LISTING DETAILS: LEFT PART 7-->
-                        <?php
-                    }
+                            <!--END LISTING DETAILS: LEFT PART 9-->
+                            <?php
+                        }
+                    ?>
+                    <?php
+                        //To Check whether listing owner made profile is visible
+                        $setting_profile_show = $usersqlrow['setting_profile_show'];
+                        if ($setting_profile_show == 0) {
+
+                            ?>
+                            <!--LISTING DETAILS: LEFT PART 7-->
+                            <div class="ld-rhs-pro pglist-bg pglist-p-com">
+                                <div class="pglist-p-com-ti">
+                                    <h3>
+                                        <span><?php echo $BIZBOOK['LISTING']; ?></span> <?php echo $BIZBOOK['CREATED_BY']; ?>
+                                    </h3>
+                                </div>
+                                <div class="lis-pro-badg-23">
+                                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                        class="b-lazy"
+                                        data-src="<?php echo $slash; ?>images/user/<?php if (($usersqlrow['profile_image'] == NULL) || empty($usersqlrow['profile_image'])) {
+                                            echo $footer_row['user_default_image'];
+                                        } else {
+                                            echo $usersqlrow['profile_image'];
+                                        } ?>" alt="" loading="lazy">
+                                    <div>
+                                        <!--<span class="rat" alt="User rating">4.2</span>-->
+                                        <h4><?php echo $usersqlrow['first_name']; ?></h4>
+                                        <p>Member since <?php $user_date = $usersqlrow['user_cdt'];;
+                                            $user_date1 = strtotime($user_date);
+                                            echo date("M Y", $user_date1); ?></p>
+                                    </div>
+                                    <a href="<?php echo $PROFILE_URL . urlModifier($usersqlrow['user_slug']); ?>"
+                                    class="fclick"
+                                    target="_blank">&nbsp;</a>
+                                </div>
+                            </div>
+                            <!--END LISTING DETAILS: LEFT PART 7-->
+                            <?php
+                        }
                     ?>
 
                     <?php
@@ -701,45 +699,84 @@ $review_count = getCountListingReview($listing_id); //Listing Reviews Count
                     } ?>
 
                     <?php
-                    $likes_count = listing_total_like_count($listing_id);
-                    if ($likes_count >= 1) {
-                        ?>
-                        <!--LISTING DETAILS: LEFT PART 10-->
-                        <div class="list-mig-like">
-                            <div class="list-ri-peo-like">
-                                <h3><?php echo $BIZBOOK['LISTING_DETAILS_WHO_ARE_LIKE_THIS']; ?></h3>
-                                <ul>
-                                    <?php
-                                    foreach (getAllLikedListingListing($listing_id) as $likesuser_row) {
-
-                                        $user_id_liked = $likesuser_row['user_id'];
-                                        $user_id_liked_row = getUser($user_id_liked);
-                                        ?>
-                                        <li>
-                                            <a href="<?php echo $webpage_full_link; ?>profile/<?php echo preg_replace('/\s+/', '-', strtolower($user_id_liked_row['user_slug'])); ?>"
-                                               target="_blank">
-                                                <img
-                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                        class="b-lazy"
-                                                        data-src="<?php echo $slash; ?>images/user/<?php if (($user_id_liked_row['profile_image'] == NULL) || empty($user_id_liked_row['profile_image'])) {
-                                                            echo $footer_row['user_default_image'];
-                                                        } else {
-                                                            echo $user_id_liked_row['profile_image'];
-                                                        } ?>" alt="" loading="lazy">
-                                            </a>
-                                        </li>
+                        $likes_count = listing_total_like_count($listing_id);
+                        if ($likes_count >= 1) {
+                            ?>
+                            <!--LISTING DETAILS: LEFT PART 10-->
+                            <div class="list-mig-like">
+                                <div class="list-ri-peo-like">
+                                    <h3><?php echo $BIZBOOK['LISTING_DETAILS_WHO_ARE_LIKE_THIS']; ?></h3>
+                                    <ul>
                                         <?php
-                                    }
-                                    ?>
-                                </ul>
+                                        foreach (getAllLikedListingListing($listing_id) as $likesuser_row) {
+
+                                            $user_id_liked = $likesuser_row['user_id'];
+                                            $user_id_liked_row = getUser($user_id_liked);
+                                            ?>
+                                            <li>
+                                                <a href="<?php echo $webpage_full_link; ?>profile/<?php echo preg_replace('/\s+/', '-', strtolower($user_id_liked_row['user_slug'])); ?>"
+                                                target="_blank">
+                                                    <img
+                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                            class="b-lazy"
+                                                            data-src="<?php echo $slash; ?>images/user/<?php if (($user_id_liked_row['profile_image'] == NULL) || empty($user_id_liked_row['profile_image'])) {
+                                                                echo $footer_row['user_default_image'];
+                                                            } else {
+                                                                echo $user_id_liked_row['profile_image'];
+                                                            } ?>" alt="" loading="lazy">
+                                                </a>
+                                            </li>
+                                            <?php
+                                        }
+                                        ?>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <!--END LISTING DETAILS: LEFT PART 10-->
-                        <?php
-                    }
+                            <!--END LISTING DETAILS: LEFT PART 10-->
+                            <?php
+                        }
                     ?>
+
+                    <div class="ld-rhs-pro pglist-bg pglist-p-com">
+                        <div class="container mt-4 col-md-12">
+                           <section class="logos-slider slider">
+                                <?php
+                                    foreach ($images as $index => $imageUrl) {
+                                   $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
+                                ?>
+                                   <a href="<?php echo $link; ?>" target="_blank">
+                                       <li>
+                                           <div style="padding: 0;">
+                                               <img src="<?php echo $imageUrl; ?>" alt="">
+                                           </div>
+                                       </li>
+                                   </a>
+                                <?php
+                                }
+                                ?>
+                           </section>
+                       </div>
+                       <div class="container mt-4 col-md-12">
+                           <section class="logos-slider slider">
+                                <?php
+                                    foreach ($images as $index => $imageUrl) {
+                                   $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
+                                ?>
+                                   <a href="<?php echo $link; ?>" target="_blank">
+                                       <li>
+                                           <div style="padding: 0;">
+                                               <img src="<?php echo $imageUrl; ?>" alt="">
+                                           </div>
+                                       </li>
+                                   </a>
+                                <?php
+                                }
+                                ?>
+                           </section>
+                       </div>
+                    </div>
                     <!--ADS-->
-                    <div class="ban-ati-com ads-det-page">
+                    <!-- <div class="ban-ati-com ads-det-page">
                         <?php
                         $ad_position_id = 5;   //Ad position on Listing Detail Right
                         $get_ad_row = getAds($ad_position_id);
@@ -753,7 +790,7 @@ $review_count = getCountListingReview($listing_id); //Listing Reviews Count
                                     } else {
                                         echo "59040boat-728x90.png";
                                     } ?>" loading="lazy"></a>
-                    </div>
+                    </div> -->
                     <!--ADS-->
                 </div>
                 <!-- LHS END  -->
@@ -849,6 +886,25 @@ $review_count = getCountListingReview($listing_id); //Listing Reviews Count
                                         ?>
                                     </div>
                                 </div>
+
+                                <!-- <div class="container mt-5 col-md-12" style="width: 80%;">
+                                    <section class="logos-slider slider">
+                                        <?php
+                                        foreach ($images as $index => $imageUrl) {
+                                            $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
+                                        ?>
+                                            <a href="<?php echo $link; ?>" target="_blank">
+                                                <li>
+                                                    <div style="padding: 0; height: 9vw;">
+                                                        <img src="<?php echo $imageUrl; ?>" alt="">
+                                                    </div>
+                                                </li>
+                                            </a>
+                                        <?php
+                                        }
+                                        ?>
+                                    </section>
+                                </div> -->
                             </div>
                             <?php
                         }
@@ -1003,7 +1059,7 @@ $review_count = getCountListingReview($listing_id); //Listing Reviews Count
                             </div>
                         </div>
                         <!--END PRODUCTS-->
-                        <?php
+                    <?php
                     }
                     if ((!empty($listrow['listing_events']))) {
                         ?>
@@ -1814,6 +1870,25 @@ include "footer.php";
 <script src="<?php echo $slash; ?>js/jquery.validate.min.js"></script>
 <script src="<?php echo $slash; ?>js/custom_validation.js"></script>
 <script>
+     $(document).ready(function() {
+        $('.logos-slider').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            responsive: [{
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: false
+                }
+            }]
+
+        });
+    });
+
     $('.multiple-items1').slick({
         dots: true,
         arrows: false,
