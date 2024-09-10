@@ -4518,7 +4518,7 @@ table caption{font-size:1.3em}
 .responsive-table tr td:nth-child(even){border-right:1px solid #E6E4E4}
 .responsive-table tbody td{display:block;text-align:center}
 .com-pro-pg-head img{}
-.hom-top{display:block;background:linear-gradient(to bottom,#115bcc,#0650c0)!important;padding:0 7px;height:47px}
+.hom-top{display:block;background:linear-gradient(to bottom,#115bcc,#0650c0)!important;padding:0 7px;height:60px}
 .hom-top.act{top:0}
 .com-pro-pg-head{display:none}
 .pro-pg-logo,.pro-pg-bio .bio li{width:100%}
