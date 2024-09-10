@@ -364,7 +364,7 @@ to{background-position:100% 0}
 .hom-top.dmact.act{top:0}
 .hom-nav{width:100%;float:left}
 .hom-nav .ic-logo{width:200px;margin-top:10px}
-.hom-nav .bl{float:right;margin:0;padding-top: 20px !important;display: flex!important;align-items: center !important;}
+.hom-nav .bl{float:right;margin:0;padding-top: 20px !important;align-items: center !important;}
 .hom-nav .bl li{float:left;margin-left:10px;font-weight:500}
 .hom-nav .bl li a{color:#000;cursor:pointer;font-weight:500;font-size:12px;line-height:49px;padding:5px 6px;border-radius:5px;float:left;display:inline-block;line-height:24px}
 .hom-nav .bl li:last-child a{color:#fff;border-radius:5px;margin-left:10px;padding:5px 15px;background-color: #007bff !important;}
@@ -4898,3 +4898,9 @@ table caption{font-size:1.3em}
 .chosen-rtl .chosen-results .group-option{padding-left:0;padding-right:15px}
 .chosen-rtl.chosen-container-active.chosen-with-drop .chosen-single div{border-right:none}
 .chosen-rtl .chosen-search input[type="text"]{background:url(chosen-sprite.png) no-repeat -28px -20px,#fff;direction:rtl;padding:4px 5px 4px 20px}
+@media screen and (min-width:1024px) and (max-width:2560px){
+    .hom-nav .bl {
+    display: flex !important;
+    align-items: center !important;
+}
+}
