@@ -4904,3 +4904,10 @@ table caption{font-size:1.3em}
     align-items: center !important;
 }
 }
+@media screen and (max-width:768px){
+    img.ic-logo {
+    width: 100px !important;
+}
+}
+}
+
