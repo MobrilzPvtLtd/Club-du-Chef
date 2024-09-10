@@ -55,9 +55,9 @@ if (isset($_REQUEST['subcategory']) && !empty($_REQUEST['subcategory'])) {
         $data2 = explode(',', $subcategory_search_slug);
         $sub_cat_array = array();
 
-            foreach ($data2 as $c) {
+        foreach ($data2 as $c) {
 
-                if ($c != NULL) {
+            if ($c != NULL) {
 
                 $subcat_search_row = getSlugSubCategory($c);  //Fetch Sub Category Id using sub category name
 
@@ -66,13 +66,11 @@ if (isset($_REQUEST['subcategory']) && !empty($_REQUEST['subcategory'])) {
                 $sub_cat_array[] = "FIND_IN_SET($subcategory_id,sub_category_id)";
 
                 $sub_cat_array1[] = "FIND_IN_SET($subcategory_id,t1.sub_category_id)";
-
             }
         }
         $sub_category_search_query = 'AND (' . implode(' OR ', $sub_cat_array) . ')';
 
         $WHERE[] = '(' . implode(' OR ', $sub_cat_array1) . ')';
-
     } else {
 
         $subcat_search_row = getSlugSubCategory($subcategory_search_slug);  //Fetch Sub Category Id using sub category name
@@ -104,7 +102,6 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
 
                 $sub_cat_array5621[] = "FIND_IN_SET($get_city1,t1.city_id)";
             }
-
         }
         if ($sub_cat_array562 != NULL) {
 
@@ -120,7 +117,6 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
         $city_search_query = 'AND (FIND_IN_SET(' . $get_city1 . ', city_id))';
 
         $WHERE[] = '(FIND_IN_SET(' . $get_city1 . ', t1.city_id))';
-
     }
 }
 
@@ -157,7 +153,7 @@ if (isset($_REQUEST['feature']) && !empty($_REQUEST['feature'])) {
     }
     //Trending Check starts
     if ($get_feature == 'trending') {
-       // $order = " ORDER BY (select count(t5.listing_id) from `" . TBL . "page_views`) DESC,";
+        // $order = " ORDER BY (select count(t5.listing_id) from `" . TBL . "page_views`) DESC,";
         $inner = "INNER JOIN `" . TBL . "page_views` AS t5 ON t1.listing_id = t5.listing_id";
     }
     //Offers Check starts
@@ -213,82 +209,83 @@ if (isset($query['city']) && !empty($query['city'])) {
     .slick-slide {
         margin: 0px 8px;
     }
+
     .slick-slide img {
         width: 100%;
     }
-    .slick-list
-    {
+
+    .slick-list {
         position: relative;
         display: block;
         overflow: hidden;
         margin: 0;
         padding: 0;
     }
-    .slick-list:focus
-    {
-    outline: none;
+
+    .slick-list:focus {
+        outline: none;
     }
-    .slick-list.dragging
-    {
-    cursor: pointer;
-    cursor: hand;
+
+    .slick-list.dragging {
+        cursor: pointer;
+        cursor: hand;
     }
+
     .slick-slider .slick-track,
-    .slick-slider .slick-list
-    {
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    .slick-slider .slick-list {
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
     }
-    .slick-track
-    {
-    position: relative;
-    top: 0;
-    left: 0;
-    display: block;
+
+    .slick-track {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: block;
     }
+
     .slick-track:before,
-    .slick-track:after
-    {
-    display: table;
-    content: '';
+    .slick-track:after {
+        display: table;
+        content: '';
     }
-    .slick-track:after
-    {
-    clear: both;
+
+    .slick-track:after {
+        clear: both;
     }
-    .slick-loading .slick-track
-    {
-    visibility: hidden;
+
+    .slick-loading .slick-track {
+        visibility: hidden;
     }
-    .slick-slide
-    {
-    display: none;
-    float: left;
-    height: 100%;
-    min-height: 1px;
+
+    .slick-slide {
+        display: none;
+        float: left;
+        height: 100%;
+        min-height: 1px;
     }
-    [dir='rtl'] .slick-slide
-    {
-    float: right;
+
+    [dir='rtl'] .slick-slide {
+        float: right;
     }
-    .slick-slide img
-    {
-    display: block;
+
+    .slick-slide img {
+        display: block;
     }
-    .slick-slide.slick-loading img
-    {
-    display: none;
+
+    .slick-slide.slick-loading img {
+        display: none;
     }
-    .slick-slide.dragging img
-    {
-    pointer-events: none;
+
+    .slick-slide.dragging img {
+        pointer-events: none;
     }
-    .slick-initialized .slick-slide
-    {
-    display: block;
+
+    .slick-initialized .slick-slide {
+        display: block;
     }
 </style>
 
@@ -302,9 +299,8 @@ if (isset($query['city']) && !empty($query['city'])) {
         <div class="container">
             <div class="row">
                 <?php
-                foreach (getAllListingFilter() as $all_listing_filter_row) {
-
-                    ?>
+                    foreach (getAllListingFilter() as $all_listing_filter_row) {
+                ?>
                     <div class="col-md-3 fil-mob-view">
                         <div class="all-filt">
                             <span class="fil-mob-clo"><i class="material-icons">close</i></span>
@@ -312,13 +308,13 @@ if (isset($query['city']) && !empty($query['city'])) {
                                 <div class="sec-all-list-bre">
                                     <?php
                                     if (isset($_GET['category'])) {
-                                        ?>
+                                    ?>
                                         <h1><?php echo $category_search_name; ?></h1>
-                                        <?php
+                                    <?php
                                     } else {
-                                        ?>
+                                    ?>
                                         <h1><?php echo $BIZBOOK['ALL_CATEGORIES']; ?></h1>
-                                        <?php
+                                    <?php
                                     }
                                     ?>
                                     <ul>
@@ -330,19 +326,19 @@ if (isset($query['city']) && !empty($query['city'])) {
                                         </li>
                                         <?php
                                         if (isset($_GET['category'])) {
-                                            ?>
+                                        ?>
                                             <li>
                                                 <a href="<?php echo $ALL_LISTING_URL . urlModifier($category_search_slug); ?>"
-                                                   data-list-cate="<?php echo $category_search_slug; ?>"><?php echo $category_search_name; ?></a>
+                                                    data-list-cate="<?php echo $category_search_slug; ?>"><?php echo $category_search_name; ?></a>
                                             </li>
-                                            <?php
+                                        <?php
                                         } ?>
                                     </ul>
                                 </div>
                             </div>
 
                             <?php if ($all_listing_filter_row['service_filter'] == "Active") {
-                                ?>
+                            ?>
                                 <!--START-->
                                 <!-- <div class="filt-alist-near">
                                     <div class="tit">
@@ -360,16 +356,16 @@ if (isset($query['city']) && !empty($query['city'])) {
 
                                             $nearby_listrs = mysqli_query($conn, $nearby_listsql);
                                             while ($nearby_listrow = mysqli_fetch_array($nearby_listrs)) {
-                                                ?>
+                                            ?>
                                                 <li>
                                                     <div class="near-bx">
                                                         <div class="ne-1">
                                                             <img
                                                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?><?php if ($nearby_listrow['profile_image'] != NULL || !empty($nearby_listrow['profile_image'])) {
-                                                                        echo "images/listings/" . $nearby_listrow['profile_image'];
-                                                                    } else {
-                                                                        echo "images/listings/" . $footer_row['listing_default_image'];
-                                                                    } ?>">
+                                                                                                                                                                                                echo "images/listings/" . $nearby_listrow['profile_image'];
+                                                                                                                                                                                            } else {
+                                                                                                                                                                                                echo "images/listings/" . $footer_row['listing_default_image'];
+                                                                                                                                                                                            } ?>">
                                                         </div>
                                                         <div class="ne-2">
                                                             <h5><?php echo $nearby_listrow['listing_name']; ?></h5>
@@ -383,7 +379,7 @@ if (isset($query['city']) && !empty($query['city'])) {
                                                 </li>
                                                 <?php
                                             }
-                                            ?>
+                                                ?>
                                         </ul>
                                     </div>
                                 </div> -->
@@ -413,14 +409,14 @@ if (isset($query['city']) && !empty($query['city'])) {
                                             foreach ($city_input as $places) {
                                                 $cityrow = getCity($places);
                                                 $hyphend_city_name = urlModifier($cityrow['city_name']);
-                                                ?>
+                                            ?>
                                                 <option <?php if ($hyphend_city_name == $get_city) {
-                                                    echo 'selected';
-                                                } ?>
+                                                            echo 'selected';
+                                                        } ?>
                                                         value="<?php echo urlModifier($hyphend_city_name); ?>"><?php echo $cityrow['city_name']; ?></option>
                                                 <?php
                                             }
-                                            ?>
+                                                ?>
                                         </select>
                                     </div>
                                 </div> -->
@@ -431,7 +427,7 @@ if (isset($query['city']) && !empty($query['city'])) {
                                         <ul>
                                             <li>
                                                 <input type="text" id="search"
-                                                       placeholder="<?php echo $BIZBOOK['ALL-LISTING-SEARCH-SERVICE']; ?>">
+                                                    placeholder="<?php echo $BIZBOOK['ALL-LISTING-SEARCH-SERVICE']; ?>">
                                             </li>
                                             <li>
                                                 <input type="submit" value="">
@@ -443,23 +439,23 @@ if (isset($query['city']) && !empty($query['city'])) {
                                 <!--END-->
                             <?php }
                             if ($all_listing_filter_row['category_filter'] == "Active") {
-                                ?>
+                            ?>
                                 <!--START-->
                                 <div class="filt-com lhs-cate">
                                     <h4><?php echo $BIZBOOK['ALL-LISTING-CATEGORIES']; ?></h4>
                                     <div class="dropdown">
                                         <select onChange="SubcategoryFilter(this.value);"
-                                                class="cat_check chosen-select"
-                                                name="cat_check" id="cat_check">
+                                            class="cat_check chosen-select"
+                                            name="cat_check" id="cat_check">
                                             <option value=""><?php echo $BIZBOOK['ALL_CATEGORIES']; ?></option>
                                             <?php
                                             foreach (getAllActiveCategoriesPos() as $categories_row) {
-                                                ?>
+                                            ?>
                                                 <option <?php if ($category_search_slug == strtolower($categories_row['category_slug'])) {
-                                                    echo 'selected';
-                                                } ?>
-                                                        value="<?php echo urlModifier($categories_row['category_slug']); ?>"><?php echo $categories_row['category_name']; ?></option>
-                                                <?php
+                                                            echo 'selected';
+                                                        } ?>
+                                                    value="<?php echo urlModifier($categories_row['category_slug']); ?>"><?php echo $categories_row['category_name']; ?></option>
+                                            <?php
                                             }
                                             ?>
                                         </select>
@@ -481,22 +477,22 @@ if (isset($query['city']) && !empty($query['city'])) {
 
                                             $hyphend_sub_category_name2 = urlModifier($sub_category_row['sub_category_slug']);
 
-                                            ?>
+                                        ?>
                                             <li>
                                                 <div class="chbox">
                                                     <input type="checkbox" class="sub_cat_check" name="sub_cat_check"
-                                                           value="<?php echo $hyphend_sub_category_name2; ?>"
+                                                        value="<?php echo $hyphend_sub_category_name2; ?>"
                                                         <?php
                                                         $subcategory_id_new = explode(',', $_GET['subcategory']);
                                                         if (in_array($hyphend_sub_category_name2, $subcategory_id_new)) {
                                                             echo "checked";
                                                         } ?>
-                                                           id="<?php echo $sub_category_row['sub_category_name']; ?>"/>
+                                                        id="<?php echo $sub_category_row['sub_category_name']; ?>" />
                                                     <label
-                                                            for="<?php echo $sub_category_row['sub_category_name']; ?>"><?php echo $sub_category_row['sub_category_name']; ?></label>
+                                                        for="<?php echo $sub_category_row['sub_category_name']; ?>"><?php echo $sub_category_row['sub_category_name']; ?></label>
                                                 </div>
                                             </li>
-                                            <?php
+                                        <?php
                                         }
                                         ?>
                                     </ul>
@@ -505,7 +501,7 @@ if (isset($query['city']) && !empty($query['city'])) {
 
                             <?php }
                             if ($all_listing_filter_row['feature_filter'] == "Active") {
-                                ?>
+                            ?>
                                 <!--START-->
                                 <div class="filt-com lhs-featu">
                                     <h4><?php echo $BIZBOOK['ALL-LISTING-FEATURES']; ?></h4>
@@ -514,24 +510,24 @@ if (isset($query['city']) && !empty($query['city'])) {
                                         foreach (getAllActiveFeaturedFilter() as $featuredfilterrow) {
 
                                             $hyphend_feature_name = urlModifier($featuredfilterrow['all_featured_filter_value']);
-                                            ?>
+                                        ?>
 
                                             <li>
                                                 <div class="chbox">
                                                     <input type="checkbox" name="feature_check"
-                                                           value="<?php echo $featuredfilterrow['all_featured_filter_value']; ?>"
+                                                        value="<?php echo $featuredfilterrow['all_featured_filter_value']; ?>"
                                                         <?php
                                                         $feature_new = explode(',', $_GET['feature']);
                                                         if (in_array($hyphend_feature_name, $feature_new)) {
                                                             echo "checked";
                                                         } ?>
-                                                           class="feature_check"
-                                                           id="<?php echo $featuredfilterrow['all_featured_filter_value']; ?>"/>
+                                                        class="feature_check"
+                                                        id="<?php echo $featuredfilterrow['all_featured_filter_value']; ?>" />
                                                     <label
-                                                            for="<?php echo $featuredfilterrow['all_featured_filter_value']; ?>"><?php echo $featuredfilterrow['all_featured_filter_name']; ?></label>
+                                                        for="<?php echo $featuredfilterrow['all_featured_filter_value']; ?>"><?php echo $featuredfilterrow['all_featured_filter_name']; ?></label>
                                                 </div>
                                             </li>
-                                            <?php
+                                        <?php
                                         }
                                         ?>
                                     </ul>
@@ -544,7 +540,7 @@ if (isset($query['city']) && !empty($query['city'])) {
 
                             <?php
                             if ($all_listing_filter_row['rating_filter'] == "Active") {
-                                ?>
+                            ?>
                                 <!--START-->
                                 <div class="filt-com lhs-rati">
                                     <h4><?php echo $BIZBOOK['RATINGS']; ?></h4>
@@ -552,10 +548,10 @@ if (isset($query['city']) && !empty($query['city'])) {
                                         <li>
                                             <div class="rbbox">
                                                 <input type="radio" <?php if ($get_ratings == 5) {
-                                                    echo 'checked';
-                                                } ?> value="5" name="rating_check"
-                                                       class="rating_check"
-                                                       id="rb1"/>
+                                                                        echo 'checked';
+                                                                    } ?> value="5" name="rating_check"
+                                                    class="rating_check"
+                                                    id="rb1" />
                                                 <label for="rb1">
                                                     <i class="material-icons">star</i>
                                                     <i class="material-icons">star</i>
@@ -568,10 +564,10 @@ if (isset($query['city']) && !empty($query['city'])) {
                                         <li>
                                             <div class="rbbox">
                                                 <input type="radio" value="4" <?php if ($get_ratings == 4) {
-                                                    echo 'checked';
-                                                } ?> name="rating_check"
-                                                       class="rating_check"
-                                                       id="rb2"/>
+                                                                                    echo 'checked';
+                                                                                } ?> name="rating_check"
+                                                    class="rating_check"
+                                                    id="rb2" />
                                                 <label for="rb2">
                                                     <i class="material-icons">star</i>
                                                     <i class="material-icons">star</i>
@@ -584,10 +580,10 @@ if (isset($query['city']) && !empty($query['city'])) {
                                         <li>
                                             <div class="rbbox">
                                                 <input type="radio" value="3" <?php if ($get_ratings == 3) {
-                                                    echo 'checked';
-                                                } ?> name="rating_check"
-                                                       class="rating_check"
-                                                       id="rb3"/>
+                                                                                    echo 'checked';
+                                                                                } ?> name="rating_check"
+                                                    class="rating_check"
+                                                    id="rb3" />
                                                 <label for="rb3">
                                                     <i class="material-icons">star</i>
                                                     <i class="material-icons">star</i>
@@ -600,10 +596,10 @@ if (isset($query['city']) && !empty($query['city'])) {
                                         <li>
                                             <div class="rbbox">
                                                 <input type="radio" value="2" <?php if ($get_ratings == 2) {
-                                                    echo 'checked';
-                                                } ?> name="rating_check"
-                                                       class="rating_check"
-                                                       id="rb4"/>
+                                                                                    echo 'checked';
+                                                                                } ?> name="rating_check"
+                                                    class="rating_check"
+                                                    id="rb4" />
                                                 <label for="rb4">
                                                     <i class="material-icons">star</i>
                                                     <i class="material-icons">star</i>
@@ -616,10 +612,10 @@ if (isset($query['city']) && !empty($query['city'])) {
                                         <li>
                                             <div class="rbbox">
                                                 <input type="radio" value="1" <?php if ($get_ratings == 1) {
-                                                    echo 'checked';
-                                                } ?> name="rating_check"
-                                                       class="rating_check"
-                                                       id="rb5"/>
+                                                                                    echo 'checked';
+                                                                                } ?> name="rating_check"
+                                                    class="rating_check"
+                                                    id="rb5" />
                                                 <label for="rb5">
                                                     <i class="material-icons">star</i>
                                                     <i class="material-icons">star_border</i>
@@ -632,7 +628,7 @@ if (isset($query['city']) && !empty($query['city'])) {
                                     </ul>
                                 </div>
                                 <!--END-->
-                                <?php
+                            <?php
                             }
                             ?>
                             <!--START-->
@@ -649,11 +645,11 @@ if (isset($query['city']) && !empty($query['city'])) {
                                                 <span><?php echo $BIZBOOK['AD']; ?></span>
 
                                                 <img
-                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
-                                                            echo $ad_enquiry_photo;
-                                                        } else {
-                                                            echo "ads1.jpg";
-                                                        } ?>" alt="">
+                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
+                                                                                                                                                                                                    echo $ad_enquiry_photo;
+                                                                                                                                                                                                } else {
+                                                                                                                                                                                                    echo "ads1.jpg";
+                                                                                                                                                                                                } ?>" alt="">
                                             </a>
                                         </div>
                                     </li>
@@ -665,11 +661,12 @@ if (isset($query['city']) && !empty($query['city'])) {
                             <div class="all-list-filt-form">
                                 <div class="tit">
                                     <h3><?php echo $BIZBOOK['HOM-WHAT-SER']; ?>
-                                        <span><?php echo $BIZBOOK['HOM-WHAT-BIZ-BOOK-HELP-YOU']; ?></span></h3>
+                                        <span><?php echo $BIZBOOK['HOM-WHAT-BIZ-BOOK-HELP-YOU']; ?></span>
+                                    </h3>
                                 </div>
                                 <div class="hom-col-req">
                                     <div id="home_slide_enq_success" class="log"
-                                         style="display: none;">
+                                        style="display: none;">
                                         <p><?php echo $BIZBOOK['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
                                     </div>
                                     <div id="home_slide_enq_fail" class="log" style="display: none;">
@@ -679,59 +676,59 @@ if (isset($query['city']) && !empty($query['city'])) {
                                         <p><?php echo $BIZBOOK['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
                                     </div>
                                     <form name="home_slide_enquiry_form" id="home_slide_enquiry_form" method="post"
-                                          enctype="multipart/form-data">
+                                        enctype="multipart/form-data">
                                         <input type="hidden" class="form-control"
-                                               name="listing_id"
-                                               value="0"
-                                               placeholder=""
-                                               required>
+                                            name="listing_id"
+                                            value="0"
+                                            placeholder=""
+                                            required>
                                         <input type="hidden" class="form-control"
-                                               name="listing_user_id"
-                                               value="0"
-                                               placeholder=""
-                                               required>
+                                            name="listing_user_id"
+                                            value="0"
+                                            placeholder=""
+                                            required>
                                         <input type="hidden" class="form-control"
-                                               name="enquiry_sender_id"
-                                               value=""
-                                               placeholder=""
-                                               required>
+                                            name="enquiry_sender_id"
+                                            value=""
+                                            placeholder=""
+                                            required>
                                         <input type="hidden" class="form-control"
-                                               name="enquiry_source"
-                                               value="<?php if (isset($_GET["src"])) {
-                                                   echo $_GET["src"];
-                                               } else {
-                                                   echo "Website";
-                                               }; ?>"
-                                               placeholder=""
-                                               required>
+                                            name="enquiry_source"
+                                            value="<?php if (isset($_GET["src"])) {
+                                                        echo $_GET["src"];
+                                                    } else {
+                                                        echo "Website";
+                                                    }; ?>"
+                                            placeholder=""
+                                            required>
                                         <div class="form-group">
                                             <input type="text" name="enquiry_name" value="" required="required"
-                                                   class="form-control"
-                                                   placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>">
+                                                class="form-control"
+                                                placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>">
                                         </div>
                                         <div class="form-group">
                                             <input type="email" class="form-control"
-                                                   placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>"
-                                                   required="required" value=""
-                                                   name="enquiry_email"
-                                                   pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                                   title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>">
+                                                placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>"
+                                                required="required" value=""
+                                                name="enquiry_email"
+                                                pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
+                                                title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>">
                                         </div>
                                         <div class="form-group">
                                             <input type="text" class="form-control" value="" name="enquiry_mobile"
-                                                   placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
-                                                   pattern="[7-9]{1}[0-9]{9}"
-                                                   title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>"
-                                                   required="">
+                                                placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                                pattern="[7-9]{1}[0-9]{9}"
+                                                title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>"
+                                                required="">
                                         </div>
                                         <div class="form-group">
                                             <textarea class="form-control" rows="3" name="enquiry_message"
-                                                      placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                                placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                                         </div>
                                         <input type="hidden" id="source">
                                         <button type="submit" id="home_slide_enquiry_submit"
-                                                name="home_slide_enquiry_submit"
-                                                class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT_REQUIREMENTS']; ?>
+                                            name="home_slide_enquiry_submit"
+                                            class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT_REQUIREMENTS']; ?>
                                         </button>
                                     </form>
                                 </div>
@@ -739,66 +736,94 @@ if (isset($query['city']) && !empty($query['city'])) {
                             <!-- END -->
                         </div>
                     </div>
-                    <?php
+                <?php
                 }
                 ?>
                 <div class="col-md-9">
+                    <div class="container mt-5 col-md-12">
+                        <section class="logos-slider slider">
+                            <!-- <div class="row"> -->
+                                <!-- <ul> -->
+                                    <?php
+                                    foreach ($images as $index => $imageUrl) {
+                                        $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
+                                    ?>
+                                        <a href="<?php echo $link; ?>" target="_blank">
+                                            <li>
+                                                <div style="padding: 0; height: 9vw;">
+                                                    <img src="<?php echo $imageUrl; ?>" alt="">
+                                                </div>
+                                            </li>
+                                        </a>
+                                    <?php
+                                    }
+                                    ?>
+                                <!-- </ul> -->
+                            <!-- </div> -->
+                        </section>
+                    </div>
                     <div class="inn">
                         <div class="f2">
                             <div class="vfilter">
                                 <i class="material-icons ic1 <?php if (isset($_GET['grid'])) {
-                                    echo "act";
-                                } ?>" title="Grid view">apps</i>
+                                                                    echo "act";
+                                                                } ?>" title="Grid view">apps</i>
                                 <i class="material-icons ic2 <?php if (isset($_GET['list'])) {
-                                    echo "act";
-                                } elseif (!isset($_GET['grid']) && !isset($_GET['list'])) {
-                                    echo "act";
-                                } ?>" title="List view">format_list_bulleted</i>
+                                                                    echo "act";
+                                                                } elseif (!isset($_GET['grid']) && !isset($_GET['list'])) {
+                                                                    echo "act";
+                                                                } ?>" title="List view">format_list_bulleted</i>
                                 <i class="material-icons ic3" title="Map view">location_on</i>
                             </div>
                         </div>
                         <!-- LISTING INN FILTER -->
                         <!--<div class="list-filt-v2">
-                        <ul>
-                            <li>
-                                <div class="chbox">
-                                    <input type="checkbox" name="lfv2-all" class="lfv2-all" value="1" id="lfv2-all"
-                                           checked="checked"/>
-                                    <label for="lfv2-all"><?php //echo $BIZBOOK['ALL-LISTING-FILTER-ALL']; ?></label>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="chbox">
-                                    <input type="checkbox" name="lfv2-pop" class="lfv2-pop" id="lfv2-pop"/>
-                                    <label for="lfv2-pop"><?php //echo $BIZBOOK['ALL-LISTING-FILTER-POPULAR']; ?></label>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="chbox">
-                                    <input type="checkbox" name="lfv2-op" class="lfv2-op" id="lfv2-op"/>
-                                    <label for="lfv2-op"><?php //echo $BIZBOOK['ALL-LISTING-FILTER-OPEN']; ?></label>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="chbox">
-                                    <input type="checkbox" name="lfv2-tru" class="lfv2-tru" id="lfv2-tru"/>
-                                    <label for="lfv2-tru"><?php //echo $BIZBOOK['ALL-LISTING-FILTER-VERIFIED']; ?></label>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="chbox">
-                                    <input type="checkbox" name="lfv2-near" class="lfv2-near" id="lfv2-near"/>
-                                    <label for="lfv2-near"><?php //echo $BIZBOOK['ALL-LISTING-FILTER-NEARBY']; ?></label>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="chbox">
-                                    <input type="checkbox" name="lfv2-off" class="lfv2-off" id="lfv2-off"/>
-                                    <label for="lfv2-off"><?php //echo $BIZBOOK['ALL-LISTING-FILTER-OFFERS']; ?></label>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>-->
+                            <ul>
+                                <li>
+                                    <div class="chbox">
+                                        <input type="checkbox" name="lfv2-all" class="lfv2-all" value="1" id="lfv2-all"
+                                            checked="checked"/>
+                                        <label for="lfv2-all"><?php //echo $BIZBOOK['ALL-LISTING-FILTER-ALL']; 
+                                                                ?></label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="chbox">
+                                        <input type="checkbox" name="lfv2-pop" class="lfv2-pop" id="lfv2-pop"/>
+                                        <label for="lfv2-pop"><?php //echo $BIZBOOK['ALL-LISTING-FILTER-POPULAR']; 
+                                                                ?></label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="chbox">
+                                        <input type="checkbox" name="lfv2-op" class="lfv2-op" id="lfv2-op"/>
+                                        <label for="lfv2-op"><?php //echo $BIZBOOK['ALL-LISTING-FILTER-OPEN']; 
+                                                                ?></label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="chbox">
+                                        <input type="checkbox" name="lfv2-tru" class="lfv2-tru" id="lfv2-tru"/>
+                                        <label for="lfv2-tru"><?php //echo $BIZBOOK['ALL-LISTING-FILTER-VERIFIED']; 
+                                                                ?></label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="chbox">
+                                        <input type="checkbox" name="lfv2-near" class="lfv2-near" id="lfv2-near"/>
+                                        <label for="lfv2-near"><?php //echo $BIZBOOK['ALL-LISTING-FILTER-NEARBY']; 
+                                                                ?></label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="chbox">
+                                        <input type="checkbox" name="lfv2-off" class="lfv2-off" id="lfv2-off"/>
+                                        <label for="lfv2-off"><?php //echo $BIZBOOK['ALL-LISTING-FILTER-OFFERS']; 
+                                                                ?></label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>-->
                         <!-- END LISTING INN FILTER -->
                         <!--ADS-->
                         <!-- <div class="ban-ati-com ads-all-list">
@@ -809,10 +834,10 @@ if (isset($query['city']) && !empty($query['city'])) {
                             ?>
                             <a href="<?php echo stripslashes($get_ad_row['ad_link']); ?>"><span><?php echo $BIZBOOK['AD']; ?></span><img
                                         src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
-                                            echo $ad_enquiry_photo;
-                                        } else {
-                                            echo "59040boat-728x90.png";
-                                        } ?>"></a>
+                                                                                    echo $ad_enquiry_photo;
+                                                                                } else {
+                                                                                    echo "59040boat-728x90.png";
+                                                                                } ?>"></a>
                         </div> -->
                         <!--ADS-->
                         <!-- <div class="listng-res">
@@ -820,7 +845,7 @@ if (isset($query['city']) && !empty($query['city'])) {
                             <div class="col-md-4">
                                 <?php
                                 foreach ($images as $index => $imageUrl) {
-                                $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
+                                    $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
                                 ?>
                                         <a href="<?php echo $link; ?>" target="_blank">
                                         <ul id="tail-re">
@@ -844,18 +869,18 @@ if (isset($query['city']) && !empty($query['city'])) {
                             <div class="carousel-inner">
                                 <?php
                                 $item_count = count($images);
-                                $items_per_row = 3; 
+                                $items_per_row = 3;
                                 $rows = ceil($item_count / $items_per_row);
 
                                 for ($i = 0; $i < $rows; $i++) {
-                                    $activeClass = ($i === 0) ? 'active' : ''; 
+                                    $activeClass = ($i === 0) ? 'active' : '';
                                     echo '<div class="carousel-item ' . $activeClass . '">';
                                     echo '<div class="row">';
                                     for ($j = 0; $j < $items_per_row && $i * $items_per_row + $j < $item_count; $j++) {
                                         $index = $i * $items_per_row + $j;
                                         $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
                                         $imageUrl = htmlspecialchars($images[$index]);
-                                        ?>
+                                ?>
                                         <div class="col-md-4">
                                             <a href="<?php echo $link; ?>" target="_blank">
                                                 <div style="padding: 0; height: 200px; overflow: hidden;">
@@ -872,7 +897,7 @@ if (isset($query['city']) && !empty($query['city'])) {
                                     echo '</div>'; // End row
                                     echo '</div>'; // End carousel-item
                                 }
-                                ?>
+                                        ?>
                             </div>
                             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -883,29 +908,7 @@ if (isset($query['city']) && !empty($query['city'])) {
                                 <span class="sr-only">Next</span>
                             </a>
                         </div> -->
-                    
-                        <div class="ban-ql mt-5">
-                            <div class="container">
-                            <section class="logos-slider slider">
-                                <?php
-                                    foreach ($images as $index => $imageUrl) {
-                                    $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
-                                ?>
-                                    <a href="<?php echo $link; ?>" target="_blank">
-                                        <li>
-                                            <div class="clo-md-4">
-                                            <div style="padding: 0; height: 10vw;">
-                                                <img src="<?php echo $imageUrl; ?>" alt="">
-                                            </div>
-                                            </div>
-                                        </li>
-                                    </a>
-                                <?php
-                                    }
-                                ?>
-                            </section>
-                            </div>
-                        </div>
+                        
 
                         <!--RESULTS SELECTED FILTER-->
                         <div class="listng-res">
@@ -932,7 +935,7 @@ if (isset($query['city']) && !empty($query['city'])) {
 
                                 <!-- //Filter Category name   -->
                                 <!-- <?php
-                                if (isset($_GET['category']) && !empty($_GET['category'])) { ?>
+                                        if (isset($_GET['category']) && !empty($_GET['category'])) { ?>
                                     <span class="listing-filters-span"
                                           id="<?php echo strtolower($category_search_slug1); ?>"
                                           data-id="<?php echo (!isset($_GET['category'])) ? 1 : 2; ?>"
@@ -953,11 +956,11 @@ if (isset($query['city']) && !empty($query['city'])) {
                                             $job_sub_category_row = getSlugSubCategory($get_subcategory1);
 
                                             $hyphend_sub_category_name = urlModifier($job_sub_category_row['sub_category_slug']);
-                                            ?>
+                                ?>
                                             <span class="listing-filters-span"
-                                                  id="<?php echo $hyphend_sub_category_name; ?>"
-                                                  data-type="sub_cat"><?php echo $job_sub_category_row['sub_category_name']; ?></span>
-                                        <?php }
+                                                id="<?php echo $hyphend_sub_category_name; ?>"
+                                                data-type="sub_cat"><?php echo $job_sub_category_row['sub_category_name']; ?></span>
+                                <?php }
                                     }
                                 } ?>
 
@@ -973,10 +976,10 @@ if (isset($query['city']) && !empty($query['city'])) {
                                             $city_row = getCityName($city1);
 
                                             $hyphend_city_name = urlModifier($city_row['city_name']);
-                                            ?>
+                                ?>
                                             <span class="listing-filters-span" id="<?php echo $hyphend_city_name; ?>"
-                                                  data-type="city"><?php echo $city_row['city_name']; ?></span>
-                                        <?php }
+                                                data-type="city"><?php echo $city_row['city_name']; ?></span>
+                                <?php }
                                     }
                                 } ?>
 
@@ -994,32 +997,32 @@ if (isset($query['city']) && !empty($query['city'])) {
                                             $job_feature_row = getValueFeaturedFilter($get_feature1);
 
                                             $hyphend_featured_filter_value = urlModifier($job_feature_row['all_featured_filter_value']);
-                                            ?>
+                                ?>
                                             <span class="listing-filters-span"
-                                                  id="<?php echo $hyphend_featured_filter_value; ?>"
-                                                  data-type="feature"><?php echo $job_feature_row['all_featured_filter_name']; ?></span>
-                                        <?php }
+                                                id="<?php echo $hyphend_featured_filter_value; ?>"
+                                                data-type="feature"><?php echo $job_feature_row['all_featured_filter_name']; ?></span>
+                                <?php }
                                     }
                                 } ?>
 
                                 <!-- //Filter Rating   -->
                                 <?php
                                 if (isset($_REQUEST['ratings']) && $_REQUEST['ratings'] != NULL && $_REQUEST['ratings'] != 0) {
-                                    ?>
+                                ?>
                                     <span class="listing-filters-span" id="<?php echo $get_ratings; ?>"
-                                          data-type="ratings"><?php
+                                        data-type="ratings"><?php
 
-                                        if ($get_ratings == 5) {
-                                            echo '5' . ' ' . $BIZBOOK['SERVICE-EXPERT-STAR-LABEL'];
-                                        } elseif ($get_ratings == 4) {
-                                            echo '4' . ' ' . $BIZBOOK['SERVICE-EXPERT-STAR-LABEL'];
-                                        } elseif ($get_ratings == 3) {
-                                            echo '3' . ' ' . $BIZBOOK['SERVICE-EXPERT-STAR-LABEL'];
-                                        } elseif ($get_ratings == 2) {
-                                            echo '2' . ' ' . $BIZBOOK['SERVICE-EXPERT-STAR-LABEL'];
-                                        } elseif ($get_ratings == 1) {
-                                            echo '1' . ' ' . $BIZBOOK['SERVICE-EXPERT-STAR-LABEL'];
-                                        } ?></span>
+                                                            if ($get_ratings == 5) {
+                                                                echo '5' . ' ' . $BIZBOOK['SERVICE-EXPERT-STAR-LABEL'];
+                                                            } elseif ($get_ratings == 4) {
+                                                                echo '4' . ' ' . $BIZBOOK['SERVICE-EXPERT-STAR-LABEL'];
+                                                            } elseif ($get_ratings == 3) {
+                                                                echo '3' . ' ' . $BIZBOOK['SERVICE-EXPERT-STAR-LABEL'];
+                                                            } elseif ($get_ratings == 2) {
+                                                                echo '2' . ' ' . $BIZBOOK['SERVICE-EXPERT-STAR-LABEL'];
+                                                            } elseif ($get_ratings == 1) {
+                                                                echo '1' . ' ' . $BIZBOOK['SERVICE-EXPERT-STAR-LABEL'];
+                                                            } ?></span>
                                 <?php } ?>
 
                             </div>
@@ -1054,7 +1057,6 @@ if (isset($query['city']) && !empty($query['city'])) {
                                                 //$star_rate_one = (($Star_rate_value)/5)*100;
                                                 $star_rate_two = number_format($star_rate_one, 1);
                                                 $star_rate = floatval($star_rate_two);
-
                                             } else {
                                                 $rate_times = 0;
                                                 $rate_value = 0;
@@ -1076,7 +1078,7 @@ if (isset($query['city']) && !empty($query['city'])) {
                                         }
 
                                         //Likes Query Ends
-                                        ?>
+                                ?>
 
                                         <li class="all-list-item">
                                             <div class="listing-box">
@@ -1086,63 +1088,63 @@ if (isset($query['city']) && !empty($query['city'])) {
                                                     <div class="list-status">
                                                         <?php
                                                         if ($listrow['listing_open'] == 1) {
-                                                            ?>
+                                                        ?>
                                                             <span class="open-stat"><?php echo $BIZBOOK['OPEN']; ?></span>
-                                                            <?php
+                                                        <?php
                                                         }
                                                         ?>
                                                         <div class="list-rat-all">
                                                             <?php
                                                             if ($star_rate != 0) {
-                                                                ?>
+                                                            ?>
                                                                 <label class="rat">
                                                                     <?php
                                                                     for ($i = 1; $i <= ceil($star_rate); $i++) {
-                                                                        ?>
+                                                                    ?>
                                                                         <i class="material-icons">star</i>
-                                                                        <?php
+                                                                    <?php
                                                                     }
                                                                     $bal_star_rate = abs(ceil($star_rate) - 5);
 
                                                                     for ($i = 1; $i <= $bal_star_rate; $i++) {
-                                                                        ?>
+                                                                    ?>
                                                                         <i class="material-icons ratstar">star</i>
-                                                                        <?php
+                                                                    <?php
                                                                     }
                                                                     ?>
                                                                 </label>
-                                                                <?php
+                                                            <?php
                                                             }
                                                             ?>
                                                         </div>
 
                                                         <?php if ($listrow['user_plan'] == 4 || $listrow['user_plan'] == 3 || $listrow['user_plan'] == 2) { ?>
                                                             <i class="li-veri"><img
-                                                                        src="<?php echo $slash; ?>images/icon/svg/verified.png"
-                                                                        title="Verified" data-toggle="tooltip"></i>
+                                                                    src="<?php echo $slash; ?>images/icon/svg/verified.png"
+                                                                    title="Verified" data-toggle="tooltip"></i>
                                                         <?php } ?>
                                                         <!---SAVE--->
                                                         <span class="enq-sav" data-toggle="tooltip"
-                                                              title="<?php if ($active_listing_likes == '') { ?>Click to like this listing<?php } else { ?> Click to Unlike this listing <?php } ?>">
+                                                            title="<?php if ($active_listing_likes == '') { ?>Click to like this listing<?php } else { ?> Click to Unlike this listing <?php } ?>">
                                                             <i class="l-like Animatedheartfunc<?php echo $listing_id ?> <?php echo $active_listing_likes; ?>"
-                                                               data-for="<?php echo listing_total_like_count($listing_id); ?>"
-                                                               data-section="<?php echo $check_listing_likes_total; ?>"
-                                                               data-num="<?php echo $list_user_id; ?>"
-                                                               data-item="<?php echo $session_user_id; ?>"
-                                                               data-id='<?php echo $listing_id ?>'><img
-                                                                        src="<?php echo $slash; ?>images/icon/svg/like.svg"></i></span>
+                                                                data-for="<?php echo listing_total_like_count($listing_id); ?>"
+                                                                data-section="<?php echo $check_listing_likes_total; ?>"
+                                                                data-num="<?php echo $list_user_id; ?>"
+                                                                data-item="<?php echo $session_user_id; ?>"
+                                                                data-id='<?php echo $listing_id ?>'><img
+                                                                    src="<?php echo $slash; ?>images/icon/svg/like.svg"></i></span>
                                                         <!---END SAVE--->
                                                     </div>
 
                                                     <!---END LISTING STATUS--->
                                                     <a href="<?php echo $LISTING_URL . urlModifier($listrow['listing_slug']); ?>"><img
-                                                                data-src="<?php echo $slash; ?><?php if ($listrow['profile_image'] != NULL || !empty($listrow['profile_image'])) {
-                                                                    echo "images/listings/" . $listrow['profile_image'];
-                                                                } else {
-                                                                    echo "images/listings/" . $footer_row['listing_default_image'];
-                                                                } ?>"
-                                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                                class="b-lazy list-pro-thum"></a>
+                                                            data-src="<?php echo $slash; ?><?php if ($listrow['profile_image'] != NULL || !empty($listrow['profile_image'])) {
+                                                                                                echo "images/listings/" . $listrow['profile_image'];
+                                                                                            } else {
+                                                                                                echo "images/listings/" . $footer_row['listing_default_image'];
+                                                                                            } ?>"
+                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                            class="b-lazy list-pro-thum"></a>
 
                                                 </div>
                                                 <!---END LISTING IMAGE--->
@@ -1151,12 +1153,12 @@ if (isset($query['city']) && !empty($query['city'])) {
                                                 <div class="list-con">
                                                     <div class="list-pro">
                                                         <img data-src="<?php echo $slash; ?>images/user/<?php if (($usersqlrow['profile_image'] == NULL) || empty($usersqlrow['profile_image'])) {
-                                                            echo $footer_row['user_default_image'];
-                                                        } else {
-                                                            echo $usersqlrow['profile_image'];
-                                                        } ?>"
-                                                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                             class="b-lazy" alt="" loading="lazy">
+                                                                                                            echo $footer_row['user_default_image'];
+                                                                                                        } else {
+                                                                                                            echo $usersqlrow['profile_image'];
+                                                                                                        } ?>"
+                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                            class="b-lazy" alt="" loading="lazy">
                                                     </div>
 
                                                     <h4>
@@ -1166,37 +1168,37 @@ if (isset($query['city']) && !empty($query['city'])) {
                                                 </div>
                                                 <div class="pg-pro-buy-cta">
                                                     <?php if ($session_user_id != NULL || !empty($session_user_id)) {
-                                                        ?>
+                                                    ?>
                                                         <span data-toggle="modal"
                                                             <?php
                                                             if ($list_user_id != 1) { ?>
-                                                                data-target="#quote<?php echo $listing_id ?>"
-                                                                <?php
+                                                            data-target="#quote<?php echo $listing_id ?>"
+                                                            <?php
                                                             }
                                                             ?>
-                                                              class="quo"><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></span>
-                                                        <?php
+                                                            class="quo"><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></span>
+                                                    <?php
                                                     } else { ?>
                                                         <a class="quo"
-                                                           href="<?php echo $LOGIN_URL; ?>"><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></a>
-                                                        <?php
+                                                            href="<?php echo $LOGIN_URL; ?>"><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></a>
+                                                    <?php
                                                     }
                                                     ?>
                                                     <a class="cta-buy-now" href="<?php echo $BIZBOOK['TEL']; ?>:<?php
-                                                    if ($listrow['listing_mobile'] != NULL || $usersqlrow['mobile_number'] != NULL) {
-                                                            echo $listrow['listing_mobile'];
-                                                        } ?>"><?php echo $BIZBOOK['CALL_NOW']; ?></a>
+                                                                                                                if ($listrow['listing_mobile'] != NULL || $usersqlrow['mobile_number'] != NULL) {
+                                                                                                                    echo $listrow['listing_mobile'];
+                                                                                                                } ?>"><?php echo $BIZBOOK['CALL_NOW']; ?></a>
                                                     <a class="cta-add-cart" href="https://wa.me/<?php
-                                                    if ($listrow['listing_whatsapp'] != NULL) {
-                                                        echo $listrow['listing_whatsapp'];
-                                                    } else {
-                                                        if ($listrow['listing_mobile'] != NULL || $usersqlrow['mobile_number'] != NULL) {
+                                                                                                if ($listrow['listing_whatsapp'] != NULL) {
+                                                                                                    echo $listrow['listing_whatsapp'];
+                                                                                                } else {
+                                                                                                    if ($listrow['listing_mobile'] != NULL || $usersqlrow['mobile_number'] != NULL) {
 
-                                                                echo $listrow['listing_mobile'];
-                                                        }
-                                                    }
-                                                    ?>" class="what"
-                                                       target="_blank"><?php echo $BIZBOOK['WHATSAPP']; ?></a>
+                                                                                                        echo $listrow['listing_mobile'];
+                                                                                                    }
+                                                                                                }
+                                                                                                ?>" class="what"
+                                                        target="_blank"><?php echo $BIZBOOK['WHATSAPP']; ?></a>
                                                 </div>
                                                 <!---END LISTING NAME--->
                                             </div>
@@ -1212,15 +1214,15 @@ if (isset($query['city']) && !empty($query['city'])) {
                                                         <div class="modal-content">
                                                             <div class="log-bor">&nbsp;</div>
                                                             <span
-                                                                    class="udb-inst"><?php echo $BIZBOOK['LEAD-SEND-ENQUIRY']; ?></span>
+                                                                class="udb-inst"><?php echo $BIZBOOK['LEAD-SEND-ENQUIRY']; ?></span>
                                                             <button type="button" class="close"
-                                                                    data-dismiss="modal">&times;
+                                                                data-dismiss="modal">&times;
                                                             </button>
                                                             <!-- Modal Header -->
                                                             <div class="quote-pop">
                                                                 <h4><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></h4>
                                                                 <div id="enq_success" class="log"
-                                                                     style="display: none;">
+                                                                    style="display: none;">
                                                                     <p><?php echo $BIZBOOK['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
                                                                 </div>
                                                                 <div id="enq_fail" class="log" style="display: none;">
@@ -1230,66 +1232,66 @@ if (isset($query['city']) && !empty($query['city'])) {
                                                                     <p><?php echo $BIZBOOK['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
                                                                 </div>
                                                                 <form method="post" name="all_enquiry_form"
-                                                                      id="all_enquiry_form">
+                                                                    id="all_enquiry_form">
                                                                     <input type="hidden" class="form-control"
-                                                                           name="listing_id"
-                                                                           value="<?php echo $listing_id ?>"
-                                                                           placeholder=""
-                                                                           required>
+                                                                        name="listing_id"
+                                                                        value="<?php echo $listing_id ?>"
+                                                                        placeholder=""
+                                                                        required>
                                                                     <input type="hidden" class="form-control"
-                                                                           name="listing_user_id"
-                                                                           value="<?php echo $list_user_id; ?>"
-                                                                           placeholder=""
-                                                                           required>
+                                                                        name="listing_user_id"
+                                                                        value="<?php echo $list_user_id; ?>"
+                                                                        placeholder=""
+                                                                        required>
                                                                     <input type="hidden" class="form-control"
-                                                                           name="enquiry_sender_id"
-                                                                           value="<?php echo $session_user_id; ?>"
-                                                                           placeholder=""
-                                                                           required>
+                                                                        name="enquiry_sender_id"
+                                                                        value="<?php echo $session_user_id; ?>"
+                                                                        placeholder=""
+                                                                        required>
                                                                     <input type="hidden" class="form-control"
-                                                                           name="enquiry_source"
-                                                                           value="<?php if (isset($_GET["src"])) {
-                                                                               echo $_GET["src"];
-                                                                           } else {
-                                                                               echo "Website";
-                                                                           }; ?>"
-                                                                           placeholder=""
-                                                                           required>
+                                                                        name="enquiry_source"
+                                                                        value="<?php if (isset($_GET["src"])) {
+                                                                                    echo $_GET["src"];
+                                                                                } else {
+                                                                                    echo "Website";
+                                                                                }; ?>"
+                                                                        placeholder=""
+                                                                        required>
                                                                     <div class="form-group">
                                                                         <input type="text" readonly name="enquiry_name"
-                                                                               value="<?php echo $user_details_row['first_name'] ?>"
-                                                                               required="required" class="form-control"
-                                                                               placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>">
+                                                                            value="<?php echo $user_details_row['first_name'] ?>"
+                                                                            required="required" class="form-control"
+                                                                            placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>">
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <input type="email" class="form-control"
-                                                                               placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>"
-                                                                               readonly="readonly"
-                                                                               value="<?php echo $user_details_row['email_id'] ?>"
-                                                                               name="enquiry_email"
-                                                                               pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                                                               title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>"
-                                                                               required>
+                                                                            placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>"
+                                                                            readonly="readonly"
+                                                                            value="<?php echo $user_details_row['email_id'] ?>"
+                                                                            name="enquiry_email"
+                                                                            pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
+                                                                            title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>"
+                                                                            required>
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <input type="text" class="form-control"
-                                                                               readonly="readonly"
-                                                                               value="<?php echo $user_details_row['mobile_number'] ?>"
-                                                                               name="enquiry_mobile"
-                                                                               placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
-                                                                               pattern="[7-9]{1}[0-9]{9}"
-                                                                               title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>"
-                                                                               required>
+                                                                            readonly="readonly"
+                                                                            value="<?php echo $user_details_row['mobile_number'] ?>"
+                                                                            name="enquiry_mobile"
+                                                                            placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                                                            pattern="[7-9]{1}[0-9]{9}"
+                                                                            title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>"
+                                                                            required>
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <textarea class="form-control" rows="3"
-                                                                                  name="enquiry_message"
-                                                                                  placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                                                            name="enquiry_message"
+                                                                            placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                                                                     </div>
                                                                     <input type="hidden" id="source">
                                                                     <button type="submit" id="all_enquiry_submit"
-                                                                            name="enquiry_submit"
-                                                                            class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
+                                                                        name="enquiry_submit"
+                                                                        class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
                                                                 </form>
                                                             </div>
                                                         </div>
@@ -1301,20 +1303,20 @@ if (isset($query['city']) && !empty($query['city'])) {
                                         <!--  Get Quote Pop up box ends  -->
 
 
-                                        <?php
+                                    <?php
                                     }
                                     ?>
-                                    <?php
+                                <?php
                                 } else {
-                                    ?>
+                                ?>
                                     <span style="    font-size: 21px;
-                color: #bfbfbf;
-                letter-spacing: 1px;
-                /* background: #525252; */
-                text-shadow: 0px 0px 2px #fff;
-                text-transform: uppercase;
-                margin-top: 5%;"><?php echo $BIZBOOK['LISTINGS_NO_LISTINGS_MESSAGE']; ?></span>
-                                    <?php
+                                color: #bfbfbf;
+                                letter-spacing: 1px;
+                                /* background: #525252; */
+                                text-shadow: 0px 0px 2px #fff;
+                                text-transform: uppercase;
+                                margin-top: 5%;"><?php echo $BIZBOOK['LISTINGS_NO_LISTINGS_MESSAGE']; ?></span>
+                                <?php
                                 }
                                 ?>
 
@@ -1328,11 +1330,11 @@ if (isset($query['city']) && !empty($query['city'])) {
                                 $ad_enquiry_photo = $get_ad_row['ad_enquiry_photo'];
                                 ?>
                                 <a href="<?php echo stripslashes($get_ad_row['ad_link']); ?>"><span><?php echo $BIZBOOK['AD']; ?></span><img
-                                            src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
-                                                echo $ad_enquiry_photo;
-                                            } else {
-                                                echo "59040boat-728x90.png";
-                                            } ?>"></a>
+                                        src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
+                                                                                    echo $ad_enquiry_photo;
+                                                                                } else {
+                                                                                    echo "59040boat-728x90.png";
+                                                                                } ?>"></a>
                             </div>
                             <!--ADS-->
                             <div id="all-list-pagination-container"></div>
@@ -1362,7 +1364,7 @@ if (isset($query['city']) && !empty($query['city'])) {
             <div class="row">
                 <div class="list-foot-abo">
                     <?php
-                    $sum = $count = 0;// initiate interger variables
+                    $sum = $count = 0; // initiate interger variables
                     foreach (getAllListingCategory($cat_search_row['category_id']) as $categorywise_listings) {
                         $categorywise_listing_id = $categorywise_listings['listing_id'];
 
@@ -1374,9 +1376,8 @@ if (isset($query['city']) && !empty($query['city'])) {
                                 $star_rate_one = $star_sum_rates / $star_rate_times;
                                 //$star_rate_one = (($Star_rate_value)/5)*100;
                                 $star_rate_two = number_format($star_rate_one, 1);
-//                                $star_rate = floatval($star_rate_two);
+                                //                                $star_rate = floatval($star_rate_two);
                                 $star_rate = $star_rate_two;
-
                             } else {
                                 $rate_times = 0;
                                 $rate_value = 0;
@@ -1388,7 +1389,6 @@ if (isset($query['city']) && !empty($query['city'])) {
                         if ($star_rate > 0) {
                             $count++; //add 1 on every loop
                         }
-
                     }
                     if ($sum) {
                         $new_star_rate = number_format($sum / $count, 1);
@@ -1411,29 +1411,29 @@ if (isset($query['city']) && !empty($query['city'])) {
 
                             <?php
                             if ($new_star_rate != 0) {
-                                ?>
+                            ?>
                                 <label class="rat">
                                     <?php
                                     for ($i = 1; $i <= ceil($new_star_rate); $i++) {
-                                        ?>
+                                    ?>
                                         <i class="material-icons">star</i>
-                                        <?php
+                                    <?php
                                     }
                                     $bal_star_rate = abs(ceil($new_star_rate) - 5);
 
                                     for ($i = 1; $i <= $bal_star_rate; $i++) {
-                                        ?>
+                                    ?>
                                         <i class="material-icons ratstar">star</i>
-                                        <?php
+                                    <?php
                                     }
                                     ?>
                                 </label>
-                                <?php
+                            <?php
                             }
                             ?>
                             <?php if ($new_review_count > 0) { ?>
                                 <span><?php echo $new_review_count; ?><?php echo $BIZBOOK['REVIEWS']; ?></span>
-                                <?php
+                            <?php
                             }
                             ?>
                         </div>
@@ -1459,24 +1459,25 @@ if (isset($query['city']) && !empty($query['city'])) {
                     </div>
                     <?php
                     if ($cat_search_row['category_name'] != NULL) {
-                        ?>
+                    ?>
                         <h2><?php echo $cat_search_row['category_name']; ?></h2>
-                        <?php
+                    <?php
                     }
                     if ($cat_search_row['category_description'] != NULL) {
-                        ?>
+                    ?>
                         <?php echo stripslashes($cat_search_row['category_description']); ?>
-                        <?php
+                    <?php
                     }
                     ?>
                 </div>
                 <?php
-                if ($cat_search_row['category_faq_1_ques'] != NULL || $cat_search_row['category_faq_2_ques'] != NULL
+                if (
+                    $cat_search_row['category_faq_1_ques'] != NULL || $cat_search_row['category_faq_2_ques'] != NULL
                     || $cat_search_row['category_faq_3_ques'] != NULL || $cat_search_row['category_faq_4_ques'] != NULL
                     || $cat_search_row['category_faq_5_ques'] != NULL || $cat_search_row['category_faq_6_ques'] != NULL
                     || $cat_search_row['category_faq_7_ques'] != NULL || $cat_search_row['category_faq_8_ques'] != NULL
                 ) {
-                    ?>
+                ?>
                     <div class="list-foot-faq">
                         <h3><?php echo $BIZBOOK['FAQ']; ?></h3>
                         <div class="how-to-coll">
@@ -1572,7 +1573,7 @@ if (isset($query['city']) && !empty($query['city'])) {
                             </ul>
                         </div>
                     </div>
-                    <?php
+                <?php
                 }
                 ?>
             </div>
@@ -1594,8 +1595,12 @@ include "footer.php";
 <script src="<?php echo $slash; ?>js/jquery-ui.js"></script>
 <script src="<?php echo $slash; ?>js/select-opt.js"></script>
 <script src="<?php echo $slash; ?>js/blazy.min.js"></script>
-<script type="text/javascript">var webpage_full_link = '<?php echo $webpage_full_link;?>';</script>
-<script type="text/javascript">var login_url = '<?php echo $LOGIN_URL;?>';</script>
+<script type="text/javascript">
+    var webpage_full_link = '<?php echo $webpage_full_link; ?>';
+</script>
+<script type="text/javascript">
+    var login_url = '<?php echo $LOGIN_URL; ?>';
+</script>
 <script src="<?php echo $slash; ?>js/custom.js"></script>
 <script src="<?php echo $slash; ?>js/slick.js"></script>
 <script src="<?php echo $slash; ?>js/listing_filter.js"></script>
@@ -1604,7 +1609,7 @@ include "footer.php";
 <!--<script src="<?php echo $slash; ?>js/jquery.simplePagination.min.js"></script>-->
 
 <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
         $('.logos-slider').slick({
             infinite: true,
             slidesToShow: 3,
@@ -1622,11 +1627,9 @@ include "footer.php";
 
         });
     });
- 
 </script>
 <script>
-
-    $(document).ready(function () {
+    $(document).ready(function() {
         var bLazy = new Blazy({});
     });
 
@@ -1649,50 +1652,50 @@ include "footer.php";
      return false;
      }
      });*/
-
-
 </script>
 <script>
     <?php
     if (isset($_GET['map'])) {
     ?>
-    $(".all-list-bre, .all-listing").hide();
-    $(".list-map").show();
+        $(".all-list-bre, .all-listing").hide();
+        $(".list-map").show();
 
     <?php
-    }if (isset($_GET['grid'])) {
+    }
+    if (isset($_GET['grid'])) {
     ?>
-    $(".list-map").hide();
-    $(".all-list-bre, .all-listing").show();
-    $('.all-list-sh').removeClass('cview3');
-    $('.all-list-sh').addClass('cview1');
+        $(".list-map").hide();
+        $(".all-list-bre, .all-listing").show();
+        $('.all-list-sh').removeClass('cview3');
+        $('.all-list-sh').addClass('cview1');
 
     <?php
-    }if (isset($_GET['list'])) {
+    }
+    if (isset($_GET['list'])) {
     ?>
-    $(".list-map").hide();
-    $(".all-list-bre, .all-listing").show();
-    $('.all-list-sh').removeClass('cview1');
-    $('.all-list-sh').removeClass('cview3');
+        $(".list-map").hide();
+        $(".all-list-bre, .all-listing").show();
+        $('.all-list-sh').removeClass('cview1');
+        $('.all-list-sh').removeClass('cview3');
 
     <?php
-    }?>
+    } ?>
 </script>
 
 <!--on page scroll load data ends-->
 <script>
     function SubcategoryFilter(val) {
-//        alert(val);
-//        $(".sub_cat_section").remove();
-        breadcrumbs(val);                        //Function call to change breadcrumb
-        footerCategoryInfo(val);                        //Function call to change footer category data
-        topServiceCategory(val);                        //Function call to change footer category data
+        //        alert(val);
+        //        $(".sub_cat_section").remove();
+        breadcrumbs(val); //Function call to change breadcrumb
+        footerCategoryInfo(val); //Function call to change footer category data
+        topServiceCategory(val); //Function call to change footer category data
         $(".sub_cat_section").css("opacity", 0);
         $.ajax({
             type: "POST",
             url: "<?php echo $slash; ?>sub_category_filter.php",
             data: 'category_id=' + val,
-            success: function (data) {
+            success: function(data) {
                 if (data == null) {
                     $(".sub_cat_section").remove();
                 } else {
@@ -1712,7 +1715,7 @@ include "footer.php";
             type: "POST",
             url: "<?php echo $slash; ?>category_filter_breadcrumb.php",
             data: 'category_id=' + val,
-            success: function (data) {
+            success: function(data) {
                 if (data == null) {
                     $(".sec-all-list-bre").css("opacity", 1);
                 } else {
@@ -1731,7 +1734,7 @@ include "footer.php";
             type: "POST",
             url: "<?php echo $slash; ?>category_filter_footer.php",
             data: 'category_id=' + val,
-            success: function (data) {
+            success: function(data) {
                 if (data == null) {
                     $(".sec-all-foot-cat-info").css("opacity", 1);
                 } else {
@@ -1751,7 +1754,7 @@ include "footer.php";
             type: "POST",
             url: "<?php echo $slash; ?>category_filter_top_provider_section.php",
             data: 'category_id=' + val,
-            success: function (data) {
+            success: function(data) {
                 if (data == null) {
                     $(".top-ser-secti-prov").css("opacity", 1);
                 } else {
@@ -1765,7 +1768,6 @@ include "footer.php";
 </script>
 
 <script>
-
     var scr_he = window.innerHeight;
     var fiscr_he = scr_he;
     if (scr_he >= 450) {
@@ -1778,11 +1780,11 @@ include "footer.php";
 
 <?php
 if ($cat_search_row['category_google_schema'] != NULL) {
-    ?>
+?>
     <!-- WEBSITE SCHEMA STARTS -->
     <h2 style="display: none"><?php echo $cat_search_row['category_google_schema']; ?></h2>
     <!-- WEBSITE SCHEMA ENDS -->
-    <?php
+<?php
 }
 ?>
 
@@ -1802,107 +1804,102 @@ if ($cat_search_row['category_google_schema'] != NULL) {
 
     if (mysqli_num_rows($listrs_review_schema) > 0) {
 
-    while ($listrow_review_schema = mysqli_fetch_array($listrs_review_schema)) {
-    $listrs_review_schema_listing_id = $listrow_review_schema['listing_id'];
-    $total_reviews = getCountListingReview($listrs_review_schema_listing_id);
-    foreach (getListingReview($listrs_review_schema_listing_id) as $star_rating_row_review_schema) {
-        if ($star_rating_row_review_schema["rate_cnt"] > 0) {
-            $star_rate_times = $star_rating_row_review_schema["rate_cnt"];
-            $star_sum_rates = $star_rating_row_review_schema["total_rate"];
-            $star_rate_one = $star_sum_rates / $star_rate_times;
-            //$star_rate_one = (($Star_rate_value)/5)*100;
-            $star_rate_two = number_format($star_rate_one, 1);
-            $star_rate_review_schema = floatval($star_rate_two);
+        while ($listrow_review_schema = mysqli_fetch_array($listrs_review_schema)) {
+            $listrs_review_schema_listing_id = $listrow_review_schema['listing_id'];
+            $total_reviews = getCountListingReview($listrs_review_schema_listing_id);
+            foreach (getListingReview($listrs_review_schema_listing_id) as $star_rating_row_review_schema) {
+                if ($star_rating_row_review_schema["rate_cnt"] > 0) {
+                    $star_rate_times = $star_rating_row_review_schema["rate_cnt"];
+                    $star_sum_rates = $star_rating_row_review_schema["total_rate"];
+                    $star_rate_one = $star_sum_rates / $star_rate_times;
+                    //$star_rate_one = (($Star_rate_value)/5)*100;
+                    $star_rate_two = number_format($star_rate_one, 1);
+                    $star_rate_review_schema = floatval($star_rate_two);
+                } else {
+                    $rate_times = 0;
+                    $rate_value = 0;
+                    $star_rate_review_schema = 0;
+                }
+            }
+            if ($total_reviews == 0) {
+                $new_count = 1;
+            } else {
+                $new_count = $total_reviews;
+            }
 
-        } else {
-            $rate_times = 0;
-            $rate_value = 0;
-            $star_rate_review_schema = 0;
-        }
-    }
-    if ($total_reviews == 0) {
-        $new_count = 1;
-    } else {
-        $new_count = $total_reviews;
-    }
-
-    if ($star_rate_review_schema == 0) {
-        $new_star_rate_review_schemat = 1;
-    } else {
-        $new_star_rate_review_schemat = $star_rate_review_schema;
-    }
+            if ($star_rate_review_schema == 0) {
+                $new_star_rate_review_schemat = 1;
+            } else {
+                $new_star_rate_review_schemat = $star_rate_review_schema;
+            }
 
     ?>
 </script>
-    <script type="application/ld+json">
-{
-    "@context":"http:\/\/schema.org",
-    "@type":"Review",
-    "itemReviewed":
-        {
-            "@type":"LocalBusiness",
-            "name":"<?php echo $listrow_review_schema['listing_name']; ?>",
-            "image":"<?php echo $slash; ?><?php if ($listrow_review_schema['profile_image'] != NULL || !empty($listrow_review_schema['profile_image'])) {
-            echo "images/listings/" . $listrow_review_schema['profile_image'];
-        } else {
-            echo "images/listings/" . $footer_row['listing_default_image'];
-        } ?>",
-            "url":"<?php echo $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>",
-            "address":
-            {
-                "@type":"PostalAddress",
-                "addressLocality":"<?php echo $listrow_review_schema['listing_address']; ?>",
+<script type="application/ld+json">
+    {
+        "@context": "http:\/\/schema.org",
+        "@type": "Review",
+        "itemReviewed": {
+            "@type": "LocalBusiness",
+            "name": "<?php echo $listrow_review_schema['listing_name']; ?>",
+            "image": "<?php echo $slash; ?><?php if ($listrow_review_schema['profile_image'] != NULL || !empty($listrow_review_schema['profile_image'])) {
+                                                echo "images/listings/" . $listrow_review_schema['profile_image'];
+                                            } else {
+                                                echo "images/listings/" . $footer_row['listing_default_image'];
+                                            } ?>",
+            "url": "<?php echo $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "<?php echo $listrow_review_schema['listing_address']; ?>",
                 "telephone": "<?php echo $listrow_review_schema['listing_mobile']; ?>"
             },
 
-                "priceRange": "1"
+            "priceRange": "1"
         },
-        "author":"Users",
-        "ReviewRating": 
-        {
-            "@type":"AggregateRating",
-            "ratingValue":"<?php echo $new_star_rate_review_schemat; ?>",
-            "ratingCount":"<?php echo $new_count; ?>",
-            "bestRating":"5"
+        "author": "Users",
+        "ReviewRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "<?php echo $new_star_rate_review_schemat; ?>",
+            "ratingCount": "<?php echo $new_count; ?>",
+            "bestRating": "5"
         }
-}
-    </script>
+    }
+</script>
 
 
 <!-- ORGANIZATION SCHEMA -->
-    <script type="application/ld+json">[
-{
-    "@context": "http://schema.org",
-    "@type":"Organization",
-    "name":"<?php echo $listrow_review_schema['listing_name']; ?>",
-    "url":"<?php echo $LISTING_URL . urlModifier($listrow_review_schema['listing_slug']); ?>",
-    "logo":"<?php echo $slash; ?><?php if ($listrow_review_schema['profile_image'] != NULL || !empty($listrow_review_schema['profile_image'])) {
-            echo "images/listings/" . $listrow_review_schema['profile_image'];
-        } else {
-            echo "images/listings/" . $footer_row['listing_default_image'];
-        } ?>",
-    "sameAs":   [
-        "<?php echo $listrow_review_schema['fb_link']; ?>",
-        "<?php echo $listrow_review_schema['gplus_link']; ?>",
-        "<?php echo $listrow_review_schema['twitter_link']; ?>"
+<script type="application/ld+json">
+    [{
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "<?php echo $listrow_review_schema['listing_name']; ?>",
+        "url": "<?php echo $LISTING_URL . urlModifier($listrow_review_schema['listing_slug']); ?>",
+        "logo": "<?php echo $slash; ?><?php if ($listrow_review_schema['profile_image'] != NULL || !empty($listrow_review_schema['profile_image'])) {
+                                            echo "images/listings/" . $listrow_review_schema['profile_image'];
+                                        } else {
+                                            echo "images/listings/" . $footer_row['listing_default_image'];
+                                        } ?>",
+        "sameAs": [
+            "<?php echo $listrow_review_schema['fb_link']; ?>",
+            "<?php echo $listrow_review_schema['gplus_link']; ?>",
+            "<?php echo $listrow_review_schema['twitter_link']; ?>"
         ]
-}]
-
-    </script>
+    }]
+</script>
 <?php
-}
-}
+        }
+    }
 ?>
 
 <!-- LIST ITEM SCHEMA -->
 <script type="application/ld+json">
-		{		
-		"@context": "http://schema.org",
-    	"@type": "ItemList",
-    	"itemListElement" : [
+    {
+        "@context": "http://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
 
-    	<?php
-    $listsql_list_item_schema = "SELECT " . TBL . "listings.*, " . TBL . "users.user_plan FROM " . TBL . "listings
+            <?php
+            $listsql_list_item_schema = "SELECT " . TBL . "listings.*, " . TBL . "users.user_plan FROM " . TBL . "listings
                             
  LEFT JOIN " . TBL . "users ON " . TBL . "listings.user_id = " . TBL . "users.user_id  WHERE " . TBL . "listings.listing_status= 'Active' 
  
@@ -1910,34 +1907,29 @@ if ($cat_search_row['category_google_schema'] != NULL) {
  
  ORDER BY " . TBL . "users.user_plan DESC," . TBL . "listings.listing_id DESC LIMIT 10";
 
-    $listrs_list_item_schema = mysqli_query($conn, $listsql_list_item_schema);
-    $si = 1;
-    $comma = ',';
-    if (mysqli_num_rows($listrs_list_item_schema) > 0) {
-        $total_count_list = mysqli_num_rows($listrs_list_item_schema);
-        while ($listrow_list_item_schema = mysqli_fetch_array($listrs_list_item_schema)) {
+            $listrs_list_item_schema = mysqli_query($conn, $listsql_list_item_schema);
+            $si = 1;
+            $comma = ',';
+            if (mysqli_num_rows($listrs_list_item_schema) > 0) {
+                $total_count_list = mysqli_num_rows($listrs_list_item_schema);
+                while ($listrow_list_item_schema = mysqli_fetch_array($listrs_list_item_schema)) {
 
-            ?>
-            {
-                "@type":"ListItem",
-                "position":<?php echo $si; ?>,
-                "url":"<?php echo $LISTING_URL . urlModifier($listrow_list_item_schema['listing_slug']); ?>"
-            }<?php if ($total_count_list != $si) {
-                echo $comma;
-            } ?>
+            ?> {
+                        "@type": "ListItem",
+                        "position": <?php echo $si; ?>,
+                        "url": "<?php echo $LISTING_URL . urlModifier($listrow_list_item_schema['listing_slug']); ?>"
+                    }
+                    <?php if ($total_count_list != $si) {
+                        echo $comma;
+                    } ?>
 
             <?php
-            $si++;
-        }
+                    $si++;
+                }
+            }
+            ?>
+        ]
     }
-    ?>
-            ]
-        }
-
-
-
-
-
 </script>
 </body>
 
