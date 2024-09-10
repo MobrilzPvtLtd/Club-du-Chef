@@ -1346,13 +1346,13 @@ if (isset($query['city']) && !empty($query['city'])) {
 <!-- END -->
 
 <!-- START -->
-<!-- <section>
+<section>
     <div class="list-map">
         <?php
         include "listing-map-view.php";
         ?>
     </div>
-</section> -->
+</section>
 <!-- END -->
 
 <!-- START -->
