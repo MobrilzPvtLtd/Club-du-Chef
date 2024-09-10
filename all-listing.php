@@ -208,6 +208,90 @@ if (isset($query['city']) && !empty($query['city'])) {
     $city_search_query = "AND FIND_IN_SET($city_id, city_id)";
 }
 ?>
+
+<style>
+    .slick-slide {
+        margin: 0px 8px;
+    }
+    .slick-slide img {
+        width: 100%;
+    }
+    .slick-list
+    {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    .slick-list:focus
+    {
+    outline: none;
+    }
+    .slick-list.dragging
+    {
+    cursor: pointer;
+    cursor: hand;
+    }
+    .slick-slider .slick-track,
+    .slick-slider .slick-list
+    {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    }
+    .slick-track
+    {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    }
+    .slick-track:before,
+    .slick-track:after
+    {
+    display: table;
+    content: '';
+    }
+    .slick-track:after
+    {
+    clear: both;
+    }
+    .slick-loading .slick-track
+    {
+    visibility: hidden;
+    }
+    .slick-slide
+    {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    }
+    [dir='rtl'] .slick-slide
+    {
+    float: right;
+    }
+    .slick-slide img
+    {
+    display: block;
+    }
+    .slick-slide.slick-loading img
+    {
+    display: none;
+    }
+    .slick-slide.dragging img
+    {
+    pointer-events: none;
+    }
+    .slick-initialized .slick-slide
+    {
+    display: block;
+    }
+</style>
+
 <!-- START -->
 <section>
     <div class="all-listing all-listing-pg">
@@ -756,7 +840,7 @@ if (isset($query['city']) && !empty($query['city'])) {
                         </div>
                         </div> -->
 
-                        <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
+                        <!-- <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
                             <div class="carousel-inner">
                                 <?php
                                 $item_count = count($images);
@@ -798,8 +882,30 @@ if (isset($query['city']) && !empty($query['city'])) {
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
+                        </div> -->
+                    
+                        <div class="ban-ql mt-5">
+                            <div class="container">
+                            <section class="logos-slider slider">
+                                <?php
+                                    foreach ($images as $index => $imageUrl) {
+                                    $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
+                                ?>
+                                    <a href="<?php echo $link; ?>" target="_blank">
+                                        <li>
+                                            <div class="clo-md-4">
+                                            <div style="padding: 0; height: 10vw;">
+                                                <img src="<?php echo $imageUrl; ?>" alt="">
+                                            </div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                <?php
+                                    }
+                                ?>
+                            </section>
+                            </div>
                         </div>
-
 
                         <!--RESULTS SELECTED FILTER-->
                         <div class="listng-res">
@@ -1491,10 +1597,33 @@ include "footer.php";
 <script type="text/javascript">var webpage_full_link = '<?php echo $webpage_full_link;?>';</script>
 <script type="text/javascript">var login_url = '<?php echo $LOGIN_URL;?>';</script>
 <script src="<?php echo $slash; ?>/js/custom.js"></script>
+<script src="<?php echo $slash; ?>js/slick.js"></script>
 <script src="<?php echo $slash; ?>/js/listing_filter.js"></script>
 <script src="<?php echo $slash; ?>/js/jquery.validate.min.js"></script>
 <script src="<?php echo $slash; ?>/js/custom_validation.js"></script>
 <!--<script src="<?php echo $slash; ?>/js/jquery.simplePagination.min.js"></script>-->
+
+<script>
+    $(document).ready(function () {
+        $('.logos-slider').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            responsive: [{
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: false
+                }
+            }]
+
+        });
+    });
+ 
+</script>
 <script>
 
     $(document).ready(function () {
@@ -1810,7 +1939,6 @@ if ($cat_search_row['category_google_schema'] != NULL) {
 
 
 </script>
-
 </body>
 
 </html>
