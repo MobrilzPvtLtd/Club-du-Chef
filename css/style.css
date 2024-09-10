@@ -4905,9 +4905,9 @@ table caption{font-size:1.3em}
 }
 }
 @media screen and (max-width:768px){
-    img.ic-logo {
+    .hom-nav .ic-logo {
     width: 100px !important;
 }
 }
-}
+
 
