@@ -887,8 +887,8 @@ $review_count = getCountListingReview($listing_id); //Listing Reviews Count
                                     </div>
                                 </div>
 
-                                <!-- <div class="container mt-5 col-md-12" style="width: 80%;">
-                                    <section class="logos-slider slider">
+                                <div class="container mt-5 col-md-12" style="width: 80%;">
+                                    <section class="logos-slider1 slider">
                                         <?php
                                         foreach ($images as $index => $imageUrl) {
                                             $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
@@ -904,7 +904,7 @@ $review_count = getCountListingReview($listing_id); //Listing Reviews Count
                                         }
                                         ?>
                                     </section>
-                                </div> -->
+                                </div>
                             </div>
                             <?php
                         }
@@ -1871,6 +1871,24 @@ include "footer.php";
 <script src="<?php echo $slash; ?>js/custom_validation.js"></script>
 <script>
      $(document).ready(function() {
+        $('.logos-slider1').slick({
+            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            responsive: [{
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: false
+                }
+            }]
+
+        });
+    });
+    $(document).ready(function() {
         $('.logos-slider').slick({
             infinite: true,
             slidesToShow: 1,
