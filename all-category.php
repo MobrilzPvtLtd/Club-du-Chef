@@ -1,5 +1,33 @@
 <?php
 include "header.php";
+
+$imageShow = false; 
+$catImages = [];
+$catImageLinks = [];
+
+foreach (getAllCities() as $city) {
+    if ($CurrentCity == $city['city_slug']) {
+        for ($j = 1; $j <= 8; $j++) {
+            $imageKey = 'cat_image_' . $j;
+            $imageLinkKey = 'cat_image_' . $j . '_link';
+            
+            if (isset($city[$imageKey]) && !empty($city[$imageKey])) {
+                $imageUrl = htmlspecialchars($webpage_full_link . 'images/cityimage/' . $city[$imageKey]);
+                $catImages[] = $imageUrl;
+
+                if (isset($city[$imageLinkKey]) && !empty($city[$imageLinkKey])) {
+                    $catImageLinks[] = htmlspecialchars($city[$imageLinkKey]);
+                } 
+
+                $imageShow = true;
+            }
+        }
+
+        if ($imageShow) {
+            break;
+        }
+    }
+}
 ?>
 <style>
     .hom-head {
@@ -76,8 +104,8 @@ include "header.php";
                 <div class="col-md-3">
                     <div class="sh-all-scat">
                         <?php
-                        foreach ($images as $index => $imageUrl) {
-                            $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
+                        foreach ($catImages as $index => $imageUrl) {
+                            $link = isset($catImageLinks[$index]) ? $catImageLinks[$index] : '#';
                             ?>
                             <a href="<?php echo $link; ?>" target="_blank">
                             <ul id="tail-re">

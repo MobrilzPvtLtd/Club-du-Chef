@@ -203,6 +203,34 @@ if (isset($query['city']) && !empty($query['city'])) {
 
     $city_search_query = "AND FIND_IN_SET($city_id, city_id)";
 }
+
+$imageShow = false; 
+$detailsImages = [];
+$detailsImageLinks = [];
+
+foreach (getAllCities() as $city) {
+    if ($CurrentCity == $city['city_slug']) {
+        for ($j = 1; $j <= 8; $j++) {
+            $imageKey = 'details_image_' . $j;
+            $imageLinkKey = 'details_image_' . $j . '_link';
+            
+            if (isset($city[$imageKey]) && !empty($city[$imageKey])) {
+                $imageUrl = htmlspecialchars($webpage_full_link . 'images/cityimage/' . $city[$imageKey]);
+                $detailsImages[] = $imageUrl;
+
+                if (isset($city[$imageLinkKey]) && !empty($city[$imageLinkKey])) {
+                    $detailsImageLinks[] = htmlspecialchars($city[$imageLinkKey]);
+                } 
+
+                $imageShow = true;
+            }
+        }
+
+        if ($imageShow) {
+            break;
+        }
+    }
+}
 ?>
 
 <!-- START -->
@@ -658,24 +686,20 @@ if (isset($query['city']) && !empty($query['city'])) {
                 <div class="col-md-9">
                     <div class="container mt-5 col-md-12" style="width: 95%;">
                         <section class="logos-slider slider">
-                            <!-- <div class="row"> -->
-                                <!-- <ul> -->
-                                    <?php
-                                    foreach ($images as $index => $imageUrl) {
-                                        $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
-                                    ?>
-                                        <a href="<?php echo $link; ?>" target="_blank">
-                                            <li>
-                                                <div style="padding: 0; height: 9vw;">
-                                                    <img src="<?php echo $imageUrl; ?>" alt="">
-                                                </div>
-                                            </li>
-                                        </a>
-                                    <?php
-                                    }
-                                    ?>
-                                <!-- </ul> -->
-                            <!-- </div> -->
+                            <?php
+                            foreach ($detailsImages as $index => $imageUrl) {
+                                $link = isset($detailsImageLinks[$index]) ? $detailsImageLinks[$index] : '#';
+                            ?>
+                                <a href="<?php echo $link; ?>" target="_blank">
+                                    <li>
+                                        <div style="padding: 0; height: 9vw;">
+                                            <img src="<?php echo $imageUrl; ?>" alt="">
+                                        </div>
+                                    </li>
+                                </a>
+                            <?php
+                            }
+                            ?>
                         </section>
                     </div>
                     <div class="inn">
