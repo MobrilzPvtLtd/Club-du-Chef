@@ -398,19 +398,22 @@ foreach (getAllCities() as $city) {
                                             }
                                         </script>
                                         <select name="city" onchange="ChangeCity(this.value)">
-
-                                            <?php foreach ($CityList as $City => $CitySlug) {
-
-                                                if($DomainPrefix == $CitySlug)
-                                                {
-                                                    $Selected = ' selected';
-                                                }else{
-                                                    $Selected = '';
+                                            <?php
+                                                if (isset($CityList['All Cities'])) {
+                                                    $allCitiesValue = htmlspecialchars($CityList['All Cities'], ENT_QUOTES, 'UTF-8');
+                                                    $selected = ($DomainPrefix == $allCitiesValue) ? ' selected' : '';
+                                                    echo '<option value="' . $allCitiesValue . '"' . $selected . '>All Cities</option>';
                                                 }
 
-                                                echo '<option value="' . $CitySlug . '"' .$Selected.'>' . $City . '</option>';
+                                                foreach ($CityList as $City => $CitySlug) {
+                                                    if ($CitySlug == 'www') {
+                                                        continue;
+                                                    }
 
-                                            } ?>
+                                                    $selected = ($DomainPrefix == $CitySlug) ? ' selected' : '';
+                                                    echo '<option value="' . htmlspecialchars($CitySlug, ENT_QUOTES, 'UTF-8') . '"' . $selected . '>' . htmlspecialchars($City, ENT_QUOTES, 'UTF-8') . '</option>';
+                                                }
+                                                ?>
                                         </select>
                                     </li>
                                     <li>

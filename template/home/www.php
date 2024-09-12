@@ -8,9 +8,9 @@ if ($current_home_page != '2' && $current_home_page != '3') {
         <div class="container">
             <div class="row">
                 <?php 
-                    if ($CurrentCity == 'www' || !$imageShow) {
+                    // if ($CurrentCity == 'www' || !$imageShow) {
                 ?>
-                <ul>
+                <!-- <ul>
                     <?php
                         foreach (getAllHomePageTopSection() as $home_page_top_section_row) {
                     ?>
@@ -29,9 +29,9 @@ if ($current_home_page != '2' && $current_home_page != '3') {
                     <?php
                         }
                     ?>
-                </ul>
+                </ul> -->
                 <?php
-                    } else {
+                    // } else {
                 ?> 
                 <ul>
                     <?php
@@ -42,7 +42,7 @@ if ($current_home_page != '2' && $current_home_page != '3') {
                     ?>
                 </ul>
                 <?php
-                    }
+                    // }
                 ?>
             </div>
         </div>
@@ -111,10 +111,10 @@ if ($current_home_page != '2' && $current_home_page != '3') {
                             ?>
                         </ul>
                     </div>
-                    <div class="hom-cate-more"">
-                <?php if ($current_home_page == '1' || $current_home_page == '2') { ?>
-                    <a href=" all-category" class="cta-new-blue"><?php echo $BIZBOOK['HOM-VI-ALL-SER']; ?></a>
-                    <?php } ?>
+                    <div class="hom-cate-more">
+                        <?php if ($current_home_page == '1' || $current_home_page == '2') { ?>
+                        <a href=" all-category" class="cta-new-blue"><?php echo $BIZBOOK['HOM-VI-ALL-SER']; ?></a>
+                        <?php } ?>
                     </div>
                 </div>
             </div>

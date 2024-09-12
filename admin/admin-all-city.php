@@ -20,17 +20,17 @@ include "header.php";
                     </div>
                     <a href="admin-add-city.php" class="db-tit-btn">Add new City</a>
                     <table class="responsive-table bordered " id="citytab">
-							<thead>
-								<tr>
-									<th>No</th>
-                                    <th>City Name</th>
-									<th>Created date</th>
-									<th>Listings</th>
-									<th>Edit</th>
-									<th>Delete</th>
-								</tr>
-							</thead>
-							<tbody>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>City Name</th>
+                                <th>Created date</th>
+                                <th>Listings</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
                             <?php
                             $si = 1;
                             foreach (getAllCities() as $row) {
@@ -40,21 +40,27 @@ include "header.php";
                             $city_listing_count = getCountCityListing($city_id);
                                 
                             ?>
-								<tr>
-                                    <td><?php echo $si; ?></td>
-                                    <td><b class="db-list-rat"><?php echo $row['city_name']; ?></b></td>
-									<td><?php echo dateFormatconverter($row['city_cdt']); ?></td>
-                                    <td><span class="db-list-ststus" data-toggle="tooltip" title="Total listings in this category"><?php echo $city_listing_count; ?></span></td>
-									<td><a href="admin-city-edit.php?row=<?php echo $row['city_id']; ?>" class="db-list-edit">Edit</a></td>
-									<td><a href="admin-city-delete.php?row=<?php echo $row['city_id']; ?>" class="db-list-edit">Delete</a></td>
-								</tr>
-                                <?php
-                                $si++;
+                            <tr>
+                                <td><?php echo $si; ?></td>
+                                <td>
+                                    <?php echo $row['city_name'] == 'www' ? 'Default City' : '' ?>
+                                    <b class="db-list-rat"><?php echo $row['city_name']; ?></b>
+                                </td>
+                                <td><?php echo dateFormatconverter($row['city_cdt']); ?></td>
+                                <td><span class="db-list-ststus" data-toggle="tooltip" title="Total listings in this category"><?php echo $city_listing_count; ?></span></td>
+                                <td><a href="admin-city-edit.php?row=<?php echo $row['city_id']; ?>" class="db-list-edit">Edit</a></td>
+                                <td>
+                                    <?php if ($row['city_name'] != 'www') { ?>
+                                    <a href="admin-city-delete.php?row=<?php echo $row['city_id']; ?>" class="db-list-edit">Delete</a>
+                                    <?php } ?>
+                                </td>
+                            </tr>
+                            <?php
+                            $si++;
                             }
                             ?>
-                                
-							</tbody>
-						</table>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 

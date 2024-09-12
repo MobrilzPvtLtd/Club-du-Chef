@@ -36,7 +36,8 @@ include "header.php";
                                                             <label>City Name</label>
                                                             <input type="text" name="city_name"
                                                                 value="<?php echo $row['city_name']; ?>"
-                                                                class="form-control" placeholder="city name *" required>
+                                                                class="form-control" placeholder="city name *" required <?php if ($row['city_name'] == 'www') { ?> disabled <?php } ?>
+                                                            >
                                                         </div>
                                                     </div>
                                                 </div>

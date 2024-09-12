@@ -77,52 +77,6 @@ $plan_type_row = getPlanType($user_plan); //User Plan Type Database Fetch
 
 $review_count = getCountListingReview($listing_id); //Listing Reviews Count
 
-// $imageShow = false; 
-// $singleFirst4Images = [];
-// $singleFirst4ImageLinks = [];
-// $singleLast4Images = [];
-// $singleLast4ImageLinks = [];
-
-// foreach (getAllCities() as $city) {
-//     if ($CurrentCity == $city['city_slug']) {
-//         for ($j = 1; $j <= 4; $j++) {
-//             $imageKey = 'single_image_' . $j;
-//             $imageLinkKey = 'single_image_' . $j . '_link';
-            
-//             if (isset($city[$imageKey]) && !empty($city[$imageKey])) {
-//                 $imageUrl = htmlspecialchars($webpage_full_link . 'images/cityimage/' . $city[$imageKey]);
-//                 $singleFirst4Images[] = $imageUrl;
-
-//                 if (isset($city[$imageLinkKey]) && !empty($city[$imageLinkKey])) {
-//                     $singleFirst4ImageLinks[] = htmlspecialchars($city[$imageLinkKey]);
-//                 } 
-
-//                 $imageShow = true;
-//             }
-//         }
-
-//         for ($i = 1; $i <= 4; $i++) {
-//             $imageKey = 'single_image_' . $i;
-//             $imageLinkKey = 'single_image_' . $i . '_link';
-            
-//             if (isset($city[$imageKey]) && !empty($city[$imageKey])) {
-//                 $imageUrl = htmlspecialchars($webpage_full_link . 'images/cityimage/' . $city[$imageKey]);
-//                 $singleLast4Images[] = $imageUrl;
-
-//                 if (isset($city[$imageLinkKey]) && !empty($city[$imageLinkKey])) {
-//                     $singleLast4ImageLinks[] = htmlspecialchars($city[$imageLinkKey]);
-//                 } 
-
-//                 $imageShow = true;
-//             }
-//         }
-
-//         if ($imageShow) {
-//             break;
-//         }
-//     }
-// }
-
 $imageShow = false; 
 $singleFirst4Images = [];
 $singleFirst4ImageLinks = [];
@@ -161,41 +115,6 @@ foreach (getAllCities() as $city) {
     }
   }
 }
-
-// $firstFourImages = [];
-// $lastFourImages = [];
-
-// foreach (getAllCities() as $city) {
-//     if ($CurrentCity == $city['city_slug']) {
-//         $imageCount = 0;
-
-//         foreach ($city as $key => $value) {
-//             if (strpos($key, 'single_image_') === 0) {
-//                 $imageUrl = htmlspecialchars($webpage_full_link . 'images/cityimage/' . $value);
-
-//                 if ($imageCount < 4) {
-//                     $firstFourImages[] = [
-//                         'image' => $imageUrl,
-//                         'link' => htmlspecialchars($city['single_image_' . ($imageCount + 1) . '_link'])
-//                     ];
-//                 } else {
-//                     $lastFourImages[] = [
-//                         'image' => $imageUrl,
-//                         'link' => htmlspecialchars($city['single_image_' . ($imageCount + 1) . '_link'])
-//                     ];
-//                 }
-
-//                 $imageCount++;
-
-//                 if ($imageCount >= 8) {
-//                     break;
-//                 }
-//             }
-//         }
-
-//         break; 
-//     }
-// }
 ?>
 
 <!-- START -->
@@ -855,7 +774,7 @@ foreach (getAllCities() as $city) {
                             <?php
                         }
                     ?>
-                    
+
                     <?php if ($singleFirst4Images || $singleLast4Images) { ?>
                         <div class="ld-rhs-pro pglist-bg pglist-p-com">
                             <div class="container mt-4 col-md-12">
