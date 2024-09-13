@@ -115,6 +115,32 @@ foreach (getAllCities() as $city) {
     }
   }
 }
+
+$imageShow = false; 
+$enquiryImages = [];
+$enquiryImageLinks = [];
+
+foreach (getAdsListingIdEnquiry($listing_id) as $enquiry) {
+    for ($j = 1; $j <= 4; $j++) {
+        $imageKey = 'ad_image_' . $j;
+        $imageLinkKey = 'image_' . $j . '_link';
+        
+        if (isset($enquiry[$imageKey]) && !empty($enquiry[$imageKey])) {
+            $imageUrl = htmlspecialchars($webpage_full_link . 'images/ads/' . $enquiry[$imageKey]);
+            $enquiryImages[] = $imageUrl;
+
+            if (isset($enquiry[$imageLinkKey]) && !empty($enquiry[$imageLinkKey])) {
+                $enquiryImageLinks[] = htmlspecialchars($enquiry[$imageLinkKey]);
+            } 
+
+            $imageShow = true;
+        }
+    }
+
+    if ($imageShow) {
+       break;
+    }
+}
 ?>
 
 <!-- START -->
@@ -927,25 +953,26 @@ foreach (getAllCities() as $city) {
                                         ?>
                                     </div>
                                 </div>
-
-                                <div class="container mt-5 col-md-12" style="width: 80%;">
-                                    <section class="logos-slider1 slider">
-                                        <?php
-                                        foreach ($images as $index => $imageUrl) {
-                                            $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
-                                        ?>
-                                            <a href="<?php echo $link; ?>" target="_blank">
-                                                <li>
-                                                    <div style="padding: 0; height: 9vw;">
-                                                        <img src="<?php echo $imageUrl; ?>" alt="">
-                                                    </div>
-                                                </li>
-                                            </a>
-                                        <?php
-                                        }
-                                        ?>
-                                    </section>
-                                </div>
+                                <?php if ($enquiryImages) { ?>
+                                    <div class="container mt-5 col-md-12" style="width: 80%;">
+                                        <section class="logos-slider1 slider">
+                                            <?php
+                                            foreach ($enquiryImages as $index => $imageUrl) {
+                                                $link = isset($enquiryImages[$index]) ? $enquiryImages[$index] : '#';
+                                            ?>
+                                                <a href="<?php echo $link; ?>" target="_blank">
+                                                    <li>
+                                                        <div style="padding: 0; height: 9vw;">
+                                                            <img src="<?php echo $imageUrl; ?>" alt="">
+                                                        </div>
+                                                    </li>
+                                                </a>
+                                            <?php
+                                            }
+                                            ?>
+                                        </section>
+                                    </div>
+                                <?php } ?>
                             </div>
                             <?php
                         }

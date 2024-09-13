@@ -66,6 +66,17 @@ function getAds($arg)
 
 }
 
+//Get All Ads Enquiry with given ad enquiry Id by listing_id
+function getAdsListingIdEnquiry($arg)
+{
+    global $conn;
+
+    $sql = "SELECT * FROM " . TBL . "all_ads_enquiry WHERE listing_id = '" . $arg . "' ORDER BY all_ads_enquiry_id DESC";
+    $rs = mysqli_query($conn, $sql);
+    return $rs;
+
+}
+
 //Get All Ad Request Count
 function getCountAds()
 {
