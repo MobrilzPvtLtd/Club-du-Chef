@@ -71,9 +71,10 @@ function getAdsListingIdEnquiry($arg)
 {
     global $conn;
 
-    $sql = "SELECT * FROM " . TBL . "all_ads_enquiry WHERE listing_id = '" . $arg . "' ORDER BY all_ads_enquiry_id DESC";
+    $sql = "SELECT * FROM " . TBL . "all_ads_enquiry where listing_id = '" . $arg . "'";
     $rs = mysqli_query($conn, $sql);
-    return $rs;
+    $row = mysqli_fetch_array($rs);
+    return $row;
 
 }
 
