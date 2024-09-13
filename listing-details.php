@@ -17,6 +17,7 @@ if ($_GET['code'] == NULL && empty($_GET['code'])) {
 }
 
 $listing_codea1 = str_replace('-', ' ', $_GET['code']);
+
 $listing_codea = str_replace('.php', '', $listing_codea1);
 
 //$listing_codea = $_GET['code'];
@@ -116,29 +117,22 @@ foreach (getAllCities() as $city) {
   }
 }
 
-$imageShow = false; 
 $enquiryImages = [];
 $enquiryImageLinks = [];
 
-foreach (getAdsListingIdEnquiry($listing_id) as $enquiry) {
-    for ($j = 1; $j <= 4; $j++) {
-        $imageKey = 'ad_image_' . $j;
-        $imageLinkKey = 'image_' . $j . '_link';
-        
-        if (isset($enquiry[$imageKey]) && !empty($enquiry[$imageKey])) {
-            $imageUrl = htmlspecialchars($webpage_full_link . 'images/ads/' . $enquiry[$imageKey]);
-            $enquiryImages[] = $imageUrl;
+$enquiry = getAdsListingIdEnquiry($listing_id);
 
-            if (isset($enquiry[$imageLinkKey]) && !empty($enquiry[$imageLinkKey])) {
-                $enquiryImageLinks[] = htmlspecialchars($enquiry[$imageLinkKey]);
-            } 
+for ($j = 1; $j <= 4; $j++) {
+    $imageKey = 'ad_image_' . $j;
+    $imageLinkKey = 'image_' . $j . '_link';
+    
+    if (isset($enquiry[$imageKey]) && !empty($enquiry[$imageKey])) {
+        $imageUrl = htmlspecialchars($webpage_full_link . 'images/ads/' . $enquiry[$imageKey]);
+        $enquiryImages[] = $imageUrl;
 
-            $imageShow = true;
-        }
-    }
-
-    if ($imageShow) {
-       break;
+        if (isset($enquiry[$imageLinkKey]) && !empty($enquiry[$imageLinkKey])) {
+            $enquiryImageLinks[] = htmlspecialchars($enquiry[$imageLinkKey]);
+        } 
     }
 }
 ?>

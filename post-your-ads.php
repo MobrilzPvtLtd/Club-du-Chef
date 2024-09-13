@@ -80,18 +80,20 @@ include "header.php";
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group ca-sh-user">
-                                                    <select name="listing_id" required="required"
-                                                            class="form-control" id="adposi">
-                                                        <option value="">Choose Ads List</option>
+                                                <select name="listing_id" required class="form-control" id="adposi">
+                                                    <option value="">Choose Ads List</option>
+                                                    <?php
+                                                    foreach (getAllListingUser($_SESSION['user_id']) as $row) {
+                                                        $enquiry = getAdsListingIdEnquiry($row['listing_id']);
+                                                        if ($row['listing_id'] != $enquiry['listing_id']) {
+                                                    ?>
+                                                        <option value="<?php echo $row['listing_id']; ?>"><?php echo $row['listing_name']; ?>
+                                                        </option>
                                                         <?php
-                                                        foreach (getAllListingUser($_SESSION['user_id']) as $row) {
-                                                            ?>
-                                                            <option value="<?php echo $row['listing_id']; ?>"><?php echo $row['listing_name']; ?>
-                                                            </option>
-                                                            <?php
-                                                        }
-                                                        ?>
-                                                    </select>
+                                                    }
+                                                    }
+                                                    ?>
+                                                </select>
                                                     <a href="db-all-listing" class="frmtip" target="_blank">All Ads List</a>
                                                 </div>
                                             </div>
