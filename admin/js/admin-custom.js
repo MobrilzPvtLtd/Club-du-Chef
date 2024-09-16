@@ -228,6 +228,38 @@ $(document).ready(function () {
             alert("Sorry! you are not allowed to remove the last one.");
         }
     });
+
+    $("#user_id").change(function () {
+        var userId = $("#user_id").val();
+    
+        if (userId) {
+            $.ajax({
+                url: 'fetch_listings.php', 
+                type: 'POST',
+                data: { user_id: userId },
+                dataType: 'json',
+                success: function(response) {
+                    var listings = response;  
+                    console.log(listings);
+                    var $listingSelect = $("#listing_id");
+                    
+                    $listingSelect.empty();
+                    
+                    $listingSelect.append('<option value="">Choose Ads List</option>');
+                    
+                    $.each(listings, function(index, listing) {
+                        $listingSelect.append('<option value="' + listing.listing_id + '">' + listing.listing_name + '</option>');
+                    });
+                },
+                error: function(xhr, status, error) {
+                    console.error('AJAX error:', status, error);
+                }
+            });
+        } else {
+            $("#listing_id").empty().append('<option value="">Choose Ads List</option>');
+        }
+    });
+    
     
     //ADS TOTAL DAYS CALCULATION
     $("#stdate, #endate, #adposi").change(function () {

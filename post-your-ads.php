@@ -80,7 +80,7 @@ include "header.php";
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group ca-sh-user">
-                                                <select name="listing_id" required class="form-control" id="adposi">
+                                                <select name="listing_id" required class="form-control" id="listing_id">
                                                     <option value="">Choose Ads List</option>
                                                     <?php
                                                     foreach (getAllListingUser($_SESSION['user_id']) as $row) {
