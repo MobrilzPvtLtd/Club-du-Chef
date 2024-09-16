@@ -21,9 +21,9 @@ include "header.php";
                             <h4>Create new Ads</h4>
                             <?php include "../page_level_message.php"; ?>
                             <form name="create_ads_form" id="create_ads_form" method="post" action="insert_new_ads.php" enctype="multipart/form-data">
-                                <input type="hidden" value="" name="ad_total_days" id="ad_total_days" class="validate">
-                                <input type="hidden" value="" name="ad_cost_per_day" id="ad_cost_per_day" class="validate">
-                                <input type="hidden" value="" name="ad_total_cost" id="ad_total_cost" class="validate">
+                                <input type="text" value="" name="ad_total_days" id="ad_total_days" class="validate">
+                                <input type="text" value="" name="ad_cost_per_day" id="ad_cost_per_day" class="validate">
+                                <input type="text" value="" name="ad_total_cost" id="ad_total_cost" class="validate">
                                 <ul>
 										<li>
                                    <!--FILED START-->
@@ -82,26 +82,115 @@ include "header.php";
                                             </div>
                                         </div>
                                     </div>
+                                     <!--FILED START-->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                            <input type="text" id="endate" autocomplete="off" name="ad_end_date" class="form-control" placeholder="Ad end date (MM/DD/YYYY)" required>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <!--FILED END-->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group ca-sh-user">
+                                                <select name="listing_id" required="required"
+                                                        class="form-control" id="adposi">
+                                                    <option value="">Choose Ads List</option>
+                                                    <?php
+                                                    foreach (getAllListingUser($_SESSION['user_id']) as $row) {
+                                                        ?>
+                                                        <option value="<?php echo $row['listing_id']; ?>"><?php echo $row['listing_name']; ?>
+                                                        </option>
+                                                        <?php
+                                                    }
+                                                    ?>
+                                                </select>
+                                                <a href="db-all-listing" class="frmtip" target="_blank">All Ads List</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <!--FILED START-->
                                     <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Ad Image 1</label>
+                                                <input type="file" name="ad_image_1[]" class="form-control"
+                                                    placeholder="Ad 1">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 mt-2">
+                                            <div class="form-group">
+                                                <input type="text" name="image_1_link" class="form-control"
+                                                    placeholder="Ad Image 1 Link...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Ad Image 2</label>
+                                                <input type="file" name="ad_image_2[]" class="form-control"
+                                                    placeholder="Ad 2">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 mt-2">
+                                            <div class="form-group">
+                                                <input type="text" name="image_2_link" class="form-control"
+                                                    placeholder="Ad Image 2 Link...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Ad Image 3</label>
+                                                <input type="file" name="ad_image_3[]" class="form-control"
+                                                    placeholder="Ad 3">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 mt-2">
+                                            <div class="form-group">
+                                                <input type="text" name="image_3_link" class="form-control"
+                                                    placeholder="Ad Image 3 Link...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Ad Image 4</label>
+                                                <input type="file" name="ad_image_4[]" class="form-control"
+                                                    placeholder="Ad 4">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 mt-2">
+                                            <div class="form-group">
+                                                <input type="text" name="image_4_link" class="form-control"
+                                                    placeholder="Ad Image 4 Link...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--FILED END-->
+                                    <!--FILED START-->
+                                    <!-- <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Choose Ad image</label>
                                               <input type="file" name="ad_enquiry_photo" class="form-control" required>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!--FILED END-->
-                                            <!--FILED START-->
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <textarea  id="ad_link"  name="ad_link" class="form-control" placeholder="Advertisement External link" required></textarea>
-                                                    </div>
-                                                </div>
+                                    <!--FILED START-->
+                                    <!-- <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <textarea  id="ad_link"  name="ad_link" class="form-control" placeholder="Advertisement External link" required></textarea>
                                             </div>
-                                            <!--FILED END-->
+                                        </div>
+                                    </div> -->
+                                    <!--FILED END-->
                                     <!--FILED START-->
                                     <div class="row">
                                         <div class="col-md-12">

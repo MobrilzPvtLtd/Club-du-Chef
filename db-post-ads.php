@@ -29,6 +29,7 @@ include "dashboard_left_pane.php";
                     <th><?php echo $BIZBOOK['STATUS']; ?></th>
                     <th><?php echo $BIZBOOK['VIEWS']; ?></th>
                     <th><?php echo $BIZBOOK['CLICKS']; ?></th>
+                    <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -55,6 +56,7 @@ include "dashboard_left_pane.php";
                         <td><span class="db-list-ststus"><?php echo $row['ad_enquiry_status']; ?></span></td>
                         <td><span class="db-list-rat">1k</span></td>
                         <td><span class="db-list-rat">642</span></td>
+                        <td><a href="post-your-ads-edit.php?row=<?php echo $row['all_ads_enquiry_id']; ?>&path=1" class="db-list-edit">Edit</a></td>
                     </tr>
                     <?php
                     $si++;
