@@ -229,18 +229,17 @@ $(document).ready(function () {
         }
     });
 
-    $("#user_id").change(function () {
-        var userId = $("#user_id").val();
-    
-        if (userId) {
+    $(document).ready(function() {
+        function fetchListings(userId, all_ads_enquiry_id) {
             $.ajax({
-                url: 'fetch_listings.php', 
+                url: 'fetch_listings.php',
                 type: 'POST',
-                data: { user_id: userId },
+                data: { user_id: userId, all_ads_enquiry_id: all_ads_enquiry_id},
                 dataType: 'json',
                 success: function(response) {
-                    var listings = response;  
-                    console.log(listings);
+                    var ads_enquiry = response.ads_enquiry;  
+                    var listings = response.listings;  
+                    console.log(ads_enquiry,listings);
                     var $listingSelect = $("#listing_id");
                     
                     $listingSelect.empty();
@@ -248,17 +247,34 @@ $(document).ready(function () {
                     $listingSelect.append('<option value="">Choose Ads List</option>');
                     
                     $.each(listings, function(index, listing) {
-                        $listingSelect.append('<option value="' + listing.listing_id + '">' + listing.listing_name + '</option>');
+                        var isSelected = listing.listing_id == ads_enquiry.listing_id ? 'selected' : '';
+
+                        $listingSelect.append('<option value="' + listing.listing_id + '" ' + isSelected + '>' + listing.listing_name + '</option>');
                     });
                 },
                 error: function(xhr, status, error) {
                     console.error('AJAX error:', status, error);
                 }
             });
-        } else {
-            $("#listing_id").empty().append('<option value="">Choose Ads List</option>');
         }
+    
+        var userId = $("#user_id").val();
+        var all_ads_enquiry_id = $("#all_ads_enquiry_id").val();
+        if (userId || all_ads_enquiry_id) {
+            fetchListings(userId, all_ads_enquiry_id);
+        }
+    
+        $("#user_id").change(function () {
+            var userId = $(this).val();
+    
+            if (userId) {
+                fetchListings(userId);
+            } else {
+                $("#listing_id").empty().append('<option value="">Choose Ads List</option>');
+            }
+        });
     });
+    
     
     
     //ADS TOTAL DAYS CALCULATION

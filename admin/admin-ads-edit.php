@@ -94,27 +94,138 @@ include "header.php";
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group ca-sh-user">
+                                                <select name="listing_id" required class="form-control" id="listing_id">
+                                                    <option value="">Choose Ads List</option>
+                                                    <?php
+                                                    foreach (getAllListingUser($_SESSION['user_id']) as $ad_row) {
+                                                        $enquiry = getAdsListingIdEnquiry($ad_row['listing_id']);
+                                                        if ($ad_row['listing_id'] != $enquiry['listing_id'] || $ad_row['listing_id'] == $row['listing_id']) {
+                                                    ?>
+                                                        <option value="<?php echo $ad_row['listing_id']; ?>" <?php echo $ad_row['listing_id'] == $row['listing_id'] ? 'selected' : '' ?>><?php echo $ad_row['listing_name']; ?>
+                                                        </option>
+                                                        <?php
+                                                    }
+                                                    }
+                                                    ?>
+                                                </select>
+                                                    <a href="db-all-listing" class="frmtip" target="_blank">All Ads List</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <!--FILED END-->
                                         <!--FILED START-->
-                                        <div class="row">
+                                        <!-- <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label>Choose Ad image</label>
                                                     <input type="file" name="ad_enquiry_photo" class="form-control" >
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!--FILED END-->
                                         <!--FILED START-->
-                                        <div class="row">
+                                        <!-- <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <textarea  id="ad_link"  name="ad_link" class="form-control" placeholder="Advertisement External link" required><?php echo $row['ad_link']; ?></textarea>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!--FILED END-->
                                         <!--FILED START-->
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Ad Image 1</label>
+                                                        <input type="file" name="ad_image_1[]" class="form-control" placeholder="Ad 1">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <img src="<?php echo $slash; ?>images/ads/<?php if ($row['ad_image_1'] != NULL || !empty($row['ad_image_1'])) {
+                                                        echo $row['ad_image_1'];
+                                                    } else {
+                                                        echo "ads1.jpg";
+                                                    } ?>" alt="" width="100px" style="margin-top: 40px;">
+                                                </div>
+                                                <div class="col-md-12 mt-2">
+                                                    <div class="form-group">
+                                                        <input type="text" name="image_1_link" class="form-control" value="<?php echo $row['image_1_link']; ?>" placeholder="Ad Image 1 Link...">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Ad Image 2</label>
+                                                        <input type="file" name="ad_image_2[]" class="form-control" placeholder="Ad 2">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <img src="<?php echo $slash; ?>images/ads/<?php if ($row['ad_image_2'] != NULL || !empty($row['ad_image_2'])) {
+                                                        echo $row['ad_image_2'];
+                                                    } else {
+                                                        echo "ads1.jpg";
+                                                    } ?>" alt="" width="100px" style="margin-top: 40px;">
+                                                </div>
+                                                <div class="col-md-12 mt-2">
+                                                    <div class="form-group">
+                                                        <input type="text" name="image_2_link" class="form-control" value="<?php echo $row['image_2_link']; ?>" placeholder="Ad Image 2 Link...">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Ad Image 3</label>
+                                                        <input type="file" name="ad_image_3[]" class="form-control"
+                                                            placeholder="Ad 3">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <img src="<?php echo $slash; ?>images/ads/<?php if ($row['ad_image_3'] != NULL || !empty($row['ad_image_3'])) {
+                                                        echo $row['ad_image_3'];
+                                                    } else {
+                                                        echo "ads1.jpg";
+                                                    } ?>" alt="" width="100px" style="margin-top: 40px;">
+                                                </div>
+                                                <div class="col-md-12 mt-2">
+                                                    <div class="form-group">
+                                                        <input type="text" name="image_3_link" class="form-control" value="<?php echo $row['image_3_link']; ?>" placeholder="Ad Image 3 Link...">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-md-9">
+                                                    <div class="form-group">
+                                                        <label>Ad Image 4</label>
+                                                        <input type="file" name="ad_image_4[]" class="form-control"
+                                                            placeholder="Ad 4">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <img src="<?php echo $slash; ?>images/ads/<?php if ($row['ad_image_4'] != NULL || !empty($row['ad_image_4'])) {
+                                                        echo $row['ad_image_4'];
+                                                    } else {
+                                                        echo "ads1.jpg";
+                                                    } ?>" alt="" width="100px" style="margin-top: 40px;">
+                                                </div>
+                                                <div class="col-md-12 mt-2">
+                                                    <div class="form-group">
+                                                        <input type="text" name="image_4_link" class="form-control" value="<?php echo $row['image_4_link']; ?>" placeholder="Ad Image 4 Link...">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="ad-pri-cal">
