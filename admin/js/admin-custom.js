@@ -234,12 +234,17 @@ $(document).ready(function () {
             $.ajax({
                 url: 'fetch_listings.php',
                 type: 'POST',
-                data: { user_id: userId, all_ads_enquiry_id: all_ads_enquiry_id},
+                data: { user_id: userId, all_ads_enquiry_id: all_ads_enquiry_id || null },
                 dataType: 'json',
                 success: function(response) {
+                    if (response.error) {
+                        console.error('Server error:', response.error);
+                        return;
+                    }
+    
                     var ads_enquiry = response.ads_enquiry || {};  
                     var listings = response.listings || []; 
-                    console.log(ads_enquiry,listings);
+                    console.log(ads_enquiry, listings);
                     var $listingSelect = $("#listing_id");
                     
                     $listingSelect.empty();
@@ -248,7 +253,7 @@ $(document).ready(function () {
                     
                     $.each(listings, function(index, listing) {
                         var isSelected = ads_enquiry.listing_id && listing.listing_id == ads_enquiry.listing_id ? 'selected' : '';
-
+    
                         $listingSelect.append('<option value="' + listing.listing_id + '" ' + isSelected + '>' + listing.listing_name + '</option>');
                     });
                 },
@@ -266,15 +271,15 @@ $(document).ready(function () {
     
         $("#user_id").change(function () {
             var userId = $(this).val();
+            var all_ads_enquiry_id = $("#all_ads_enquiry_id").val();
     
             if (userId) {
-                fetchListings(userId);
+                fetchListings(userId, all_ads_enquiry_id);
             } else {
                 $("#listing_id").empty().append('<option value="">Choose Ads List</option>');
             }
         });
-    });
-    
+    });    
     
     
     //ADS TOTAL DAYS CALCULATION
