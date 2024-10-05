@@ -132,7 +132,7 @@ for ($j = 1; $j <= 4; $j++) {
 
         if (isset($enquiry[$imageLinkKey]) && !empty($enquiry[$imageLinkKey])) {
             $enquiryImageLinks[] = htmlspecialchars($enquiry[$imageLinkKey]);
-        } 
+        }
     }
 }
 ?>
@@ -947,7 +947,7 @@ for ($j = 1; $j <= 4; $j++) {
                                         ?>
                                     </div>
                                 </div>
-                                <?php if ($enquiryImages) { ?>
+                                <?php if ($enquiryImages && $enquiry['payment_status'] == 'Paid') { ?>
                                     <div class="container mt-5 col-md-12" style="width: 80%;">
                                         <section class="logos-slider1 slider">
                                             <?php
@@ -1875,7 +1875,6 @@ include "footer.php";
         </div>
     </div>
 </section>
-
 <!-- SHARE POPUP -->
 <div class="modal fade sharepop" id="sharepop">
     <div class="modal-dialog modal-sm">

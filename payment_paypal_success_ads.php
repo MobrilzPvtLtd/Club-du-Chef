@@ -38,7 +38,7 @@ $traupres = mysqli_query($conn, $traupqry);
 if ($traupres) {
 
     $lisupqry23 = "UPDATE " . TBL . "all_ads_enquiry 
-                    SET payment_status = 'Paid' 
+                    SET payment_status = 'Paid', ad_enquiry_status = 'Active' 
                     WHERE all_ads_enquiry_id = $ads_enquiry_id";
 
     $lisupres23 = mysqli_query($conn, $lisupqry23);

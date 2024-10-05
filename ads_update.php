@@ -112,20 +112,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         );
 
         if ($sql) {
-
-            $_SESSION['status_msg'] = "Ad has been Updated Successfully!!!";
-
-            header('Location: db-post-ads');
-            exit;
-
+            $result = mysqli_query($conn, "SELECT payment_status FROM " . TBL . "all_ads_enquiry WHERE all_ads_enquiry_id='" . mysqli_real_escape_string($conn, $all_ads_enquiry_id) . "'");
+            
+            if ($result && $row = mysqli_fetch_assoc($result)) {
+                if ($row['payment_status'] == "Unpaid") {
+                    $_SESSION['ads_enquiry_id'] = $all_ads_enquiry_id;
+                    $_SESSION['ad_total_cost'] = $ad_total_cost;
+                    header('Location: payment_paypal_ads.php');
+                } else {
+                    $_SESSION['status_msg'] = "Ad has been Updated Successfully!!!";
+                    header('Location: db-post-ads');
+                }
+            } else {
+                $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+                header('Location: post-your-ads');
+            }
         } else {
-
             $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
-
             header('Location: post-your-ads');
-            exit;
         }
-
+        exit;        
     }
 } else {
 
