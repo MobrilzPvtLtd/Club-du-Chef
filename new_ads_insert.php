@@ -152,14 +152,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         )";
 
         $res = mysqli_query($conn, $qry);
+        $promote_id = mysqli_insert_id($conn);
 
         if ($res) {
 
-            $_SESSION['status_msg'] = $BIZBOOK['NEW_AD_REQUEST_SUCCESS_MESSAGE'];
+            $_SESSION['ads_enquiry_id'] = $promote_id;
 
-
-            header('Location: db-post-ads');
+            $_SESSION['ad_total_cost'] = $ad_total_cost;
+            
+            header('Location: payment_paypal_ads.php');
             exit;
+
+            // $_SESSION['status_msg'] = $BIZBOOK['NEW_AD_REQUEST_SUCCESS_MESSAGE'];
+
+            // header('Location: db-post-ads');
+            // exit;
 
         } else {
 

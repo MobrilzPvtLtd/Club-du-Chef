@@ -27,6 +27,7 @@ include "dashboard_left_pane.php";
                     <th><?php echo $BIZBOOK['COUPON-END-DATE-PLACEHOLDER']; ?></th>
                     <th><?php echo $BIZBOOK['DURATION']; ?></th>
                     <th><?php echo $BIZBOOK['STATUS']; ?></th>
+                    <th><?php echo "Payment Status" ?></th>
                     <th><?php echo $BIZBOOK['VIEWS']; ?></th>
                     <th><?php echo $BIZBOOK['CLICKS']; ?></th>
                     <th>Action</th>
@@ -54,6 +55,12 @@ include "dashboard_left_pane.php";
                         <td><?php echo dateFormatconverter($row['ad_end_date']);?></td>
                         <td><?php echo $row['ad_total_days']; ?> <?php echo $BIZBOOK['DAYS']; ?></td>
                         <td><span class="db-list-ststus"><?php echo $row['ad_enquiry_status']; ?></span></td>
+                        <td>
+                            <span class="btn <?php echo $row['payment_status'] == "Paid" ? 'btn-success' : 'btn-danger'; ?>" 
+                                style="padding: 3px 10px; font-weight: 600; font-size: 11px; border-radius: 2px; border: 0 solid #d3d3d3;">
+                                <?php echo $row['payment_status']; ?>
+                            </span>
+                        </td>
                         <td><span class="db-list-rat">1k</span></td>
                         <td><span class="db-list-rat">642</span></td>
                         <td><a href="post-your-ads-edit.php?row=<?php echo $row['all_ads_enquiry_id']; ?>&path=1" class="db-list-edit">Edit</a></td>
