@@ -13,6 +13,7 @@ if(isset($_SESSION['city']))
     <div class="ban-ql">
         <div class="container">
             <div class="row">
+            
                 <ul>
                     <?php
                         foreach (getAllCities() as $city) {
@@ -22,7 +23,7 @@ if(isset($_SESSION['city']))
                                 if ($CurrentCity == $cityKey) {
                                     if (isset($city[$imageKey])) {
                                         $imageUrl = htmlspecialchars($webpage_full_link . 'images/cityimage/' . $city[$imageKey]);
-                                        echo '<li><div style="padding: 0;height: 9vw;"><img src="' . $imageUrl . '" alt="">
+                                        echo '<li><div style="padding: 0; height: 9vw; ><img src="' . $imageUrl . '" alt="">
                                         </div></li>';
                                     } 
                                 } 
@@ -97,7 +98,7 @@ if(isset($_SESSION['city']))
                             ?>
                         </ul>
                     </div>
-                    <div class="hom-cate-more"">
+                    <div class="hom-cate-more">
                 <?php if ($current_home_page == '1' || $current_home_page == '2') { ?>
                     <a href=" all-category" class="cta-new-blue"><?php echo $BIZBOOK['HOM-VI-ALL-SER']; ?></a>
                     <?php } ?>
