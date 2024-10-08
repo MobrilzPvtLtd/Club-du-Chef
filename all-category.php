@@ -103,6 +103,7 @@ foreach (getAllCities() as $city) {
                 </div>
                 <div class="col-md-3">
                     <div class="sh-all-scat">
+
                         <?php
                         foreach ($catImages as $index => $imageUrl) {
                             $link = isset($catImageLinks[$index]) ? $catImageLinks[$index] : '#';
@@ -111,8 +112,8 @@ foreach (getAllCities() as $city) {
                             <ul id="tail-re">
                                 <li>
                                     <div class="sh-all-scat-box">
-                                        <div class="lhs" style="width: 250px;">
-                                            <img src="<?php echo $imageUrl; ?>" alt="">
+                                        <div class="lhs w-100" >
+                                            <img class="img-fluid" src="<?php echo $imageUrl; ?>" alt="">
                                         </div>
                                     </div>
                                 </li>
@@ -121,6 +122,7 @@ foreach (getAllCities() as $city) {
                             <?php
                         }
                         ?>
+                        
                     </div>
                 </div>
             </div>
