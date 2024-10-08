@@ -249,7 +249,7 @@ foreach (getAllCities() as $city) {
                                     </a>
                                 <?php endif; ?>
 
-                                <div class="menu">
+                                <div class="menu d-none d-lg-none d-xl-block">
                                     <h4><?php echo $BIZBOOK['EXPLORE']; ?></h4>
                                 </div>
                                 <div class="pop-menu">
@@ -994,7 +994,7 @@ foreach (getAllCities() as $city) {
                                 </h1>
                             </div>
                             <div class="ban-search ban-sear-all d-flex justify-content-center">
-                                <form name="filter_form" id="filter_form" class="filter_form">
+                                <form name="filter_form" id="filter_form" class="filter_form w-100">
                                     <ul>
                                         <li class="sr-cate">
                                             <select onChange="getSearchCategories(this.value);" name="explor_select"
@@ -1089,7 +1089,7 @@ foreach (getAllCities() as $city) {
                                         <li class="sr-sea">
                                             <input type="text" autocomplete="off" id="select-search"
                                                 placeholder="<?php echo $BIZBOOK['SEARCHBOX_LABEL']; ?>"
-                                                class="search-field">
+                                                class="search-field rounded">
                                             <ul id="tser-res" class="tser-res tser-res1">
                                                 <?php
                                                 $si = 1;
@@ -1109,7 +1109,7 @@ foreach (getAllCities() as $city) {
                                         </li>
                                         <li class="sr-btn">
                                             <input type="submit" id="filter_submit" name="filter_submit"
-                                                value="<?php echo $BIZBOOK['SEARCH']; ?>" class="filter_submit">
+                                                value="<?php echo $BIZBOOK['SEARCH']; ?>" class="filter_submit rounded">
                                         </li>
                                     </ul>
                                 </form>
