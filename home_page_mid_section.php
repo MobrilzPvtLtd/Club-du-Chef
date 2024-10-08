@@ -440,7 +440,7 @@ if ($current_home_page == '1') {
     <section class="<?php if ($footer_row['admin_language'] == 2) {
         echo "lg-arb";
     } ?> pri">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="plac-det-tit-inn">
                     <h2><?php echo $BIZBOOK['CHOOSE_YOUR_PLAN']; ?></h2>

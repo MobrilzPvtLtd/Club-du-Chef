@@ -352,7 +352,7 @@ foreach (getAllCities() as $city) {
                                 </div>
                                 <!--END MOBILE MENU-->
 
-                                <div class="top-ser">
+                                <div class="top-ser d-sm-none d-md-none">
                                     <form name="filter_form" id="filter_form" class="filter_form">
                                         <ul>
                                             <li class="sr-sea">
@@ -419,16 +419,16 @@ foreach (getAllCities() as $city) {
                                         </select>
                                     </li>
                                     <li>
-                                        <a href="/pricing-details"><?php echo $BIZBOOK['ADD_BUSINESS']; ?></a>
+                                        <a href="/pricing-details" class="text-decoration-none"><?php echo $BIZBOOK['ADD_BUSINESS']; ?></a>
                                     </li>
                                     <?php
                                     if (!isset($_SESSION['user_name']) && empty($_SESSION['user_name'])) {
                                     ?>
                                         <li>
-                                            <a href="/login"><?php echo $BIZBOOK['SIGN_IN']; ?></a>
+                                            <a href="/login" class="text-decoration-none"><?php echo $BIZBOOK['SIGN_IN']; ?></a>
                                         </li>
                                         <li>
-                                            <a href="/login?login=register"><?php echo $BIZBOOK['CREATE_AN_ACCOUNT']; ?></a>
+                                            <a href="/login?login=register" class="text-decoration-none"><?php echo $BIZBOOK['CREATE_AN_ACCOUNT']; ?></a>
                                         </li>
                                     <?php
                                     } else {
@@ -983,7 +983,7 @@ foreach (getAllCities() as $city) {
 
                 <?php if ($current_page == "index.php" || $current_page == "index1.php" || $current_page == "index2.php" || $current_page == "all-category.php") { ?>
                     <div class="container">
-                        <div class="row">
+                        <div class="d-flex flex-column justify-content-center align-item-center">
                             <div class="ban-tit">
                                 <h1>
                                     <?php if ($current_page == "all-category.php") { ?>
@@ -993,12 +993,12 @@ foreach (getAllCities() as $city) {
                                     <?php } ?>
                                 </h1>
                             </div>
-                            <div class="ban-search ban-sear-all">
+                            <div class="ban-search ban-sear-all d-flex justify-content-center">
                                 <form name="filter_form" id="filter_form" class="filter_form">
                                     <ul>
                                         <li class="sr-cate">
                                             <select onChange="getSearchCategories(this.value);" name="explor_select"
-                                                id="explor_select" class="chosen-select">
+                                                id="explor_select" class="chosen-select rounded">
                                                 <option value=""><?php echo $BIZBOOK['SEARCHBOX_LABEL_SER']; ?></option>
                                                 <?php if ($footer_row['admin_listing_show'] == 1) { ?>
                                                     <option value="1"><?php echo $BIZBOOK['ALL_SERVICES']; ?></option>

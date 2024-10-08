@@ -37,7 +37,7 @@ if ($current_home_page != '2' && $current_home_page != '3') {
                     <?php
                     foreach ($images as $index => $imageUrl) {
                         $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
-                        echo '<a href="' . $link . '" target="_blank"><li><div class="mob_card" ><img src="' . $imageUrl . '" alt=""></div></li></a>';
+                        echo '<a href="' . $link . '" target="_blank"><li><div class="mob_card img-fluid" ><img src="' . $imageUrl . '" alt=""></div></li></a>';
                     }
                     ?>
                 </ul>
@@ -50,14 +50,15 @@ if ($current_home_page != '2' && $current_home_page != '3') {
 
     <!-- START -->
     <section>
-        <div class="str">
-            <div class="container">
-                <div class="row">
-                    <div class="home-tit">
+        <div class="str container-fluid">
+            
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                    <div class="home-tit d-flex flex-column justify-content-center align-items-center">
                         <h2><span><?php echo $BIZBOOK['HOM-POP-TIT']; ?></span> <?php echo $BIZBOOK['HOM-POP-TIT1']; ?></h2>
                         <p><?php echo $BIZBOOK['HOM-POP-SUB-TIT']; ?></p>
                     </div>
                     <div class="plac-hom-all-pla">
+                        
                         <ul>
                             <?php
                             if ($current_home_page == '3' || $current_home_page == '4' || $current_home_page == '5' || $current_home_page == '6' || $current_home_page == '7' || $current_home_page == '8' || $current_home_page == '9') {
@@ -117,7 +118,7 @@ if ($current_home_page != '2' && $current_home_page != '3') {
                         <?php } ?>
                     </div>
                 </div>
-            </div>
+            
         </div>
     </section>
     <!-- END -->
