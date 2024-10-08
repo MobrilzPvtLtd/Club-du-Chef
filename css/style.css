@@ -25894,7 +25894,7 @@ a[data-command='p'] {
     @media screen and (max-width:767px){
         .ban-ql ul li {
             margin: 0;
-            width: 90%;
+            width: 100%;
             padding: 6px
         }
         .ban-ql ul li div{
