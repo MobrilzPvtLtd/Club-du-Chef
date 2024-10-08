@@ -249,7 +249,7 @@ foreach (getAllCities() as $city) {
                                     </a>
                                 <?php endif; ?>
 
-                                <div class="menu d-none d-lg-none d-xl-block">
+                                <div class="menu d-none d-lg-block d-xl-block">
                                     <h4><?php echo $BIZBOOK['EXPLORE']; ?></h4>
                                 </div>
                                 <div class="pop-menu">
@@ -351,8 +351,8 @@ foreach (getAllCities() as $city) {
                                     </div>
                                 </div>
                                 <!--END MOBILE MENU-->
-
-                                <div class="top-ser d-sm-none d-md-none">
+                                 
+                                <div class="top-ser  d-none  d-xl-block ">
                                     <form name="filter_form" id="filter_form" class="filter_form">
                                         <ul>
                                             <li class="sr-sea">
@@ -382,7 +382,8 @@ foreach (getAllCities() as $city) {
                                         </ul>
                                     </form>
                                 </div>
-
+                                               
+                                    
                                 <ul class="bl">
                                     <li>
                                         <script>
@@ -421,6 +422,8 @@ foreach (getAllCities() as $city) {
                                     <li>
                                         <a href="/pricing-details" class="text-decoration-none"><?php echo $BIZBOOK['ADD_BUSINESS']; ?></a>
                                     </li>
+                                    
+                                            
                                     <?php
                                     if (!isset($_SESSION['user_name']) && empty($_SESSION['user_name'])) {
                                     ?>
@@ -433,6 +436,7 @@ foreach (getAllCities() as $city) {
                                     <?php
                                     } else {
                                     ?>
+
                                         <div class="al" style="margin-left: 15px;">
                                             <div class="head-pro">
                                                 <img src="<?php echo $slash; ?>/images/user/<?php if (($user_details_row['profile_image'] == NULL) || empty($user_details_row['profile_image'])) {

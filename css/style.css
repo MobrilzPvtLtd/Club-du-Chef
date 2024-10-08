@@ -1415,8 +1415,8 @@ div#review_success {
     margin-right: 20px;
     border-left: 1px solid #4f6171;
     padding: 5px 5px 5px 12px;
-    margin-left: 20px;
-    margin-top: 25px;
+    margin-left: -36px;
+    margin-top: 28px;
     cursor: pointer;
     position: relative
 }
@@ -2544,13 +2544,13 @@ div#review_success {
     color: #000;
     background: #fff;
     text-align: center;
-    padding: 25px 20px 27px;
+    
     position: relative;
     overflow: hidden;
     box-shadow: 0 3px 9px -4px #0000008f;
     border-radius: 15px;
     width: 17vw;
-    height: 16vw;
+    
 }
 
 .ban-ql ul li div:hover {
@@ -25897,9 +25897,12 @@ a[data-command='p'] {
             width: 100%;
             padding: 6px
         }
-        .ban-ql ul li div{
-           height: 18vw;
+        .ban-ql ul li div {
+           height: 22vw;
+            
         }
+       
+       
        
         
     }
@@ -28465,4 +28468,8 @@ a[data-command='p'] {
         width: 115px !important;
         height: 40px !important;
     }
+}
+/* logo grid image css */
+.mob_card.img-fluid {
+    height: fit-content;
 }

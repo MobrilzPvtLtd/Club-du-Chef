@@ -37,7 +37,7 @@ if ($current_home_page != '2' && $current_home_page != '3') {
                     <?php
                     foreach ($images as $index => $imageUrl) {
                         $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
-                        echo '<a href="' . $link . '" target="_blank"><li><div class="mob_card img-fluid" ><img src="' . $imageUrl . '" alt=""></div></li></a>';
+                        echo '<a href="' . $link . '" target="_blank"><li><div class="mob_card p-0 " ><img class="img-fluid ratio ratio-3x4 object-fit-contain" src="' . $imageUrl . '" alt=""></div></li></a>';
                     }
                     ?>
                 </ul>
@@ -58,7 +58,7 @@ if ($current_home_page != '2' && $current_home_page != '3') {
                         <p><?php echo $BIZBOOK['HOM-POP-SUB-TIT']; ?></p>
                     </div>
                     <div class="plac-hom-all-pla">
-                        
+
                         <ul>
                             <?php
                             if ($current_home_page == '3' || $current_home_page == '4' || $current_home_page == '5' || $current_home_page == '6' || $current_home_page == '7' || $current_home_page == '8' || $current_home_page == '9') {
