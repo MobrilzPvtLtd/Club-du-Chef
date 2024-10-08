@@ -37,7 +37,7 @@ if ($current_home_page != '2' && $current_home_page != '3') {
                     <?php
                     foreach ($images as $index => $imageUrl) {
                         $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
-                        echo '<a href="' . $link . '" target="_blank"><li><div class="mob_card"  ><img src="' . $imageUrl . '" alt=""></div></li></a>';
+                        echo '<a href="' . $link . '" target="_blank"><li><div class="mob_card" ><img src="' . $imageUrl . '" alt=""></div></li></a>';
                     }
                     ?>
                 </ul>
