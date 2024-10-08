@@ -246,7 +246,7 @@ if ($footer_row['admin_install_flag'] == 1) {
 
 <!-- START -->
 <div class="fqui-menu">
-<ul>
+<ul >
     <?php if ($footer_row['admin_listing_show'] == 1) { ?>
         <li><a href="<?php echo $webpage_full_link; ?>" ><img  src="/images/icon/shop.png"><?php echo $BIZBOOK['HOME']; ?></a></li>
         <li><a href="<?php echo $webpage_full_link; ?>all-category"

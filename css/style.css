@@ -3830,10 +3830,10 @@ div#review_success {
 
 .sh-all-scat-box .lhs img {
     width: 100%;
-    padding: 15px;
+    
     height: 160px;
     object-fit: cover;
-    border-radius: 20px
+    
 }
 
 .sh-all-scat-box .rhs {
@@ -8419,12 +8419,12 @@ textarea {
 
 .mob-me-ic i {
     border: 1px solid #3b83ef;
-    font-size: 21px;
+    font-size: 24px;
     border-radius: 50px;
     color: #fff;
     background: #3b83ef;
     float: left;
-    padding: 4px
+    padding: 7px
 }
 
 .mob-me-all {
@@ -8673,7 +8673,8 @@ textarea {
     padding: 8px 4px 6px;
     display: block;
     text-transform: uppercase;
-    letter-spacing: .5px
+    letter-spacing: .5px;
+    text-decoration:none;
 }
 
 .fqui-menu ul li img {
