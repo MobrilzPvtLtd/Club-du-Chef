@@ -2518,7 +2518,6 @@ div#review_success {
 
     }
 } 
-
     
 
 
@@ -24659,6 +24658,11 @@ a[data-command='p'] {
         font-size: 12.5px
     }
 }
+@media screen and (max-width:767px) {
+    .ban-short-links ul li div {
+        padding: 10px
+    }
+}
 
 @media screen and (max-width:1100px) {
 
@@ -25880,6 +25884,24 @@ a[data-command='p'] {
         margin: 0;
         width: 50%;
         padding: 6px
+    }
+    .mob_card{
+         padding: 0;
+         height: 9vw;
+    }
+    
+
+    @media screen and (max-width:767px){
+        .ban-ql ul li {
+            margin: 0;
+            width: 90%;
+            padding: 6px
+        }
+        .ban-ql ul li div{
+           height: 12vw;
+        }
+       
+        
     }
 
     .ban-ql ul li div {
