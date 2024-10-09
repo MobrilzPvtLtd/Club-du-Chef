@@ -225,18 +225,18 @@ foreach (getAllCities() as $city) {
                             } else { ?> db-open <?php } ?>"><!--MOBILE MENU-->
                                 <?php if ($imageShow && !empty($imagesLogo)): ?>
                                     <?php foreach ($imagesLogo as $imageUrl): ?>
-                                        <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log">
+                                        <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log d-none">
                                             <img src="<?php echo $imageUrl; ?>" alt="" class="ic-logo">
                                         </a>
                                     <?php endforeach; ?>
                                 <?php else: ?>
-                                    <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log">
+                                    <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log ">
                                         <img src="<?php echo htmlspecialchars($slash . '/images/home/' . $footer_row['header_logo']); ?>"
                                             <?php if ($footer_row['header_logo_width'] !== NULL || $footer_row['header_logo_height'] !== NULL): ?>
                                                 style="<?php if ($footer_row['header_logo_width'] !== NULL): ?>width: <?php echo htmlspecialchars($footer_row['header_logo_width']); ?>; <?php endif; ?>
                                                     <?php if ($footer_row['header_logo_height'] !== NULL): ?>height: <?php echo htmlspecialchars($footer_row['header_logo_height']); ?>;<?php endif; ?>"
                                             <?php endif; ?> 
-                                            alt="" class="ic-logo d-none">
+                                            alt="" class="ic-logo ">
                                     </a>
 
                                     <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log" style="margin-left: 15px;">

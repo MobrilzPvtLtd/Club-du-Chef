@@ -137,14 +137,16 @@ foreach (getAllCities() as $city) {
             </div>
         </div>
 </div>
-<div class="col-md-3 d-xs-block d-sm-block d-md-none">
+   <div class="col-md-3 d-xs-block d-sm-block d-md-none">
  
 
- <div id="carouselExample" class="carousel slide">
+ <div id="carouselExample" class="carousel slide" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-       <div class="carousel-item active">
+
+    
+       <div class="carousel-item active" >
     <marquee behavior="scroll" direction="left" >
-       <div class = "d-flex justify-content-center w-100 bg-black gap-5" >
+       <div class = "d-flex justify-content-center w-100  gap-5" >
        <?php
              foreach ($catImages as $index => $imageUrl) {
 
@@ -153,12 +155,12 @@ foreach (getAllCities() as $city) {
         
         <a href="<?php echo $link; ?>" target="_blank" >
    
-           <ul id="tail-re" style = "width : 15rem; background-color : red;">
+           <ul id="tail-re" style = "width: 15rem; ">
                       
                    <li>
                    <div class="sh-all-scat-box">
             
-                       <div class="lhs w-100" >
+                       <div class="lhs w-100 col-6"  >
                           <img  class="d-block img-fluid w-100" alt="..." src="<?php echo $imageUrl; ?>" alt="">
                       </div> 
                      </div>
