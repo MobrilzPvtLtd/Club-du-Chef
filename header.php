@@ -236,7 +236,7 @@ foreach (getAllCities() as $city) {
                                                 style="<?php if ($footer_row['header_logo_width'] !== NULL): ?>width: <?php echo htmlspecialchars($footer_row['header_logo_width']); ?>; <?php endif; ?>
                                                     <?php if ($footer_row['header_logo_height'] !== NULL): ?>height: <?php echo htmlspecialchars($footer_row['header_logo_height']); ?>;<?php endif; ?>"
                                             <?php endif; ?> 
-                                            alt="" class="ic-logo">
+                                            alt="" class="ic-logo d-none">
                                     </a>
 
                                     <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log" style="margin-left: 15px;">

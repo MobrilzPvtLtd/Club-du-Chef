@@ -436,6 +436,9 @@ if ($current_home_page == '1') {
     </section>
     <!--END-->
 
+    
+    
+
     <!--PRICING DETAILS-->
     <section class="<?php if ($footer_row['admin_language'] == 2) {
         echo "lg-arb";

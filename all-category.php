@@ -101,33 +101,95 @@ foreach (getAllCities() as $city) {
                         ?>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="sh-all-scat">
 
-                        <?php
-                        foreach ($catImages as $index => $imageUrl) {
-                            $link = isset($catImageLinks[$index]) ? $catImageLinks[$index] : '#';
-                            ?>
-                            <a href="<?php echo $link; ?>" target="_blank">
-                            <ul id="tail-re">
-                                <li>
-                                    <div class="sh-all-scat-box">
-                                        <div class="lhs w-100" >
-                                            <img class="img-fluid" src="<?php echo $imageUrl; ?>" alt="">
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            </a>
-                            <?php
-                        }
-                        ?>
-                        
-                    </div>
-                </div>
+
+<div class="col-md-3 d-none d-md-block  ">
+    <div class="sh-all-scat">
+
+     <?php
+      foreach ($catImages as $index => $imageUrl) {
+
+                       $link = isset($catImageLinks[$index]) ? $catImageLinks[$index] : '#';
+       ?>
+
+       <a href="<?php echo $link; ?>" target="_blank">
+   
+           <ul id="tail-re">
+                      
+                   <li>
+                   <div class="sh-all-scat-box">
+            
+                       <div class="lhs w-100" >
+                    <img class="img-fluid" src="<?php echo $imageUrl; ?>" alt="">
+                      </div> 
+                     </div>
+                  </li>
+           </ul>
+   
+        </a>
+    <?php
+  }
+  ?>
+
+
+    </div>
+ </div>
             </div>
         </div>
+</div>
+<div class="col-md-3 d-xs-block d-sm-block d-md-none">
+ 
+
+ <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+       <div class="carousel-item active">
+    <marquee behavior="scroll" direction="left" >
+       <div class = "d-flex justify-content-center w-100 bg-black gap-5" >
+       <?php
+             foreach ($catImages as $index => $imageUrl) {
+
+                       $link = isset($catImageLinks[$index]) ? $catImageLinks[$index] : '#';
+       ?>
+        
+        <a href="<?php echo $link; ?>" target="_blank" >
+   
+           <ul id="tail-re" style = "width : 15rem; background-color : red;">
+                      
+                   <li>
+                   <div class="sh-all-scat-box">
+            
+                       <div class="lhs w-100" >
+                          <img  class="d-block img-fluid w-100" alt="..." src="<?php echo $imageUrl; ?>" alt="">
+                      </div> 
+                     </div>
+                  </li>
+           </ul>
+   
+        </a>
+       <?php
+      }
+            ?>
+            </div>
+   </marquee>   
     </div>
+   
+    </div>
+
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                     <span class="visually-hidden">Previous</span>
+          </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                   <span class="visually-hidden">Next</span>
+                     </button>
+ </div> 
+
+
+     </div>
+ 
+
 </section>
 <!-- END -->
 
