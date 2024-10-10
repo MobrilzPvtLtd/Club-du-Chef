@@ -221,8 +221,10 @@ foreach (getAllCities() as $city) {
                 <div class="hom-top">
                     <div class="container">
                         <div class="row">
-                            <div class="hom-nav <?php if (!isset($_SESSION['user_name']) && empty($_SESSION['user_name'])) {
-                            } else { ?> db-open <?php } ?>"><!--MOBILE MENU-->
+                        <div class="hom-nav <?php if (!isset($_SESSION['user_name']) && empty($_SESSION['user_name'])) {
+                               } else { ?> db-open <?php } ?>">
+                               <!--MOBILE MENU-->
+                            
                                 <?php if ($imageShow && !empty($imagesLogo)): ?>
                                     <?php foreach ($imagesLogo as $imageUrl): ?>
                                         <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log">
@@ -230,6 +232,8 @@ foreach (getAllCities() as $city) {
                                         </a>
                                     <?php endforeach; ?>
                                 <?php else: ?>
+                                   
+                                    
                                     <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log ">
                                         <img src="<?php echo htmlspecialchars($slash . '/images/home/' . $footer_row['header_logo']); ?>"
                                             <?php if ($footer_row['header_logo_width'] !== NULL || $footer_row['header_logo_height'] !== NULL): ?>
@@ -237,8 +241,8 @@ foreach (getAllCities() as $city) {
                                                     <?php if ($footer_row['header_logo_height'] !== NULL): ?>height: <?php echo htmlspecialchars($footer_row['header_logo_height']); ?>;<?php endif; ?>"
                                             <?php endif; ?> 
                                             alt="" class="ic-logo ">
-                                    </a>
-
+                                    </a> 
+                                   
                                     <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log" style="margin-left: 15px;">
                                         <img src="<?php echo htmlspecialchars($slash . '/images/home/' . $footer_row['header_logo']); ?>"
                                             <?php if ($footer_row['header_logo_width'] !== NULL || $footer_row['header_logo_height'] !== NULL): ?>
@@ -246,12 +250,13 @@ foreach (getAllCities() as $city) {
                                                     <?php if ($footer_row['header_logo_height'] !== NULL): ?>height: <?php echo htmlspecialchars($footer_row['header_logo_height']); ?>;<?php endif; ?>"
                                             <?php endif; ?> 
                                             alt="" class="ic-logo">
-                                    </a>
+                                    </a> 
                                 <?php endif; ?>
 
                                 <div class="menu d-none d-lg-block d-xl-block">
                                     <h4><?php echo $BIZBOOK['EXPLORE']; ?></h4>
                                 </div>
+                                
                                 <div class="pop-menu">
                                     <div class="container">
                                         <div class="row">
@@ -350,6 +355,8 @@ foreach (getAllCities() as $city) {
                                         </div>
                                     </div>
                                 </div>
+
+                                              
                                 <!--END MOBILE MENU-->
                                  
                                 <div class="top-ser  d-none  d-xl-block ">
@@ -383,7 +390,7 @@ foreach (getAllCities() as $city) {
                                     </form>
                                 </div>
                                                
-                                    
+                              
                                 <ul class="bl">
                                     <li>
                                         <script>
@@ -703,7 +710,7 @@ foreach (getAllCities() as $city) {
                                     }
                                     ?>
                                 </ul>
-                                
+                             
                                 <!--MOBILE MENU-->
                                 <div class="mob-menu">
                                     <div class="mob-me-ic"><i class="material-icons">menu</i></div>
