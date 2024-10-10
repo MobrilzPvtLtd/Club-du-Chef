@@ -8949,7 +8949,7 @@ textarea {
 .login-reg:before {}
 
 .login-main {
-    width: 460px;
+    width: 500px !important;
     margin: 0 auto;
     display: table;
     position: relative;
