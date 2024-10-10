@@ -692,7 +692,7 @@ foreach (getAllCities() as $city) {
                             ?>
                                 <a href="<?php echo $link; ?>" target="_blank">
                                     <li>
-                                        <div style="padding: 0; height: 9vw;">
+                                        <div class = "p-0 h-40 mb-2 ">
                                             <img src="<?php echo $imageUrl; ?>" alt="">
                                         </div>
                                     </li>
