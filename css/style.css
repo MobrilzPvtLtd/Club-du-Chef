@@ -8957,6 +8957,7 @@ textarea {
     margin-bottom: 30px;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .log {
