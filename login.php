@@ -17,7 +17,7 @@ if (isset($_SESSION['user_name']) && !empty($_SESSION['user_name'])) {
 } ?> login-reg">
     <div class="container">
         <div class="row">
-            <div class="login-main">
+            <div class="login-main" style="width: 45%;">
                 <div class="log-bor">&nbsp;</div>
                 <div class="log log-1">
                     <div class="login login-new">
