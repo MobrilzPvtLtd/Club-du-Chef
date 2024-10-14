@@ -35,8 +35,8 @@ $link_with_payment_success = $webpage_full_link. "payment_paypal_success_ads" . 
 
 $apiContext = new \PayPal\Rest\ApiContext(
     new \PayPal\Auth\OAuthTokenCredential(
-        'AYdXiaWIIrog7CKW0ylN6N6R9bCT1oZe5aPv3DD4b7pwX8f4OFNB-YzqPyax2abaWRTyWbnJtlels5m2',     // ClientID
-        'EHXJM6uhRnExFegzVmsVRmslM8oWmgENlj-uXILINpbC7lx-q2YYdwUcZ2ULuD7QK36TCymssa69WpXB'      // ClientSecret
+        'Ab66W5IhA3tics-KAC0OGorfQTh240mt2OpofEG3AMoahbLdgYBDhf8L9tBwWzRzBa-7f4bc_nUWt3bM',     // ClientID
+        'EGvTbPOYAWitlG9KeJFsJdV0aQbXXxbRkwyB8Im2on3dKLLNAGoYN-hKe8gll2eZ-bVsLIR4Zky-e2Eu'      // ClientSecret
     )
 );
 
