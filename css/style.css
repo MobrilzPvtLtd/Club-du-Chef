@@ -22616,6 +22616,9 @@ a[data-command='p'] {
     visibility: visible;
     opacity: 1
 }
+/* html {
+    width: 100% !important;
+} */
 
 @media screen and (max-width:1450px) {
     .ud-main .ud-main-inn {
@@ -22624,9 +22627,12 @@ a[data-command='p'] {
 }
 
 @media screen and (max-width:1370px) {
-    html {
-        width: 472px;
+    .ud-inn {
+        margin-top: 10px;
     }
+    /* html {
+        width: 472px;
+    } */
     .ud-cen-s1 ul li div p {}
 
     .eve-box div:nth-child(2) h4 {
