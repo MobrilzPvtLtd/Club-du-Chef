@@ -1521,7 +1521,7 @@ div#review_success {
     z-index: 99;
     padding: 25px;
     box-shadow: 0 15px 36px -12px rgba(0, 0, 0, 0.5);
-    margin-top: 47px;
+    margin-top: 85px;
     left: 0;
     transition: all .3s ease;
     visibility: hidden;
@@ -9571,7 +9571,8 @@ textarea {
     width: 100%;
     background: #f0f8ff;
     position: relative;
-    float: left
+    float: left;
+    margin-top: 40px;
 }
 
 .ud-inn:before {
@@ -22623,6 +22624,9 @@ a[data-command='p'] {
 }
 
 @media screen and (max-width:1370px) {
+    html {
+        width: 472px;
+    }
     .ud-cen-s1 ul li div p {}
 
     .eve-box div:nth-child(2) h4 {
@@ -25398,7 +25402,7 @@ a[data-command='p'] {
     .list-ban-btn ul li .cta {}
 
     .ud {
-        padding: 90px 0 80px
+        /* padding: 90px 0 80px */
     }
 
     .pro-pg-logo {
@@ -25445,7 +25449,8 @@ a[data-command='p'] {
     .ud-inn {
         display: block;
         float: left;
-        padding-bottom: 50px
+        padding-bottom: 50px;
+        margin-top: 40px;
     }
 
     .ebk-ban .lhs {

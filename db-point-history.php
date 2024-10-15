@@ -11,7 +11,7 @@ if (file_exists('config/general_user_authentication.php')) {
     include('config/general_user_authentication.php');
 }
 
-delBuyPoints();
+// delBuyPoints();
 
 ?>
     <!--CENTER SECTION-->
