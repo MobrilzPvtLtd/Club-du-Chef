@@ -70,12 +70,22 @@ if (file_exists('config/listing_page_authentication.php')) {
 							?>
 								<tr>
                                     <td><?php echo $si; ?></td>
-                                    <td><img
-											src="<?php if ($listrow['profile_image'] != NULL || !empty($listrow['profile_image'])) {
-												echo "images/listings/" . $listrow['profile_image'];
+                                    <td>
+										<?php
+											$gallery_image_array = $listrow['gallery_image'];
+											$gallery_image = explode(',', $gallery_image_array);
+											$first_image = $gallery_image[0];
+										?>
+										<img src="
+										<?php 
+											if (!empty($first_image)) {
+												echo "images/listings/" . htmlspecialchars($first_image);
 											} else {
-												echo "images/listings/" . $footer_row['listing_default_image'];
-											} ?>"><?php echo $listrow['listing_name']; ?> <span><?php echo dateFormatconverter($listrow['listing_cdt']); ?></span></td>
+												echo "images/listings/" . htmlspecialchars($footer_row['listing_default_image']);
+											} 
+										?>" alt="<?php echo htmlspecialchars($listrow['listing_name']); ?>">
+										<?php echo $listrow['listing_name']; ?> <span><?php echo dateFormatconverter($listrow['listing_cdt']); ?></span>
+									</td>
 									<td><span class="db-list-rat"><?php echo $star_rate; ?></span></td>
 									<td><span class="db-list-rat"><?php  echo listing_pageview_count($listrow['listing_id']); ?></span></td>
 									<td><span class="db-list-ststus"><?php echo $listrow['listing_status']; ?></span></td>

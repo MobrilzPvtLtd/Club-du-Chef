@@ -6542,7 +6542,7 @@ div#review_success {
 
 .v3-list-ql {
     position: fixed;
-    top: 50px;
+    top: 70px;
     width: 100%;
     background: #151f31;
     z-index: 16;
@@ -6772,7 +6772,7 @@ div#review_success {
     background: red;
     padding-bottom: 100px;
     margin-top: var(--topspac1);
-    padding-top: 40px;
+    padding-top: 50px;
     background-image: linear-gradient(to top, #f0ede6 0%, #fffbf4 100%);
     background-image: linear-gradient(to top, #dee4e7 0%, #e6e9eb 100%)
 }
@@ -9157,7 +9157,7 @@ textarea {
 }
 
 .login-main.add-list {
-    width: 60%
+    width: 60% !important
 }
 
 .add-list .log div input,
@@ -14850,7 +14850,7 @@ div#pop_enq_success p {
 }
 
 .biz-prog {
-    display: none
+    display: none !important
 }
 
 .biz-pro {
@@ -26236,7 +26236,7 @@ a[data-command='p'] {
 
     .login-main,
     .login-main.add-list {
-        width: 100%
+        width: 100% !important
     }
 
     .login-main {
