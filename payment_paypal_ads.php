@@ -40,7 +40,7 @@ $apiContext->setConfig([
     'mode' => 'live',
     'log.LogEnabled' => true,
     'log.FileName' => 'PayPal.log',
-    'log.LogLevel' => 'DEBUG', // PLEASE USE `INFO` LEVEL FOR LOGGING IN LIVE ENVIRONMENTS
+    'log.LogLevel' => 'DEBUG', // Cambia a 'INFO' para producción
 ]);
 
 $payer = new \PayPal\Api\Payer();
@@ -72,5 +72,8 @@ try {
     // echo "\n\nRedirect user to approval_url: " . $payment->getApprovalLink() . "\n";
 }
 catch (\PayPal\Exception\PayPalConnectionException $ex) {
-    echo $ex->getData();
+    // echo $ex->getData();
+    echo "Error: " . $ex->getCode(); // Código de error
+    echo "Mensaje: " . $ex->getMessage(); // Mensaje de error
+    echo "Datos: " . $ex->getData();
 }
