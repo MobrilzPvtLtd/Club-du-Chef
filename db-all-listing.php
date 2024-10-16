@@ -17,7 +17,7 @@ if (file_exists('config/listing_page_authentication.php')) {
 ?>
 			<!--CENTER SECTION-->
 			<div class="ud-main">
-   <div class="ud-main-inn ud-no-rhs">
+   <div class="ud-main-inn ud-no-rhs w-100 d-flex justify-content-center">
 			<div class="ud-cen ">
 				<div class="log-bor">&nbsp;</div>
 				<span class="udb-inst"><?php echo $BIZBOOK['ALL_LISTING']; ?></span>
