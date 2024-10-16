@@ -18,11 +18,11 @@ if (file_exists('config/listing_page_authentication.php')) {
 			<!--CENTER SECTION-->
 			<div class="ud-main">
    <div class="ud-main-inn ud-no-rhs">
-			<div class="ud-cen p-0 w-100">
+			<div class="ud-cen ">
 				<div class="log-bor">&nbsp;</div>
 				<span class="udb-inst"><?php echo $BIZBOOK['ALL_LISTING']; ?></span>
 				<?php include('config/user_activation_checker.php'); ?>
-                <div class="ud-cen-s2 ps-1">
+                <div class="ud-cen-s2 ">
                     <h2><?php echo $BIZBOOK['LISTING_DETAILS']; ?></h2>
                     <?php include "page_level_message.php"; ?>
                     <a href="add-listing-start" class="db-tit-btn"><?php echo $BIZBOOK['ADD_NEW_LISTING']; ?></a>
