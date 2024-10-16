@@ -253,7 +253,7 @@ foreach (getAllCities() as $city) {
                                     </a> 
                                 <?php endif; ?>
 
-                                <div class="menu d-none d-lg-block d-xl-block">
+                                <div class="menu mx-3 my-4 d-none d-lg-block d-xl-block">
                                     <h4><?php echo $BIZBOOK['EXPLORE']; ?></h4>
                                 </div>
                                 
@@ -359,12 +359,12 @@ foreach (getAllCities() as $city) {
                                               
                                 <!--END MOBILE MENU-->
                                  
-                                <div class="top-ser  d-none  d-xl-block ">
+                                <div class="top-ser py-3 ps-2 d-none  d-lg-block ">
                                     <form name="filter_form" id="filter_form" class="filter_form">
                                         <ul>
                                             <li class="sr-sea">
                                                 <input type="text" autocomplete="off" id="top-select-search"
-                                                    placeholder="<?php echo $BIZBOOK['SEARCHBOX_LABEL']; ?>">
+                                                    placeholder="<?php echo $BIZBOOK['SEARCHBOX_LABEL']; ?>" class="pe-2">
                                                 <ul id="tser-res1" class="tser-res tser-res2">
                                                     <?php
                                                     foreach (getAllSearch() as $search_row) {
@@ -383,7 +383,7 @@ foreach (getAllCities() as $city) {
                                             </li>
 
                                             <li class="sbtn">
-                                                <button type="button" class="btn btn-success" id="top_filter_submit"><i
+                                                <button type="button" class="btn btn-success me-3" id="top_filter_submit"><i
                                                         class="material-icons">&nbsp;</i></button>
                                             </li>
                                         </ul>
