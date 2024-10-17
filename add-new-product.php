@@ -42,7 +42,7 @@ if($product_count_user >= $plan_type_product_count){
                         <?php include "page_level_message.php"; ?>
                         <h4><?php echo $BIZBOOK['ADD_NEW_PRODUCT']; ?></h4>
                         <form action="product_insert.php" class="product_form" id="product_form" name="product_form"
-                              method="post" enctype="multipart/form-data">
+                            method="post" enctype="multipart/form-data">
                             <ul>
                                 <li>
                                     <!--FILED START-->
@@ -50,8 +50,8 @@ if($product_count_user >= $plan_type_product_count){
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <input type="text" name="product_name" id="product_name"
-                                                       required="required" class="form-control"
-                                                       placeholder="<?php echo $BIZBOOK['PRODUCT_NAME_STAR']; ?>">
+                                                    required="required" class="form-control"
+                                                    placeholder="<?php echo $BIZBOOK['PRODUCT_NAME_STAR']; ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -61,16 +61,16 @@ if($product_count_user >= $plan_type_product_count){
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <select onChange="getProductSubCategory(this.value);" name="category_id"
-                                                        id="category_id" class="chosen-select form-control">
+                                                    id="category_id" class="chosen-select form-control">
                                                     <option value=""><?php echo $BIZBOOK['SELECT_CATEGORY']; ?></option>
                                                     <?php
                                                     foreach (getAllProductCategories() as $categories_row) {
                                                         ?>
-                                                        <option <?php if ($_SESSION['category_id'] == $categories_row['category_id']) {
+                                                    <option <?php if ($_SESSION['category_id'] == $categories_row['category_id']) {
                                                             echo "selected";
-                                                        } ?>
-                                                            value="<?php echo $categories_row['category_id']; ?>"><?php echo $categories_row['category_name']; ?></option>
-                                                        <?php
+                                                        } ?> value="<?php echo $categories_row['category_id']; ?>">
+                                                        <?php echo $categories_row['category_name']; ?></option>
+                                                    <?php
                                                     }
                                                     ?>
                                                 </select>
@@ -83,8 +83,9 @@ if($product_count_user >= $plan_type_product_count){
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <select data-placeholder="Select Sub Category" name="sub_category_id[]"
-                                                        id="sub_category_id" multiple class="chosen-select form-control">
-                                                    <option value=""><?php echo $BIZBOOK['SELECT_SUB_CATEGORY']; ?></option>
+                                                    id="sub_category_id" multiple class="chosen-select form-control">
+                                                    <option value=""><?php echo $BIZBOOK['SELECT_SUB_CATEGORY']; ?>
+                                                    </option>
                                                 </select>
                                             </div>
                                         </div>
@@ -94,14 +95,17 @@ if($product_count_user >= $plan_type_product_count){
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <input type="text" name="product_price" id="product_price" onkeypress="return isNumber(event)"
-                                                       required="required" class="form-control" placeholder="<?php echo $BIZBOOK['PRICE']; ?>*">
+                                                <input type="text" name="product_price" id="product_price"
+                                                    onkeypress="return isNumber(event)" required="required"
+                                                    class="form-control"
+                                                    placeholder="<?php echo $BIZBOOK['PRICE']; ?>*">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <input type="text" name="product_price_offer" id="product_price_offer" onkeypress="return isNumber(event)"
-                                                       class="form-control" placeholder="<?php echo $BIZBOOK['PRODUCT_OFFER']; ?>">
+                                                <input type="text" name="product_price_offer" id="product_price_offer"
+                                                    onkeypress="return isNumber(event)" class="form-control"
+                                                    placeholder="<?php echo $BIZBOOK['PRODUCT_OFFER']; ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -110,10 +114,10 @@ if($product_count_user >= $plan_type_product_count){
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <input type="text" class="form-control"
-                                                       name="product_payment_link"
-                                                       id="product_payment_link"
-                                                       placeholder="<?php echo $BIZBOOK['PRODUCT_PAYMENT_LINK']; ?>" required>
+                                                <input type="text" class="form-control" name="product_payment_link"
+                                                    id="product_payment_link"
+                                                    placeholder="<?php echo $BIZBOOK['PRODUCT_PAYMENT_LINK']; ?>"
+                                                    required>
                                                 <!-- INPUT TOOL TIP -->
                                                 <div class="inp-ttip">
                                                     <b><?php echo $BIZBOOK['PRODUCT_PAYMENT_LINK_P_TAG']; ?></b>
@@ -128,7 +132,9 @@ if($product_count_user >= $plan_type_product_count){
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <textarea class="form-control" required="required"  name="product_description" id="product_description" placeholder="<?php echo $BIZBOOK['PRODUCT_DETAILS']; ?>"></textarea>
+                                                <textarea class="form-control" required="required"
+                                                    name="product_description" id="product_description"
+                                                    placeholder="<?php echo $BIZBOOK['PRODUCT_DETAILS']; ?>"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -139,8 +145,10 @@ if($product_count_user >= $plan_type_product_count){
                                             <div class="form-group">
                                                 <label><?php echo $BIZBOOK['PRODUCT_IMAGE_LABEL']; ?></label>
                                                 <div class="fil-img-uplo">
-                                                    <span class="dumfil"><?php echo $BIZBOOK['UPLOAD_A_FILE'];  ?></span>
-                                                    <input type="file" name="gallery_image[]" accept="image/*,.jpg,.jpeg,.png" class="form-control" multiple>
+                                                    <span
+                                                        class="dumfil"><?php echo $BIZBOOK['UPLOAD_A_FILE'];  ?></span>
+                                                    <input type="file" name="gallery_image[]"
+                                                        accept="image/*,.jpg,.jpeg,.png" class="form-control" multiple>
                                                 </div>
                                             </div>
                                         </div>
@@ -151,41 +159,51 @@ if($product_count_user >= $plan_type_product_count){
                                         <div class="col-md-12">
                                             <div class="log">
                                                 <div class="add-prod-high-oth py-0">
-                                                     
-                                                    <h4 class="my-2"><?php echo $BIZBOOK['HIGHLIGHTS']; ?></h4>
-                                                    
-                                                          <div class="d-none d-sm-block">
-
-                                                          <span class="add-list-add-btn prod-add-high-oad"
-                                                          title="add new offer">+</span> 
-                                                          <span class="add-list-rem-btn prod-add-high-ore"
-                                                          title="remove offer">-</span> 
-                                                          </div>
 
 
-                                                             <div class="btn-group d-flex justify-content-center d-block d-sm-none " role="group"      aria-label="Basic radio toggle button group">
 
-                                                                   <input type="radio" class="btn-check  add-list-add-btn prod-add-high-oad " title="add new offer" name="btnradio1" id="btnradio1" autocomplete="off" checked>
-                                                                    <label class="btn btn-outline-primary" for="btnradio1">+</label>
+                                                    <div class="d-flex justify-content-between ">
 
-                                                                  <input type="radio" class="btn-check add-list-rem-btn prod-add-high-ore " title="remove offer" name="btnradio1" id="btnradio2" autocomplete="off">
-                                                           <label class="btn btn-outline-primary " for="btnradio2">-</label>
+                                                        <div>
+                                                            <h4 class="my-2"><?php echo $BIZBOOK['HIGHLIGHTS']; ?></h4>
+
+                                                        </div>
+
+                                                        <div class="btn-group " role="group"
+                                                            aria-label="Basic radio toggle button group Small button group">
+
+                                                            <input type="radio"
+                                                                class="btn-check add-list-add-btn prod-add-high-oad"
+                                                                title="add new offer" name="btnradio11" id="btnradio1"
+                                                                autocomplete="off" checked>
+                                                            <label class="btn btn-outline-primary"
+                                                                for="btnradio1">+</label>
+
+                                                            <input type="radio"
+                                                                class="btn-check  add-list-rem-btn prod-add-high-ore"
+                                                                title="remove offer" name="btnradio11" id="btnradio2"
+                                                                autocomplete="off">
+                                                            <label class="btn btn-outline-primary "
+                                                                for="btnradio2">-</label>
+                                                        </div>
+
+                                                    </div>
 
 
-                                                              </div>
 
 
-                                                            
+
+
+
                                                     <ul>
                                                         <li>
                                                             <!--FILED START-->
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group">
-                                                                        <input type="text"
-                                                                               name="product_highlights[]"
-                                                                               class="form-control"
-                                                                               placeholder="<?php echo $BIZBOOK['HIGHLIGHTS_PLACEHOLDER']; ?>">
+                                                                        <input type="text" name="product_highlights[]"
+                                                                            class="form-control"
+                                                                            placeholder="<?php echo $BIZBOOK['HIGHLIGHTS_PLACEHOLDER']; ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -201,95 +219,114 @@ if($product_count_user >= $plan_type_product_count){
                                     <!--FILED END-->
                                     <!--FILED START-->
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 ">
                                             <div class="log">
-                                                <div class="add-prod-oth py-0">
+                                                <div class="add-prod-oth py-1">
 
-                                                    <h4 class="my-2"><?php echo $BIZBOOK['SPECIFICATIONS']; ?></h4>
-                                                    <div class="d-none d-sm-block">
-                                                    <span class="add-list-add-btn prod-add-oad"
-                                                          title="add new offer">+</span>
-                                                    <span class="add-list-rem-btn prod-add-ore"
-                                                          title="remove offer">-</span> </div>
+                                                    <div class="d-flex justify-content-between ">
+
+                                                        <div>
+                                                            <h4 class="my-2"><?php echo $BIZBOOK['SPECIFICATIONS']; ?>
+                                                            </h4>
+                                                        </div>
+
+                                                        <div class="btn-group" role="group"
+                                                            aria-label="Basic radio toggle button group ">
+
+                                                            <input type="radio"
+                                                                class="btn-check add-list-add-btn prod-add-oad"
+                                                                title="add new offer" name="btnradio22" id="btnradio3"
+                                                                autocomplete="off" checked>
+                                                            <label class="btn btn-outline-primary"
+                                                                for="btnradio3">+</label>
+
+                                                            <input type="radio"
+                                                                class="btn-check add-list-rem-btn prod-add-ore"
+                                                                title="remove offer" name="btnradio22" id="btnradio4"
+                                                                autocomplete="off">
+                                                            <label class="btn btn-outline-primary "
+                                                                for="btnradio4">-</label>
+                                                        </div>
+
+                                                    </div>
 
 
-                                                          <div class="btn-group d-flex justify-content-center d-block d-sm-none " role="group"      aria-label="Basic radio toggle button group">
 
-                                                                 <input type="radio" class="btn-check add-list-add-btn prod-add-oad " title="add new offer" name="btnradio2" id="btnradio3" autocomplete="off" checked>
-                                                                 <label class="btn btn-outline-primary" for="btnradio3">+</label>
-
-                                                                 <input type="radio" class="btn-check add-list-rem-btn prod-add-ore" title="remove offer" name="btnradio2" id="btnradio4" autocomplete="off">
-                                                                 <label class="btn btn-outline-primary " for="btnradio4">-</label>
-                                                                 
-  
-                                                         </div>
-
-                                                    <ul>
-                                                        <li>
-                                                            <!--FILED START-->
-                                                            <div class="row">
-                                                                <div class="col-md-5">
-                                                                    <div class="form-group">
-                                                                        <input type="text"
-                                                                               name="product_info_question[]"
-                                                                               class="form-control"
-                                                                               placeholder="<?php echo $BIZBOOK['SPECIFICATIONS_QUESTION']; ?>">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <div class="form-group">
-                                                                        <i class="material-icons">arrow_forward</i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-5">
-                                                                    <div class="form-group">
-                                                                        <input type="text" name="product_info_answer[]"
-                                                                               class="form-control"
-                                                                               placeholder="<?php echo $BIZBOOK['SPECIFICATIONS_ANSWER']; ?>">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!--FILED END-->
-                                                        </li>
-
-                                                    </ul>
 
                                                 </div>
                                             </div>
+
+
+
+
+
+
+
+
+                                            <ul>
+                                                <li>
+                                                    <!--FILED START-->
+                                                    <div class="row">
+                                                        <div class="col-md-5">
+                                                            <div class="form-group">
+                                                                <input type="text" name="product_info_question[]"
+                                                                    class="form-control"
+                                                                    placeholder="<?php echo $BIZBOOK['SPECIFICATIONS_QUESTION']; ?>">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group">
+                                                                <i class="material-icons">arrow_forward</i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div class="form-group">
+                                                                <input type="text" name="product_info_answer[]"
+                                                                    class="form-control"
+                                                                    placeholder="<?php echo $BIZBOOK['SPECIFICATIONS_ANSWER']; ?>">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--FILED END-->
+                                                </li>
+
+                                            </ul>
+
                                         </div>
                                     </div>
-                                    <!--FILED END-->
-                                    <!--FILED START-->
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                               <textarea class="form-control"
-                                                         name="product_tags"
-                                                         id="product_tags"
-                                                         placeholder="<?php echo $BIZBOOK['PRODUCT_TAGS_PLACEHOLDER']; ?>"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--FILED END-->
-                                </li>
-                            </ul>
-                            <!--FILED START-->
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <button type="submit" name="product_submit" class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
-                                </div>
-                                <div class="col-md-12">
-                                    <a href="dashboard" class="skip"><?php echo $BIZBOOK['GO_TO_USER_DASHBOARD']; ?> >></a>
-                                </div>
-                            </div>
-                            <!--FILED END-->
-                        </form>
                     </div>
                 </div>
-
-
+                <!--FILED END-->
+                <!--FILED START-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group mt-1">
+                            <textarea class="form-control" name="product_tags" id="product_tags"
+                                placeholder="<?php echo $BIZBOOK['PRODUCT_TAGS_PLACEHOLDER']; ?>"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!--FILED END-->
+                </li>
+                </ul>
+                <!--FILED START-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="submit" name="product_submit"
+                            class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
+                    </div>
+                    <div class="col-md-12">
+                        <a href="dashboard" class="skip"><?php echo $BIZBOOK['GO_TO_USER_DASHBOARD']; ?> >></a>
+                    </div>
+                </div>
+                <!--FILED END-->
+                </form>
             </div>
         </div>
+
+
+    </div>
+    </div>
     </div>
 </section>
 <!--END PRICING DETAILS-->
@@ -302,27 +339,31 @@ if($product_count_user >= $plan_type_product_count){
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/select-opt.js"></script>
-<script type="text/javascript">var webpage_full_link ='<?php echo $webpage_full_link;?>';</script>
-<script type="text/javascript">var login_url ='<?php echo $LOGIN_URL;?>';</script>
+<script type="text/javascript">
+var webpage_full_link = '<?php echo $webpage_full_link;?>';
+</script>
+<script type="text/javascript">
+var login_url = '<?php echo $LOGIN_URL;?>';
+</script>
 <script src="js/custom.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/custom_validation.js"></script>
 <script src="admin/ckeditor/ckeditor.js"></script>
 <script>
-    CKEDITOR.replace('product_description');
+CKEDITOR.replace('product_description');
 </script>
 <script>
-    function getProductSubCategory(val) {
-        $.ajax({
-            type: "POST",
-            url: "product_sub_category_process.php",
-            data: 'category_id=' + val,
-            success: function (data) {
-                $("#sub_category_id").html(data);
-                $('#sub_category_id').trigger("chosen:updated");
-            }
-        });
-    }
+function getProductSubCategory(val) {
+    $.ajax({
+        type: "POST",
+        url: "product_sub_category_process.php",
+        data: 'category_id=' + val,
+        success: function(data) {
+            $("#sub_category_id").html(data);
+            $('#sub_category_id').trigger("chosen:updated");
+        }
+    });
+}
 </script>
 </body>
 
