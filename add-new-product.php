@@ -150,32 +150,13 @@ if($product_count_user >= $plan_type_product_count){
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="log">
-                                                <div class="add-prod-high-oth py-0">
-                                                     
-                                                    <h4 class="my-2"><?php echo $BIZBOOK['HIGHLIGHTS']; ?></h4>
-                                                    
-                                                          <div class="d-none d-sm-block">
+                                                <div class="add-prod-high-oth">
 
-                                                          <span class="add-list-add-btn prod-add-high-oad"
-                                                          title="add new offer">+</span> 
-                                                          <span class="add-list-rem-btn prod-add-high-ore"
-                                                          title="remove offer">-</span> 
-                                                          </div>
-
-
-                                                             <div class="btn-group d-flex justify-content-center d-block d-sm-none " role="group"      aria-label="Basic radio toggle button group">
-
-                                                                   <input type="radio" class="btn-check  add-list-add-btn prod-add-high-oad " title="add new offer" name="btnradio1" id="btnradio1" autocomplete="off" checked>
-                                                                    <label class="btn btn-outline-primary" for="btnradio1">+</label>
-
-                                                                  <input type="radio" class="btn-check add-list-rem-btn prod-add-high-ore " title="remove offer" name="btnradio1" id="btnradio2" autocomplete="off">
-                                                           <label class="btn btn-outline-primary " for="btnradio2">-</label>
-
-
-                                                              </div>
-
-
-                                                            
+                                                    <h4><?php echo $BIZBOOK['HIGHLIGHTS']; ?></h4>
+                                                    <span class="add-list-add-btn prod-add-high-oad"
+                                                          title="add new offer">+</span>
+                                                    <span class="add-list-rem-btn prod-add-high-ore"
+                                                          title="remove offer">-</span>
                                                     <ul>
                                                         <li>
                                                             <!--FILED START-->
@@ -203,27 +184,13 @@ if($product_count_user >= $plan_type_product_count){
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="log">
-                                                <div class="add-prod-oth py-0">
+                                                <div class="add-prod-oth">
 
-                                                    <h4 class="my-2"><?php echo $BIZBOOK['SPECIFICATIONS']; ?></h4>
-                                                    <div class="d-none d-sm-block">
+                                                    <h4><?php echo $BIZBOOK['SPECIFICATIONS']; ?></h4>
                                                     <span class="add-list-add-btn prod-add-oad"
                                                           title="add new offer">+</span>
                                                     <span class="add-list-rem-btn prod-add-ore"
-                                                          title="remove offer">-</span> </div>
-
-
-                                                          <div class="btn-group d-flex justify-content-center d-block d-sm-none " role="group"      aria-label="Basic radio toggle button group">
-
-                                                                 <input type="radio" class="btn-check add-list-add-btn prod-add-oad " title="add new offer" name="btnradio2" id="btnradio3" autocomplete="off" checked>
-                                                                 <label class="btn btn-outline-primary" for="btnradio3">+</label>
-
-                                                                 <input type="radio" class="btn-check add-list-rem-btn prod-add-ore" title="remove offer" name="btnradio2" id="btnradio4" autocomplete="off">
-                                                                 <label class="btn btn-outline-primary " for="btnradio4">-</label>
-                                                                 
-  
-                                                         </div>
-
+                                                          title="remove offer">-</span>
                                                     <ul>
                                                         <li>
                                                             <!--FILED START-->

@@ -8968,7 +8968,6 @@ textarea {
     margin-bottom: 25px
 }
 
-
 .log p {
     font-size: 14px;
     text-align: center;
@@ -26299,9 +26298,8 @@ a[data-command='p'] {
     }
 
     .add-list-add-btn {
-        right: 65px
+        right: 75px
     }
-   
 
     .add-lis-done .btn-primary {
         margin-bottom: 10px
