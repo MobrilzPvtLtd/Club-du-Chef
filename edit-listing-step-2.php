@@ -20,11 +20,12 @@ if ($_GET['row'] == NULL && empty($_GET['row'])) {
     header("Location: db-all-listing");
 }
 
-if (!isset($_SESSION['listing_codea']) || empty($_SESSION['listing_codea'])) {
-    $listing_codea = $_GET['row'];
-} else {
-    $listing_codea = $_SESSION['listing_codea'];
-}
+$listing_codea = $_GET['row'];
+
+// if (!isset($_SESSION['listing_codea']) || empty($_SESSION['listing_codea'])) {
+// } else {
+//     $listing_codea = $_SESSION['listing_codea'];
+// }
 
 ?>
 <!-- START -->
@@ -77,6 +78,7 @@ if (!isset($_SESSION['listing_codea']) || empty($_SESSION['listing_codea'])) {
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="login-main add-list add-list-ser">
                 <div class="log-bor">&nbsp;</div>
@@ -85,6 +87,7 @@ if (!isset($_SESSION['listing_codea']) || empty($_SESSION['listing_codea'])) {
                     <div class="login">
                         <?php
                         $listings_a_row = getListing($listing_codea);
+                        
                         ?>
                         <h4><?php echo $BIZBOOK['SERVICES_PROVIDE']; ?></h4>
                         <span class="add-list-add-btn lis-ser-add-btn" title="add new offer">+</span>
@@ -149,6 +152,7 @@ if (!isset($_SESSION['listing_codea']) || empty($_SESSION['listing_codea'])) {
                                     <button type="submit" name="listing_submit"
                                             class="btn btn-primary"><?php echo $BIZBOOK['SAVE_AND_EXIT']; ?></button>
                                 </div>
+                                
                                 <div class="col-md-12">
                                     <a href="edit-listing-step-3?row=<?php echo $listing_codea; ?>"
                                        class="skip"><?php echo $BIZBOOK['SKIP_THIS']; ?> >></a>
