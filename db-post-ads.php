@@ -33,7 +33,7 @@ include "dashboard_left_pane.php";
                     <th>Action</th>
                 </tr>
                 </thead>
-                <tbody class="d-flex justify-content-flex-end">
+                <tbody class="">
                 <?php
                 $si = 1;
                 $session_user_id = $_SESSION['user_id'];
@@ -48,22 +48,22 @@ include "dashboard_left_pane.php";
                     $ads_price_details_row = getAdsPrice($all_ads_price_id);
 
                     ?>
-                    <tr>
-                        <td><?php echo $si; ?></td>
-                        <td><?php echo $ads_price_details_row['ad_price_name']; ?></td>
-                        <td><?php echo dateFormatconverter($row['ad_start_date']);?></td>
-                        <td><?php echo dateFormatconverter($row['ad_end_date']);?></td>
-                        <td><?php echo $row['ad_total_days']; ?> <?php echo $BIZBOOK['DAYS']; ?></td>
-                        <td><span class="db-list-ststus"><?php echo $row['ad_enquiry_status']; ?></span></td>
-                        <td>
+                    <tr style='width:100vw'>
+                        <td style='width:100%'><?php echo $si; ?></td>
+                        <td style='width:100%' class='text-center'><?php echo $ads_price_details_row['ad_price_name']; ?></td>
+                        <td style='width:100%'><?php echo dateFormatconverter($row['ad_start_date']);?></td>
+                        <td style='width:100%'><?php echo dateFormatconverter($row['ad_end_date']);?></td>
+                        <td style='width:100%'><?php echo $row['ad_total_days']; ?> <?php echo $BIZBOOK['DAYS']; ?></td>
+                        <td style='width:100%'><span class="db-list-ststus"><?php echo $row['ad_enquiry_status']; ?></span></td>
+                        <td style='width:100%'>
                             <span class="btn <?php echo $row['payment_status'] == "Paid" ? 'btn-success' : 'btn-danger'; ?>" 
                                 style="padding: 3px 10px; font-weight: 600; font-size: 11px; border-radius: 2px; border: 0 solid #d3d3d3;">
                                 <?php echo $row['payment_status']; ?>
                             </span>
                         </td>
-                        <td><span class="db-list-rat">1k</span></td>
-                        <td><span class="db-list-rat">642</span></td>
-                        <td><a href="post-your-ads-edit.php?row=<?php echo $row['all_ads_enquiry_id']; ?>&path=1" class="db-list-edit">Edit</a></td>
+                        <td style='width:100%'><span class="db-list-rat">1k</span></td>
+                        <td style='width:100%'><span class="db-list-rat">642</span></td>
+                        <td style='width:100%'><a href="post-your-ads-edit.php?row=<?php echo $row['all_ads_enquiry_id']; ?>&path=1" class="db-list-edit">Edit</a></td>
                     </tr>
                     <?php
                     $si++;

@@ -22626,7 +22626,7 @@ a[data-command='p'] {
     }
 }
 
-@media screen and (max-width:1370px) {
+@media screen and (max-width:768px) {
     .ud-inn {
         margin-top: 10px;
     }

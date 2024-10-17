@@ -142,7 +142,7 @@ if($footer_row['admin_job_show'] != 1) {
                     ?>
                 </div>
                 <div class="job-counts">
-                    <ul>
+                    <ul class=" d-flex justify-content-evenly w-100">
                         <li>
                             <span class="count1"><?php echo AddingZero_BeforeNumber(getCountJob()); ?></span>
                             <h4><?php echo $BIZBOOK['JOB-POSTED']; ?></h4>
