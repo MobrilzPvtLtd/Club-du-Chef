@@ -33,7 +33,7 @@ include "dashboard_left_pane.php";
                     <th>Action</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody class="d-flex justify-content-flex-end">
                 <?php
                 $si = 1;
                 $session_user_id = $_SESSION['user_id'];
