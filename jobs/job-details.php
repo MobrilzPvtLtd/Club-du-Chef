@@ -189,7 +189,7 @@ $usersqlrow = getUser($job_user_id); // To Fetch particular User Data
             </div>
 
             <!--START-->
-            <div class="job-tre">
+            <div class="job-tre mx-4">
                 <h2><?php echo $BIZBOOK['JOB_RELATED_JOB_OPENINGS']; ?></h2>
                 <ul>
                     <?php

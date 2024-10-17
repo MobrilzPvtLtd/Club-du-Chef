@@ -19,7 +19,7 @@ if($footer_row['admin_coupon_show'] != 1) {
             if(!isset($_SESSION['user_code']) && empty($_SESSION['user_code'])) {
                 ?>
 
-                <div class="plac-hom-ban coup-hom-ban">
+                <div class="plac-hom-ban mt-0 coup-hom-ban">
         <div class="container">
             <div class="row">
                 <div class="plac-hom-ban-inn">

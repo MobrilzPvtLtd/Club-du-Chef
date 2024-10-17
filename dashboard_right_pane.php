@@ -37,7 +37,7 @@ $session_user_id = $_SESSION['user_id'];
         <div class="ud-rhs-pay">
             <div class="ud-rhs-pay-inn">
                 <h3><?php echo $BIZBOOK['PAYMENT_INFORMATION']; ?></h3>
-                <ul>
+                <ul class="ps-1">
                     <li><b><?php echo $BIZBOOK['DASH_RIGHT_PLAN_NAME']; ?>
                             : </b> <?php if ($user_details_row['user_type'] == "Service provider") {
                             echo $user_plan_type['plan_type_name'];
@@ -158,7 +158,7 @@ $session_user_id = $_SESSION['user_id'];
             <div class="ud-rhs-pay ud-rhs-status">
                 <div class="ud-rhs-pay-inn">
                     <h3><?php echo $BIZBOOK['LISTING_OPEN_CLOSE_TITLE']; ?></h3>
-                    <ul>
+                    <ul class="ps-1">
                         <?php
                         foreach (getAllListingUser($_SESSION['user_id']) as $list_switch_row) {
                             ?>
@@ -192,7 +192,7 @@ $session_user_id = $_SESSION['user_id'];
         <div class="ud-rhs-pay ud-rhs-repo">
             <div class="ud-rhs-pay-inn">
                 <h3><?php echo $BIZBOOK['LAST_WEEK_REPORT']; ?></h3>
-                <ul>
+                <ul class="ps-1">
                     <li>
                         <span class="view"><?php echo $BIZBOOK['ENQUIRY']; ?></span>
                         <span
@@ -234,7 +234,7 @@ $session_user_id = $_SESSION['user_id'];
 
         <div class="ud-rhs-sec-1">
             <h4><?php echo $BIZBOOK['ADMIN_NOTIFICATION']; ?></h4>
-            <ul>
+            <ul class="ps-1">
                 <?php
                 if ($user_details_row['user_type'] == 'Service provider') {
                     $user_type_id = 101;

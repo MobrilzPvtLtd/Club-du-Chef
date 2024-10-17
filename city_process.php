@@ -23,7 +23,9 @@ if ($state_row_count <= 0) {
         $city_rs = mysqli_query($conn, $city_sql);
 
         while ($city_row = mysqli_fetch_array($city_rs)) {
-
+            if ($city_row['city_name'] == 'www') {
+                continue;
+            }
             ?>
 
             <option

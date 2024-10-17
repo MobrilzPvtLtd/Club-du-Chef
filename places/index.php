@@ -54,7 +54,7 @@ if (isset($_GET['category'])) {
 </style>
 <!-- START -->
 <section>
-    <div class="plac-hom-ban">
+    <div class="plac-hom-ban mt-0">
         <div class="container">
             <div class="row">
                 <div class="plac-hom-ban-inn">
@@ -65,7 +65,7 @@ if (isset($_GET['category'])) {
                     <form name="place_filter_form" id="place_filter_form" class="place_filter_form">
                         <ul>
                             <li class="sr-sea">
-                                <select class="chosen-select" id="place-select-search" name="place-select-search">
+                                <select class="chosen-select py-1" id="place-select-search" name="place-select-search">
                                     <option value="0"><?php echo $BIZBOOK['PLACE-HOME-SEARCH-OPTION-1']; ?></option>
                                     <?php
                                     foreach (getAllPlaces() as $placerow) {

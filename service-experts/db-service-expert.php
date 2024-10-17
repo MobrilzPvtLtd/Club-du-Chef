@@ -35,7 +35,7 @@ $service_expert_row = getExpertUser($user_id);
             <?php
         }
         ?>
-        <div class="ud-cen-s2">
+        <div class="ud-cen-s2 px-2">
             <?php include "../page_level_message.php"; ?>
             <div class="ad-int-sear">
                 <input type="text" id="myInput" placeholder="Search this page..">

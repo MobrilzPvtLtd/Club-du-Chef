@@ -20,11 +20,11 @@ if ($_GET['row'] == NULL && empty($_GET['row'])) {
     header("Location: db-all-listing");
 }
 
-if (!isset($_SESSION['listing_codea']) || empty($_SESSION['listing_codea'])) {
-    $listing_codea = $_GET['row'];
-} else {
-    $listing_codea = $_SESSION['listing_codea'];
-}
+$listing_codea = $_GET['row'];
+// if (!isset($_SESSION['listing_codea']) || empty($_SESSION['listing_codea'])) {
+// } else {
+//     $listing_codea = $_SESSION['listing_codea'];
+// }
 
 ?>
 <!-- START -->

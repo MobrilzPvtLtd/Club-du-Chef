@@ -16,7 +16,7 @@ $service_expert_row = getExpertUser($user_id);
 
 ?>
 
-<section class=" login-reg job-form">
+<section class=" login-reg job-form pb-3">
     <div class="container">
         <div class="row">
             <div class="login-main add-list">

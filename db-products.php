@@ -22,7 +22,7 @@ if (file_exists('config/product_page_authentication.php')) {
             <div class="log-bor">&nbsp;</div>
             <span class="udb-inst"><?php echo $BIZBOOK['ALL_PRODUCTS']; ?></span>
             <?php include('config/user_activation_checker.php'); ?>
-            <div class="ud-cen-s2">
+            <div class="ud-cen-s2 px-2">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab"
@@ -42,7 +42,7 @@ if (file_exists('config/product_page_authentication.php')) {
                     <!--                </li>-->
                 </ul>
                 <div class="tab-content">
-                    <div id="myproducts" class="container tab-pane active">
+                    <div id="myproducts" class="container mx-auto px-0 tab-pane active">
                         <h2><?php echo $BIZBOOK['PRODUCT_DETAILS']; ?></h2>
                         <?php include "page_level_message.php"; ?>
                         <a href="add-new-product" class="db-tit-btn"><?php echo $BIZBOOK['ADD_NEW_PRODUCT']; ?></a>

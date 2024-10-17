@@ -14,7 +14,7 @@ if (file_exists('config/general_user_authentication.php')) {
 ?>
     <!--CENTER SECTION-->
     <div class="ud-main">
-   <div class="ud-main-inn ud-no-rhs">
+   <div class="ud-main-inn ud-no-rhs d-flex justify-content-center">
     <div class="ud-cen">
         <div class="log-bor">&nbsp;</div>
         <span class="udb-inst"><?php echo $BIZBOOK['SEO_DETAILS']; ?></span>

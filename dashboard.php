@@ -10,7 +10,7 @@ include "dashboard_left_pane.php";
 $session_user_id = $user_details_row['user_id'];
 ?>
 <!--CENTER SECTION-->
-<div class="ud-main">
+<div class="ud-main ">
    <div class="ud-main-inn">
 <div class="ud-cen">
     <?php include('config/user_activation_checker.php'); ?>
