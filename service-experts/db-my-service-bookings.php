@@ -20,7 +20,7 @@ $service_expert_row = getExpertUser($user_id);
 ?>
     <!--CENTER SECTION-->
     <div class="ud-main">
-   <div class="ud-main-inn ud-no-rhs">
+   <div class="ud-main-inn ud-no-rhs d-flex justify-content-center">
     <div class="ud-cen">
         <div class="log-bor">&nbsp;</div>
         <span class="udb-inst"><?php echo $BIZBOOK['MY_SERVICE_BOOKINGS']; ?></span>
@@ -31,10 +31,10 @@ $service_expert_row = getExpertUser($user_id);
             <?php
         }
         ?>
-        <div class="ud-cen-s2">
+        <div class="ud-cen-s2 ">
             <?php include "../page_level_message.php"; ?>
             <div class="ad-int-sear">
-                <input type="text" id="myInput" placeholder="Search this page..">
+                <input type="text" id="myInput" placeholder="Search this page.." class="w-100">
             </div>
             <table class="responsive-table bordered" id="myTable">
                 <thead>

@@ -84,7 +84,7 @@ if($footer_row['admin_job_show'] != 1) {
                     <form name="job_filter_form" id="job_filter_form" class="job_filter_form">
                         <ul>
                             <li class="sr-sea">
-                                <select class="chosen-select" id="job-select-search" name="serjobs">
+                                <select class="chosen-select py-1" id="job-select-search" name="serjobs">
                                     <?php
                                     foreach (getAllJobCategories() as $job_search_categories_row) {
 
@@ -99,7 +99,7 @@ if($footer_row['admin_job_show'] != 1) {
                                 </select>
                             </li>
                             <li class="sr-loc">
-                                <select class="chosen-select" id="job-select-city" name="serjobsloc">
+                                <select class="chosen-select py-1" id="job-select-city" name="serjobsloc">
                                 <?php if(isset($_SESSION['google_city_name'])&& ($_SESSION['google_city_name']) != NULL ){ ?>
                                                         <option <?php 
                                                             echo 'selected';
@@ -210,7 +210,7 @@ if($footer_row['admin_job_show'] != 1) {
                     <h2><span><?php echo $BIZBOOK['JOB-HEADER-H3']; ?></span></h2>
                     <p><?php echo $BIZBOOK['JOB-HEADER-P3']; ?></p>
                 </div>
-                <div class="job-tre">
+                <div class="job-tre mx-4">
                     <ul>
                         <?php
 

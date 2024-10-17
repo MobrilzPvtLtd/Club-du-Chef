@@ -10,7 +10,7 @@ include "dashboard_left_pane.php";
 ?>
 			<!--CENTER SECTION-->
             <div class="ud-main">
-   <div class="ud-main-inn ud-no-rhs">
+   <div class="ud-main-inn ud-no-rhs d-flex justify-content-center">
 			<div class="ud-cen">
 				<div class="log-bor">&nbsp;</div>
 				<span class="udb-inst"><?php echo $BIZBOOK['USER_PROFILE']; ?></span>
@@ -114,8 +114,8 @@ include "dashboard_left_pane.php";
 									<td><?php echo $user_details_row['user_website']; ?></td>
 								</tr>
                                 <tr>
-                                    <td>
-                                        <a href="db-my-profile-edit" class="db-pro-bot-btn"><?php echo $BIZBOOK['EDIT_MY_PROFILE']; ?></a>
+                                    <td class="py-2 px-0 ">
+                                        <a href="db-my-profile-edit" class="db-pro-bot-btn mt-0 py-0"><?php echo $BIZBOOK['EDIT_MY_PROFILE']; ?></a>
                                         <a href="db-payment" class="db-pro-bot-btn"><?php echo $BIZBOOK['UPGRADE']; ?></a>
                                     </td>
 									<td></td>

@@ -770,7 +770,10 @@ foreach (getAllCities() as $city) {
                                                                         src="<?php echo $slash; ?>/images/icon/shop.png"
                                                                         alt="" /><?php echo $BIZBOOK['ALL_LISTING']; ?></a>
                                                             </li>
-                                                            <li><a href="<?php echo $slash; ?>add-listing-start"><img
+                                                            
+                                                           
+                                                           
+                                                                        <li><a href="<?php echo $slash; ?>add-listing-start"><img
                                                                         src="<?php echo $slash; ?>/images/icon/dbl3.png"
                                                                         alt="" /><?php echo $BIZBOOK['ADD_NEW_LISTING']; ?></a>
                                                             </li>

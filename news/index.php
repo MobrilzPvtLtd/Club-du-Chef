@@ -65,11 +65,11 @@ if (file_exists('../config/news_page_authentication.php')) {
 <!--END-->
 
 <!-- START -->
-<section class="news-hom-top">
+<section class="news-hom-top py-4">
     <div class="news-hom-top-inn">
         <div class="container">
             <div class="row">
-                <div class="news-hom-ban-ads">
+                <div class="news-hom-ban-ads pb-3">
                     <?php
                     $ad_position_id = 7;   //Ad position on News Home Page Top
                     $get_ad_row = getAds($ad_position_id);

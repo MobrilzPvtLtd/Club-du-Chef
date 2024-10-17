@@ -9,7 +9,7 @@ include "dashboard_left_pane.php";
 ?>
 <!--CENTER SECTION-->
 <div class="ud-main">
-   <div class="ud-main-inn ud-no-rhs">
+   <div class="ud-main-inn ud-no-rhs d-flex justify-content-center">
 <div class="ud-cen">
     <div class="log-bor">&nbsp;</div>
     <span class="udb-inst"><?php echo $BIZBOOK['SETTING']; ?></span>
@@ -227,9 +227,9 @@ include "dashboard_left_pane.php";
                 }
                 ?>
                     <tr>
-                        <td>
+                        <td class="p-0">
                             <button type="submit" name="setting_update_submit"
-                                    class="sub-btn"><?php echo $BIZBOOK['SAVE_CHANGES']; ?></button>
+                                    class="sub-btn p-2"><?php echo $BIZBOOK['SAVE_CHANGES']; ?></button>
                         </td>
                         <td></td>
                     </tr>

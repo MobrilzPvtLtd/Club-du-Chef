@@ -10,7 +10,7 @@
 <section class="<?php if ($footer_row['admin_language'] == 2) {
     echo "lg-arb";
 } ?> ud">
-    <div class="ud-inn">
+    <div class="ud-inn ">
         <!--LEFT SECTION-->
         <div class="ud-lhs">
             <div class="ud-lhs-s1">
