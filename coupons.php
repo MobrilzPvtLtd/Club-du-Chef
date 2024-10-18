@@ -20,7 +20,7 @@ if($footer_row['admin_coupon_show'] != 1) {
                 ?>
 
                 <div class="plac-hom-ban mt-0 coup-hom-ban">
-        <div class="container">
+        <div class="container mt-4">
             <div class="row">
                 <div class="plac-hom-ban-inn">
                     <h1><?php echo $BIZBOOK['COUPON-HEADING-LABEL']; ?></h1>

@@ -224,7 +224,7 @@ foreach (getAllCities() as $city) {
                 <div class="hom-top">
                     <div class="container">
                         <div class="row">
-                            <div class="hom-nav <?php if (!isset($_SESSION['user_name']) && empty($_SESSION['user_name'])) {
+                            <div class="hom-nav d-flex justify-content-center <?php if (!isset($_SESSION['user_name']) && empty($_SESSION['user_name'])) {
                                } else { ?> db-open <?php } ?>">
                                 <!--MOBILE MENU-->
 
@@ -391,7 +391,7 @@ foreach (getAllCities() as $city) {
                                 </div>
 
 
-                                <ul class="bl">
+                                <ul class="bl ">
                                     <li>
                                         <script>
                                         function ChangeCity(city) {

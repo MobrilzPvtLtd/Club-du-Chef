@@ -12541,7 +12541,18 @@ textarea {
 }
 
 .pg-eve-ban {
-    margin-top: var(--topspac)
+    margin-top:110px;
+}
+
+@media screen and (max-width:424px) {
+    .pg-eve-ban {
+        margin-top:70px;
+    }
+}
+@media screen and (min-width:425px) and (max-width:1023px) {
+    .pg-eve-ban {
+        margin-top:80px;
+    }
 }
 
 .event-body,
@@ -16903,7 +16914,7 @@ div#pop_enq_success p {
 }
 
 .job-sear ul li:before {
-    margin: 10px 0 0 15px;
+    margin: 4px 0 0 15px;
     font-size: 21px;
     color: #8592c1;
     z-index: 3
@@ -16911,7 +16922,7 @@ div#pop_enq_success p {
 
 .job-sear ul li.sr-sea:before {
     content: "business_center";
-    margin: 9px 0 0 15px
+    margin: 4px 0 0 15px
 }
 
 .job-sear ul li.sr-loc:before {
@@ -16961,11 +16972,21 @@ div#pop_enq_success p {
 
 .job-sear ul li.sr-btn button {
     border: 0;
-    padding: 5px 12px;
+    padding: 5px 17px;
     border-radius: 0 10px 10px 0;
     line-height: 24px;
     float: left
 }
+/* @media screen and (min-width:425px) and (max-width:767px) {
+    .job-sear ul li.sr-btn button {
+        border: 0;
+        padding: 1px 14px;
+        border-radius: 0 10px 10px 0;
+        line-height: 24px;
+        float: left
+    }
+    
+} */
 
 .job-sear ul li.sr-btn button i {
     color: #fff;
@@ -21698,7 +21719,7 @@ a[data-command='p'] {
 }
 
 .news-top-menu {
-    margin-top: var(--topspac);
+    /* margin-top: var(--topspac); */
     background: #000;
     float: left;
     width: 100%
@@ -21708,6 +21729,12 @@ a[data-command='p'] {
     float: left;
     width: 100%
 }
+
+ @media screen and (min-width:769px) and (max-width:1440px) {
+    .news-menu {
+        padding-top: 80px;
+    }
+} 
 
 .news-menu ul {
     margin: 0 auto;
@@ -22875,13 +22902,16 @@ a[data-command='p'] {
 
 .plac-hom-search .job-sear ul li.sr-sea:before {
     content: "place";
-    margin: 15px 0 0 15px
+    margin: 3px 0 0 15px
 }
 
 .plac-hom-search .job-sear ul li.sr-btn button {
-    padding: 11px 12px;
-    height: 60px
+    padding: 6px 12px;
+    height: 50px
 }
+
+
+
 
 .plac-hom-bd {
     padding: 70px 0;
@@ -23424,7 +23454,8 @@ a[data-command='p'] {
 }
 
 .plac-deta-sec .plac-hom-tit:before {
-    margin-top: -7px
+    margin-top: -7px;
+    display:none;
 }
 
 .plac-det-tit-inn {
@@ -23643,7 +23674,8 @@ a[data-command='p'] {
     }
 
     .plac-hom-tit:before {
-        margin-top: -9px
+        margin-top: -9px;
+        display:none;
     }
 
     .plac-hom-all-pla ul li {

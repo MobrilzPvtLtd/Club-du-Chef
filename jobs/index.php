@@ -210,7 +210,7 @@ if($footer_row['admin_job_show'] != 1) {
                     <h2><span><?php echo $BIZBOOK['JOB-HEADER-H3']; ?></span></h2>
                     <p><?php echo $BIZBOOK['JOB-HEADER-P3']; ?></p>
                 </div>
-                <div class="job-tre mx-4">
+                <div class="job-tre d-flex justify-content-center">
                     <ul>
                         <?php
 

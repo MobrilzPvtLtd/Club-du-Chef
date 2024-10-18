@@ -35,7 +35,7 @@ if (file_exists('../config/news_page_authentication.php')) {
 <section class="news-top-menu">
     <div class="container">
         <div class="row">
-            <div class="news-menu">
+            <div class="news-menu d-flex justify-content-center">
                 <ul>
                     <li><a href="<?php echo $slash ?>news" class="<?php if ($current_news_page == "news/index.php") {
                             echo 'act';
@@ -344,7 +344,7 @@ if (file_exists('../config/news_page_authentication.php')) {
                     </div>
                     <!-- ADS END-->
                     <!-- SUBSCRIBE START-->
-                    <div class="news-subsc">
+                    <div class="news-subsc px-1 pb-1">
                         <div class="ud-rhs-poin1">
                             <div class="log-bor">&nbsp;</div>
                             <h5><?php echo $BIZBOOK['NEWS-SUBSCRIBE']; ?> <b><?php echo $BIZBOOK['NEWS-NEWSLETTER']; ?></b></h5>

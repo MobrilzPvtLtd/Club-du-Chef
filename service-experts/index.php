@@ -99,7 +99,7 @@ if($footer_row['admin_expert_show'] != 1) {
                     <form name="expert_filter_form" id="expert_filter_form" class="expert_filter_form">
                         <ul>
                             <li class="sr-sea">
-                                <select class="chosen-select" id="expert-select-search1" name="expert-select-search">
+                                <select class="chosen-select py-1" id="expert-select-search1" name="expert-select-search">
                                     <?php
                                     foreach (getAllActiveExpertCategoriesPos() as $expert_search_categories_row) {
 
@@ -115,7 +115,7 @@ if($footer_row['admin_expert_show'] != 1) {
                                 </select>
                             </li>
                             <li class="sr-loc">
-                                <select class="chosen-select" id="job-select-city" name="serjobsloc">
+                                <select class="chosen-select py-1" id="job-select-city" name="serjobsloc">
                                     <?php
                                     $expert_location_qry = getAllExpertsGroupByCity();
 

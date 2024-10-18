@@ -177,7 +177,7 @@ include "header.php";
     </div>
 </section>
 <!--END-->
-<div id="community-pagination-container"></div>
+<div id="community-pagination-container" class="d-flex justify-content-center"></div>
 <?php
 include "footer.php";
 ?>
