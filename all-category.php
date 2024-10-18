@@ -144,7 +144,7 @@ foreach (getAllCities() as $city) {
     </div>
     <div class="col-md-3 d-xs-block d-sm-block d-md-none">
 
-        
+
         <!-- <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
 
@@ -174,36 +174,36 @@ foreach (getAllCities() as $city) {
             </button>
         </div> -->
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
+            <div class="carousel-inner">
 
-    <!-- First Slide -->
-    <div class="carousel-item active">
-      <div class="d-flex justify-content-center">
-        <img src="../33.jpg" class="d-block w-25 me-2" alt="Image 1">
-        <img src="../CE.jpg" class="d-block w-25" alt="Image 2">
-      </div>
-    </div>
+                <!-- First Slide -->
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center">
+                        <img src="../33.jpg" class="d-block w-25 me-2" alt="Image 1">
+                        <img src="../CE.jpg" class="d-block w-25" alt="Image 2">
+                    </div>
+                </div>
 
-    <!-- Second Slide -->
-    <div class="carousel-item">
-      <div class="d-flex justify-content-center">
-        <img src="../CE.jpg" class="d-block w-25 me-2" alt="Image 3">
-        <img src="../CE.jpg" class="d-block w-25" alt="Image 4">
-      </div>
-    </div>
+                <!-- Second Slide -->
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <img src="../CE.jpg" class="d-block w-25 me-2" alt="Image 3">
+                        <img src="../CE.jpg" class="d-block w-25" alt="Image 4">
+                    </div>
+                </div>
 
-  </div>
+            </div>
 
-  <!-- Carousel Controls -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
 
     </div>
 
