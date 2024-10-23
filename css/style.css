@@ -2501,7 +2501,7 @@ div#review_success {
 .ban-ql {
     margin: 0 auto;
     display: table;
-    width: 90%;
+    width: 103%;
     position: relative;
     margin-top: -175px
 }
@@ -2571,7 +2571,7 @@ div#review_success {
 
 .ban-ql ul li div img {
     border-radius: 15px;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 15 / 9;
 }
 
 .ban-ql ul li div h4 {
@@ -2603,7 +2603,8 @@ div#review_success {
 .ban-ql ul li:first-child div {}
 
 .ban-ql ul li:last-child div {
-    border-right: 0
+    border-right: 0;
+    width: 85%;
 }
 
 .ban-ql ul li:nth-child(5) div {
@@ -5478,6 +5479,9 @@ div#review_success {
     padding: 1px 3px;
     border-radius: 2px
 }
+/* .hom-ads .container{
+    max-width: 86%;
+} */
 
 .hom-ads {
     padding: 40px 0 0;
@@ -23692,7 +23696,7 @@ a[data-command='p'] {
 
     .plac-hom-all-pla ul li {
         width: 50%;
-        padding: 10px
+        padding: 0px 5px 10px 5px
     }
 
     .plac-hom-tit-ic-sugg span {
@@ -23781,7 +23785,7 @@ a[data-command='p'] {
 @media screen and (max-width: 400px) {
     .plac-hom-all-pla ul li {
         width: 100%;
-        padding: 10px 0
+        padding: 0px 5px 10px 5px
     }
 
     .plac-hom-box-im img {
@@ -27091,6 +27095,17 @@ a[data-command='p'] {
 }
 
 @media screen and (max-width:576px) {
+    .hom-ads .container {
+        max-width: 80%;
+    }
+    .pri .container {
+        max-width: 100%;
+    }
+
+    .caro-home .container {
+        max-width: 85%;
+    }
+
     .container {
         max-width: 90%;
         padding: 0

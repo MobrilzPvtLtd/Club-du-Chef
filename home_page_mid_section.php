@@ -443,7 +443,7 @@ if ($current_home_page == '1') {
     <section class="<?php if ($footer_row['admin_language'] == 2) {
         echo "lg-arb";
     } ?> pri">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="plac-det-tit-inn">
                     <h2><?php echo $BIZBOOK['CHOOSE_YOUR_PLAN']; ?></h2>
@@ -1422,7 +1422,6 @@ if ($current_home_page == '1') {
         <div class="str count">
             <div class="container">
                 <div class="row">
-
                     <div class="how-wrks">
                         <div class="home-tit">
                             <h2><span><?php echo $BIZBOOK['HOM-HOW-TIT']; ?></span></h2>

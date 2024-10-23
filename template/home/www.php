@@ -34,10 +34,24 @@ if ($current_home_page != '2' && $current_home_page != '3') {
                     // } else {
                 ?> 
                 <ul>
-                    <?php
+                    <!-- <?php
                     foreach ($images as $index => $imageUrl) {
                         $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
                         echo '<a href="' . $link . '" target="_blank"><li><div class="mob_card p-0 " ><img class="img-fluid ratio ratio-3x4 object-fit-contain" src="' . $imageUrl . '" alt=""></div></li></a>';
+                    }
+                    ?> -->
+                    <?php
+                    foreach ($images as $index => $imageUrl) {
+                        $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
+                    ?>
+                        <a href="<?php echo $link; ?>" target="_blank">
+                        <li>
+                            <div class="p-0 h-40 mb-2">
+                                <img class="ratio ratio-3x4" src="<?php echo $imageUrl; ?>" alt="">
+                            </div>
+                        </li>
+                        </a>
+                    <?php
                     }
                     ?>
                 </ul>
@@ -50,7 +64,7 @@ if ($current_home_page != '2' && $current_home_page != '3') {
 
     <!-- START -->
     <section>
-        <div class="str container-fluid">
+        <div class="str container">
             
                 <div class="d-flex flex-column justify-content-center align-items-center ">
                     <div class="home-tit d-flex flex-column justify-content-center align-items-center">

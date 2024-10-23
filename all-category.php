@@ -62,7 +62,7 @@ foreach (getAllCities() as $city) {
 
 <!-- START -->
 <section>
-    <div class="str all-cate-pg py-5">
+    <div class="str all-cate-pg py-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
@@ -133,8 +133,30 @@ foreach (getAllCities() as $city) {
             </div>
         </div>
     </div>
-    <div class="col-md-3 d-xs-block d-sm-block d-md-none py-2">
-        <div class="container col-md-12" style="width: 100%;">
+    <div class="d-xs-block d-sm-block d-md-none">
+        <div class="ban-ql">
+            <div class="container-fluid">
+                <div class="row">
+                    <ul>
+                        <?php
+                        foreach ($catImages as $index => $imageUrl) {
+                            $link = isset($catImageLinks[$index]) ? $catImageLinks[$index] : '#';
+                        ?>
+                            <a href="<?php echo $link; ?>" target="_blank">
+                            <li>
+                                <div class="p-0 h-40 mb-2">
+                                    <img src="<?php echo $imageUrl; ?>" alt="">
+                                </div>
+                            </li>
+                            </a>
+                        <?php
+                        }
+                        ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="container col-md-12" style="width: 100%;">
             <section class="logos-slider slider">
                 <?php
                 foreach ($catImages as $index => $imageUrl) {
@@ -151,7 +173,7 @@ foreach (getAllCities() as $city) {
                 }
                 ?>
             </section>
-        </div>
+        </div> -->
     </div>
 </section>
 <!-- END -->
@@ -167,7 +189,7 @@ include "footer.php";
 <script src="js/jquery-ui.js"></script>
 <script src="<?php echo $slash; ?>js/select-opt.js"></script>
 <script src="<?php echo $slash; ?>js/blazy.min.js"></script>
-<script src="<?php echo $slash; ?>js/slick.js"></script>
+<!-- <script src="<?php echo $slash; ?>js/slick.js"></script> -->
 <script type="text/javascript">
 var webpage_full_link = '<?php echo $webpage_full_link;?>';
 </script>
@@ -185,7 +207,7 @@ $("#tail-se").on("keyup", function() {
     });
 });
 </script>
-<script>
+<!-- <script>
     $(document).ready(function() {
         $('.logos-slider').slick({
             infinite: true,
@@ -204,7 +226,7 @@ $("#tail-se").on("keyup", function() {
 
         });
     });
-</script>
+</script> -->
 <?php
 if (isset($_GET["page"])) {
     ?>
