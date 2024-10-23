@@ -355,10 +355,9 @@ foreach (getAllCities() as $city) {
                                     </div>
                                 </div>
 
-
                                 <!--END MOBILE MENU-->
 
-                                <div class="top-ser py-3 ps-2 d-none  d-lg-block ">
+                                <!-- <div class="top-ser py-3 ps-2 d-none  d-lg-block ">
                                     <form name="filter_form" id="filter_form" class="filter_form">
                                         <ul>
                                             <li class="sr-sea">
@@ -388,8 +387,7 @@ foreach (getAllCities() as $city) {
                                             </li>
                                         </ul>
                                     </form>
-                                </div>
-
+                                </div> -->
 
                                 <ul class="bl ">
                                     <li>
@@ -1058,7 +1056,7 @@ foreach (getAllCities() as $city) {
                         <div class="ban-search ban-sear-all d-flex justify-content-center">
                             <form name="filter_form" id="filter_form" class="filter_form w-100">
                                 <ul>
-                                    <li class="sr-cate">
+                                    <!-- <li class="sr-cate">
                                         <select onChange="getSearchCategories(this.value);" name="explor_select"
                                             id="explor_select" class="chosen-select rounded">
                                             <option value=""><?php echo $BIZBOOK['SEARCHBOX_LABEL_SER']; ?></option>
@@ -1090,7 +1088,7 @@ foreach (getAllCities() as $city) {
                                             <option value="9"><?php echo $BIZBOOK['BLOGS']; ?></option>
                                             <?php } ?>
                                         </select>
-                                    </li>
+                                    </li> -->
                                     <!-- <li class="sr-cit">
                                             <select id="city_check" name="city_check" class="chosen-select">
                                                 <option value=""><?php echo $BIZBOOK['SELECT_CITY']; ?></option>
@@ -1147,26 +1145,26 @@ foreach (getAllCities() as $city) {
                                                 }
                                                 ?>
                                             </select>
-                                        </li> -->
-                                    <li class="sr-sea">
+                                    </li> -->
+                                    <li class="sr-cate">
                                         <input type="text" autocomplete="off" id="select-search"
                                             placeholder="<?php echo $BIZBOOK['SEARCHBOX_LABEL']; ?>"
                                             class="search-field rounded">
                                         <ul id="tser-res" class="tser-res tser-res1">
+                                            <!-- <?php
+                                            $si = 1;
+                                            foreach (getAllSearch() as $search_header_row) {
+                                            ?>
+                                                <li>
+                                                    <div>
+                                                        <h4><?php echo $search_header_row['search_title']; ?></h4>
+                                                        <span><?php echo $search_header_row['search_tag_line']; ?></span>
+                                                        <a href="<?php echo $search_header_row['search_list_link']; ?>"></a>
+                                                    </div>
+                                                </li>
                                             <?php
-                                                $si = 1;
-                                                foreach (getAllSearch() as $search_header_row) {
-                                                    ?>
-                                            <li>
-                                                <div>
-                                                    <h4><?php echo $search_header_row['search_title']; ?></h4>
-                                                    <span><?php echo $search_header_row['search_tag_line']; ?></span>
-                                                    <a href="<?php echo $search_header_row['search_list_link']; ?>"></a>
-                                                </div>
-                                            </li>
-                                            <?php
-                                                }
-                                                ?>
+                                            }
+                                            ?> -->
                                         </ul>
                                     </li>
                                     <li class="sr-btn">
