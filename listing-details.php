@@ -948,7 +948,7 @@ for ($j = 1; $j <= 4; $j++) {
                                     </div>
                                 </div>
                                 <?php if ($enquiryImages && $enquiry['payment_status'] == 'Paid') { ?>
-                                    <div class="container mt-5 col-md-12" style="width: 80%;">
+                                    <div class="container mt-5 col-md-12" style="width: 85%;">
                                         <section class="logos-slider1 slider">
                                             <?php
                                             foreach ($enquiryImages as $index => $imageUrl) {
@@ -956,7 +956,7 @@ for ($j = 1; $j <= 4; $j++) {
                                             ?>
                                                 <a href="<?php echo $link; ?>" target="_blank">
                                                     <li>
-                                                        <div style="padding: 0; height: 9vw;">
+                                                        <div class="p-0 h-40 mb-2">
                                                             <img src="<?php echo $imageUrl; ?>" alt="">
                                                         </div>
                                                     </li>

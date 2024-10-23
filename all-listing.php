@@ -703,11 +703,6 @@ foreach (getAllCities() as $city) {
                         </section>
                     </div>
 
-
-
-
-
-
                     <div class="inn">
                         <div class="f2">
                             <div class="vfilter">

@@ -62,7 +62,7 @@ foreach (getAllCities() as $city) {
 
 <!-- START -->
 <section>
-    <div class="str all-cate-pg py-6">
+    <div class="str all-cate-pg py-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
@@ -107,20 +107,14 @@ foreach (getAllCities() as $city) {
                     </div>
                 </div>
 
-
                 <div class="col-md-3 d-none d-md-block  ">
                     <div class="sh-all-scat">
-
                         <?php
-      foreach ($catImages as $index => $imageUrl) {
-
-                       $link = isset($catImageLinks[$index]) ? $catImageLinks[$index] : '#';
-       ?>
-
+                        foreach ($catImages as $index => $imageUrl) {
+                            $link = isset($catImageLinks[$index]) ? $catImageLinks[$index] : '#';
+                        ?>
                         <a href="<?php echo $link; ?>" target="_blank">
-
                             <ul id="tail-re">
-
                                 <li>
                                     <div class="sh-all-scat-box">
 
@@ -130,57 +124,35 @@ foreach (getAllCities() as $city) {
                                     </div>
                                 </li>
                             </ul>
-
                         </a>
                         <?php
-  }
-  ?>
-
-
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-md-3 d-xs-block d-sm-block d-md-none py-3">
-
-
-       
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-
-                <!-- First Slide -->
-                <div class="carousel-item active">
-                    <div class="d-flex justify-content-center">
-                        <img src="https://firstfiddle-cp.s3.ap-south-1.amazonaws.com/brands/logo/1725260423233_1693046587077_lotd1.jpg" class="d-block w-100 me-2" alt="Image">
-                        <img src="https://firstfiddle-cp.s3.ap-south-1.amazonaws.com/brands/logo/1695726103713_tp1.jpg" class="d-block w-100" alt="Image 2">
-                    </div>
-                </div>
-
-                <!-- Second Slide -->
-                <!-- <div class="carousel-item">
-                    <div class="d-flex justify-content-center">
-                        <img src="https://firstfiddle-cp.s3.ap-south-1.amazonaws.com/brands/logo/1725260423233_1693046587077_lotd1.jpg" class="d-block w-100 me-2" alt="Image 3">
-                        <img src="https://firstfiddle-cp.s3.ap-south-1.amazonaws.com/brands/logo/1695726103713_tp1.jpg" class="d-block w-100" alt="Image 4">
-                    </div>
-                </div> -->
-
-            </div>
-
-            <!-- Carousel Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+    <div class="col-md-3 d-xs-block d-sm-block d-md-none py-2">
+        <div class="container col-md-12" style="width: 100%;">
+            <section class="logos-slider slider">
+                <?php
+                foreach ($catImages as $index => $imageUrl) {
+                    $link = isset($catImageLinks[$index]) ? $catImageLinks[$index] : '#';
+                ?>
+                    <a href="<?php echo $link; ?>" target="_blank">
+                    <li>
+                        <div class="p-0 h-40 mb-2">
+                            <img src="<?php echo $imageUrl; ?>" alt="">
+                        </div>
+                    </li>
+                    </a>
+                <?php
+                }
+                ?>
+            </section>
         </div>
-
     </div>
-
-
 </section>
 <!-- END -->
 
@@ -195,6 +167,7 @@ include "footer.php";
 <script src="js/jquery-ui.js"></script>
 <script src="<?php echo $slash; ?>js/select-opt.js"></script>
 <script src="<?php echo $slash; ?>js/blazy.min.js"></script>
+<script src="<?php echo $slash; ?>js/slick.js"></script>
 <script type="text/javascript">
 var webpage_full_link = '<?php echo $webpage_full_link;?>';
 </script>
@@ -211,6 +184,26 @@ $("#tail-se").on("keyup", function() {
         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
 });
+</script>
+<script>
+    $(document).ready(function() {
+        $('.logos-slider').slick({
+            infinite: true,
+            slidesToShow: 8,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            responsive: [{
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: false
+                }
+            }]
+
+        });
+    });
 </script>
 <?php
 if (isset($_GET["page"])) {
