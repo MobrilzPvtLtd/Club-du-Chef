@@ -2153,7 +2153,8 @@ div#review_success {
 
 .hom-nav .ic-logo {
     width: 200px;
-    margin-top: 20px
+    margin-top: 20px;
+    aspect-ratio: 3 / 1;
 }
 
 .hom-nav .bl {

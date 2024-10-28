@@ -230,14 +230,14 @@ foreach (getAllCities() as $city) {
 
                                 <?php if ($imageShow && !empty($imagesLogo)): ?>
                                 <?php foreach ($imagesLogo as $imageUrl): ?>
-                                <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log">
+                                <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log mx-1">
                                     <img src="<?php echo $imageUrl; ?>" alt="" class="ic-logo">
                                 </a>
                                 <?php endforeach; ?>
                                 <?php else: ?>
 
 
-                                <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log ">
+                                <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log">
                                     <img src="<?php echo htmlspecialchars($slash . '/images/home/' . $footer_row['header_logo']); ?>"
                                         <?php if ($footer_row['header_logo_width'] !== NULL || $footer_row['header_logo_height'] !== NULL): ?>
                                         style="<?php if ($footer_row['header_logo_width'] !== NULL): ?>width: <?php echo htmlspecialchars($footer_row['header_logo_width']); ?>; <?php endif; ?>
