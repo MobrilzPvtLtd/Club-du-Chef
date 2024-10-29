@@ -936,11 +936,15 @@ jQuery(document).ready(function ($) {
         }else{
             var link = '';
         }
-
-        var explor_select = $("#explor_select").val();
-        var expert_select_search = $("#expert-select-search").val();
-        var select_city = $("#city_check").val();
-        window.location.href = link + "search_box_process.php?explor_select=" + explor_select + "&expert_select_search=" + expert_select_search + "&select_city=" + select_city;
+        
+        var expert_select_search = $("#select-search").val();
+        // console.log(expert_select_search);
+        window.location.href = link + "search_box_process.php?expert_select_search=" + expert_select_search;
+        
+        // var explor_select = $("#explor_select").val();
+        // var expert_select_search = $("#expert-select-search").val();
+        // var select_city = $("#city_check").val();
+        // window.location.href = link + "search_box_process.php?explor_select=" + explor_select + "&expert_select_search=" + expert_select_search + "&select_city=" + select_city;
 
     });
 });
@@ -1101,12 +1105,44 @@ if (navigator.geolocation) {
 
 
 //HOME PAGE SEARCH - INTERNAL PAGE SEARCH
+
 $("#select-search").on("keyup", function () {
-    var value = $(this).val().toLowerCase();
-    $("#tser-res li").filter(function () {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
+    var query = $(this).val().toLowerCase();
+
+    if (query.length > 0) {
+        fetch('search.php?q=' + encodeURIComponent(query))
+            .then(response => response.json())
+            .then(data => {
+                let resultsDiv = document.getElementById('results');
+                resultsDiv.innerHTML = '';
+                let foundItems = false;
+
+                // Loop through each category in the returned data
+                for (const category in data) {
+                    if (data[category].length > 0) {
+                        foundItems = true;
+                        data[category].forEach(item => {
+                            let div = document.createElement('div');
+                            div.textContent = item;
+                            div.onclick = function() {
+                                document.getElementById('select-search').value = item;
+                                resultsDiv.innerHTML = '';
+                                resultsDiv.style.display = 'none';
+                            };
+                            resultsDiv.appendChild(div);
+                        });
+                    }
+                }
+
+                // Show or hide the results based on whether any items were found
+                resultsDiv.style.display = foundItems ? 'block' : 'none';
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    } else {
+        document.getElementById('results').style.display = 'none';
+    }
 });
+
 
 //HOME PAGE SEARCH - INTERNAL PAGE SEARCH
 $("#top-select-search").on("keyup", function () {

@@ -199,6 +199,21 @@ foreach (getAllCities() as $city) {
     .slick-initialized .slick-slide {
         display: block;
     }
+    #results {
+        border: 1px solid #ccc;
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        background: white;
+        /* width: 200px; */
+    }
+    #results div {
+        padding: 8px;
+        cursor: pointer;
+    }
+    #results div:hover {
+        background-color: #f0f0f0;
+    }
     </style>
 </head>
 
@@ -1149,23 +1164,24 @@ foreach (getAllCities() as $city) {
                                     <li class="sr-cate">
                                         <input type="text" autocomplete="off" id="select-search"
                                             placeholder="<?php echo $BIZBOOK['SEARCHBOX_LABEL']; ?>"
-                                            class="search-field rounded">
-                                        <ul id="tser-res" class="tser-res tser-res1">
-                                            <!-- <?php
-                                            $si = 1;
-                                            foreach (getAllSearch() as $search_header_row) {
-                                            ?>
-                                                <li>
-                                                    <div>
-                                                        <h4><?php echo $search_header_row['search_title']; ?></h4>
-                                                        <span><?php echo $search_header_row['search_tag_line']; ?></span>
-                                                        <a href="<?php echo $search_header_row['search_list_link']; ?>"></a>
-                                                    </div>
-                                                </li>
-                                            <?php
-                                            }
-                                            ?> -->
-                                        </ul>
+                                            class="search-field rounded" required>
+
+                                            <ul id="results" class="tser-res tser-res1">
+                                                <!-- <?php
+                                                    $si = 1;
+                                                    foreach (getAllSearch() as $search_header_row) {
+                                                    ?>
+                                                        <li>
+                                                            <div>
+                                                                <h4><?php echo $search_header_row['search_title']; ?></h4>
+                                                                <span><?php echo $search_header_row['search_tag_line']; ?></span>
+                                                                <a href="<?php echo $search_header_row['search_list_link']; ?>"></a>
+                                                            </div>
+                                                        </li>
+                                                    <?php
+                                                    }
+                                                ?> -->
+                                            </ul>
                                     </li>
                                     <li class="sr-btn">
                                         <input type="submit" id="filter_submit" name="filter_submit"
