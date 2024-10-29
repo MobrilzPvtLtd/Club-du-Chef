@@ -215,7 +215,7 @@ if (isset($_REQUEST['calendar-date']) && !empty($_REQUEST['calendar-date'])  && 
             </div>
         </br>
             <!--START-->
-            <div class="filt-com lhs-ads">
+            <!-- <div class="filt-com lhs-ads">
                 <ul>
                     <li>
                         <div class="ads-box">
@@ -237,7 +237,7 @@ if (isset($_REQUEST['calendar-date']) && !empty($_REQUEST['calendar-date'])  && 
                         </div>
                     </li>
                 </ul>
-            </div>
+            </div> -->
             <!--END-->
         </div>
 

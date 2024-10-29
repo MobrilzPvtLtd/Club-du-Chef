@@ -936,9 +936,9 @@ jQuery(document).ready(function ($) {
         }else{
             var link = '';
         }
+        // console.log(link);
         
         var expert_select_search = $("#select-search").val();
-        // console.log(expert_select_search);
         window.location.href = link + "search_box_process.php?expert_select_search=" + expert_select_search;
         
         // var explor_select = $("#explor_select").val();

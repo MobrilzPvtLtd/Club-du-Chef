@@ -1597,7 +1597,7 @@ for ($j = 1; $j <= 4; $j++) {
                     <!--END LISTING DETAILS: LEFT PART 5-->
 
                     <!--ADS-->
-                    <div class="ban-ati-com ads-det-page">
+                    <!-- <div class="ban-ati-com ads-det-page">
                         <?php
                         $ad_position_id = 6;   //Ad position on Listing Detail Bottom
                         $get_ad_row = getAds($ad_position_id);
@@ -1611,7 +1611,7 @@ for ($j = 1; $j <= 4; $j++) {
                                     } else {
                                         echo "59040boat-728x90.png";
                                     } ?>" loading="lazy"></a>
-                    </div>
+                    </div> -->
                     <!--ADS-->
                 </div>
 

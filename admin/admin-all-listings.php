@@ -38,6 +38,11 @@ include "header.php";
                         </thead>
                         <tbody>
                         <?php
+                        if($webpage_full_link != null){
+                            $link = $webpage_full_link;
+                        }else{
+                            $link = '';
+                        }
 
                         $si = 1;
                         foreach (getAllListing() as $listrow) {
@@ -59,6 +64,7 @@ include "header.php";
                                 $rate_value = 0;
                                 $star_rate = 0;
                             }
+                            
                         }
 
                             $user_details_row = getUser($user_id);

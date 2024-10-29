@@ -432,7 +432,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                     <!--- END --->
 
                     <!--START-->
-                    <div class="filt-com lhs-ads">
+                    <!-- <div class="filt-com lhs-ads">
                         <ul>
                             <li>
                                 <div class="ads-box">
@@ -454,7 +454,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                 </div>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                     <!--END-->
                 </div>
                 <?php

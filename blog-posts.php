@@ -138,7 +138,7 @@ if (isset($_REQUEST['sort_by']) && !empty($_REQUEST['sort_by'])) {
             </div>
         </br>
             <!--START-->
-            <div class="filt-com lhs-ads">
+            <!-- <div class="filt-com lhs-ads">
                 <ul>
                     <li>
                         <div class="ads-box">
@@ -160,7 +160,7 @@ if (isset($_REQUEST['sort_by']) && !empty($_REQUEST['sort_by'])) {
                         </div>
                     </li>
                 </ul>
-            </div>
+            </div> -->
             <!--END-->
         </div>
 

@@ -500,7 +500,7 @@ if (!empty($w)) {
                         </div>
 
                         <!--START-->
-                        <div class="filt-com lhs-ads">
+                        <!-- <div class="filt-com lhs-ads">
                             <ul>
                                 <li>
                                     <div class="ads-box">
@@ -522,7 +522,7 @@ if (!empty($w)) {
                                     </div>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                         <!--END-->
                     </div>
                 </div>

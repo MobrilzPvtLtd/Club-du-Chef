@@ -114,7 +114,7 @@ include "home_page_mid_section.php"
 ?>
 
 <!-- START -->
-<section>
+<!-- <section>
     <div class="hom-ads">
         <div class="container">
             <div class="row">
@@ -139,7 +139,7 @@ include "home_page_mid_section.php"
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- END -->
 
 <!-- START -->

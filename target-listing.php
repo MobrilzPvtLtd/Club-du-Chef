@@ -370,7 +370,7 @@ seopageview($page_id); //Function To Find Page View
                             }
                             ?>
                             <!--START-->
-                            <div class="filt-com lhs-ads">
+                            <!-- <div class="filt-com lhs-ads">
                                 <ul>
                                     <li>
                                         <div class="ads-box">
@@ -393,7 +393,7 @@ seopageview($page_id); //Function To Find Page View
                                     </li>
 
                                 </ul>
-                            </div>
+                            </div> -->
                             <!--END-->
 
                             <div class="all-list-filt-form">

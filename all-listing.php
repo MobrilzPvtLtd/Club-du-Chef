@@ -576,7 +576,7 @@ foreach (getAllCities() as $city) {
                             }
                             ?>
                             <!--START-->
-                            <div class="filt-com lhs-ads">
+                            <!-- <div class="filt-com lhs-ads">
                                 <ul>
                                     <li>
                                         <div class="ads-box">
@@ -599,7 +599,7 @@ foreach (getAllCities() as $city) {
                                     </li>
 
                                 </ul>
-                            </div>
+                            </div> -->
                             <!--END-->
 
                             <div class="all-list-filt-form">

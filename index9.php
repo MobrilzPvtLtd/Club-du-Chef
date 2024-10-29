@@ -417,7 +417,7 @@ include "header.php";
 
 
 <!-- START -->
-<section>
+<!-- <section>
     <div class="hom-ads">
         <div class="container">
             <div class="row">
@@ -442,7 +442,7 @@ include "header.php";
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- END -->
 
 <!-- START -->
