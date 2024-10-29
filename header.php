@@ -239,13 +239,13 @@ foreach (getAllCities() as $city) {
                 <div class="hom-top">
                     <div class="container">
                         <div class="row">
-                            <div class="hom-nav d-flex justify-content-center <?php if (!isset($_SESSION['user_name']) && empty($_SESSION['user_name'])) {
+                            <div class="hom-nav <?php if (!isset($_SESSION['user_name']) && empty($_SESSION['user_name'])) {
                                } else { ?> db-open <?php } ?>">
                                 <!--MOBILE MENU-->
 
                                 <?php if ($imageShow && !empty($imagesLogo)): ?>
                                 <?php foreach ($imagesLogo as $imageUrl): ?>
-                                <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log mx-1">
+                                <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log">
                                     <img src="<?php echo $imageUrl; ?>" alt="" class="ic-logo">
                                 </a>
                                 <?php endforeach; ?>
@@ -270,7 +270,7 @@ foreach (getAllCities() as $city) {
                                 </a>
                                 <?php endif; ?>
 
-                                <div class="menu mx-3 my-4 d-none d-lg-block d-xl-block">
+                                <div class="menu">
                                     <h4><?php echo $BIZBOOK['EXPLORE']; ?></h4>
                                 </div>
 
