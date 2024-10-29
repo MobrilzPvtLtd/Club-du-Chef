@@ -1264,7 +1264,7 @@ foreach (getAllCities() as $city) {
                             </ul>
 
                             <!--ADS-->
-                            <div class="ban-ati-com ads-all-list">
+                            <!-- <div class="ban-ati-com ads-all-list">
                                 <?php
                                 $ad_position_id = 3;   //Ad position on All Listing page Bottom
                                 $get_ad_row = getAds($ad_position_id);
@@ -1276,7 +1276,7 @@ foreach (getAllCities() as $city) {
                                                                                 } else {
                                                                                     echo "59040boat-728x90.png";
                                                                                 } ?>"></a>
-                            </div>
+                            </div> -->
                             <!--ADS-->
                             <div id="all-list-pagination-container"></div>
                         </div>

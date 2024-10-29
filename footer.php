@@ -237,7 +237,7 @@ if ($footer_row['admin_install_flag'] == 1) {
     <div class="cr">
         <div class="container">
             <div class="row">
-                <p><?php echo $BIZBOOK['FOOTER-COPYRIGHT']; ?> © <?php echo $footer_row['copyright_year']; ?> <a href="<?php echo $footer_row['copyright_website_link']; ?>" target="_blank"><?php echo $footer_row['copyright_website']; ?></a>. <?php echo $BIZBOOK['FOOTER-PROUDLY-POWERED-BY']; ?> <a href="https://rn53themes.net/" target="_blank">Rn53Themes.net</a></p>
+                <p><?php echo $BIZBOOK['FOOTER-COPYRIGHT']; ?> © <?php echo $footer_row['copyright_year']; ?> <a href="<?php echo $footer_row['copyright_website_link']; ?>" target="_blank"><?php echo $footer_row['copyright_website']; ?></a>. <?php echo $BIZBOOK['FOOTER-PROUDLY-POWERED-BY']; ?> <a href="https://www.zitiziti.com" target="_blank">www.zitiziti.com</a></p>
             </div>
         </div>
     </div>

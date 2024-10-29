@@ -497,7 +497,7 @@ seopageview($page_id); //Function To Find Page View
 
                     <div class="all-list-sh all-listing-total"> 
                         <!--ADS-->
-                        <div class="ban-ati-com ads-all-list">
+                        <!-- <div class="ban-ati-com ads-all-list">
                             <?php
                             $ad_position_id = 2;   //Ad position on All Listing page Top
                             $get_ad_row = getAds($ad_position_id);
@@ -509,7 +509,7 @@ seopageview($page_id); //Function To Find Page View
                                     } else {
                                         echo "59040boat-728x90.png";
                                     } ?>"></a>
-                        </div>
+                        </div> -->
                         <!--ADS-->
                         <!--RESULTS SELECTED FILTER-->
                         <div class="listng-res">
@@ -913,7 +913,7 @@ seopageview($page_id); //Function To Find Page View
                         </ul>
 
                         <!--ADS-->
-                        <div class="ban-ati-com ads-all-list">
+                        <!-- <div class="ban-ati-com ads-all-list">
                             <?php
                             $ad_position_id = 3;   //Ad position on All Listing page Bottom
                             $get_ad_row = getAds($ad_position_id);
@@ -925,7 +925,7 @@ seopageview($page_id); //Function To Find Page View
                                     } else {
                                         echo "59040boat-728x90.png";
                                     } ?>"></a>
-                        </div>
+                        </div> -->
                         <!--ADS-->
                     </div>
                 </div>
