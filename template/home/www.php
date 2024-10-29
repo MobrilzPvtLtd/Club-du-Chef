@@ -33,7 +33,7 @@ if ($current_home_page != '2' && $current_home_page != '3') {
                 <?php
                     // } else {
                 ?> 
-                <ul class="mx-2">
+                <ul>
                     <!-- <?php
                     foreach ($images as $index => $imageUrl) {
                         $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';

@@ -2007,12 +2007,6 @@ div#review_success {
     float: left;
     width: 15%;
 }
-@media screen and (max-width:425px) {
-    .top-log {
-       
-        width: 25%;
-    } 
-}
 
 .top-log img {}
 
@@ -2140,7 +2134,7 @@ div#review_success {
 }
 
 .hom-top.dmact {
-    /* background: #180f5e; */
+    background: #180f5e;
     box-shadow: 0 11px 18px -8px rgba(42, 42, 42, 0.63);
     position: fixed;
     top: 0;
@@ -2508,9 +2502,9 @@ div#review_success {
 .ban-ql {
     margin: 0 auto;
     display: table;
-    width: 85%;
+    width: 103%;
     position: relative;
-    margin-top: -175px;
+    margin-top: -175px
 }
 
 .ban-ql ul {
@@ -4610,12 +4604,7 @@ div#review_success {
 }
 
 .all-listing {
-    margin-top: 5%;
-}
-@media (max-width:425px){
-    .all-listing {
-        margin-top: 20%;
-    }
+    margin-top: var(--topspac)
 }
 
 .all-listing:before {}
@@ -4825,23 +4814,6 @@ div#review_success {
     transition: all .5s ease-in-out;
     transform: translateY(0px);
     display: none
-}
-
-@media screen and (max-width:425px) {
-    .fil-mob.fil-mob-act {
-        position: fixed;
-        top: 63px;
-        width: 100%;
-        z-index: 11;
-        box-shadow: 0 6px 18px -11px rgba(0, 0, 0, 0.25);
-        -webkit-transition: all .5s ease-in-out;
-        -moz-transition: all .5s ease-in-out;
-        -o-transition: all .5s ease-in-out;
-        transition: all .5s ease-in-out;
-        transform: translateY(0px);
-        display: none
-    }
-    
 }
 
 .fil-mob h4 {
@@ -25006,9 +24978,9 @@ a[data-command='p'] {
 
     .ban-ql {
         margin-bottom: 0;
-        /* padding-top: 10px; */
+        padding-top: 10px;
         margin-top: 30px;
-        /* padding-bottom: 30px */
+        padding-bottom: 30px
     }
 
     .ban-ql ul li div {
@@ -26633,7 +26605,7 @@ a[data-command='p'] {
 
     .hom-top {
         display: block;
-        /* background: linear-gradient(to bottom, #115bcc, #0650c0) !important; */
+        background: linear-gradient(to bottom, #115bcc, #0650c0) !important;
         padding: 0 7px;
         height: 60px
     }
@@ -27570,7 +27542,7 @@ a[data-command='p'] {
     }
 
     .home-tit {
-        padding-top: 18px
+        padding-top: 60px
     }
 
     .home-tit h2 {
