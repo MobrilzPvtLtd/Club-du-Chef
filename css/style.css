@@ -16,7 +16,7 @@
 :root {
     --btnshadow: 0 7px 13px -6px #0e0f10cc;
     --btnshadow1: 0 5px 23px -8px #0e0f1040;
-    --topspac: 49px;
+    --topspac: 85px;
     --topspac1: 57px;
     --bodyfont: Poppins, sans-serif
 }
@@ -8753,7 +8753,8 @@ textarea {
     background: #f2f3f3;
     float: left;
     width: 100%;
-    background-image: linear-gradient(178deg, #fdfcfb 0%, #e2d1c352 100%)
+    background-image: linear-gradient(178deg, #fdfcfb 0%, #e2d1c352 100%);
+    margin-top: var(--topspac);
 }
 
 .pri:before {
@@ -17075,7 +17076,8 @@ div#pop_enq_success p {
     background: #f9fafb;
     float: left;
     width: 100%;
-    margin-top: 54px;
+    /* margin-top: 54px; */
+     margin-top: var(--topspac);
     padding-bottom: 180px
 }
 

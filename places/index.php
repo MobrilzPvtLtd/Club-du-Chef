@@ -54,7 +54,7 @@ if (isset($_GET['category'])) {
 </style>
 <!-- START -->
 <section>
-    <div class="plac-hom-ban mt-0">
+    <div class="plac-hom-ban">
         <div class="container">
             <div class="row">
                 <div class="plac-hom-ban-inn">

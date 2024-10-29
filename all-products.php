@@ -201,7 +201,7 @@ if (!empty($w)) {
 ?>
 <!-- START -->
 <section>
-    <div class="all-listing all-jobs py-4">
+    <div class="all-listing all-jobs">
         <!--FILTER ON MOBILE VIEW-->
         <div class="fil-mob fil-mob-act mt-2">
             <h4><?php echo $BIZBOOK['ALL-PRODUCTS-PRODUCT-FILTERS']; ?> <i class="material-icons">filter_list</i></h4>
