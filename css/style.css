@@ -2006,6 +2006,7 @@ div#review_success {
 .top-log {
     float: left;
     width: 15%;
+    margin-right: 10px;
 }
 
 .top-log img {}
@@ -2162,7 +2163,7 @@ div#review_success {
     margin: 0;
     /* padding-top: 20px !important; */
     align-items: center !important;
-    margin-left: 145px !important;
+    margin-left: 140px !important;
 }
 
 .hom-nav .bl li {
@@ -27860,9 +27861,9 @@ a[data-command='p'] {
         margin: 10px 10px 8px 1px
     }
 
-    .hom-nav .ic-logo {
+    /* .hom-nav .ic-logo {
         width: 170px
-    }
+    } */
 
     .all-list-sh ul li {
         width: 100%;
@@ -28543,10 +28544,17 @@ a[data-command='p'] {
 }
 
 @media screen and (max-width:768px) {
+    .top-log {
+        width: 100px;
+        margin-right: 20px;
+    }
     .hom-nav .ic-logo {
-        width: 115px !important;
-        height: 40px !important;
+        /* width: 115px !important; */
+        /* height: 40px !important; */
         margin-top: 10px;
+        max-width: 110px;
+        margin-left: -10px;
+        
     }
 }
 /* logo grid image css */
