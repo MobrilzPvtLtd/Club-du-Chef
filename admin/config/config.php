@@ -147,7 +147,12 @@ define('SMS_PWORD', '123'); # SMS PASSWORD.
 define('SENDER_ID', 'BIZGO'); # SMS PASSWORD.
 
 # Data Array
-$currentUrl = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+if($_SERVER['SERVER_NAME'] == 'localhost') {
+    $currentUrl = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+}else{
+    $currentUrl = "https://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+}
 $parsed_url = parse_url($currentUrl);
 $webpage_full_link = $parsed_url['scheme'] . '://' . $parsed_url['host'] . '/';
 
