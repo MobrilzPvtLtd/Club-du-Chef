@@ -245,7 +245,7 @@ foreach (getAllCities() as $city) {
 
                                 <?php if ($imageShow && !empty($imagesLogo)): ?>
                                 <?php foreach ($imagesLogo as $imageUrl): ?>
-                                <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log">
+                                <a href="<?php echo htmlspecialchars($webpage_full_link); ?>" class="top-log mx-1">
                                     <img src="<?php echo $imageUrl; ?>" alt="" class="ic-logo">
                                 </a>
                                 <?php endforeach; ?>
