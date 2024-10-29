@@ -438,7 +438,6 @@ for ($j = 1; $j <= 4; $j++) {
                     <?php
                         if ((!empty($listrow['listing_info_question']))) {
                             ?>
-                            <!--LISTING DETAILS: LEFT PART 9-->
                             <div class="pglist-p3 pglist-bg pglist-p-com">
                                 <div class="pglist-p-com-ti">
                                     <h3><span><?php echo $BIZBOOK['COMPANY']; ?></span> <?php echo $BIZBOOK['INFO']; ?></h3>
@@ -605,17 +604,15 @@ for ($j = 1; $j <= 4; $j++) {
                                     ?>
                                 </div>
                             </div>
-                            <!--END LISTING DETAILS: LEFT PART 9-->
                             <?php
                         }
                     ?>
-                    <?php
-                        //To Check whether listing owner made profile is visible
+
+                    <!-- <?php
                         $setting_profile_show = $usersqlrow['setting_profile_show'];
                         if ($setting_profile_show == 0) {
 
                             ?>
-                            <!--LISTING DETAILS: LEFT PART 7-->
                             <div class="ld-rhs-pro pglist-bg pglist-p-com">
                                 <div class="pglist-p-com-ti">
                                     <h3>
@@ -631,7 +628,6 @@ for ($j = 1; $j <= 4; $j++) {
                                             echo $usersqlrow['profile_image'];
                                         } ?>" alt="" loading="lazy">
                                     <div>
-                                        <!--<span class="rat" alt="User rating">4.2</span>-->
                                         <h4><?php echo $usersqlrow['first_name']; ?></h4>
                                         <p>Member since <?php $user_date = $usersqlrow['user_cdt'];;
                                             $user_date1 = strtotime($user_date);
@@ -642,10 +638,9 @@ for ($j = 1; $j <= 4; $j++) {
                                     target="_blank">&nbsp;</a>
                                 </div>
                             </div>
-                            <!--END LISTING DETAILS: LEFT PART 7-->
                             <?php
                         }
-                    ?>
+                    ?> -->
 
                     <?php
                     if (getCountUserCompanyUser($list_user_id) > 0) {
@@ -667,7 +662,6 @@ for ($j = 1; $j <= 4; $j++) {
                                      } ?>"
                                      alt="" loading="lazy">
                                 <div>
-                                    <!--<span class="rat" alt="User rating">4.2</span>-->
                                     <h4><?php if ($company_row['company_name'] != NULL) {
                                             echo $company_row['company_name'];
                                         } else {
