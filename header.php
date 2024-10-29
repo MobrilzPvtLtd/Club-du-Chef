@@ -239,7 +239,8 @@ foreach (getAllCities() as $city) {
                 <div class="hom-top">
                     <div class="container">
                         <div class="row">
-                            <div class="hom-nav d-flex justify-content-center <?php if (!isset($_SESSION['user_name']) && empty($_SESSION['user_name'])) {
+                            <div class="hom-nav d-flex  justify-content-sm-start justify-content-md-center 
+                             <?php if (!isset($_SESSION['user_name']) && empty($_SESSION['user_name'])) {
                                } else { ?> db-open <?php } ?>">
                                 <!--MOBILE MENU-->
 
@@ -405,42 +406,7 @@ foreach (getAllCities() as $city) {
                                 </div> -->
 
                                 <ul class="bl ">
-                                    <li>
-                                        <script>
-                                        function ChangeCity(city) {
-                                            $.post("../admin/config/updateCity.php", {
-                                                    city: city
-                                                })
-                                                .done(function(data) {
-                                                    data = jQuery.parseJSON(data);
-                                                    if (data.status == 1) {
-                                                        location.reload();
-
-                                                    } else {
-                                                        console.log('Issues in city name changes');
-                                                    }
-                                                });
-                                        }
-                                        </script>
-                                        <select name="city" onchange="ChangeCity(this.value)">
-                                            <?php
-                                                if (isset($CityList['All Cities'])) {
-                                                    $allCitiesValue = htmlspecialchars($CityList['All Cities'], ENT_QUOTES, 'UTF-8');
-                                                    $selected = ($DomainPrefix == $allCitiesValue) ? ' selected' : '';
-                                                    echo '<option value="' . $allCitiesValue . '"' . $selected . '>All Cities</option>';
-                                                }
-
-                                                foreach ($CityList as $City => $CitySlug) {
-                                                    if ($CitySlug == 'www') {
-                                                        continue;
-                                                    }
-
-                                                    $selected = ($DomainPrefix == $CitySlug) ? ' selected' : '';
-                                                    echo '<option value="' . htmlspecialchars($CitySlug, ENT_QUOTES, 'UTF-8') . '"' . $selected . '>' . htmlspecialchars($City, ENT_QUOTES, 'UTF-8') . '</option>';
-                                                }
-                                                ?>
-                                        </select>
-                                    </li>
+                                   
                                     <li>
                                         <a href="/pricing-details"
                                             class="text-decoration-none"><?php echo $BIZBOOK['ADD_BUSINESS']; ?></a>
@@ -736,11 +702,53 @@ foreach (getAllCities() as $city) {
                                     <div class="mob-me-ic"><i class="material-icons">menu</i></div>
                                     <div class="mob-me-all">
                                         <div class="mob-me-clo"><i class="material-icons">close</i></div>
+                                        <div class="mv-cate">
+                                            <h4>All Cities</h4>
+                                            <ul>
+                                                <li>
+                                                    <script>
+                                                    function ChangeCity(city) {
+                                                        $.post("../admin/config/updateCity.php", {
+                                                                city: city
+                                                            })
+                                                            .done(function(data) {
+                                                                data = jQuery.parseJSON(data);
+                                                                if (data.status == 1) {
+                                                                    location.reload();
+
+                                                                } else {
+                                                                    console.log('Issues in city name changes');
+                                                                }
+                                                            });
+                                                    }
+                                                    </script>
+                                                    <select name="city" onchange="ChangeCity(this.value)">
+                                                        <?php
+                                                if (isset($CityList['All Cities'])) {
+                                                    $allCitiesValue = htmlspecialchars($CityList['All Cities'], ENT_QUOTES, 'UTF-8');
+                                                    $selected = ($DomainPrefix == $allCitiesValue) ? ' selected' : '';
+                                                    echo '<option value="' . $allCitiesValue . '"' . $selected . '>All Cities</option>';
+                                                }
+
+                                                foreach ($CityList as $City => $CitySlug) {
+                                                    if ($CitySlug == 'www') {
+                                                        continue;
+                                                    }
+
+                                                    $selected = ($DomainPrefix == $CitySlug) ? ' selected' : '';
+                                                    echo '<option value="' . htmlspecialchars($CitySlug, ENT_QUOTES, 'UTF-8') . '"' . $selected . '>' . htmlspecialchars($City, ENT_QUOTES, 'UTF-8') . '</option>';
+                                                }
+                                                ?>
+                                                    </select>
+                                                </li>
+                                            </ul>
+                                        </div>
+
                                         <?php
                                         if (!isset($_SESSION['user_name']) && empty($_SESSION['user_name'])) {
                                             ?>
                                         <div class="mv-bus">
-                                            <h4></h4>
+                                           
                                             <ul>
                                                 <li>
                                                     <a
@@ -996,6 +1004,10 @@ foreach (getAllCities() as $city) {
                                         <?php
                                         }
                                         ?>
+
+
+
+
                                         <div class="mv-cate">
                                             <h4><?php echo $BIZBOOK['ALL_CATEGORIES']; ?></h4>
                                             <ul>
@@ -1007,47 +1019,7 @@ foreach (getAllCities() as $city) {
                                                 <?php } ?>
                                             </ul>
                                         </div>
-                                        <div class="mv-cate">
-                                            <h4>All Cities</h4>
-                                            <ul>
-                                                <li>
-                                                    <script>
-                                                    function ChangeCity(city) {
-                                                        $.post("../admin/config/updateCity.php", {
-                                                                city: city
-                                                            })
-                                                            .done(function(data) {
-                                                                data = jQuery.parseJSON(data);
-                                                                if (data.status == 1) {
-                                                                    location.reload();
-
-                                                                } else {
-                                                                    console.log('Issues in city name changes');
-                                                                }
-                                                            });
-                                                    }
-                                                    </script>
-                                                    <select name="city" onchange="ChangeCity(this.value)">
-                                                        <?php
-                                                if (isset($CityList['All Cities'])) {
-                                                    $allCitiesValue = htmlspecialchars($CityList['All Cities'], ENT_QUOTES, 'UTF-8');
-                                                    $selected = ($DomainPrefix == $allCitiesValue) ? ' selected' : '';
-                                                    echo '<option value="' . $allCitiesValue . '"' . $selected . '>All Cities</option>';
-                                                }
-
-                                                foreach ($CityList as $City => $CitySlug) {
-                                                    if ($CitySlug == 'www') {
-                                                        continue;
-                                                    }
-
-                                                    $selected = ($DomainPrefix == $CitySlug) ? ' selected' : '';
-                                                    echo '<option value="' . htmlspecialchars($CitySlug, ENT_QUOTES, 'UTF-8') . '"' . $selected . '>' . htmlspecialchars($City, ENT_QUOTES, 'UTF-8') . '</option>';
-                                                }
-                                                ?>
-                                                    </select>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                       
                                     </div>
                                 </div>
                                 <!--END MOBILE MENU-->

@@ -626,7 +626,7 @@ body{background-color:#e8ecf0}
 
 
 <!-- START -->
-<section>
+<!-- <section>
     <div class="hom-ads">
         <div class="container">
             <div class="row">
@@ -651,7 +651,7 @@ body{background-color:#e8ecf0}
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- END -->
 
 <!-- START -->

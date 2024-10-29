@@ -401,7 +401,7 @@ if($footer_row['admin_expert_show'] != 1) {
 
 
 <!-- START -->
-<section>
+<!-- <section>
     <div class="hom-ads">
         <div class="container">
             <div class="row">
@@ -427,7 +427,7 @@ if($footer_row['admin_expert_show'] != 1) {
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- END -->
 
 <!-- START -->
