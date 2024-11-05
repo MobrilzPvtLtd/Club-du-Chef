@@ -270,7 +270,7 @@ foreach (getAllCities() as $city) {
                                 </a>
                                 <?php endif; ?>
 
-                                <div class="menu">
+                                <div class="menu my-4">
                                     <h4><?php echo $BIZBOOK['EXPLORE']; ?></h4>
                                 </div>
 
