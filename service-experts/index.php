@@ -95,11 +95,13 @@ if($footer_row['admin_expert_show'] != 1) {
                     <p><?php echo $BIZBOOK['SERVICE-EXPERT-FIND-SERVICE-EXPERT-P']; ?></p>
                 </div>
                 <br>
-                <div class="job-sear">
+                
+            </div>
+            <div class="job-sear">
                     <form name="expert_filter_form" id="expert_filter_form" class="expert_filter_form">
-                        <ul>
+                        <ul class="">
                             <li class="sr-sea">
-                                <select class="chosen-select py-1" id="expert-select-search1" name="expert-select-search">
+                                <select class="chosen-select py-1 rounded-start" id="expert-select-search1" name="expert-select-search">
                                     <?php
                                     foreach (getAllActiveExpertCategoriesPos() as $expert_search_categories_row) {
 
@@ -114,7 +116,7 @@ if($footer_row['admin_expert_show'] != 1) {
                                     ?>
                                 </select>
                             </li>
-                            <li class="sr-loc">
+                            <!-- <li class="sr-loc">
                                 <select class="chosen-select py-1" id="job-select-city" name="serjobsloc">
                                     <?php
                                     $expert_location_qry = getAllExpertsGroupByCity();
@@ -131,13 +133,16 @@ if($footer_row['admin_expert_show'] != 1) {
                                     }
                                     ?>
                                 </select>
-                            </li>
+                            </li> -->
                             <li class="sr-btn">
                                 <button id="expert_filter_submit"><i class="material-icons">search</i></button>
                             </li>
                         </ul>
                     </form>
                 </div>
+
+
+
                 <div class="job-pop-tag">
                     <?php
                     foreach (getAllExpertCategoriesOrderByExpertsTableLimit(5) as $expert_trend_categories_row) {
@@ -151,7 +156,6 @@ if($footer_row['admin_expert_show'] != 1) {
                     }
                     ?>
                 </div>
-            </div>
         </div>
     </div>
 </section>

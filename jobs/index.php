@@ -80,11 +80,13 @@ if($footer_row['admin_job_show'] != 1) {
                     <p><?php echo $BIZBOOK['JOB-HEADER-P']; ?></p>
                 </div>
                 <br>
-                <div class="job-sear">
+               
+            </div>
+            <div class="job-sear">
                     <form name="job_filter_form" id="job_filter_form" class="job_filter_form">
                         <ul>
                             <li class="sr-sea">
-                                <select class="chosen-select py-1" id="job-select-search" name="serjobs">
+                                <select class="chosen-select py-1 rounded-start" id="job-select-search" name="serjobs">
                                     <?php
                                     foreach (getAllJobCategories() as $job_search_categories_row) {
 
@@ -98,7 +100,7 @@ if($footer_row['admin_job_show'] != 1) {
                                     ?>
                                 </select>
                             </li>
-                            <li class="sr-loc">
+                            <!-- <li class="sr-loc">
                                 <select class="chosen-select py-1" id="job-select-city" name="serjobsloc">
                                 <?php if(isset($_SESSION['google_city_name'])&& ($_SESSION['google_city_name']) != NULL ){ ?>
                                                         <option <?php 
@@ -121,7 +123,7 @@ if($footer_row['admin_job_show'] != 1) {
                                     }
                                     ?>
                                 </select>
-                            </li>
+                            </li> -->
                             <li class="sr-btn">
                                 <button id="job_filter_submit"><i class="material-icons">search</i></button>
                             </li>
@@ -157,7 +159,6 @@ if($footer_row['admin_job_show'] != 1) {
                         </li>
                     </ul>
                 </div>
-            </div>
         </div>
     </div>
 </section>

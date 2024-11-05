@@ -1416,7 +1416,7 @@ div#review_success {
     border-left: 1px solid #4f6171;
     padding: 5px 5px 5px 12px;
     margin-left: 20px;
-    margin-top: 28px;
+    margin-top: 20px;
     cursor: pointer;
     position: relative
 }
@@ -2163,7 +2163,7 @@ div#review_success {
     margin: 0;
     /* padding-top: 20px !important; */
     align-items: center !important;
-    margin-left: 140px !important;
+    margin-left: -2px !important;
 }
 
 .hom-nav .bl li {
@@ -2504,7 +2504,7 @@ div#review_success {
 .ban-ql {
     margin: 0 auto;
     display: table;
-    width: 103%;
+    width: 100%;
     position: relative;
     margin-top: -175px
 }
@@ -16885,7 +16885,7 @@ div#pop_enq_success p {
 
 .job-sear ul li {
     float: left;
-    padding: 0 5px
+    /* padding: 0 5px */
 }
 
 .job-sear ul li input {
@@ -16898,14 +16898,14 @@ div#pop_enq_success p {
 
 .job-sear ul li select {
     border: 0 solid #97abb7;
-    border-radius: 12px;
+    /* border-radius: 12px; */
     font-size: 15px;
     font-weight: 500;
     padding: 12px 12px 12px 45px
 }
 
 .job-sear ul li.sr-sea {
-    width: calc(60% - 50px)
+    width: calc(98% - 50px)
 }
 
 .job-sear ul li .chosen-container {
@@ -16918,7 +16918,7 @@ div#pop_enq_success p {
     padding-left: 41px;
     text-align: left;
     padding-top: 8px;
-    height: 46px
+    height: 42px
 }
 
 .job-sear ul li:before {
@@ -16980,7 +16980,7 @@ div#pop_enq_success p {
 
 .job-sear ul li.sr-btn button {
     border: 0;
-    padding: 5px 17px;
+    padding: 3px 19px;
     border-radius: 0 10px 10px 0;
     line-height: 24px;
     float: left
@@ -26609,7 +26609,7 @@ a[data-command='p'] {
 
     .hom-top {
         display: block;
-        background: linear-gradient(to bottom, #115bcc, #0650c0) !important;
+        /* background: linear-gradient(to bottom, #115bcc, #0650c0) !important; */
         padding: 0 7px;
         height: 60px
     }
