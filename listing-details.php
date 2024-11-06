@@ -224,7 +224,7 @@ for ($j = 1; $j <= 4; $j++) {
     } ?> list-pg-bg">
     <div class="container">
         <div class="row">
-            <div class="com-padd">
+            <div class="com-padd mt-3">
                 <div>
                     <div class="eve-bred-crum">
                         <ul>

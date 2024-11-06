@@ -6587,6 +6587,14 @@ div#review_success {
     -o-transition: all .5s ease;
     transition: all .5s ease
 }
+@media screen and (min-width:1400px) {
+    .v3-list-ql{
+        position: fixed;
+        top: 95px;
+
+    }
+
+}
 
 .v3-list-ql-inn {
     width: 100%
