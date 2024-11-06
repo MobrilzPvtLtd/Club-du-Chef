@@ -2530,7 +2530,8 @@ div#review_success {
     .ban-ql ul {
 
         grid-template-columns:repeat(2, minmax(142px, 2fr));
-        
+        row-gap: 7px;
+}
 
     }
   
