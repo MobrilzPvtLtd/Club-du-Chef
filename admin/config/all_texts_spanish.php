@@ -25,53 +25,53 @@ This file helps you to update or change the text on the website.
 
 //************************* All Common Texts Starts ***************************
 
-$BIZBOOK['NAME'] = "Name";
+$BIZBOOK['NAME'] = "Nombre";
 
-$BIZBOOK['EMAIL'] = "Email";
+$BIZBOOK['EMAIL'] = "Correo electrónico";
 
-$BIZBOOK['EMAIL_ID'] = "Email Id";
+$BIZBOOK['EMAIL_ID'] = "ID de correo electrónico";
 
-$BIZBOOK['PHONE'] = "Phone";
+$BIZBOOK['PHONE'] = "Teléfono";
 
-$BIZBOOK['PHONE_NUMBER'] = "Phone number";
+$BIZBOOK['PHONE_NUMBER'] = "Número de teléfono";
 
-$BIZBOOK['MOBILE_NUMBER'] = "Mobile Number";
+$BIZBOOK['MOBILE_NUMBER'] = "Número móvil";
 
-$BIZBOOK['LISTING'] = "Listing";
+$BIZBOOK['LISTING'] = "Listado";
 
-$BIZBOOK['LISTINGS'] = "Listings";
+$BIZBOOK['LISTINGS'] = "Listados";
 
-$BIZBOOK['ADD_LISTING'] = "Add listing";
+$BIZBOOK['ADD_LISTING'] = "Añadir listado";
 
-$BIZBOOK['ALL_LISTING'] = "All Listings";
+$BIZBOOK['ALL_LISTING'] = "Todos los listados";
 
-$BIZBOOK['ALL_CATEGORIES'] = "All Categories";
+$BIZBOOK['ALL_CATEGORIES'] = "Todas las categorías";
 
-$BIZBOOK['EXPLORE'] = "Explore";
+$BIZBOOK['EXPLORE'] = "Explorar";
 
-$BIZBOOK['ALL_CATEGORY'] = "All Category";
+$BIZBOOK['ALL_CATEGORY'] = "Toda la categoría";
 
-$BIZBOOK['ALL_SERVICES'] = "All Services";
+$BIZBOOK['ALL_SERVICES'] = "Todos los servicios";
 
-$BIZBOOK['ALL_REVIEWS'] = "All Reviews";
+$BIZBOOK['ALL_REVIEWS'] = "Todas las reseñas";
 
-$BIZBOOK['PRODUCTS'] = "Products";
+$BIZBOOK['PRODUCTS'] = "Productos";
 
-$BIZBOOK['PRODUCT'] = "Product";
+$BIZBOOK['PRODUCT'] = "Producto";
 
-$BIZBOOK['EVENTS'] = "Events";
+$BIZBOOK['EVENTS'] = "Eventos";
 
-$BIZBOOK['EVENT'] = "Event";
+$BIZBOOK['EVENT'] = "Evento";
 
-$BIZBOOK['BLOG_POSTS'] = "Blog posts";
+$BIZBOOK['BLOG_POSTS'] = "Publicaciones de blog";
 
 $BIZBOOK['BLOGS'] = "Blogs";
 
 $BIZBOOK['BLOG'] = "Blog";
 
-$BIZBOOK['JOBS'] = "Jobs";
+$BIZBOOK['JOBS'] = "Empleos";
 
-$BIZBOOK['JOB'] = "Job";
+$BIZBOOK['JOB'] = "Trabajo";
 
 $BIZBOOK['JOBS_BRACKET'] = "job(s)";
 

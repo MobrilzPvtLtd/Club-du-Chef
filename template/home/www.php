@@ -45,8 +45,8 @@ if ($current_home_page != '2' && $current_home_page != '3') {
                         $link = isset($imageLinks[$index]) ? $imageLinks[$index] : '#';
                     ?>
                         <a href="<?php echo $link; ?>" target="_blank">
-                        <li>
-                            <div class="p-0 h-40 mb-2">
+                        <li class="d-flex justify-content-center">
+                            <div class="p-0 h-40 mx-2">
                                 <img class="ratio ratio-3x4" src="<?php echo $imageUrl; ?>" alt="">
                             </div>
                         </li>
