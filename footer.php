@@ -2,7 +2,7 @@
 
 <span class="btn-ser-need-ani"><img loading="lazy" src="/images/icon/help.png" alt=""></span>
 
-<div class="ani-quo-form">
+<!-- <div class="ani-quo-form">
     <i class="material-icons ani-req-clo">close</i>
     <div class="tit">
         <h3><?php echo $BIZBOOK['HOM-WHAT-SER']; ?> <span><?php echo $BIZBOOK['HOM-WHAT-BIZ-BOOK-HELP-YOU']; ?></span></h3>
@@ -81,7 +81,7 @@
             </button>
         </form>
     </div>
-</div>
+</div> -->
 <!-- END -->
 
 <!-- START -->
