@@ -28561,3 +28561,12 @@ a[data-command='p'] {
 .mob_card.img-fluid {
     height: fit-content;
 }
+
+ul.footer_support {
+    list-style: none;
+    display: inline-flex;
+}
+
+.footer_support > li {
+    padding: 10px;
+}

@@ -121,7 +121,15 @@ if ($footer_row['admin_install_flag'] == 1) {
 <section class="<?php if($footer_row['admin_language']== 2){ echo "lg-arb";}?> wed-hom-footer">
     <div class="container">
         <div class="row foot-supp">
-            <h2><span><?php echo $BIZBOOK['FOOTER-FREE-SUPPORT']; ?>:</span> <?php echo $footer_row['footer_mobile']; ?> &nbsp;&nbsp;|&nbsp;&nbsp; <span><?php echo $BIZBOOK['EMAIL']; ?>:</span> <?php echo $footer_row['admin_primary_email']; ?></h2>
+            <ul class="footer_support">
+                <li><span><?php echo $BIZBOOK['FOOTER-FREE-SUPPORT']; ?>:</span> <?php echo $footer_row['footer_mobile']; ?></li>
+                <li><span><?php echo $BIZBOOK['EMAIL']; ?>:</span> <?php echo $footer_row['admin_primary_email']; ?></li>
+                <li><select name="lang" id="lang" class="form-control">
+                <option>Select Language</option>
+                <option value="en" <?php if($lang == 'en') {echo 'selected';} ?>>English</option>
+                <option value="es" <?php if($lang == 'es') {echo 'selected';} ?>>Spanish</option>
+            </select></li>
+            </ul>
         </div>
         <div class="row wed-foot-link">
             <div class="col-md-4 foot-tc-mar-t-o">
@@ -183,7 +191,6 @@ if ($footer_row['admin_install_flag'] == 1) {
             </div>
         </div>
         <!-- POPULAR TAGS -->
-
 
         <div class="row wed-foot-link-1">
             <?php if($footer_row['admin_get_in_touch_feature'] == 1) { ?>
@@ -293,3 +300,23 @@ if ($footer_row['admin_install_flag'] == 1) {
 </ul>
 </div>
 <!-- END -->
+
+<script src="<?php echo $webpage_full_link; ?>/js/jquery.min.js"></script>
+<script>
+    $("#lang").change(function() {
+        $.ajax({
+            type: "POST",
+            url: "change_language.php", 
+            data: {
+                lang: $(this).val(), 
+            },
+            success: function(data) {
+                location.reload();
+            },
+            error: function(xhr, status, error) {
+                console.error('Error during the language change:', error);
+            }
+        });
+    });
+
+</script>

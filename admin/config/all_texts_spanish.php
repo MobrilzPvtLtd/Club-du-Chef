@@ -1,5 +1,4 @@
 <?php
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /***************************************************************************
@@ -436,7 +435,7 @@ $BIZBOOK['HOM-EVE-TIT1'] = "in city";
 
 $BIZBOOK['HOM-EVE-SUB-TIT'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
 
-$BIZBOOK['HOM-HOW-TIT'] = "How It Works";
+$BIZBOOK['HOM-HOW-TIT'] = "Cómo funciona";
 
 $BIZBOOK['HOM-HOW-SUB-TIT'] = "Explore some of the best tips from around the world from our<br>partners and friends.lacinia viverra lectus.";
 
@@ -626,7 +625,7 @@ $BIZBOOK['USER_TYPE'] = "User type";
 
 $BIZBOOK['USER_OPTIONS'] = "User options";
 
-$BIZBOOK['CHOOSE_YOUR_PLAN'] = "Choose your plan";
+$BIZBOOK['CHOOSE_YOUR_PLAN'] = "Elige tu plan";
 
 $BIZBOOK['PLAN_DETAILS'] = "Plan details";
 
@@ -1313,9 +1312,9 @@ $BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-8'] = "Join the Community";
 
 //************************* Footer banner ***********
 
-$BIZBOOK['FOOT-BAN-TIT'] = "List your business for FREE";
+$BIZBOOK['FOOT-BAN-TIT'] = "Enumera tu negocio GRATIS.";
 
-$BIZBOOK['FOOT-BAN-SUB-TIT'] = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.";
+$BIZBOOK['FOOT-BAN-SUB-TIT'] = "Existen muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría ha sufrido alteraciones de alguna forma, por la inserción de humor.";
 
 $BIZBOOK['FOOT-BAN-ADD'] = "Add my business";
 
