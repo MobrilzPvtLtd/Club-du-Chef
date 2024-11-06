@@ -121,15 +121,21 @@ if ($footer_row['admin_install_flag'] == 1) {
 <section class="<?php if($footer_row['admin_language']== 2){ echo "lg-arb";}?> wed-hom-footer">
     <div class="container">
         <div class="row foot-supp">
-            <ul class="footer_support">
-                <li><span><?php echo $BIZBOOK['FOOTER-FREE-SUPPORT']; ?>:</span> <?php echo $footer_row['footer_mobile']; ?></li>
-                <li><span><?php echo $BIZBOOK['EMAIL']; ?>:</span> <?php echo $footer_row['admin_primary_email']; ?></li>
-                <li><select name="lang" id="lang" class="form-control">
-                <option>Select Language</option>
-                <option value="en" <?php if($lang == 'en') {echo 'selected';} ?>>English</option>
-                <option value="es" <?php if($lang == 'es') {echo 'selected';} ?>>Spanish</option>
-            </select></li>
-            </ul>
+            
+            <div class="row">
+                <div class="col-md-10">
+                    <h2><span><?php echo $BIZBOOK['FOOTER-FREE-SUPPORT']; ?>:</span> <?php echo $footer_row['footer_mobile']; ?> &nbsp;&nbsp;|&nbsp;&nbsp; <span><?php echo $BIZBOOK['EMAIL']; ?>:</span> <?php echo $footer_row['admin_primary_email']; ?></h2>
+                    <!-- <span> <?php echo $BIZBOOK['FOOTER-FREE-SUPPORT']; ?>:</span> <?php echo $footer_row['footer_mobile']; ?>
+                    <span><?php echo $BIZBOOK['EMAIL']; ?>:</span> <?php echo $footer_row['admin_primary_email']; ?> -->
+                </div>
+                <div class="col-md-2 footer_support">
+                    <select name="lang" id="lang" class="form-control">
+                        <option>Select Language</option>
+                        <option value="en" <?php if($lang == 'en') {echo 'selected';} ?>>English</option>
+                        <option value="es" <?php if($lang == 'es') {echo 'selected';} ?>>Spanish</option>
+                    </select>
+                </div>
+            </div>
         </div>
         <div class="row wed-foot-link">
             <div class="col-md-4 foot-tc-mar-t-o">
