@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($user_type == "General") {
 
-            $user_plan = '';
+            $user_plan = '0';
 
             $user_points = 0;
 
