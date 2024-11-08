@@ -126,6 +126,16 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 // Listing Offer view more        
         $service_1_view_more = $listings_a_row["service_1_view_more"];
 
+        $service_2_price = (isset($_POST['service_2_price'])) ? (int) $_POST['service_2_price'] : 0;
+                     
+        $service_3_price = (isset($_POST['service_3_price'])) ? (int) $_POST['service_3_price'] : 0;
+                     
+        $service_4_price = (isset($_POST['service_4_price'])) ? (int) $_POST['service_4_price'] : 0;
+                     
+        $service_5_price = (isset($_POST['service_5_price'])) ? (int) $_POST['service_5_price'] : 0;
+        
+        $service_6_price = (isset($_POST['service_6_price'])) ? (int) $_POST['service_6_price'] : 0;
+
 //Listing Other Informations
         
         $listing_info_question = $listings_a_row["listing_info_question"];
@@ -184,6 +194,14 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 
         $listing_res = mysqli_query($conn,$listing_qry);
         $ListingID = mysqli_insert_id($conn);
+
+        // if (mysqli_error($conn)) {
+        //     echo "MySQL Error: " . mysqli_error($conn);
+        // } else {
+        //     echo "The last inserted ID is: " . $ListingID;
+        // }
+        // die();
+        
         $listlastID = $ListingID;
 
         switch (strlen($ListingID)) {
