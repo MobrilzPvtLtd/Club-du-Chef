@@ -139,7 +139,7 @@ for ($j = 1; $j <= 4; $j++) {
 
 <!-- START -->
 <section>
-    <div class="v3-list-ql">
+    <!-- <div class="v3-list-ql">
         <div class="container">
             <div class="row">
                 <div class="v3-list-ql-inn">
@@ -160,10 +160,10 @@ for ($j = 1; $j <= 4; $j++) {
                                         class="material-icons">map</i> <?php echo $BIZBOOK['LOCATION']; ?>
                             </a>
                         </li>
-                        <!--                        <li><a href="#ld-360"><i-->
-                        <!--                                        class="material-icons">camera</i> --><?php //echo $BIZBOOK['LISTING_DETAILS_360_VIEW']; ?>
-                        <!--                            </a>-->
-                        <!--                        </li>-->
+                                               <li><a href="#ld-360"><i
+                                                               class="material-icons">camera</i><?php echo $BIZBOOK['LISTING_DETAILS_360_VIEW']; ?>
+                                                   </a>
+                                               </li>
                         <li><a href="#ld-rev"><i
                                         class="material-icons">star_half</i> <?php echo $BIZBOOK['LISTING_DETAILS_WRITE_REVIEW']; ?>
                             </a>
@@ -184,7 +184,7 @@ for ($j = 1; $j <= 4; $j++) {
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </section>
 <!-- END -->
 
@@ -224,7 +224,7 @@ for ($j = 1; $j <= 4; $j++) {
     } ?> list-pg-bg">
     <div class="container">
         <div class="row">
-            <div class="com-padd mt-3">
+            <div class="com-padd ">
                 <div>
                     <div class="eve-bred-crum">
                         <ul>
