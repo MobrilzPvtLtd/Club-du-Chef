@@ -436,7 +436,39 @@ if ($current_home_page == '1') {
     </section>
     <!--END-->
 
-    
+<section class="news-hom-ban-sli pg-eve-ban" style="margin-top:35px">
+    <div class="news-hom-ban-sli-inn" style="padding:0 14%">
+        <ul class="multiple-items1">
+            <?php
+            $si = 1;
+            foreach (getAllTopViewsPremiumActiveEvents() as $top_event_row) {
+
+                $top_user_id = $top_event_row['user_id'];
+
+                $top_user_details_row = getUser($top_user_id);
+
+                ?>
+                <li>
+                    <div class="news-hban-box" >
+                        <div class="im">
+                            <img loading="lazy" src="/images/events/<?php echo $top_event_row['event_image']; ?>" alt="">
+                        </div>
+                        <div class="txt">
+                            <span class="news-cate"><?php echo $BIZBOOK['EVENT_TOP_EVENTS']; ?></span><br>
+                            <span class="eve-date-sli"><?php echo dateDayFormatconverter($top_event_row['event_start_date']); ?>
+                                <b><?php echo dateMonthFormatconverter($top_event_row['event_start_date']); ?></b></span>
+                            <h2><?php echo $top_event_row['event_name']; ?></h2>
+                        </div>
+                        <a href="<?php echo $EVENT_URL . urlModifier($top_event_row['event_slug']); ?>"
+                           class="fclick"></a>
+                    </div>
+                </li>
+                <?php
+            }
+            ?>
+        </ul>
+    </div>
+</section>
     
 
     <!--PRICING DETAILS-->
