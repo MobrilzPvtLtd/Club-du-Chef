@@ -26,1286 +26,733 @@ This file helps you to update or change the text on the website.
 //************************* All Common Texts Starts ***************************
 
 $BIZBOOK['NAME'] = "Nombre";
-
-$BIZBOOK['EMAIL'] = "Correo electrónico";
-
-$BIZBOOK['EMAIL_ID'] = "ID de correo electrónico";
-
+$BIZBOOK['EMAIL'] = "Correo Electrónico";
+$BIZBOOK['EMAIL_ID'] = "ID de Correo";
 $BIZBOOK['PHONE'] = "Teléfono";
-
-$BIZBOOK['PHONE_NUMBER'] = "Número de teléfono";
-
-$BIZBOOK['MOBILE_NUMBER'] = "Número móvil";
-
-$BIZBOOK['LISTING'] = "Listado";
-
-$BIZBOOK['LISTINGS'] = "Listados";
-
-$BIZBOOK['ADD_LISTING'] = "Añadir listado";
-
-$BIZBOOK['ALL_LISTING'] = "Todos los listados";
-
-$BIZBOOK['ALL_CATEGORIES'] = "Todas las categorías";
-
+$BIZBOOK['PHONE_NUMBER'] = "Número de Teléfono";
+$BIZBOOK['MOBILE_NUMBER'] = "Número de Móvil";
+$BIZBOOK['LISTING'] = "Negocio";
+$BIZBOOK['LISTINGS'] = "Negocios";
+$BIZBOOK['ADD_LISTING'] = "Añadir Negocio";
+$BIZBOOK['ALL_LISTING'] = "Todos los Negocios";
+$BIZBOOK['ALL_CATEGORIES'] = "Todas las Categorías";
 $BIZBOOK['EXPLORE'] = "Explorar";
-
-$BIZBOOK['ALL_CATEGORY'] = "Toda la categoría";
-
-$BIZBOOK['ALL_SERVICES'] = "Todos los servicios";
-
-$BIZBOOK['ALL_REVIEWS'] = "Todas las reseñas";
-
+$BIZBOOK['ALL_CATEGORY'] = "Todas las Categorías";
+$BIZBOOK['ALL_SERVICES'] = "Todos los Profesionales";
+$BIZBOOK['ALL_REVIEWS'] = "Todas las Opiniones";
 $BIZBOOK['PRODUCTS'] = "Productos";
-
 $BIZBOOK['PRODUCT'] = "Producto";
-
 $BIZBOOK['EVENTS'] = "Eventos";
-
 $BIZBOOK['EVENT'] = "Evento";
-
-$BIZBOOK['BLOG_POSTS'] = "Publicaciones de blog";
-
+$BIZBOOK['BLOG_POSTS'] = "Publicaciones del Blog";
 $BIZBOOK['BLOGS'] = "Blogs";
-
 $BIZBOOK['BLOG'] = "Blog";
-
 $BIZBOOK['JOBS'] = "Empleos";
-
-$BIZBOOK['JOB'] = "Trabajo";
-
-$BIZBOOK['JOBS_BRACKET'] = "job(s)";
-
-$BIZBOOK['LEADS'] = "Leads";
-
-$BIZBOOK['UNLIMITED'] = "Unlimited";
-
-$BIZBOOK['YEAR-S'] = "year(s)";
-
-$BIZBOOK['MONTH-S'] = "month(s)";
-
-$BIZBOOK['ENQUIRIES'] = "Enquiries";
-
-$BIZBOOK['ENQUIRY'] = "Enquiry";
-
-$BIZBOOK['COMMUNITY'] = "Community";
-
-$BIZBOOK['COUPONS'] = "Coupons";
-
-$BIZBOOK['EDIT_THIS_COUPON'] = "Edit This Coupon";
-
-$BIZBOOK['DELETE_THIS_COUPON'] = "Delete This Coupon";
-
-$BIZBOOK['PROMOTIONS'] = "Promotions";
-
-$BIZBOOK['POINTS_HISTORY'] = "Points History";
-
-$BIZBOOK['MESSAGES'] = "Messages";
-
-$BIZBOOK['MESSAGE'] = "Message";
-
-$BIZBOOK['COUPONS_AND_DEALS'] = "Coupon & deals";
-
-$BIZBOOK['USER'] = "User";
-
-$BIZBOOK['SUBMIT'] = "Submit";
-
-$BIZBOOK['SUBMIT_NOW'] = "Submit Now";
-
-$BIZBOOK['SUBMIT_REQUIREMENTS'] = "Submit Requirements";
-
-$BIZBOOK['SEARCH'] = "Search";
-
-$BIZBOOK['SEND'] = "Send";
-
-$BIZBOOK['BACK'] = "Back";
-
-$BIZBOOK['CHANGE'] = "Change";
-
-$BIZBOOK['AMOUNT'] = "Amount";
-
-$BIZBOOK['DOWNLOAD'] = "Download";
-
-$BIZBOOK['PROFILE'] = "Profile";
-
-$BIZBOOK['YEARS'] = "Years";
-
-$BIZBOOK['YEARS_EXP'] = "yearsExp.";
-
-$BIZBOOK['CASH_ON_DELIVERY'] = "Cash on delivery";
-
-$BIZBOOK['CONGRATULATIONS'] = "Congratulations";
-
-$BIZBOOK['ADD_BUSINESS'] = "Add business";
-
-$BIZBOOK['FOLLOWERS'] = "Followers";
-
-$BIZBOOK['TAX'] = "Tax";
-
-$BIZBOOK['LISTING_NAME'] = "Listing Name";
-
-$BIZBOOK['S_NO'] = "No";
-
-$BIZBOOK['MESSAGE'] = "Message";
-
-$BIZBOOK['FOLLOW'] = "Follow";
-
-$BIZBOOK['RATING'] = "Rating";
-
-$BIZBOOK['RATINGS'] = "Ratings";
-
-$BIZBOOK['VIEWS'] = "Views";
-
-$BIZBOOK['CLICKS'] = "Clicks";
-
-$BIZBOOK['STATUS'] = "Status";
-
-$BIZBOOK['EDIT'] = "Edit";
-
-$BIZBOOK['DELETE'] = "Delete";
-
-$BIZBOOK['VIEW'] = "View";
-
-$BIZBOOK['PREVIEW'] = "Preview";
-
-$BIZBOOK['ADDRESS'] = "Address";
-
-$BIZBOOK['TYPE'] = "Type";
-
-$BIZBOOK['VERIFIED'] = "Verified";
-
-$BIZBOOK['DATE'] = "Date";
-
-$BIZBOOK['DAYS'] = "Days";
-
-$BIZBOOK['TIME'] = "Time";
-
-$BIZBOOK['CITY'] = "City";
-
-$BIZBOOK['CITIES'] = "Cities";
-
-$BIZBOOK['STATE'] = "State";
-
-$BIZBOOK['COUNTRY'] = "Country";
-
-$BIZBOOK['NEXT'] = "Next";
-
-$BIZBOOK['PREVIOUS'] = "Previous";
-
-$BIZBOOK['FINISH'] = "Finish";
-
-$BIZBOOK['PRICE'] = "Price";
-
-$BIZBOOK['SKIP_THIS'] = "Skip this";
-
-$BIZBOOK['CREATED'] = "Created";
-
-$BIZBOOK['CREATE_NEW'] = "Create new";
-
-$BIZBOOK['REMOVE'] = "Remove";
-
-$BIZBOOK['SUCCESS'] = "Success";
-
-$BIZBOOK['UPGRADE'] = "Upgrade";
-
-$BIZBOOK['SAVE_AND_EXIT'] = "Save & Exit";
-
-$BIZBOOK['SAVE_CHANGES'] = "Save Changes";
-
-$BIZBOOK['UPDATE_AND_SUBMIT'] = "Update & Submit";
-
-$BIZBOOK['LOG_IN_TO_SUBMIT'] = "Log In To Submit";
-
-$BIZBOOK['SEND_AN_ENQIRY'] = "Send an enquiry";
-
-$BIZBOOK['JOIN_ON'] = "Join on";
-
-$BIZBOOK['CREATED_BY'] = "Created by";
-
-$BIZBOOK['JOIN_DATE'] = "Join date";
-
-$BIZBOOK['LOG_OUT'] = "Log Out";
-
-$BIZBOOK['GO_TO_USER_DASHBOARD'] = "Go to user dashboard";
-
-$BIZBOOK['GO_TO_ALL_LISTING'] = "Go to all listing";
-
-$BIZBOOK['ALL_LIKED_LISTINGS'] = "All Liked Listings";
-
-$BIZBOOK['PHOTOS'] = "photos";
-
-$BIZBOOK['PHOTO'] = "photo";
-
-$BIZBOOK['VIDEOS'] = "videos";
-
-$BIZBOOK['DURATION'] = "duration";
-
-$BIZBOOK['SUPPORT'] = "Support";
-
-$BIZBOOK['HOME'] = "Home";
-
-$BIZBOOK['NEWS_HOME'] = "News Home";
-
-$BIZBOOK['SHARE_NOW'] = "Share now";
-
-$BIZBOOK['OPEN'] = "Open";
-
-$BIZBOOK['AD'] = "Ad";
-
-$BIZBOOK['HI'] = "Hi";
-
-$BIZBOOK['ABOUT_US'] = "About Us";
-
-$BIZBOOK['VIEW_MORE'] = "view more";
-
-$BIZBOOK['CALL_NOW'] = "Call Now";
-
-$BIZBOOK['BUY_NOW'] = "Buy now";
-
-$BIZBOOK['TEL'] = "Tel";
-
+$BIZBOOK['JOB'] = "Empleo";
+$BIZBOOK['JOBS_BRACKET'] = "Empleo(s)";
+$BIZBOOK['LEADS'] = "Contactos";
+$BIZBOOK['UNLIMITED'] = "Ilimitado";
+$BIZBOOK['YEAR-S'] = "año(s)";
+$BIZBOOK['MONTH-S'] = "mes(es)";
+$BIZBOOK['ENQUIRIES'] = "Consultas";
+$BIZBOOK['ENQUIRY'] = "Consulta";
+$BIZBOOK['COMMUNITY'] = "Comunidad";
+$BIZBOOK['COUPONS'] = "Cupones";
+$BIZBOOK['EDIT_THIS_COUPON'] = "Editar Este Cupón";
+$BIZBOOK['DELETE_THIS_COUPON'] = "Eliminar Este Cupón";
+$BIZBOOK['PROMOTIONS'] = "Promociones";
+$BIZBOOK['POINTS_HISTORY'] = "Historial de Puntos";
+$BIZBOOK['MESSAGES'] = "Mensajes";
+$BIZBOOK['MESSAGE'] = "Mensaje";
+$BIZBOOK['COUPONS_AND_DEALS'] = "Cupones y Ofertas";
+$BIZBOOK['USER'] = "Usuario";
+$BIZBOOK['SUBMIT'] = "Enviar";
+$BIZBOOK['SUBMIT_NOW'] = "Enviar Ahora";
+$BIZBOOK['SUBMIT_REQUIREMENTS'] = "Enviar Requisitos";
+$BIZBOOK['SEARCH'] = "Buscar";
+$BIZBOOK['SEND'] = "Enviar";
+$BIZBOOK['BACK'] = "Volver";
+$BIZBOOK['CHANGE'] = "Cambiar";
+$BIZBOOK['AMOUNT'] = "Monto";
+$BIZBOOK['DOWNLOAD'] = "Descargar";
+$BIZBOOK['PROFILE'] = "Perfil";
+$BIZBOOK['YEARS'] = "Años";
+$BIZBOOK['YEARS_EXP'] = "Años de Exp.";
+$BIZBOOK['CASH_ON_DELIVERY'] = "Pago contra Entrega";
+$BIZBOOK['CONGRATULATIONS'] = "¡Felicidades!";
+$BIZBOOK['ADD_BUSINESS'] = "Añadir Negocio";
+$BIZBOOK['FOLLOWERS'] = "Seguidores";
+$BIZBOOK['TAX'] = "Impuesto";
+$BIZBOOK['LISTING_NAME'] = "Nombre del Negocio";
+$BIZBOOK['S_NO'] = "N.º";
+$BIZBOOK['FOLLOW'] = "Seguir";
+$BIZBOOK['RATING'] = "Calificación";
+$BIZBOOK['RATINGS'] = "Calificaciones";
+$BIZBOOK['VIEWS'] = "Vistas";
+$BIZBOOK['CLICKS'] = "Clics";
+$BIZBOOK['STATUS'] = "Estado";
+$BIZBOOK['EDIT'] = "Editar";
+$BIZBOOK['DELETE'] = "Eliminar";
+$BIZBOOK['VIEW'] = "Ver";
+$BIZBOOK['PREVIEW'] = "Vista Previa";
+$BIZBOOK['ADDRESS'] = "Dirección";
+$BIZBOOK['TYPE'] = "Tipo";
+$BIZBOOK['VERIFIED'] = "Verificado";
+$BIZBOOK['DATE'] = "Fecha";
+$BIZBOOK['DAYS'] = "Días";
+$BIZBOOK['TIME'] = "Hora";
+$BIZBOOK['CITY'] = "Ciudad";
+$BIZBOOK['CITIES'] = "Ciudades";
+$BIZBOOK['STATE'] = "Estado";
+$BIZBOOK['COUNTRY'] = "País";
+$BIZBOOK['NEXT'] = "Siguiente";
+$BIZBOOK['PREVIOUS'] = "Anterior";
+$BIZBOOK['FINISH'] = "Finalizar";
+$BIZBOOK['PRICE'] = "Precio";
+$BIZBOOK['SKIP_THIS'] = "Omitir Esto";
+$BIZBOOK['CREATED'] = "Creado";
+$BIZBOOK['CREATE_NEW'] = "Crear Nuevo";
+$BIZBOOK['REMOVE'] = "Eliminar";
+$BIZBOOK['SUCCESS'] = "Éxito";
+$BIZBOOK['UPGRADE'] = "Actualizar";
+$BIZBOOK['SAVE_AND_EXIT'] = "Guardar y Salir";
+$BIZBOOK['SAVE_CHANGES'] = "Guardar Cambios";
+$BIZBOOK['UPDATE_AND_SUBMIT'] = "Actualizar y Enviar";
+$BIZBOOK['LOG_IN_TO_SUBMIT'] = "Iniciar Sesión para Enviar";
+$BIZBOOK['SEND_AN_ENQIRY'] = "Enviar una Consulta";
+$BIZBOOK['JOIN_ON'] = "Unirse el";
+$BIZBOOK['CREATED_BY'] = "Creado por";
+$BIZBOOK['JOIN_DATE'] = "Fecha de Unión";
+$BIZBOOK['LOG_OUT'] = "Cerrar Sesión";
+$BIZBOOK['GO_TO_USER_DASHBOARD'] = "Ir al Panel de Usuario";
+$BIZBOOK['GO_TO_ALL_LISTING'] = "Ir a Todos los Negocios";
+$BIZBOOK['ALL_LIKED_LISTINGS'] = "Todos los Negocios Favoritos";
+$BIZBOOK['PHOTOS'] = "Fotos";
+$BIZBOOK['PHOTO'] = "Foto";
+$BIZBOOK['VIDEOS'] = "Videos";
+$BIZBOOK['DURATION'] = "Duración";
+$BIZBOOK['SUPPORT'] = "Soporte";
+$BIZBOOK['HOME'] = "Inicio";
+$BIZBOOK['NEWS_HOME'] = "Noticias Inicio";
+$BIZBOOK['SHARE_NOW'] = "Compartir Ahora";
+$BIZBOOK['OPEN'] = "Abierto";
+$BIZBOOK['AD'] = "Anuncio";
+$BIZBOOK['HI'] = "Hola";
+$BIZBOOK['ABOUT_US'] = "Sobre Nosotros";
+$BIZBOOK['VIEW_MORE'] = "Ver Más";
+$BIZBOOK['CALL_NOW'] = "Llamar Ahora";
+$BIZBOOK['BUY_NOW'] = "Comprar Ahora";
+$BIZBOOK['TEL'] = "Tel.";
 $BIZBOOK['WHATSAPP'] = "WhatsApp";
-
-$BIZBOOK['WHATSAPP_PLACEHOLDER'] = "Whatsapp Number (e.g. +919876543210)";
-
-$BIZBOOK['ABOVE'] = "Above";
-
-$BIZBOOK['BELOW'] = "Below";
-
+$BIZBOOK['WHATSAPP_PLACEHOLDER'] = "Número de WhatsApp (ej. +349876543210)";
+$BIZBOOK['ABOVE'] = "Arriba";
+$BIZBOOK['BELOW'] = "Abajo";
 $BIZBOOK['PAYPAL'] = "PayPal";
-
 $BIZBOOK['STRIPE'] = "Stripe";
-
 $BIZBOOK['RAZOR_PAY'] = "Razor Pay";
-
 $BIZBOOK['PAYTM'] = "Paytm";
-
-$BIZBOOK['PAY_NOW'] = "Pay Now";
-
-$BIZBOOK['PAY'] = "Pay";
-
-$BIZBOOK['NOW'] = "Now";
-
-$BIZBOOK['FAQ'] = "FAQ";
-
-$BIZBOOK['CHOOSE_A_USER'] = "Choose a User";
-
-$BIZBOOK['SOCIAL_MEDIA'] = "Social media";
-
-$BIZBOOK['MEMBER_SINCE'] = "Member since";
-
-$BIZBOOK['PAGE_VIEWS'] = "Page views";
-
-$BIZBOOK['FULL_NAME'] = "Full name";
-
-$BIZBOOK['VILLAGE_STREET_NAME'] = "Village & Street name";
-
-$BIZBOOK['POSTCODE_ZIP'] = "Postcode/ZIP";
-
-$BIZBOOK['FOLLOVERS'] = "Follovers";
-
-$BIZBOOK['SHARE_THIS_PROFILE'] = "Share this profile";
-
-$BIZBOOK['LIKES'] = "LIKES";
-
-$BIZBOOK['EXCELLENT'] = "Excellent";
-
-$BIZBOOK['GOOD'] = "Good";
-
-$BIZBOOK['SATISFACTORY'] = "Satisfactory";
-
-$BIZBOOK['BELOW_AVERAGE'] = "Below Average";
-
-$BIZBOOK['OVERALL_RATINGS'] = "Overall Ratings";
-
-$BIZBOOK['BASED_ON'] = "based on";
-
-$BIZBOOK['OUR'] = "Our";
-
-$BIZBOOK['LOCATION'] = "Location";
-
-$BIZBOOK['COMPANY'] = "Company";
-
-$BIZBOOK['INFO'] = "Info";
-
-$BIZBOOK['UPLOAD_A_FILE'] = "Upload a file";
-
-$BIZBOOK['TRENDING_POSTS'] = "Trending Posts";
+$BIZBOOK['PAY_NOW'] = "Pagar Ahora";
+$BIZBOOK['PAY'] = "Pagar";
+$BIZBOOK['NOW'] = "Ahora";
+$BIZBOOK['FAQ'] = "Preguntas Frecuentes";
+$BIZBOOK['CHOOSE_A_USER'] = "Elegir un Usuario";
+$BIZBOOK['SOCIAL_MEDIA'] = "Redes Sociales";
+$BIZBOOK['MEMBER_SINCE'] = "Miembro Desde";
+$BIZBOOK['PAGE_VIEWS'] = "Vistas de Página";
+$BIZBOOK['FULL_NAME'] = "Nombre Completo";
+$BIZBOOK['VILLAGE_STREET_NAME'] = "Nombre del Pueblo & Calle";
+$BIZBOOK['POSTCODE_ZIP'] = "Código Postal";
+$BIZBOOK['FOLLOVERS'] = "Seguidores";
+$BIZBOOK['SHARE_THIS_PROFILE'] = "Compartir Este Perfil";
+$BIZBOOK['LIKES'] = "Me Gusta";
+$BIZBOOK['EXCELLENT'] = "Excelente";
+$BIZBOOK['GOOD'] = "Bueno";
+$BIZBOOK['SATISFACTORY'] = "Satisfactorio";
+$BIZBOOK['BELOW_AVERAGE'] = "Por Debajo del Promedio";
+$BIZBOOK['OVERALL_RATINGS'] = "Calificación General";
+$BIZBOOK['BASED_ON'] = "basado en";
+$BIZBOOK['OUR'] = "Nuestro";
+$BIZBOOK['LOCATION'] = "Ubicación";
+$BIZBOOK['COMPANY'] = "Compañía";
+$BIZBOOK['INFO'] = "Información";
+$BIZBOOK['UPLOAD_A_FILE'] = "Subir un Archivo";
+$BIZBOOK['TRENDING_POSTS'] = "Publicaciones de Tendencia";
 
 //************************* All Common Texts Ends ***************************
 
 //************************* Header Texts Starts ***************************
 
-$BIZBOOK['SEARCHBOX_LABEL'] = "What are you looking for?";
-
-$BIZBOOK['4K+_USERS'] = "Community";
-
-$BIZBOOK['POST_ADS'] = "Advertise with us";
-
-$BIZBOOK['OUR_ALL_SER'] = "Our other Services";
-
-$BIZBOOK['OUR_ALL_SER_SUB'] = "Browse Businesses by Category";
-
-$BIZBOOK['PROFILE_BY'] = "Profile by";
-
-$BIZBOOK['MENU-SER-ALL'] = "Services provide the easy way to selling your products here.";
-
-$BIZBOOK['MENU-PRO-PERA'] = "Products provide the easy way to selling your products here.";
-
-$BIZBOOK['MENU-EVE-PERA'] = "Evets provide the easy way to selling your products here.";
-
-$BIZBOOK['MENU-BLO-PERA'] = "Blog provide the easy way to selling your products here.";
-
-$BIZBOOK['MENU-COMM-PERA'] = "Make your own community and bring your bus nxt level.";
-
-$BIZBOOK['MENU-ADS-PERA'] = "Post your Ads and get more quality leads from us.";
-
-$BIZBOOK['MENU-ADD-LIS-PERA']  = "Post your Ads and get more quality leads from us.";
-
-$BIZBOOK['CLEAR-ALL-NOTIFICATIONS']  = "Clear all notifications";
-
-$BIZBOOK['NO-NOTIFICATIONS-TO-SHOW']  = "No Notifications to Show";
+$BIZBOOK['SEARCHBOX_LABEL'] = "¿Qué estás buscando?";
+$BIZBOOK['4K+_USERS'] = "Comunidad";
+$BIZBOOK['POST_ADS'] = "Anúnciate con nosotros";
+$BIZBOOK['OUR_ALL_SER'] = "Nuestros Otros Negocios";
+$BIZBOOK['OUR_ALL_SER_SUB'] = "Explora Negocios por Categoría";
+$BIZBOOK['PROFILE_BY'] = "Perfil por";
+$BIZBOOK['MENU-SER-ALL'] = "Los Servicios facilitan vender tus productos aquí.";
+$BIZBOOK['MENU-PRO-PERA'] = "Los Productos facilitan vender tus productos aquí.";
+$BIZBOOK['MENU-EVE-PERA'] = "Los Eventos facilitan vender tus productos aquí.";
+$BIZBOOK['MENU-BLO-PERA'] = "El Blog facilita vender tus productos aquí.";
+$BIZBOOK['MENU-COMM-PERA'] = "Crea tu propia comunidad y lleva tu negocio al siguiente nivel.";
+$BIZBOOK['MENU-ADS-PERA'] = "Publica tus anuncios y obtén más contactos de calidad con nosotros.";
+$BIZBOOK['MENU-ADD-LIS-PERA']  = "Publica tus anuncios y obtén más contactos de calidad con nosotros.";
+$BIZBOOK['CLEAR-ALL-NOTIFICATIONS']  = "Limpiar todas las notificaciones";
+$BIZBOOK['NO-NOTIFICATIONS-TO-SHOW']  = "No hay notificaciones para mostrar";
 
 //************************* Header Texts Ends ***************************
 
 
 //************************* Home page *********************
-$BIZBOOK['HOM-BAN-TIT-CAT'] = "Find the Service Experts";
+$BIZBOOK['HOM-BAN-TIT-CAT'] = "Encuentra los Profesionales de Servicios";
+$BIZBOOK['HOM-BAN-TIT'] = "Encuentra tus <span>Necesidades Locales <i></i></span>";
+$BIZBOOK['HOM-BAN-SUB-TIT'] = "Restaurantes, cafés y bares en Tu Ciudad";
+$BIZBOOK['HOM-POP-TIT'] = "Servicios Populares";
+$BIZBOOK['HOM-POP-TIT1'] = "cerca de ti";
+$BIZBOOK['HOM-POP-SUB-TIT'] = "Encuentra los mejores servicios cerca de ti.";
+$BIZBOOK['HOM-VI-ALL-SER'] = "Ver todos los negocios";
+$BIZBOOK['HOM-VI-ALL-SER-EXPERTS'] = "Ver todos los profesionales de servicios";
+$BIZBOOK['HOM-VI-ALL-JOB-OPENINGS'] = "Ver todas las Ofertas de Trabajo";
+$BIZBOOK['HOM-VI-KNOW-MORE'] = "Saber más";
+$BIZBOOK['HOM-EXP-TIT'] = "Explora la Ciudad";
+$BIZBOOK['HOM-EXP-TIT1'] = "Categoría";
+$BIZBOOK['HOM-EXP-SUB-TIT'] = "Explora los servicios y negocios disponibles en tu ciudad.";
+$BIZBOOK['HOM-BEST-TIT'] = "Servicios Destacados";
+$BIZBOOK['HOM-BEST-TIT1'] = "en tu ciudad";
+$BIZBOOK['HOM-BEST-SUB-TIT'] = "Servicios especialmente recomendados en tu zona.";
+$BIZBOOK['HOM-WHAT-SER'] = "¿Qué servicio necesitas?";
+$BIZBOOK['HOM-WHAT-BIZ'] = "Directorio ZITIZITI";
+$BIZBOOK['HOM-WHAT-BIZ-BOOK-HELP-YOU'] = "ZITIZITI te ayudará";
+$BIZBOOK['HOM-WHAT-SUB-HEAD'] = "Cuéntanos más sobre tus necesidades para conectarte con el proveedor adecuado.";
+$BIZBOOK['HOM-WHAT-SER-PO1'] = "Cuéntanos más sobre tus necesidades";
+$BIZBOOK['HOM-WHAT-SER-PO1-SUB'] = "Imagina tener presencia en línea en un directorio local.";
+$BIZBOOK['HOM-WHAT-SER-PO2'] = "Conectamos con el proveedor adecuado";
+$BIZBOOK['HOM-WHAT-SER-PO2-SUB'] = "Anunciar tu negocio en áreas específicas tiene muchas ventajas.";
+$BIZBOOK['HOM-WHAT-SER-PO3'] = "Satisfecho con nuestro servicio";
+$BIZBOOK['HOM-WHAT-SER-PO3-SUB'] = "Tu negocio local también necesita gestión de marca.";
+$BIZBOOK['HOM-WHT-LOOK-TIT'] = "¿Qué estás buscando?";
+$BIZBOOK['HOM-TOPSER-TIT'] = "Proveedores de Servicios Top";
+$BIZBOOK['HOM-TOPSER-TIT1'] = "en la ciudad";
+$BIZBOOK['HOM-TOPSER-SUB-TIT'] = "Encuentra los mejores proveedores en tu área.";
+$BIZBOOK['HOM-EVE-TIT'] = "Eventos Destacados";
+$BIZBOOK['HOM-EVE-TIT1'] = "en la ciudad";
+$BIZBOOK['HOM-EVE-SUB-TIT'] = "Explora los eventos más interesantes en tu ciudad.";
+$BIZBOOK['HOM-HOW-TIT'] = "Cómo Funciona";
+$BIZBOOK['HOM-HOW-SUB-TIT'] = "Explora algunos de los mejores consejos de nuestros<br>socios y amigos.";
+$BIZBOOK['HOM-HOW-P-TIT-1'] = "Crea una cuenta";
+$BIZBOOK['HOM-HOW-P-SUB-1'] = "Descubre los servicios de nuestra comunidad.";
+$BIZBOOK['HOM-HOW-P-TIT-2'] = "Añade tu negocio";
+$BIZBOOK['HOM-HOW-P-SUB-2'] = "Publica tu negocio en nuestro directorio.";
+$BIZBOOK['HOM-HOW-P-TIT-3'] = "Obtén más contactos";
+$BIZBOOK['HOM-HOW-P-SUB-3'] = "Expande tu negocio con nuevos clientes.";
+$BIZBOOK['HOM-HOW-P-TIT-4'] = "Alcanza tus metas";
+$BIZBOOK['HOM-HOW-P-SUB-4'] = "Con nuestro apoyo, alcanza tus objetivos de negocio.";
+$BIZBOOK['HOM-APP-TIT'] = "¿Buscas el Mejor Proveedor de Servicios?";
+$BIZBOOK['HOM-APP-TIT-SUB'] = "¡Obtén la App!";
+$BIZBOOK['HOM-APP-PO-1'] = "Encuentra negocios cercanos";
+$BIZBOOK['HOM-APP-PO-2'] = "Consulta de servicios sencilla";
+$BIZBOOK['HOM-APP-PO-3'] = "Opiniones y calificaciones de negocios";
+$BIZBOOK['HOM-APP-PO-4'] = "Administra tu negocio, consultas y opiniones";
+$BIZBOOK['HOM-APP-SEND'] = "Te enviaremos un enlace al correo proporcionado abajo. Ábrelo en tu smartphone para descargar la app.";
+$BIZBOOK['HOM-WHAT-LOOK-TIT'] = "¿Qué estás buscando?";
+$BIZBOOK['HOM-WHAT-LOOK-SUB'] = "Te conectamos con profesionales de servicios.";
+$BIZBOOK['HOM-WHAT-LOOK-CTA'] = "Obtén expertos";
+$BIZBOOK['HOM-FEW-REASON-LOVE'] = "Algunas razones para amar el Directorio de Negocios en Línea";
+$BIZBOOK['HOM-CALL-US-ON'] = "Llámanos al: +34 6214 6548";
+$BIZBOOK['HOM-NO1-BEST-CHOICE'] = "#1 Mejor elección";
+$BIZBOOK['HOM-FIND-YOUR-RIGHT'] = "Encuentra el adecuado";
+$BIZBOOK['HOM-NOW'] = "ahora";
+$BIZBOOK['HOM-HERE'] = "aquí";
+$BIZBOOK['HOM-CAR'] = "Automóvil";
+$BIZBOOK['HOM-P-TAG-PAGE-4'] = "Autos Nuevos, Precios de Autos, Compra y Venta de Autos Usados en España";
+$BIZBOOK['HOM-EXPLORE-PAGE-4'] = "Explorar todos los autos";
+$BIZBOOK['HOM-PROPERTY'] = "Propiedades";
+$BIZBOOK['HOM-P-TAG-PAGE-5'] = "Encuentra las mejores propiedades como villas, terrenos, apartamentos y más en España";
+$BIZBOOK['HOM-EXPLORE-PAGE-5'] = "Explorar todas las propiedades";
+$BIZBOOK['HOM-SAY-HELLO-DOCTOR'] = "Saluda a los Doctores";
+$BIZBOOK['HOM-DOCTORS'] = "Doctores";
+$BIZBOOK['HOM-P-TAG-PAGE-6'] = "Te ayudamos a encontrar doctores cerca de ti con consulta en línea, detalles de contacto, fotos, mapa y opiniones.";
+$BIZBOOK['HOM-EXPLORE-PAGE-6'] = "Explorar todos los doctores";
+$BIZBOOK['HOM-NO1-SALON-SPA'] = "#1 Tratamiento de Salón y Spa";
+$BIZBOOK['HOM-SPA-SALON'] = "Spa y Salón";
+$BIZBOOK['HOM-P-TAG-PAGE-7'] = "Te ayudamos a encontrar el mejor Salón, Tratamiento de Spa y Masaje Tailandés Cerca de Ti.";
+$BIZBOOK['HOM-EXPLORE-PAGE-7'] = "Explorar todos los servicios";
+$BIZBOOK['HOM-NO1-HOTEL-BOOKING'] = "#1 Sitio de reservas de hoteles";
+$BIZBOOK['HOM-HOTELS-RESORTS'] = "Hoteles y Resorts";
+$BIZBOOK['HOM-P-TAG-PAGE-8'] = "Te ayudamos a encontrar el mejor hotel, resort, vida nocturna, fiestas, eventos, celebraciones y más";
+$BIZBOOK['HOM-RESTURANT-IN-POCKET'] = "Restaurantes en tu bolsillo";
+$BIZBOOK['HOM-ORDER-YOUR'] = "Pide Tu";
+$BIZBOOK['HOM-FOOD-ONLINE'] = "Comida en línea";
+$BIZBOOK['HOM-P-TAG-PAGE-9'] = "Es fácil pedir tu comida favorita de tus restaurantes preferidos con ofertas especiales.";
+$BIZBOOK['HOM-EXPLORE-PAGE-9'] = "Explorar toda la comida";
 
-$BIZBOOK['HOM-BAN-TIT'] = "Find your <span>Local needs <i></i></span>";
-
-$BIZBOOK['HOM-BAN-SUB-TIT'] = "Restaurants, cafe's, and bars in New york";
-
-$BIZBOOK['HOM-POP-TIT'] = "Popular Services";
-
-$BIZBOOK['HOM-POP-TIT1'] = "near you";
-
-$BIZBOOK['HOM-POP-SUB-TIT'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
-
-$BIZBOOK['HOM-VI-ALL-SER'] = "View all services";
-
-$BIZBOOK['HOM-VI-ALL-SER-EXPERTS'] = "View all service experts";
-
-$BIZBOOK['HOM-VI-ALL-JOB-OPENINGS'] = "View all Job openings";
-
-$BIZBOOK['HOM-VI-KNOW-MORE'] = "Know more";
-
-$BIZBOOK['HOM-EXP-TIT'] = "Explore City";
-
-$BIZBOOK['HOM-EXP-TIT1'] = "Category";
-
-$BIZBOOK['HOM-EXP-SUB-TIT'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
-
-$BIZBOOK['HOM-BEST-TIT'] = "Featured Services";
-
-$BIZBOOK['HOM-BEST-TIT1'] = "in your city";
-
-$BIZBOOK['HOM-BEST-SUB-TIT'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
-
-$BIZBOOK['HOM-WHAT-SER'] = "What service do you need?";
-
-$BIZBOOK['HOM-WHAT-BIZ'] = "BizBook Directory";
-
-$BIZBOOK['HOM-WHAT-BIZ-BOOK-HELP-YOU'] = "BizBook will help you";
-
-$BIZBOOK['HOM-WHAT-SUB-HEAD'] = "Tell us more about your requirements so that we can connect you to the right service provider.";
-
-$BIZBOOK['HOM-WHAT-SER-PO1'] = "Tell us more about your requirements";
-
-$BIZBOOK['HOM-WHAT-SER-PO1-SUB'] = "HI Imagine you have made your presence online through a local online directory, but your competitors have..";
-
-$BIZBOOK['HOM-WHAT-SER-PO2'] = "We connect with right service provider";
-
-$BIZBOOK['HOM-WHAT-SER-PO2-SUB'] = "Advertising your business to area specific has many advantages. For local businessmen, it is an opportunity..";
-
-$BIZBOOK['HOM-WHAT-SER-PO3'] = "Happy with our service";
-
-$BIZBOOK['HOM-WHAT-SER-PO3-SUB'] = "Your local business too needs brand management and image making. As you know the local market..";
-
-$BIZBOOK['HOM-WHT-LOOK-TIT'] = "What you looking for?";
-
-$BIZBOOK['HOM-TOPSER-TIT'] = "Top Service Provider";
-
-$BIZBOOK['HOM-TOPSER-TIT1'] = "in city";
-
-$BIZBOOK['HOM-TOPSER-SUB-TIT'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
-
-$BIZBOOK['HOM-EVE-TIT'] = "Feature Events";
-
-$BIZBOOK['HOM-EVE-TIT1'] = "in city";
-
-$BIZBOOK['HOM-EVE-SUB-TIT'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
-
-$BIZBOOK['HOM-HOW-TIT'] = "Cómo funciona";
-
-$BIZBOOK['HOM-HOW-SUB-TIT'] = "Explore some of the best tips from around the world from our<br>partners and friends.lacinia viverra lectus.";
-
-$BIZBOOK['HOM-HOW-P-TIT-1'] = "Create an account";
-
-$BIZBOOK['HOM-HOW-P-SUB-1'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
-
-$BIZBOOK['HOM-HOW-P-TIT-2'] = "Add your business";
-
-$BIZBOOK['HOM-HOW-P-SUB-2'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
-
-$BIZBOOK['HOM-HOW-P-TIT-3'] = "Get more leads";
-
-$BIZBOOK['HOM-HOW-P-SUB-3'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
-
-$BIZBOOK['HOM-HOW-P-TIT-4'] = "Archive goles";
-
-$BIZBOOK['HOM-HOW-P-SUB-4'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
-
-$BIZBOOK['HOM-APP-TIT'] = "Looking for the Best Service Provider?";
-
-$BIZBOOK['HOM-APP-TIT-SUB'] = "Get the App!";
-
-$BIZBOOK['HOM-APP-PO-1'] = "HOM-APP-TITFind nearby listings";
-
-$BIZBOOK['HOM-APP-PO-2'] = "Easy service enquiry";
-
-$BIZBOOK['HOM-APP-PO-3'] = "Listing reviews and ratings";
-
-$BIZBOOK['HOM-APP-PO-4'] = "Manage your listing, enquiry and reviews";
-
-$BIZBOOK['HOM-APP-SEND'] = "We'll send you a link, to you below provided email id & open it on your smart phone to download the app";
-
-$BIZBOOK['HOM-WHAT-LOOK-TIT'] = "What you looking for?";
-
-$BIZBOOK['HOM-WHAT-LOOK-SUB'] = "We connect you to service experts.";
-
-$BIZBOOK['HOM-WHAT-LOOK-CTA'] = "Get experts";
-
-$BIZBOOK['HOM-FEW-REASON-LOVE'] = "A few reasons you’ll love Online Business Directory";
-
-$BIZBOOK['HOM-CALL-US-ON'] = "Call us on: +01 6214 6548";
-
-$BIZBOOK['HOM-NO1-BEST-CHOICE'] = "#1 Best choice";
-
-$BIZBOOK['HOM-FIND-YOUR-RIGHT'] = "Find your right";
-
-$BIZBOOK['HOM-NOW'] = "now";
-
-$BIZBOOK['HOM-HERE'] = "here";
-
-$BIZBOOK['HOM-CAR'] = "Car";
-
-$BIZBOOK['HOM-P-TAG-PAGE-4'] = "New Cars, Car Prices, Buy & Sell Used Cars in United States";
-
-$BIZBOOK['HOM-EXPLORE-PAGE-4'] = "Explore all cars";
-
-$BIZBOOK['HOM-PROPERTY'] = "Property";
-
-$BIZBOOK['HOM-P-TAG-PAGE-5'] = "Find your best property like villas, plots, flats & more in United States";
-
-$BIZBOOK['HOM-EXPLORE-PAGE-5'] = "Explore all Property";
-
-$BIZBOOK['HOM-SAY-HELLO-DOCTOR'] = "Say Hello Doctors";
-
-$BIZBOOK['HOM-DOCTORS'] = "Doctors";
-
-$BIZBOOK['HOM-P-TAG-PAGE-6'] = "We help you to find doctors near you with online inquiry, contact details, photos, map, review and more";
-
-$BIZBOOK['HOM-EXPLORE-PAGE-6'] = "Explore all Doctors";
-
-$BIZBOOK['HOM-NO1-SALON-SPA'] = "#1 Salon And Spa Treatment";
-
-$BIZBOOK['HOM-SPA-SALON'] = "Spa and Salon";
-
-$BIZBOOK['HOM-P-TAG-PAGE-7'] = "We help you to find the best Salon, Spa Treatment & Thai Massage Near You.";
-
-$BIZBOOK['HOM-EXPLORE-PAGE-7'] = "Explore all Services";
-
-$BIZBOOK['HOM-NO1-HOTEL-BOOKING'] = "#1 Hotel booking website";
-
-$BIZBOOK['HOM-HOTELS-RESORTS'] = "Hotel and Resort";
-
-$BIZBOOK['HOM-P-TAG-PAGE-8'] = "We help you to find the best Hotel, Resert, Night life, Parties, Events, Celebrations and more";
-
-$BIZBOOK['HOM-RESTURANT-IN-POCKET'] = "Restaurants in your pocket";
-
-$BIZBOOK['HOM-ORDER-YOUR'] = "Order Your";
-
-$BIZBOOK['HOM-FOOD-ONLINE'] = "Food online";
-
-$BIZBOOK['HOM-P-TAG-PAGE-9'] = "Easy to order your favourite food from your favourite restaurants with more special offers.";
-
-$BIZBOOK['HOM-EXPLORE-PAGE-9'] = "Explore all Foods";
 
 //************************* Dashboard Menu's Starts *********************
 
-$BIZBOOK['MY_DASHBOARD'] = "My Dashboard";
-
-$BIZBOOK['ADD_NEW_LISTING'] = "Add New Listing";
-
-$BIZBOOK['LEAD_ENQUIRY'] = "Lead enquiry";
-
-$BIZBOOK['ALL_PRODUCTS'] = "All Products";
-
+$BIZBOOK['MY_DASHBOARD'] = "Mi Tablero";
+$BIZBOOK['ADD_NEW_LISTING'] = "Añadir Nuevo Negocio";
+$BIZBOOK['LEAD_ENQUIRY'] = "Consulta de Contacto";
+$BIZBOOK['ALL_PRODUCTS'] = "Todos los Productos";
 $BIZBOOK['SEO'] = "SEO";
-
-$BIZBOOK['REVIEWS'] = "Reviews";
-
-$BIZBOOK['SHOW_ALL'] = "Show All";
-
-$BIZBOOK['VIEW_ALL_LISTINGS'] = "View all listings";
-
-$BIZBOOK['VIEW_PROFILE'] = "View profile";
-
-$BIZBOOK['NO_REVIEWS_YET'] = "No Reviews Yet";
-
-$BIZBOOK['ALL_RECEIVED_REVIEWS'] = "All Received Reviews";
-
-$BIZBOOK['ALL_SENT_REVIEWS'] = "All Sent Reviews";
-
-$BIZBOOK['REVIEW_DETAILS'] = "review details";
-
-$BIZBOOK['PAYMENT'] = "Payment";
-
-$BIZBOOK['SENT'] = "Sent";
-
-$BIZBOOK['RECEIVED'] = "Received";
-
-$BIZBOOK['PLAN'] = "PLAN";
-
-$BIZBOOK['FREE'] = "FREE";
-
-$BIZBOOK['MY_PROFILE'] = "My Profile";
-
-$BIZBOOK['LIKED_LISTINGS'] = "Liked Listings";
-
-$BIZBOOK['FOLLOWINGS'] = "Followings";
-
-$BIZBOOK['UN_FOLLOW'] = "Un-follow";
-
-$BIZBOOK['AD_SUMMARY'] = "Ad Summary";
-
-$BIZBOOK['CHECK_OUT'] = "Payment & plan";
-
-$BIZBOOK['PAYMENT_INVOICE'] = "Payment invoice";
-
-$BIZBOOK['NOTIFICATIONS'] = "Notifications";
-
-$BIZBOOK['HOW_TOS'] = "How to's";
-
-$BIZBOOK['SETTING'] = "Setting";
+$BIZBOOK['REVIEWS'] = "Opiniones";
+$BIZBOOK['SHOW_ALL'] = "Mostrar Todos";
+$BIZBOOK['VIEW_ALL_LISTINGS'] = "Ver Todos los Negocios";
+$BIZBOOK['VIEW_PROFILE'] = "Ver Perfil";
+$BIZBOOK['NO_REVIEWS_YET'] = "Sin Opiniones Aún";
+$BIZBOOK['ALL_RECEIVED_REVIEWS'] = "Todas las Opiniones Recibidas";
+$BIZBOOK['ALL_SENT_REVIEWS'] = "Todas las Opiniones Enviadas";
+$BIZBOOK['REVIEW_DETAILS'] = "Detalles de Opinión";
+$BIZBOOK['PAYMENT'] = "Pago";
+$BIZBOOK['SENT'] = "Enviado";
+$BIZBOOK['RECEIVED'] = "Recibido";
+$BIZBOOK['PLAN'] = "Plan";
+$BIZBOOK['FREE'] = "Gratis";
+$BIZBOOK['MY_PROFILE'] = "Mi Perfil";
+$BIZBOOK['LIKED_LISTINGS'] = "Negocios Favoritos";
+$BIZBOOK['FOLLOWINGS'] = "Seguidos";
+$BIZBOOK['UN_FOLLOW'] = "Dejar de Seguir";
+$BIZBOOK['AD_SUMMARY'] = "Resumen de Anuncio";
+$BIZBOOK['CHECK_OUT'] = "Pago y Pack";
+$BIZBOOK['PAYMENT_INVOICE'] = "Factura de Pago";
+$BIZBOOK['NOTIFICATIONS'] = "Notificaciones";
+$BIZBOOK['HOW_TOS'] = "Cómo Hacer";
+$BIZBOOK['SETTING'] = "Configuración";
 
 //************************* Dashboard Menu's Ends *********************
 
 //************************* Login Page Starts *************************
 
-$BIZBOOK['MEMBER_LOGIN'] = "Member Login";
-
-$BIZBOOK['ENTER_EMAIL_STAR'] = "Enter email*";
-
-$BIZBOOK['ENTER_PASSWORD_STAR'] = "Enter password*";
-
-$BIZBOOK['SIGN_IN'] = "Sign in";
-
-$BIZBOOK['LOGIN_QUESTIONMARK'] = "Login?";
-
-$BIZBOOK['CREATE_ACCOUNT_QUESTIONMARK'] = "Create an account?";
-
-$BIZBOOK['FORGOT_PASSWORD_QUESTIONMARK'] = "Forgot password?";
-
-$BIZBOOK['CONTINUE_WITH_FACEBOOK'] = "Continue with Facebook";
+$BIZBOOK['MEMBER_LOGIN'] = "Inicio de Sesión de Miembro";
+$BIZBOOK['ENTER_EMAIL_STAR'] = "Ingresa el correo electrónico*";
+$BIZBOOK['ENTER_PASSWORD_STAR'] = "Ingresa la contraseña*";
+$BIZBOOK['SIGN_IN'] = "Iniciar Sesión";
+$BIZBOOK['LOGIN_QUESTIONMARK'] = "¿Iniciar Sesión?";
+$BIZBOOK['CREATE_ACCOUNT_QUESTIONMARK'] = "¿Crear una cuenta?";
+$BIZBOOK['FORGOT_PASSWORD_QUESTIONMARK'] = "¿Olvidaste tu contraseña?";
+$BIZBOOK['CONTINUE_WITH_FACEBOOK'] = "Continuar con Facebook";
 
 //************************* Login Page Ends *************************
 
 //************************* Register Page Starts ********************
 
-$BIZBOOK['CREATE_AN_ACCOUNT'] = "Create an account";
-
-$BIZBOOK['REGISTER_LABEL'] = "Don't have an account? Create your account. It's take less then a minutes";
-
-$BIZBOOK['EMAIL_ID_STAR'] = "Email id*";
-
-$BIZBOOK['PASSWORD_STAR'] = "Password*";
-
-$BIZBOOK['USER_TYPE'] = "User type";
-
-$BIZBOOK['USER_OPTIONS'] = "User options";
-
-$BIZBOOK['CHOOSE_YOUR_PLAN'] = "Elige tu plan";
-
-$BIZBOOK['PLAN_DETAILS'] = "Plan details";
-
-$BIZBOOK['PLAN_DETAILS_SUB'] = "Make your service on next level";
-
-$BIZBOOK['REGISTER_NOW'] = "Register Now";
-
-$BIZBOOK['GENERAL_USER'] = "General user";
-
-$BIZBOOK['JOB_SEEKER'] = "Job Seeker";
-
-$BIZBOOK['SERVICE_PROVIDER'] = "Service provider";
+$BIZBOOK['CREATE_AN_ACCOUNT'] = "Crear una cuenta";
+$BIZBOOK['REGISTER_LABEL'] = "¿No tienes una cuenta? Crea tu cuenta. Toma menos de un minuto";
+$BIZBOOK['EMAIL_ID_STAR'] = "ID de Correo*";
+$BIZBOOK['PASSWORD_STAR'] = "Contraseña*";
+$BIZBOOK['USER_TYPE'] = "Tipo de Usuario";
+$BIZBOOK['USER_OPTIONS'] = "Opciones de Usuario";
+$BIZBOOK['CHOOSE_YOUR_PLAN'] = "Elige tu Pack";
+$BIZBOOK['PLAN_DETAILS'] = "Detalles del Pack";
+$BIZBOOK['PLAN_DETAILS_SUB'] = "Lleva tu servicio al siguiente nivel";
+$BIZBOOK['REGISTER_NOW'] = "Regístrate Ahora";
+$BIZBOOK['GENERAL_USER'] = "Usuario General";
+$BIZBOOK['JOB_SEEKER'] = "Buscador de Empleo";
+$BIZBOOK['SERVICE_PROVIDER'] = "Proveedor de Servicios";
 
 //************************* Register Page Ends ********************
 
 //************************* Pricing Details Page Texts Starts ***********************
 
-$BIZBOOK['PRICING_TITLE_2'] = "Choose your pricing plan";
-
-$BIZBOOK['PRICING_SUB_TITLE_2'] = "Cras nulla nulla, pulvinar sit amet nunc at, lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
-
-$BIZBOOK['PRICING_GETTING_STARTED'] = "For getting started";
-
-$BIZBOOK['PRICING_PERFECT_SMALL_TEAMS'] = "Perfect for small teams";
-
-$BIZBOOK['PRICING_BEST_VALUE_LARGE'] = "Best value for large teams";
-
-$BIZBOOK['PRICING_MADE_ENTERPRISES'] = "Made for enterprises";
-
-$BIZBOOK['PRICING_SINGLE_USER'] = "Single user";
-
-$BIZBOOK['PRICING_STARTUP_BUSINESS'] = "Startup business";
-
-$BIZBOOK['PRICING_MEDIUM_BUSINESS'] = "Medium business";
-
-$BIZBOOK['PRICING_GLOBAL_BUSINESS'] = "Global business";
-
-$BIZBOOK['PRICING_GET_DIRECT_LEADS'] = "Get direct leads";
-
-$BIZBOOK['PRICING_EMAIL_NOTIFICATION'] = "Email notification(leads)";
-
-$BIZBOOK['PRICING_VERIFIED_LISTING'] = "Verified listing";
-
-$BIZBOOK['PRICING_TRUSTED_LISTING'] = "Trusted listing";
-
-$BIZBOOK['PRICING_SOCIAL_SHARE'] = "Social media share";
-
-$BIZBOOK['PRICING_REVIEW_CONTROL'] = "Review control";
-
-$BIZBOOK['PRICING_ADMIN_TIPS'] = "Admin tips";
-
-$BIZBOOK['PRICING_GET_START'] = "Get Start";
+$BIZBOOK['PRICING_TITLE_2'] = "Elige tu pack de precios";
+$BIZBOOK['PRICING_SUB_TITLE_2'] = "Selecciona el pack adecuado para ti y obtén ventajas para tu negocio.";
+$BIZBOOK['PRICING_GETTING_STARTED'] = "Para comenzar";
+$BIZBOOK['PRICING_PERFECT_SMALL_TEAMS'] = "Ideal para equipos pequeños";
+$BIZBOOK['PRICING_BEST_VALUE_LARGE'] = "Mejor opción para equipos grandes";
+$BIZBOOK['PRICING_MADE_ENTERPRISES'] = "Diseñado para empresas";
+$BIZBOOK['PRICING_SINGLE_USER'] = "Usuario individual";
+$BIZBOOK['PRICING_STARTUP_BUSINESS'] = "Negocio en Crecimiento";
+$BIZBOOK['PRICING_MEDIUM_BUSINESS'] = "Negocio Mediano";
+$BIZBOOK['PRICING_GLOBAL_BUSINESS'] = "Negocio Global";
+$BIZBOOK['PRICING_GET_DIRECT_LEADS'] = "Obtén contactos directos";
+$BIZBOOK['PRICING_EMAIL_NOTIFICATION'] = "Notificaciones de correo (contactos)";
+$BIZBOOK['PRICING_VERIFIED_LISTING'] = "Negocio verificado";
+$BIZBOOK['PRICING_TRUSTED_LISTING'] = "Negocio de confianza";
+$BIZBOOK['PRICING_SOCIAL_SHARE'] = "Compartir en redes sociales";
+$BIZBOOK['PRICING_REVIEW_CONTROL'] = "Control de opiniones";
+$BIZBOOK['PRICING_ADMIN_TIPS'] = "Consejos de administración";
+$BIZBOOK['PRICING_GET_START'] = "Comienza Ahora";
 
 //************************* Pricing Details Page Texts Ends ***********************
 
 //************************* Forgot Password Page Starts ***********
 
-$BIZBOOK['FORGOT_PASSWORD'] = "Forgot password";
+$BIZBOOK['FORGOT_PASSWORD'] = "Recuperar Contraseña";
+
 
 //************************* Forgot Password Page Ends ***********
 
 //************************* User Dashboard Page Starts ***********
 
-$BIZBOOK['USER_DASHBOARD_WELCOME_TITLE'] = "Welcom back,";
-
-$BIZBOOK['USER_DASHBOARD_WELCOME_P_TAG'] = "Stay up to date reports in your listing, products, events and blog reports here";
-
-$BIZBOOK['USER_DASHBOARD'] = "User Dashboard";
-
-$BIZBOOK['TOTAL_NO_OF_REVIEWS'] = "Total no of reviews";
-
-$BIZBOOK['NO_OF_LIKED_LISTINGS'] = "No of Liked Listings";
-
-$BIZBOOK['TOTAL_NO_LISTINGS'] = "Total no of listings";
-
-$BIZBOOK['TOTAL_NO_ENQUIRY'] = "Total no of enquiry";
-
-$BIZBOOK['TOTAL_NO_FOLLOWINGS'] = "Total no of followings";
-
-$BIZBOOK['PROFILE_PAGE'] = "Profile page";
-
-$BIZBOOK['EDIT_MY_PROFILE'] = "Edit profile page";
-
-$BIZBOOK['VIEW_MY_PROFILE_PAGE'] = "View my profile page";
-
-$BIZBOOK['VIEW_BUSINESS_PAGE'] = "View business page";
-
-$BIZBOOK['VIEW_JOB_PROFILE_PAGE'] = "View Job Profile page";
-
-$BIZBOOK['VIEW_SERVICE_EXPERT_PROFILE_PAGE'] = "View Expert Profile page";
-
-$BIZBOOK['LISTING_DETAILS'] = "Listing Details";
-
-$BIZBOOK['ADD_NEW_EVENT'] = "Add new event";
-
-$BIZBOOK['ADD_NEW_POST'] = "Add new post";
-
-$BIZBOOK['PROFI_BUSINES_TIT'] = "Business page";
-
-$BIZBOOK['EDIT_BUSINES_PROFILE'] = "Edit business page";
-
-$BIZBOOK['PROFI_JOB_SEEKER_TIT'] = "Job Profile";
-
-$BIZBOOK['EDIT_JOB_SEEKER_PROFILE'] = "Edit Your Job Profile";
-
-$BIZBOOK['PROFI_SERVICE_EXPERT_TIT'] = "Service Expert Profile";
-
-$BIZBOOK['EDIT_SERVICE_EXPERT_PROFILE'] = "Edit Your Expert Profile";
-
-$BIZBOOK['ALL_APPLIED_JOBS'] = "All Applied Jobs";
-
-$BIZBOOK['USER_SETTING_LISTING_LABEL'] = "Enable or Disable Listing related feature in your Dashboard";
-
-$BIZBOOK['USER_SETTING_JOB_LABEL'] = "Enable or Disable Job related feature in your Dashboard";
-
-$BIZBOOK['USER_SETTING_EXPERT_LABEL'] = "Enable or Disable Service Expert related feature in your Dashboard";
-
-$BIZBOOK['USER_SETTING_PRODUCT_LABEL'] = "Enable or Disable Product related feature in your Dashboard";
-
-$BIZBOOK['USER_SETTING_BLOG_LABEL'] = "Enable or Disable Blog related feature in your Dashboard";
-
-$BIZBOOK['USER_SETTING_EVENT_LABEL'] = "Enable or Disable Event related feature in your Dashboard";
-
-$BIZBOOK['USER_SETTING_COUPON_LABEL'] = "Enable or Disable Coupons related feature in your Dashboard";
-
-$BIZBOOK['USER_SETTING_LISTING_MODULE'] = "Listing Module";
-
-$BIZBOOK['USER_SETTING_JOB_MODULE'] = "Job Module";
-
-$BIZBOOK['USER_SETTING_EXPERT_MODULE'] = "Service Expert Module";
-
-$BIZBOOK['USER_SETTING_PRODUCT_MODULE'] = "Product Module";
-
-$BIZBOOK['USER_SETTING_BLOG_MODULE'] = "Blog Module";
-
-$BIZBOOK['USER_SETTING_EVENT_MODULE'] = "Event Module";
-
-$BIZBOOK['USER_SETTING_COUPON_MODULE'] = "Discount & Coupon Module";
+$BIZBOOK['USER_DASHBOARD_WELCOME_TITLE'] = "Bienvenido de nuevo,";
+$BIZBOOK['USER_DASHBOARD_WELCOME_P_TAG'] = "Mantente al día con los informes de tu negocio, productos, eventos y blogs aquí";
+$BIZBOOK['USER_DASHBOARD'] = "Tablero de Usuario";
+$BIZBOOK['TOTAL_NO_OF_REVIEWS'] = "Número total de opiniones";
+$BIZBOOK['NO_OF_LIKED_LISTINGS'] = "Número de Negocios Favoritos";
+$BIZBOOK['TOTAL_NO_LISTINGS'] = "Número total de negocios";
+$BIZBOOK['TOTAL_NO_ENQUIRY'] = "Número total de consultas";
+$BIZBOOK['TOTAL_NO_FOLLOWINGS'] = "Número total de seguidos";
+$BIZBOOK['PROFILE_PAGE'] = "Página de Perfil";
+$BIZBOOK['EDIT_MY_PROFILE'] = "Editar página de perfil";
+$BIZBOOK['VIEW_MY_PROFILE_PAGE'] = "Ver mi página de perfil";
+$BIZBOOK['VIEW_BUSINESS_PAGE'] = "Ver página del negocio";
+$BIZBOOK['VIEW_JOB_PROFILE_PAGE'] = "Ver página del Perfil de Empleo";
+$BIZBOOK['VIEW_SERVICE_EXPERT_PROFILE_PAGE'] = "Ver página del Perfil de Experto";
+$BIZBOOK['LISTING_DETAILS'] = "Detalles del Negocio";
+$BIZBOOK['ADD_NEW_EVENT'] = "Añadir nuevo evento";
+$BIZBOOK['ADD_NEW_POST'] = "Añadir nueva publicación";
+$BIZBOOK['PROFI_BUSINES_TIT'] = "Página de Negocios";
+$BIZBOOK['EDIT_BUSINES_PROFILE'] = "Editar página del negocio";
+$BIZBOOK['PROFI_JOB_SEEKER_TIT'] = "Perfil de Empleo";
+$BIZBOOK['EDIT_JOB_SEEKER_PROFILE'] = "Editar tu Perfil de Empleo";
+$BIZBOOK['PROFI_SERVICE_EXPERT_TIT'] = "Perfil de Experto en Servicios";
+$BIZBOOK['EDIT_SERVICE_EXPERT_PROFILE'] = "Editar tu Perfil de Experto";
+$BIZBOOK['ALL_APPLIED_JOBS'] = "Todos los Empleos Solicitados";
+$BIZBOOK['USER_SETTING_LISTING_LABEL'] = "Habilitar o deshabilitar la función de Negocios en tu Tablero";
+$BIZBOOK['USER_SETTING_JOB_LABEL'] = "Habilitar o deshabilitar la función de Empleo en tu Tablero";
+$BIZBOOK['USER_SETTING_EXPERT_LABEL'] = "Habilitar o deshabilitar la función de Experto en tu Tablero";
+$BIZBOOK['USER_SETTING_PRODUCT_LABEL'] = "Habilitar o deshabilitar la función de Productos en tu Tablero";
+$BIZBOOK['USER_SETTING_BLOG_LABEL'] = "Habilitar o deshabilitar la función de Blog en tu Tablero";
+$BIZBOOK['USER_SETTING_EVENT_LABEL'] = "Habilitar o deshabilitar la función de Eventos en tu Tablero";
+$BIZBOOK['USER_SETTING_COUPON_LABEL'] = "Habilitar o deshabilitar la función de Cupones en tu Tablero";
+$BIZBOOK['USER_SETTING_LISTING_MODULE'] = "Módulo de Negocios";
+$BIZBOOK['USER_SETTING_JOB_MODULE'] = "Módulo de Empleo";
+$BIZBOOK['USER_SETTING_EXPERT_MODULE'] = "Módulo de Experto";
+$BIZBOOK['USER_SETTING_PRODUCT_MODULE'] = "Módulo de Productos";
+$BIZBOOK['USER_SETTING_BLOG_MODULE'] = "Módulo de Blog";
+$BIZBOOK['USER_SETTING_EVENT_MODULE'] = "Módulo de Eventos";
+$BIZBOOK['USER_SETTING_COUPON_MODULE'] = "Módulo de Descuentos y Cupones";
 
 //************************* User Dashboard Page Ends ***********
 
 //************************* User Dashboard Right Section Starts ***********
 
-$BIZBOOK['OTHER_USER_PROFILES'] = "Other user profiles";
+$BIZBOOK['OTHER_USER_PROFILES'] = "Otros perfiles de usuario";
+$BIZBOOK['ADMIN_NOTIFICATION'] = "Notificación de Administración";
+$BIZBOOK['WHO_ALL_FOLLOW_YOU'] = "Usuarios que te siguen";
+$BIZBOOK['PROMOTE_MY_BUSINESS'] = "Promocionar mi negocio";
+$BIZBOOK['PROMOTE_MY_BUSINESS_P_TAG'] = "Tu negocio aparecerá en la parte superior de la página de la categoría correspondiente";
+$BIZBOOK['PROMOTE_MY_BUSINESS_CLICK_HERE'] = "Haz clic aquí";
+$BIZBOOK['PROMOTE_MY_BUSINESS_FOR_DEMO'] = "para ver demo";
+$BIZBOOK['PROMOTE_MY_BUSINESS_START_NOW'] = "Empieza ahora";
+$BIZBOOK['YOUR_POINTS'] = "Tus puntos";
+$BIZBOOK['POINTS'] = "Puntos";
+$BIZBOOK['EARN_MORE_CREDIT_POINTS'] = "Gana más puntos de crédito";
+$BIZBOOK['EARN_MORE_CREDIT_POINTS_P_TAG'] = "Usa estos puntos para promocionar tu negocio.";
+$BIZBOOK['BUY_POINTS'] = "Comprar Puntos";
+$BIZBOOK['BUY_MORE_POINTS'] = "Comprar Más Puntos";
+$BIZBOOK['PURCHASE_DATE'] = "Fecha de Compra";
+$BIZBOOK['TOTAL_COST'] = "Costo Total";
+$BIZBOOK['DASH_RIGHT_PLAN_NAME'] = "Nombre del Pack";
+$BIZBOOK['DASH_RIGHT_START_DATE'] = "Fecha de Inicio";
+$BIZBOOK['DASH_RIGHT_EXPIRY_DATE'] = "Fecha de Expiración";
+$BIZBOOK['DASH_RIGHT_EXPIRATION_DATE'] = "Fecha de Vencimiento";
+$BIZBOOK['DASH_RIGHT_REMAINING_DAYS'] = "Días Restantes";
+$BIZBOOK['DASH_RIGHT_CHECKOUT_COST'] = "Costo del Pago";
+$BIZBOOK['DASH_RIGHT_CHECKOUT_AMOUNT'] = "Monto del Pago";
+$BIZBOOK['DASH_RIGHT_CHANGE_MY_PLAN'] = "Cambiar Mi Pack";
+$BIZBOOK['DASH_RIGHT_PAYMENT_STATUS'] = "Estado de Pago";
+$BIZBOOK['DASH_RIGHT_YOUR_CURRENT_PLAN'] = "Tu Pack Actual";
+$BIZBOOK['PAYMENT_INFORMATION'] = "Información de Pago";
+$BIZBOOK['LISTING_OPEN_CLOSE_TITLE'] = "Estado de apertura/cierre del Negocio";
+$BIZBOOK['LISTING_OPEN_CLOSE_TITLE_POPUP'] = "Haz clic aquí para actualizar el estado de tu negocio: Abierto o Cerrado.";
+$BIZBOOK['LAST_WEEK_REPORT'] = "Informe de la última semana";
+$BIZBOOK['COMMUNITY_MEMBERS'] = "Miembros de la Comunidad";
+$BIZBOOK['COMMUNITY_MEMBERS_TITLE'] = "Sigue a tus negocios favoritos y haz crecer tu negocio en línea ahora.";
 
-$BIZBOOK['ADMIN_NOTIFICATION'] = "Admin Notification";
-
-$BIZBOOK['WHO_ALL_FOLLOW_YOU'] = "Who all are follow you";
-
-$BIZBOOK['PROMOTE_MY_BUSINESS'] = "Promote my business";
-
-$BIZBOOK['PROMOTE_MY_BUSINESS_P_TAG'] = "Your listing show on the top of the respective category page";
-
-$BIZBOOK['PROMOTE_MY_BUSINESS_CLICK_HERE'] = "Click here";
-
-$BIZBOOK['PROMOTE_MY_BUSINESS_FOR_DEMO'] = "for demo";
-
-$BIZBOOK['PROMOTE_MY_BUSINESS_START_NOW'] = "Start now";
-
-$BIZBOOK['YOUR_POINTS'] = "Your points";
-
-$BIZBOOK['POINTS'] = "Points";
-
-$BIZBOOK['EARN_MORE_CREDIT_POINTS'] = "Earn more credit points";
-
-$BIZBOOK['EARN_MORE_CREDIT_POINTS_P_TAG'] = "Use this poins to promote your listing.";
-
-$BIZBOOK['BUY_POINTS'] = "Buy Points";
-
-$BIZBOOK['BUY_MORE_POINTS'] = "Buy More Points";
-
-$BIZBOOK['PURCHASE_DATE'] = "Purchase date";
-
-$BIZBOOK['TOTAL_COST'] = "Total Cost";
-
-$BIZBOOK['DASH_RIGHT_PLAN_NAME'] = "Plan name";
-
-$BIZBOOK['DASH_RIGHT_START_DATE'] = "Start date";
-
-$BIZBOOK['DASH_RIGHT_EXPIRY_DATE'] = "Expiry date";
-
-$BIZBOOK['DASH_RIGHT_EXPIRATION_DATE'] = "Expiration date";
-
-$BIZBOOK['DASH_RIGHT_REMAINING_DAYS'] = "Remaining Days";
-
-$BIZBOOK['DASH_RIGHT_CHECKOUT_COST'] = "Checkout cost";
-
-$BIZBOOK['DASH_RIGHT_CHECKOUT_AMOUNT'] = "Checkout amount";
-
-$BIZBOOK['DASH_RIGHT_CHANGE_MY_PLAN'] = "Change My Plan";
-
-$BIZBOOK['DASH_RIGHT_PAYMENT_STATUS'] = "Payment Status";
-
-$BIZBOOK['DASH_RIGHT_YOUR_CURRENT_PLAN'] = "Your Current Plan";
-
-$BIZBOOK['PAYMENT_INFORMATION'] = "Payment Information";
-
-$BIZBOOK['LISTING_OPEN_CLOSE_TITLE'] = "Listing open & close status";
-
-$BIZBOOK['LISTING_OPEN_CLOSE_TITLE_POPUP'] = "Click here to update your listing status, Open or Closed.";
-
-$BIZBOOK['LAST_WEEK_REPORT'] = "Last week report";
-
-$BIZBOOK['COMMUNITY_MEMBERS'] = "Community members";
-
-$BIZBOOK['COMMUNITY_MEMBERS_TITLE'] = "Follow your favorite business users and grow your online business now.";
 
 //************************* User Dashboard Right Section Ends ***********
 
 //************************* Company profile ***********
 
-$BIZBOOK['COMP-PRO'] = "Company profile";
+$BIZBOOK['COMP-PRO'] = "Perfil de la Empresa";
+$BIZBOOK['COMP-PRO-EDIT'] = "Editar perfil de la empresa";
+$BIZBOOK['COMP-PRO-NAME'] = "Nombre de la Empresa";
+$BIZBOOK['COMP-PRO-ADDRESS'] = "Dirección";
+$BIZBOOK['COMP-PRO-PHONE'] = "Teléfono";
+$BIZBOOK['COMP-PRO-EMAIL'] = "Correo Electrónico";
+$BIZBOOK['COMP-PRO-WEBSITE'] = "Sitio Web";
+$BIZBOOK['COMP-PRO-WHAPP'] = "Número de WhatsApp";
+$BIZBOOK['COMP-PRO-INFO'] = "Información de la Empresa";
+$BIZBOOK['COMP-PRO-TAX-DETAILS'] = "Detalles de Impuestos";
+$BIZBOOK['COMP-PRO-TAX-GST'] = "Número de Impuestos / Número de GST";
+$BIZBOOK['COMP-PRO-FB'] = "Perfil de Facebook";
+$BIZBOOK['COMP-PRO-TWITTER'] = "Perfil de Twitter";
+$BIZBOOK['COMP-PRO-LINKEDIN'] = "Perfil de LinkedIn";
+$BIZBOOK['COMP-PRO-INSTAGRAM'] = "Perfil de Instagram";
+$BIZBOOK['COMP-PRO-YOUTUBE'] = "Perfil de YouTube";
+$BIZBOOK['COMP-PRO-CHOO-PROD'] = "Seleccionar productos";
+$BIZBOOK['COMP-PRO-CHOO-EVENTS'] = "Seleccionar eventos";
+$BIZBOOK['COMP-PRO-CHOO-BLOG'] = "Seleccionar blogs";
+$BIZBOOK['COMP-PRO-SEO-DESC'] = "Meta descripciones (Escribe una breve descripción sobre tu empresa. Ayuda en la indexación de Google, límite de caracteres: 155-160)";
+$BIZBOOK['COMP-PRO-SEO-KEYWORDS'] = "Meta palabras clave (Escribe algunas palabras clave relacionadas con tu empresa. Ej.: electrónica, portátiles, hp, canon)";
 
-$BIZBOOK['COMP-PRO-EDIT'] = "Edit company profile";
-
-$BIZBOOK['COMP-PRO-NAME'] = "Company name";
-
-$BIZBOOK['COMP-PRO-ADDRESS'] = "Address";
-
-$BIZBOOK['COMP-PRO-PHONE'] = "Phone";
-
-$BIZBOOK['COMP-PRO-EMAIL'] = "Email id";
-
-$BIZBOOK['COMP-PRO-WEBSITE'] = "Website";
-
-$BIZBOOK['COMP-PRO-WHAPP'] = "WhatsApp No";
-
-$BIZBOOK['COMP-PRO-INFO'] = "Company info";
-
-$BIZBOOK['COMP-PRO-TAX-DETAILS'] = "Tax Details";
-
-$BIZBOOK['COMP-PRO-TAX-GST'] = "Tax No./ GST No.";
-
-$BIZBOOK['COMP-PRO-CALLNOW'] = "";
-
-$BIZBOOK['COMP-PRO-FB'] = "Facebook profile";
-
-$BIZBOOK['COMP-PRO-TWITTER'] = "Twitter profile";
-
-$BIZBOOK['COMP-PRO-LINKEDIN'] = "Linkedin profile";
-
-$BIZBOOK['COMP-PRO-INSTAGRAM'] = "Instagram profile";
-
-$BIZBOOK['COMP-PRO-YOUTUBE'] = "Youtube profile";
-
-$BIZBOOK['COMP-PRO-CHOO-PROD'] = "Select products";
-
-$BIZBOOK['COMP-PRO-CHOO-EVENTS'] = "Select events";
-
-$BIZBOOK['COMP-PRO-CHOO-BLOG'] = "Select blogs";
-
-$BIZBOOK['COMP-PRO-SEO-DESC'] = "Meta descriptions(Write some short description about your company. It's more helps for google indexing and characters limit 155–160)";
-
-$BIZBOOK['COMP-PRO-SEO-KEYWORDS'] = "Meta keywords(Write some short keywords, related your company profile. (i.e) electronics,laptop,hp,canon)";
 
 //************************* Company profile Ends ***********
 
 //************************* Listing Texts Starts ***********************
 
-$BIZBOOK['CREATE_SCRATCH_LISTING_LABEL'] = "Create listing from scratch";
-
-$BIZBOOK['CREATE_DUPLICATE_LISTING_LABEL'] = "Create duplicate listing";
-
-$BIZBOOK['NEW_LISTING_NAME_STAR'] = "New Listing Name*";
-
-$BIZBOOK['LISTING_NAME_STAR'] = "Listing Name*";
-
-$BIZBOOK['CREATE_NOW'] = "Create Now";
-
-$BIZBOOK['BASIC_INFO'] = "Basic Info";
-
-$BIZBOOK['SERVICES'] = "Services";
-
-$BIZBOOK['OFFERS'] = "offers";
-
-$BIZBOOK['MAP'] = "map";
-
-$BIZBOOK['OTHER'] = "Other";
-
-$BIZBOOK['DONE'] = "done";
-
-$BIZBOOK['STEP1'] = "Step 1";
-
-$BIZBOOK['STEP2'] = "Step 2";
-
-$BIZBOOK['STEP3'] = "Step 3";
-
-$BIZBOOK['STEP4'] = "Step 4";
-
-$BIZBOOK['STEP5'] = "Step 5";
-
-$BIZBOOK['STEP6'] = "Step 6";
-
-$BIZBOOK['WEBSITE'] = "Website(www.rn53themes.net)";
-
-$BIZBOOK['SHOP_ADDRESS'] = "Shop address";
-
-$BIZBOOK['LATITUDE_PLACEHOLDER'] = "Latitude i.e 40.730610";
-
-$BIZBOOK['LONGITUDE_PLACEHOLDER'] = "Longitude i.e -73.935242";
-
-$BIZBOOK['SELECT_YOUR_COUNTRY'] = "Select your Country";
-
-$BIZBOOK['SELECT_YOUR_CITY'] = "Select your Cities";
-
-$BIZBOOK['SELECT_CATEGORY'] = "Select Category";
-
-$BIZBOOK['SELECT_CITY'] = "Select City";
-
-$BIZBOOK['ALL_CITIES'] = "All Cities";
-
-$BIZBOOK['SELECT_FEATURE'] = "Select Feature";
-
-$BIZBOOK['SELECT_SUB_CATEGORY'] = "Select Sub Category";
-
-$BIZBOOK['DETAILS_ABOUT_LISTING'] = "Details about your listing";
-
-$BIZBOOK['CHOOSE_PROFILE_IMAGE'] = "Choose profile image";
-
-$BIZBOOK['CHOOSE_COVER_IMAGE'] = "Choose cover image";
-
-$BIZBOOK['ENTER_SERVICE_LOCATION'] = "Enter your service locations... &#10;(i.e) London, Dallas, Wall Street, Opera House";
-
-$BIZBOOK['SERVICES_PROVIDE'] = "Services provide";
-
-$BIZBOOK['SERVICE_NAME'] = "Service name";
-
-$BIZBOOK['SERVICE_NAME_PLACEHOLDER'] = "Ex: Plumbile";
-
-$BIZBOOK['SERVICE_NAME_IMAGE'] = "Service Image";
-
-$BIZBOOK['SPECIAL_OFFERS'] = "Special offers";
-
-$BIZBOOK['OFFER_NAME'] = "Offer name*";
-
-$BIZBOOK['DETAILS_ABOUT_OFFER'] = "Details about this offer";
-
-$BIZBOOK['CHOOSE_OFFER_IMAGE'] = "Choose offer image";
-
-$BIZBOOK['VIEW_MORE_LINK'] = "View More Link";
-
-$BIZBOOK['VIDEO_GALLERY'] = "Video Gallery";
-
-$BIZBOOK['VIDEO_GALLERY_INFO'] = "Right click on YouTube video then get your iframe code";
-
-$BIZBOOK['PASTE_IFRAME_CODE'] = "Paste Your Youtube iframe Code here";
-
-$BIZBOOK['MAP_360_VIEW'] = "Map and 360 view";
-
-$BIZBOOK['MAP_360_VIEW_INFO'] = "Go to Google maps -> Choose your location -> Click share button - > Copy your iframe code then paste here.";
-
-$BIZBOOK['SHOP_LOCATION'] = "Shop location";
-
-$BIZBOOK['360_VIEW'] = "360 view";
-
-$BIZBOOK['PHOTO_GALLERY'] = "Photo gallery";
-
-$BIZBOOK['OTHER_INFORMATIONS'] = "Other informations";
-
-$BIZBOOK['OTHER_INFORMATIONS_PLACEHOLDER_LEFT'] = "Experience";
-
-$BIZBOOK['OTHER_INFORMATIONS_PLACEHOLDER_RIGHT'] = "20 years";
-
-$BIZBOOK['LISTING_PREVIEW'] = "Listing preview";
-
-$BIZBOOK['DELETE_LISTING'] = "Delete Listing";
-
-$BIZBOOK['LISTING_INSERT_SUCCESS_MESSAGE'] = "Your listing has been submitted successfully.";
-
-$BIZBOOK['LISTING_UPDATE_SUCCESS_MESSAGE'] = "Your listing has been updated successfully.";
-
-$BIZBOOK['LISTING_DETAILS_ABOUT'] = "About";
-
-$BIZBOOK['LISTING_DETAILS_SERVICES'] = "Services";
-
-$BIZBOOK['LISTING_DETAILS_SERVICE'] = "Service";
-
-$BIZBOOK['LISTING_DETAILS_OFFERED'] = "Offered";
-
-$BIZBOOK['LISTING_DETAILS_AREAS'] = "Areas";
-
-$BIZBOOK['LISTING_DETAILS_GALLERY'] = "Gallery";
-
-$BIZBOOK['LISTING_DETAILS_SPECIAL'] = "Special";
-
-$BIZBOOK['LISTING_DETAILS_OFFERS'] = "Offers";
-
-$BIZBOOK['LISTING_DETAILS_360_VIEW'] = "360 View";
-
+$BIZBOOK['CREATE_SCRATCH_LISTING_LABEL'] = "Crear negocio desde cero";
+$BIZBOOK['CREATE_DUPLICATE_LISTING_LABEL'] = "Crear negocio duplicado";
+$BIZBOOK['NEW_LISTING_NAME_STAR'] = "Nombre del Nuevo Negocio*";
+$BIZBOOK['LISTING_NAME_STAR'] = "Nombre del Negocio*";
+$BIZBOOK['CREATE_NOW'] = "Crear Ahora";
+$BIZBOOK['BASIC_INFO'] = "Información Básica";
+$BIZBOOK['SERVICES'] = "Servicios";
+$BIZBOOK['OFFERS'] = "Ofertas";
+$BIZBOOK['MAP'] = "Mapa";
+$BIZBOOK['OTHER'] = "Otros";
+$BIZBOOK['DONE'] = "Listo";
+$BIZBOOK['STEP1'] = "Paso 1";
+$BIZBOOK['STEP2'] = "Paso 2";
+$BIZBOOK['STEP3'] = "Paso 3";
+$BIZBOOK['STEP4'] = "Paso 4";
+$BIZBOOK['STEP5'] = "Paso 5";
+$BIZBOOK['STEP6'] = "Paso 6";
+$BIZBOOK['WEBSITE'] = "Sitio Web (www.zitiziti.com)";
+$BIZBOOK['SHOP_ADDRESS'] = "Dirección de la Tienda";
+$BIZBOOK['LATITUDE_PLACEHOLDER'] = "Latitud, ej.: 40.730610";
+$BIZBOOK['LONGITUDE_PLACEHOLDER'] = "Longitud, ej.: -73.935242";
+$BIZBOOK['SELECT_YOUR_COUNTRY'] = "Selecciona tu País";
+$BIZBOOK['SELECT_YOUR_CITY'] = "Selecciona tu Ciudad";
+$BIZBOOK['SELECT_CATEGORY'] = "Selecciona Categoría";
+$BIZBOOK['SELECT_CITY'] = "Selecciona Ciudad";
+$BIZBOOK['ALL_CITIES'] = "Todas las Ciudades";
+$BIZBOOK['SELECT_FEATURE'] = "Selecciona Característica";
+$BIZBOOK['SELECT_SUB_CATEGORY'] = "Selecciona Subcategoría";
+$BIZBOOK['DETAILS_ABOUT_LISTING'] = "Detalles sobre tu negocio";
+$BIZBOOK['CHOOSE_PROFILE_IMAGE'] = "Elige la imagen de perfil";
+$BIZBOOK['CHOOSE_COVER_IMAGE'] = "Elige la imagen de portada";
+$BIZBOOK['ENTER_SERVICE_LOCATION'] = "Ingresa tus ubicaciones de servicio... ej.: Madrid, Barcelona, Valencia";
+$BIZBOOK['SERVICES_PROVIDE'] = "Servicios brindados";
+$BIZBOOK['SERVICE_NAME'] = "Nombre del Servicio";
+$BIZBOOK['SERVICE_NAME_PLACEHOLDER'] = "Ej.: Fontanería";
+$BIZBOOK['SERVICE_NAME_IMAGE'] = "Imagen del Servicio";
+$BIZBOOK['SPECIAL_OFFERS'] = "Ofertas Especiales";
+$BIZBOOK['OFFER_NAME'] = "Nombre de la Oferta*";
+$BIZBOOK['DETAILS_ABOUT_OFFER'] = "Detalles sobre esta oferta";
+$BIZBOOK['CHOOSE_OFFER_IMAGE'] = "Elige imagen de la oferta";
+$BIZBOOK['VIEW_MORE_LINK'] = "Ver Más Enlace";
+$BIZBOOK['VIDEO_GALLERY'] = "Galería de Videos";
+$BIZBOOK['VIDEO_GALLERY_INFO'] = "Haz clic derecho en el video de YouTube y copia el código iframe";
+$BIZBOOK['PASTE_IFRAME_CODE'] = "Pega aquí tu código iframe de YouTube";
+$BIZBOOK['MAP_360_VIEW'] = "Mapa y Vista 360°";
+$BIZBOOK['MAP_360_VIEW_INFO'] = "Ve a Google Maps -> Elige tu ubicación -> Haz clic en compartir -> Copia el código iframe y pégalo aquí.";
+$BIZBOOK['SHOP_LOCATION'] = "Ubicación de la Tienda";
+$BIZBOOK['360_VIEW'] = "Vista 360°";
+$BIZBOOK['PHOTO_GALLERY'] = "Galería de Fotos";
+$BIZBOOK['OTHER_INFORMATIONS'] = "Otras Informaciones";
+$BIZBOOK['OTHER_INFORMATIONS_PLACEHOLDER_LEFT'] = "Experiencia";
+$BIZBOOK['OTHER_INFORMATIONS_PLACEHOLDER_RIGHT'] = "20 años";
+$BIZBOOK['LISTING_PREVIEW'] = "Vista Previa del Negocio";
+$BIZBOOK['DELETE_LISTING'] = "Eliminar Negocio";
+$BIZBOOK['LISTING_INSERT_SUCCESS_MESSAGE'] = "Tu negocio ha sido enviado exitosamente.";
+$BIZBOOK['LISTING_UPDATE_SUCCESS_MESSAGE'] = "Tu negocio ha sido actualizado exitosamente.";
+$BIZBOOK['LISTING_DETAILS_ABOUT'] = "Acerca de";
+$BIZBOOK['LISTING_DETAILS_SERVICES'] = "Servicios";
+$BIZBOOK['LISTING_DETAILS_SERVICE'] = "Servicio";
+$BIZBOOK['LISTING_DETAILS_OFFERED'] = "Ofrecidos";
+$BIZBOOK['LISTING_DETAILS_AREAS'] = "Áreas";
+$BIZBOOK['LISTING_DETAILS_GALLERY'] = "Galería";
+$BIZBOOK['LISTING_DETAILS_SPECIAL'] = "Especial";
+$BIZBOOK['LISTING_DETAILS_OFFERS'] = "Ofertas";
+$BIZBOOK['LISTING_DETAILS_360_VIEW'] = "Vista 360°";
 $BIZBOOK['LISTING_DETAILS_360'] = "360";
-
-$BIZBOOK['LISTING_DETAILS_DEGREE_VIEW'] = "Degree View";
-
-$BIZBOOK['LISTING_DETAILS_WRITE_REVIEW'] = "Write Review";
-
-$BIZBOOK['LISTING_DETAILS_CLAIM_BUSINESS'] = "Claim business";
-
-$BIZBOOK['LISTING_DETAILS_CLAIM'] = "Claim";
-
-$BIZBOOK['LISTING_DETAILS_CLAIM_NOW'] = "Claim now";
-
-$BIZBOOK['LISTING_DETAILS_ITS_YOURS'] = "It's Yours!!";
-
-$BIZBOOK['LISTING_DETAILS_CLAIM_THIS_BUSINESS'] = "Claim this business";
-
-$BIZBOOK['LISTING_DETAILS_LOGIN_AND_WRITE_REVIEW'] = "Login And Write Your Review";
-
-$BIZBOOK['LISTING_DETAILS_WRITE_YOUR'] = "Write Your";
-
-$BIZBOOK['LISTING_DETAILS_REVIEW_P_TAG'] = "Writing great reviews may help others discover the places that are just apt for them. Here are a few tips to write a good review";
-
-$BIZBOOK['LISTING_DETAILS_REVIEW_SUCCESS_MESSAGE'] = "Thanks for your Review !! Your Review Is Successful!!";
-
-$BIZBOOK['LISTING_DETAILS_CLAIM_SUCCESS_MESSAGE'] = "Your Claim Request Submitted Successfully";
-
-$BIZBOOK['LISTING_DETAILS_CLAIM_P_TAG'] = "We send you the verification email to you provider the email id. Once you done the verification process then you can manage this business.";
-
-$BIZBOOK['LISTING_DETAILS_SUBMIT_REVIEW'] = "Submit Review";
-
-$BIZBOOK['LISTING_DETAILS_UNABLE_SUBMIT_REVIEW'] = "You can't review this listing as per your plan !!";
-
-$BIZBOOK['LISTING_DETAILS_UNABLE_SUBMIT_ENQUIRY'] = "You can't make enquiry!! As per your plan !!";
-
-$BIZBOOK['LISTING_DETAILS_BE_FIRST_REVIEW'] = "Be the First One To Review This Listing!!!";
-
-$BIZBOOK['LISTING_DETAILS_RELATED_LISTINGS'] = "Related listings";
-
-$BIZBOOK['LISTING_DETAILS_BUSINESS_PROFILE'] = "Business profile";
-
-$BIZBOOK['LISTING_DETAILS_GET_IN_TOUCH'] = "Get in touch with us";
-
-$BIZBOOK['LISTING_DETAILS_SUGGEST_AN_EDIT'] = "Suggest an edit";
-
-$BIZBOOK['LISTING_DETAILS_WHO_ARE_LIKE_THIS'] = "Who all are like this";
+$BIZBOOK['LISTING_DETAILS_DEGREE_VIEW'] = "Vista en Grados";
+$BIZBOOK['LISTING_DETAILS_WRITE_REVIEW'] = "Escribir Opinión";
+$BIZBOOK['LISTING_DETAILS_CLAIM_BUSINESS'] = "Reclamar Negocio";
+$BIZBOOK['LISTING_DETAILS_CLAIM'] = "Reclamar";
+$BIZBOOK['LISTING_DETAILS_CLAIM_NOW'] = "Reclamar Ahora";
+$BIZBOOK['LISTING_DETAILS_ITS_YOURS'] = "¡Es Tuyo!";
+$BIZBOOK['LISTING_DETAILS_CLAIM_THIS_BUSINESS'] = "Reclama este negocio";
+$BIZBOOK['LISTING_DETAILS_LOGIN_AND_WRITE_REVIEW'] = "Inicia Sesión y Escribe tu Opinión";
+$BIZBOOK['LISTING_DETAILS_WRITE_YOUR'] = "Escribe tu";
+$BIZBOOK['LISTING_DETAILS_REVIEW_P_TAG'] = "Escribir buenas opiniones puede ayudar a otros a descubrir los lugares perfectos para ellos.";
+$BIZBOOK['LISTING_DETAILS_REVIEW_SUCCESS_MESSAGE'] = "¡Gracias por tu opinión! ¡Ha sido publicada con éxito!";
+$BIZBOOK['LISTING_DETAILS_CLAIM_SUCCESS_MESSAGE'] = "Tu solicitud de reclamo se ha enviado exitosamente";
+$BIZBOOK['LISTING_DETAILS_CLAIM_P_TAG'] = "Te hemos enviado un correo de verificación. Una vez completado el proceso, podrás gestionar este negocio.";
+$BIZBOOK['LISTING_DETAILS_SUBMIT_REVIEW'] = "Enviar Opinión";
+$BIZBOOK['LISTING_DETAILS_UNABLE_SUBMIT_REVIEW'] = "¡No puedes opinar sobre este negocio según tu plan!";
+$BIZBOOK['LISTING_DETAILS_UNABLE_SUBMIT_ENQUIRY'] = "¡No puedes realizar consultas según tu plan!";
+$BIZBOOK['LISTING_DETAILS_BE_FIRST_REVIEW'] = "¡Sé el primero en opinar sobre este negocio!";
+$BIZBOOK['LISTING_DETAILS_RELATED_LISTINGS'] = "Negocios relacionados";
+$BIZBOOK['LISTING_DETAILS_BUSINESS_PROFILE'] = "Perfil del Negocio";
+$BIZBOOK['LISTING_DETAILS_GET_IN_TOUCH'] = "Ponte en contacto con nosotros";
+$BIZBOOK['LISTING_DETAILS_SUGGEST_AN_EDIT'] = "Sugerir una edición";
+$BIZBOOK['LISTING_DETAILS_WHO_ARE_LIKE_THIS'] = "Usuarios que dieron 'Me Gusta'";
 
 //************************* Listing Texts Ends ***************************
 
 //************************* Lead Page Texts Starts ***********************
 
-$BIZBOOK['ENQUIRY_DETAILS'] = "Enquiry Details";
-
-$BIZBOOK['PAGE_NAME'] = "Page name";
-
-$BIZBOOK['TRACKING_ID'] = "Tracking-id";
-
+$BIZBOOK['ENQUIRY_DETAILS'] = "Detalles de la Consulta";
+$BIZBOOK['PAGE_NAME'] = "Nombre de la Página";
+$BIZBOOK['TRACKING_ID'] = "ID de Seguimiento";
 $BIZBOOK['URL'] = "URL";
+
 
 //************************* Lead Page Texts Ends ***********************
 
 //*************************** Setting Page Text Starts ***************************
 
-$BIZBOOK['SETTING_PROFILE_SETTING'] = "Profile Setting";
-
-$BIZBOOK['SETTING_ACCOUNT_STATUS'] = "Account status";
-
-$BIZBOOK['SETTING_ACTIVE'] = "Active";
-
-$BIZBOOK['SETTING_IN_ACTIVE'] = "In-Active";
-
-$BIZBOOK['SETTING_CLOSE_ACCOUNT'] = "Close account";
-
-$BIZBOOK['SETTING_CLOSE_WARNING_MESSAGE'] = "Close Account will Delete your account permanently!! Think before submitting!!";
-
-$BIZBOOK['SETTING_LISTING_REVIEWS'] = "Listing reviews";
-
-$BIZBOOK['SETTING_LISTING_SHARE'] = "Listing share";
-
-$BIZBOOK['SETTING_SHOW_MY_PROFILE'] = "Show my profile on listing page";
+$BIZBOOK['SETTING_PROFILE_SETTING'] = "Configuración del Perfil";
+$BIZBOOK['SETTING_ACCOUNT_STATUS'] = "Estado de la Cuenta";
+$BIZBOOK['SETTING_ACTIVE'] = "Activo";
+$BIZBOOK['SETTING_IN_ACTIVE'] = "Inactivo";
+$BIZBOOK['SETTING_CLOSE_ACCOUNT'] = "Cerrar cuenta";
+$BIZBOOK['SETTING_CLOSE_WARNING_MESSAGE'] = "¡Cerrar la cuenta eliminará tu perfil de forma permanente! Piensa bien antes de enviarlo.";
+$BIZBOOK['SETTING_LISTING_REVIEWS'] = "Opiniones del Negocio";
+$BIZBOOK['SETTING_LISTING_SHARE'] = "Compartir Negocio";
+$BIZBOOK['SETTING_SHOW_MY_PROFILE'] = "Mostrar mi perfil en la página del negocio";
 
 //************************* Product Page Texts Starts ***********************
 
-$BIZBOOK['PRODUCT_DETAILS'] = "Product Details";
-
-$BIZBOOK['PRODUCT_NAME'] = "Product Name";
-
-$BIZBOOK['PRODUCT_NAME_STAR'] = "Product Name*";
-
-$BIZBOOK['NEW_PRODUCT'] = "New Product";
-
-$BIZBOOK['ADD_NEW_PRODUCT'] = "Add new Product";
-
-$BIZBOOK['PRODUCT_OFFER'] = "Offer (i.e) 50";
-
-$BIZBOOK['PRODUCT_PAYMENT_LINK'] = "Product Payment External Link";
-
-$BIZBOOK['PRODUCT_PAYMENT_LINK_P_TAG'] = "Payment link";
-
-$BIZBOOK['PRODUCT_PAYMENT_LINK_INFO'] = "Customers click on 'Buy now' button means.. page automaticall redirect to you provided link.";
-
-$BIZBOOK['PRODUCT_IMAGE_LABEL'] = "Product images(max 5 images)";
-
-$BIZBOOK['HIGHLIGHTS'] = "Highlights";
-
-$BIZBOOK['DESCRIPTIONS'] = "Descriptions";
-
-$BIZBOOK['TAGS'] = "Tags";
-
-$BIZBOOK['HIGHLIGHTS_PLACEHOLDER'] = "(i.e) 1 Year Onsite Warranty";
-
-$BIZBOOK['SPECIFICATIONS'] = "Specifications";
-
-$BIZBOOK['SPECIFICATIONS_QUESTION'] = "(i.e) Serial Number";
-
-$BIZBOOK['SPECIFICATIONS_ANSWER'] = "(i.e) qwerty3421";
-
-$BIZBOOK['PRODUCT_TAGS_PLACEHOLDER'] = "Product Tags (i.e) electronics,laptop,hp,canon";
-
-$BIZBOOK['EDIT_PRODUCT'] = "Edit Product";
-
-$BIZBOOK['EDIT_THIS_PRODUCT'] = "Edit this product";
-
-$BIZBOOK['DELETE_THIS_PRODUCT'] = "Delete this product";
-
-$BIZBOOK['DELETE_PRODUCT'] = "Delete Product";
+$BIZBOOK['PRODUCT_DETAILS'] = "Detalles del Producto";
+$BIZBOOK['PRODUCT_NAME'] = "Nombre del Producto";
+$BIZBOOK['PRODUCT_NAME_STAR'] = "Nombre del Producto*";
+$BIZBOOK['NEW_PRODUCT'] = "Nuevo Producto";
+$BIZBOOK['ADD_NEW_PRODUCT'] = "Añadir Nuevo Producto";
+$BIZBOOK['PRODUCT_OFFER'] = "Oferta (Ej.: 50)";
+$BIZBOOK['PRODUCT_PAYMENT_LINK'] = "Enlace Externo de Pago del Producto";
+$BIZBOOK['PRODUCT_PAYMENT_LINK_P_TAG'] = "Enlace de pago";
+$BIZBOOK['PRODUCT_PAYMENT_LINK_INFO'] = "Los clientes que hagan clic en 'Comprar ahora' serán redirigidos automáticamente al enlace proporcionado.";
+$BIZBOOK['PRODUCT_IMAGE_LABEL'] = "Imágenes del producto (máx. 5 imágenes)";
+$BIZBOOK['HIGHLIGHTS'] = "Características Destacadas";
+$BIZBOOK['DESCRIPTIONS'] = "Descripciones";
+$BIZBOOK['TAGS'] = "Etiquetas";
+$BIZBOOK['HIGHLIGHTS_PLACEHOLDER'] = "(Ej.: Garantía a Domicilio de 1 Año)";
+$BIZBOOK['SPECIFICATIONS'] = "Especificaciones";
+$BIZBOOK['SPECIFICATIONS_QUESTION'] = "(Ej.: Número de Serie)";
+$BIZBOOK['SPECIFICATIONS_ANSWER'] = "(Ej.: qwerty3421)";
+$BIZBOOK['PRODUCT_TAGS_PLACEHOLDER'] = "Etiquetas del Producto (Ej.: electrónica, portátil, hp, canon)";
+$BIZBOOK['EDIT_PRODUCT'] = "Editar Producto";
+$BIZBOOK['EDIT_THIS_PRODUCT'] = "Editar este producto";
+$BIZBOOK['DELETE_THIS_PRODUCT'] = "Eliminar este producto";
+$BIZBOOK['DELETE_PRODUCT'] = "Eliminar Producto";
 
 //************************* Product Page Texts Ends *****************************
 
 //*************************** Events's Page Text Starts ***************************
 
-$BIZBOOK['EVENT_DETAILS'] = "Event Details";
-
-$BIZBOOK['ALL_EVENTS'] = "All Events";
-
-$BIZBOOK['EVENT_NAME'] = "Event Name";
-
-$BIZBOOK['EVENT_DATE'] = "Event Date";
-
-$BIZBOOK['ADD_NEW_EVENT'] = "Add new Event";
-
-$BIZBOOK['CREATE_EVENT'] = "Create Event";
-
-$BIZBOOK['GOOGLE_MAP_LOCATION'] = "Google map location";
-
-$BIZBOOK['CHOOSE_BANNER_IMAGE'] = "Choose banner image";
-
-$BIZBOOK['CONTACT_PERSON'] = "Contact person";
-
-$BIZBOOK['CONTACT_PHONE_NUMBER'] = "Contact phone number";
-
-$BIZBOOK['CONTACT_EMAIL_ID'] = "Contact Email Id ";
-
-$BIZBOOK['EVENT_WEBSITE'] = "Event Website";
-
-$BIZBOOK['ENQUIRY_BOX_ENABLE'] = "Enquiry or Registration form enable";
-
-$BIZBOOK['EDIT_EVENT'] = "Edit Event";
-
-$BIZBOOK['EDIT_THIS_EVENT'] = "Edit this Event";
-
-$BIZBOOK['DELETE_THIS_EVENT'] = "Delete this Event";
-
-$BIZBOOK['DELETE_EVENT'] = "Delete Event";
-
-$BIZBOOK['EVENT_IFRAME_FROM_GOOGLE'] = "Iframe code from google";
-
-$BIZBOOK['EVENT_COPY_PASTE_IFRAME_FROM_GOOGLE'] = "Copy and paste Google iframe code here.";
-
-$BIZBOOK['EVENT_HEAD_MESSAGE'] = "Here post your events, seminar, webinar, fetivals and more";
-
-$BIZBOOK['EVENT_SEARCH_EVENT_PLACEHOLDER'] = "Search event in your city...";
-
-$BIZBOOK['EVENT_HOSTED_BY'] = "Hosted by";
-
-$BIZBOOK['EVENT_TOP_EVENTS'] = "Top events";
+$BIZBOOK['EVENT_DETAILS'] = "Detalles del Evento";
+$BIZBOOK['ALL_EVENTS'] = "Todos los Eventos";
+$BIZBOOK['EVENT_NAME'] = "Nombre del Evento";
+$BIZBOOK['EVENT_DATE'] = "Fecha del Evento";
+$BIZBOOK['ADD_NEW_EVENT'] = "Añadir Nuevo Evento";
+$BIZBOOK['CREATE_EVENT'] = "Crear Evento";
+$BIZBOOK['GOOGLE_MAP_LOCATION'] = "Ubicación en Google Maps";
+$BIZBOOK['CHOOSE_BANNER_IMAGE'] = "Elige la imagen de banner";
+$BIZBOOK['CONTACT_PERSON'] = "Persona de Contacto";
+$BIZBOOK['CONTACT_PHONE_NUMBER'] = "Número de Teléfono de Contacto";
+$BIZBOOK['CONTACT_EMAIL_ID'] = "ID de Correo de Contacto";
+$BIZBOOK['EVENT_WEBSITE'] = "Sitio Web del Evento";
+$BIZBOOK['ENQUIRY_BOX_ENABLE'] = "Habilitar Consulta o Formulario de Registro";
+$BIZBOOK['EDIT_EVENT'] = "Editar Evento";
+$BIZBOOK['EDIT_THIS_EVENT'] = "Editar este Evento";
+$BIZBOOK['DELETE_THIS_EVENT'] = "Eliminar este Evento";
+$BIZBOOK['DELETE_EVENT'] = "Eliminar Evento";
+$BIZBOOK['EVENT_IFRAME_FROM_GOOGLE'] = "Código iframe de Google";
+$BIZBOOK['EVENT_COPY_PASTE_IFRAME_FROM_GOOGLE'] = "Copia y pega el código iframe de Google aquí.";
+$BIZBOOK['EVENT_HEAD_MESSAGE'] = "Publica aquí tus eventos, seminarios, webinars, festivales y más";
+$BIZBOOK['EVENT_SEARCH_EVENT_PLACEHOLDER'] = "Buscar evento en tu ciudad...";
+$BIZBOOK['EVENT_HOSTED_BY'] = "Organizado por";
+$BIZBOOK['EVENT_TOP_EVENTS'] = "Eventos Principales";
 
 //*************************** Events's Page Text Ends ***************************
 
 //*************************** Blog's Page Text Start ***************************
 
-$BIZBOOK['BLOG_DETAILS'] = "Blog Details";
-
-$BIZBOOK['ALL_BLOG'] = "All Blogs";
-
-$BIZBOOK['POST_NAME'] = "Post Name";
-
-$BIZBOOK['ADD_NEW_POST'] = "Add new post";
-
-$BIZBOOK['ADD_NEW_BLOG_POST'] = "Add new Blog post";
-
-$BIZBOOK['CREATE_BLOG_POST'] = "Create Blog Post";
-
-$BIZBOOK['POST_DETAILS'] = "Post Details";
-
-$BIZBOOK['EDIT_BLOG_POST'] = "Edit Blog Post";
-
-$BIZBOOK['EDIT_THIS_BLOG_POST'] = "Edit this Blog Post";
-
-$BIZBOOK['DELETE_THIS_BLOG_POST'] = "Delete this Blog Post";
-
-$BIZBOOK['DELETE_BLOG_POST'] = "Delete Blog Post";
-
-$BIZBOOK['DELETE_BLOG'] = "Delete Blog";
-
-$BIZBOOK['BLOG_TOP_POSTS'] = "Top posts";
+$BIZBOOK['BLOG_DETAILS'] = "Detalles del Blog";
+$BIZBOOK['ALL_BLOG'] = "Todos los Blogs";
+$BIZBOOK['POST_NAME'] = "Nombre de la Publicación";
+$BIZBOOK['ADD_NEW_POST'] = "Añadir Nueva Publicación";
+$BIZBOOK['ADD_NEW_BLOG_POST'] = "Añadir Nueva Publicación de Blog";
+$BIZBOOK['CREATE_BLOG_POST'] = "Crear Publicación de Blog";
+$BIZBOOK['POST_DETAILS'] = "Detalles de la Publicación";
+$BIZBOOK['EDIT_BLOG_POST'] = "Editar Publicación de Blog";
+$BIZBOOK['EDIT_THIS_BLOG_POST'] = "Editar esta Publicación de Blog";
+$BIZBOOK['DELETE_THIS_BLOG_POST'] = "Eliminar esta Publicación de Blog";
+$BIZBOOK['DELETE_BLOG_POST'] = "Eliminar Publicación de Blog";
+$BIZBOOK['DELETE_BLOG'] = "Eliminar Blog";
+$BIZBOOK['BLOG_TOP_POSTS'] = "Publicaciones Principales";
 
 //*************************** Blog's Page Text Ends ***************************
 
 //*************************** SEO Page Text Starts***************************
 
-$BIZBOOK['SEO_DETAILS'] = "SEO Details";
-
-$BIZBOOK['SEO_LABEL'] = "Here you can update Title, descriptions and keywords of all your posts.";
-
-$BIZBOOK['EDIT_THIS_SEO'] = "Edit this SEO";
-
-$BIZBOOK['SEO_TITLE'] = "SEO Title";
-
-$BIZBOOK['SEO_NAME'] = "SEO Name";
-
-$BIZBOOK['SEO_DESCRIPTION'] = "SEO Description";
-
-$BIZBOOK['SEO_KEYWORDS'] = "SEO Keywords i.e products,market,health";
+$BIZBOOK['SEO_DETAILS'] = "Detalles de SEO";
+$BIZBOOK['SEO_LABEL'] = "Aquí puedes actualizar el Título, descripciones y palabras clave de todas tus publicaciones.";
+$BIZBOOK['EDIT_THIS_SEO'] = "Editar este SEO";
+$BIZBOOK['SEO_TITLE'] = "Título SEO";
+$BIZBOOK['SEO_NAME'] = "Nombre SEO";
+$BIZBOOK['SEO_DESCRIPTION'] = "Descripción SEO";
+$BIZBOOK['SEO_KEYWORDS'] = "Palabras clave SEO, ej.: productos, mercado, salud";
 
 //*************************** SEO Page Text Ends************************************
 
 //*************************** User Profile Page Text Starts***************************
 
-$BIZBOOK['PROFILE_DETAILS'] = "Profile Details";
+$BIZBOOK['PROFILE_DETAILS'] = "Detalles del Perfil";
 
-$BIZBOOK['USER_PROFILE'] = "User Profile";
+$BIZBOOK['USER_PROFILE'] = "Perfil del Usuario";
 
-$BIZBOOK['EDIT_USER_PROFILE'] = "Edit User Profile";
+$BIZBOOK['EDIT_USER_PROFILE'] = "Editar Perfil de Usuario";
 
-$BIZBOOK['PROFILE_EXPIRY_LISTING_EXP'] = "Profile Expiry(Listing exp)";
+$BIZBOOK['PROFILE_EXPIRY_LISTING_EXP'] = "Expiración del Perfil (Expiración del Negocio)";
 
-$BIZBOOK['PROFILE_PASSWORD'] = "Profile Password";
+$BIZBOOK['PROFILE_PASSWORD'] = "Contraseña del Perfil";
 
-$BIZBOOK['PROFILE_PICTURE'] = "Profile Picture";
+$BIZBOOK['PROFILE_PICTURE'] = "Foto de Perfil";
 
-$BIZBOOK['PROFILE_PICTURE_COVER'] = "Profile Cover Image";
+$BIZBOOK['PROFILE_PICTURE_COVER'] = "Imagen de Portada del Perfil";
 
-$BIZBOOK['PROFILE_IDPROOF'] = "Photo ID Proof";
+$BIZBOOK['PROFILE_IDPROOF'] = "Foto de Identificación";
 
-$BIZBOOK['PREMIUM_SERVICE_PROVIDER'] = "Premium service provider";
+$BIZBOOK['PREMIUM_SERVICE_PROVIDER'] = "Proveedor de Servicios Premium";
 
-$BIZBOOK['PROFILE_LINK'] = "Profile Link";
+$BIZBOOK['PROFILE_LINK'] = "Enlace de Perfil";
 
 $BIZBOOK['FACEBOOK'] = "Facebook";
 
 $BIZBOOK['TWITTER'] = "Twitter";
 
-$BIZBOOK['LINKEDIN'] = "Linkedin";
+$BIZBOOK['LINKEDIN'] = "LinkedIn";
 
 $BIZBOOK['PINTEREST'] = "Pinterest";
 
-$BIZBOOK['YOUTUBE'] = "Youtube";
+$BIZBOOK['YOUTUBE'] = "YouTube";
 
-$BIZBOOK['USER_WEBSITE'] = "Website";
+$BIZBOOK['USER_WEBSITE'] = "Sitio Web";
 
-$BIZBOOK['CHANGE_PASSWORD'] = "Change password";
+$BIZBOOK['CHANGE_PASSWORD'] = "Cambiar Contraseña";
 
-$BIZBOOK['PROFILE-PROMO-H3-TAG'] = "Tell us your Needs";
+$BIZBOOK['PROFILE-PROMO-H3-TAG'] = "Cuéntanos tus Necesidades";
 
-$BIZBOOK['PROFILE-PROMO-P-TAG'] = "Tell us what kind of service or experts you are looking.";
+$BIZBOOK['PROFILE-PROMO-P-TAG'] = "Cuéntanos qué tipo de servicio o profesionales estás buscando.";
 
-$BIZBOOK['PROFILE-QUICK-ACCESS'] = "Quick access";
+$BIZBOOK['PROFILE-QUICK-ACCESS'] = "Acceso Rápido";
 
-$BIZBOOK['PROFILE-QUICK-ACCESS-P-1'] = "Easy to find your nearby Services";
+$BIZBOOK['PROFILE-QUICK-ACCESS-P-1'] = "Fácil de encontrar servicios cercanos";
 
-$BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-1'] = "View services";
+$BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-1'] = "Ver servicios";
 
-$BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-2'] = "Book service experts";
+$BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-2'] = "Reserva de expertos en servicios";
 
-$BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-3'] = "Start finding";
+$BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-3'] = "Comienza a buscar";
 
-$BIZBOOK['PROFILE-QUICK-ACCESS-P-4'] = "Find upcoming events now";
+$BIZBOOK['PROFILE-QUICK-ACCESS-P-4'] = "Encuentra eventos próximos ahora";
 
-$BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-4'] = "More info";
+$BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-4'] = "Más información";
 
-$BIZBOOK['PROFILE-QUICK-ACCESS-P-5'] = "Now easy to Buy & Selling your products online";
+$BIZBOOK['PROFILE-QUICK-ACCESS-P-5'] = "Ahora es fácil comprar y vender tus productos en línea";
 
-$BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-5'] = "Start Buying";
+$BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-5'] = "Comienza a comprar";
 
-$BIZBOOK['PROFILE-QUICK-ACCESS-P-6'] = "Get the latest and up-to-date coupons";
+$BIZBOOK['PROFILE-QUICK-ACCESS-P-6'] = "Obtén los cupones más recientes y actualizados";
 
-$BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-6'] = "View Coupon & deals";
+$BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-6'] = "Ver Cupones y Ofertas";
 
-$BIZBOOK['PROFILE-QUICK-ACCESS-P-7'] = "Create a unique and beautiful blog. It’s easy and free.";
+$BIZBOOK['PROFILE-QUICK-ACCESS-P-7'] = "Crea un blog único y hermoso. Es fácil y gratuito.";
 
-$BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-8'] = "Join the Community";
+$BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-8'] = "Únete a la Comunidad";
+
 
 //*************************** User Profile Page Text Ends***************************
 
@@ -1314,1647 +761,1671 @@ $BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-8'] = "Join the Community";
 
 $BIZBOOK['FOOT-BAN-TIT'] = "Enumera tu negocio GRATIS.";
 
-$BIZBOOK['FOOT-BAN-SUB-TIT'] = "Existen muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría ha sufrido alteraciones de alguna forma, por la inserción de humor.";
+$BIZBOOK['FOOT-BAN-SUB-TIT'] = "Encuentra servicios cerca de ti, perfectos para cada necesidad personal o profesional.";
 
-$BIZBOOK['FOOT-BAN-ADD'] = "Add my business";
+$BIZBOOK['FOOT-BAN-ADD'] = "Añadir mi negocio";
 
 
 //************************* HOME PAGE 3 ***********
 
-$BIZBOOK['HOM3-OW-TIT'] = "Join us Now";
+$BIZBOOK['HOM3-OW-TIT'] = "Únete Ahora";
 
-$BIZBOOK['HOM3-OW-POSTED-BY'] = "Posted by";
+$BIZBOOK['HOM3-OW-POSTED-BY'] = "Publicado por";
 
-$BIZBOOK['HOM3-OW-POSTED-ON'] = "Posted on";
+$BIZBOOK['HOM3-OW-POSTED-ON'] = "Publicado en";
 
-$BIZBOOK['HOM3-OW-USER-REVIEW'] = "Our user reviews";
+$BIZBOOK['HOM3-OW-USER-REVIEW'] = "Opiniones de nuestros usuarios";
 
-$BIZBOOK['HOM3-OW-TIT-SUB'] = "We connect with targeted customers for greater business conversion";
+$BIZBOOK['HOM3-OW-TIT-SUB'] = "Conectamos con clientes específicos para una mayor conversión de negocios";
 
-$BIZBOOK['HOM3-OW-LHS-TIT'] = "Are you a business owner?";
+$BIZBOOK['HOM3-OW-LHS-TIT'] = "¿Eres propietario de un negocio?";
 
-$BIZBOOK['HOM3-OW-LHS-SUB'] = "Update your business details including services, about, contact details payment options and more.";
+$BIZBOOK['HOM3-OW-LHS-SUB'] = "Actualiza los detalles de tu negocio, incluyendo servicios, información, datos de contacto, opciones de pago y más.";
 
-$BIZBOOK['HOM3-OW-LHS-CTA'] = "Add my business";
+$BIZBOOK['HOM3-OW-LHS-CTA'] = "Añadir mi negocio";
 
-$BIZBOOK['HOM3-OW-RHS-TIT'] = "Are you looking for service?";
+$BIZBOOK['HOM3-OW-RHS-TIT'] = "¿Buscas un servicio?";
 
-$BIZBOOK['HOM3-OW-RHS-SUB'] = "Get everything in your pocket, What service do you need? BizBook will help you.";
+$BIZBOOK['HOM3-OW-RHS-SUB'] = "Todo a tu alcance, ¿Qué servicio necesitas? ZITIZITI te ayudará.";
 
-$BIZBOOK['HOM3-OW-RHS-CTA'] = "Create an account";
+$BIZBOOK['HOM3-OW-RHS-CTA'] = "Crear una cuenta";
 
 //************************* COMMON LEAD FORM TEXT ***********
 
-$BIZBOOK['LEAD-GET-QUOTE'] = "Get quote";
+$BIZBOOK['LEAD-GET-QUOTE'] = "Obtener cotización";
 
-$BIZBOOK['LEAD-GET'] = "Get";
+$BIZBOOK['LEAD-GET'] = "Obtener";
 
-$BIZBOOK['LEAD-QUOTE'] = "Quote";
+$BIZBOOK['LEAD-QUOTE'] = "Cotización";
 
-$BIZBOOK['LEAD-SEND-ENQUIRY'] = "Send enquiry";
+$BIZBOOK['LEAD-SEND-ENQUIRY'] = "Enviar consulta";
 
-$BIZBOOK['LEAD-NAME-PLACEHOLDER'] = "Enter name*";
+$BIZBOOK['LEAD-NAME-PLACEHOLDER'] = "Ingresa el nombre*";
 
-$BIZBOOK['LEAD-EMAIL-PLACEHOLDER'] = "Enter Email Id*";
+$BIZBOOK['LEAD-EMAIL-PLACEHOLDER'] = "Ingresa el correo electrónico*";
 
-$BIZBOOK['LEAD-MOBILE-PLACEHOLDER'] = "Enter mobile number *";
+$BIZBOOK['LEAD-MOBILE-PLACEHOLDER'] = "Ingresa el número de móvil*";
 
-$BIZBOOK['LEAD-CARD-NUMBER-PLACEHOLDER'] = "Card Number *";
+$BIZBOOK['LEAD-CARD-NUMBER-PLACEHOLDER'] = "Número de tarjeta *";
 
 $BIZBOOK['LEAD-CARD-NUMBER-MM-PLACEHOLDER'] = "MM";
 
-$BIZBOOK['LEAD-CARD-NUMBER-YYYY-PLACEHOLDER'] = "YYYY";
+$BIZBOOK['LEAD-CARD-NUMBER-YYYY-PLACEHOLDER'] = "AAAA";
 
 $BIZBOOK['LEAD-CARD-NUMBER-CVC-PLACEHOLDER'] = "CVC";
 
-$BIZBOOK['LEAD-MESSAGE-PLACEHOLDER'] = "Enter your query or message";
+$BIZBOOK['LEAD-MESSAGE-PLACEHOLDER'] = "Ingresa tu consulta o mensaje";
 
-$BIZBOOK['LEAD-LOCATION-PLACEHOLDER'] = "Enter your Location";
+$BIZBOOK['LEAD-LOCATION-PLACEHOLDER'] = "Ingresa tu ubicación";
 
-$BIZBOOK['LEAD-WRITE-YOUR-FEEDBACK-PLACEHOLDER'] = "Write your feedback here*";
+$BIZBOOK['LEAD-WRITE-YOUR-FEEDBACK-PLACEHOLDER'] = "Escribe aquí tu opinión*";
 
-$BIZBOOK['LEAD-WRITE-YOUR-MESSAGE-PLACEHOLDER'] = "Write your message here*";
+$BIZBOOK['LEAD-WRITE-YOUR-MESSAGE-PLACEHOLDER'] = "Escribe aquí tu mensaje*";
 
-$BIZBOOK['LEAD-INVALID-EMAIL-TITLE'] = "Invalid email address";
+$BIZBOOK['LEAD-INVALID-EMAIL-TITLE'] = "Correo electrónico no válido";
 
-$BIZBOOK['LEAD-INVALID-MOBILE-TITLE'] = "Phone number starting with 7-9 and remaining 9 digit with 0-9";
+$BIZBOOK['LEAD-INVALID-MOBILE-TITLE'] = "Número de teléfono debe iniciar con 7-9, seguido de 9 dígitos entre 0-9";
 
-$BIZBOOK['LEAD-IDENTIFICATION-PROOF-TITLE'] = "Identification Proof *";
+$BIZBOOK['LEAD-IDENTIFICATION-PROOF-TITLE'] = "Prueba de Identificación *";
 
-$BIZBOOK['LEAD-WHY-CLAIM-BUSINESS-TITLE'] = "Enter your query and why claim this business";
+$BIZBOOK['LEAD-WHY-CLAIM-BUSINESS-TITLE'] = "Ingresa tu consulta y razón para reclamar este negocio";
 
-$BIZBOOK['LEAD-LOGIN-ENJOY-MESSAGE'] = "Login & Enjoy Our Services";
+$BIZBOOK['LEAD-LOGIN-ENJOY-MESSAGE'] = "Inicia Sesión y Disfruta Nuestros Servicios";
 
-$BIZBOOK['LEAD-FILL-THE-FORM'] = "Fill the form";
+$BIZBOOK['LEAD-FILL-THE-FORM'] = "Completa el formulario";
 
-$BIZBOOK['LEAD-SUBMIT-FEEDBACK'] = "Submit Feedback";
+$BIZBOOK['LEAD-SUBMIT-FEEDBACK'] = "Enviar Opinión";
 
 
 //************************* 404 PAGE TEXT ***********
 
 $BIZBOOK['404_TEXT'] = "404";
 
-$BIZBOOK['404_PAGE_NOT_FOUND'] = "page not found";
+$BIZBOOK['404_PAGE_NOT_FOUND'] = "Página no encontrada";
 
-$BIZBOOK['404_PAGE_NOT_FOUND_MESSAGE'] = "The page you are looking for was moved, removed,<br>renamed or might never existed.";
+$BIZBOOK['404_PAGE_NOT_FOUND_MESSAGE'] = "La página que buscas fue movida, eliminada,<br>renombrada o quizá nunca existió.";
 
-$BIZBOOK['404_GO_HOME'] = "Go home";
+$BIZBOOK['404_GO_HOME'] = "Ir a Inicio";
 
-$BIZBOOK['404_CONTACT_US'] = "Contact us";
+$BIZBOOK['404_CONTACT_US'] = "Contáctanos";
 
-//************************* ACTIVATE PAGE TEXT ***********
+//************************* TEXTO DE LA PÁGINA DE ACTIVACIÓN ***********
 
-$BIZBOOK['ACTIVATE_VERIFY_YOUR_EMAIL'] = "Verify your email";
+$BIZBOOK['ACTIVATE_VERIFY_YOUR_EMAIL'] = "Verifica tu correo electrónico";
 
-$BIZBOOK['ACTIVATE_TEXT'] = "Enter your Verification code to the below and activate your account.";
+$BIZBOOK['ACTIVATE_TEXT'] = "Ingresa tu código de verificación abajo y activa tu cuenta.";
 
-$BIZBOOK['ACTIVATE_PAGE_PLACEHOLDER'] = "Enter your verification code.";
+$BIZBOOK['ACTIVATE_PAGE_PLACEHOLDER'] = "Ingresa tu código de verificación.";
 
-//************************* AD-DETAILS PAGE TEXT ***********
+//************************* TEXTO DE LA PÁGINA DE DETALLES DE ANUNCIOS ***********
 
-$BIZBOOK['AD-DETAILS'] = "Ad details";
+$BIZBOOK['AD-DETAILS'] = "Detalles del Anuncio";
 
-$BIZBOOK['AD-DETAILS-ADS-NAME'] = "Ads Name";
+$BIZBOOK['AD-DETAILS-ADS-NAME'] = "Nombre del Anuncio";
 
-$BIZBOOK['AD-DETAILS-ADS-PREVIEW'] = "Ads Preview";
+$BIZBOOK['AD-DETAILS-ADS-PREVIEW'] = "Vista Previa del Anuncio";
 
-$BIZBOOK['AD-DETAILS-ADS-SIZE'] = "Ads Size";
+$BIZBOOK['AD-DETAILS-ADS-SIZE'] = "Tamaño del Anuncio";
 
-$BIZBOOK['AD-DETAILS-COST-DAY'] = "Cost P/Day";
+$BIZBOOK['AD-DETAILS-COST-DAY'] = "Costo por Día";
 
-$BIZBOOK['AD-DETAILS-START-ADS'] = "Start Ads";
+$BIZBOOK['AD-DETAILS-START-ADS'] = "Iniciar Anuncios";
 
-$BIZBOOK['AD-DETAILS-POST-YOUR-ADS'] = "Post your Ads";
+$BIZBOOK['AD-DETAILS-POST-YOUR-ADS'] = "Publica tu Anuncio";
 
-$BIZBOOK['AD-DETAILS-SIGN-IN-POST-YOUR-ADS'] = "Sign in to post your ads";
+$BIZBOOK['AD-DETAILS-SIGN-IN-POST-YOUR-ADS'] = "Inicia sesión para publicar tus anuncios";
 
-$BIZBOOK['AD-DETAILS-SIGN-IN-POST-YOUR-ADS-P-TAG'] = "Now its easier to post the advertisement requirement, by just a click on this form. Login to post your ads request.";
+$BIZBOOK['AD-DETAILS-SIGN-IN-POST-YOUR-ADS-P-TAG'] = "Ahora es más fácil publicar anuncios, solo completa este formulario. Inicia sesión para enviar tu solicitud de anuncio.";
 
-$BIZBOOK['AD-DETAILS-CREATE-NEW-ADS'] = "Create new Ads";
+$BIZBOOK['AD-DETAILS-CREATE-NEW-ADS'] = "Crear Nuevo Anuncio";
 
-$BIZBOOK['AD-DETAILS-SUBMIT-YOUR-ADS'] = "Submit your Ads";
+$BIZBOOK['AD-DETAILS-SUBMIT-YOUR-ADS'] = "Enviar tu Anuncio";
 
-$BIZBOOK['AD-DETAILS-CHOOSE-ADS-POSITION'] = "Choose Ads Position *";
+$BIZBOOK['AD-DETAILS-CHOOSE-ADS-POSITION'] = "Elige la Posición del Anuncio *";
 
-$BIZBOOK['AD-DETAILS-ADS-POSITION'] = "Ads Position";
+$BIZBOOK['AD-DETAILS-ADS-POSITION'] = "Posición del Anuncio";
 
-$BIZBOOK['AD-DETAILS-BANNER-ADS'] = "Your Banner Ads";
+$BIZBOOK['AD-DETAILS-BANNER-ADS'] = "Tus Anuncios en Banner";
 
-$BIZBOOK['AD-DETAILS-PAID-ADS'] = "Paid ads";
+$BIZBOOK['AD-DETAILS-PAID-ADS'] = "Anuncios Pagados";
 
-$BIZBOOK['AD-DETAILS-PRICING-DETAILS'] = "Pricing details";
+$BIZBOOK['AD-DETAILS-PRICING-DETAILS'] = "Detalles de Precios";
 
-$BIZBOOK['AD-DETAILS-PRICING-OTHER-DETAILS'] = "Pricing and other details";
+$BIZBOOK['AD-DETAILS-PRICING-OTHER-DETAILS'] = "Precios y otros detalles";
 
-$BIZBOOK['AD-DETAILS-AD-START-DATE'] = "Ad start date (MM/DD/YYYY)";
+$BIZBOOK['AD-DETAILS-AD-START-DATE'] = "Fecha de inicio del Anuncio (MM/DD/AAAA)";
 
-$BIZBOOK['AD-DETAILS-AD-END-DATE'] = "Ad end date (MM/DD/YYYY)";
+$BIZBOOK['AD-DETAILS-AD-END-DATE'] = "Fecha de fin del Anuncio (MM/DD/AAAA)";
 
-$BIZBOOK['AD-DETAILS-CHOOSE-AD-IMAGE'] = "Choose Ad image";
+$BIZBOOK['AD-DETAILS-CHOOSE-AD-IMAGE'] = "Elige Imagen del Anuncio";
 
-$BIZBOOK['AD-DETAILS-ADVERTISEMENT-EXTERNAL-LINK'] = "Advertisement External link";
+$BIZBOOK['AD-DETAILS-ADVERTISEMENT-EXTERNAL-LINK'] = "Enlace externo del Anuncio";
 
-$BIZBOOK['AD-DETAILS-PUBLISH-THIS-AD'] = "Publish this Ad";
+$BIZBOOK['AD-DETAILS-PUBLISH-THIS-AD'] = "Publicar este Anuncio";
 
-$BIZBOOK['AD-DETAILS-NOTES-MESSAGE'] = "Once you submit your Ad then Admin or support team will contact you shortly.";
+$BIZBOOK['AD-DETAILS-NOTES-MESSAGE'] = "Una vez que envíes tu anuncio, el equipo de soporte o el administrador te contactarán en breve.";
 
-//************************* COUPON PAGE TEXT ***********
+//************************* TEXTO DE LA PÁGINA DE CUPONES ***********
 
-$BIZBOOK['COUPON'] = "Coupons";
+$BIZBOOK['COUPON'] = "Cupones";
 
-$BIZBOOK['COUPON-ADD-NEW-COUPON'] = "Add new Coupon";
+$BIZBOOK['COUPON-ADD-NEW-COUPON'] = "Añadir Nuevo Cupón";
 
-$BIZBOOK['COUPON-COUPON-NAME-PLACEHOLDER'] = "Coupon name";
+$BIZBOOK['COUPON-COUPON-NAME-PLACEHOLDER'] = "Nombre del Cupón";
 
-$BIZBOOK['COUPON-COUPON-CODE-PLACEHOLDER'] = "Coupon code";
+$BIZBOOK['COUPON-COUPON-CODE-PLACEHOLDER'] = "Código del Cupón";
 
-$BIZBOOK['COUPON-OFFER-CODE-PLACEHOLDER'] = "Offer code";
+$BIZBOOK['COUPON-OFFER-CODE-PLACEHOLDER'] = "Código de Oferta";
 
-$BIZBOOK['COUPON-WEBSITE-LINK-PLACEHOLDER'] = "Website link(if online offer)";
+$BIZBOOK['COUPON-WEBSITE-LINK-PLACEHOLDER'] = "Enlace del sitio web (si es oferta en línea)";
 
-$BIZBOOK['COUPON-BRAND-LOGO-PLACEHOLDER'] = "Brand logo or Offer image(Recommended size 65 X 65)";
+$BIZBOOK['COUPON-BRAND-LOGO-PLACEHOLDER'] = "Logo de la Marca o Imagen de la Oferta (Tamaño recomendado 65 X 65)";
 
-$BIZBOOK['COUPON-START-DATE-PLACEHOLDER'] = "Start date";
+$BIZBOOK['COUPON-START-DATE-PLACEHOLDER'] = "Fecha de Inicio";
 
-$BIZBOOK['COUPON-END-DATE-PLACEHOLDER'] = "End date";
+$BIZBOOK['COUPON-END-DATE-PLACEHOLDER'] = "Fecha de Fin";
 
-$BIZBOOK['COUPON-EXPIRY-DATE-PLACEHOLDER'] = "Expiry date";
+$BIZBOOK['COUPON-EXPIRY-DATE-PLACEHOLDER'] = "Fecha de Expiración";
 
-$BIZBOOK['COUPON-ALL-COUPON-DETAILS'] = "All Coupon Details";
+$BIZBOOK['COUPON-ALL-COUPON-DETAILS'] = "Detalles de Todos los Cupones";
 
-$BIZBOOK['COUPON-COUPON-USED-MEMBERS'] = "Coupon used members";
+$BIZBOOK['COUPON-COUPON-USED-MEMBERS'] = "Miembros que Usaron el Cupón";
 
-$BIZBOOK['COUPON-EXPIRES'] = "Expires";
+$BIZBOOK['COUPON-EXPIRES'] = "Expira";
 
-//************************* ALL CATEGORY PAGE TEXT ***********
+//************************* TEXTO DE LA PÁGINA DE TODAS LAS CATEGORÍAS ***********
 
-$BIZBOOK['ALL-CATEGORY-MESSAGE'] = "Connect with the right Service Experts";
+$BIZBOOK['ALL-CATEGORY-MESSAGE'] = "Conéctate con los Profesionales de Servicios adecuados";
 
-$BIZBOOK['ALL-CATEGORY-PLACEHOLDER'] = "Search sub category here..";
+$BIZBOOK['ALL-CATEGORY-PLACEHOLDER'] = "Buscar subcategoría aquí..";
 
-//************************* ALL LISTING PAGE TEXT ***********
+//************************* TEXTO DE LA PÁGINA DE TODOS LOS NEGOCIOS ***********
 
-$BIZBOOK['ALL-LISTING-LISTING-FILTERS'] = "Listing filters";
+$BIZBOOK['ALL-LISTING-LISTING-FILTERS'] = "Filtros de Negocios";
 
-$BIZBOOK['ALL-LISTING-TOP-SERVICE-PROVIDERS'] = "Top Service Providers";
+$BIZBOOK['ALL-LISTING-TOP-SERVICE-PROVIDERS'] = "Principales Proveedores de Servicios";
 
-$BIZBOOK['ALL-LISTING-SEARCH-SERVICE'] = "Search the service";
+$BIZBOOK['ALL-LISTING-SEARCH-SERVICE'] = "Buscar el servicio";
 
-$BIZBOOK['ALL-LISTING-CATEGORIES'] = "Categories";
+$BIZBOOK['ALL-LISTING-CATEGORIES'] = "Categorías";
 
-$BIZBOOK['ALL-LISTING-SUB-CATEGORY'] = "Sub category";
+$BIZBOOK['ALL-LISTING-SUB-CATEGORY'] = "Subcategoría";
 
-$BIZBOOK['ALL-LISTING-FEATURES'] = "Features";
+$BIZBOOK['ALL-LISTING-FEATURES'] = "Características";
 
-$BIZBOOK['ALL-LISTING-FILTER-ALL'] = "All";
+$BIZBOOK['ALL-LISTING-FILTER-ALL'] = "Todos";
 
 $BIZBOOK['ALL-LISTING-FILTER-POPULAR'] = "Popular";
 
-$BIZBOOK['ALL-LISTING-FILTER-OPEN'] = "Open";
+$BIZBOOK['ALL-LISTING-FILTER-OPEN'] = "Abierto";
 
-$BIZBOOK['ALL-LISTING-FILTER-VERIFIED'] = "Verified";
+$BIZBOOK['ALL-LISTING-FILTER-VERIFIED'] = "Verificado";
 
-$BIZBOOK['ALL-LISTING-FILTER-NEARBY'] = "Nearby";
+$BIZBOOK['ALL-LISTING-FILTER-NEARBY'] = "Cercano";
 
-$BIZBOOK['ALL-LISTING-FILTER-OFFERS'] = "Offers";
+$BIZBOOK['ALL-LISTING-FILTER-OFFERS'] = "Ofertas";
 
-$BIZBOOK['ALL-LISTING-OVERALL-RATING'] = "Overall rating";
+$BIZBOOK['ALL-LISTING-OVERALL-RATING'] = "Calificación General";
 
-$BIZBOOK['ALL-LISTING-0-RATINGS'] = "0 Ratings";
+$BIZBOOK['ALL-LISTING-0-RATINGS'] = "0 Calificaciones";
 
-$BIZBOOK['ALL-LISTING-TOTAL-OF'] = "Total of";
+$BIZBOOK['ALL-LISTING-TOTAL-OF'] = "Total de";
 
-$BIZBOOK['ALL-LISTING-BUSINESS-RESULTS-FOUND'] = "business result(s) Found.";
+$BIZBOOK['ALL-LISTING-BUSINESS-RESULTS-FOUND'] = "resultado(s) de negocio encontrado(s).";
 
-//************************* ALL PRODUCTS PAGE TEXT ***********
+//************************* TEXTO DE LA PÁGINA DE TODOS LOS PRODUCTOS ***********
 
-$BIZBOOK['ALL-PRODUCTS-PRODUCT-FILTERS'] = "Product filters";
+$BIZBOOK['ALL-PRODUCTS-PRODUCT-FILTERS'] = "Filtros de Productos";
 
-//************************* BLOG-DETAILS PAGE TEXT ***********
+//************************* TEXTO DE LA PÁGINA DE DETALLES DEL BLOG ***********
 
-$BIZBOOK['BLOG-DETAILS-JOIN-ON'] = "Joined on";
+$BIZBOOK['BLOG-DETAILS-JOIN-ON'] = "Unido en";
 
-$BIZBOOK['BLOG-DETAILS-OTHER-POST'] = "Other Post";
+$BIZBOOK['BLOG-DETAILS-OTHER-POST'] = "Otra Publicación";
 
-$BIZBOOK['BLOG-DETAILS-SEARCH-ALL-POST'] = "Search all posts..";
+$BIZBOOK['BLOG-DETAILS-SEARCH-ALL-POST'] = "Buscar todas las publicaciones..";
 
-$BIZBOOK['BLOG-DETAILS-SHARE-THIS-POST'] = "Share this post";
+$BIZBOOK['BLOG-DETAILS-SHARE-THIS-POST'] = "Compartir esta publicación";
 
-$BIZBOOK['BLOG-DETAILS-RELATED-POST'] = "Related Posts";
+$BIZBOOK['BLOG-DETAILS-RELATED-POST'] = "Publicaciones Relacionadas";
 
-//************************* BLOG-POST PAGE TEXT ***********
+//************************* TEXTO DE LA PÁGINA DE PUBLICACIONES DEL BLOG ***********
 
-$BIZBOOK['BLOG-POST-HEAD'] = "Here submit your blogs and make your own audiance.";
+$BIZBOOK['BLOG-POST-HEAD'] = "Aquí publica tus blogs y crea tu propia audiencia.";
 
-$BIZBOOK['BLOG-POST-SEARCH-LABEL'] = "Search blog posts...";
+$BIZBOOK['BLOG-POST-SEARCH-LABEL'] = "Buscar publicaciones del blog...";
 
-//************************* BUY-POINTS PAGE TEXT ***********
+//************************* TEXTO DE LA PÁGINA DE COMPRA DE PUNTOS ***********
 
-$BIZBOOK['BUY-POINTS-EXISTING-POINTS-LABEL'] = "Your Existing Points -";
+$BIZBOOK['BUY-POINTS-EXISTING-POINTS-LABEL'] = "Tus Puntos Existentes -";
 
-$BIZBOOK['BUY-POINTS-COST-1-POINT'] = "Cost of 1 point =";
+$BIZBOOK['BUY-POINTS-COST-1-POINT'] = "Costo de 1 punto =";
 
-$BIZBOOK['BUY-POINTS-PLEASE-ENTER-POINT'] = "Please Enter Points:";
+$BIZBOOK['BUY-POINTS-PLEASE-ENTER-POINT'] = "Por favor, ingresa los puntos:";
 
-$BIZBOOK['BUY-POINTS-PAYMENT-MODE'] = "Payment Mode";
+$BIZBOOK['BUY-POINTS-PAYMENT-MODE'] = "Modo de Pago";
 
-//************************* COMMUNITY PAGE TEXT ***********
+//************************* TEXTO DE LA PÁGINA DE LA COMUNIDAD ***********
 
-$BIZBOOK['COMMUNITY-PAGE-HEADING-LABEL'] = "Business Community";
+$BIZBOOK['COMMUNITY-PAGE-HEADING-LABEL'] = "Comunidad de Negocios";
 
-$BIZBOOK['COMMUNITY-PAGE-P-TAG'] = "Build your business community and expand your business to next step.";
+$BIZBOOK['COMMUNITY-PAGE-P-TAG'] = "Crea tu comunidad de negocios y expande tu negocio al siguiente nivel.";
 
-$BIZBOOK['COMMUNITY-PAGE-PLACEHOLDER'] = "Search user profiles..";
+$BIZBOOK['COMMUNITY-PAGE-PLACEHOLDER'] = "Buscar perfiles de usuarios..";
 
-$BIZBOOK['COMMUNITY-PAGE-START-A-NEW-CHAT'] = "Start A New Chat!!! Now";
+$BIZBOOK['COMMUNITY-PAGE-START-A-NEW-CHAT'] = "¡Iniciar un Nuevo Chat Ahora!";
 
-//************************* COMPANY PROFILE PAGE TEXT ***********
+//************************* TEXTO DE LA PÁGINA DE PERFIL DE LA EMPRESA ***********
 
-$BIZBOOK['COMPANY-PROFILE-HEADING-LABEL'] = "About company";
+$BIZBOOK['COMPANY-PROFILE-HEADING-LABEL'] = "Sobre la empresa";
 
-$BIZBOOK['COMPANY-PROFILE-LOGO-LABEL'] = "Header top logo(size 200X35)";
+$BIZBOOK['COMPANY-PROFILE-LOGO-LABEL'] = "Logo superior de cabecera (tamaño 200X35)";
 
-$BIZBOOK['COMPANY-PROFILE-BANNER-LABEL'] = "Banner logo(size 200X35)";
+$BIZBOOK['COMPANY-PROFILE-BANNER-LABEL'] = "Logo del banner (tamaño 200X35)";
 
-$BIZBOOK['COMPANY-PROFILE-BACKGROUND-LABEL'] = "Banner background(size 250X250)";
+$BIZBOOK['COMPANY-PROFILE-BACKGROUND-LABEL'] = "Fondo del banner (tamaño 250X250)";
 
-$BIZBOOK['COMPANY-PROFILE-CHOOSE-PRODUCTS'] = "Choose Products";
+$BIZBOOK['COMPANY-PROFILE-CHOOSE-PRODUCTS'] = "Elegir Productos";
 
-$BIZBOOK['COMPANY-PROFILE-CHOOSE-EVENTS'] = "Choose events";
+$BIZBOOK['COMPANY-PROFILE-CHOOSE-EVENTS'] = "Elegir Eventos";
 
-$BIZBOOK['COMPANY-PROFILE-CHOOSE-BLOGS'] = "Choose blog posts";
+$BIZBOOK['COMPANY-PROFILE-CHOOSE-BLOGS'] = "Elegir Publicaciones de Blog";
 
-$BIZBOOK['COMPANY-PROFILE-SEO-LABEL'] = "SEO Settings";
+$BIZBOOK['COMPANY-PROFILE-SEO-LABEL'] = "Configuración de SEO";
 
-//************************* JOB PAGE TEXT ***********
+//************************* TEXTO DE LA PÁGINA DE EMPLEOS ***********
 
-$BIZBOOK['JOB-TITLE-LABEL'] = "Job Title";
+$BIZBOOK['JOB-TITLE-LABEL'] = "Título del Empleo";
 
-$BIZBOOK['JOB-SALARY-LABEL'] = "Salary";
+$BIZBOOK['JOB-SALARY-LABEL'] = "Salario";
 
-$BIZBOOK['JOB-NO-OF-OPENINGS-LABEL'] = "No of openings";
+$BIZBOOK['JOB-NO-OF-OPENINGS-LABEL'] = "N.º de vacantes";
 
-$BIZBOOK['JOB-INTERVIEW-DATE-LABEL'] = "Interview Date";
+$BIZBOOK['JOB-INTERVIEW-DATE-LABEL'] = "Fecha de Entrevista";
 
-$BIZBOOK['JOB-INTERVIEW-TIME-LABEL'] = "Interview Time";
+$BIZBOOK['JOB-INTERVIEW-TIME-LABEL'] = "Hora de Entrevista";
 
-$BIZBOOK['JOB-INTERVIEW-ROLE-LABEL'] = "Role";
+$BIZBOOK['JOB-INTERVIEW-ROLE-LABEL'] = "Rol";
 
-$BIZBOOK['JOB-INTERVIEW-EDUCATIONAL-LABEL'] = "Education & Qualification";
+$BIZBOOK['JOB-INTERVIEW-EDUCATIONAL-LABEL'] = "Educación y Calificación";
 
-$BIZBOOK['JOB-INTERVIEW-EXPERIENCE-DETAILS-LABEL'] = "Experience Details";
+$BIZBOOK['JOB-INTERVIEW-EXPERIENCE-DETAILS-LABEL'] = "Detalles de la Experiencia";
 
-$BIZBOOK['JOB-INTERVIEW-EMPLOYEE-NAME-LABEL'] = "Employee Name";
+$BIZBOOK['JOB-INTERVIEW-EMPLOYEE-NAME-LABEL'] = "Nombre del Empleado";
 
-$BIZBOOK['JOB-INTERVIEW-EMPLOYEE-DETAILS-LABEL'] = "Employee details";
+$BIZBOOK['JOB-INTERVIEW-EMPLOYEE-DETAILS-LABEL'] = "Detalles del Empleado";
 
-$BIZBOOK['JOB-INTERVIEW-CURRENT-COMPANY-LABEL'] = "Current company";
+$BIZBOOK['JOB-INTERVIEW-CURRENT-COMPANY-LABEL'] = "Empresa Actual";
 
-$BIZBOOK['JOB-INTERVIEW-NOTICE-PERIOD-LABEL'] = "Notice period";
+$BIZBOOK['JOB-INTERVIEW-NOTICE-PERIOD-LABEL'] = "Periodo de Aviso";
 
-$BIZBOOK['JOB-INTERVIEW-JOB-PROFESSION-LABEL'] = "Job profession";
+$BIZBOOK['JOB-INTERVIEW-JOB-PROFESSION-LABEL'] = "Profesión";
 
-$BIZBOOK['JOB-INTERVIEW-AVAILABLE-TIME-TO-TALK-LABEL'] = "Available time to talk";
+$BIZBOOK['JOB-INTERVIEW-AVAILABLE-TIME-TO-TALK-LABEL'] = "Hora Disponible para Hablar";
 
-$BIZBOOK['JOB-INTERVIEW-PROFILE-COVER-IMAGE-LABEL'] = "Profile cover image";
+$BIZBOOK['JOB-INTERVIEW-PROFILE-COVER-IMAGE-LABEL'] = "Imagen de Portada del Perfil";
 
-$BIZBOOK['JOB-INTERVIEW-PROFILE-IMAGE-LABEL'] = "Job profile image";
+$BIZBOOK['JOB-INTERVIEW-PROFILE-IMAGE-LABEL'] = "Imagen del Perfil de Empleo";
 
-$BIZBOOK['JOB-INTERVIEW-ADDITIONAL-INFORMATION-LABEL'] = "Additional information";
+$BIZBOOK['JOB-INTERVIEW-ADDITIONAL-INFORMATION-LABEL'] = "Información Adicional";
 
-$BIZBOOK['JOB-INTERVIEW-EMPLOYEE-PROFILE-LABEL'] = "Employee profile";
+$BIZBOOK['JOB-INTERVIEW-EMPLOYEE-PROFILE-LABEL'] = "Perfil del Empleado";
 
-$BIZBOOK['JOB-COMPANY-LOGO-LABEL'] = "Company logo";
+$BIZBOOK['JOB-COMPANY-LOGO-LABEL'] = "Logo de la Empresa";
 
-$BIZBOOK['JOB-COMPANY-NAME-LABEL'] = "Company Name";
+$BIZBOOK['JOB-COMPANY-NAME-LABEL'] = "Nombre de la Empresa";
 
-$BIZBOOK['JOB-CATEGORY-LABEL'] = "Job category";
+$BIZBOOK['JOB-CATEGORY-LABEL'] = "Categoría de Empleo";
 
-$BIZBOOK['JOB-SUB-CATEGORY-LABEL'] = "Job sub-category";
+$BIZBOOK['JOB-SUB-CATEGORY-LABEL'] = "Subcategoría de Empleo";
 
-$BIZBOOK['JOB-TYPE-LABEL'] = "Job Type";
+$BIZBOOK['JOB-TYPE-LABEL'] = "Tipo de Empleo";
 
-$BIZBOOK['JOB-LOCATION-LABEL'] = "Job Location";
+$BIZBOOK['JOB-LOCATION-LABEL'] = "Ubicación del Empleo";
 
-$BIZBOOK['JOB-YEARS-OF-EXPERIENCE-LABEL'] = "Year(s) of experience";
+$BIZBOOK['JOB-YEARS-OF-EXPERIENCE-LABEL'] = "Años de Experiencia";
 
-$BIZBOOK['JOB-CONTACT-NO-LABEL'] = "Contact no";
+$BIZBOOK['JOB-CONTACT-NO-LABEL'] = "N.º de Contacto";
 
-$BIZBOOK['JOB-CONTACT-PERSON-LABEL'] = "Contact person";
+$BIZBOOK['JOB-CONTACT-PERSON-LABEL'] = "Persona de Contacto";
 
-$BIZBOOK['JOB-INTERVIEW-LOCATION-LABEL'] = "Interview location";
+$BIZBOOK['JOB-INTERVIEW-LOCATION-LABEL'] = "Ubicación de la Entrevista";
 
-$BIZBOOK['JOB-SKILL-SET-LABEL'] = "Skill set";
+$BIZBOOK['JOB-SKILL-SET-LABEL'] = "Conjunto de Habilidades";
 
-$BIZBOOK['JOB-DESCRIPTION-LABEL'] = "Job Descriptions";
+$BIZBOOK['JOB-DESCRIPTION-LABEL'] = "Descripción del Empleo";
 
-$BIZBOOK['JOB-SMALL-DESCRIPTION-LABEL'] = "About your company(small description)";
+$BIZBOOK['JOB-SMALL-DESCRIPTION-LABEL'] = "Sobre tu Empresa (Breve Descripción)";
 
-$BIZBOOK['JOB-SELECT-JOB-LOCATION-LABEL'] = "Select Job Location";
+$BIZBOOK['JOB-SELECT-JOB-LOCATION-LABEL'] = "Seleccionar Ubicación del Empleo";
 
-$BIZBOOK['JOB-PERMANENT'] = "Permanent";
+$BIZBOOK['JOB-PERMANENT'] = "Permanente";
 
-$BIZBOOK['JOB-CONTRACT'] = "Contract";
+$BIZBOOK['JOB-CONTRACT'] = "Contrato";
 
-$BIZBOOK['JOB-PART-TIME'] = "Part time";
+$BIZBOOK['JOB-PART-TIME'] = "Medio Tiempo";
 
 $BIZBOOK['JOB-FREELANCE'] = "Freelance";
 
-$BIZBOOK['JOB-POST-NEW-JOB'] = "Post New Job";
+$BIZBOOK['JOB-POST-NEW-JOB'] = "Publicar Nuevo Empleo";
 
-$BIZBOOK['JOB-EDIT-THIS-JOB'] = "Edit This Job";
+$BIZBOOK['JOB-EDIT-THIS-JOB'] = "Editar Este Empleo";
 
-$BIZBOOK['JOB-DELETE-THIS-JOB'] = "Delete This Job";
+$BIZBOOK['JOB-DELETE-THIS-JOB'] = "Eliminar Este Empleo";
 
-$BIZBOOK['ADD_NEW_JOB'] = "Add New Job";
+$BIZBOOK['ADD_NEW_JOB'] = "Añadir Nuevo Empleo";
 
-$BIZBOOK['JOB_NAME'] = "Job Name";
+$BIZBOOK['JOB_NAME'] = "Nombre del Empleo";
 
-$BIZBOOK['JOB_APPLICANTS'] = "Job Applicants";
+$BIZBOOK['JOB_APPLICANTS'] = "Solicitantes del Empleo";
 
-$BIZBOOK['JOB_APPLICANT_PROFILE'] = "Job Applicant Profiles";
+$BIZBOOK['JOB_APPLICANT_PROFILE'] = "Perfiles de Solicitantes de Empleo";
 
-$BIZBOOK['JOB_DETAILS'] = "Job Details";
+$BIZBOOK['JOB_DETAILS'] = "Detalles del Empleo";
 
-$BIZBOOK['ALL_JOBS'] = "All Jobs";
+$BIZBOOK['ALL_JOBS'] = "Todos los Empleos";
 
-$BIZBOOK['JOB-UPDATE-NOW'] = "Update Now";
+$BIZBOOK['JOB-UPDATE-NOW'] = "Actualizar Ahora";
 
-$BIZBOOK['JOB_ALL_APPLI_PROFILE'] = "All Applicants Profile";
+$BIZBOOK['JOB_ALL_APPLI_PROFILE'] = "Perfil de Todos los Solicitantes";
 
-$BIZBOOK['JOB_APPLI_NAME'] = "Applicant Name";
+$BIZBOOK['JOB_APPLI_NAME'] = "Nombre del Solicitante";
 
-$BIZBOOK['JOB_APPLI_PHONE'] = "Mobile";
+$BIZBOOK['JOB_APPLI_PHONE'] = "Móvil";
 
-$BIZBOOK['JOB_APPLI_EMAIL'] = "Email Id";
+$BIZBOOK['JOB_APPLI_EMAIL'] = "Correo Electrónico";
 
-$BIZBOOK['JOB_APPLI_DATE'] = "Applied Date";
+$BIZBOOK['JOB_APPLI_DATE'] = "Fecha de Solicitud";
 
-$BIZBOOK['JOB_APPLI_RESUME'] = "Resume";
+$BIZBOOK['JOB_APPLI_RESUME'] = "Currículum";
 
-$BIZBOOK['JOB_IMMEDIATE_JOINEE'] = "Immediate joinee";
+$BIZBOOK['JOB_IMMEDIATE_JOINEE'] = "Incorporación Inmediata";
 
-$BIZBOOK['JOB_15_DAYS'] = "15 Days";
+$BIZBOOK['JOB_15_DAYS'] = "15 Días";
 
-$BIZBOOK['JOB_1_MONTH'] = "1 Month";
+$BIZBOOK['JOB_1_MONTH'] = "1 Mes";
 
-$BIZBOOK['JOB_2_MONTHS'] = "2 Months";
+$BIZBOOK['JOB_2_MONTHS'] = "2 Meses";
 
-$BIZBOOK['JOB_3_MONTHS'] = "3 Months";
+$BIZBOOK['JOB_3_MONTHS'] = "3 Meses";
 
-$BIZBOOK['JOB_6_MONTHS'] = "6 Months";
+$BIZBOOK['JOB_6_MONTHS'] = "6 Meses";
 
-$BIZBOOK['JOB_1_YEAR'] = "1 Year";
+$BIZBOOK['JOB_1_YEAR'] = "1 Año";
 
-$BIZBOOK['JOB_2_YEARS'] = "2 Years";
+$BIZBOOK['JOB_2_YEARS'] = "2 Años";
 
-$BIZBOOK['JOB_EXTRA_COURSES'] = "Extra courses";
+$BIZBOOK['JOB_EXTRA_COURSES'] = "Cursos Extra";
 
-$BIZBOOK['JOB_TRAINING_DETAILS'] = "Training details";
+$BIZBOOK['JOB_TRAINING_DETAILS'] = "Detalles de Capacitación";
 
-$BIZBOOK['JOB_OTHERS_1'] = "Others 1";
+$BIZBOOK['JOB_OTHERS_1'] = "Otros 1";
 
-$BIZBOOK['JOB_OTHERS_2'] = "Others 2";
+$BIZBOOK['JOB_OTHERS_2'] = "Otros 2";
 
-$BIZBOOK['JOB_APPLY_THIS_JOB_NOW'] = "Apply this job now";
+$BIZBOOK['JOB_APPLY_THIS_JOB_NOW'] = "Aplica a este Empleo Ahora";
 
-$BIZBOOK['JOB_ALREADY_APPLIED_THIS_JOB'] = "Already Applied this job";
+$BIZBOOK['JOB_ALREADY_APPLIED_THIS_JOB'] = "Ya Aplicaste a este Empleo";
 
-$BIZBOOK['JOB_APPLY_THIS_JOB'] = "Apply this job";
+$BIZBOOK['JOB_APPLY_THIS_JOB'] = "Aplicar a este Empleo";
 
-$BIZBOOK['JOB_SUMMARY'] = "Job Summary";
+$BIZBOOK['JOB_SUMMARY'] = "Resumen del Empleo";
 
-$BIZBOOK['JOB_GENDER'] = "Gender";
+$BIZBOOK['JOB_GENDER'] = "Género";
 
-$BIZBOOK['JOB_EDUCATION'] = "Education";
+$BIZBOOK['JOB_EDUCATION'] = "Educación";
 
-$BIZBOOK['JOB_PUBLISHED_ON'] = "Published on";
+$BIZBOOK['JOB_PUBLISHED_ON'] = "Publicado en";
 
-$BIZBOOK['JOB_APPLY_NOW'] = "Apply now";
+$BIZBOOK['JOB_APPLY_NOW'] = "Aplicar Ahora";
 
-$BIZBOOK['JOB_ALREADY_APPLIED'] = "Already Applied";
+$BIZBOOK['JOB_ALREADY_APPLIED'] = "Ya Aplicado";
 
-$BIZBOOK['JOB_SHARE'] = "Share";
+$BIZBOOK['JOB_SHARE'] = "Compartir";
 
-$BIZBOOK['JOB_RELATED_JOB_OPENINGS'] = "Related job openings";
+$BIZBOOK['JOB_RELATED_JOB_OPENINGS'] = "Empleos Relacionados";
 
-$BIZBOOK['JOB_MORE_DETAILS'] = "More details";
+$BIZBOOK['JOB_MORE_DETAILS'] = "Más Detalles";
 
-$BIZBOOK['JOB_OPENINGS'] = "Openings";
+$BIZBOOK['JOB_OPENINGS'] = "Vacantes";
 
-$BIZBOOK['APPLICANTS'] = "Applicants";
+$BIZBOOK['APPLICANTS'] = "Solicitantes";
 
-$BIZBOOK['JOB-HEADER-H1'] = "Find your next job now";
+$BIZBOOK['JOB-HEADER-H1'] = "Encuentra tu próximo empleo ahora";
 
-$BIZBOOK['JOB-HEADER-P'] = "Over 100,000+ jobs are waiting for you";
+$BIZBOOK['JOB-HEADER-P'] = "Más de 100,000+ empleos te están esperando";
 
-$BIZBOOK['JOB-POSTED'] = "Job Posted";
+$BIZBOOK['JOB-POSTED'] = "Empleo Publicado";
 
-$BIZBOOK['JOB-COMPANIES'] = "Companies";
+$BIZBOOK['JOB-COMPANIES'] = "Empresas";
 
-$BIZBOOK['JOB-EMPLOYEES'] = "Employees";
+$BIZBOOK['JOB-EMPLOYEES'] = "Empleados";
 
-$BIZBOOK['JOB-HEADER-H2'] = "Popular Categories";
+$BIZBOOK['JOB-HEADER-H2'] = "Categorías Populares";
 
-$BIZBOOK['JOB-HEADER-P2'] = "Find jobs from various domain";
+$BIZBOOK['JOB-HEADER-P2'] = "Encuentra empleos de diversos campos";
 
-$BIZBOOK['JOB-HEADER-H3'] = "Trending Jobs";
+$BIZBOOK['JOB-HEADER-H3'] = "Empleos en Tendencia";
 
-$BIZBOOK['JOB-HEADER-P3'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
+$BIZBOOK['JOB-HEADER-P3'] = "Los mejores empleos para ti.";
 
-$BIZBOOK['JOB-HEADER-H4'] = "Premium Jobs";
+$BIZBOOK['JOB-HEADER-H4'] = "Empleos Premium";
 
-$BIZBOOK['JOB-SHOWING'] = "Showing";
+$BIZBOOK['JOB-SHOWING'] = "Mostrando";
 
-$BIZBOOK['JOB-VACANCY'] = "Vacancy";
+$BIZBOOK['JOB-VACANCY'] = "Vacante";
 
-$BIZBOOK['JOB-PROFILE-H1'] = "Get Personalised Jobs";
+$BIZBOOK['JOB-PROFILE-H1'] = "Obtén Empleos Personalizados";
 
-$BIZBOOK['JOB-PROFILE-P'] = "Tell us what kind of a job you are looking for and stay updated with latest opportunities.";
+$BIZBOOK['JOB-PROFILE-P'] = "Cuéntanos qué tipo de empleo buscas y mantente actualizado con las últimas oportunidades.";
 
-$BIZBOOK['JOB-PROFILE-A'] = "Register for free";
+$BIZBOOK['JOB-PROFILE-A'] = "Regístrate gratis";
 
-$BIZBOOK['JOB-RELATED-PROFILES'] = "Related profiles";
+$BIZBOOK['JOB-RELATED-PROFILES'] = "Perfiles Relacionados";
 
-$BIZBOOK['JOB-PROFILE-POST-H1'] = "Post your job";
+$BIZBOOK['JOB-PROFILE-POST-H1'] = "Publica tu empleo";
 
-$BIZBOOK['JOB-PROFILE-POST-P'] = "Post your job openings and hire more professional employee";
+$BIZBOOK['JOB-PROFILE-POST-P'] = "Publica tus vacantes y contrata empleados más profesionales";
 
-$BIZBOOK['JOB-PROFILE-POST-A'] = "Post job";
+$BIZBOOK['JOB-PROFILE-POST-A'] = "Publicar Empleo";
 
-$BIZBOOK['JOB-HOME-JOIN-COMP-TIT'] = "Post a Job & Hire best candidates ";
-$BIZBOOK['JOB-HOME-JOIN-COMP-SUB-TIT'] = "Post your job openings and hire more professional candidates";
-$BIZBOOK['JOB-HOME-JOIN-COMP-CTA'] = "Post a Job";
+$BIZBOOK['JOB-HOME-JOIN-COMP-TIT'] = "Publica un Empleo y Contrata a los Mejores Candidatos";
 
-$BIZBOOK['JOB-HOME-JOIN-EMP-TIT'] = "Are you looking for a job?";
-$BIZBOOK['JOB-HOME-JOIN-EMP-SUB-TIT'] = "Tell us what kind of a job you are looking for and stay updated with latest opportunities.";
-$BIZBOOK['JOB-HOME-JOIN-EMP-CTA'] = "Register for free";
+$BIZBOOK['JOB-HOME-JOIN-COMP-SUB-TIT'] = "Publica tus vacantes y encuentra candidatos profesionales";
 
+$BIZBOOK['JOB-HOME-JOIN-COMP-CTA'] = "Publicar un Empleo";
 
-//************************* SERVICE EXPERT PAGE TEXT ***********
+$BIZBOOK['JOB-HOME-JOIN-EMP-TIT'] = "¿Buscas un empleo?";
 
-$BIZBOOK['SERVICE-EXPERTS'] = "Service Experts";
+$BIZBOOK['JOB-HOME-JOIN-EMP-SUB-TIT'] = "Cuéntanos qué tipo de empleo buscas y mantente actualizado con las últimas oportunidades.";
 
-$BIZBOOK['TOP-SERVICE-EXPERTS'] = "Top Service Experts";
+$BIZBOOK['JOB-HOME-JOIN-EMP-CTA'] = "Regístrate gratis";
 
-$BIZBOOK['SERVICE-EXPERTS-EXPERTS'] = "Experts";
 
-$BIZBOOK['SERVICE-EXPERTS-ALL-HEADER-TEXT'] = "Are looking for Service Expert?";
+//************************* TEXTO DE LA PÁGINA DE EXPERTOS EN SERVICIOS ***********
 
-$BIZBOOK['SERVICE-EXPERTS-ALL-P-TEXT'] = "We will help you to arrage best Service Expert.";
+$BIZBOOK['SERVICE-EXPERTS'] = "Expertos en Servicios";
 
-$BIZBOOK['SERVICE-EXPERTS-ALL-A-TEXT'] = "Send your queries";
+$BIZBOOK['TOP-SERVICE-EXPERTS'] = "Principales Expertos en Servicios";
 
-$BIZBOOK['SERVICE-EXPERTS-PROFILE-HEADER-TEXT'] = "Are you a Service Expert?";
+$BIZBOOK['SERVICE-EXPERTS-EXPERTS'] = "Expertos";
 
-$BIZBOOK['SERVICE-EXPERTS-PROFILE-P-TEXT'] = "Register now and generate your income multiple and move your business on next level.";
+$BIZBOOK['SERVICE-EXPERTS-ALL-HEADER-TEXT'] = "¿Buscas un Experto en Servicios?";
 
-$BIZBOOK['SERVICE-EXPERTS-PROFILE-CUSTOMER-SUPPORT'] = "Customer support";
+$BIZBOOK['SERVICE-EXPERTS-ALL-P-TEXT'] = "Te ayudaremos a encontrar el mejor Experto en Servicios.";
 
-$BIZBOOK['SERVICE-EXPERT-FIND-SERVICE-EXPERT-H1'] = "Find Service Experts";
+$BIZBOOK['SERVICE-EXPERTS-ALL-A-TEXT'] = "Envía tus consultas";
 
-$BIZBOOK['SERVICE-EXPERT-FIND-SERVICE-EXPERT-P'] = "We make it easy to hire the right professional for your Home";
+$BIZBOOK['SERVICE-EXPERTS-PROFILE-HEADER-TEXT'] = "¿Eres un Experto en Servicios?";
 
-$BIZBOOK['SERVICE-EXPERT-SECTION-2-H1'] = "All Services";
+$BIZBOOK['SERVICE-EXPERTS-PROFILE-P-TEXT'] = "Regístrate ahora y multiplica tus ingresos llevando tu negocio al siguiente nivel.";
 
-$BIZBOOK['SERVICE-EXPERT-SECTION-2-P'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
+$BIZBOOK['SERVICE-EXPERTS-PROFILE-CUSTOMER-SUPPORT'] = "Soporte al Cliente";
 
-$BIZBOOK['SERVICE-EXPERT-VIEW-ALL'] = "View all experts";
+$BIZBOOK['SERVICE-EXPERT-FIND-SERVICE-EXPERT-H1'] = "Encuentra Expertos en Servicios";
 
-$BIZBOOK['SERVICE-EXPERT-OUR-USER-REVIEWS'] = "Our user reviews";
+$BIZBOOK['SERVICE-EXPERT-FIND-SERVICE-EXPERT-P'] = "Te facilitamos la contratación del profesional adecuado para tu hogar.";
 
-$BIZBOOK['SERVICE-EXPERT-OUR-USER-REVIEWS-P'] = "We connect with targeted customers for greater business conversion";
+$BIZBOOK['SERVICE-EXPERT-SECTION-2-H1'] = "Todos los Servicios";
 
-$BIZBOOK['SERVICE-EXPERT-SERVICE-AREAS'] = "Service Areas";
+$BIZBOOK['SERVICE-EXPERT-SECTION-2-P'] = "Servicios de primera calidad para ti.";
 
-$BIZBOOK['SERVICE-EXPERT-SERVICES-CAN-DO'] = "Services can do";
+$BIZBOOK['SERVICE-EXPERT-VIEW-ALL'] = "Ver todos los expertos";
 
-$BIZBOOK['SERVICE-EXPERT-EXPERIENCE'] = "Experience";
+$BIZBOOK['SERVICE-EXPERT-OUR-USER-REVIEWS'] = "Opiniones de nuestros usuarios";
+
+$BIZBOOK['SERVICE-EXPERT-OUR-USER-REVIEWS-P'] = "Conectamos con clientes específicos para una mayor conversión de negocios";
+
+$BIZBOOK['SERVICE-EXPERT-SERVICE-AREAS'] = "Áreas de Servicio";
+
+$BIZBOOK['SERVICE-EXPERT-SERVICES-CAN-DO'] = "Servicios que ofrecen";
+
+$BIZBOOK['SERVICE-EXPERT-EXPERIENCE'] = "Experiencia";
 
 $BIZBOOK['SERVICE-EXPERT-EXP'] = "Exp.";
 
-$BIZBOOK['SERVICE-EXPERT-EDUCATION'] = "Education";
+$BIZBOOK['SERVICE-EXPERT-EDUCATION'] = "Educación";
 
-$BIZBOOK['SERVICE-EXPERT-LOCATION'] = "Location";
+$BIZBOOK['SERVICE-EXPERT-LOCATION'] = "Ubicación";
 
-$BIZBOOK['SERVICE-EXPERT-ADDITIONAL-INFORMATION'] = "Additional information";
+$BIZBOOK['SERVICE-EXPERT-ADDITIONAL-INFORMATION'] = "Información Adicional";
 
-$BIZBOOK['SERVICE-EXPERT-USER-REVIEWS'] = "User Reviews";
+$BIZBOOK['SERVICE-EXPERT-USER-REVIEWS'] = "Opiniones de Usuarios";
 
-$BIZBOOK['SERVICE-EXPERT-EXPERT-DETAILS'] = "Expert details";
+$BIZBOOK['SERVICE-EXPERT-EXPERT-DETAILS'] = "Detalles del Experto";
 
-$BIZBOOK['SERVICE-EXPERT-SERVICES-DONE'] = "Services Done";
+$BIZBOOK['SERVICE-EXPERT-SERVICES-DONE'] = "Servicios Realizados";
 
-$BIZBOOK['SERVICE-EXPERT-TRENDING-SERVICES'] = "Trending Services";
+$BIZBOOK['SERVICE-EXPERT-TRENDING-SERVICES'] = "Servicios en Tendencia";
 
-$BIZBOOK['SERVICE-EXPERT-BASE-FARE'] = "Base fare";
+$BIZBOOK['SERVICE-EXPERT-BASE-FARE'] = "Tarifa Básica";
 
-$BIZBOOK['SERVICE-EXPERT-VERIFIED'] = "Verified";
+$BIZBOOK['SERVICE-EXPERT-VERIFIED'] = "Verificado";
 
-$BIZBOOK['SERVICE-EXPERT-LOCATION'] = "Location";
+$BIZBOOK['SERVICE-EXPERT-JOIN-DATE'] = "Fecha de Registro";
 
-$BIZBOOK['SERVICE-EXPERT-JOIN-DATE'] = "Join date";
+$BIZBOOK['SERVICE-EXPERT-SERVICE-TIME'] = "Horario de Servicio";
 
-$BIZBOOK['SERVICE-EXPERT-SERVICE-TIME'] = "Service time";
+$BIZBOOK['SERVICE-EXPERT-TO-TEXT'] = "a";
 
-$BIZBOOK['SERVICE-EXPERT-TO-TEXT'] = "to";
+$BIZBOOK['SERVICE-EXPERT-YEARS-TEXT'] = "años";
 
-$BIZBOOK['SERVICE-EXPERT-YEARS-TEXT'] = "years";
+$BIZBOOK['SERVICE-EXPERT-YES-TEXT'] = "Sí";
 
-$BIZBOOK['SERVICE-EXPERT-YES-TEXT'] = "Yes";
+$BIZBOOK['SERVICE-EXPERT-BOOK-THIS'] = "Reservar este";
 
-$BIZBOOK['SERVICE-EXPERT-BOOK-THIS'] = "Book this";
+$BIZBOOK['SERVICE-EXPERT-BOOK-NOW'] = "Reservar ahora";
 
-$BIZBOOK['SERVICE-EXPERT-BOOK-NOW'] = "Book now";
+$BIZBOOK['SERVICE-EXPERT-CHAT-NOW'] = "Chatear ahora";
 
-$BIZBOOK['SERVICE-EXPERT-CHAT-NOW'] = "Chat now";
+$BIZBOOK['SERVICE-EXPERT-STATUS'] = "Estado";
 
-$BIZBOOK['SERVICE-EXPERT-STATUS'] = "Status";
+$BIZBOOK['SERVICE-EXPERT-SERVICE-EXPERT-TEXT'] = "Experto en Servicio";
 
-$BIZBOOK['SERVICE-EXPERT-SERVICE-EXPERT-TEXT'] = "Service expert";
+$BIZBOOK['SERVICE-EXPERT-PROFILE-LABEL'] = "Perfil del Experto en Servicio";
 
-$BIZBOOK['SERVICE-EXPERT-PROFILE-LABEL'] = "Service Expert Profile";
+$BIZBOOK['SERVICE-EXPERT-START-TIME-LABEL'] = "Hora de Inicio del Servicio";
 
-$BIZBOOK['SERVICE-EXPERT-START-TIME-LABEL'] = "Service Start Time";
+$BIZBOOK['SERVICE-EXPERT-CLOSE-TIME-LABEL'] = "Hora de Fin del Servicio";
 
-$BIZBOOK['SERVICE-EXPERT-CLOSE-TIME-LABEL'] = "Service Close Time";
+$BIZBOOK['SERVICE-EXPERT-PROFILE-IMAGE-LABEL'] = "Imagen de Perfil";
 
-$BIZBOOK['SERVICE-EXPERT-PROFILE-IMAGE-LABEL'] = "Profile image";
+$BIZBOOK['SERVICE-EXPERT-WORK-PROFESSION-LABEL'] = "Profesión";
 
-$BIZBOOK['SERVICE-EXPERT-WORK-PROFESSION-LABEL'] = "Work Profession";
+$BIZBOOK['SERVICE-EXPERT-SELECT-CITY-LABEL'] = "Selecciona Ciudad";
 
-$BIZBOOK['SERVICE-EXPERT-SELECT-CITY-LABEL'] = "Select City";
+$BIZBOOK['SERVICE-EXPERT-SELECT-WORK-PROFESSION-LABEL'] = "Selecciona Profesión";
 
-$BIZBOOK['SERVICE-EXPERT-SELECT-WORK-PROFESSION-LABEL'] = "Select Work Profession";
+$BIZBOOK['SERVICE-EXPERT-BASE-FARE-LABEL'] = "Tarifa Básica";
 
-$BIZBOOK['SERVICE-EXPERT-BASE-FARE-LABEL'] = "Base fare";
+$BIZBOOK['SERVICE-EXPERT-SERVICES-CAN-DO-LABEL'] = "Servicios que ofrece";
 
-$BIZBOOK['SERVICE-EXPERT-SERVICES-CAN-DO-LABEL'] = "Services can do";
+$BIZBOOK['SERVICE-EXPERT-SERVICES-AREAS-LABEL'] = "Áreas de Servicio";
 
-$BIZBOOK['SERVICE-EXPERT-SERVICES-AREAS-LABEL'] = "Service Areas";
+$BIZBOOK['SERVICE-EXPERT-PAYMENT-ACCEPT-LABEL'] = "Acepta Pago";
 
-$BIZBOOK['SERVICE-EXPERT-PAYMENT-ACCEPT-LABEL'] = "Payment accept";
+$BIZBOOK['SERVICE-EXPERT-DATE-OF-BIRTH-LABEL'] = "Fecha de Nacimiento";
 
-$BIZBOOK['SERVICE-EXPERT-DATE-OF-BIRTH-LABEL'] = "Date of Birth";
+$BIZBOOK['SERVICE-EXPERT-ID-PROOF-LABEL'] = "Identificación";
 
-$BIZBOOK['SERVICE-EXPERT-ID-PROOF-LABEL'] = "ID proof";
+$BIZBOOK['SERVICE-EXPERT-CONTACT-ME'] = "Contáctame";
 
-$BIZBOOK['SERVICE-EXPERT-CONTACT-ME'] = "Contact me";
+$BIZBOOK['SERVICE-EXPERT-MORE-DETAILS'] = "Más detalles";
 
-$BIZBOOK['SERVICE-EXPERT-MORE-DETAILS'] = "More details";
+$BIZBOOK['SERVICE-EXPERT-AVAILABILITY'] = "Disponibilidad";
 
-$BIZBOOK['SERVICE-EXPERT-AVAILABILITY'] = "Availability";
+$BIZBOOK['SERVICE-EXPERT-ALL-LABEL'] = "Todos";
 
-$BIZBOOK['SERVICE-EXPERT-ALL-LABEL'] = "All";
+$BIZBOOK['SERVICE-EXPERT-AVAILABLE-LABEL'] = "Disponible";
 
-$BIZBOOK['SERVICE-EXPERT-AVAILABLE-LABEL'] = "Available";
+$BIZBOOK['SERVICE-EXPERT-BUSY-LABEL'] = "Ocupado";
 
-$BIZBOOK['SERVICE-EXPERT-BUSY-LABEL'] = "Busy";
+$BIZBOOK['SERVICE-EXPERT-CLOSED-TODAY-LABEL'] = "Cerrado Hoy";
 
-$BIZBOOK['SERVICE-EXPERT-CLOSED-TODAY-LABEL'] = "Closed today";
+$BIZBOOK['SERVICE-EXPERT-VERIFIED-LABEL'] = "Verificado";
 
-$BIZBOOK['SERVICE-EXPERT-VERIFIED-LABEL'] = "Verified";
+$BIZBOOK['SERVICE-EXPERT-VERIFIED-EXPERTS-LABEL'] = "Expertos Verificados";
 
-$BIZBOOK['SERVICE-EXPERT-VERIFIED-EXPERTS-LABEL'] = "Verified experts";
+$BIZBOOK['SERVICE-EXPERT-RATING-LABEL'] = "Calificación";
 
-$BIZBOOK['SERVICE-EXPERT-RATING-LABEL'] = "Rating";
+$BIZBOOK['SERVICE-EXPERT-STAR-LABEL'] = "Estrella";
 
-$BIZBOOK['SERVICE-EXPERT-STAR-LABEL'] = "Star";
+$BIZBOOK['SERVICE-EXPERT-HIGH-LOW-LABEL'] = "Alta - Baja";
 
-$BIZBOOK['SERVICE-EXPERT-HIGH-LOW-LABEL'] = "High - Low";
+$BIZBOOK['SERVICE-EXPERT-LOW-HIGH-LABEL'] = "Baja - Alta";
 
-$BIZBOOK['SERVICE-EXPERT-LOW-HIGH-LABEL'] = "Low - High";
+$BIZBOOK['SERVICE-EXPERT-WRITE-A-REVIEW-LABEL'] = "Escribe una Opinión";
 
-$BIZBOOK['SERVICE-EXPERT-WRITE-A-REVIEW-LABEL'] = "Write a Review";
+$BIZBOOK['SERVICE-EXPERT-REVIEW-P-LABEL'] = "Califica el Servicio y la Atención aquí";
 
-$BIZBOOK['SERVICE-EXPERT-REVIEW-P-LABEL'] = "Rate the Service and Care here";
+$BIZBOOK['SERVICE-EXPERT-REVIEW-WRITE-YOUR-COMMENTS-LABEL'] = "Escribe tus comentarios..";
 
-$BIZBOOK['SERVICE-EXPERT-REVIEW-WRITE-YOUR-COMMENTS-LABEL'] = "Write your comments..";
+$BIZBOOK['SERVICE-EXPERT-REVIEW-SUBMIT-REVIEW'] = "Enviar Opinión";
 
-$BIZBOOK['SERVICE-EXPERT-REVIEW-SUBMIT-REVIEW'] = "Submit Review";
+$BIZBOOK['SERVICE-EXPERT-CANT-REVIEW-OWN-SERVICE'] = "¡No puedes Opinar sobre tu Propio Servicio!";
 
-$BIZBOOK['SERVICE-EXPERT-CANT-REVIEW-OWN-SERVICE'] = "You Can't Review Your Own Service !!!";
+$BIZBOOK['SERVICE-EXPERT-CANT-REVIEW-DONE-CANCEL'] = "¡No puedes Opinar hasta que esté Hecho o Cancelado!";
 
-$BIZBOOK['SERVICE-EXPERT-CANT-REVIEW-DONE-CANCEL'] = "You Can't Review Until its Done or Cancel !!!";
+$BIZBOOK['SERVICE-EXPERT-WRITTEN-REVIEW-TO'] = "Opinión escrita para";
 
-$BIZBOOK['SERVICE-EXPERT-WRITTEN-REVIEW-TO'] = "Written a review to";
+$BIZBOOK['SERVICE-EXPERT-PREFERRED-TIME'] = "Hora Preferida";
 
-$BIZBOOK['SERVICE-EXPERT-PREFERRED-TIME'] = "Preferred Time";
+$BIZBOOK['SERVICE-EXPERT-PREFERRED-DATE'] = "Fecha Preferida";
 
-$BIZBOOK['SERVICE-EXPERT-PREFERRED-DATE'] = "Preferred Date";
+$BIZBOOK['SERVICE-EXPERT-HEY-LABEL'] = "Hola";
 
-$BIZBOOK['SERVICE-EXPERT-HEY-LABEL'] = "Hey";
+$BIZBOOK['SERVICE-EXPERT-CLOSED-LABEL'] = "Cerrado";
 
-$BIZBOOK['SERVICE-EXPERT-CLOSED-LABEL'] = "Closed";
+$BIZBOOK['SERVICE-EXPERT-CANCEL-LABEL'] = "Cancelar";
 
-$BIZBOOK['SERVICE-EXPERT-CANCEL-LABEL'] = "Cancel";
+$BIZBOOK['SERVICE-EXPERT-NEW-LABEL'] = "Nuevo";
 
-$BIZBOOK['SERVICE-EXPERT-NEW-LABEL'] = "New";
+$BIZBOOK['SERVICE-EXPERT-ON-THE-WAY-LABEL'] = "En camino";
 
-$BIZBOOK['SERVICE-EXPERT-ON-THE-WAY-LABEL'] = "On the way";
+$BIZBOOK['SERVICE-EXPERT-PENDING-LABEL'] = "Pendiente";
 
-$BIZBOOK['SERVICE-EXPERT-PENDING-LABEL'] = "Pending";
+$BIZBOOK['SERVICE-EXPERT-DONE-LABEL'] = "Hecho";
 
-$BIZBOOK['SERVICE-EXPERT-DONE-LABEL'] = "Done";
+$BIZBOOK['SERVICE-EXPERT-CANCEL-SUCCESS-MESSAGE'] = "¡Tu Solicitud de Cancelación de Servicio se ha Enviado Exitosamente!";
 
-$BIZBOOK['SERVICE-EXPERT-CANCEL-SUCCESS-MESSAGE'] = "Your Service Cancel Request Is Successful!!";
+$BIZBOOK['SERVICE-EXPERT-ENQUIRY-STATUS-SUCCESS-MESSAGE'] = "¡El estado de la consulta se ha actualizado exitosamente!";
 
-$BIZBOOK['SERVICE-EXPERT-ENQUIRY-STATUS-SUCCESS-MESSAGE'] = "Enquiry status have been successfully updated!!";
+$BIZBOOK['SERVICE-EXPERT-ENQUIRY-DEFAULT-P-MESSAGE'] = "Puedes publicar tu consulta aquí. ¡Encontraremos los mejores proveedores de servicios para ti!";
 
-$BIZBOOK['SERVICE-EXPERT-ENQUIRY-DEFAULT-P-MESSAGE'] = "You can post your enquiry here. We will find best service providers for you!!!";
+$BIZBOOK['SERVICE-EXPERT-LOGIN-AND-CANCEL'] = "Inicia Sesión y Cancela este Servicio";
 
-$BIZBOOK['SERVICE-EXPERT-LOGIN-AND-CANCEL'] = "Login And Cancel this Service";
+$BIZBOOK['SERVICE-EXPERT-CANT-CANCEL-OTHER-USER'] = "No Puedes Cancelar el Servicio de Otro Usuario";
 
-$BIZBOOK['SERVICE-EXPERT-CANT-CANCEL-OTHER-USER'] = "You Can't Cancel Other User Service";
+$BIZBOOK['SERVICE-EXPERT-THANK-YOU-LABEL'] = "Gracias";
 
-$BIZBOOK['SERVICE-EXPERT-THANK-YOU-LABEL'] = "Thank you";
+$BIZBOOK['SERVICE-EXPERT-THANK-YOU-P-1-LABEL'] = "Después de";
 
-$BIZBOOK['SERVICE-EXPERT-THANK-YOU-P-1-LABEL'] = "After";
+$BIZBOOK['SERVICE-EXPERT-THANK-YOU-P-2-LABEL'] = "+ años de experiencia resolvieron los problemas a tiempo con buenas reseñas.";
 
-$BIZBOOK['SERVICE-EXPERT-THANK-YOU-P-2-LABEL'] = "+ years of handover they addressed the issues and resolved in a given time with good reviews.";
+$BIZBOOK['SERVICE-EXPERT-APPROX-ARRIVE-TIME'] = "Hora Aproximada de Llegada del Experto";
 
-$BIZBOOK['SERVICE-EXPERT-APPROX-ARRIVE-TIME'] = "Expert approximate arrive time";
+$BIZBOOK['SERVICE-EXPERT-APPROX-ARRIVE-TIME-LABEL'] = "Hora Aproximada de Llegada";
 
-$BIZBOOK['SERVICE-EXPERT-APPROX-ARRIVE-TIME-LABEL'] = "Approximate arrive time";
+$BIZBOOK['SERVICE-EXPERT-SERVICE-STATUS'] = "Estado del Servicio";
 
-$BIZBOOK['SERVICE-EXPERT-SERVICE-STATUS'] = "Service status";
+$BIZBOOK['SERVICE-EXPERT-BOOKING-REFRENCE'] = "Referencia de Reserva";
 
-$BIZBOOK['SERVICE-EXPERT-BOOKING-REFRENCE'] = "Booking reference";
+$BIZBOOK['SERVICE-EXPERT-PREFERRED-DATE-TIME'] = "Fecha y Hora Preferidas";
 
-$BIZBOOK['SERVICE-EXPERT-PREFERRED-DATE-TIME'] = "Preferred date & time";
+$BIZBOOK['SERVICE-EXPERT-CANCEL-REQUEST'] = "Solicitar Cancelación";
 
-$BIZBOOK['SERVICE-EXPERT-CANCEL-REQUEST'] = "Cancel request";
+$BIZBOOK['SERVICE-EXPERT-CONFIRM-CANCEL'] = "Confirmar Cancelación";
 
-$BIZBOOK['SERVICE-EXPERT-CONFIRM-CANCEL'] = "Confirm cancel";
+$BIZBOOK['SERVICE-EXPERT-NOT-NOW'] = "No ahora";
 
-$BIZBOOK['SERVICE-EXPERT-NOT-NOW'] = "Not now";
+$BIZBOOK['SERVICE-EXPERT-ALL-SERVICE-EXPERT-LEADS'] = "Todas las Consultas de Expertos en Servicios";
 
-$BIZBOOK['SERVICE-EXPERT-ALL-SERVICE-EXPERT-LEADS'] = "All Service Experts Leads";
+$BIZBOOK['ADD_NEW_SERVICE_EXPERT'] = "Perfil de Experto en Servicio";
 
-$BIZBOOK['ADD_NEW_SERVICE_EXPERT'] = "Service Expert Profile";
+$BIZBOOK['ALL_SERVICE_EXPERT_LEADS'] = "Consultas de Expertos en Servicios";
 
-$BIZBOOK['ALL_SERVICE_EXPERT_LEADS'] = "Service Expert Leads";
+$BIZBOOK['MY_SERVICE_BOOKINGS'] = "Mis Reservas de Servicios";
 
-$BIZBOOK['MY_SERVICE_BOOKINGS'] = "My Service Bookings";
+$BIZBOOK['SERVICE-EXPERT-UPDATE-MY-AVAILABILITY'] = "Actualizar mi Disponibilidad";
 
-$BIZBOOK['SERVICE-EXPERT-UPDATE-MY-AVAILABILITY'] = "Update my Availability";
+$BIZBOOK['SERVICE-EXPERT-EXPERT-NAME'] = "Nombre del Experto";
 
-$BIZBOOK['SERVICE-EXPERT-EXPERT-NAME'] = "Expert Name";
+$BIZBOOK['SERVICE-EXPERT-LEAD-DETAILS'] = "Detalles de la Consulta";
 
-$BIZBOOK['SERVICE-EXPERT-LEAD-DETAILS'] = "Lead details";
+$BIZBOOK['SERVICE-EXPERT-EXPERT-PROFILE'] = "Perfil del Experto";
 
-$BIZBOOK['SERVICE-EXPERT-EXPERT-PROFILE'] = "Expert Profile";
+$BIZBOOK['SERVICE-EXPERT-MANAGE'] = "Gestionar";
 
-$BIZBOOK['SERVICE-EXPERT-MANAGE'] = "Manage";
+$BIZBOOK['SERVICE-EXPERT-MANAGE-LEAD'] = "Gestionar Consulta";
 
-$BIZBOOK['SERVICE-EXPERT-MANAGE-LEAD'] = "Manage Lead";
+$BIZBOOK['SERVICE-EXPERT-AVAILABILITY-INFO-DIV'] = "Esto te ayudará a mostrar tu estado de disponibilidad a los clientes. Les facilita saber si estás disponible o no.";
 
-$BIZBOOK['SERVICE-EXPERT-AVAILABILITY-INFO-DIV'] = "This will help you your availability status to customers. Customers easy to know you are available or not.";
+$BIZBOOK['SERVICE-EXPERT-CHOOSE-AVAILABILITY'] = "Elegir Disponibilidad";
 
-$BIZBOOK['SERVICE-EXPERT-CHOOSE-AVAILABILITY'] = "Choose Availability";
+$BIZBOOK['SERVICE-EXPERT-AVAILABILITY-READY-TO-WORK-LABEL'] = "Disponible (Listo para trabajar)";
 
-$BIZBOOK['SERVICE-EXPERT-AVAILABILITY-READY-TO-WORK-LABEL'] = "Available (Ready to work)";
+$BIZBOOK['SERVICE-EXPERT-BUSY-ON-OTHER-CUSTOMER-LABEL'] = "Ocupado (Atendiendo a otro cliente)";
 
-$BIZBOOK['SERVICE-EXPERT-BUSY-ON-OTHER-CUSTOMER-LABEL'] = "Busy (Busy on other customer)";
+$BIZBOOK['SERVICE-EXPERT-END-TODAY-LABEL'] = "Fin de hoy (Trabajo terminado hoy)";
 
-$BIZBOOK['SERVICE-EXPERT-END-TODAY-LABEL'] = "End today (Done today work)";
+$BIZBOOK['SERVICE-EXPERT-BE-FIRST-REVIEW'] = "¡Sé el primero en Opinar sobre este Experto!";
 
-$BIZBOOK['SERVICE-EXPERT-BE-FIRST-REVIEW'] = "Be the First One To Review This Expert!!!";
+$BIZBOOK['SERVICE-EXPERT-ENQUIRER-NAME'] = "Nombre del Consultante";
 
-$BIZBOOK['SERVICE-EXPERT-ENQUIRER-NAME'] = "Enquirer Name";
+$BIZBOOK['EXP-HOME-JOIN-COMP-TIT'] = "¿Eres un Experto en Servicios?";
 
-$BIZBOOK['EXP-HOME-JOIN-COMP-TIT'] = "Are you a Service Expert?";
+$BIZBOOK['EXP-HOME-JOIN-COMP-SUB-TIT'] = "Únete hoy, gana más dinero y lleva tu negocio al siguiente nivel";
 
-$BIZBOOK['EXP-HOME-JOIN-COMP-SUB-TIT'] = "Join us today and earn more money and move your business to next level";
+$BIZBOOK['EXP-HOME-JOIN-COMP-CTA'] = "Únete ahora";
 
-$BIZBOOK['EXP-HOME-JOIN-COMP-CTA'] = "Join now";
+$BIZBOOK['EXP-HOME-JOIN-EMP-TIT'] = "¿Buscas un Experto en Servicios?";
 
-$BIZBOOK['EXP-HOME-JOIN-EMP-TIT'] = "Looking for a Service Expert?";
+$BIZBOOK['EXP-HOME-JOIN-EMP-SUB-TIT'] = "Cuéntanos tus necesidades de servicio, te ayudamos a encontrar los mejores Expertos en Servicios";
 
-$BIZBOOK['EXP-HOME-JOIN-EMP-SUB-TIT'] = "Tell us your service needs, we help you to send best Service Experts";
+$BIZBOOK['EXP-HOME-JOIN-EMP-CTA'] = "Reservar Expertos";
 
-$BIZBOOK['EXP-HOME-JOIN-EMP-CTA'] = "Book Experts";
+$BIZBOOK['EXP-HOME-JOIN-EMP-CTA1'] = "Reservar este Experto";
 
-$BIZBOOK['EXP-HOME-JOIN-EMP-CTA1'] = "Book this Expert";
 
+//************************* TEXTO DE LA PÁGINA DE NOTICIAS ***********
 
-//************************* NEWS PAGE TEXT ***********
+$BIZBOOK['NEWS-SUBSCRIBE'] = "Suscribirse";
 
-$BIZBOOK['NEWS-SUBSCRIBE'] = "Subscribe";
+$BIZBOOK['NEWS-NEWSLETTER'] = "Boletín Informativo";
 
-$BIZBOOK['NEWS-NEWSLETTER'] = "Newsletter";
+$BIZBOOK['NEWS-NEWSLETTER-P-TAG'] = "Es un hecho establecido que el lector se distraerá.";
 
-$BIZBOOK['NEWS-NEWSLETTER-P-TAG'] = "It is a long established fact that a reader will be distracted.";
+$BIZBOOK['NEWS-RELATED-POST'] = "Publicaciones Relacionadas";
 
-$BIZBOOK['NEWS-RELATED-POST'] = "Related Posts";
+$BIZBOOK['NEWS-LATEST-POST'] = "Últimas Publicaciones";
 
-$BIZBOOK['NEWS-LATEST-POST'] = "Latest Posts";
+$BIZBOOK['NEWS-SHARE-NOW'] = "Compartir ahora";
 
-$BIZBOOK['NEWS-SHARE-NOW'] = "Share now";
+$BIZBOOK['NEWS-COPY-TO-CLIPBOARD'] = "Copiar al portapapeles";
 
-$BIZBOOK['NEWS-COPY-TO-CLIPBOARD'] = "Copy to clipboard";
+$BIZBOOK['NEWS-COPY-TEXT'] = "Copiar texto";
 
-$BIZBOOK['NEWS-COPY-TEXT'] = "Copy text";
+$BIZBOOK['NEWS-COPIED'] = "Copiado";
 
-$BIZBOOK['NEWS-COPIED'] = "Copied";
+$BIZBOOK['NEWS-HOMEPAGE-BANNER-H1-TEXT-1'] = "Zitiziti";
 
-$BIZBOOK['NEWS-HOMEPAGE-BANNER-H1-TEXT-1'] = "Bizbook";
+$BIZBOOK['NEWS-HOMEPAGE-BANNER-H1-TEXT-2'] = "Noticias y Revistas";
 
-$BIZBOOK['NEWS-HOMEPAGE-BANNER-H1-TEXT-2'] = "News & Magazines";
+$BIZBOOK['NEWS-HOMEPAGE-BANNER-P-TEXT'] = "Todas las actualizaciones de noticias en un solo lugar.";
 
-$BIZBOOK['NEWS-HOMEPAGE-BANNER-P-TEXT'] = "All news updates in one place.";
+$BIZBOOK['NEWS-HOMEPAGE-BANNER-P-TEXT-1'] = "Todas las";
 
-$BIZBOOK['NEWS-HOMEPAGE-BANNER-P-TEXT-1'] = "All";
+$BIZBOOK['NEWS-HOMEPAGE-BANNER-P-TEXT-2'] = "noticias en un solo lugar.";
 
-$BIZBOOK['NEWS-HOMEPAGE-BANNER-P-TEXT-2'] = "news in one place.";
+$BIZBOOK['NEWS-TRENDINGS'] = "Tendencias";
 
-$BIZBOOK['NEWS-TRENDINGS'] = "Trendings";
+$BIZBOOK['NEWS-LATEST-POPULAR'] = "Últimas y Populares";
 
-$BIZBOOK['NEWS-LATEST-POPULAR'] = "Latest & Popular";
+//************************* TEXTO DE LA PÁGINA DE LUGARES ***********
 
+$BIZBOOK['PLACE-MENU'] = "Explorar Lugares";
 
-//************************* PLACES PAGE TEXT ***********
+$BIZBOOK['PLACE-TRAVEL'] = "Lugares de Interés";
 
-$BIZBOOK['PLACE-MENU'] = "Explore Travel";
+$BIZBOOK['PLACE-HOME-H-1'] = "Explora tus Viajes";
 
-$BIZBOOK['PLACE-TRAVEL'] = "Travel";
+$BIZBOOK['PLACE-HOME-P-1-1'] = "Planifica tu viaje con";
 
-$BIZBOOK['PLACE-HOME-H-1'] = "Explore your Travel";
+$BIZBOOK['PLACE-HOME-B-1-1'] = "Zitiziti";
 
-$BIZBOOK['PLACE-HOME-P-1-1'] = "Plan your travel with";
+$BIZBOOK['PLACE-HOME-SEARCH-OPTION-1'] = "Encuentra tu lugar ahora";
 
-$BIZBOOK['PLACE-HOME-B-1-1'] = "Bizbook";
+$BIZBOOK['PLACE-HOME-P-1-2'] = "Encuentra tu lugar y accede a Servicios y Actividades cercanos.";
 
-$BIZBOOK['PLACE-HOME-SEARCH-OPTION-1'] = "Find your place now";
+$BIZBOOK['PLACE-HOME-H-2-1'] = "Lugares de Viaje";
 
-$BIZBOOK['PLACE-HOME-P-1-2'] = "Find your place and get the nearest Services & Activities.";
+$BIZBOOK['PLACE-HOME-P-2-1'] = "Comienza a planificar tu próximo viaje con una pequeña ayuda de";
 
-$BIZBOOK['PLACE-HOME-H-2-1'] = "Travel places";
+$BIZBOOK['PLACE-HOME-B-2-1'] = "Zitiziti";
 
-$BIZBOOK['PLACE-HOME-P-2-1'] = "Start planning your next trip with a little help from ";
+$BIZBOOK['PLACE-MORE-DETAILS'] = "Más detalles";
 
-$BIZBOOK['PLACE-HOME-B-2-1'] = "Bizbook";
+$BIZBOOK['PLACE-HOME-H-3-1'] = "Comienza a añadir un nuevo lugar";
 
-$BIZBOOK['PLACE-MORE-DETAILS'] = "More details";
+$BIZBOOK['PLACE-HOME-P-3-1'] = "Puedes enviar la sugerencia o solicitud al";
 
-$BIZBOOK['PLACE-HOME-H-3-1'] = "Start adding a new place";
+$BIZBOOK['PLACE-HOME-B-3-1'] = "Administrador de Zitiziti";
 
-$BIZBOOK['PLACE-HOME-P-3-1'] = "You can send the suggestion or request to the";
+$BIZBOOK['PLACE-HOME-SPAN-3-1'] = "Enviar un lugar";
 
-$BIZBOOK['PLACE-HOME-B-3-1'] = "Bizbook Admin";
+$BIZBOOK['PLACE-HOME-P-4-1'] = "Nueva solicitud de añadido de lugar";
 
-$BIZBOOK['PLACE-HOME-SPAN-3-1'] = "Submit a place";
+$BIZBOOK['PLACE-PLACE-DETAILS'] = "Detalles del Lugar";
 
-$BIZBOOK['PLACE-HOME-P-4-1'] = "New place adding request";
+$BIZBOOK['PLACE-PLACE-NAME-LABEL'] = "Nombre del Lugar*";
 
-$BIZBOOK['PLACE-PLACE-DETAILS'] = "Place details";
+$BIZBOOK['PLACE-PLACE-ADDRESS-LABEL'] = "Dirección del Lugar*";
 
-$BIZBOOK['PLACE-PLACE-NAME-LABEL'] = "Place name*";
+$BIZBOOK['PLACE-PLACE-DESCRIPTION-LABEL'] = "Descripción";
 
-$BIZBOOK['PLACE-PLACE-ADDRESS-LABEL'] = "Address of the place*";
+$BIZBOOK['PLACE-PLACE-IMAGE-LABEL'] = "Imagen del Lugar*";
 
-$BIZBOOK['PLACE-PLACE-DESCRIPTION-LABEL'] = "Description";
+$BIZBOOK['PLACE-PLACE-ENQUIRY-NAME-LABEL'] = "Ingresa tu nombre*";
 
-$BIZBOOK['PLACE-PLACE-IMAGE-LABEL'] = "Place image *";
+$BIZBOOK['PLACE-PLACE-ENQUIRY-EMAIL-LABEL'] = "Ingresa tu correo electrónico*";
 
-$BIZBOOK['PLACE-PLACE-ENQUIRY-NAME-LABEL'] = "Enter your name*";
+$BIZBOOK['PLACE-PLACE-ENQUIRY-MOBILE-LABEL'] = "Ingresa tu número de móvil*";
 
-$BIZBOOK['PLACE-PLACE-ENQUIRY-EMAIL-LABEL'] = "Enter your email*";
+$BIZBOOK['PLACE-PLACE-ENQUIRY-INVALID-EMAIL-TITLE'] = "Correo electrónico no válido";
 
-$BIZBOOK['PLACE-PLACE-ENQUIRY-MOBILE-LABEL'] = "Enter your mobile number*";
+$BIZBOOK['PLACE-PLACE-ENQUIRY-INVALID-MOBILE-TITLE'] = "Número de teléfono comenzando con 7-9 y seguido de 9 dígitos de 0-9";
 
-$BIZBOOK['PLACE-PLACE-ENQUIRY-INVALID-EMAIL-TITLE'] = "Invalid email address";
+$BIZBOOK['PLACE-ALL-PLACES'] = "Todos los Lugares";
 
-$BIZBOOK['PLACE-PLACE-ENQUIRY-INVALID-MOBILE-TITLE'] = "Phone number starting with 7-9 and remaining 9 digit with 0-9";
+$BIZBOOK['PLACE-STATUS'] = "Estado";
 
-$BIZBOOK['PLACE-ALL-PLACES'] = "All Places";
+$BIZBOOK['PLACE-ACTIVE'] = "Activo";
 
-$BIZBOOK['PLACE-STATUS'] = "Status";
+$BIZBOOK['PLACE-OPEN'] = "Abierto";
 
-$BIZBOOK['PLACE-ACTIVE'] = "Active";
+$BIZBOOK['PLACE-CLOSED'] = "Cerrado";
 
-$BIZBOOK['PLACE-OPEN'] = "Open";
+$BIZBOOK['PLACE-TEMPORARILY-CLOSED'] = "Cerrado Temporalmente";
 
-$BIZBOOK['PLACE-CLOSED'] = "Closed";
+$BIZBOOK['PLACE-PERMANENTLY-CLOSED'] = "Cerrado Permanentemente";
 
-$BIZBOOK['PLACE-TEMPORARILY-CLOSED'] = "Temporarily closed";
+$BIZBOOK['PLACE-OPEN-TIME'] = "Hora de Apertura";
 
-$BIZBOOK['PLACE-PERMANENTLY-CLOSED'] = "Permanently closed";
+$BIZBOOK['PLACE-CLOSE-TIME'] = "Hora de Cierre";
 
-$BIZBOOK['PLACE-OPEN-TIME'] = "Open time";
+$BIZBOOK['PLACE-TOURISM-FEE'] = "Tarifa de Turismo";
 
-$BIZBOOK['PLACE-CLOSE-TIME'] = "Close time";
+$BIZBOOK['PLACE-DIRECTION'] = "Dirección";
 
-$BIZBOOK['PLACE-TOURISM-FEE'] = "Tourism fee";
+$BIZBOOK['PLACE-NEAR-BY-SERVICES'] = "Servicios Cercanos";
 
-$BIZBOOK['PLACE-DIRECTION'] = "Direction";
+$BIZBOOK['PLACE-PHOTO-GALLERY'] = "Galería de Fotos";
 
-$BIZBOOK['PLACE-NEAR-BY-SERVICES'] = "Near by Services";
+$BIZBOOK['PLACE-DISCOVER'] = "Descubrir";
 
-$BIZBOOK['PLACE-PHOTO-GALLERY'] = "Photo gallery";
+$BIZBOOK['PLACE-WHAT-PEOPLE-ASK'] = "Lo que la gente pregunta";
 
-$BIZBOOK['PLACE-DISCOVER'] = "Discover";
+$BIZBOOK['PLACE-RELATED-PLACES'] = "Lugares Relacionados";
 
-$BIZBOOK['PLACE-WHAT-PEOPLE-ASK'] = "What people ask";
+$BIZBOOK['PLACE-TOP-NEARBY-SERVICES'] = "Servicios Principales Cercanos";
 
-$BIZBOOK['PLACE-RELATED-PLACES'] = "Related places";
+$BIZBOOK['PLACE-TOP-NEARBY-SERVICES-P'] = "Comienza a planificar tu próximo viaje con una pequeña ayuda de";
 
-$BIZBOOK['PLACE-TOP-NEARBY-SERVICES'] = "Top Near by Services";
+$BIZBOOK['PLACE-TOP-NEARBY-SERVICES-B'] = "Zitiziti";
 
-$BIZBOOK['PLACE-TOP-NEARBY-SERVICES-P'] = "Start planning your next trip with a little help from";
+$BIZBOOK['PLACE-EVENTS-H2'] = "Eventos en";
 
-$BIZBOOK['PLACE-TOP-NEARBY-SERVICES-B'] = "Bizbook";
+$BIZBOOK['PLACE-EVENTS-P'] = "Comienza a planificar tu próximo viaje con una pequeña ayuda de";
 
-$BIZBOOK['PLACE-EVENTS-H2'] = "Events in";
+$BIZBOOK['PLACE-EVENTS-B'] = "Zitiziti";
 
-$BIZBOOK['PLACE-EVENTS-P'] = "Start planning your next trip with a little help from";
+$BIZBOOK['PLACE-EXPERTS-H2'] = "Expertos en Servicios en";
 
-$BIZBOOK['PLACE-EVENTS-B'] = "Bizbook";
+$BIZBOOK['PLACE-EXPERTS-P'] = "Comienza a planificar tu próximo viaje con una pequeña ayuda de";
 
-$BIZBOOK['PLACE-EXPERTS-H2'] = "Services Experts in";
+$BIZBOOK['PLACE-EXPERTS-B'] = "Zitiziti";
 
-$BIZBOOK['PLACE-EXPERTS-P'] = "Start planning your next trip with a little help from";
+$BIZBOOK['PLACE-NEWS-H2'] = "Noticias y Artículos en";
 
-$BIZBOOK['PLACE-EXPERTS-B'] = "Bizbook";
+$BIZBOOK['PLACE-NEWS-P'] = "Comienza a planificar tu próximo viaje con una pequeña ayuda de";
 
-$BIZBOOK['PLACE-NEWS-H2'] = "News & Articles in";
+$BIZBOOK['PLACE-NEWS-B'] = "Zitiziti";
 
-$BIZBOOK['PLACE-NEWS-P'] = "Start planning your next trip with a little help from";
+//************************* TEXTO DE LA PÁGINA DE CUPONES ***********
 
-$BIZBOOK['PLACE-NEWS-B'] = "Bizbook";
+$BIZBOOK['COUPON-NO-LOGIN-HEADING-LABEL'] = "Inicia sesión para ver tus Cupones y Ofertas";
 
-//************************* COUPON PAGE TEXT ***********
+$BIZBOOK['COUPON-NO-LOGIN-P-LABEL'] = "Obtén los últimos cupones y ofertas de reembolso en los principales sitios de compras en línea de la India. Inicia sesión para ver tus cupones personalizados ahora.";
 
-$BIZBOOK['COUPON-NO-LOGIN-HEADING-LABEL'] = "Sign in to view your Coupon and deals";
+$BIZBOOK['COUPON-NO-LOGIN-SIGN-IN-NOW'] = "Inicia sesión ahora";
 
-$BIZBOOK['COUPON-NO-LOGIN-P-LABEL'] = "Get the latest and up-to-date coupons & cash back offers on some of India's top online shopping sites. Login to check your personalised coupons now.";
+$BIZBOOK['COUPON-HEADING-LABEL'] = "Cupones y ofertas";
 
-$BIZBOOK['COUPON-NO-LOGIN-SIGN-IN-NOW'] = "Sign in now";
+$BIZBOOK['COUPON-HEADING-P-LABEL'] = "Aquí puedes encontrar los mejores cupones y ofertas de marcas oficiales.";
 
-$BIZBOOK['COUPON-HEADING-LABEL'] = "Coupon and deals";
+$BIZBOOK['COUPON-HEADING-PLACEHOLDER'] = "Buscar cupones";
 
-$BIZBOOK['COUPON-HEADING-P-LABEL'] = "You can get best official brand coupons and deals here.";
+$BIZBOOK['COUPON-EXPIRES'] = "Expira";
 
-$BIZBOOK['COUPON-HEADING-PLACEHOLDER'] = "Search coupons";
+$BIZBOOK['COUPON-TERMS-CONDITION-APPLY'] = "Aplican Términos y Condiciones";
 
-$BIZBOOK['COUPON-EXPIRES'] = "Expires";
+$BIZBOOK['COUPON-GET-COUPON'] = "Obtener cupón";
 
-$BIZBOOK['COUPON-TERMS-CONDITION-APPLY'] = "Terms & Conditions Apply";
+$BIZBOOK['COUPON-HERE-CODE-FOR'] = "Aquí está el código para";
 
-$BIZBOOK['COUPON-GET-COUPON'] = "Get coupon";
+$BIZBOOK['COUPON-MEMBER-ACCESS-THIS-COUPON'] = "Acceso de miembros a este cupón";
 
-$BIZBOOK['COUPON-HERE-CODE-FOR'] = "Here the code for";
+//************************* TEXTO DE LA PÁGINA DE TODOS LOS USUARIOS ***********
 
-$BIZBOOK['COUPON-MEMBER-ACCESS-THIS-COUPON'] = "Members access this coupon";
+$BIZBOOK['DB-USERS-ALL-USERS'] = "Todos los usuarios";
 
-//************************* DB ALL USERS PAGE TEXT ***********
+$BIZBOOK['DB-USERS-FOLLOW-PREFERED-USERS'] = "Sigue a tus usuarios preferidos";
 
-$BIZBOOK['DB-USERS-ALL-USERS'] = "All users";
+//************************* TEXTO DE LA PÁGINA DE SEGUIMIENTOS ***********
 
-$BIZBOOK['DB-USERS-FOLLOW-PREFERED-USERS'] = "Follow your preferred users";
+$BIZBOOK['DB-FOLLOWINGS-FOLLOWING-USERS'] = "Usuarios seguidos";
 
-//************************* DB FOLLOWINGS PAGE TEXT ***********
+$BIZBOOK['DB-FOLLOWINGS-VIEW-ALL-USERS'] = "Ver todos los usuarios";
 
-$BIZBOOK['DB-FOLLOWINGS-FOLLOWING-USERS'] = "Following users";
+//************************* TEXTO DE LA PÁGINA DE FACTURAS ***********
 
-$BIZBOOK['DB-FOLLOWINGS-VIEW-ALL-USERS'] = "View all users";
+$BIZBOOK['DB-INVOICE-YOUR-NEW-INVOICE'] = "Tu Nueva Factura";
 
-//************************* DB INVOICE PAGE TEXT ***********
+$BIZBOOK['DB-INVOICE-INVOICE'] = "Factura";
 
-$BIZBOOK['DB-INVOICE-YOUR-NEW-INVOICE'] = "Your New Invoice";
+$BIZBOOK['DB-INVOICE-INVOICES'] = "Facturas";
 
-$BIZBOOK['DB-INVOICE-INVOICE'] = "Invoice";
+$BIZBOOK['DB-INVOICE-P-TAG'] = "Eres miembro dorado del portal de directorio de negocios número 1 del mundo.";
 
-$BIZBOOK['DB-INVOICE-INVOICES'] = "Invoices";
+$BIZBOOK['DB-INVOICE-PLAN-TYPE'] = "Tipo de Pack";
 
-$BIZBOOK['DB-INVOICE-P-TAG'] = "Your are the golden member of the worlds No:1 business directory portal website.";
+$BIZBOOK['DB-INVOICE-AMOUNT-PAID'] = "Cantidad pagada";
 
-$BIZBOOK['DB-INVOICE-PLAN-TYPE'] = "Plan type";
+$BIZBOOK['DB-INVOICE-PAYMENT-TYPE'] = "Tipo de pago";
 
-$BIZBOOK['DB-INVOICE-AMOUNT-PAID'] = "Amount paid";
+$BIZBOOK['DB-INVOICE-P-TAG-BOTTOM'] = "Eres miembro dorado del portal de directorio de negocios número 1 del mundo.";
 
-$BIZBOOK['DB-INVOICE-PAYMENT-TYPE'] = "Payment type";
+$BIZBOOK['DB-INVOICE-FOOT-BOTTOM'] = "Gracias por ser miembro de";
 
-$BIZBOOK['DB-INVOICE-P-TAG-BOTTOM'] = "Your are the golden member of worlds No:1 business directory portal website.";
+$BIZBOOK['DB-INVOICE-CLICK-TO-DOWNLOAD-PDF'] = "Haz clic para Descargar PDF";
 
-$BIZBOOK['DB-INVOICE-FOOT-BOTTOM'] = "Thank you for a member of";
+$BIZBOOK['DB-INVOICE-PAYMENT-INVOICE'] = "Facturas de Pago";
 
-$BIZBOOK['DB-INVOICE-CLICK-TO-DOWNLOAD-PDF'] = "Click to Download PDF";
+$BIZBOOK['DB-INVOICE-PAYMENT-DATE'] = "Fecha de pago";
 
-$BIZBOOK['DB-INVOICE-PAYMENT-INVOICE'] = "Payment Invoices";
+$BIZBOOK['DB-INVOICE-DOWNLOAD-INVOICE'] = "Descargar Factura";
 
-$BIZBOOK['DB-INVOICE-PAYMENT-DATE'] = "Payment date";
+$BIZBOOK['DB-INVOICE-INVOICE-N_A'] = "Factura N/D";
 
-$BIZBOOK['DB-INVOICE-DOWNLOAD-INVOICE'] = "Download Invoice";
+//************************* TEXTO DE LA PÁGINA DE MENSAJES ***********
 
-$BIZBOOK['DB-INVOICE-INVOICE-N_A'] = "Invoice N/A";
+$BIZBOOK['DB-MESSAGES-ALL-MESSAGES'] = "Todos los Mensajes";
 
-//************************* DB MESSAGES PAGE TEXT ***********
+$BIZBOOK['DB-MESSAGES-SEND-MESSAGES'] = "Enviar mensaje";
 
-$BIZBOOK['DB-MESSAGES-ALL-MESSAGES'] = "All Messages";
+$BIZBOOK['DB-MESSAGES-PLACEHOLDER'] = "Escribe un mensaje aquí..";
 
-$BIZBOOK['DB-MESSAGES-SEND-MESSAGES'] = "Send message";
+//************************* TEXTO DE LA PÁGINA DE NOTIFICACIONES ***********
 
-$BIZBOOK['DB-MESSAGES-PLACEHOLDER'] = "Type a message here..";
+$BIZBOOK['DB-NOTIFICATION-NOTIFICATIONS'] = "Notificaciones";
 
-//************************* DB NOTIFICATIONS PAGE TEXT ***********
+$BIZBOOK['DB-NOTIFICATION-ALL-NOTIFICATIONS'] = "Todas las Notificaciones";
 
-$BIZBOOK['DB-NOTIFICATION-NOTIFICATIONS'] = "Notifications";
+$BIZBOOK['DB-NOTIFICATION-SEND-LISTING-ENQUIRY'] = "Te envió una consulta desde tu negocio";
 
-$BIZBOOK['DB-NOTIFICATION-ALL-NOTIFICATIONS'] = "All Notifications";
+$BIZBOOK['DB-NOTIFICATION-SEND-EVENT-ENQUIRY'] = "Te envió una consulta desde tu evento";
 
-$BIZBOOK['DB-NOTIFICATION-SEND-LISTING-ENQUIRY'] = "Send you an enquiry from your listing";
+$BIZBOOK['DB-NOTIFICATION-SEND-BLOG-ENQUIRY'] = "Te envió una consulta desde tu blog";
 
-$BIZBOOK['DB-NOTIFICATION-SEND-EVENT-ENQUIRY'] = "Send you an enquiry from your event";
+$BIZBOOK['DB-NOTIFICATION-SEND-PRODUCT-ENQUIRY'] = "Te envió una consulta desde tu producto";
 
-$BIZBOOK['DB-NOTIFICATION-SEND-BLOG-ENQUIRY'] = "Send you an enquiry from your blog";
+$BIZBOOK['DB-NOTIFICATION-SEND-EXPERT-ENQUIRY'] = "Te envió una consulta desde tu experto";
 
-$BIZBOOK['DB-NOTIFICATION-SEND-PRODUCT-ENQUIRY'] = "Send you an enquiry from your product";
+$BIZBOOK['DB-NOTIFICATION-SEND-LISTING-REVIEW'] = "Te escribió una reseña desde tu negocio";
 
-$BIZBOOK['DB-NOTIFICATION-SEND-EXPERT-ENQUIRY'] = "Send you an enquiry from your expert";
+$BIZBOOK['DB-NOTIFICATION-SEND-LISTING-LIKES'] = "Le gustó tu negocio";
 
-$BIZBOOK['DB-NOTIFICATION-SEND-LISTING-REVIEW'] = "write you an review from your listing";
+$BIZBOOK['DB-NOTIFICATION-SEND-JOB-APPLIED'] = "aplicó desde tu oferta de empleo";
 
-$BIZBOOK['DB-NOTIFICATION-SEND-LISTING-LIKES'] = "Liked your listing";
+$BIZBOOK['DB-NOTIFICATION-ON'] = "en";
 
-$BIZBOOK['DB-NOTIFICATION-SEND-JOB-APPLIED'] = "applied from your job";
+$BIZBOOK['DB-NOTIFICATION-WRITE-REVIEW'] = "Escribe una reseña sobre tu negocio";
 
-$BIZBOOK['DB-NOTIFICATION-ON'] = "on";
+$BIZBOOK['DB-NOTIFICATION-LIKE-LISTING'] = "le gustó tu negocio";
 
-$BIZBOOK['DB-NOTIFICATION-WRITE-REVIEW'] = "Write a review on your listing";
+$BIZBOOK['DB-NOTIFICATION-START-FOLLOWING'] = "comenzó a seguirte";
 
-$BIZBOOK['DB-NOTIFICATION-LIKE-LISTING'] = "like your listing";
+$BIZBOOK['DB-NOTIFICATION-THANK-YOU-MESSAGE'] = "Gracias por crear una cuenta en";
 
-$BIZBOOK['DB-NOTIFICATION-START-FOLLOWING'] = "start following you";
-
-$BIZBOOK['DB-NOTIFICATION-THANK-YOU-MESSAGE'] = "Thank you for creating for an account in";
-
-$BIZBOOK['DB-NOTIFICATION-WELCOME-MESSAGE'] = "We heartily welcome to our global business";
+$BIZBOOK['DB-NOTIFICATION-WELCOME-MESSAGE'] = "Te damos la bienvenida cordialmente a nuestro portal de negocios global";
 
 $BIZBOOK['DB-NOTIFICATION-PORTAL'] = "portal";
 
-//************************* DB PAYMENTS PAGE TEXT ***********
+//************************* TEXTO DE LA PÁGINA DE PAGOS ***********
 
-$BIZBOOK['DB-PAYMENTS-HEADING'] = "Select your payment option";
+$BIZBOOK['DB-PAYMENTS-HEADING'] = "Selecciona tu opción de pago";
 
-$BIZBOOK['DB-PAYMENTS-HEADING-P-1'] = "Pay with cash upon delivery.";
+$BIZBOOK['DB-PAYMENTS-HEADING-P-1'] = "Paga en efectivo al recibir.";
 
-$BIZBOOK['DB-PAYMENTS-HEADING-P-2'] = "Admin team will verify your listing and communication address";
+$BIZBOOK['DB-PAYMENTS-HEADING-P-2'] = "El equipo de administración verificará tu negocio y dirección de comunicación";
 
-$BIZBOOK['DB-PAYMENTS-HEADING-P-3'] = "Our collection team will meet you";
+$BIZBOOK['DB-PAYMENTS-HEADING-P-3'] = "Nuestro equipo de cobro te visitará";
 
-$BIZBOOK['DB-PAYMENTS-BILLING-DETAILS'] = "Billing details";
+$BIZBOOK['DB-PAYMENTS-BILLING-DETAILS'] = "Detalles de Facturación";
 
-$BIZBOOK['DB-PAYMENTS-SUBMIT-COD'] = "Submit COD";
+$BIZBOOK['DB-PAYMENTS-SUBMIT-COD'] = "Enviar Pago en Efectivo";
 
-$BIZBOOK['DB-PAYMENTS-START-PAYMENT'] = "Start Payment";
+$BIZBOOK['DB-PAYMENTS-START-PAYMENT'] = "Iniciar Pago";
 
-$BIZBOOK['DB-PAYMENTS-PAYPAL-PAYMENT-GATEWAY'] = "PayPal payment gateway";
+$BIZBOOK['DB-PAYMENTS-PAYPAL-PAYMENT-GATEWAY'] = "Pasarela de Pago PayPal";
 
-$BIZBOOK['DB-PAYMENTS-PAYPAL-PAYMENT-GATEWAY-P-1'] = "You can pay with your credit card if you don’t have a PayPal account.";
+$BIZBOOK['DB-PAYMENTS-PAYPAL-PAYMENT-GATEWAY-P-1'] = "Puedes pagar con tu tarjeta de crédito si no tienes una cuenta de PayPal.";
 
-$BIZBOOK['DB-PAYMENTS-WHAT-IS-PAYPAL'] = "What is PayPal?";
+$BIZBOOK['DB-PAYMENTS-WHAT-IS-PAYPAL'] = "¿Qué es PayPal?";
 
-$BIZBOOK['DB-PAYMENTS-STRIPE-PAYMENT-GATEWAY'] = "Stripe payment gateway";
+$BIZBOOK['DB-PAYMENTS-STRIPE-PAYMENT-GATEWAY'] = "Pasarela de Pago Stripe";
 
-$BIZBOOK['DB-PAYMENTS-STRIPE-PAYMENT'] = "Stripe payment";
+$BIZBOOK['DB-PAYMENTS-STRIPE-PAYMENT'] = "Pago con Stripe";
 
-$BIZBOOK['DB-PAYMENTS-STRIPE-PAYMENT-SIMPLE-WAY-MESSAGE'] = "Simple way to pay online. It's take less then a minutes";
+$BIZBOOK['DB-PAYMENTS-STRIPE-PAYMENT-SIMPLE-WAY-MESSAGE'] = "Forma sencilla de pagar en línea. Toma menos de un minuto.";
 
-$BIZBOOK['DB-PAYMENTS-STRIPE-PAYMENT-YOUR-FINAL-AMOUNT'] = "Your Final Amount to be paid is";
+$BIZBOOK['DB-PAYMENTS-STRIPE-PAYMENT-YOUR-FINAL-AMOUNT'] = "El Monto Final a pagar es";
 
-$BIZBOOK['DB-PAYMENTS-STRIPE-PAYMENT-GATEWAY-P-1'] = "You can pay with your credit card if you don’t have a Stripe account.";
+$BIZBOOK['DB-PAYMENTS-STRIPE-PAYMENT-GATEWAY-P-1'] = "Puedes pagar con tu tarjeta de crédito si no tienes una cuenta de Stripe.";
 
-$BIZBOOK['DB-PAYMENTS-WHAT-IS-STRIPE'] = "What is Stripe?";
+$BIZBOOK['DB-PAYMENTS-WHAT-IS-STRIPE'] = "¿Qué es Stripe?";
 
-$BIZBOOK['DB-PAYMENTS-RAZOR-PAYMENT-GATEWAY'] = "RazorPay payment gateway";
+$BIZBOOK['DB-PAYMENTS-RAZOR-PAYMENT-GATEWAY'] = "Pasarela de Pago RazorPay";
 
-$BIZBOOK['DB-PAYMENTS-RAZOR-PAYMENT-GATEWAY-P-1'] = "You can pay with your credit card if you don’t have a RazorPay account.";
+$BIZBOOK['DB-PAYMENTS-RAZOR-PAYMENT-GATEWAY-P-1'] = "Puedes pagar con tu tarjeta de crédito si no tienes una cuenta de RazorPay.";
 
-$BIZBOOK['DB-PAYMENTS-WHAT-IS-RAZOR'] = "What is RazorPay?";
+$BIZBOOK['DB-PAYMENTS-WHAT-IS-RAZOR'] = "¿Qué es RazorPay?";
 
-$BIZBOOK['DB-PAYMENTS-PAYTM-PAYMENT-GATEWAY'] = "PayTm payment gateway";
+$BIZBOOK['DB-PAYMENTS-PAYTM-PAYMENT-GATEWAY'] = "Pasarela de Pago PayTm";
 
-$BIZBOOK['DB-PAYMENTS-PAYTM-PAYMENT-GATEWAY-P-1'] = "You can pay with your credit card if you don’t have a PayTm account.";
+$BIZBOOK['DB-PAYMENTS-PAYTM-PAYMENT-GATEWAY-P-1'] = "Puedes pagar con tu tarjeta de crédito si no tienes una cuenta de PayTm.";
 
-$BIZBOOK['DB-PAYMENTS-PAYTM-IS-RAZOR'] = "What is PayTm?";
+$BIZBOOK['DB-PAYMENTS-PAYTM-IS-RAZOR'] = "¿Qué es PayTm?";
 
-$BIZBOOK['DB-PAYMENTS-FOOTER-NOTES'] = "Notes";
+$BIZBOOK['DB-PAYMENTS-FOOTER-NOTES'] = "Notas";
 
-$BIZBOOK['DB-PAYMENTS-FOOTER-NOTES-MESSAGE'] = "Hi, Before start \"Ads Payment\" you must know the pricing details and positions and all.
-                    You just click the \"Pricing and other details\" button in this same page and you know the all
-                    details. If your payment done means your invoice automatically received your \"Payment invoice\" page
-                    and you never stop your Ads till the end date.";
+$BIZBOOK['DB-PAYMENTS-FOOTER-NOTES-MESSAGE'] = "Hola, Antes de iniciar el \"Pago de Anuncios\" debes conocer los detalles de precios, posiciones y demás.
 
-//************************* E-BOOK PAGE TEXT ***********
+                    Solo haz clic en el botón \"Precios y otros detalles\" en esta misma página y podrás ver todos
 
-$BIZBOOK['E-BOOK-DOWNLOAD-NOW'] = "Download now";
+                    los detalles. Una vez realizado el pago, tu factura se recibirá automáticamente en tu página de \"Factura de Pago\"
 
-$BIZBOOK['E-BOOK-DOWNLOAD-REQUEST'] = "Download request";
+                    y no podrás detener tus anuncios hasta la fecha de finalización.";
 
-//************************* EVENT PAGE TEXT ***********
+//************************* TEXTO DE LA PÁGINA DE E-BOOKS ***********
 
-$BIZBOOK['EVENT-DETAILS-EVENT-INFORMATION'] = "Event information";
+$BIZBOOK['E-BOOK-DOWNLOAD-NOW'] = "Descargar ahora";
 
-$BIZBOOK['EVENT-DETAILS-SHARE-THIS-EVENT'] = "Share this event";
+$BIZBOOK['E-BOOK-DOWNLOAD-REQUEST'] = "Solicitud de descarga";
 
-$BIZBOOK['EVENT-DETAILS-RELATED-EVENTS'] = "Related Events";
+//************************* TEXTO DE LA PÁGINA DE EVENTOS ***********
 
-//************************* FEEDBACK PAGE TEXT ***********
+$BIZBOOK['EVENT-DETAILS-EVENT-INFORMATION'] = "Información del Evento";
 
-$BIZBOOK['FEEDBACK-SEND-YOUR-FEEDBACK'] = "Send your feedbacks";
+$BIZBOOK['EVENT-DETAILS-SHARE-THIS-EVENT'] = "Compartir este evento";
 
-$BIZBOOK['FEEDBACK-YOUR-FEEDBACK'] = "Your feedback";
+$BIZBOOK['EVENT-DETAILS-RELATED-EVENTS'] = "Eventos Relacionados";
 
-$BIZBOOK['FEEDBACK-P-TAG-MESSAGE'] = "Your feedback is most important for us. There are many variations of passages of Lorem Ipsum available,but the majority have suffered alteration in some form, by injected humour";
+//************************* TEXTO DE LA PÁGINA DE COMENTARIOS ***********
 
-$BIZBOOK['FEEDBACK-WHY-SEND-FEEDBACK'] = "Why send feedback?";
+$BIZBOOK['FEEDBACK-SEND-YOUR-FEEDBACK'] = "Envía tus comentarios";
 
-$BIZBOOK['FEEDBACK-WHY-SEND-FEEDBACK-P-1'] = "Useful for feature update";
+$BIZBOOK['FEEDBACK-YOUR-FEEDBACK'] = "Tu comentario";
 
-$BIZBOOK['FEEDBACK-WHY-SEND-FEEDBACK-P-2'] = "Helping for customer feedback";
+$BIZBOOK['FEEDBACK-P-TAG-MESSAGE'] = "Tu opinión es muy importante para nosotros. Existen muchas versiones de los pasajes de Lorem Ipsum, pero la mayoría han sufrido alteraciones en alguna forma, por humor añadido.";
 
-//************************* FOOTER PAGE TEXT ***********
+$BIZBOOK['FEEDBACK-WHY-SEND-FEEDBACK'] = "¿Por qué enviar comentarios?";
 
-$BIZBOOK['FOOTER-HELP-SUPPORT'] = "Help & Support";
+$BIZBOOK['FEEDBACK-WHY-SEND-FEEDBACK-P-1'] = "Útil para actualizaciones de características";
 
-$BIZBOOK['FOOTER-FREE-SUPPORT'] = "Free support";
+$BIZBOOK['FEEDBACK-WHY-SEND-FEEDBACK-P-2'] = "Ayuda para comentarios de clientes";
 
-$BIZBOOK['FOOTER-TOP-CATEGORY'] = "Top Category";
+//************************* TEXTO DEL PIE DE PÁGINA ***********
 
-$BIZBOOK['FOOTER-TRENDING-CATEGORY'] = "Trending Category";
+$BIZBOOK['FOOTER-HELP-SUPPORT'] = "Ayuda y Soporte";
 
-$BIZBOOK['FOOTER-HELP'] = "HELP";
+$BIZBOOK['FOOTER-FREE-SUPPORT'] = "Soporte gratuito";
 
-$BIZBOOK['FOOTER-SUPPORT'] = "SUPPORT";
+$BIZBOOK['FOOTER-TOP-CATEGORY'] = "Categoría Principal";
 
-$BIZBOOK['FOOTER-POPULAR-TAGS'] = "Popular Tags";
+$BIZBOOK['FOOTER-TRENDING-CATEGORY'] = "Categoría en Tendencia";
 
-$BIZBOOK['FOOTER-GET-IN-TOUCH'] = "Get In Touch";
+$BIZBOOK['FOOTER-HELP'] = "AYUDA";
 
-$BIZBOOK['FOOTER-DOWNLOAD-FREE-MOBILE-APPS'] = "DOWNLOAD OUR FREE MOBILE APPS";
+$BIZBOOK['FOOTER-SUPPORT'] = "SOPORTE";
 
-$BIZBOOK['FOOTER-SOCIAL-MEDIA'] = "SOCIAL MEDIA";
+$BIZBOOK['FOOTER-POPULAR-TAGS'] = "Etiquetas Populares";
 
-$BIZBOOK['FOOTER-COPYRIGHT'] = "Copyright";
+$BIZBOOK['FOOTER-GET-IN-TOUCH'] = "Ponte en Contacto";
 
-$BIZBOOK['FOOTER-PROUDLY-POWERED-BY'] = "Proudly powered by";
+$BIZBOOK['FOOTER-DOWNLOAD-FREE-MOBILE-APPS'] = "DESCARGA NUESTRAS APLICACIONES MÓVILES GRATUITAS";
 
-//************************* PROMOTE BUSINESS PAGE TEXT ***********
+$BIZBOOK['FOOTER-SOCIAL-MEDIA'] = "REDES SOCIALES";
 
-$BIZBOOK['PROMOTE-BUSINESS-START-PROMOTIONS'] = "Start promotions";
+$BIZBOOK['FOOTER-COPYRIGHT'] = "Derechos de Autor";
 
-$BIZBOOK['PROMOTE-BUSINESS-START-NEW-PROMOTIONS'] = "Start new promotions";
+$BIZBOOK['FOOTER-PROUDLY-POWERED-BY'] = "Orgullosamente potenciado por";
 
-$BIZBOOK['PROMOTE-BUSINESS-CHOOSE-LISTING'] = "Choose Listing";
+//************************* TEXTO DE LA PÁGINA DE PROMOCIONAR NEGOCIOS ***********
 
-$BIZBOOK['PROMOTE-BUSINESS-TOTAL-DAYS'] = "Total days";
+$BIZBOOK['PROMOTE-BUSINESS-START-PROMOTIONS'] = "Iniciar promociones";
 
-$BIZBOOK['PROMOTE-BUSINESS-COST-PER-DAY'] = "Cost Per Day";
+$BIZBOOK['PROMOTE-BUSINESS-START-NEW-PROMOTIONS'] = "Iniciar nuevas promociones";
 
-$BIZBOOK['PROMOTE-BUSINESS-TOTAL-POINTS'] = "Total Points";
+$BIZBOOK['PROMOTE-BUSINESS-CHOOSE-LISTING'] = "Elegir Negocio";
 
-$BIZBOOK['PROMOTE-BUSINESS-TOTAL-COST'] = "Total Cost";
+$BIZBOOK['PROMOTE-BUSINESS-TOTAL-DAYS'] = "Días Totales";
 
-$BIZBOOK['PROMOTE-LISTING-PROMOTIONS'] = "Listing promotions";
+$BIZBOOK['PROMOTE-BUSINESS-COST-PER-DAY'] = "Costo por Día";
 
-$BIZBOOK['PROMOTE-PROMOTIONS'] = "Promotions";
+$BIZBOOK['PROMOTE-BUSINESS-TOTAL-POINTS'] = "Puntos Totales";
 
-//************************* SEARCH RESULTS PAGE TEXT ***********
+$BIZBOOK['PROMOTE-BUSINESS-TOTAL-COST'] = "Costo Total";
 
-$BIZBOOK['SEARCH-RESULTS-SEARCH-RESULTS'] = "Search Results";
+$BIZBOOK['PROMOTE-LISTING-PROMOTIONS'] = "Promociones de Negocios";
 
-$BIZBOOK['SEARCH-RESULTS-SEARCH-ANYTHING-PLACEHOLDER'] = "Search anything...";
+$BIZBOOK['PROMOTE-PROMOTIONS'] = "Promociones";
 
-$BIZBOOK['SEARCH-RESULTS-OOPS-NO-RESULTS-FOUND'] = "Oops!!! No result(s) Found for";
+//************************* TEXTO DE LA PÁGINA DE RESULTADOS DE BÚSQUEDA ***********
 
-$BIZBOOK['SEARCH-RESULTS-PLEASE-TRY-WITH-OTHER'] = "Please try with other!!!";
+$BIZBOOK['SEARCH-RESULTS-SEARCH-RESULTS'] = "Resultados de Búsqueda";
 
-$BIZBOOK['SEARCH-RESULTS-HURRAY'] = "Hurray!!!";
+$BIZBOOK['SEARCH-RESULTS-SEARCH-ANYTHING-PLACEHOLDER'] = "Busca cualquier cosa...";
 
-$BIZBOOK['SEARCH-RESULTS-RESULTS-FOUND-FOR'] = "result(s) Found for";
+$BIZBOOK['SEARCH-RESULTS-OOPS-NO-RESULTS-FOUND'] = "¡Ups! No se encontraron resultados para";
 
-//************************* ALL ALERT & ERROR MESSAGES ***********
+$BIZBOOK['SEARCH-RESULTS-PLEASE-TRY-WITH-OTHER'] = "¡Por favor, intenta con otra opción!";
 
-$BIZBOOK['LISTINGS_LIMIT_EXCEED_MESSAGE'] = "Your Listings Limit Exceeded!! Upgrade your plan and enjoy our services";
+$BIZBOOK['SEARCH-RESULTS-HURRAY'] = "¡Hurra!";
 
-$BIZBOOK['PRODUCTS_LIMIT_EXCEED_MESSAGE'] = "Your Products Limit Exceeded!! Upgrade your plan and enjoy our services";
+$BIZBOOK['SEARCH-RESULTS-RESULTS-FOUND-FOR'] = "resultados encontrados para";
 
-$BIZBOOK['BLOGS_LIMIT_EXCEED_MESSAGE'] = "Your Blog post Limit Exceeded!! Upgrade your plan and enjoy our services";
+//************************* TODOS LOS MENSAJES DE ALERTA Y ERROR ***********
 
-$BIZBOOK['EVENTS_LIMIT_EXCEED_MESSAGE'] = "Your Events Limit Exceeded!! Upgrade your plan and enjoy our services";
+$BIZBOOK['LISTINGS_LIMIT_EXCEED_MESSAGE'] = "¡Límite de Negocios Excedido! Mejora tu plan y disfruta de nuestros servicios.";
 
-$BIZBOOK['JOBS_LIMIT_EXCEED_MESSAGE'] = "Your Jobs Limit Exceeded!! Upgrade your plan and enjoy our services";
+$BIZBOOK['PRODUCTS_LIMIT_EXCEED_MESSAGE'] = "¡Límite de Productos Excedido! Mejora tu plan y disfruta de nuestros servicios.";
 
-$BIZBOOK['USER_NOT_ACTIVATED_MESSAGE'] = "Important: Your Profile has not been activated yet. You can create your Listings, Products, Events, Blogs. But it will be posted after profile activation.";
+$BIZBOOK['BLOGS_LIMIT_EXCEED_MESSAGE'] = "¡Límite de Publicaciones de Blog Excedido! Mejora tu plan y disfruta de nuestros servicios.";
 
-$BIZBOOK['GENERAL_USER_NOT_ACTIVATED_MESSAGE'] = "Important: Your Profile has not been activated yet. Once we done your verification, we email you soon when your account is fully activated.";
+$BIZBOOK['EVENTS_LIMIT_EXCEED_MESSAGE'] = "¡Límite de Eventos Excedido! Mejora tu plan y disfruta de nuestros servicios.";
 
-$BIZBOOK['OOPS_SOMETHING_WENT_WRONG'] = "Oops!! Something Went Wrong Try Later!!!";
+$BIZBOOK['JOBS_LIMIT_EXCEED_MESSAGE'] = "¡Límite de Ofertas de Empleo Excedido! Mejora tu plan y disfruta de nuestros servicios.";
 
-$BIZBOOK['ENQUIRY_SUCCESSFUL_MESSAGE'] = "Your Enquiry Is Submitted Successfully!!!";
+$BIZBOOK['USER_NOT_ACTIVATED_MESSAGE'] = "Importante: Tu perfil aún no ha sido activado. Puedes crear tus Negocios, Productos, Eventos y Blogs, pero se publicarán después de la activación del perfil.";
 
-$BIZBOOK['PLACE_ADD_SUCCESSFUL_MESSAGE'] = "Your Place Add Request Is Submitted Successfully!!!";
+$BIZBOOK['GENERAL_USER_NOT_ACTIVATED_MESSAGE'] = "Importante: Tu perfil aún no ha sido activado. Una vez verificado, te enviaremos un correo de confirmación cuando tu cuenta esté completamente activa.";
 
-$BIZBOOK['ENQUIRY_OWN_LISTING_MESSAGE'] = "You cannot make enquiry on your own listing!!";
+$BIZBOOK['OOPS_SOMETHING_WENT_WRONG'] = "¡Ups! Algo salió mal. Inténtalo más tarde.";
 
-$BIZBOOK['JOB_ENQUIRY_SUCCESSFUL_MESSAGE'] = "You have successfully applied for this job.";
+$BIZBOOK['ENQUIRY_SUCCESSFUL_MESSAGE'] = "¡Tu consulta ha sido enviada exitosamente!";
 
-$BIZBOOK['JOB_ENQUIRY_OWN_JOB_MESSAGE'] = "You cannot make enquiry on your own job!!";
+$BIZBOOK['PLACE_ADD_SUCCESSFUL_MESSAGE'] = "¡Tu solicitud para añadir el lugar ha sido enviada exitosamente!";
 
-$BIZBOOK['JOB_ENQUIRY_ALREADY_APPLIED_JOB_MESSAGE'] = "Already Applied on this job!!";
+$BIZBOOK['ENQUIRY_OWN_LISTING_MESSAGE'] = "¡No puedes hacer una consulta en tu propio negocio!";
 
-$BIZBOOK['JOB_ENQUIRY_NO_PROFILE_MESSAGE'] = "You don't have job profile. Please <a href='$JOB_PROFILE_CREATION_URL_WITHOUT_SLASH'>click here</a> to create and apply.";
+$BIZBOOK['JOB_ENQUIRY_SUCCESSFUL_MESSAGE'] = "Has aplicado exitosamente a este empleo.";
 
-$BIZBOOK['SERVICE_EXPERT_ENQUIRY_SUCCESSFUL_MESSAGE'] = "Your Enquiry Is Submitted Successfully!!!";
+$BIZBOOK['JOB_ENQUIRY_OWN_JOB_MESSAGE'] = "¡No puedes hacer una consulta en tu propio empleo!";
 
-$BIZBOOK['SERVICE_EXPERT_ENQUIRY_OWN_JOB_MESSAGE'] = "You cannot make enquiry on your own Service!!";
+$BIZBOOK['JOB_ENQUIRY_ALREADY_APPLIED_JOB_MESSAGE'] = "¡Ya has aplicado a este empleo!";
 
-$BIZBOOK['ENQUIRY_OWN_PRODUCT_MESSAGE'] = "You cannot make enquiry on your own product!!";
+$BIZBOOK['JOB_ENQUIRY_NO_PROFILE_MESSAGE'] = "No tienes un perfil de empleo. Por favor, <a href='$JOB_PROFILE_CREATION_URL_WITHOUT_SLASH'>haz clic aquí</a> para crear y aplicar.";
 
-$BIZBOOK['ENQUIRY_OWN_EVENT_MESSAGE'] = "You cannot make enquiry on your own event!!";
+$BIZBOOK['SERVICE_EXPERT_ENQUIRY_SUCCESSFUL_MESSAGE'] = "¡Tu consulta ha sido enviada exitosamente!";
 
-$BIZBOOK['ENQUIRY_OWN_BLOG_MESSAGE'] = "You cannot make enquiry on your own blog!!";
+$BIZBOOK['SERVICE_EXPERT_ENQUIRY_OWN_JOB_MESSAGE'] = "¡No puedes hacer una consulta en tu propio servicio!";
 
-$BIZBOOK['ACTIVATION_EMAIL_VERIFICATION_SUCCESS_MESSAGE'] = "Your Email Verification have been Sucessfully Completed!! Please Login and Enjoy our Services!!";
+$BIZBOOK['ENQUIRY_OWN_PRODUCT_MESSAGE'] = "¡No puedes hacer una consulta en tu propio producto!";
 
-$BIZBOOK['ACTIVATION_EMAIL_VERIFICATION_FAILURE_MESSAGE'] = "Your Verification Code Is Wrong!!! Please try some other time!!!";
+$BIZBOOK['ENQUIRY_OWN_EVENT_MESSAGE'] = "¡No puedes hacer una consulta en tu propio evento!";
 
-$BIZBOOK['LISTINGS_NO_LISTINGS_MESSAGE'] = "!!! Oops No Listing with the Selected Category";
+$BIZBOOK['ENQUIRY_OWN_BLOG_MESSAGE'] = "¡No puedes hacer una consulta en tu propio blog!";
 
-$BIZBOOK['PRODUCTS_NO_PRODUCTS_MESSAGE'] = "!!! Oops No Product with the Selected Category";
+$BIZBOOK['ACTIVATION_EMAIL_VERIFICATION_SUCCESS_MESSAGE'] = "¡La verificación de tu correo electrónico se ha completado exitosamente! Inicia sesión y disfruta de nuestros servicios.";
 
-$BIZBOOK['JOBS_NO_JOBS_MESSAGE'] = "!!! Oops No Job with the Selected Category";
+$BIZBOOK['ACTIVATION_EMAIL_VERIFICATION_FAILURE_MESSAGE'] = "¡Código de verificación incorrecto! Intenta de nuevo más tarde.";
 
-$BIZBOOK['SERVICE_EXPERTS_NO_SERVICE_EXPERTS_MESSAGE'] = "!!! Oops No Service Experts with the Selected Category";
+$BIZBOOK['LISTINGS_NO_LISTINGS_MESSAGE'] = "¡Ups! No hay Negocios en la categoría seleccionada.";
 
-$BIZBOOK['NEWS_NO_NEWS_MESSAGE'] = "!!! Oops No News with the Selected Category";
+$BIZBOOK['PRODUCTS_NO_PRODUCTS_MESSAGE'] = "¡Ups! No hay Productos en la categoría seleccionada.";
 
-$BIZBOOK['EVENTS_NO_EVENTS_MESSAGE'] = "!!! Oops No Events with the Selected Category";
+$BIZBOOK['JOBS_NO_JOBS_MESSAGE'] = "¡Ups! No hay Empleos en la categoría seleccionada.";
 
-$BIZBOOK['PLACES_NO_PLACES_MESSAGE'] = "!!! Oops No Places with the Selected Category";
+$BIZBOOK['SERVICE_EXPERTS_NO_SERVICE_EXPERTS_MESSAGE'] = "¡Ups! No hay Expertos en Servicios en la categoría seleccionada.";
 
-$BIZBOOK['BLOGS_NO_BLOGS_MESSAGE'] = "!!! Oops No Blogs with the Selected Category";
+$BIZBOOK['NEWS_NO_NEWS_MESSAGE'] = "¡Ups! No hay Noticias en la categoría seleccionada.";
 
-$BIZBOOK['NEWS_NEWSLETTER_SUBSCRIPTION_SUCCESSFUL_MESSAGE'] = "Your Newsletter Subscription Is Submitted Successfully!!!";
+$BIZBOOK['EVENTS_NO_EVENTS_MESSAGE'] = "¡Ups! No hay Eventos en la categoría seleccionada.";
 
-$BIZBOOK['BLOGS_DELETE_SUCCESSFUL_MESSAGE'] = "Blog has been Deleted Successfully!!!";
+$BIZBOOK['PLACES_NO_PLACES_MESSAGE'] = "¡Ups! No hay Lugares en la categoría seleccionada.";
 
-$BIZBOOK['BLOGS_INSERT_SUCCESSFUL_MESSAGE'] = "New Blog has been created Successfully!!!";
+$BIZBOOK['BLOGS_NO_BLOGS_MESSAGE'] = "¡Ups! No hay Blogs en la categoría seleccionada.";
 
-$BIZBOOK['BLOGS_UPDATE_SUCCESSFUL_MESSAGE'] = "Your Blog has been Updated Successfully!!!";
+$BIZBOOK['NEWS_NEWSLETTER_SUBSCRIPTION_SUCCESSFUL_MESSAGE'] = "¡Te has suscrito exitosamente al boletín de noticias!";
 
-$BIZBOOK['NO_CITY_FOUND_MESSAGE'] = "No City Found";
+$BIZBOOK['BLOGS_DELETE_SUCCESSFUL_MESSAGE'] = "¡El Blog ha sido eliminado exitosamente!";
 
-$BIZBOOK['NO_SUB_CATEGORY_FOUND_MESSAGE'] = "No Sub Category Found";
+$BIZBOOK['BLOGS_INSERT_SUCCESSFUL_MESSAGE'] = "¡Nuevo Blog creado exitosamente!";
 
-$BIZBOOK['NO_AREA_FOUND_MESSAGE'] = "No Area Found";
+$BIZBOOK['BLOGS_UPDATE_SUCCESSFUL_MESSAGE'] = "¡Tu Blog ha sido actualizado exitosamente!";
 
-$BIZBOOK['COMPANY_PROFILE_SUCCESS_MESSAGE'] = "Company Profile Successfully Updated!!!";
+$BIZBOOK['NO_CITY_FOUND_MESSAGE'] = "No se encontró ninguna ciudad.";
 
-$BIZBOOK['COUPON_INSERT_SUCCESS_MESSAGE'] = "New coupon has been created Successfully!!!";
+$BIZBOOK['NO_SUB_CATEGORY_FOUND_MESSAGE'] = "No se encontró ninguna subcategoría.";
 
-$BIZBOOK['COUPON_DELETE_SUCCESS_MESSAGE'] = "Coupon has been Deleted Successfully!!!";
+$BIZBOOK['NO_AREA_FOUND_MESSAGE'] = "No se encontró ninguna área.";
 
-$BIZBOOK['COUPON_UPDATE_SUCCESS_MESSAGE'] = "Your Coupon has been Updated Successfully!!!";
+$BIZBOOK['COMPANY_PROFILE_SUCCESS_MESSAGE'] = "¡Perfil de la Empresa actualizado exitosamente!";
 
-$BIZBOOK['USER_SETTING_UPDATE_SUCCESS_MESSAGE'] = "Your Settings has been Updated Successfully!!!";
+$BIZBOOK['COUPON_INSERT_SUCCESS_MESSAGE'] = "¡Nuevo cupón creado exitosamente!";
 
-$BIZBOOK['USER_SEO_UPDATE_SUCCESS_MESSAGE'] = "Your SEO Data's has been Updated Successfully!!!";
+$BIZBOOK['COUPON_DELETE_SUCCESS_MESSAGE'] = "¡Cupón eliminado exitosamente!";
 
-$BIZBOOK['USER_REVIEW_DELETE_SUCCESSFUL_MESSAGE'] = "Review has been Deleted Successfully!!!";
+$BIZBOOK['COUPON_UPDATE_SUCCESS_MESSAGE'] = "¡Tu cupón ha sido actualizado exitosamente!";
 
-$BIZBOOK['GIVEN_EMAIL_ID_ALREADY_EXISTS_MESSAGE'] = "The Given Email Id is Already Exist Try Other!!!";
+$BIZBOOK['USER_SETTING_UPDATE_SUCCESS_MESSAGE'] = "¡Tus configuraciones han sido actualizadas exitosamente!";
 
-$BIZBOOK['GIVEN_MOBILE_NUMBER_ALREADY_EXISTS_MESSAGE'] = "The Given Mobile Number is Already Exist Try Other!!!";
+$BIZBOOK['USER_SEO_UPDATE_SUCCESS_MESSAGE'] = "¡Los datos de SEO han sido actualizados exitosamente!";
 
-$BIZBOOK['USER_INSERT_SUCCESS_MESSAGE'] = "Your account has been created successfully and we send you the confirmation mail to your registered email id. Please confirm and join with us";
+$BIZBOOK['USER_REVIEW_DELETE_SUCCESSFUL_MESSAGE'] = "¡La reseña ha sido eliminada exitosamente!";
 
-$BIZBOOK['USER_RESEND_VERIFICATION_SUCCESS_MESSAGE'] = "Your verification code have been successfully sent to your registered email id.";
+$BIZBOOK['GIVEN_EMAIL_ID_ALREADY_EXISTS_MESSAGE'] = "¡El correo electrónico ingresado ya existe! Intenta con otro.";
 
-$BIZBOOK['PAYMENT_SUCCESSFULL_USER_UPGRADE_SUCESS'] = "Payment Successful!! The User has been Upgraded Successfully!!!";
+$BIZBOOK['GIVEN_MOBILE_NUMBER_ALREADY_EXISTS_MESSAGE'] = "¡El número de móvil ingresado ya existe! Intenta con otro.";
 
-$BIZBOOK['RAZOR_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'] = "Razor Pay Payment Successful!! The User Point has been Updated Successfully!!!";
+$BIZBOOK['USER_INSERT_SUCCESS_MESSAGE'] = "¡Tu cuenta ha sido creada exitosamente! Hemos enviado un correo de confirmación a tu email registrado. Por favor, confirma y únete a nosotros.";
 
-$BIZBOOK['PAYTM_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'] = "PayTm Payment Successful!! The User Point has been Updated Successfully!!!";
+$BIZBOOK['USER_RESEND_VERIFICATION_SUCCESS_MESSAGE'] = "¡Tu código de verificación ha sido enviado exitosamente a tu correo electrónico registrado!";
 
-$BIZBOOK['STRIPE_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'] = "Stripe Payment Successful!! The User Point has been Updated Successfully!!!";
+$BIZBOOK['PAYMENT_SUCCESSFULL_USER_UPGRADE_SUCESS'] = "¡Pago exitoso! ¡El usuario ha sido actualizado exitosamente!";
 
-$BIZBOOK['PAYPAL_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'] = "PayPal Payment Successful!! The User Point has been Updated Successfully!!!";
+$BIZBOOK['RAZOR_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'] = "¡Pago con Razor Pay exitoso! ¡Los puntos del usuario han sido actualizados exitosamente!";
 
-$BIZBOOK['RAZOR_POINT_PAYMENT_FAILURE_MESSAGE'] = "Razor Pay Payment Failed!! Try later !!!";
+$BIZBOOK['PAYTM_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'] = "¡Pago con PayTm exitoso! ¡Los puntos del usuario han sido actualizados exitosamente!";
 
-$BIZBOOK['PAYTM_POINT_PAYMENT_FAILURE_MESSAGE'] = "PayTm Point Payment Failed!! Try later !!!";
+$BIZBOOK['STRIPE_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'] = "¡Pago con Stripe exitoso! ¡Los puntos del usuario han sido actualizados exitosamente!";
 
-$BIZBOOK['STRIPE_POINT_PAYMENT_FAILURE_MESSAGE'] = "Stripe Point Payment Failed!! Try later !!!";
+$BIZBOOK['PAYPAL_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'] = "¡Pago con PayPal exitoso! ¡Los puntos del usuario han sido actualizados exitosamente!";
 
-$BIZBOOK['STRIPE_PAYMENT_FAILURE_MESSAGE'] = "Stripe Payment Failed!! Try later !!!";
+$BIZBOOK['RAZOR_POINT_PAYMENT_FAILURE_MESSAGE'] = "¡Pago con Razor Pay fallido! Inténtalo más tarde.";
 
-$BIZBOOK['PAYPAL_POINT_PAYMENT_FAILURE_MESSAGE'] = "PayPal Point Payment Failed!! Try later !!!";
+$BIZBOOK['PAYTM_POINT_PAYMENT_FAILURE_MESSAGE'] = "¡Pago con PayTm fallido! Inténtalo más tarde.";
 
-$BIZBOOK['PAYPAL_PAYMENT_FAILURE_MESSAGE'] = "PayPal Payment Failed!! Try later !!!";
+$BIZBOOK['STRIPE_POINT_PAYMENT_FAILURE_MESSAGE'] = "¡Pago con Stripe fallido! Inténtalo más tarde.";
 
-$BIZBOOK['COD_PAYMENT_SUCCESS_MESSAGE'] = "COD Payment has been initiated Successfully!! Our Team will contact you soon!!!";
+$BIZBOOK['STRIPE_PAYMENT_FAILURE_MESSAGE'] = "¡Pago con Stripe fallido! Inténtalo más tarde.";
 
-$BIZBOOK['REDIRECTING_TO_RAZOR_PAY'] = "Please Wait!!! Redirecting You To Razorpay....";
+$BIZBOOK['PAYPAL_POINT_PAYMENT_FAILURE_MESSAGE'] = "¡Pago con PayPal fallido! Inténtalo más tarde.";
 
-$BIZBOOK['REDIRECTING_TO_PAYPAL'] = "Please Wait!!! Redirecting You To PayPal....";
+$BIZBOOK['PAYPAL_PAYMENT_FAILURE_MESSAGE'] = "¡Pago con PayPal fallido! Inténtalo más tarde.";
 
-$BIZBOOK['EXPIRED_PROMOTION_DELETE_SUCCESS_MESSAGE'] = "Expired Promotion has been Deleted Successfully!!!";
+$BIZBOOK['COD_PAYMENT_SUCCESS_MESSAGE'] = "¡Pago en efectivo iniciado exitosamente! Nuestro equipo se pondrá en contacto contigo pronto.";
 
-$BIZBOOK['OOPS_DONT_HAVE_ENOUGH_POINTS_BUY_SOME_POINTS'] = "Oops!! You don't have enough points to promote your listing!! Buy some points!!";
+$BIZBOOK['REDIRECTING_TO_RAZOR_PAY'] = "Por favor espera... Redirigiéndote a Razorpay...";
 
-$BIZBOOK['USER_PROFILE_UPDATE_SUCCESS_MESSAGE'] = "Your Profile has been Updated Successfully!!!";
+$BIZBOOK['REDIRECTING_TO_PAYPAL'] = "Por favor espera... Redirigiéndote a PayPal...";
 
-$BIZBOOK['NO_LISTINGS_TO_SHOW'] = "No Listings To Show";
+$BIZBOOK['EXPIRED_PROMOTION_DELETE_SUCCESS_MESSAGE'] = "¡Promoción expirada eliminada exitosamente!";
 
-$BIZBOOK['NO_BLOGS_TO_SHOW'] = "No Blogs To Show";
+$BIZBOOK['OOPS_DONT_HAVE_ENOUGH_POINTS_BUY_SOME_POINTS'] = "¡Ups! No tienes suficientes puntos para promocionar tu negocio. Compra más puntos.";
 
-$BIZBOOK['NO_EVENTS_TO_SHOW'] = "No Events To Show";
+$BIZBOOK['USER_PROFILE_UPDATE_SUCCESS_MESSAGE'] = "¡Tu perfil ha sido actualizado exitosamente!";
 
-$BIZBOOK['NO_FOLLOWERS_TO_SHOW'] = "No Followers To Show";
+$BIZBOOK['NO_LISTINGS_TO_SHOW'] = "No hay Negocios para mostrar";
 
-$BIZBOOK['PRODUCT_UPDATE_SUCCESS_MESSAGE'] = "Your Product has been Updated Successfully!!!";
+$BIZBOOK['NO_BLOGS_TO_SHOW'] = "No hay Blogs para mostrar";
 
-$BIZBOOK['PRODUCT_DELETE_SUCCESS_MESSAGE'] = "Product has been Deleted Successfully!!!";
+$BIZBOOK['NO_EVENTS_TO_SHOW'] = "No hay Eventos para mostrar";
 
-$BIZBOOK['PRODUCT_INSERT_SUCCESS_MESSAGE'] = "New Product has been created Successfully!!!";
+$BIZBOOK['NO_FOLLOWERS_TO_SHOW'] = "No hay Seguidores para mostrar";
 
-$BIZBOOK['JOB_UPDATE_SUCCESS_MESSAGE'] = "Your Job has been Updated Successfully!!!";
+$BIZBOOK['PRODUCT_UPDATE_SUCCESS_MESSAGE'] = "¡Tu Producto ha sido actualizado exitosamente!";
 
-$BIZBOOK['JOB_DELETE_SUCCESS_MESSAGE'] = "Job has been Deleted Successfully!!!";
+$BIZBOOK['PRODUCT_DELETE_SUCCESS_MESSAGE'] = "¡Producto eliminado exitosamente!";
 
-$BIZBOOK['JOB_INSERT_SUCCESS_MESSAGE'] = "New Job has been created Successfully!!!";
+$BIZBOOK['PRODUCT_INSERT_SUCCESS_MESSAGE'] = "¡Nuevo Producto creado exitosamente!";
 
-$BIZBOOK['JOB_PROFILE_SUCCESS_MESSAGE'] = "Job Profile Successfully Updated!!!";
+$BIZBOOK['JOB_UPDATE_SUCCESS_MESSAGE'] = "¡Tu Empleo ha sido actualizado exitosamente!";
 
-$BIZBOOK['EXPERT_PROFILE_SUCCESS_MESSAGE'] = "Expert Profile Successfully Updated!!!";
+$BIZBOOK['JOB_DELETE_SUCCESS_MESSAGE'] = "¡Empleo eliminado exitosamente!";
 
-$BIZBOOK['EXPERT_PROFILE_AVAILABILITY_SUCCESS_MESSAGE'] = "Your Availability Successfully Updated!!!";
+$BIZBOOK['JOB_INSERT_SUCCESS_MESSAGE'] = "¡Nuevo Empleo creado exitosamente!";
 
-$BIZBOOK['FEEDBACK_INSERT_SUCCESS_MESSAGE'] = "Thanks for your valuable feedback!!!";
+$BIZBOOK['JOB_PROFILE_SUCCESS_MESSAGE'] = "¡Perfil de Empleo actualizado exitosamente!";
 
-$BIZBOOK['POINTS_DELETE_SUCCESS_MESSAGE'] = "Points History has been Deleted Successfully!!!";
+$BIZBOOK['EXPERT_PROFILE_SUCCESS_MESSAGE'] = "¡Perfil de Experto actualizado exitosamente!";
 
-$BIZBOOK['PLAN_CHANGE_REQUEST_SUCCESS_MESSAGE'] = "Your plan change request have been successfully submitted and we will send you the confirmation mail after approval to your registered email id.";
+$BIZBOOK['EXPERT_PROFILE_AVAILABILITY_SUCCESS_MESSAGE'] = "¡Tu Disponibilidad ha sido actualizada exitosamente!";
 
-$BIZBOOK['PLAN_CHANGE_REQUEST_GREETINGS'] = "Greetings from";
+$BIZBOOK['FEEDBACK_INSERT_SUCCESS_MESSAGE'] = "¡Gracias por tus valiosos comentarios!";
 
-$BIZBOOK['PLAN_CHANGE_REQUEST_RECEIVED'] = "Your Plan Change Request has been received.";
+$BIZBOOK['POINTS_DELETE_SUCCESS_MESSAGE'] = "¡Historial de Puntos eliminado exitosamente!";
 
-$BIZBOOK['PLAN_CHANGE_REQUEST_PLEASE_WAIT'] = "Please Wait until admin approve your request.";
+$BIZBOOK['PLAN_CHANGE_REQUEST_SUCCESS_MESSAGE'] = "Tu solicitud de cambio de plan ha sido enviada exitosamente. Te enviaremos un correo de confirmación tras la aprobación.";
 
-$BIZBOOK['PLAN_CHANGE_REQUEST_THANKS'] = "Thanks";
+$BIZBOOK['PLAN_CHANGE_REQUEST_GREETINGS'] = "Saludos de";
 
-$BIZBOOK['OOPS_START_DATE_IS_GREATER'] = "Oops!! Your Start date is greater than End Date!! Try Other!!!";
+$BIZBOOK['PLAN_CHANGE_REQUEST_RECEIVED'] = "Tu solicitud de cambio de plan ha sido recibida.";
 
-$BIZBOOK['LISTING_PROMOTE_SUCCESS_MESSAGE'] = "Your Listing has been promoted successfully!!!";
+$BIZBOOK['PLAN_CHANGE_REQUEST_PLEASE_WAIT'] = "Espera a que el administrador apruebe tu solicitud.";
 
-$BIZBOOK['PLEASE_ENTER_VALID_POINTS_TO_BUY'] = "Please Enter Valid Point to Buy!!!";
+$BIZBOOK['PLAN_CHANGE_REQUEST_THANKS'] = "Gracias";
 
-$BIZBOOK['NEW_AD_REQUEST_SUCCESS_MESSAGE'] = "New Ad Request has been raised Successfully!!!";
+$BIZBOOK['OOPS_START_DATE_IS_GREATER'] = "¡Ups! La fecha de inicio es mayor que la fecha de fin. ¡Intenta de nuevo!";
 
-$BIZBOOK['YOUR_PASSWORD_IS_WRONG'] = "Your Password Is Wrong!!!";
+$BIZBOOK['LISTING_PROMOTE_SUCCESS_MESSAGE'] = "¡Tu negocio ha sido promocionado exitosamente!";
 
-$BIZBOOK['YOUR_EMAIL_ID_IS_WRONG'] = "Your Email Id Is Wrong!!!";
+$BIZBOOK['PLEASE_ENTER_VALID_POINTS_TO_BUY'] = "Por favor ingresa una cantidad válida de puntos para comprar.";
 
-$BIZBOOK['LISTING_RESTORED_SUCCESS_MESSAGE'] = "Listing has been Restored Successfully!!!";
+$BIZBOOK['NEW_AD_REQUEST_SUCCESS_MESSAGE'] = "¡Nueva solicitud de anuncio creada exitosamente!";
 
-$BIZBOOK['LISTING_DELETED_SUCCESS_MESSAGE'] = "Listing has been Deleted Successfully!!!";
+$BIZBOOK['YOUR_PASSWORD_IS_WRONG'] = "¡Contraseña incorrecta!";
 
-$BIZBOOK['LIKED_LISTING_DELETED_SUCCESS_MESSAGE'] = "Liked Listing has been Deleted Successfully!!!";
+$BIZBOOK['YOUR_EMAIL_ID_IS_WRONG'] = "¡Correo electrónico incorrecto!";
 
-$BIZBOOK['PASSWORD_SENT_SUCCESS_MESSAGE'] = "Your Password has been Sucessfully Sent your Mail Id!!!";
+$BIZBOOK['LISTING_RESTORED_SUCCESS_MESSAGE'] = "¡Negocio restaurado exitosamente!";
 
-$BIZBOOK['PASSWORD_EMAIL_ID_NOT_WITH_US_MESSAGE'] = "The Given Mail Id is Not Registered with Us!!!";
+$BIZBOOK['LISTING_DELETED_SUCCESS_MESSAGE'] = "¡Negocio eliminado exitosamente!";
 
-$BIZBOOK['EVENT_UPDATE_SUCCESS_MESSAGE'] = "Your Event has been Updated Successfully!!!";
+$BIZBOOK['LIKED_LISTING_DELETED_SUCCESS_MESSAGE'] = "¡Negocio marcado como favorito eliminado exitosamente!";
 
-$BIZBOOK['EVENT_DELETE_SUCCESS_MESSAGE'] = "Event has been Deleted Successfully!!!";
+$BIZBOOK['PASSWORD_SENT_SUCCESS_MESSAGE'] = "¡Tu contraseña ha sido enviada exitosamente a tu correo electrónico!";
 
-$BIZBOOK['EVENT_INSERT_SUCCESS_MESSAGE'] = "New Event has been created Successfully!!!";
+$BIZBOOK['PASSWORD_EMAIL_ID_NOT_WITH_US_MESSAGE'] = "¡El correo electrónico proporcionado no está registrado con nosotros!";
 
-$BIZBOOK['LISTING_DUPLICATE_INSERT_SUCCESS_MESSAGE'] = "New Duplicate Listing has been created Successfully!!!";
+$BIZBOOK['EVENT_UPDATE_SUCCESS_MESSAGE'] = "¡Tu Evento ha sido actualizado exitosamente!";
 
-$BIZBOOK['ENQUIRY_DELETE_SUCCESS_MESSAGE'] = "Listing Booking has been Deleted Successfully!!!";
+$BIZBOOK['EVENT_DELETE_SUCCESS_MESSAGE'] = "¡Evento eliminado exitosamente!";
 
-$BIZBOOK['SERVICE_EXPERT_ENQUIRY_DELETE_SUCCESS_MESSAGE'] = "Expert Enquiry has been Deleted Successfully!!!";
+$BIZBOOK['EVENT_INSERT_SUCCESS_MESSAGE'] = "¡Nuevo Evento creado exitosamente!";
 
-$BIZBOOK['JOB_APPLIED_DELETE_SUCCESS_MESSAGE'] = "Applied Job has been Deleted Successfully!!!";
+$BIZBOOK['LISTING_DUPLICATE_INSERT_SUCCESS_MESSAGE'] = "¡Nuevo Negocio duplicado creado exitosamente!";
 
-$BIZBOOK['JOB_PROFILE_DELETE_SUCCESS_MESSAGE'] = "Job Profile has been Deleted Successfully!!!";
+$BIZBOOK['ENQUIRY_DELETE_SUCCESS_MESSAGE'] = "¡Reserva del Negocio eliminada exitosamente!";
 
+$BIZBOOK['SERVICE_EXPERT_ENQUIRY_DELETE_SUCCESS_MESSAGE'] = "¡Consulta del Experto eliminada exitosamente!";
 
-//************************* ALL MAIL SUBJECT MESSAGES ***********
+$BIZBOOK['JOB_APPLIED_DELETE_SUCCESS_MESSAGE'] = "¡Empleo aplicado eliminado exitosamente!";
 
-$BIZBOOK['BLOG_INSERT_ADMIN_SUBJECT'] = "-New Blog has been created";
+$BIZBOOK['JOB_PROFILE_DELETE_SUCCESS_MESSAGE'] = "¡Perfil de Empleo eliminado exitosamente!";
 
-$BIZBOOK['BLOG_INSERT_CLIENT_SUBJECT'] = "-blog Creation Successful";
 
-$BIZBOOK['BLOG_UPDATE_ADMIN_SUBJECT'] = "- blog has been updated";
+//************************* TODOS LOS ASUNTOS DE CORREOS ELECTRÓNICOS ***********
 
-$BIZBOOK['BLOG_UPDATE_CLIENT_SUBJECT'] = "-blog Update Successful";
+$BIZBOOK['BLOG_INSERT_ADMIN_SUBJECT'] = "-Nuevo Blog ha sido creado";
 
-$BIZBOOK['USER_INSERT_ADMIN_SUBJECT'] = "-New Registration";
+$BIZBOOK['BLOG_INSERT_CLIENT_SUBJECT'] = "-Creación de Blog Exitosa";
 
-$BIZBOOK['USER_INSERT_CLIENT_SUBJECT'] = "Registration Successful";
+$BIZBOOK['BLOG_UPDATE_ADMIN_SUBJECT'] = "- Blog ha sido actualizado";
 
-$BIZBOOK['USER_VERIFICATION_RESENT_CLIENT_SUBJECT'] = "Your Verification Code";
+$BIZBOOK['BLOG_UPDATE_CLIENT_SUBJECT'] = "-Actualización de Blog Exitosa";
 
-$BIZBOOK['PRODUCT_UPDATE_ADMIN_SUBJECT'] = "- Product has been updated";
+$BIZBOOK['USER_INSERT_ADMIN_SUBJECT'] = "-Nuevo Registro";
 
-$BIZBOOK['PRODUCT_UPDATE_CLIENT_SUBJECT'] = "- Product Update Successful";
+$BIZBOOK['USER_INSERT_CLIENT_SUBJECT'] = "Registro Exitoso";
 
-$BIZBOOK['PRODUCT_INSERT_ADMIN_SUBJECT'] = "-New Product has been created";
+$BIZBOOK['USER_VERIFICATION_RESENT_CLIENT_SUBJECT'] = "Tu Código de Verificación";
 
-$BIZBOOK['PRODUCT_INSERT_CLIENT_SUBJECT'] = "- Product Creation Successful";
+$BIZBOOK['PRODUCT_UPDATE_ADMIN_SUBJECT'] = "- Producto ha sido actualizado";
 
-$BIZBOOK['JOB_UPDATE_ADMIN_SUBJECT'] = "- Job has been updated";
+$BIZBOOK['PRODUCT_UPDATE_CLIENT_SUBJECT'] = "-Actualización de Producto Exitosa";
 
-$BIZBOOK['JOB_UPDATE_CLIENT_SUBJECT'] = "- Job Update Successful";
+$BIZBOOK['PRODUCT_INSERT_ADMIN_SUBJECT'] = "-Nuevo Producto ha sido creado";
 
-$BIZBOOK['JOB_INSERT_ADMIN_SUBJECT'] = "-New Job has been created";
+$BIZBOOK['PRODUCT_INSERT_CLIENT_SUBJECT'] = "-Creación de Producto Exitosa";
 
-$BIZBOOK['JOB_INSERT_CLIENT_SUBJECT'] = "- Job Creation Successful";
+$BIZBOOK['JOB_UPDATE_ADMIN_SUBJECT'] = "- Empleo ha sido actualizado";
 
-$BIZBOOK['PLAN_CHANGE_CLIENT_SUBJECT'] = "- Plan Change Request";
+$BIZBOOK['JOB_UPDATE_CLIENT_SUBJECT'] = "-Actualización de Empleo Exitosa";
 
-$BIZBOOK['LISTING_UPDATE_ADMIN_SUBJECT'] = "- Listing has been updated";
+$BIZBOOK['JOB_INSERT_ADMIN_SUBJECT'] = "-Nuevo Empleo ha sido creado";
 
-$BIZBOOK['LISTING_UPDATE_CLIENT_SUBJECT'] = "- Listing Update Successful";
+$BIZBOOK['JOB_INSERT_CLIENT_SUBJECT'] = "-Creación de Empleo Exitosa";
 
-$BIZBOOK['LISTING_INSERT_ADMIN_SUBJECT'] = "-New Listing has been created";
+$BIZBOOK['PLAN_CHANGE_CLIENT_SUBJECT'] = "-Solicitud de Cambio de Pack";
 
-$BIZBOOK['LISTING_INSERT_CLIENT_SUBJECT'] = "- Listing Creation Successful";
+$BIZBOOK['LISTING_UPDATE_ADMIN_SUBJECT'] = "- Negocio ha sido actualizado";
 
-$BIZBOOK['FORGET_PASSWORD_ADMIN_SUBJECT'] = "-Forget Password";
+$BIZBOOK['LISTING_UPDATE_CLIENT_SUBJECT'] = "-Actualización de Negocio Exitosa";
 
-$BIZBOOK['FORGET_PASSWORD_CLIENT_SUBJECT'] = "- Listing Creation Successful";
+$BIZBOOK['LISTING_INSERT_ADMIN_SUBJECT'] = "-Nuevo Negocio ha sido creado";
 
-$BIZBOOK['EVENT_UPDATE_ADMIN_SUBJECT'] = "- Event has been updated";
+$BIZBOOK['LISTING_INSERT_CLIENT_SUBJECT'] = "-Creación de Negocio Exitosa";
 
-$BIZBOOK['EVENT_UPDATE_CLIENT_SUBJECT'] = "- Event Update Successful";
+$BIZBOOK['FORGET_PASSWORD_ADMIN_SUBJECT'] = "-Contraseña Olvidada";
 
-$BIZBOOK['EVENT_INSERT_ADMIN_SUBJECT'] = "- New Event has been created";
+$BIZBOOK['FORGET_PASSWORD_CLIENT_SUBJECT'] = "-Creación de Negocio Exitosa";
 
-$BIZBOOK['EVENT_INSERT_CLIENT_SUBJECT'] = "- Event Creation Successful";
+$BIZBOOK['EVENT_UPDATE_ADMIN_SUBJECT'] = "- Evento ha sido actualizado";
 
-//************************* ABOUT US PAGE ***********
+$BIZBOOK['EVENT_UPDATE_CLIENT_SUBJECT'] = "-Actualización de Evento Exitosa";
 
-$BIZBOOK['pg_abo_ban_tit'] = "About us";
+$BIZBOOK['EVENT_INSERT_ADMIN_SUBJECT'] = "- Nuevo Evento ha sido creado";
 
-$BIZBOOK['pg_abo_ban_sub_tit'] = "injected humourThere are many variations of passages of Lorem Ipsum available now";
+$BIZBOOK['EVENT_INSERT_CLIENT_SUBJECT'] = "-Creación de Evento Exitosa";
 
-$BIZBOOK['pg_abo_sec1'] = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humourThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humourThere are many variations of passages of Lorem Ipsum available.";
+//************************* PÁGINA SOBRE NOSOTROS ***********
 
-$BIZBOOK['pg_abo_sec2'] = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humourThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humourThere are many variations of passages of Lorem Ipsum available.";
+$BIZBOOK['pg_abo_ban_tit'] = "Sobre Nosotros";
 
-$BIZBOOK['pg_abo_why_tit'] = "Why Choose Us";
+$BIZBOOK['pg_abo_ban_sub_tit'] = "Existen muchas variaciones de los pasajes de Lorem Ipsum disponibles ahora";
 
-$BIZBOOK['pg_abo_why_sub'] = "Explore some of the best tips from around the world from our
-partners and friends";
+$BIZBOOK['pg_abo_sec1'] = "Existen muchas variaciones de los pasajes de Lorem Ipsum, pero la mayoría ha sufrido alteraciones en alguna forma.";
 
-$BIZBOOK['pg_abo_why_s1_tit'] = "Google indexing";
+$BIZBOOK['pg_abo_sec2'] = "Existen muchas variaciones de los pasajes de Lorem Ipsum, pero la mayoría ha sufrido alteraciones en alguna forma.";
 
-$BIZBOOK['pg_abo_why_s1_sub'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
+$BIZBOOK['pg_abo_why_tit'] = "Por Qué Elegirnos";
 
-$BIZBOOK['pg_abo_why_s2_tit'] = "More popular";
+$BIZBOOK['pg_abo_why_sub'] = "Explora algunos de los mejores consejos de nuestros socios y amigos de todo el mundo";
 
-$BIZBOOK['pg_abo_why_s2_sub'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
+$BIZBOOK['pg_abo_why_s1_tit'] = "Indexación en Google";
 
-$BIZBOOK['pg_abo_why_s3_tit'] = "Get more leads";
+$BIZBOOK['pg_abo_why_s1_sub'] = "Obtén una mejor visibilidad en línea y presencia en Google.";
 
-$BIZBOOK['pg_abo_why_s3_sub'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
+$BIZBOOK['pg_abo_why_s2_tit'] = "Más popular";
 
-$BIZBOOK['pg_abo_why_s4_tit'] = "Archive goles";
+$BIZBOOK['pg_abo_why_s2_sub'] = "Mejora tu alcance y popularidad en línea con nuestros servicios.";
 
-$BIZBOOK['pg_abo_why_s4_sub'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
+$BIZBOOK['pg_abo_why_s3_tit'] = "Obtén más clientes potenciales";
 
-$BIZBOOK['pg_abo_team_tit'] = "Out Team";
+$BIZBOOK['pg_abo_why_s3_sub'] = "Encuentra clientes ideales y amplía tu negocio de manera efectiva.";
 
-$BIZBOOK['pg_abo_why_team_sub'] = "Explore some of the best tips from around the world from our
-partners and friends";
+$BIZBOOK['pg_abo_why_s4_tit'] = "Alcance de objetivos";
 
-$BIZBOOK['pg_abo_tem_u1_nam'] = "John smith";
+$BIZBOOK['pg_abo_why_s4_sub'] = "Logra tus objetivos comerciales con nuestras herramientas especializadas.";
 
-$BIZBOOK['pg_abo_tem_u1_dec'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
+$BIZBOOK['pg_abo_team_tit'] = "Nuestro Equipo";
+
+$BIZBOOK['pg_abo_why_team_sub'] = "Explora algunos de los mejores consejos de nuestros socios y amigos de todo el mundo";
+
+$BIZBOOK['pg_abo_tem_u1_nam'] = "John Smith";
+
+$BIZBOOK['pg_abo_tem_u1_dec'] = "Contribuye a nuestra visión con experiencia y dedicación.";
 
 $BIZBOOK['pg_abo_tem_u2_nam'] = "Lusia Ann";
 
-$BIZBOOK['pg_abo_tem_u2_dec'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
+$BIZBOOK['pg_abo_tem_u2_dec'] = "Apasionada en brindar soluciones innovadoras a nuestros clientes.";
 
-$BIZBOOK['pg_abo_tem_u3_nam'] = "Mark luberk";
+$BIZBOOK['pg_abo_tem_u3_nam'] = "Mark Luberk";
 
-$BIZBOOK['pg_abo_tem_u3_dec'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
+$BIZBOOK['pg_abo_tem_u3_dec'] = "Comprometido con la excelencia y los resultados de calidad.";
 
-$BIZBOOK['pg_abo_tem_u4_nam'] = "Anjalena juley";
+$BIZBOOK['pg_abo_tem_u4_nam'] = "Anjalena Juley";
 
-$BIZBOOK['pg_abo_tem_u4_dec'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
+$BIZBOOK['pg_abo_tem_u4_dec'] = "Experta en crear experiencias de usuario únicas y eficaces.";
 
-//************************* CONTACT US PAGE ***********
+//************************* PÁGINA CONTÁCTANOS ***********
 
-$BIZBOOK['pg_contus_tit'] = "Contact Us";
+$BIZBOOK['pg_contus_tit'] = "Contáctanos";
 
-$BIZBOOK['pg_contus_tit_sub'] = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration";
+$BIZBOOK['pg_contus_tit_sub'] = "Existen muchas variaciones de los pasajes de Lorem Ipsum, pero la mayoría ha sufrido alteraciones";
 
-$BIZBOOK['pg_contus_addre'] = "Address:";
+$BIZBOOK['pg_contus_addre'] = "Dirección:";
 
-$BIZBOOK['pg_contus_cont1'] = "United States:";
+$BIZBOOK['pg_contus_cont1'] = "España:";
 
-$BIZBOOK['pg_contus_cont1_addr'] = "28800 Orchard Lake Road, Suite 180 Farmington Hills, U.S.A.";
+$BIZBOOK['pg_contus_cont1_addr'] = "28800 Orchard Lake Road, Suite 180 Farmington Hills, EE.UU.";
 
 $BIZBOOK['pg_contus_cont2'] = "India:";
 
 $BIZBOOK['pg_contus_cont2_addr'] = "28800 Orchard Lake Road, Suite 180 Farmington, Chennai, India";
 
-$BIZBOOK['pg_contus_coninfo'] = "Contact info:";
+$BIZBOOK['pg_contus_coninfo'] = "Información de contacto:";
 
-$BIZBOOK['pg_contus_sup_pho'] = "Support: +01 25414 6354";
+$BIZBOOK['pg_contus_sup_pho'] = "Soporte: +01 25414 6354";
 
-$BIZBOOK['pg_contus_enqu'] = "Enquiry: +01 9867 4326";
+$BIZBOOK['pg_contus_enqu'] = "Consulta: +01 9867 4326";
 
-$BIZBOOK['pg_contus_email1'] = "Email: support@company.com";
+$BIZBOOK['pg_contus_email1'] = "Correo electrónico: soporte@zitiziti.com";
 
-$BIZBOOK['pg_contus_email2'] = "Email: support@company.com";
+$BIZBOOK['pg_contus_email2'] = "Correo electrónico: soporte@zitiziti.com";
 
-$BIZBOOK['pg_contus_web_tit'] = "Website & Social media:";
+$BIZBOOK['pg_contus_web_tit'] = "Sitio web y Redes Sociales:";
 
-$BIZBOOK['pg_contus_web'] = "www.rn53themes.net";
+$BIZBOOK['pg_contus_web'] = "www.zitiziti.com";
 
 $BIZBOOK['pg_contus_fb'] = "Facebook";
 
 $BIZBOOK['pg_contus_twi'] = "Twitter";
 
-$BIZBOOK['pg_contus_web_link'] = "https://rn53themes.net/";
+$BIZBOOK['pg_contus_web_link'] = "https://zitiziti.com/";
 
-$BIZBOOK['pg_contus_fb_link'] = "https://www.facebook.com/53themes";
+$BIZBOOK['pg_contus_fb_link'] = "https://www.facebook.com/zitiziti";
 
-$BIZBOOK['pg_contus_twi_link'] = "https://twitter.com/53themes";
+$BIZBOOK['pg_contus_twi_link'] = "https://twitter.com/zitiziti";
 
 
-//************************* FAQ PAGE ***********
+//************************* PÁGINA FAQ ***********
 
-$BIZBOOK['pg_faq_head'] = "FAQ";
+$BIZBOOK['pg_faq_head'] = "Preguntas Frecuentes";
 
-$BIZBOOK['pg_faq_tit'] = "Frequently Asked Questions";
+$BIZBOOK['pg_faq_tit'] = "Preguntas Frecuentes";
 
-$BIZBOOK['pg_faq_sub_tit'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_faq_sub_tit'] = "Es un hecho establecido que el contenido legible distrae al lector al ver el diseño de la página.";
 
-$BIZBOOK['pg_faq_q1'] = "How to create new listing?";
+$BIZBOOK['pg_faq_q1'] = "¿Cómo crear un nuevo negocio?";
 
-$BIZBOOK['pg_faq_a1'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_faq_a1'] = "Es un hecho establecido que el contenido legible distrae al lector al ver el diseño de la página.";
 
-$BIZBOOK['pg_faq_q2'] = "How to change free listing to premium listing?";
+$BIZBOOK['pg_faq_q2'] = "¿Cómo cambiar de negocio gratuito a negocio premium?";
 
-$BIZBOOK['pg_faq_a2'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_faq_a2'] = "Es un hecho establecido que el contenido legible distrae al lector al ver el diseño de la página.";
 
-$BIZBOOK['pg_faq_q3'] = "How can i change my user type?";
+$BIZBOOK['pg_faq_q3'] = "¿Cómo puedo cambiar mi tipo de usuario?";
 
-$BIZBOOK['pg_faq_a3'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_faq_a3'] = "Es un hecho establecido que el contenido legible distrae al lector al ver el diseño de la página.";
 
-$BIZBOOK['pg_faq_q4'] = "How to make Payment?";
+$BIZBOOK['pg_faq_q4'] = "¿Cómo realizar un pago?";
 
-$BIZBOOK['pg_faq_a4'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_faq_a4'] = "Es un hecho establecido que el contenido legible distrae al lector al ver el diseño de la página.";
 
-$BIZBOOK['pg_faq_q5'] = "How to create Ads?";
+$BIZBOOK['pg_faq_q5'] = "¿Cómo crear anuncios?";
 
-$BIZBOOK['pg_faq_a5'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_faq_a5'] = "Es un hecho establecido que el contenido legible distrae al lector al ver el diseño de la página.";
 
-$BIZBOOK['pg_faq_q6'] = "What is user type?";
+$BIZBOOK['pg_faq_q6'] = "¿Qué es el tipo de usuario?";
 
-$BIZBOOK['pg_faq_a6'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_faq_a6'] = "Es un hecho establecido que el contenido legible distrae al lector al ver el diseño de la página.";
 
-$BIZBOOK['pg_faq_q7'] = "How to contact support team?";
+$BIZBOOK['pg_faq_q7'] = "¿Cómo contactar al equipo de soporte?";
 
-$BIZBOOK['pg_faq_a7'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_faq_a7'] = "Es un hecho establecido que el contenido legible distrae al lector al ver el diseño de la página.";
 
-$BIZBOOK['pg_faq_q8'] = "How to create new listing?";
+$BIZBOOK['pg_faq_q8'] = "¿Cómo crear un nuevo negocio?";
 
-$BIZBOOK['pg_faq_a8'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_faq_a8'] = "Es un hecho establecido que el contenido legible distrae al lector al ver el diseño de la página.";
 
-//************************* HOW TO PAGE ***********
+//************************* PÁGINA CÓMO HACER ***********
 
-$BIZBOOK['pg_howto_head'] = "How tos";
+$BIZBOOK['pg_howto_head'] = "Cómo Hacer";
 
-$BIZBOOK['pg_howto_tit'] = "How tos";
+$BIZBOOK['pg_howto_tit'] = "Cómo Hacer";
 
-$BIZBOOK['pg_howto_sub_tit'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_howto_sub_tit'] = "Es un hecho establecido que el contenido legible distrae al lector al ver el diseño de la página.";
 
-$BIZBOOK['pg_howto_q1'] = "How to create new listing?";
+$BIZBOOK['pg_howto_q1'] = "¿Cómo crear un nuevo negocio?";
 
-$BIZBOOK['pg_howto_a1'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_howto_a1'] = "Es un hecho establecido que el contenido legible distrae al lector al ver el diseño de la página.";
 
-$BIZBOOK['pg_howto_q2'] = "How to change free listing to premium listing?";
+$BIZBOOK['pg_howto_q2'] = "¿Cómo cambiar de negocio gratuito a negocio premium?";
 
-$BIZBOOK['pg_howto_a2'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_howto_a2'] = "Es un hecho establecido que el contenido legible distrae al lector al ver el diseño de la página.";
 
-$BIZBOOK['pg_howto_q3'] = "How can i change my user type?";
+$BIZBOOK['pg_howto_q3'] = "¿Cómo puedo cambiar mi tipo de usuario?";
 
-$BIZBOOK['pg_howto_a3'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_howto_a3'] = "Es un hecho establecido que el contenido legible distrae al lector al ver el diseño de la página.";
 
-$BIZBOOK['pg_howto_q4'] = "How to make Payment?";
+$BIZBOOK['pg_howto_q4'] = "¿Cómo realizar un pago?";
 
-$BIZBOOK['pg_howto_a4'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_howto_a4'] = "Es un hecho establecido que el contenido legible distrae al lector al ver el diseño de la página.";
 
-$BIZBOOK['pg_howto_q5'] = "How to create Ads?";
+$BIZBOOK['pg_howto_q5'] = "¿Cómo crear anuncios?";
 
-$BIZBOOK['pg_howto_a5'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_howto_a5'] = "Es un hecho establecido que el contenido legible distrae al lector al ver el diseño de la página.";
 
-$BIZBOOK['pg_howto_q6'] = "What is user type?";
+$BIZBOOK['pg_howto_q6'] = "¿Qué es el tipo de usuario?";
 
-$BIZBOOK['pg_howto_a6'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_howto_a6'] = "Es un hecho establecido que el contenido legible distrae al lector al ver el diseño de la página.";
 
-$BIZBOOK['pg_howto_q7'] = "How to contact support team?";
+$BIZBOOK['pg_howto_q7'] = "¿Cómo contactar al equipo de soporte?";
 
-$BIZBOOK['pg_howto_a7'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_howto_a7'] = "Es un hecho establecido que el contenido legible distrae al lector al ver el diseño de la página.";
 
-$BIZBOOK['pg_howto_q8'] = "How to create new listing?";
+$BIZBOOK['pg_howto_q8'] = "¿Cómo crear un nuevo negocio?";
 
-$BIZBOOK['pg_howto_a8'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_howto_a8'] = "Es un hecho establecido que el contenido legible distrae al lector al ver el diseño de la página.";
 
-//************************* USER TYPE PAGE ***********
+//************************* PÁGINA DE TIPOS DE USUARIO ***********
 
-$BIZBOOK['pg_utype_tit1'] = "SERVICE PROVIDER CAN";
+$BIZBOOK['pg_utype_tit1'] = "LO QUE PUEDE HACER EL PROVEEDOR DE SERVICIOS";
 
-$BIZBOOK['pg_utype_tit2'] = "GENERAL USERS CAN";
+$BIZBOOK['pg_utype_tit2'] = "LO QUE PUEDEN HACER LOS USUARIOS GENERALES";
 
-$BIZBOOK['pg_utype_start'] = "Get Start";
+$BIZBOOK['pg_utype_start'] = "Empezar";
 
-$BIZBOOK['pg_utype_sp1'] = "User dashboard";
+$BIZBOOK['pg_utype_sp1'] = "Panel de usuario";
 
-$BIZBOOK['pg_utype_sp2'] = "Profile page";
+$BIZBOOK['pg_utype_sp2'] = "Página de perfil";
 
-$BIZBOOK['pg_utype_sp3'] = "Reviews";
+$BIZBOOK['pg_utype_sp3'] = "Reseñas";
 
-$BIZBOOK['pg_utype_sp4'] = "Like listings";
+$BIZBOOK['pg_utype_sp4'] = "Me gusta en negocios";
 
-$BIZBOOK['pg_utype_sp5'] = "Get quote & send enquiry";
+$BIZBOOK['pg_utype_sp5'] = "Obtener cotización y enviar consulta";
 
-$BIZBOOK['pg_utype_sp6'] = "Followings";
+$BIZBOOK['pg_utype_sp6'] = "Seguimientos";
 
-$BIZBOOK['pg_utype_sp7'] = "Notifications";
+$BIZBOOK['pg_utype_sp7'] = "Notificaciones";
 
-$BIZBOOK['pg_utype_sp8'] = "Create new listing";
+$BIZBOOK['pg_utype_sp8'] = "Crear nuevo negocio";
 
-$BIZBOOK['pg_utype_gp1'] = "User dashboard";
+$BIZBOOK['pg_utype_gp1'] = "Panel de usuario";
 
-$BIZBOOK['pg_utype_gp2'] = "Profile page";
+$BIZBOOK['pg_utype_gp2'] = "Página de perfil";
 
-$BIZBOOK['pg_utype_gp3'] = "Reviews";
+$BIZBOOK['pg_utype_gp3'] = "Reseñas";
 
-$BIZBOOK['pg_utype_gp4'] = "Followings";
+$BIZBOOK['pg_utype_gp4'] = "Seguimientos";
 
-$BIZBOOK['pg_utype_gp5'] = "Post your Ads";
+$BIZBOOK['pg_utype_gp5'] = "Publicar tus anuncios";
 
-$BIZBOOK['pg_utype_gp6'] = "Lead management";
+$BIZBOOK['pg_utype_gp6'] = "Gestión de clientes potenciales";
 
-$BIZBOOK['pg_utype_gp7'] = "Payment invoices";
+$BIZBOOK['pg_utype_gp7'] = "Facturas de pago";
 
-$BIZBOOK['pg_utype_gp8'] = "Mange listing, event & blogs";
+$BIZBOOK['pg_utype_gp8'] = "Gestionar negocios, eventos y blogs";
 
-//************************* POLICY & TERMS ***********
+//************************* POLÍTICA Y TÉRMINOS ***********
 
-$BIZBOOK['pg_pri_tit'] = "Privacy Policy";
+$BIZBOOK['pg_pri_tit'] = "Política de Privacidad";
 
-$BIZBOOK['pg_terms_tit'] = "Terms of Use";
+$BIZBOOK['pg_terms_tit'] = "Términos de Uso";
 
+//************************* NOTICIAS Y REVISTAS ***********
 
-//************************* NEWS & MAGAZINES ***********
+$BIZBOOK['NEWS-MAGA'] = "Noticias y Revistas";
 
-$BIZBOOK['NEWS-MAGA'] = "News & Magazines";
+$BIZBOOK['NEWS'] = "Noticias";
 
-$BIZBOOK['NEWS'] = "News";
+$BIZBOOK['SEARCHBOX_LABEL_SER'] = "Seleccionar Servicios";
 
-$BIZBOOK['SEARCHBOX_LABEL_SER'] = "Select Services";
-$BIZBOOK['EXPL-MORE-FEA'] = "Explore our more Services";
+$BIZBOOK['EXPL-MORE-FEA'] = "Explora más Servicios";
 
-//****** HOME PAGE MODULES ***** */
-$BIZBOOK['HOM-MODU-TIT-JOB'] = "Start finding your dream job now";
-$BIZBOOK['HOM-MODU-TIT-PROD'] = "Start selling your products online";
-$BIZBOOK['HOM-MODU-TIT-DEAL'] = "Coupon and deals for your shopping";
-$BIZBOOK['HOM-MODU-TIT-TRAVEL'] = "Explore your travel destination";
-$BIZBOOK['HOM-MODU-TIT-EXP'] = "Find your service experts for your needs";
-$BIZBOOK['HOM-MODU-TIT-NEWS'] = "All news updates in one place";
-$BIZBOOK['HOM-MODU-TIT-EVE'] = "Start finding your dream job now";
-$BIZBOOK['HOM-MODU-TIT-BLOG'] = "Start finding your dream job now";
-$BIZBOOK['HOM-MODU-TIT-COMM'] = "Start finding your dream job now";
-$BIZBOOK['HOM-MODU-START-SELLING'] = "Start selling";
-$BIZBOOK['HOM-MODU-BOOK-EXPERT-NOW'] = "Book Expert Now";
+//****** MÓDULOS DE LA PÁGINA PRINCIPAL ***** */
 
-//************************* QUESTIONS ***********
-$BIZBOOK['QUE-HOM-TIT'] = "Answers available here";
-$BIZBOOK['QUE-HOM-TIT-SUB'] = "Find the best answer to your technical question, help others answer theirs";
-$BIZBOOK['QUE-HOME-SEARCH-OPTION-1'] = "Find your answers here..";
-$BIZBOOK['QUE-HOME-H-2-1'] = "Latest";
-$BIZBOOK['QUE-HOME-P-2-1'] = "A public platform building the definitive collection of coding questions & answers";
+$BIZBOOK['HOM-MODU-TIT-JOB'] = "Empieza a buscar el trabajo de tus sueños ahora";
 
-//***** DASHBOARD LEFT 8Apr23 ***** */
-$BIZBOOK['DASH-LHS-ALL-MOD'] = "All Modules";
-$BIZBOOK['DASH-LHS-LEAD'] = "LEADS & ENQUIRY";
-$BIZBOOK['DASH-LHS-PAY'] = "Payment & Promotions";
-$BIZBOOK['DASH-LHS-PAGES'] = "Profile pages";
-$BIZBOOK['DASH-LHS-ACTI'] = "My activities";
-$BIZBOOK['DASH-LHS-SETT'] = "Settings";
+$BIZBOOK['HOM-MODU-TIT-PROD'] = "Comienza a vender tus productos en línea";
+
+$BIZBOOK['HOM-MODU-TIT-DEAL'] = "Cupones y ofertas para tus compras";
+
+$BIZBOOK['HOM-MODU-TIT-TRAVEL'] = "Explora tu destino de viaje";
+
+$BIZBOOK['HOM-MODU-TIT-EXP'] = "Encuentra expertos en servicios para tus necesidades";
+
+$BIZBOOK['HOM-MODU-TIT-NEWS'] = "Todas las actualizaciones de noticias en un solo lugar";
+
+$BIZBOOK['HOM-MODU-TIT-EVE'] = "Empieza a buscar el trabajo de tus sueños ahora";
+
+$BIZBOOK['HOM-MODU-TIT-BLOG'] = "Empieza a buscar el trabajo de tus sueños ahora";
+
+$BIZBOOK['HOM-MODU-TIT-COMM'] = "Empieza a buscar el trabajo de tus sueños ahora";
+
+$BIZBOOK['HOM-MODU-START-SELLING'] = "Comienza a vender";
+
+$BIZBOOK['HOM-MODU-BOOK-EXPERT-NOW'] = "Reserva un Experto Ahora";
+
+//************************* PREGUNTAS ***********
+
+$BIZBOOK['QUE-HOM-TIT'] = "Respuestas disponibles aquí";
+
+$BIZBOOK['QUE-HOM-TIT-SUB'] = "Encuentra la mejor respuesta a tu pregunta técnica, ayuda a otros a responder las suyas";
+
+$BIZBOOK['QUE-HOME-SEARCH-OPTION-1'] = "Encuentra tus respuestas aquí..";
+
+$BIZBOOK['QUE-HOME-H-2-1'] = "Últimos";
+
+$BIZBOOK['QUE-HOME-P-2-1'] = "Una plataforma pública que construye la colección definitiva de preguntas y respuestas de programación";
+
+//***** PANEL DE CONTROL IZQUIERDO ***** */
+
+$BIZBOOK['DASH-LHS-ALL-MOD'] = "Todos los Módulos";
+
+$BIZBOOK['DASH-LHS-LEAD'] = "CLIENTES POTENCIALES Y CONSULTAS";
+
+$BIZBOOK['DASH-LHS-PAY'] = "Pagos y Promociones";
+
+$BIZBOOK['DASH-LHS-PAGES'] = "Páginas de Perfil";
+
+$BIZBOOK['DASH-LHS-ACTI'] = "Mis Actividades";
+
+$BIZBOOK['DASH-LHS-SETT'] = "Configuración";
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -310,11 +310,14 @@ if ($footer_row['admin_install_flag'] == 1) {
 <script src="<?php echo $webpage_full_link; ?>/js/jquery.min.js"></script>
 <script>
     $("#lang").change(function() {
+        langValue = $(this).val()
+        // console.log($(this).val());
+        
         $.ajax({
             type: "POST",
-            url: "change_language.php", 
+            url: "../change_language.php", 
             data: {
-                lang: $(this).val(), 
+                lang: langValue,
             },
             success: function(data) {
                 location.reload();
