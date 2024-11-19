@@ -63,7 +63,7 @@ foreach ($CityList as $City => $CitySlug) {
 if($_SERVER['SERVER_NAME'] == 'localhost') {
     $FullHostname = 'localhost';
 }else{
-    $FullHostname = $DomainPrefix . '.truewebservice.com';
+    $FullHostname = $DomainPrefix . '.zitiziti.com';
 }
 
 //echo $_SERVER['HTTP_HOST'];
