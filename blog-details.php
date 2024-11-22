@@ -43,12 +43,12 @@ if ($blog_id == NULL && empty($blog_id)) {
                 <div class="rhs">
                     <div class="list-rhs-form pglist-bg pglist-p-com">
                         <div class="quote-pop">
-                            <h3><?php echo $BIZBOOK['LEAD-SEND-ENQUIRY']; ?></h3>
-                            <div id="blog_detail_enq_success" class="log new-tnk-msg" style="display: none;"><p><?php echo $BIZBOOK['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
+                            <h3><?php echo $Zitiziti['LEAD-SEND-ENQUIRY']; ?></h3>
+                            <div id="blog_detail_enq_success" class="log new-tnk-msg" style="display: none;"><p><?php echo $Zitiziti['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
                             </div>
-                            <div id="blog_detail_enq_same" class="log" style="display: none;"><p><?php echo $BIZBOOK['ENQUIRY_OWN_BLOG_MESSAGE']; ?></p>
+                            <div id="blog_detail_enq_same" class="log" style="display: none;"><p><?php echo $Zitiziti['ENQUIRY_OWN_BLOG_MESSAGE']; ?></p>
                             </div>
-                            <div id="blog_detail_enq_fail" class="log" style="display: none;"><p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                            <div id="blog_detail_enq_fail" class="log" style="display: none;"><p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                             </div>
                             <form method="post" name="blog_detail_enquiry_form" id="blog_detail_enquiry_form">
 
@@ -84,37 +84,37 @@ if ($blog_id == NULL && empty($blog_id)) {
                                         <input type="text" name="enquiry_name"
                                                value="<?php echo $user_details_row['first_name'] ?>"
                                                required="required" class="form-control"
-                                               placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>">
+                                               placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>">
                                     </div>
                                     <div class="form-group ic-eml">
                                         <input type="email" class="form-control"
-                                               placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>"  required="required"
+                                               placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>"  required="required"
                                                value="<?php echo $user_details_row['email_id'] ?>"
                                                name="enquiry_email"
                                                pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                               title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>" >
+                                               title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>" >
                                     </div>
                                     <div class="form-group ic-pho">
                                         <input type="text" class="form-control"
                                                value="<?php echo $user_details_row['mobile_number'] ?>"
                                                name="enquiry_mobile"
-                                               placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                               placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
                                                pattern="[7-9]{1}[0-9]{9}"
-                                               title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>"
+                                               title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>"
                                                required>
                                     </div>
                                     <div class="form-group">
                                         <textarea class="form-control" rows="3" name="enquiry_message"
-                                                  placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                                  placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                                     </div>
                                     <input type="hidden" id="source">
                                     <?php if(!isset($_SESSION['user_code']) && empty($_SESSION['user_code'])){ ?>
                                 </fieldset>
                             <?php } ?>
                                 <?php if(!isset($_SESSION['user_code']) && empty($_SESSION['user_code'])){ ?>
-                                    <a href="<?php echo $slash; ?>login"> <button type="button" name="" class="btn btn-primary"><?php echo $BIZBOOK['LEAD-LOGIN-ENJOY-MESSAGE']; ?></button></a>
+                                    <a href="<?php echo $slash; ?>login"> <button type="button" name="" class="btn btn-primary"><?php echo $Zitiziti['LEAD-LOGIN-ENJOY-MESSAGE']; ?></button></a>
                                 <?php }else{ ?>
-                                    <button type="submit" name="enquiry_submit" class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
+                                    <button type="submit" name="enquiry_submit" class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?></button>
                                 <?php }?>
                             </form>
                         </div>
@@ -142,8 +142,8 @@ if ($blog_id == NULL && empty($blog_id)) {
                <div class="head">
                    <div class="eve-bred-crum">
                         <ul>
-                        <li><a href="<?php echo $slash; ?>"><?php echo $BIZBOOK['HOME']; ?></a></li>
-                        <li><a href="<?php echo $slash; ?>blog-posts"><?php echo $BIZBOOK['ALL_BLOG']; ?></a></li>
+                        <li><a href="<?php echo $slash; ?>"><?php echo $Zitiziti['HOME']; ?></a></li>
+                        <li><a href="<?php echo $slash; ?>blog-posts"><?php echo $Zitiziti['ALL_BLOG']; ?></a></li>
                         <li><a href="#"><?php echo $blogs_a_row['blog_name']; ?></a></li>
                         </ul>
                     </div>
@@ -169,13 +169,13 @@ if ($blog_id == NULL && empty($blog_id)) {
                             echo $blog_user_row['profile_image'];
                         } ?>" alt="">
                         <h4><?php echo $blog_user_row['first_name']; ?></h4>
-                        <b><?php echo $BIZBOOK['BLOG-DETAILS-JOIN-ON']; ?> <?php echo dateFormatconverter($blog_user_row['user_cdt']); ?></b>
+                        <b><?php echo $Zitiziti['BLOG-DETAILS-JOIN-ON']; ?> <?php echo dateFormatconverter($blog_user_row['user_cdt']); ?></b>
                         <a target="_blank" href="<?php echo $PROFILE_URL.urlModifier($blog_user_row['user_slug']); ?>" class="fclick">&nbsp;</a>
                     </div>
                 </div>
                 <div class="sec-4">
-                    <h4><?php echo $BIZBOOK['BLOG-DETAILS-OTHER-POST']; ?></h4>
-                    <input type="text" id="pg-sear" placeholder="<?php echo $BIZBOOK['BLOG-DETAILS-SEARCH-ALL-POST']; ?>">
+                    <h4><?php echo $Zitiziti['BLOG-DETAILS-OTHER-POST']; ?></h4>
+                    <input type="text" id="pg-sear" placeholder="<?php echo $Zitiziti['BLOG-DETAILS-SEARCH-ALL-POST']; ?>">
                     <ul id="pg-resu">
                         <?php
                         $si = 1;
@@ -192,7 +192,7 @@ if ($blog_id == NULL && empty($blog_id)) {
         </div>
         
         <div class="pro-rel-posts">
-            <h4><?php echo $BIZBOOK['BLOG-DETAILS-RELATED-POST']; ?></h4>
+            <h4><?php echo $Zitiziti['BLOG-DETAILS-RELATED-POST']; ?></h4>
             <div class="plac-hom-all-pla plac-det-eve">
                     <ul class="multiple-items1">
                     <?php
@@ -230,22 +230,22 @@ if ($blog_id == NULL && empty($blog_id)) {
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <!-- Modal Header -->
                     <div class="quote-pop">
-                        <h4><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></h4>
+                        <h4><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></h4>
                         <form>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>" required>
+                                <input type="text" class="form-control" placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>" pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$" title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
+                                <input type="email" class="form-control" placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>" pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$" title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>" pattern="[7-9]{1}[0-9]{9}"
-                                       title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>" required>
+                                <input type="text" class="form-control" placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>" pattern="[7-9]{1}[0-9]{9}"
+                                       title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>" required>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" rows="3" placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                <textarea class="form-control" rows="3" placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
+                            <button type="submit" class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?></button>
                         </form>
                     </div>
                     <div class="log-bor">&nbsp;</div>

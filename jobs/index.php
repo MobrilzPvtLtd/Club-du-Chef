@@ -76,8 +76,8 @@ if($footer_row['admin_job_show'] != 1) {
         <div class="container">
             <div class="row">
                 <div class="jtit">
-                    <h1><?php echo $BIZBOOK['JOB-HEADER-H1']; ?></h1>
-                    <p><?php echo $BIZBOOK['JOB-HEADER-P']; ?></p>
+                    <h1><?php echo $Zitiziti['JOB-HEADER-H1']; ?></h1>
+                    <p><?php echo $Zitiziti['JOB-HEADER-P']; ?></p>
                 </div>
                 <br>
                
@@ -147,15 +147,15 @@ if($footer_row['admin_job_show'] != 1) {
                     <ul class=" d-flex justify-content-evenly w-100">
                         <li>
                             <span class="count1"><?php echo AddingZero_BeforeNumber(getCountJob()); ?></span>
-                            <h4><?php echo $BIZBOOK['JOB-POSTED']; ?></h4>
+                            <h4><?php echo $Zitiziti['JOB-POSTED']; ?></h4>
                         </li>
                         <li>
                             <span class="count1"><?php echo AddingZero_BeforeNumber(getCountJobCompanyName()); ?></span>
-                            <h4><?php echo $BIZBOOK['JOB-COMPANIES']; ?></h4>
+                            <h4><?php echo $Zitiziti['JOB-COMPANIES']; ?></h4>
                         </li>
                         <li>
                             <span class="count1"><?php echo AddingZero_BeforeNumber(getCountJobProfile()); ?></span>
-                            <h4><?php echo $BIZBOOK['JOB-EMPLOYEES']; ?></h4>
+                            <h4><?php echo $Zitiziti['JOB-EMPLOYEES']; ?></h4>
                         </li>
                     </ul>
                 </div>
@@ -170,8 +170,8 @@ if($footer_row['admin_job_show'] != 1) {
         <div class="container">
             <div class="row">
                 <div class="sub-tit">
-                    <h2><?php echo $BIZBOOK['JOB-HEADER-H2']; ?></h2>
-                    <p><?php echo $BIZBOOK['JOB-HEADER-P2']; ?></p>
+                    <h2><?php echo $Zitiziti['JOB-HEADER-H2']; ?></h2>
+                    <p><?php echo $Zitiziti['JOB-HEADER-P2']; ?></p>
                 </div>
                 <div class="job-cate-main">
                     <ul>
@@ -187,7 +187,7 @@ if($footer_row['admin_job_show'] != 1) {
                             <li>
                                 <div>
                                     <h4><?php echo $category_name; ?></h4>
-                                    <span><?php echo $total_jobs_category; ?> <?php echo $BIZBOOK['JOBS']; ?></span><a
+                                    <span><?php echo $total_jobs_category; ?> <?php echo $Zitiziti['JOBS']; ?></span><a
                                         href="<?php echo $ALL_JOBS_URL . urlModifier($job_categories_row['category_slug']); ?>" class="fcli"></a>
                                 </div>
                             </li>
@@ -208,8 +208,8 @@ if($footer_row['admin_job_show'] != 1) {
         <div class="container">
             <div class="row">
                 <div class="home-tit">
-                    <h2><span><?php echo $BIZBOOK['JOB-HEADER-H3']; ?></span></h2>
-                    <p><?php echo $BIZBOOK['JOB-HEADER-P3']; ?></p>
+                    <h2><span><?php echo $Zitiziti['JOB-HEADER-H3']; ?></span></h2>
+                    <p><?php echo $Zitiziti['JOB-HEADER-P3']; ?></p>
                 </div>
                 <div class="job-tre d-flex justify-content-center">
                     <ul>
@@ -233,7 +233,7 @@ if($footer_row['admin_job_show'] != 1) {
                                             <span><?php $job_location_row = getJobCity($job_profile_row['job_location']); echo $job_location_row['city_name']; ?></span>
                                             <div class="jbtre-days">
                                                 <span><?php echo time_elapsed_string($job_profile_row['job_cdt']); ?></span>
-                                                <span><?php echo $total_count_jobs_applied; ?> <?php echo $BIZBOOK['APPLICANTS']; ?></span>
+                                                <span><?php echo $total_count_jobs_applied; ?> <?php echo $Zitiziti['APPLICANTS']; ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -241,25 +241,25 @@ if($footer_row['admin_job_show'] != 1) {
                                         <span><?php
                                             $job_type = $job_profile_row['job_type'];
                                             if ($job_type == 1) {
-                                                echo $BIZBOOK['JOB-PERMANENT'];
+                                                echo $Zitiziti['JOB-PERMANENT'];
                                             } elseif ($job_type == 2) {
-                                                echo $BIZBOOK['JOB-CONTRACT'];
+                                                echo $Zitiziti['JOB-CONTRACT'];
                                             } elseif ($job_type == 3) {
-                                                echo $BIZBOOK['JOB-PART-TIME'];
+                                                echo $Zitiziti['JOB-PART-TIME'];
                                             } elseif ($job_type == 4) {
-                                                echo $BIZBOOK['JOB-FREELANCE'];
+                                                echo $Zitiziti['JOB-FREELANCE'];
                                             }
                                             ?></span>
                                         <span><?php echo $job_profile_row['job_role']; ?></span>
-                                        <span><?php echo AddingZero_BeforeNumber($job_profile_row['no_of_openings']); ?> <?php echo $BIZBOOK['JOB_OPENINGS']; ?></span>
+                                        <span><?php echo AddingZero_BeforeNumber($job_profile_row['no_of_openings']); ?> <?php echo $Zitiziti['JOB_OPENINGS']; ?></span>
                                     </div>
                                     <div class="jbtre-sale">
-                                        <span><?php echo $BIZBOOK['JOB-SALARY-LABEL']; ?></span>
+                                        <span><?php echo $Zitiziti['JOB-SALARY-LABEL']; ?></span>
                                         <span class="empsal"><?php echo $job_profile_row['job_salary']; ?>K</span>
                                     </div>
                                     <div class="jbtre-apl">
-                                        <span class="job-box-cta"><?php echo $BIZBOOK['JOB_APPLY_NOW']; ?></span>
-                                        <span><?php echo $BIZBOOK['JOB_MORE_DETAILS']; ?></span>
+                                        <span class="job-box-cta"><?php echo $Zitiziti['JOB_APPLY_NOW']; ?></span>
+                                        <span><?php echo $Zitiziti['JOB_MORE_DETAILS']; ?></span>
                                     </div>
                                     <a href="<?php echo $JOB_URL . urlModifier($job_profile_row['job_slug']); ?>"
                                        class="job-full-cta"></a>
@@ -282,19 +282,19 @@ if($footer_row['admin_job_show'] != 1) {
         <div class="container">
             <div class="row">
                 <div class="home-tit">
-                    <h2><span><?php echo $BIZBOOK['HOM3-OW-TIT']; ?></span></h2>
-                    <p><?php echo $BIZBOOK['HOM3-OW-TIT-SUB']; ?></p>
+                    <h2><span><?php echo $Zitiziti['HOM3-OW-TIT']; ?></span></h2>
+                    <p><?php echo $Zitiziti['HOM3-OW-TIT-SUB']; ?></p>
                 </div>
                 <div class="hom2-hom-ban-main">
                    <div class="hom2-hom-ban hom2-hom-ban1">
-                        <h2><?php echo $BIZBOOK['JOB-HOME-JOIN-EMP-TIT']; ?></h2>
-                        <p><?php echo $BIZBOOK['JOB-HOME-JOIN-EMP-SUB-TIT']; ?></p>
-                        <a href="<?php echo $slash; ?>login?login=register"><?php echo $BIZBOOK['JOB-HOME-JOIN-EMP-CTA']; ?></a>
+                        <h2><?php echo $Zitiziti['JOB-HOME-JOIN-EMP-TIT']; ?></h2>
+                        <p><?php echo $Zitiziti['JOB-HOME-JOIN-EMP-SUB-TIT']; ?></p>
+                        <a href="<?php echo $slash; ?>login?login=register"><?php echo $Zitiziti['JOB-HOME-JOIN-EMP-CTA']; ?></a>
                     </div>
                     <div class="hom2-hom-ban hom2-hom-ban2">
-                        <h2><?php echo $BIZBOOK['JOB-HOME-JOIN-COMP-TIT']; ?></h2>
-                        <p><?php echo $BIZBOOK['JOB-HOME-JOIN-COMP-SUB-TIT']; ?></p>
-                        <a href="<?php echo $slash; ?>login?login=register"><?php echo $BIZBOOK['JOB-HOME-JOIN-COMP-CTA']; ?></a>
+                        <h2><?php echo $Zitiziti['JOB-HOME-JOIN-COMP-TIT']; ?></h2>
+                        <p><?php echo $Zitiziti['JOB-HOME-JOIN-COMP-SUB-TIT']; ?></p>
+                        <a href="<?php echo $slash; ?>login?login=register"><?php echo $Zitiziti['JOB-HOME-JOIN-COMP-CTA']; ?></a>
                     </div>
                 </div>
             </div>
@@ -309,8 +309,8 @@ if($footer_row['admin_job_show'] != 1) {
         <div class="container">
             <div class="row">
                 <div class="home-tit">
-                    <h2><span><?php echo $BIZBOOK['JOB-HEADER-H4']; ?></span></h2>
-                    <p><?php echo $BIZBOOK['HOM-BEST-SUB-TIT']; ?></p>
+                    <h2><span><?php echo $Zitiziti['JOB-HEADER-H4']; ?></span></h2>
+                    <p><?php echo $Zitiziti['HOM-BEST-SUB-TIT']; ?></p>
                 </div>
 
                 <div class="hom2-cus-sli job-list">
@@ -336,27 +336,27 @@ if($footer_row['admin_job_show'] != 1) {
                                     </div>
                                     <div class="job-days">
                                         <span class="day"><?php echo time_elapsed_string($job_sql_row['job_cdt']); ?></span>
-                                        <span class="apl"><?php echo $total_count_jobs_applied; ?> <?php echo $BIZBOOK['APPLICANTS']; ?></span>
+                                        <span class="apl"><?php echo $total_count_jobs_applied; ?> <?php echo $Zitiziti['APPLICANTS']; ?></span>
                                     </div>
                                     <div class="job-box-con">
                                         <h4><?php echo $job_sql_row['job_title']; ?></h4>
                                         <span><?php
                                             $job_type = $job_sql_row['job_type'];
                                             if ($job_type == 1) {
-                                                echo $BIZBOOK['JOB-PERMANENT'];
+                                                echo $Zitiziti['JOB-PERMANENT'];
                                             } elseif ($job_type == 2) {
-                                                echo $BIZBOOK['JOB-CONTRACT'];
+                                                echo $Zitiziti['JOB-CONTRACT'];
                                             } elseif ($job_type == 3) {
-                                                echo $BIZBOOK['JOB-PART-TIME'];
+                                                echo $Zitiziti['JOB-PART-TIME'];
                                             } elseif ($job_type == 4) {
-                                                echo $BIZBOOK['JOB-FREELANCE'];
+                                                echo $Zitiziti['JOB-FREELANCE'];
                                             }
                                             ?></span>
                                         <span><?php echo $job_sql_row['job_role']; ?></span>
-                                        <span><?php echo AddingZero_BeforeNumber($job_sql_row['no_of_openings']); ?> <?php echo $BIZBOOK['JOB_OPENINGS']; ?></span>
+                                        <span><?php echo AddingZero_BeforeNumber($job_sql_row['no_of_openings']); ?> <?php echo $Zitiziti['JOB_OPENINGS']; ?></span>
                                     </div>
                                     <div class="job-box-apl">
-                                        <span class="job-box-cta"><?php echo $BIZBOOK['JOB_APPLY_NOW']; ?></span>
+                                        <span class="job-box-cta"><?php echo $Zitiziti['JOB_APPLY_NOW']; ?></span>
                                     </div>
                                     <a href="<?php echo $JOB_URL . urlModifier($job_sql_row['job_slug']); ?>" class="job-full-cta"></a>
                                 </div>
@@ -381,8 +381,8 @@ if($footer_row['admin_job_show'] != 1) {
 
                 <div class="how-wrks">
                     <div class="home-tit">
-                        <h2><span><?php echo $BIZBOOK['HOM-HOW-TIT']; ?></span></h2>
-                        <p><?php echo $BIZBOOK['HOM-HOW-SUB-TIT']; ?></p>
+                        <h2><span><?php echo $Zitiziti['HOM-HOW-TIT']; ?></span></h2>
+                        <p><?php echo $Zitiziti['HOM-HOW-SUB-TIT']; ?></p>
                     </div>
                     <div class="how-wrks-inn">
                         <ul>
@@ -390,32 +390,32 @@ if($footer_row['admin_job_show'] != 1) {
                                 <div>
                                     <span>1</span>
                                     <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>images/icon/how1.png" alt="">
-                                    <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-1']; ?></h4>
-                                    <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-1']; ?></p>
+                                    <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-1']; ?></h4>
+                                    <p><?php echo $Zitiziti['HOM-HOW-P-SUB-1']; ?></p>
                                 </div>
                             </li>
                             <li>
                                 <div>
                                     <span>2</span>
                                     <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>images/icon/how2.png" alt="">
-                                    <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-2']; ?></h4>
-                                    <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-2']; ?></p>
+                                    <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-2']; ?></h4>
+                                    <p><?php echo $Zitiziti['HOM-HOW-P-SUB-2']; ?></p>
                                 </div>
                             </li>
                             <li>
                                 <div>
                                     <span>3</span>
                                     <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>images/icon/how3.png" alt="">
-                                    <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-3']; ?></h4>
-                                    <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-3']; ?></p>
+                                    <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-3']; ?></h4>
+                                    <p><?php echo $Zitiziti['HOM-HOW-P-SUB-3']; ?></p>
                                 </div>
                             </li>
                             <li>
                                 <div>
                                     <span>4</span>
                                     <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>images/icon/how4.png" alt="">
-                                    <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-4']; ?></h4>
-                                    <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-4']; ?></p>
+                                    <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-4']; ?></h4>
+                                    <p><?php echo $Zitiziti['HOM-HOW-P-SUB-4']; ?></p>
                                 </div>
                             </li>
                         </ul>
@@ -428,15 +428,15 @@ if($footer_row['admin_job_show'] != 1) {
                         <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>images/mobile.png" alt="">
                     </div>
                     <div class="rhs">
-                        <h2><?php echo $BIZBOOK['HOM-APP-TIT']; ?>
-                            <span><?php echo $BIZBOOK['HOM-APP-TIT-SUB']; ?></span></h2>
+                        <h2><?php echo $Zitiziti['HOM-APP-TIT']; ?>
+                            <span><?php echo $Zitiziti['HOM-APP-TIT-SUB']; ?></span></h2>
                         <ul>
-                            <li><?php echo $BIZBOOK['HOM-APP-PO-1']; ?></li>
-                            <li><?php echo $BIZBOOK['HOM-APP-PO-2']; ?></li>
-                            <li><?php echo $BIZBOOK['HOM-APP-PO-3']; ?></li>
-                            <li><?php echo $BIZBOOK['HOM-APP-PO-4']; ?></li>
+                            <li><?php echo $Zitiziti['HOM-APP-PO-1']; ?></li>
+                            <li><?php echo $Zitiziti['HOM-APP-PO-2']; ?></li>
+                            <li><?php echo $Zitiziti['HOM-APP-PO-3']; ?></li>
+                            <li><?php echo $Zitiziti['HOM-APP-PO-4']; ?></li>
                         </ul>
-                        <span><?php echo $BIZBOOK['HOM-APP-SEND']; ?></span>
+                        <span><?php echo $Zitiziti['HOM-APP-SEND']; ?></span>
                         <form>
                             <ul>
                                 <li>
@@ -488,9 +488,9 @@ if($footer_row['admin_job_show'] != 1) {
 <!-- START -->
 <div class="ani-quo">
     <div class="ani-q1">
-        <h4><?php echo $BIZBOOK['HOM-WHAT-LOOK-TIT']; ?></h4>
-        <p><?php echo $BIZBOOK['HOM-WHAT-LOOK-SUB']; ?></p>
-        <span><?php echo $BIZBOOK['HOM-WHAT-LOOK-CTA']; ?></span>
+        <h4><?php echo $Zitiziti['HOM-WHAT-LOOK-TIT']; ?></h4>
+        <p><?php echo $Zitiziti['HOM-WHAT-LOOK-SUB']; ?></p>
+        <span><?php echo $Zitiziti['HOM-WHAT-LOOK-CTA']; ?></span>
     </div>
     <div class="ani-q2">
         <img loading="lazy" src="<?php echo $slash; ?>images/quote.png" alt="">

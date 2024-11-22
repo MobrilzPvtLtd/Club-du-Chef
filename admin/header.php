@@ -85,7 +85,7 @@ $all_texts_row = getAllTexts(); //Fetch All Text Data
                 <input type="text" id="top_search" placeholder="Search the listing and users..." class="search-field">
                 <ul id="tser-res" class="tser-res">
                     <li><a href="activate.php">Activate template</a></li>
-                    <li><a href="updates.php">Bizbook template updates and release</a></li>
+                    <li><a href="updates.php">Zitiziti template updates and release</a></li>
                     <li><a href="addons.php">Premium Addons</a></li>
                     <li><a href="admin-add-new-user.php">Add new user</a></li>
                     <li><a href="admin-add-new-listings.php">Add new listing</a></li>
@@ -1383,7 +1383,7 @@ $all_texts_row = getAllTexts(); //Fetch All Text Data
 
                 <?php }
                 if ($admin_row['admin_mail_template_options'] == 1) { ?>
-                    <li><h4>Bizbook template </h4></li>
+                    <li><h4>Zitiziti template </h4></li>
                     <li class="ic-act">
                         <a href="activate.php" class="<?php if ($current_page == 'activate.php') {
                             echo 'mact';
@@ -1394,7 +1394,7 @@ $all_texts_row = getAllTexts(); //Fetch All Text Data
                     <li class="ic-upd">
                         <a href="updates.php" class="<?php if ($current_page == 'updates.php') {
                             echo 'mact';
-                        } ?>">Bizbook updates</a>
+                        } ?>">Zitiziti updates</a>
                     </li>
                 <?php } ?>
                 <li class="ic-set">

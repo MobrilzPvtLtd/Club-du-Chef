@@ -17,22 +17,22 @@ if (file_exists('config/general_user_authentication.php')) {
    <div class="ud-main-inn ud-no-rhs">
     <div class="ud-cen">
         <div class="log-bor">&nbsp;</div>
-        <span class="udb-inst"><?php echo $BIZBOOK['PROMOTE-LISTING-PROMOTIONS']; ?></span>
+        <span class="udb-inst"><?php echo $Zitiziti['PROMOTE-LISTING-PROMOTIONS']; ?></span>
         <?php include('config/user_activation_checker.php'); ?>
         <div class="ud-cen-s2">
-            <h2><?php echo $BIZBOOK['PROMOTE-PROMOTIONS']; ?></h2>
+            <h2><?php echo $Zitiziti['PROMOTE-PROMOTIONS']; ?></h2>
             <?php include "page_level_message.php"; ?>
-            <a href="promote-business" class="db-tit-btn"><?php echo $BIZBOOK['PROMOTE-BUSINESS-START-NEW-PROMOTIONS']; ?></a>
+            <a href="promote-business" class="db-tit-btn"><?php echo $Zitiziti['PROMOTE-BUSINESS-START-NEW-PROMOTIONS']; ?></a>
             <table class="responsive-table bordered">
                 <thead>
                 <tr>
-                    <th><?php echo $BIZBOOK['S_NO']; ?></th>
-                    <th><?php echo $BIZBOOK['LISTING_NAME']; ?></th>
-                    <th><?php echo $BIZBOOK['COUPON-START-DATE-PLACEHOLDER']; ?></th>
-                    <th><?php echo $BIZBOOK['COUPON-END-DATE-PLACEHOLDER']; ?></th>
-                    <th><?php echo $BIZBOOK['DURATION']; ?></th>
-                    <th><?php echo $BIZBOOK['STATUS']; ?></th>
-                    <th><?php echo $BIZBOOK['DELETE']; ?></th>
+                    <th><?php echo $Zitiziti['S_NO']; ?></th>
+                    <th><?php echo $Zitiziti['LISTING_NAME']; ?></th>
+                    <th><?php echo $Zitiziti['COUPON-START-DATE-PLACEHOLDER']; ?></th>
+                    <th><?php echo $Zitiziti['COUPON-END-DATE-PLACEHOLDER']; ?></th>
+                    <th><?php echo $Zitiziti['DURATION']; ?></th>
+                    <th><?php echo $Zitiziti['STATUS']; ?></th>
+                    <th><?php echo $Zitiziti['DELETE']; ?></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -140,7 +140,7 @@ if (file_exists('config/general_user_authentication.php')) {
                             if($promote_price_value == 1){
                             if ($current_date > $start_date && $current_date > $end_date){ ?>
                             <a href="<?php echo $delete_url; ?>">
-                                <span  style="background-color: #f33d45;" class="db-list-ststus"> <?php echo $BIZBOOK['DELETE']; ?> </span>
+                                <span  style="background-color: #f33d45;" class="db-list-ststus"> <?php echo $Zitiziti['DELETE']; ?> </span>
                                 </a>
                                 <?php
                             }else{

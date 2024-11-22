@@ -15,19 +15,19 @@ include "dashboard_left_pane.php";
    <div class="ud-main-inn ud-no-rhs">
     <div class="ud-cen">
         <div class="log-bor">&nbsp;</div>
-        <span class="udb-inst"><?php echo $BIZBOOK['LIKED_LISTINGS']; ?></span>
+        <span class="udb-inst"><?php echo $Zitiziti['LIKED_LISTINGS']; ?></span>
         <?php include('config/user_activation_checker.php'); ?>
         <div class="ud-cen-s2">
-            <h2><?php echo $BIZBOOK['ALL_LIKED_LISTINGS']; ?></h2>
+            <h2><?php echo $Zitiziti['ALL_LIKED_LISTINGS']; ?></h2>
             <?php include "page_level_message.php"; ?>
             <table class="responsive-table bordered">
                 <thead>
                 <tr>
-                    <th><?php echo $BIZBOOK['S_NO']; ?></th>
-                    <th><?php echo $BIZBOOK['LISTING_NAME']; ?></th>
-                    <th><?php echo $BIZBOOK['RATING']; ?></th>
-                    <th><?php echo $BIZBOOK['REMOVE']; ?></th>
-                    <th><?php echo $BIZBOOK['PREVIEW']; ?></th>
+                    <th><?php echo $Zitiziti['S_NO']; ?></th>
+                    <th><?php echo $Zitiziti['LISTING_NAME']; ?></th>
+                    <th><?php echo $Zitiziti['RATING']; ?></th>
+                    <th><?php echo $Zitiziti['REMOVE']; ?></th>
+                    <th><?php echo $Zitiziti['PREVIEW']; ?></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -78,8 +78,8 @@ include "dashboard_left_pane.php";
                                     echo "images/listings/" . $footer_row['listing_default_image'];
                                 } ?>"><?php echo $listrow['listing_name']; ?> <span><?php echo dateFormatconverter($listrow['listing_cdt']); ?></span></td>
                         <td><span class="db-list-rat"><?php echo $star_rate; ?></span></td>
-                        <td><a href="liked-listing-trash?likedlistinglikedlistinglikedlistinglikedlistinglikedlisting=<?php echo $liked_listing_likes_id; ?>"><span class="db-list-edit"><?php echo $BIZBOOK['REMOVE']; ?></span></a></td>
-                        <td><a href="<?php echo $LISTING_URL.urlModifier($listrow['listing_slug']); ?>" class="db-list-edit" target="_blank"><?php echo $BIZBOOK['PREVIEW']; ?></a></td>
+                        <td><a href="liked-listing-trash?likedlistinglikedlistinglikedlistinglikedlistinglikedlisting=<?php echo $liked_listing_likes_id; ?>"><span class="db-list-edit"><?php echo $Zitiziti['REMOVE']; ?></span></a></td>
+                        <td><a href="<?php echo $LISTING_URL.urlModifier($listrow['listing_slug']); ?>" class="db-list-edit" target="_blank"><?php echo $Zitiziti['PREVIEW']; ?></a></td>
                     </tr>
                     <?php
                     $si++;

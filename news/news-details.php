@@ -53,7 +53,7 @@ newsdetailpageview($news_id); //Function To Find Page View
         <div class="row">
             <div class="news-menu">
                 <ul>
-                    <li><a href="<?php echo $slash ?>news" class=""><?php echo $BIZBOOK['HOME']; ?></a></li>
+                    <li><a href="<?php echo $slash ?>news" class=""><?php echo $Zitiziti['HOME']; ?></a></li>
                     <?php
                     foreach (getAllNewsCategoriesPos() as $news_all_category_row) {
                         ?>
@@ -79,7 +79,7 @@ newsdetailpageview($news_id); //Function To Find Page View
             <div class="col-md-8">
                 <div class="all-list-bre news-bre">
                     <ul>
-                        <li><a href="<?php echo $slash ?>news"><?php echo $BIZBOOK['NEWS_HOME']; ?></a></li>
+                        <li><a href="<?php echo $slash ?>news"><?php echo $Zitiziti['NEWS_HOME']; ?></a></li>
                         <li>
                             <a href="<?php echo $ALL_NEWS_URL . urlModifier($news_category_row['category_slug']); ?>"><?php echo $news_category_name; ?></a>
                         </li>
@@ -99,7 +99,7 @@ newsdetailpageview($news_id); //Function To Find Page View
                             <span class="news-date"><?php echo dateFormatconverter($news_row['news_cdt']); ?></span>
                             <span class="news-loc"><?php $news_location_row = getJobCity($news_row['city_id']); echo $news_location_row['city_name']; ?></span>
                             <span
-                                class="news-views"><?php echo AddingZero_BeforeNumber(news_detail_pageview_count($news_row['news_id'])); ?> <?php echo $BIZBOOK['VIEWS']; ?></span>
+                                class="news-views"><?php echo AddingZero_BeforeNumber(news_detail_pageview_count($news_row['news_id'])); ?> <?php echo $Zitiziti['VIEWS']; ?></span>
                             <div class="im">
                                 <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>/news/images/news/<?php echo $news_row['news_image']; ?>"
                                      alt="">
@@ -107,14 +107,14 @@ newsdetailpageview($news_id); //Function To Find Page View
                         </div>
                         <p><?php echo stripslashes($news_row['news_description']); ?></p>
                         <!-- SHARE -->
-                        <span class="share-new" data-toggle="modal" data-target="#sharepop"><i class="material-icons">share</i> <?php echo $BIZBOOK['SHARE_NOW']; ?></span>
+                        <span class="share-new" data-toggle="modal" data-target="#sharepop"><i class="material-icons">share</i> <?php echo $Zitiziti['SHARE_NOW']; ?></span>
                         <!-- SHARE -->
                     </div>
 
                 </div>
                 <!--END BIG POST START-->
                 <div class="news-com-tit">
-                    <h2><?php echo $BIZBOOK['NEWS-RELATED-POST']; ?></h2>
+                    <h2><?php echo $Zitiziti['NEWS-RELATED-POST']; ?></h2>
                 </div>
                 <?php
                 foreach (getAllNewsCategoryExceptNewsId($news_category_id,$news_id) as $related_news_row) {
@@ -138,7 +138,7 @@ newsdetailpageview($news_id); //Function To Find Page View
                             <h2><?php echo stripslashes($related_news_row['news_title']); ?></h2>
                             <span class="news-date"><?php echo dateFormatconverter($related_news_row['news_cdt']); ?></span>
                             <span class="news-date"><?php $news_location_row = getJobCity($related_news_row['city_id']); echo $news_location_row['city_name']; ?></span>
-                            <span class="news-views"><?php echo AddingZero_BeforeNumber(news_detail_pageview_count($related_news_row['news_id'])); ?> <?php echo $BIZBOOK['VIEWS']; ?></span>
+                            <span class="news-views"><?php echo AddingZero_BeforeNumber(news_detail_pageview_count($related_news_row['news_id'])); ?> <?php echo $Zitiziti['VIEWS']; ?></span>
                         </div>
                         <a href="<?php echo $NEWS_DETAIL_URL . urlModifier($related_news_row['news_slug']); ?>" class="fclick"></a>
                     </div>
@@ -152,17 +152,17 @@ newsdetailpageview($news_id); //Function To Find Page View
                     <?php if(getCountNewsSocialMediaActive() >= 1){ ?>
                         <!-- SOCIAL MEDIA START-->
                         <div class="news-soci">
-                            <h4><?php echo $BIZBOOK['SOCIAL_MEDIA']; ?></h4>
+                            <h4><?php echo $Zitiziti['SOCIAL_MEDIA']; ?></h4>
                             <ul>
                                 <?php foreach (getAllNewsSocialMediaActive() as $home_social_media_row) { ?>
                                     <li><a target="_blank" href="<?php echo $home_social_media_row['social_media_link']; ?>" class="<?php if($home_social_media_row['social_media_id'] == 1){ echo "sm-fb-big"; }
                                         elseif($home_social_media_row['social_media_id'] == 2){ echo "sm-tw-big"; }
                                         elseif($home_social_media_row['social_media_id'] == 3){ echo "sm-li-big"; }
                                         elseif($home_social_media_row['social_media_id'] == 4){ echo "sm-yt-big"; }
-                                        ?>"><b><?php echo $home_social_media_row['social_media_count']; ?></b> <?php if($home_social_media_row['social_media_id'] == 1){ echo $BIZBOOK['FACEBOOK']; }
-                                            elseif($home_social_media_row['social_media_id'] == 2){ echo $BIZBOOK['TWITTER']; }
-                                            elseif($home_social_media_row['social_media_id'] == 3){ echo $BIZBOOK['LINKEDIN']; }
-                                            elseif($home_social_media_row['social_media_id'] == 4){ echo $BIZBOOK['YOUTUBE']; }
+                                        ?>"><b><?php echo $home_social_media_row['social_media_count']; ?></b> <?php if($home_social_media_row['social_media_id'] == 1){ echo $Zitiziti['FACEBOOK']; }
+                                            elseif($home_social_media_row['social_media_id'] == 2){ echo $Zitiziti['TWITTER']; }
+                                            elseif($home_social_media_row['social_media_id'] == 3){ echo $Zitiziti['LINKEDIN']; }
+                                            elseif($home_social_media_row['social_media_id'] == 4){ echo $Zitiziti['YOUTUBE']; }
                                             ?></a></li>
                                 <?php } ?>
                             </ul>
@@ -171,7 +171,7 @@ newsdetailpageview($news_id); //Function To Find Page View
                     <?php } ?>
                     <!-- ADS START-->
                     <div class="news-rhs-cate">
-                        <h4><?php echo $BIZBOOK['HOM-EXP-TIT1']; ?></h4>
+                        <h4><?php echo $Zitiziti['HOM-EXP-TIT1']; ?></h4>
                         <ul>
                             <?php
                             foreach (getAllNewsCategoriesPos() as $news_right_side_category_row) {
@@ -189,7 +189,7 @@ newsdetailpageview($news_id); //Function To Find Page View
                     <!-- ADS END-->
                     <!--TOP POSTS-->
                     <div class="hot-page2-hom-pre news-rhs-trends">
-                        <h4><?php echo $BIZBOOK['TRENDING_POSTS']; ?></h4>
+                        <h4><?php echo $Zitiziti['TRENDING_POSTS']; ?></h4>
                         <ul>
                             <?php
                             $news_si = 1;
@@ -228,7 +228,7 @@ newsdetailpageview($news_id); //Function To Find Page View
                     ?>
                     <div class="news-rhs-ads-ban">
                         <div class="ban-ati-com">
-                            <a href="<?php echo stripslashes($get_ad_row_1['ad_link']); ?>"><span><?php echo $BIZBOOK['AD']; ?></span><img
+                            <a href="<?php echo stripslashes($get_ad_row_1['ad_link']); ?>"><span><?php echo $Zitiziti['AD']; ?></span><img
                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo_1 != NULL || !empty($ad_enquiry_photo_1)) {
                                         echo $ad_enquiry_photo_1;
                                     } else {
@@ -245,7 +245,7 @@ newsdetailpageview($news_id); //Function To Find Page View
                     <!-- ADS START-->
                     <div class="news-rhs-ads-ban">
                         <div class="ban-ati-com">
-                            <a href="<?php echo stripslashes($get_ad_row_2['ad_link']); ?>"><span><?php echo $BIZBOOK['AD']; ?></span><img
+                            <a href="<?php echo stripslashes($get_ad_row_2['ad_link']); ?>"><span><?php echo $Zitiziti['AD']; ?></span><img
                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo_2 != NULL || !empty($ad_enquiry_photo_2)) {
                                         echo $ad_enquiry_photo_2;
                                     } else {
@@ -259,20 +259,20 @@ newsdetailpageview($news_id); //Function To Find Page View
                     <div class="news-subsc">
                         <div class="ud-rhs-poin1">
                             <div class="log-bor">&nbsp;</div>
-                            <h5><?php echo $BIZBOOK['NEWS-SUBSCRIBE']; ?>
-                                <b><?php echo $BIZBOOK['NEWS-NEWSLETTER']; ?></b></h5>
-                            <p><?php echo $BIZBOOK['NEWS-NEWSLETTER-P-TAG']; ?></p>
+                            <h5><?php echo $Zitiziti['NEWS-SUBSCRIBE']; ?>
+                                <b><?php echo $Zitiziti['NEWS-NEWSLETTER']; ?></b></h5>
+                            <p><?php echo $Zitiziti['NEWS-NEWSLETTER-P-TAG']; ?></p>
                         </div>
                         <div id="news_newsletter_success" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['NEWS_NEWSLETTER_SUBSCRIPTION_SUCCESSFUL_MESSAGE']; ?></p>
+                            <p><?php echo $Zitiziti['NEWS_NEWSLETTER_SUBSCRIPTION_SUCCESSFUL_MESSAGE']; ?></p>
                         </div>
                         <div id="news_newsletter_fail" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                            <p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                         </div>
                         <form name="news_newsletter_subscribe_form" id="news_newsletter_subscribe_form">
                             <ul>
                                 <li><input type="text" name="news_newsletter_subscribe_name"
-                                           placeholder="<?php echo $BIZBOOK['LEAD-EMAIL-PLACEHOLDER']; ?>"
+                                           placeholder="<?php echo $Zitiziti['LEAD-EMAIL-PLACEHOLDER']; ?>"
                                            class="form-control" required>
                                 </li>
                                 <li><input type="submit" id="news_newsletter_subscribe_submit"
@@ -295,7 +295,7 @@ newsdetailpageview($news_id); //Function To Find Page View
         <div class="container">
             <div class="row">
                 <div class="news-com-tit">
-                    <h2><?php echo $BIZBOOK['NEWS-LATEST-POST']; ?></h2>
+                    <h2><?php echo $Zitiziti['NEWS-LATEST-POST']; ?></h2>
                 </div>
                 <?php
                 foreach (getExceptNews($news_id) as $latest_news_row) {
@@ -319,7 +319,7 @@ newsdetailpageview($news_id); //Function To Find Page View
                                 <h2><?php echo stripslashes($latest_news_row['news_title']); ?></h2>
                                 <span class="news-date"><?php echo dateFormatconverter($latest_news_row['news_cdt']); ?></span>
                                 <span class="news-date"><?php $news_location_row = getJobCity($latest_news_row['city_id']); echo $news_location_row['city_name']; ?></span>
-                                <span class="news-views"><?php echo AddingZero_BeforeNumber(news_detail_pageview_count($latest_news_row['news_id'])); ?> <?php echo $BIZBOOK['VIEWS']; ?></span>
+                                <span class="news-views"><?php echo AddingZero_BeforeNumber(news_detail_pageview_count($latest_news_row['news_id'])); ?> <?php echo $Zitiziti['VIEWS']; ?></span>
                             </div>
                             <a href="<?php echo $NEWS_DETAIL_URL . urlModifier($latest_news_row['news_slug']); ?>" class="fclick"></a>
                         </div>
@@ -340,7 +340,7 @@ newsdetailpageview($news_id); //Function To Find Page View
 
             <!-- Modal Header -->
             <div class="modal-header">
-                <h4 class="modal-title"><?php echo $BIZBOOK['NEWS-SHARE-NOW']; ?></h4>
+                <h4 class="modal-title"><?php echo $Zitiziti['NEWS-SHARE-NOW']; ?></h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
@@ -349,8 +349,8 @@ newsdetailpageview($news_id); //Function To Find Page View
                 <input type="text" value="" id="shareurl">
                 <div class="shareurltip">
                     <button onclick="shareurl()" onmouseout="shareurlout()">
-                        <span class="shareurltxt" id="myTooltip"><?php echo $BIZBOOK['NEWS-COPY-TO-CLIPBOARD']; ?></span>
-                        <?php echo $BIZBOOK['NEWS-COPY-TEXT']; ?>
+                        <span class="shareurltxt" id="myTooltip"><?php echo $Zitiziti['NEWS-COPY-TO-CLIPBOARD']; ?></span>
+                        <?php echo $Zitiziti['NEWS-COPY-TEXT']; ?>
                     </button>
                 </div>
             </div>
@@ -386,12 +386,12 @@ include "../footer.php";
         navigator.clipboard.writeText(copyText.value);
 
         var tooltip = document.getElementById("myTooltip");
-        tooltip.innerHTML = "<?php echo $BIZBOOK['NEWS-COPIED']; ?>";
+        tooltip.innerHTML = "<?php echo $Zitiziti['NEWS-COPIED']; ?>";
     }
 
     function shareurlout() {
         var tooltip = document.getElementById("myTooltip");
-        tooltip.innerHTML = "<?php echo $BIZBOOK['NEWS-COPY-TO-CLIPBOARD']; ?>";
+        tooltip.innerHTML = "<?php echo $Zitiziti['NEWS-COPY-TO-CLIPBOARD']; ?>";
     }
 </script>
 

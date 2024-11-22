@@ -253,7 +253,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 //****************************    Admin email starts    *************************
 
             $to = $admin_email;
-            $LISTING_INSERT_ADMIN_SUBJECT = $BIZBOOK['LISTING_INSERT_ADMIN_SUBJECT'];
+            $LISTING_INSERT_ADMIN_SUBJECT = $Zitiziti['LISTING_INSERT_ADMIN_SUBJECT'];
             $subject = "$admin_site_name $LISTING_INSERT_ADMIN_SUBJECT";
 
             $admin_sql_fetch = mysqli_query($conn,"SELECT * FROM " . TBL . "mail  WHERE mail_id = 7 "); //admin mail template fetch
@@ -279,7 +279,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 //****************************    Client email starts    *************************
 
             $to1 = $email_id;
-            $LISTING_INSERT_CLIENT_SUBJECT = $BIZBOOK['LISTING_INSERT_CLIENT_SUBJECT'];
+            $LISTING_INSERT_CLIENT_SUBJECT = $Zitiziti['LISTING_INSERT_CLIENT_SUBJECT'];
             $subject1 = "$admin_site_name $LISTING_INSERT_CLIENT_SUBJECT";
 
             $client_sql_fetch = mysqli_query($conn,"SELECT * FROM " . TBL . "mail  WHERE mail_id = 6 "); //User mail template fetch
@@ -302,12 +302,12 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 //****************************    client email ends    *************************
 
 
-            $_SESSION['status_msg'] = $BIZBOOK['LISTING_DUPLICATE_INSERT_SUCCESS_MESSAGE'];
+            $_SESSION['status_msg'] = $Zitiziti['LISTING_DUPLICATE_INSERT_SUCCESS_MESSAGE'];
 
             header('Location: db-all-listing');
         } else {
 
-            $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+            $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
             header('Location: db-all-listing');
         }
@@ -317,7 +317,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
     }
 }else {
 
-    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: db-all-listing');
 }

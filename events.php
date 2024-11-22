@@ -112,7 +112,7 @@ if (isset($_REQUEST['calendar-date']) && !empty($_REQUEST['calendar-date'])  && 
                             <img loading="lazy" src="/images/events/<?php echo $top_event_row['event_image']; ?>" alt="">
                         </div>
                         <div class="txt">
-                            <span class="news-cate"><?php echo $BIZBOOK['EVENT_TOP_EVENTS']; ?></span><br>
+                            <span class="news-cate"><?php echo $Zitiziti['EVENT_TOP_EVENTS']; ?></span><br>
                             <span class="eve-date-sli"><?php echo dateDayFormatconverter($top_event_row['event_start_date']); ?>
                                 <b><?php echo dateMonthFormatconverter($top_event_row['event_start_date']); ?></b></span>
                             <h2><?php echo $top_event_row['event_name']; ?></h2>
@@ -135,14 +135,14 @@ if (isset($_REQUEST['calendar-date']) && !empty($_REQUEST['calendar-date'])  && 
 } ?> event-body">
     <div class="container">
         <div class="blog-head-inn">
-            <h1><?php echo $BIZBOOK['EVENTS']; ?></h1>
-            <p><?php echo $BIZBOOK['EVENT_HEAD_MESSAGE']; ?></p>
+            <h1><?php echo $Zitiziti['EVENTS']; ?></h1>
+            <p><?php echo $Zitiziti['EVENT_HEAD_MESSAGE']; ?></p>
             <div class="ban-search">
                 <form>
                     <ul>
                         <li class="sr-sea">
                             <input type="text" id="event-search" class="autocomplete"
-                                   placeholder="<?php echo $BIZBOOK['EVENT_SEARCH_EVENT_PLACEHOLDER']; ?>">
+                                   placeholder="<?php echo $Zitiziti['EVENT_SEARCH_EVENT_PLACEHOLDER']; ?>">
                         </li>
                         <li class="sr-cit">
                             <select id="city" name="city" class="city chosen-select">
@@ -225,7 +225,7 @@ if (isset($_REQUEST['calendar-date']) && !empty($_REQUEST['calendar-date'])  && 
                             $ad_enquiry_photo = $get_ad_row['ad_enquiry_photo'];
                             ?>
                             <a href="<?php echo stripslashes($get_ad_row['ad_link']); ?>">
-                                <span><?php echo $BIZBOOK['AD']; ?></span>
+                                <span><?php echo $Zitiziti['AD']; ?></span>
 
                                 <img
                                         src="<?php echo $slash; ?>/images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
@@ -360,7 +360,7 @@ if (isset($_REQUEST['calendar-date']) && !empty($_REQUEST['calendar-date'])  && 
     /* background: #525252; */
     text-shadow: 0px 0px 2px #fff;
     text-transform: uppercase;
-    margin-top: 5%;"><?php echo $BIZBOOK['EVENTS_NO_EVENTS_MESSAGE']; ?></span>
+    margin-top: 5%;"><?php echo $Zitiziti['EVENTS_NO_EVENTS_MESSAGE']; ?></span>
                     <?php
                 }
                 ?>
@@ -380,29 +380,29 @@ if (isset($_REQUEST['calendar-date']) && !empty($_REQUEST['calendar-date'])  && 
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <!-- Modal Header -->
                     <div class="quote-pop">
-                        <h4><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></h4>
+                        <h4><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></h4>
                         <form>
                             <div class="form-group">
                                 <input type="text" class="form-control"
-                                       placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>" required>
+                                       placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>" required>
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control"
-                                       placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>"
+                                       placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>"
                                        pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                       title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
+                                       title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control"
-                                       placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                       placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
                                        pattern="[7-9]{1}[0-9]{9}"
-                                       title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>" required>
+                                       title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>" required>
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control" rows="3"
-                                          placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                          placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
+                            <button type="submit" class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?></button>
                         </form>
                     </div>
                     <div class="log-bor">&nbsp;</div>

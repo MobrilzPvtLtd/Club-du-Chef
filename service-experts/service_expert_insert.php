@@ -278,11 +278,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($expert_profile_res) {
 
-            $_SESSION['status_msg'] = $BIZBOOK['EXPERT_PROFILE_SUCCESS_MESSAGE'];
+            $_SESSION['status_msg'] = $Zitiziti['EXPERT_PROFILE_SUCCESS_MESSAGE'];
             header('Location: ' . $root_path . 'dashboard');
         } else {
 
-            $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+            $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
             header('Location: ' . $root_path . 'dashboard');
         }
@@ -292,7 +292,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } else {
 
-    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: ' . $root_path . 'dashboard');
 }

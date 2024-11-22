@@ -20,24 +20,24 @@ if (file_exists('config/listing_page_authentication.php')) {
    <div class="ud-main-inn ud-no-rhs mt-5 w-100 d-flex justify-content-center">
 			<div class="ud-cen  ">
 				<div class="log-bor">&nbsp;</div>
-				<span class="udb-inst"><?php echo $BIZBOOK['ALL_LISTING']; ?></span>
+				<span class="udb-inst"><?php echo $Zitiziti['ALL_LISTING']; ?></span>
 				<?php include('config/user_activation_checker.php'); ?>
                 <div class="ud-cen-s2 ">
-                    <h2><?php echo $BIZBOOK['LISTING_DETAILS']; ?></h2>
+                    <h2><?php echo $Zitiziti['LISTING_DETAILS']; ?></h2>
                     <?php include "page_level_message.php"; ?>
-                    <a href="add-listing-start" class="db-tit-btn"><?php echo $BIZBOOK['ADD_NEW_LISTING']; ?></a>
+                    <a href="add-listing-start" class="db-tit-btn"><?php echo $Zitiziti['ADD_NEW_LISTING']; ?></a>
                     <div class="table-responsive">
                         <table class="table bordered">
 							<thead>
 								<tr>
-									<th><?php echo $BIZBOOK['S_NO']; ?></th>
-                                    <th><?php echo $BIZBOOK['LISTING_NAME']; ?></th>
-									<th><?php echo $BIZBOOK['RATING']; ?></th>
-									<th><?php echo $BIZBOOK['VIEWS']; ?></th>
-									<th><?php echo $BIZBOOK['STATUS']; ?></th>
-									<th><?php echo $BIZBOOK['EDIT']; ?></th>
-									<th><?php echo $BIZBOOK['DELETE']; ?></th>
-									<th><?php echo $BIZBOOK['PREVIEW']; ?></th>
+									<th><?php echo $Zitiziti['S_NO']; ?></th>
+                                    <th><?php echo $Zitiziti['LISTING_NAME']; ?></th>
+									<th><?php echo $Zitiziti['RATING']; ?></th>
+									<th><?php echo $Zitiziti['VIEWS']; ?></th>
+									<th><?php echo $Zitiziti['STATUS']; ?></th>
+									<th><?php echo $Zitiziti['EDIT']; ?></th>
+									<th><?php echo $Zitiziti['DELETE']; ?></th>
+									<th><?php echo $Zitiziti['PREVIEW']; ?></th>
 								</tr>
 							</thead>
 							<tbody>
@@ -89,9 +89,9 @@ if (file_exists('config/listing_page_authentication.php')) {
 									<td><span class="db-list-rat"><?php echo $star_rate; ?></span></td>
 									<td><span class="db-list-rat"><?php  echo listing_pageview_count($listrow['listing_id']); ?></span></td>
 									<td><span class="db-list-ststus"><?php echo $listrow['listing_status']; ?></span></td>
-									<td><a href="edit-listing-step-1?row=<?php echo $listrow['listing_code']; ?>" class="db-list-edit"><?php echo $BIZBOOK['EDIT']; ?></a></td>
-									<td><a href="delete-listing?row=<?php echo $listrow['listing_code']; ?>" class="db-list-edit"><?php echo $BIZBOOK['DELETE']; ?></a></td>
-									<td><a href="<?php echo $LISTING_URL.urlModifier($listrow['listing_slug']); ?>" class="db-list-edit" target="_blank"><?php echo $BIZBOOK['PREVIEW']; ?></a></td>
+									<td><a href="edit-listing-step-1?row=<?php echo $listrow['listing_code']; ?>" class="db-list-edit"><?php echo $Zitiziti['EDIT']; ?></a></td>
+									<td><a href="delete-listing?row=<?php echo $listrow['listing_code']; ?>" class="db-list-edit"><?php echo $Zitiziti['DELETE']; ?></a></td>
+									<td><a href="<?php echo $LISTING_URL.urlModifier($listrow['listing_slug']); ?>" class="db-list-edit" target="_blank"><?php echo $Zitiziti['PREVIEW']; ?></a></td>
 								</tr>
 
                                 <?php

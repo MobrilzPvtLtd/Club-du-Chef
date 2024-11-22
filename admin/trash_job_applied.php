@@ -22,7 +22,7 @@ if (isset($_GET['jobappliedjobappliedjobappliedjobapplied'])) {
 
     if ($listing_res) {
 
-        $_SESSION['status_msg'] = $BIZBOOK['JOB_APPLIED_DELETE_SUCCESS_MESSAGE'];
+        $_SESSION['status_msg'] = $Zitiziti['JOB_APPLIED_DELETE_SUCCESS_MESSAGE'];
 
         if ($path == 2) {
             header('Location: job-all-applied.php');
@@ -31,7 +31,7 @@ if (isset($_GET['jobappliedjobappliedjobappliedjobapplied'])) {
         }
     } else {
 
-        $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+        $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
         if ($path == 2) {
             header('Location: job-all-applied.php');

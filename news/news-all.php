@@ -59,7 +59,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
         <div class="row">
             <div class="news-menu">
                 <ul>
-                    <li><a href="<?php echo $slash ?>news" class=""><?php echo $BIZBOOK['HOME']; ?></a></li>
+                    <li><a href="<?php echo $slash ?>news" class=""><?php echo $Zitiziti['HOME']; ?></a></li>
                     <?php
                     foreach (getAllNewsCategoriesPos() as $news_category_row) {
                         ?>
@@ -77,8 +77,8 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
 <!-- START -->
 <section class="news-hom-ban">
     <div class="news-hom-ban-inn">
-        <h1><b><?php echo $BIZBOOK['NEWS-HOMEPAGE-BANNER-H1-TEXT-1']; ?></b> <?php echo $category_search_name; ?></h1>
-        <p><?php echo $BIZBOOK['NEWS-HOMEPAGE-BANNER-P-TEXT-1']; ?> <b><?php echo $category_search_name; ?></b> <?php echo $BIZBOOK['NEWS-HOMEPAGE-BANNER-P-TEXT-2']; ?></p>
+        <h1><b><?php echo $Zitiziti['NEWS-HOMEPAGE-BANNER-H1-TEXT-1']; ?></b> <?php echo $category_search_name; ?></h1>
+        <p><?php echo $Zitiziti['NEWS-HOMEPAGE-BANNER-P-TEXT-1']; ?> <b><?php echo $category_search_name; ?></b> <?php echo $Zitiziti['NEWS-HOMEPAGE-BANNER-P-TEXT-2']; ?></p>
     </div>
 </section>
 <!--END-->
@@ -91,7 +91,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
             <div class="col-md-8">
                 <div class="all-list-bre news-bre">
                     <ul>
-                        <li><a href="<?php echo $slash ?>news"><?php echo $BIZBOOK['NEWS_HOME']; ?></a></li>
+                        <li><a href="<?php echo $slash ?>news"><?php echo $Zitiziti['NEWS_HOME']; ?></a></li>
                         <li><a href="<?php echo $ALL_NEWS_URL . urlModifier($category_slug); ?>"><?php echo $category_search_name; ?></a></li>
                     </ul>
                 </div>
@@ -135,7 +135,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                 <span class="news-date"><?php echo dateFormatconverter($newsrow['news_cdt']); ?></span>
                                 <span class="news-date"><?php $news_location_row = getJobCity($newsrow['city_id']); echo $news_location_row['city_name']; ?></span>
                                 <span
-                                    class="news-views"><?php echo AddingZero_BeforeNumber(news_detail_pageview_count($newsrow['news_id'])); ?> <?php echo $BIZBOOK['VIEWS']; ?></span>
+                                    class="news-views"><?php echo AddingZero_BeforeNumber(news_detail_pageview_count($newsrow['news_id'])); ?> <?php echo $Zitiziti['VIEWS']; ?></span>
                             </div>
                             <a href="<?php echo $NEWS_DETAIL_URL . urlModifier($newsrow['news_slug']); ?>"
                                class="fclick"></a>
@@ -152,7 +152,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
     text-shadow: 0px 0px 2px #fff;
     text-transform: uppercase;
     text-align: center!important;
-    margin-top: 5%;"><?php echo $BIZBOOK['NEWS_NO_NEWS_MESSAGE']; ?></span>
+    margin-top: 5%;"><?php echo $Zitiziti['NEWS_NO_NEWS_MESSAGE']; ?></span>
                     <?php
                 }
                 ?>
@@ -162,17 +162,17 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                     <?php if(getCountNewsSocialMediaActive() >= 1){ ?>
                         <!-- SOCIAL MEDIA START-->
                         <div class="news-soci">
-                            <h4><?php echo $BIZBOOK['SOCIAL_MEDIA']; ?></h4>
+                            <h4><?php echo $Zitiziti['SOCIAL_MEDIA']; ?></h4>
                             <ul>
                                 <?php foreach (getAllNewsSocialMediaActive() as $home_social_media_row) { ?>
                                     <li><a target="_blank" href="<?php echo $home_social_media_row['social_media_link']; ?>" class="<?php if($home_social_media_row['social_media_id'] == 1){ echo "sm-fb-big"; }
                                         elseif($home_social_media_row['social_media_id'] == 2){ echo "sm-tw-big"; }
                                         elseif($home_social_media_row['social_media_id'] == 3){ echo "sm-li-big"; }
                                         elseif($home_social_media_row['social_media_id'] == 4){ echo "sm-yt-big"; }
-                                        ?>"><b><?php echo $home_social_media_row['social_media_count']; ?></b> <?php if($home_social_media_row['social_media_id'] == 1){ echo $BIZBOOK['FACEBOOK']; }
-                                            elseif($home_social_media_row['social_media_id'] == 2){ echo $BIZBOOK['TWITTER']; }
-                                            elseif($home_social_media_row['social_media_id'] == 3){ echo $BIZBOOK['LINKEDIN']; }
-                                            elseif($home_social_media_row['social_media_id'] == 4){ echo $BIZBOOK['YOUTUBE']; }
+                                        ?>"><b><?php echo $home_social_media_row['social_media_count']; ?></b> <?php if($home_social_media_row['social_media_id'] == 1){ echo $Zitiziti['FACEBOOK']; }
+                                            elseif($home_social_media_row['social_media_id'] == 2){ echo $Zitiziti['TWITTER']; }
+                                            elseif($home_social_media_row['social_media_id'] == 3){ echo $Zitiziti['LINKEDIN']; }
+                                            elseif($home_social_media_row['social_media_id'] == 4){ echo $Zitiziti['YOUTUBE']; }
                                             ?></a></li>
                                 <?php } ?>
                             </ul>
@@ -181,7 +181,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                     <?php } ?>
                     <!-- ADS START-->
                     <div class="news-rhs-cate">
-                        <h4><?php echo $BIZBOOK['HOM-EXP-TIT1']; ?></h4>
+                        <h4><?php echo $Zitiziti['HOM-EXP-TIT1']; ?></h4>
                         <ul>
                             <?php
                             foreach (getAllNewsCategoriesPos() as $news_right_side_category_row) {
@@ -197,7 +197,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                     <!-- ADS END-->
                     <!--TOP POSTS-->
                     <div class="hot-page2-hom-pre news-rhs-trends">
-                        <h4><?php echo $BIZBOOK['TRENDING_POSTS']; ?></h4>
+                        <h4><?php echo $Zitiziti['TRENDING_POSTS']; ?></h4>
                         <ul>
                             <?php
                             $news_si = 1;
@@ -233,7 +233,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                     ?>
                     <div class="news-rhs-ads-ban">
                         <div class="ban-ati-com">
-                            <a href="<?php echo stripslashes($get_ad_row_1['ad_link']); ?>"><span><?php echo $BIZBOOK['AD']; ?></span><img
+                            <a href="<?php echo stripslashes($get_ad_row_1['ad_link']); ?>"><span><?php echo $Zitiziti['AD']; ?></span><img
                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo_1 != NULL || !empty($ad_enquiry_photo_1)) {
                                         echo $ad_enquiry_photo_1;
                                     } else {
@@ -250,7 +250,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                     <!-- ADS START-->
                     <div class="news-rhs-ads-ban">
                         <div class="ban-ati-com">
-                            <a href="<?php echo stripslashes($get_ad_row_2['ad_link']); ?>"><span><?php echo $BIZBOOK['AD']; ?></span><img
+                            <a href="<?php echo stripslashes($get_ad_row_2['ad_link']); ?>"><span><?php echo $Zitiziti['AD']; ?></span><img
                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo_2 != NULL || !empty($ad_enquiry_photo_2)) {
                                         echo $ad_enquiry_photo_2;
                                     } else {
@@ -264,18 +264,18 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                     <div class="news-subsc">
                         <div class="ud-rhs-poin1">
                             <div class="log-bor">&nbsp;</div>
-                            <h5><?php echo $BIZBOOK['NEWS-SUBSCRIBE']; ?> <b><?php echo $BIZBOOK['NEWS-NEWSLETTER']; ?></b></h5>
-                            <p><?php echo $BIZBOOK['NEWS-NEWSLETTER-P-TAG']; ?></p>
+                            <h5><?php echo $Zitiziti['NEWS-SUBSCRIBE']; ?> <b><?php echo $Zitiziti['NEWS-NEWSLETTER']; ?></b></h5>
+                            <p><?php echo $Zitiziti['NEWS-NEWSLETTER-P-TAG']; ?></p>
                         </div>
                         <div id="news_newsletter_success" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['NEWS_NEWSLETTER_SUBSCRIPTION_SUCCESSFUL_MESSAGE']; ?></p>
+                            <p><?php echo $Zitiziti['NEWS_NEWSLETTER_SUBSCRIPTION_SUCCESSFUL_MESSAGE']; ?></p>
                         </div>
                         <div id="news_newsletter_fail" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                            <p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                         </div>
                         <form name="news_newsletter_subscribe_form" id="news_newsletter_subscribe_form">
                             <ul>
-                                <li><input type="text" name="news_newsletter_subscribe_name" placeholder="<?php echo $BIZBOOK['LEAD-EMAIL-PLACEHOLDER']; ?>" class="form-control" required>
+                                <li><input type="text" name="news_newsletter_subscribe_name" placeholder="<?php echo $Zitiziti['LEAD-EMAIL-PLACEHOLDER']; ?>" class="form-control" required>
                                 </li>
                                 <li><input type="submit" id="news_newsletter_subscribe_submit" name="news_newsletter_subscribe_submit" class="form-control"></li>
                             </ul>
@@ -296,7 +296,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
         <div class="container">
             <div class="row">
                 <div class="news-com-tit">
-                    <h2><?php echo $BIZBOOK['NEWS-LATEST-POST']; ?></h2>
+                    <h2><?php echo $Zitiziti['NEWS-LATEST-POST']; ?></h2>
                 </div>
                 <?php
                 if (isset($_GET['category'])) {
@@ -323,7 +323,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                 <span class="news-cate"><?php echo $latest_news_category_name; ?></span>
                                 <h2><?php echo stripslashes($latest_news_row['news_title']); ?></h2>
                                 <span class="news-date"><?php echo dateFormatconverter($latest_news_row['news_cdt']); ?></span>
-                                <span class="news-views"><?php echo AddingZero_BeforeNumber(news_detail_pageview_count($latest_news_row['news_id'])); ?> <?php echo $BIZBOOK['VIEWS']; ?></span>
+                                <span class="news-views"><?php echo AddingZero_BeforeNumber(news_detail_pageview_count($latest_news_row['news_id'])); ?> <?php echo $Zitiziti['VIEWS']; ?></span>
                             </div>
                             <a href="<?php echo $NEWS_DETAIL_URL . urlModifier($latest_news_row['news_slug']); ?>" class="fclick"></a>
                         </div>

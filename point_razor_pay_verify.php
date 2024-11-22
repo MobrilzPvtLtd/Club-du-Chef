@@ -133,7 +133,7 @@ if ($success === true) {
 
             $lisupres23 = mysqli_query($conn, $lisupqry23);
 
-            $_SESSION['status_msg'] = $BIZBOOK['RAZOR_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'];
+            $_SESSION['status_msg'] = $Zitiziti['RAZOR_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'];
 
             header('Location: db-point-history');
 
@@ -149,7 +149,7 @@ if ($success === true) {
 
 } else {
 
-    $_SESSION['status_msg'] = $BIZBOOK['RAZOR_POINT_PAYMENT_FAILURE_MESSAGE'];
+    $_SESSION['status_msg'] = $Zitiziti['RAZOR_POINT_PAYMENT_FAILURE_MESSAGE'];
 
     header('Location: buy-points');
     exit;

@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($promote_start_date > $promote_end_date) {
 
-            $_SESSION['status_msg'] = $BIZBOOK['OOPS_START_DATE_IS_GREATER'];
+            $_SESSION['status_msg'] = $Zitiziti['OOPS_START_DATE_IS_GREATER'];
             header('Location: ' . $url);
             exit;
         }
@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($existing_points < $promote_total_cost) {
 
-            $_SESSION['status_msg'] = $BIZBOOK['OOPS_DONT_HAVE_ENOUGH_POINTS_BUY_SOME_POINTS'];
+            $_SESSION['status_msg'] = $Zitiziti['OOPS_DONT_HAVE_ENOUGH_POINTS_BUY_SOME_POINTS'];
 
             header('Location: ' . $url);
             exit;
@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 if ($traupres) {
 
-                    $_SESSION['status_msg'] = $BIZBOOK['LISTING_PROMOTE_SUCCESS_MESSAGE'];
+                    $_SESSION['status_msg'] = $Zitiziti['LISTING_PROMOTE_SUCCESS_MESSAGE'];
 
                     header('Location: db-promote');
                     exit;
@@ -108,7 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         } else {
 
-            $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+            $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
             header('Location: db-promote');
             exit;
@@ -117,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } else {
 
-    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: db-promote');
     exit;

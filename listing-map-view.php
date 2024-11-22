@@ -202,7 +202,7 @@ if($lat && $lng) {
 
 ?>
 <span id="map-error-box" class="map-error-box"
-      style="display:none;"><?php echo $BIZBOOK['LISTINGS_NO_LISTINGS_MESSAGE']; ?></span>
+      style="display:none;"><?php echo $Zitiziti['LISTINGS_NO_LISTINGS_MESSAGE']; ?></span>
 <div class="list-map-resu map-view" id="map-view"></div>
 <div class="list-map-filt">
     <div class="map-fi-com map-fi-view">
@@ -216,7 +216,7 @@ if($lat && $lng) {
         <div class="map-fi-com map-fi-cate">
             <select onChange="SubcategoryFilter1(this.value);" name="cat_check" id="cat_check1"
                     class="cat_check chosen-select ">
-                <option value=""><?php echo $BIZBOOK['SELECT_CATEGORY']; ?></option>
+                <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                 <?php
                 foreach (getAllActiveCategoriesPos() as $categories_row) {
                     ?>
@@ -232,7 +232,7 @@ if($lat && $lng) {
     <?php } ?>
     <div class="sub_cat_section1 map-fi-com map-fi-subcate">
         <select name="sub_cat_check" id="sub_cat_check1" class="sub_cat_check">
-            <option value=""><?php echo $BIZBOOK['SELECT_SUB_CATEGORY']; ?></option>
+            <option value=""><?php echo $Zitiziti['SELECT_SUB_CATEGORY']; ?></option>
             <?php
             if (isset($_GET['category'])) {
                 $sub_category_qry = getCategorySubCategories($category_id);
@@ -258,7 +258,7 @@ if($lat && $lng) {
         ?>
         <div class="map-fi-com map-fi-fea">
             <select id="city_check1" name="city_check">
-                <option value=""><?php echo $BIZBOOK['SELECT_CITY']; ?></option>
+                <option value=""><?php echo $Zitiziti['SELECT_CITY']; ?></option>
                 <?php
                 foreach (getAllListingCities() as $listrow) {
 
@@ -292,7 +292,7 @@ if($lat && $lng) {
         ?>
         <div class="map-fi-com map-fi-fea">
             <select id="feature_check1" name="feature_check">
-                <option value=""><?php echo $BIZBOOK['SELECT_FEATURE']; ?></option>
+                <option value=""><?php echo $Zitiziti['SELECT_FEATURE']; ?></option>
                 <?php
                 foreach (getAllActiveFeaturedFilter() as $featuredfilterrow) {
                     ?>

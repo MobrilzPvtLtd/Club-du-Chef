@@ -252,7 +252,7 @@ $query = mysqli_query($conn, "SELECT DISTINCT  t1 . * FROM  " . TBL . "jobs  AS 
     if (mysqli_num_rows($query) > 0) {
 
         ?>
-        <div class="job-ser-cnt"><?php echo $BIZBOOK['JOB-SHOWING']; ?> <?php echo AddingZero_BeforeNumber($total_jobs); ?> <?php echo $BIZBOOK['JOBS_BRACKET']; ?></div>
+        <div class="job-ser-cnt"><?php echo $Zitiziti['JOB-SHOWING']; ?> <?php echo AddingZero_BeforeNumber($total_jobs); ?> <?php echo $Zitiziti['JOBS_BRACKET']; ?></div>
         <div class="job-list">
             <ul>
                 <?php
@@ -271,28 +271,28 @@ $query = mysqli_query($conn, "SELECT DISTINCT  t1 . * FROM  " . TBL . "jobs  AS 
                             </div>
                             <div class="job-days">
                                 <span class="day"><?php echo time_elapsed_string($jobrow['job_cdt']); ?></span>
-                                <span class="apl"><?php echo $total_count_jobs_applied; ?> <?php echo $BIZBOOK['APPLICANTS']; ?></span>
+                                <span class="apl"><?php echo $total_count_jobs_applied; ?> <?php echo $Zitiziti['APPLICANTS']; ?></span>
                             </div>
                             <div class="job-box-con">
                                 <h4><?php echo $jobrow['job_title']; ?></h4>
                                             <span><?php
                                                 $job_type = $jobrow['job_type'];
                                                 if ($job_type == 1) {
-                                                    echo $BIZBOOK['JOB-PERMANENT'];
+                                                    echo $Zitiziti['JOB-PERMANENT'];
                                                 } elseif ($job_type == 2) {
-                                                    echo $BIZBOOK['JOB-CONTRACT'];
+                                                    echo $Zitiziti['JOB-CONTRACT'];
                                                 } elseif ($job_type == 3) {
-                                                    echo $BIZBOOK['JOB-PART-TIME'];
+                                                    echo $Zitiziti['JOB-PART-TIME'];
                                                 } elseif ($job_type == 4) {
-                                                    echo $BIZBOOK['JOB-FREELANCE'];
+                                                    echo $Zitiziti['JOB-FREELANCE'];
                                                 }
                                                 ?></span>
                                 <span><?php echo $jobrow['job_role']; ?></span>
-                                <span><?php echo AddingZero_BeforeNumber($jobrow['no_of_openings']); ?> <?php echo $BIZBOOK['JOB_OPENINGS']; ?></span>
+                                <span><?php echo AddingZero_BeforeNumber($jobrow['no_of_openings']); ?> <?php echo $Zitiziti['JOB_OPENINGS']; ?></span>
                             </div>
                             <div class="job-box-apl">
-                                <span class="job-box-cta"><?php echo $BIZBOOK['JOB_APPLY_NOW']; ?></span>
-                                <span><?php echo $BIZBOOK['JOB_MORE_DETAILS']; ?></span>
+                                <span class="job-box-cta"><?php echo $Zitiziti['JOB_APPLY_NOW']; ?></span>
+                                <span><?php echo $Zitiziti['JOB_MORE_DETAILS']; ?></span>
                             </div>
                             <a href="<?php echo $JOB_URL . urlModifier($jobrow['job_slug']); ?>" class="job-full-cta"></a>
                         </div>
@@ -311,7 +311,7 @@ $query = mysqli_query($conn, "SELECT DISTINCT  t1 . * FROM  " . TBL . "jobs  AS 
     /* background: #525252; */
     text-shadow: 0px 0px 2px #fff;
     text-transform: uppercase;
-    margin-top: 5%;"><?php echo $BIZBOOK['JOBS_NO_JOBS_MESSAGE']; ?></span>
+    margin-top: 5%;"><?php echo $Zitiziti['JOBS_NO_JOBS_MESSAGE']; ?></span>
         <?php
     }
     ?>

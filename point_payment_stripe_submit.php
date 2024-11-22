@@ -199,7 +199,7 @@ if ($paymenyResponse['amount_refunded'] == 0 && empty($paymenyResponse['failure_
 
             $lisupres23 = mysqli_query($conn, $lisupqry23);
 
-            $_SESSION['status_msg'] = $BIZBOOK['STRIPE_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'];
+            $_SESSION['status_msg'] = $Zitiziti['STRIPE_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'];
 
             header('Location: db-point-history');
 
@@ -207,13 +207,13 @@ if ($paymenyResponse['amount_refunded'] == 0 && empty($paymenyResponse['failure_
     } //if order inserted successfully
 
     else {
-        $_SESSION['status_msg'] = $BIZBOOK['STRIPE_POINT_PAYMENT_FAILURE_MESSAGE'];
+        $_SESSION['status_msg'] = $Zitiziti['STRIPE_POINT_PAYMENT_FAILURE_MESSAGE'];
 
         header('Location: buy-points');
         exit;
     }
 } else {
-    $_SESSION['status_msg'] = $BIZBOOK['STRIPE_POINT_PAYMENT_FAILURE_MESSAGE'];
+    $_SESSION['status_msg'] = $Zitiziti['STRIPE_POINT_PAYMENT_FAILURE_MESSAGE'];
 
     header('Location: buy-points');
     exit;

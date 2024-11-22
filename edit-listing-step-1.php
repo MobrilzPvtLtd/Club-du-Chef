@@ -37,38 +37,38 @@ $listing_codea = $_GET['row'];
                     <ul>
                         <li>
                             <a href="edit-listing-step-1?row=<?php echo $listing_codea; ?>" class="act">
-                                <span><?php echo $BIZBOOK['STEP1']; ?></span>
-                                <b><?php echo $BIZBOOK['BASIC_INFO']; ?></b>
+                                <span><?php echo $Zitiziti['STEP1']; ?></span>
+                                <b><?php echo $Zitiziti['BASIC_INFO']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="edit-listing-step-2?row=<?php echo $listing_codea; ?>">
-                                <span><?php echo $BIZBOOK['STEP2']; ?></span>
-                                <b><?php echo $BIZBOOK['SERVICES']; ?></b>
+                                <span><?php echo $Zitiziti['STEP2']; ?></span>
+                                <b><?php echo $Zitiziti['SERVICES']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="edit-listing-step-3?row=<?php echo $listing_codea; ?>">
-                                <span><?php echo $BIZBOOK['STEP3']; ?></span>
-                                <b><?php echo $BIZBOOK['OFFERS']; ?></b>
+                                <span><?php echo $Zitiziti['STEP3']; ?></span>
+                                <b><?php echo $Zitiziti['OFFERS']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="edit-listing-step-4?row=<?php echo $listing_codea; ?>">
-                                <span><?php echo $BIZBOOK['STEP4']; ?></span>
-                                <b><?php echo $BIZBOOK['MAP']; ?></b>
+                                <span><?php echo $Zitiziti['STEP4']; ?></span>
+                                <b><?php echo $Zitiziti['MAP']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="edit-listing-step-5?row=<?php echo $listing_codea; ?>">
-                                <span><?php echo $BIZBOOK['STEP5']; ?></span>
-                                <b><?php echo $BIZBOOK['OTHER']; ?></b>
+                                <span><?php echo $Zitiziti['STEP5']; ?></span>
+                                <b><?php echo $Zitiziti['OTHER']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="edit-listing-step-6?row=<?php echo $listing_codea; ?>">
-                                <span><?php echo $BIZBOOK['STEP6']; ?></span>
-                                <b><?php echo $BIZBOOK['DONE']; ?></b>
+                                <span><?php echo $Zitiziti['STEP6']; ?></span>
+                                <b><?php echo $Zitiziti['DONE']; ?></b>
                             </a>
                         </li>
                     </ul>
@@ -78,10 +78,10 @@ $listing_codea = $_GET['row'];
         <div class="row">
             <div class="login-main add-list">
                 <div class="log-bor">&nbsp;</div>
-                <span class="steps"><?php echo $BIZBOOK['STEP1']; ?></span>
+                <span class="steps"><?php echo $Zitiziti['STEP1']; ?></span>
                 <div class="log">
                     <div class="login">
-                        <h4><?php echo $BIZBOOK['LISTING_DETAILS']; ?></h4>
+                        <h4><?php echo $Zitiziti['LISTING_DETAILS']; ?></h4>
                         <?php include "page_level_message.php"; ?>
                         <?php
                         $listing_codea = $_GET['row'];
@@ -119,7 +119,7 @@ $listing_codea = $_GET['row'];
                                         <input id="listing_name" name="listing_name" type="text" required="required"
                                                value="<?php echo $listings_a_row['listing_name']; ?>"
                                                class="form-control"
-                                               placeholder="<?php echo $BIZBOOK['LISTING_NAME_STAR']; ?>">
+                                               placeholder="<?php echo $Zitiziti['LISTING_NAME_STAR']; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -131,14 +131,14 @@ $listing_codea = $_GET['row'];
                                         <input id="listing_mobile" name="listing_mobile" type="text"
                                                value="<?php echo $listings_a_row['listing_mobile']; ?>"
                                                class="form-control"
-                                               placeholder="<?php echo $BIZBOOK['PHONE_NUMBER']; ?>">
+                                               placeholder="<?php echo $Zitiziti['PHONE_NUMBER']; ?>">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input id="listing_email" name="listing_email" type="text"
                                                value="<?php echo $listings_a_row['listing_email']; ?>"
-                                               class="form-control" placeholder="<?php echo $BIZBOOK['EMAIL_ID']; ?>">
+                                               class="form-control" placeholder="<?php echo $Zitiziti['EMAIL_ID']; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -162,7 +162,7 @@ $listing_codea = $_GET['row'];
                                         <input id="listing_website" name="listing_website" type="text"
                                                value="<?php echo $listings_a_row['listing_website']; ?>"
                                                class="form-control"
-                                               placeholder="<?php echo $BIZBOOK['WEBSITE']; ?>">
+                                               placeholder="<?php echo $Zitiziti['WEBSITE']; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -175,7 +175,7 @@ $listing_codea = $_GET['row'];
                                                required="required" id="listing_address"
                                                value="<?php echo $listings_a_row['listing_address']; ?>"
                                                class="form-control"
-                                               placeholder="<?php echo $BIZBOOK['SHOP_ADDRESS']; ?>">
+                                               placeholder="<?php echo $Zitiziti['SHOP_ADDRESS']; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -186,14 +186,14 @@ $listing_codea = $_GET['row'];
 <!--                                    <div class="form-group">-->
 <!--                                        <input type="text" name="listing_lat" class="form-control"-->
 <!--                                               value="--><?php //echo $listings_a_row['listing_lat'] ?><!--"-->
-<!--                                               placeholder="--><?php //echo $BIZBOOK['LATITUDE_PLACEHOLDER']; ?><!--">-->
+<!--                                               placeholder="--><?php //echo $Zitiziti['LATITUDE_PLACEHOLDER']; ?><!--">-->
 <!--                                    </div>-->
 <!--                                </div>-->
 <!--                                <div class="col-md-6">-->
 <!--                                    <div class="form-group">-->
 <!--                                        <input type="text" name="listing_lng" class="form-control"-->
 <!--                                               value="--><?php //echo $listings_a_row['listing_lng'] ?><!--"-->
-<!--                                               placeholder="--><?php //echo $BIZBOOK['LONGITUDE_PLACEHOLDER']; ?><!--">-->
+<!--                                               placeholder="--><?php //echo $Zitiziti['LONGITUDE_PLACEHOLDER']; ?><!--">-->
 <!--                                    </div>-->
 <!--                                </div>-->
 <!--                            </div>-->
@@ -205,7 +205,7 @@ $listing_codea = $_GET['row'];
                                     <div class="form-group">
                                         <select onChange="getCities(this.value);" name="country_id" required="required"
                                                 class="chosen-select form-control">
-                                            <option value=""><?php echo $BIZBOOK['SELECT_YOUR_COUNTRY']; ?></option>
+                                            <option value=""><?php echo $Zitiziti['SELECT_YOUR_COUNTRY']; ?></option>
                                             <?php
                                             //Countries Query
                                             $admin_countries = $footer_row['admin_countries'];
@@ -231,7 +231,7 @@ $listing_codea = $_GET['row'];
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <select data-placeholder="<?php echo $BIZBOOK['SELECT_YOUR_CITY']; ?>"
+                                        <select data-placeholder="<?php echo $Zitiziti['SELECT_YOUR_CITY']; ?>"
                                                 name="city_id[]" id="city_id"
                                                 multiple required="required"
                                                 class="chosen-select form-control">
@@ -261,7 +261,7 @@ $listing_codea = $_GET['row'];
                                     <div class="form-group">
                                         <select onChange="getSubCategory(this.value);" name="category_id"
                                                 id="category_id" class="chosen-select form-control">
-                                            <option value=""><?php echo $BIZBOOK['SELECT_CATEGORY']; ?></option>
+                                            <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                             <?php
                                             foreach (getAllCategories() as $categories_row) {
                                                 ?>
@@ -311,7 +311,7 @@ $listing_codea = $_GET['row'];
                                     <div class="form-group">
                                                 <textarea class="form-control" id="listing_description"
                                                           name="listing_description"
-                                                          placeholder="<?php echo $BIZBOOK['DETAILS_ABOUT_LISTING']; ?>"><?php echo $listings_a_row['listing_description']; ?></textarea>
+                                                          placeholder="<?php echo $Zitiziti['DETAILS_ABOUT_LISTING']; ?>"><?php echo $listings_a_row['listing_description']; ?></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -320,18 +320,18 @@ $listing_codea = $_GET['row'];
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label><?php echo $BIZBOOK['CHOOSE_PROFILE_IMAGE']; ?></label>
+                                        <label><?php echo $Zitiziti['CHOOSE_PROFILE_IMAGE']; ?></label>
                                         <div class="fil-img-uplo">
-                                            <span class="dumfil"><?php echo $BIZBOOK['UPLOAD_A_FILE'];  ?></span>
+                                            <span class="dumfil"><?php echo $Zitiziti['UPLOAD_A_FILE'];  ?></span>
                                             <input type="file" name="profile_image" accept="image/*,.jpg,.jpeg,.png" class="form-control">
                                         </div>
                                     </div>
                                 </div>
 <!--                                <div class="col-md-6">-->
 <!--                                    <div class="form-group">-->
-<!--                                        <label>--><?php //echo $BIZBOOK['CHOOSE_COVER_IMAGE']; ?><!--</label>-->
+<!--                                        <label>--><?php //echo $Zitiziti['CHOOSE_COVER_IMAGE']; ?><!--</label>-->
 <!--                                        <div class="fil-img-uplo">-->
-<!--                                            <span class="dumfil">--><?php //echo $BIZBOOK['UPLOAD_A_FILE'];  ?><!--</span>-->
+<!--                                            <span class="dumfil">--><?php //echo $Zitiziti['UPLOAD_A_FILE'];  ?><!--</span>-->
 <!--                                            <input type="file" name="cover_image" accept="image/*,.jpg,.jpeg,.png" class="form-control">-->
 <!--                                        </div>-->
 <!--                                    </div>-->
@@ -344,7 +344,7 @@ $listing_codea = $_GET['row'];
                                     <div class="form-group">
                                         <textarea class="form-control" id="service_locations"
                                                   name="service_locations"
-                                                  placeholder="<?php echo $BIZBOOK['ENTER_SERVICE_LOCATION']; ?>"><?php echo $listings_a_row['service_locations']; ?></textarea>
+                                                  placeholder="<?php echo $Zitiziti['ENTER_SERVICE_LOCATION']; ?>"><?php echo $listings_a_row['service_locations']; ?></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -745,14 +745,14 @@ $listing_codea = $_GET['row'];
                             <div class="row">
                                 <div class="col-md-12">
                                     <button name="listing_submit" type="submit"
-                                            class="btn btn-primary"><?php echo $BIZBOOK['SAVE_AND_EXIT']; ?></button>
+                                            class="btn btn-primary"><?php echo $Zitiziti['SAVE_AND_EXIT']; ?></button>
                                 </div>
                                 <div class="col-md-12">
                                     <a href="edit-listing-step-2?row=<?php echo $_GET['row']; ?>"
-                                       class="skip"><?php echo $BIZBOOK['SKIP_THIS']; ?>>></a>
+                                       class="skip"><?php echo $Zitiziti['SKIP_THIS']; ?>>></a>
                                 </div>
                                 <div class="col-md-12">
-                                    <a href="dashboard" class="skip"><?php echo $BIZBOOK['GO_TO_USER_DASHBOARD']; ?>
+                                    <a href="dashboard" class="skip"><?php echo $Zitiziti['GO_TO_USER_DASHBOARD']; ?>
                                         >></a>
                                 </div>
                             </div>

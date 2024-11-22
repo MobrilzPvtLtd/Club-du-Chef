@@ -59,7 +59,7 @@ if ($traupres) {
 
     $lisupres = mysqli_query($conn,$lisupqry);
 
-    $_SESSION['status_msg'] = $BIZBOOK['PAYMENT_SUCCESSFULL_USER_UPGRADE_SUCESS'];
+    $_SESSION['status_msg'] = $Zitiziti['PAYMENT_SUCCESSFULL_USER_UPGRADE_SUCESS'];
 
     header('Location: db-invoice-all');
 }

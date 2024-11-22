@@ -11,7 +11,7 @@ $user_details_row = getUser($_SESSION['user_id']);
 
 if ($user_details_row['user_points'] <= 0) {
 
-    $_SESSION['status_msg'] = $BIZBOOK['OOPS_DONT_HAVE_ENOUGH_POINTS_BUY_SOME_POINTS'];
+    $_SESSION['status_msg'] = $Zitiziti['OOPS_DONT_HAVE_ENOUGH_POINTS_BUY_SOME_POINTS'];
 
     header('Location: db-all-listing');
     exit;
@@ -27,10 +27,10 @@ if ($user_details_row['user_points'] <= 0) {
         <div class="row">
             <div class="login-main add-list">
                 <div class="log-bor">&nbsp;</div>
-                <span class="steps"><?php echo $BIZBOOK['PROMOTE-BUSINESS-START-PROMOTIONS']; ?></span>
+                <span class="steps"><?php echo $Zitiziti['PROMOTE-BUSINESS-START-PROMOTIONS']; ?></span>
                 <div class="log">
                     <div class="login">
-                        <h4><?php echo $BIZBOOK['PROMOTE-BUSINESS-START-PROMOTIONS']; ?></h4>
+                        <h4><?php echo $Zitiziti['PROMOTE-BUSINESS-START-PROMOTIONS']; ?></h4>
                         <?php include "page_level_message.php"; ?>
                         <form name="create_promote_form" id="create_promote_form" method="post"
                               action="new_promote_insert.php" enctype="multipart/form-data">
@@ -47,7 +47,7 @@ if ($user_details_row['user_points'] <= 0) {
                                     <div class="form-group">
                                         <select name="type_id" required="required"
                                                 id="type_id" class=" form-control chosen-select">
-                                            <option value=""><?php echo $BIZBOOK['PROMOTE-BUSINESS-CHOOSE-LISTING'];?></option>
+                                            <option value=""><?php echo $Zitiziti['PROMOTE-BUSINESS-CHOOSE-LISTING'];?></option>
                                             <?php
                                             foreach (getAllListingUser($_SESSION['user_id']) as $listing_row) {
                                                 ?>
@@ -68,14 +68,14 @@ if ($user_details_row['user_points'] <= 0) {
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label><?php echo $BIZBOOK['COUPON-START-DATE-PLACEHOLDER']; ?></label>
+                                        <label><?php echo $Zitiziti['COUPON-START-DATE-PLACEHOLDER']; ?></label>
                                         <input id="start-date" name="ad_start_date" required="required" type="date"
                                                class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label><?php echo $BIZBOOK['COUPON-END-DATE-PLACEHOLDER']; ?></label>
+                                        <label><?php echo $Zitiziti['COUPON-END-DATE-PLACEHOLDER']; ?></label>
                                         <input id="end-date" name="ad_end_date" type="date" required="required"
                                                class="form-control">
                                     </div>
@@ -89,19 +89,19 @@ if ($user_details_row['user_points'] <= 0) {
                                         <ul>
                                             <li>
                                                 <div>
-                                                    <span><?php echo $BIZBOOK['PROMOTE-BUSINESS-TOTAL-DAYS']; ?></span>
+                                                    <span><?php echo $Zitiziti['PROMOTE-BUSINESS-TOTAL-DAYS']; ?></span>
                                                     <h5 class="ad-tdays">0</h5>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div>
-                                                    <span><?php echo $BIZBOOK['PROMOTE-BUSINESS-COST-PER-DAY']; ?></span>
+                                                    <span><?php echo $Zitiziti['PROMOTE-BUSINESS-COST-PER-DAY']; ?></span>
                                                     <h5><b class="ad-pocost">1</b></h5>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div>
-                                                    <span><?php echo $BIZBOOK['PROMOTE-BUSINESS-TOTAL-POINTS']; ?></span>
+                                                    <span><?php echo $Zitiziti['PROMOTE-BUSINESS-TOTAL-POINTS']; ?></span>
                                                     <h5><b class="ad-tcost">0</b></h5>
                                                 </div>
                                             </li>
@@ -112,7 +112,7 @@ if ($user_details_row['user_points'] <= 0) {
                             <!--FILED END-->
 
                             <button type="submit" name="create_promote_submit"
-                                    class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
+                                    class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?></button>
                         </form>
                     </div>
                 </div>

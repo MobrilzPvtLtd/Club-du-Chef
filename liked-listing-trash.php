@@ -28,14 +28,14 @@ if(isset($_GET['likedlistinglikedlistinglikedlistinglikedlistinglikedlisting']))
 
     if ($listing_res) {
 
-        $_SESSION['status_msg'] = $BIZBOOK['LIKED_LISTING_DELETED_SUCCESS_MESSAGE'];
+        $_SESSION['status_msg'] = $Zitiziti['LIKED_LISTING_DELETED_SUCCESS_MESSAGE'];
 
 
             header('Location: db-like-listings');
 
     } else {
 
-        $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+        $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
 
             header('Location:db-liked-listings');

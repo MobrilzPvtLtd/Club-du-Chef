@@ -603,7 +603,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //****************************    Admin email starts    *************************
 
             $to = $admin_email;
-            $LISTING_UPDATE_ADMIN_SUBJECT = $BIZBOOK['LISTING_UPDATE_ADMIN_SUBJECT'];
+            $LISTING_UPDATE_ADMIN_SUBJECT = $Zitiziti['LISTING_UPDATE_ADMIN_SUBJECT'];
             $subject = "$admin_site_name $LISTING_UPDATE_ADMIN_SUBJECT";
 
             $admin_sql_fetch = mysqli_query($conn, "SELECT * FROM " . TBL . "mail  WHERE mail_id = 9 "); //admin mail template fetch
@@ -630,7 +630,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //****************************    Client email starts    *************************
 
             $to1 = $email_id;
-            $LISTING_UPDATE_CLIENT_SUBJECT = $BIZBOOK['LISTING_UPDATE_CLIENT_SUBJECT'];
+            $LISTING_UPDATE_CLIENT_SUBJECT = $Zitiziti['LISTING_UPDATE_CLIENT_SUBJECT'];
             $subject1 = "$admin_site_name $LISTING_UPDATE_CLIENT_SUBJECT";
 
             $client_sql_fetch = mysqli_query($conn, "SELECT * FROM " . TBL . "mail  WHERE mail_id = 8 "); //User mail template fetch
@@ -803,7 +803,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         } else {
 
-            $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+            $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
             header('Location: edit-listing-step-1?row=' . $listing_code);
         }
@@ -813,7 +813,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } else {
 
-    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: edit-listing-step-1?row=' . $listing_code);
 }

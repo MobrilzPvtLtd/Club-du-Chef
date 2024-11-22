@@ -41,11 +41,11 @@ $cat_search_row = getCategory($category_id);  //Fetch Category Id using category
             }
             ?>
             <div class="list-rat-all">
-                <h4><?php echo $BIZBOOK['ALL-LISTING-OVERALL-RATING']; ?></h4>
+                <h4><?php echo $Zitiziti['ALL-LISTING-OVERALL-RATING']; ?></h4>
                 <b><?php if ($new_star_rate != 0) {
                         echo $new_star_rate;
                     } else {
-                        echo $BIZBOOK['ALL-LISTING-0-RATINGS'];
+                        echo $Zitiziti['ALL-LISTING-0-RATINGS'];
                     } ?></b>
 
                 <?php
@@ -71,7 +71,7 @@ $cat_search_row = getCategory($category_id);  //Fetch Category Id using category
                 }
                 ?>
                 <?php if ($new_review_count > 0) { ?>
-                    <span><?php echo $new_review_count; ?> <?php echo $BIZBOOK['REVIEWS']; ?></span>
+                    <span><?php echo $new_review_count; ?> <?php echo $Zitiziti['REVIEWS']; ?></span>
                     <?php
                 }
                 ?>
@@ -97,7 +97,7 @@ $cat_search_row = getCategory($category_id);  //Fetch Category Id using category
         ) {
             ?>
             <div class="list-foot-faq">
-                <h3><?php echo $BIZBOOK['FAQ']; ?></h3>
+                <h3><?php echo $Zitiziti['FAQ']; ?></h3>
                 <div class="how-to-coll">
                     <ul>
                         <?php if ($cat_search_row['category_faq_1_ques'] != NULL) { ?>

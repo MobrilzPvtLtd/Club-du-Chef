@@ -69,8 +69,8 @@ if ($expert_enquiry_search_row['enquiry_sender_id'] != $session_user_id) {
                                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
                                         <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
                                     </svg>
-                                    <h1><?php echo $BIZBOOK['SERVICE-EXPERT-THANK-YOU-LABEL']; ?></h1>
-                                    <p><?php echo $BIZBOOK['SERVICE-EXPERT-THANK-YOU-P-1-LABEL']; ?> <?php echo $expert_profile_row['years_of_experience']; ?><?php echo $BIZBOOK['SERVICE-EXPERT-THANK-YOU-P-2-LABEL']; ?></p>
+                                    <h1><?php echo $Zitiziti['SERVICE-EXPERT-THANK-YOU-LABEL']; ?></h1>
+                                    <p><?php echo $Zitiziti['SERVICE-EXPERT-THANK-YOU-P-1-LABEL']; ?> <?php echo $expert_profile_row['years_of_experience']; ?><?php echo $Zitiziti['SERVICE-EXPERT-THANK-YOU-P-2-LABEL']; ?></p>
                                 </div>
                             </div>
                         </div>
@@ -86,29 +86,29 @@ if ($expert_enquiry_search_row['enquiry_sender_id'] != $session_user_id) {
                             <p><?php echo $expert_category_name; ?></p>
                         </div>
                         <div class="exp-deta-con-com exp-deta-2">
-                            <h4><?php echo $BIZBOOK['SERVICE-EXPERT-APPROX-ARRIVE-TIME']; ?></h4>
+                            <h4><?php echo $Zitiziti['SERVICE-EXPERT-APPROX-ARRIVE-TIME']; ?></h4>
                             <p><?php echo $expert_enquiry_search_row['appointment_time']; ?>
                                 - <?php echo dateFormatconverter($expert_enquiry_search_row['appointment_date']); ?></p>
                         </div>
                         <div class="exp-deta-con-com exp-deta-3">
-                            <h4><?php echo $BIZBOOK['SERVICE-EXPERT-SERVICE-STATUS']; ?></h4>
+                            <h4><?php echo $Zitiziti['SERVICE-EXPERT-SERVICE-STATUS']; ?></h4>
                             <p><?php
                                 $enquiry_status = $expert_enquiry_search_row['enquiry_status'];
                                 if ($enquiry_status == 100) {
-                                    echo $BIZBOOK['SERVICE-EXPERT-CLOSED-LABEL'];
+                                    echo $Zitiziti['SERVICE-EXPERT-CLOSED-LABEL'];
                                 } elseif ($enquiry_status == 200) {
-                                    echo $BIZBOOK['SERVICE-EXPERT-NEW-LABEL'];
+                                    echo $Zitiziti['SERVICE-EXPERT-NEW-LABEL'];
                                 } elseif ($enquiry_status == 300) {
-                                    echo $BIZBOOK['SERVICE-EXPERT-ON-THE-WAY-LABEL'];
+                                    echo $Zitiziti['SERVICE-EXPERT-ON-THE-WAY-LABEL'];
                                 } elseif ($enquiry_status == 400) {
-                                    echo $BIZBOOK['SERVICE-EXPERT-PENDING-LABEL'];
+                                    echo $Zitiziti['SERVICE-EXPERT-PENDING-LABEL'];
                                 } elseif ($enquiry_status == 500) {
-                                    echo $BIZBOOK['SERVICE-EXPERT-DONE-LABEL'];
+                                    echo $Zitiziti['SERVICE-EXPERT-DONE-LABEL'];
                                 }
                                 ?></p>
                         </div>
                         <div class="exp-deta-con-com exp-deta-4">
-                            <h4><?php echo $BIZBOOK['SERVICE-EXPERT-PAYMENT-ACCEPT-LABEL']; ?></h4>
+                            <h4><?php echo $Zitiziti['SERVICE-EXPERT-PAYMENT-ACCEPT-LABEL']; ?></h4>
                             <ul>
                                 <?php
                                 $payment_id = explode(',', $expert_profile_row['payment_id']);
@@ -123,21 +123,21 @@ if ($expert_enquiry_search_row['enquiry_sender_id'] != $session_user_id) {
                         </div>
                     </div>
                     <div class="rhs">
-                        <h2><?php echo $BIZBOOK['SERVICE-EXPERT-BOOKING-REFRENCE'];?></h2>
+                        <h2><?php echo $Zitiziti['SERVICE-EXPERT-BOOKING-REFRENCE'];?></h2>
                         <ul>
-                            <li><?php echo $BIZBOOK['SERVICES']; ?>: <?php echo $expert_category_name; ?></li>
-                            <li><?php echo $BIZBOOK['SERVICE-EXPERT-PREFERRED-DATE-TIME']; ?>: <?php echo $expert_enquiry_search_row['appointment_time']; ?>
+                            <li><?php echo $Zitiziti['SERVICES']; ?>: <?php echo $expert_category_name; ?></li>
+                            <li><?php echo $Zitiziti['SERVICE-EXPERT-PREFERRED-DATE-TIME']; ?>: <?php echo $expert_enquiry_search_row['appointment_time']; ?>
                                 - <?php echo dateFormatconverter($expert_enquiry_search_row['appointment_date']); ?></li>
-                            <li><?php echo $BIZBOOK['MESSAGE']; ?>: <?php echo $expert_enquiry_search_row['enquiry_message']; ?></li>
+                            <li><?php echo $Zitiziti['MESSAGE']; ?>: <?php echo $expert_enquiry_search_row['enquiry_message']; ?></li>
                         </ul>
                         <?php
                         if($enquiry_status != 100 && $enquiry_status != 500) {
                             ?>
-                            <a href="#" data-toggle="modal" data-target="#cancelreq"><?php echo $BIZBOOK['SERVICE-EXPERT-CANCEL-REQUEST']; ?></a>
+                            <a href="#" data-toggle="modal" data-target="#cancelreq"><?php echo $Zitiziti['SERVICE-EXPERT-CANCEL-REQUEST']; ?></a>
                             <?php
                         }
                         ?>
-                        <a href="#" class="cta-wri-rev" data-toggle="modal" data-target="#expwrirevi"><?php echo $BIZBOOK['LISTING_DETAILS_WRITE_REVIEW']; ?></a>
+                        <a href="#" class="cta-wri-rev" data-toggle="modal" data-target="#expwrirevi"><?php echo $Zitiziti['LISTING_DETAILS_WRITE_REVIEW']; ?></a>
                     </div>
                 </div>
             </div>
@@ -162,31 +162,31 @@ include "../footer.php";
                     <div class="exper-rev-box">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <div class="tit">
-                            <h4><?php echo $BIZBOOK['SERVICE-EXPERT-WRITE-A-REVIEW-LABEL']; ?></h4>
+                            <h4><?php echo $Zitiziti['SERVICE-EXPERT-WRITE-A-REVIEW-LABEL']; ?></h4>
                         </div>
                         <div class="prof">
                             <img
                                 src="<?php echo $slash; ?>service-experts/images/services/<?php echo $expert_profile_row['profile_image']; ?>"
                                 alt="">
                             <h3><?php echo $expert_profile_row['profile_name']; ?></h3>
-                            <p><?php echo $BIZBOOK['SERVICE-EXPERT-REVIEW-P-LABEL']; ?></p>
+                            <p><?php echo $Zitiziti['SERVICE-EXPERT-REVIEW-P-LABEL']; ?></p>
                         </div>
                         <?php if (empty($session_user_id) || $session_user_id == Null || ($expert_profile_user_id == $session_user_id) || ($enquiry_status != 100 && $enquiry_status != 500)) {
                             ?>
                             <?php if (empty($session_user_id) || $session_user_id == Null) {
                                 ?>
                                 <span style="text-align:center;display: block;color: red;"
-                                      id=""><?php echo $BIZBOOK['LISTING_DETAILS_LOGIN_AND_WRITE_REVIEW']; ?></span>
+                                      id=""><?php echo $Zitiziti['LISTING_DETAILS_LOGIN_AND_WRITE_REVIEW']; ?></span>
                                 <?php
                             }
                             if ($expert_profile_user_id == $session_user_id) { ?>
                                 <span style="text-align:center;display: block;color: red;"
-                                      id=""><?php echo $BIZBOOK['SERVICE-EXPERT-CANT-REVIEW-OWN-SERVICE']; ?></span>
+                                      id=""><?php echo $Zitiziti['SERVICE-EXPERT-CANT-REVIEW-OWN-SERVICE']; ?></span>
                                 <?php
                             } else {
                                 if ($enquiry_status != 100 && $enquiry_status != 500) { ?>
                                     <span style="text-align:center;display: block;color: red;"
-                                          id=""><?php echo $BIZBOOK['SERVICE-EXPERT-CANT-REVIEW-DONE-CANCEL']; ?></span>
+                                          id=""><?php echo $Zitiziti['SERVICE-EXPERT-CANT-REVIEW-DONE-CANCEL']; ?></span>
                                     <?php
                                 }
                             }
@@ -202,10 +202,10 @@ include "../footer.php";
                                 <input name="review_user_id" value="<?php echo $session_user_id; ?>"
                                        type="hidden">
                                 <div id="expert_review_success"
-                                     style="text-align:center;display: none;color: green;"><?php echo $BIZBOOK['LISTING_DETAILS_REVIEW_SUCCESS_MESSAGE']; ?>
+                                     style="text-align:center;display: none;color: green;"><?php echo $Zitiziti['LISTING_DETAILS_REVIEW_SUCCESS_MESSAGE']; ?>
                                 </div>
                                 <div id="expert_review_fail"
-                                     style="text-align:center;display: none;color: red;"><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></div>
+                                     style="text-align:center;display: none;color: red;"><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></div>
                                 <div class="rating-new">
                                     <fieldset class="rating">
                                         <input type="radio" id="star5" name="expert_rating"
@@ -228,12 +228,12 @@ include "../footer.php";
                                 </div>
                                 <div class="rating-new-msg">
                                     <textarea name="expert_message"
-                                              placeholder="<?php echo $BIZBOOK['SERVICE-EXPERT-REVIEW-WRITE-YOUR-COMMENTS-LABEL']; ?>"></textarea>
+                                              placeholder="<?php echo $Zitiziti['SERVICE-EXPERT-REVIEW-WRITE-YOUR-COMMENTS-LABEL']; ?>"></textarea>
                                 </div>
                                 <div class="rating-new-cta">
                                     <span data-dismiss="modal">Not now</span>
                                     <button type="submit" name="expert_review_submit"
-                                            id="expert_review_submit"><?php echo $BIZBOOK['SERVICE-EXPERT-REVIEW-SUBMIT-REVIEW']; ?></button>
+                                            id="expert_review_submit"><?php echo $Zitiziti['SERVICE-EXPERT-REVIEW-SUBMIT-REVIEW']; ?></button>
                                 </div>
                             </form>
                         <?php } ?>
@@ -250,19 +250,19 @@ include "../footer.php";
                     <div class="exper-rev-box">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <div class="tit">
-                            <h4><?php echo $BIZBOOK['SERVICE-EXPERT-CANCEL-REQUEST']; ?></h4>
+                            <h4><?php echo $Zitiziti['SERVICE-EXPERT-CANCEL-REQUEST']; ?></h4>
                         </div>
                         <?php if ((empty($session_user_id) || $session_user_id == Null) || ($expert_enquiry_search_row['enquiry_sender_id'] != $session_user_id)) {
                             ?>
                             <?php if (empty($session_user_id) || $session_user_id == Null) {
                                 ?>
                                 <span style="text-align:center;display: block;color: red;"
-                                      id=""><?php echo $BIZBOOK['SERVICE-EXPERT-LOGIN-AND-CANCEL']; ?></span>
+                                      id=""><?php echo $Zitiziti['SERVICE-EXPERT-LOGIN-AND-CANCEL']; ?></span>
                             <?php }
                             if ($expert_enquiry_search_row['enquiry_sender_id'] != $session_user_id) {
                                 ?>
                                 <span style="text-align:center;display: block;color: red;"
-                                      id=""><?php echo $BIZBOOK['SERVICE-EXPERT-CANT-CANCEL-OTHER-USER']; ?></span>
+                                      id=""><?php echo $Zitiziti['SERVICE-EXPERT-CANT-CANCEL-OTHER-USER']; ?></span>
                                 <?php
                             }
                         } else { ?>
@@ -275,18 +275,18 @@ include "../footer.php";
                                 <input name="expert_service_user_id" value="<?php echo $session_user_id; ?>"
                                        type="hidden">
                                 <div id="expert_cancel_success"
-                                     style="text-align:center;display: none;color: green;"><?php echo $BIZBOOK['SERVICE-EXPERT-CANCEL-SUCCESS-MESSAGE']; ?>
+                                     style="text-align:center;display: none;color: green;"><?php echo $Zitiziti['SERVICE-EXPERT-CANCEL-SUCCESS-MESSAGE']; ?>
                                 </div>
                                 <div id="expert_cancel_fail"
-                                     style="text-align:center;display: none;color: red;"><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></div>
+                                     style="text-align:center;display: none;color: red;"><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></div>
                                 <div class="rating-new-msg">
                                     <textarea name="cancel_message" id="cancel_message" class="cancel_message"
-                                              placeholder="<?php echo $BIZBOOK['SERVICE-EXPERT-REVIEW-WRITE-YOUR-COMMENTS-LABEL']; ?>"></textarea>
+                                              placeholder="<?php echo $Zitiziti['SERVICE-EXPERT-REVIEW-WRITE-YOUR-COMMENTS-LABEL']; ?>"></textarea>
                                 </div>
                                 <div class="rating-new-cta">
-                                    <span data-dismiss="modal"><?php echo $BIZBOOK['SERVICE-EXPERT-NOT-NOW']; ?></span>
+                                    <span data-dismiss="modal"><?php echo $Zitiziti['SERVICE-EXPERT-NOT-NOW']; ?></span>
                                     <button type="submit" class="expert_service_cancel_submit"
-                                            id="expert_service_cancel_submit" name="expert_service_cancel_submit"><?php echo $BIZBOOK['SERVICE-EXPERT-CONFIRM-CANCEL'];?></button>
+                                            id="expert_service_cancel_submit" name="expert_service_cancel_submit"><?php echo $Zitiziti['SERVICE-EXPERT-CONFIRM-CANCEL'];?></button>
                                 </div>
                             </form>
                             <?php

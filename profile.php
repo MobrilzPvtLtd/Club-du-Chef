@@ -47,8 +47,8 @@ $profile_user_id = $usersqlrow['user_id'];
                     <!--START-->
                     <div class="profile">
                         <div class="jpro-ban-bg-img">
-                            <span><b><?php echo getCountUserFollowing($profile_user_id); ?></b> <?php echo $BIZBOOK['FOLLOWINGS']; ?></span>
-                            <p><?php echo $BIZBOOK['JOIN_ON']; ?>:
+                            <span><b><?php echo getCountUserFollowing($profile_user_id); ?></b> <?php echo $Zitiziti['FOLLOWINGS']; ?></span>
+                            <p><?php echo $Zitiziti['JOIN_ON']; ?>:
                                 <b><?php echo dateFormatconverter($usersqlrow['user_cdt']) ?></b></p>
                             <img loading="lazy" src="<?php echo $slash; if (($usersqlrow['cover_image'] == NULL) || empty($usersqlrow['cover_image'])) {
                                 echo "images/home4.jpg";
@@ -65,14 +65,14 @@ $profile_user_id = $usersqlrow['user_id'];
                             </div>
                             <div class="s2">
                                 <h1><?php echo $usersqlrow['first_name']; ?></h1>
-                                <span class="loc"><b><?php echo $BIZBOOK['CITY']; ?>
+                                <span class="loc"><b><?php echo $Zitiziti['CITY']; ?>
                                         :</b> <?php echo $usersqlrow['user_city']; ?></span>
-                                <p><?php echo getCountUserListing($profile_user_id); ?> <?php echo $BIZBOOK['LISTINGS']; ?>
-                                    | <?php echo getCountUserBlog($profile_user_id); ?> <?php echo $BIZBOOK['BLOGS']; ?>
-                                    | <?php echo getCountUserEvent($profile_user_id); ?> <?php echo $BIZBOOK['EVENTS']; ?></p>
+                                <p><?php echo getCountUserListing($profile_user_id); ?> <?php echo $Zitiziti['LISTINGS']; ?>
+                                    | <?php echo getCountUserBlog($profile_user_id); ?> <?php echo $Zitiziti['BLOGS']; ?>
+                                    | <?php echo getCountUserEvent($profile_user_id); ?> <?php echo $Zitiziti['EVENTS']; ?></p>
                             </div>
                             <div class="s3">
-                                <a href="mailto:<?php echo $usersqlrow['email_id']; ?>" class="cta fol" target="_blank"><?php echo $BIZBOOK['MESSAGE']; ?></a>
+                                <a href="mailto:<?php echo $usersqlrow['email_id']; ?>" class="cta fol" target="_blank"><?php echo $Zitiziti['MESSAGE']; ?></a>
                                 <span <?php
                                 if ($session_user_id == NULL || empty($session_user_id)) {
                                     echo "disabled";
@@ -82,9 +82,9 @@ $profile_user_id = $usersqlrow['user_id'];
                                       data-item="<?php echo $profile_user_id; ?>"
                                       data-num="<?php echo $session_user_id; ?>">
                             <?php if (getCountUserProfileFollowing($session_user_id, $profile_user_id) == 0) {
-                                echo $BIZBOOK['FOLLOW'];
+                                echo $Zitiziti['FOLLOW'];
                             } else {
-                                echo $BIZBOOK['UN_FOLLOW'];
+                                echo $Zitiziti['UN_FOLLOW'];
                             } ?></span>
                             </div>
                         </div>
@@ -96,7 +96,7 @@ $profile_user_id = $usersqlrow['user_id'];
                     || $usersqlrow['user_youtube'] != NULL || $usersqlrow['user_website'] != NULL) {
                         ?>
                         <div class="jb-pro-bio">
-                            <h4><?php echo $BIZBOOK['FOOTER-SOCIAL-MEDIA']; ?></h4>
+                            <h4><?php echo $Zitiziti['FOOTER-SOCIAL-MEDIA']; ?></h4>
                             <ul class="pro-soci">
                                 <?php
                                 if ($usersqlrow['user_facebook'] != NULL) {
@@ -145,12 +145,12 @@ $profile_user_id = $usersqlrow['user_id'];
                             ?>
                         <?php if ($footer_row['admin_listing_show'] == 1 && $user_details_row['setting_listing_show'] == 1) { ?>
                             <div class="jpro-bd-com">
-                                <h4><?php echo $BIZBOOK['ALL_LISTING']; ?></h4>
+                                <h4><?php echo $Zitiziti['ALL_LISTING']; ?></h4>
                                 <ul>
                                     <?php
                                     if (getCountUserListing($profile_user_id) == 0) {
                                         ?>
-                                        <div class="log"><p><?php echo $BIZBOOK['NO_LISTINGS_TO_SHOW']; ?></p></div>
+                                        <div class="log"><p><?php echo $Zitiziti['NO_LISTINGS_TO_SHOW']; ?></p></div>
                                     <?php } else {
 
                                         foreach (getAllListingUser($profile_user_id) as $listrow) {
@@ -214,7 +214,7 @@ $profile_user_id = $usersqlrow['user_id'];
                                                     </div>
                                                     <div>
                                                     <span data-toggle="modal"
-                                                          data-target="#quote"><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></span>
+                                                          data-target="#quote"><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></span>
                                                     </div>
                                                 </div>
                                             </li>
@@ -228,18 +228,18 @@ $profile_user_id = $usersqlrow['user_id'];
                                                                     data-dismiss="modal">&times;</button>
                                                             <!-- Modal Header -->
                                                             <div class="quote-pop">
-                                                                <h4><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></h4>
+                                                                <h4><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></h4>
                                                                 <div id="profile_enq_success" class="log new-tnk-msg"
                                                                      style="display: none;">
-                                                                    <p><?php echo $BIZBOOK['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
+                                                                    <p><?php echo $Zitiziti['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
                                                                 </div>
                                                                 <div id="profile_enq_same" class="log"
                                                                      style="display: none;">
-                                                                    <p><?php echo $BIZBOOK['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
+                                                                    <p><?php echo $Zitiziti['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
                                                                 </div>
                                                                 <div id="profile_enq_fail" class="log"
                                                                      style="display: none;">
-                                                                    <p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                                                                    <p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                                                                 </div>
                                                                 <form method="post" name="profile_enquiry_form"
                                                                       id="profile_enquiry_form">
@@ -260,16 +260,16 @@ $profile_user_id = $usersqlrow['user_id'];
                                                                         <input type="text" readonly name="enquiry_name"
                                                                                value="<?php echo $user_details_row['first_name'] ?>"
                                                                                required="required" class="form-control"
-                                                                               placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>">
+                                                                               placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>">
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <input type="email" class="form-control"
-                                                                               placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>"
+                                                                               placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>"
                                                                                readonly="readonly"
                                                                                value="<?php echo $user_details_row['email_id'] ?>"
                                                                                name="enquiry_email"
                                                                                pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                                                               title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>"
+                                                                               title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>"
                                                                                required>
                                                                     </div>
                                                                     <div class="form-group">
@@ -277,19 +277,19 @@ $profile_user_id = $usersqlrow['user_id'];
                                                                                readonly="readonly"
                                                                                value="<?php echo $user_details_row['mobile_number'] ?>"
                                                                                name="enquiry_mobile"
-                                                                               placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                                                               placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
                                                                                pattern="[7-9]{1}[0-9]{9}"
-                                                                               title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>"
+                                                                               title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>"
                                                                                required>
                                                                     </div>
                                                                     <div class="form-group">
                                                                     <textarea class="form-control" rows="3"
                                                                               name="enquiry_message"
-                                                                              placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                                                              placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                                                                     </div>
                                                                     <input type="hidden" id="source">
                                                                     <button type="submit" name="enquiry_submit"
-                                                                            class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
+                                                                            class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?></button>
                                                                 </form>
                                                             </div>
                                                             <div class="log-bor">&nbsp;</div>
@@ -309,12 +309,12 @@ $profile_user_id = $usersqlrow['user_id'];
                         <?php } ?>
                         <?php if ($footer_row['admin_blog_show'] == 1 && $user_details_row['setting_blog_show'] == 1) { ?>
                             <div class="jpro-bd-com">
-                                <h4><?php echo $BIZBOOK['BLOG_POSTS']; ?></h4>
+                                <h4><?php echo $Zitiziti['BLOG_POSTS']; ?></h4>
                                 <ul>
                                     <?php
                                     if (getCountUserBlog($profile_user_id) == 0) {
                                         ?>
-                                        <div class="log"><p><?php echo $BIZBOOK['NO_BLOGS_TO_SHOW']; ?></p></div>
+                                        <div class="log"><p><?php echo $Zitiziti['NO_BLOGS_TO_SHOW']; ?></p></div>
                                     <?php } else {
                                         foreach (getAllUserBlogs($profile_user_id) as $blogrow) { ?>
                                             <li>
@@ -341,12 +341,12 @@ $profile_user_id = $usersqlrow['user_id'];
                         <?php } ?>
                         <?php if ($footer_row['admin_event_show'] == 1 && $user_details_row['setting_event_show'] == 1) { ?>
                             <div class="jpro-bd-com">
-                                <h4><?php echo $BIZBOOK['EVENTS']; ?></h4>
+                                <h4><?php echo $Zitiziti['EVENTS']; ?></h4>
                                 <ul>
                                     <?php
                                     if (getCountUserEvent($profile_user_id) == 0) {
                                         ?>
-                                        <div class="log"><p><?php echo $BIZBOOK['NO_EVENTS_TO_SHOW']; ?></p></div>
+                                        <div class="log"><p><?php echo $Zitiziti['NO_EVENTS_TO_SHOW']; ?></p></div>
                                     <?php } else {
 
                                         foreach (getAllUserEvents($profile_user_id) as $eventrow) { ?>
@@ -377,13 +377,13 @@ $profile_user_id = $usersqlrow['user_id'];
                         }
                         ?>
                         <div class="jpro-bd-com">
-                            <h4><?php echo $BIZBOOK['FOLLOWERS']; ?></h4>
+                            <h4><?php echo $Zitiziti['FOLLOWERS']; ?></h4>
                             <div class="ud-rhs-sec-2">
                                 <ul>
                                     <?php
                                     if ($usersqlrow['user_followers'] == '') {
                                         ?>
-                                        <div class="log"><p><?php echo $BIZBOOK['NO_FOLLOWERS_TO_SHOW']; ?></p></div>
+                                        <div class="log"><p><?php echo $Zitiziti['NO_FOLLOWERS_TO_SHOW']; ?></p></div>
                                     <?php } else {
 
                                         $user_followers_array = explode(",", $usersqlrow['user_followers']);
@@ -399,7 +399,7 @@ $profile_user_id = $usersqlrow['user_id'];
                                                             echo $user_followers_row['profile_image'];
                                                         } ?>" alt="">
                                                     <h5><?php echo $user_followers_row['first_name']; ?></h5>
-                                                    <p><?php echo $BIZBOOK['CITY']; ?>: <b> <?php if ($user_followers_row['user_city'] == NULL) {
+                                                    <p><?php echo $Zitiziti['CITY']; ?>: <b> <?php if ($user_followers_row['user_city'] == NULL) {
                                                                 echo "N/A";
                                                             } else {
                                                                 echo $user_followers_row['user_city'];
@@ -417,7 +417,7 @@ $profile_user_id = $usersqlrow['user_id'];
                             </div>
                         </div>
                         <div class="jpro-bd-com">
-                            <h4><?php echo $BIZBOOK['SHARE_THIS_PROFILE']; ?></h4>
+                            <h4><?php echo $Zitiziti['SHARE_THIS_PROFILE']; ?></h4>
                             <div class="list-sh list-sh">
                                 <span class="share-new" data-toggle="modal" data-target="#sharepop"><i class="material-icons">share</i> Share now</span>
                             </div>
@@ -428,13 +428,13 @@ $profile_user_id = $usersqlrow['user_id'];
                 <div class="rhs">
                     <?php if ($footer_row['admin_job_show'] == 1 && $user_details_row['setting_job_show'] == 1) { ?>
                     <div class="ud-rhs-promo">
-                        <h3><?php echo $BIZBOOK['PROFILE-PROMO-H3-TAG']; ?></h3>
-                        <p><?php echo $BIZBOOK['PROFILE-PROMO-P-TAG']; ?></p>
-                        <a href="<?php echo $slash; ?>login"><?php echo $BIZBOOK['JOB-PROFILE-A']; ?></a>
+                        <h3><?php echo $Zitiziti['PROFILE-PROMO-H3-TAG']; ?></h3>
+                        <p><?php echo $Zitiziti['PROFILE-PROMO-P-TAG']; ?></p>
+                        <a href="<?php echo $slash; ?>login"><?php echo $Zitiziti['JOB-PROFILE-A']; ?></a>
                     </div>
                     <div class="job-rel-pro">
                         <div class="hot-page2-hom-pre">
-                            <h4><?php echo $BIZBOOK['JOB-RELATED-PROFILES']; ?></h4>
+                            <h4><?php echo $Zitiziti['JOB-RELATED-PROFILES']; ?></h4>
                             <ul>
                                 <?php
                                 foreach (getAllServiceUserExceptUserId($profile_user_id) as $related_user_details_row) {
@@ -450,7 +450,7 @@ $profile_user_id = $usersqlrow['user_id'];
                                         </div>
                                         <div class="hot-page2-hom-pre-2">
                                             <h5><?php echo $related_user_details_row['first_name']; ?></h5>
-                                            <span><?php echo $BIZBOOK['MEMBER_SINCE']; ?> <b><?php echo dateFormatconverter($related_user_details_row['user_cdt']) ?></b></span>
+                                            <span><?php echo $Zitiziti['MEMBER_SINCE']; ?> <b><?php echo dateFormatconverter($related_user_details_row['user_cdt']) ?></b></span>
                                         </div>
                                         <a href="<?php echo $PROFILE_URL . urlModifier($related_user_details_row['user_slug']); ?>" class="fclick"></a>
                                     </li>
@@ -463,14 +463,14 @@ $profile_user_id = $usersqlrow['user_id'];
                     <?php } ?>
                     <div class="job-rel-pro">
                         <div class="hot-page2-hom-pre pmenu-spri">
-                            <h4><?php echo $BIZBOOK['PROFILE-QUICK-ACCESS']; ?></h4>
+                            <h4><?php echo $Zitiziti['PROFILE-QUICK-ACCESS']; ?></h4>
                             <ul>
                                 <li><a href="<?php echo $webpage_full_link; ?>all-category" class="act"><img
                                             src="<?php echo $slash; ?>images/icon/shop.png">
                                         <div class="qui-acc-short">
-                                            <h5><?php echo $BIZBOOK['ALL_SERVICES']; ?></h5>
-                                            <p><?php echo $BIZBOOK['PROFILE-QUICK-ACCESS-P-1']; ?></p>
-                                            <span><?php echo $BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-1']; ?></span>
+                                            <h5><?php echo $Zitiziti['ALL_SERVICES']; ?></h5>
+                                            <p><?php echo $Zitiziti['PROFILE-QUICK-ACCESS-P-1']; ?></p>
+                                            <span><?php echo $Zitiziti['PROFILE-QUICK-ACCESS-SPAN-1']; ?></span>
                                         </div>
 
                                     </a></li>
@@ -478,9 +478,9 @@ $profile_user_id = $usersqlrow['user_id'];
                                 <li><a href="<?php echo $webpage_full_link; ?>service-experts" class="act"><img
                                             src="<?php echo $slash; ?>images/icon/expert.png">
                                         <div class="qui-acc-short">
-                                            <h5><?php echo $BIZBOOK['SERVICE-EXPERTS']; ?></h5>
-                                            <p><?php echo $BIZBOOK['ALL-CATEGORY-MESSAGE']; ?></p>
-                                            <span><?php echo $BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-2']; ?></span>
+                                            <h5><?php echo $Zitiziti['SERVICE-EXPERTS']; ?></h5>
+                                            <p><?php echo $Zitiziti['ALL-CATEGORY-MESSAGE']; ?></p>
+                                            <span><?php echo $Zitiziti['PROFILE-QUICK-ACCESS-SPAN-2']; ?></span>
                                         </div>
 
                                     </a></li>
@@ -489,9 +489,9 @@ $profile_user_id = $usersqlrow['user_id'];
                                 <li><a href="<?php echo $webpage_full_link; ?>jobs" class="act"><img
                                             src="<?php echo $slash; ?>jobs/images/icon/employee.png">
                                         <div class="qui-acc-short">
-                                            <h5> <?php echo $BIZBOOK['JOBS']; ?></h5>
-                                            <p><?php echo $BIZBOOK['JOB-HEADER-H1']; ?></p>
-                                            <span><?php echo $BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-3']; ?></span>
+                                            <h5> <?php echo $Zitiziti['JOBS']; ?></h5>
+                                            <p><?php echo $Zitiziti['JOB-HEADER-H1']; ?></p>
+                                            <span><?php echo $Zitiziti['PROFILE-QUICK-ACCESS-SPAN-3']; ?></span>
                                         </div>
                                     </a></li>
                                 <?php } ?>
@@ -499,9 +499,9 @@ $profile_user_id = $usersqlrow['user_id'];
                                 <li><a href="<?php echo $webpage_full_link; ?>events"><img
                                             src="<?php echo $slash; ?>images/icon/calendar.png">
                                         <div class="qui-acc-short">
-                                            <h5><?php echo $BIZBOOK['EVENTS']; ?></h5>
-                                            <p><?php echo $BIZBOOK['PROFILE-QUICK-ACCESS-P-4']; ?></p>
-                                            <span><?php echo $BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-4']; ?></span>
+                                            <h5><?php echo $Zitiziti['EVENTS']; ?></h5>
+                                            <p><?php echo $Zitiziti['PROFILE-QUICK-ACCESS-P-4']; ?></p>
+                                            <span><?php echo $Zitiziti['PROFILE-QUICK-ACCESS-SPAN-4']; ?></span>
                                         </div>
                                     </a></li>
                                 <?php } ?>
@@ -509,9 +509,9 @@ $profile_user_id = $usersqlrow['user_id'];
                                 <li><a href="<?php echo $webpage_full_link; ?>all-products"><img
                                             src="<?php echo $slash; ?>images/icon/cart.png">
                                         <div class="qui-acc-short">
-                                            <h5><?php echo $BIZBOOK['PRODUCTS']; ?></h5>
-                                            <p><?php echo $BIZBOOK['PROFILE-QUICK-ACCESS-P-5']; ?></p>
-                                            <span><?php echo $BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-5']; ?></span>
+                                            <h5><?php echo $Zitiziti['PRODUCTS']; ?></h5>
+                                            <p><?php echo $Zitiziti['PROFILE-QUICK-ACCESS-P-5']; ?></p>
+                                            <span><?php echo $Zitiziti['PROFILE-QUICK-ACCESS-SPAN-5']; ?></span>
                                         </div>
                                     </a></li>
                                 <?php } ?>
@@ -519,9 +519,9 @@ $profile_user_id = $usersqlrow['user_id'];
                                 <li><a href="<?php echo $webpage_full_link; ?>coupons"><img
                                             src="<?php echo $slash; ?>images/icon/coupons.png">
                                         <div class="qui-acc-short">
-                                            <h5><?php echo $BIZBOOK['COUPONS_AND_DEALS']; ?></h5>
-                                            <p><?php echo $BIZBOOK['PROFILE-QUICK-ACCESS-P-6']; ?></p>
-                                            <span><?php echo $BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-6']; ?></span>
+                                            <h5><?php echo $Zitiziti['COUPONS_AND_DEALS']; ?></h5>
+                                            <p><?php echo $Zitiziti['PROFILE-QUICK-ACCESS-P-6']; ?></p>
+                                            <span><?php echo $Zitiziti['PROFILE-QUICK-ACCESS-SPAN-6']; ?></span>
                                         </div>
 
                                     </a></li>
@@ -530,9 +530,9 @@ $profile_user_id = $usersqlrow['user_id'];
                                 <li><a href="<?php echo $webpage_full_link; ?>blog-posts"><img
                                             src="<?php echo $slash; ?>images/icon/blog1.png">
                                         <div class="qui-acc-short">
-                                            <h5> <?php echo $BIZBOOK['BLOGS']; ?></h5>
-                                            <p><?php echo $BIZBOOK['PROFILE-QUICK-ACCESS-P-7']; ?></p>
-                                            <span><?php echo $BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-4']; ?></span>
+                                            <h5> <?php echo $Zitiziti['BLOGS']; ?></h5>
+                                            <p><?php echo $Zitiziti['PROFILE-QUICK-ACCESS-P-7']; ?></p>
+                                            <span><?php echo $Zitiziti['PROFILE-QUICK-ACCESS-SPAN-4']; ?></span>
                                         </div>
 
                                     </a></li>
@@ -540,9 +540,9 @@ $profile_user_id = $usersqlrow['user_id'];
                                 <li><a href="<?php echo $webpage_full_link; ?>community"><img
                                             src="<?php echo $slash; ?>images/icon/11.png">
                                         <div class="qui-acc-short">
-                                            <h5><?php echo $BIZBOOK['COMMUNITY']; ?></h5>
-                                            <p><?php echo $BIZBOOK['COMMUNITY-PAGE-P-TAG']; ?></p>
-                                            <span><?php echo $BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-8']; ?></span>
+                                            <h5><?php echo $Zitiziti['COMMUNITY']; ?></h5>
+                                            <p><?php echo $Zitiziti['COMMUNITY-PAGE-P-TAG']; ?></p>
+                                            <span><?php echo $Zitiziti['PROFILE-QUICK-ACCESS-SPAN-8']; ?></span>
                                         </div>
 
                                     </a></li>

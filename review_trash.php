@@ -28,7 +28,7 @@ if(isset($_GET['reviewreviewreviewreviewreviewreview'])){
 
     if ($listing_res) {
 
-        $_SESSION['status_msg'] = $BIZBOOK['USER_REVIEW_DELETE_SUCCESSFUL_MESSAGE'];
+        $_SESSION['status_msg'] = $Zitiziti['USER_REVIEW_DELETE_SUCCESSFUL_MESSAGE'];
 
         if(isset($_GET['way'])){
         header('Location: db-review');
@@ -37,7 +37,7 @@ if(isset($_GET['reviewreviewreviewreviewreviewreview'])){
         }
     } else {
 
-        $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+        $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
         if(isset($_GET['way'])){
             header('Location: db-review');

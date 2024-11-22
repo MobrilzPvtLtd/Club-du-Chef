@@ -7,9 +7,9 @@ include "header.php";
 } ?>">
     <div class="abou-pg commun-pg-main">
         <div class="about-ban comunity-ban">
-            <h1><?php echo $BIZBOOK['COMMUNITY-PAGE-HEADING-LABEL']; ?></h1>
-            <p><?php echo $BIZBOOK['COMMUNITY-PAGE-P-TAG']; ?></p>
-            <input type="text" id="tail-se" placeholder="<?php echo $BIZBOOK['COMMUNITY-PAGE-PLACEHOLDER']; ?>">
+            <h1><?php echo $Zitiziti['COMMUNITY-PAGE-HEADING-LABEL']; ?></h1>
+            <p><?php echo $Zitiziti['COMMUNITY-PAGE-P-TAG']; ?></p>
+            <input type="text" id="tail-se" placeholder="<?php echo $Zitiziti['COMMUNITY-PAGE-PLACEHOLDER']; ?>">
         </div>
     </div>
     <div class="container">
@@ -63,27 +63,27 @@ include "header.php";
                                        class="comm-viw-pro-btn" target="_blank"></a>
                                 </div>
                                 <div class="count-li">
-                                    <span><b><?php echo $all_list_count; ?></b> <?php echo $BIZBOOK['LISTINGS']; ?></span>
-                                    <span><b><?php echo $all_event_count; ?></b> <?php echo $BIZBOOK['EVENTS']; ?></span>
-                                    <span><b><?php echo $all_blog_count; ?></b> <?php echo $BIZBOOK['BLOGS']; ?></span>
-                                    <span><b><?php echo $all_product_count; ?></b> <?php echo $BIZBOOK['PRODUCTS']; ?></span>
+                                    <span><b><?php echo $all_list_count; ?></b> <?php echo $Zitiziti['LISTINGS']; ?></span>
+                                    <span><b><?php echo $all_event_count; ?></b> <?php echo $Zitiziti['EVENTS']; ?></span>
+                                    <span><b><?php echo $all_blog_count; ?></b> <?php echo $Zitiziti['BLOGS']; ?></span>
+                                    <span><b><?php echo $all_product_count; ?></b> <?php echo $Zitiziti['PRODUCTS']; ?></span>
                                 </div>
                                 <div class="pro-pg-msg">
                                     <span id="chat-box-div<?php echo $si; ?>" class="comm-msg-act-btn"><i
-                                            class="material-icons">message</i> <?php echo $BIZBOOK['MESSAGE']; ?></span>
+                                            class="material-icons">message</i> <?php echo $Zitiziti['MESSAGE']; ?></span>
                                     <?php
                                     if ($_SESSION['user_id'] == NULL || empty($_SESSION['user_id'])) {
                                         ?>
-                                        <a href="<?php echo $webpage_full_link; ?>login"><?php echo $BIZBOOK['FOLLOW']; ?></a>
+                                        <a href="<?php echo $webpage_full_link; ?>login"><?php echo $Zitiziti['FOLLOW']; ?></a>
                                         <?php
                                     } else {
                                         ?><span
                                         class="cta userfollow follow-content<?php echo $all_user_id ?>"
                                         data-item="<?php echo $all_user_id; ?>"
                                         data-num="<?php echo $_SESSION['user_id']; ?>"><?php if (getCountUserProfileFollowing($_SESSION['user_id'], $all_user_id) == 0) {
-                                            echo $BIZBOOK['FOLLOW'];
+                                            echo $Zitiziti['FOLLOW'];
                                         } else {
-                                            echo $BIZBOOK['UN_FOLLOW'];
+                                            echo $Zitiziti['UN_FOLLOW'];
                                         } ?></span>
                                         <?php
                                     }
@@ -105,7 +105,7 @@ include "header.php";
                                             } else {
                                                 echo $user_details_row['profile_image'];
                                             } ?>" alt="">
-                                        <h4><?php echo $BIZBOOK['HI']; ?>
+                                        <h4><?php echo $Zitiziti['HI']; ?>
                                             , <?php echo $user_details_row['first_name']; ?></h4>
                                         <input type="hidden" id="chat_from_user" name="chat_from_user"
                                                value="<?php echo $_SESSION['user_id']; ?>">
@@ -113,7 +113,7 @@ include "header.php";
                                         <select disabled="disabled" class="chosen-select"
                                                 data-id="<?php echo $_SESSION['user_id']; ?>" id="chat_to_user234"
                                                 name="chat_to_user234">
-                                            <option value=""><?php echo $BIZBOOK['CHOOSE_A_USER']; ?></option>
+                                            <option value=""><?php echo $Zitiziti['CHOOSE_A_USER']; ?></option>
                                             <?php
                                             foreach (getAllServiceUserExceptUserIdWithoutLimit($_SESSION['user_id']) as $except_user_row) {
 
@@ -148,17 +148,17 @@ include "header.php";
 
                                         } else {
                                             ?>
-                                            <span><?php echo $BIZBOOK['COMMUNITY-PAGE-START-A-NEW-CHAT']; ?></span>
+                                            <span><?php echo $Zitiziti['COMMUNITY-PAGE-START-A-NEW-CHAT']; ?></span>
                                             <?php
                                         }
                                         ?>
                                     </div>
                                     <div class="s3">
                                         <textarea name="chat_message" id="chat_message"
-                                                  placeholder="<?php echo $BIZBOOK['DB-MESSAGES-PLACEHOLDER']; ?>"
+                                                  placeholder="<?php echo $Zitiziti['DB-MESSAGES-PLACEHOLDER']; ?>"
                                                   required=""></textarea>
                                         <button id="chat_send<?php echo $si; ?>" name="chat_send"
-                                                type="submit"><?php echo $BIZBOOK['SEND']; ?> <i class="material-icons">send</i>
+                                                type="submit"><?php echo $Zitiziti['SEND']; ?> <i class="material-icons">send</i>
                                         </button>
                                     </div>
                                 </form>

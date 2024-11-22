@@ -235,7 +235,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //****************************    Admin email starts    *************************
 
             $to = $admin_email;
-            $JOB_INSERT_ADMIN_SUBJECT = $BIZBOOK['JOB_INSERT_ADMIN_SUBJECT'];
+            $JOB_INSERT_ADMIN_SUBJECT = $Zitiziti['JOB_INSERT_ADMIN_SUBJECT'];
             $subject = "$admin_site_name $JOB_INSERT_ADMIN_SUBJECT";
 
             $admin_sql_fetch = mysqli_query($conn, "SELECT * FROM " . TBL . "mail  WHERE mail_id = 19 "); //User mail template fetch
@@ -261,7 +261,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //****************************    Client email starts    *************************
 
             $to1 = $email_id;
-            $JOB_INSERT_CLIENT_SUBJECT = $BIZBOOK['JOB_INSERT_CLIENT_SUBJECT'];
+            $JOB_INSERT_CLIENT_SUBJECT = $Zitiziti['JOB_INSERT_CLIENT_SUBJECT'];
             $subject1 = "$admin_site_name $JOB_INSERT_CLIENT_SUBJECT";
 
             $client_sql_fetch = mysqli_query($conn, "SELECT * FROM " . TBL . "mail  WHERE mail_id = 18 "); //User mail template fetch
@@ -285,13 +285,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //****************************    client email ends    *************************
 
 
-            $_SESSION['status_msg'] = $BIZBOOK['JOB_INSERT_SUCCESS_MESSAGE'];
+            $_SESSION['status_msg'] = $Zitiziti['JOB_INSERT_SUCCESS_MESSAGE'];
 
 
             header('Location: db-jobs');
         } else {
 
-            $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+            $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
             header('Location: create-job');
         }
@@ -301,7 +301,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } else {
 
-    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: create-job');
 }

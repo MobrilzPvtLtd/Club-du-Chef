@@ -14,19 +14,19 @@ include "header.php";
                     if(!isset($_SESSION['user_code']) && empty($_SESSION['user_code'])) {
                         ?>
                         <div class="coup-sec-log">
-                            <h4><?php echo $BIZBOOK['AD-DETAILS-SIGN-IN-POST-YOUR-ADS']; ?></h4>
-                            <p><?php echo $BIZBOOK['AD-DETAILS-SIGN-IN-POST-YOUR-ADS-P-TAG']; ?></p>
-                            <a href="<?php echo $LOGIN_URL; ?>"><?php echo $BIZBOOK['COUPON-NO-LOGIN-SIGN-IN-NOW']; ?></a>
+                            <h4><?php echo $Zitiziti['AD-DETAILS-SIGN-IN-POST-YOUR-ADS']; ?></h4>
+                            <p><?php echo $Zitiziti['AD-DETAILS-SIGN-IN-POST-YOUR-ADS-P-TAG']; ?></p>
+                            <a href="<?php echo $LOGIN_URL; ?>"><?php echo $Zitiziti['COUPON-NO-LOGIN-SIGN-IN-NOW']; ?></a>
                         </div>
                         <?php
                     }else {
                     ?>
                     <div class="log-bor">&nbsp;</div>
-                    <span class="steps"><?php echo $BIZBOOK['AD-DETAILS-CREATE-NEW-ADS']; ?></span>
+                    <span class="steps"><?php echo $Zitiziti['AD-DETAILS-CREATE-NEW-ADS']; ?></span>
                     <div class="log">
                         <div class="login">
 
-                            <h4><?php echo $BIZBOOK['AD-DETAILS-SUBMIT-YOUR-ADS']; ?></h4>
+                            <h4><?php echo $Zitiziti['AD-DETAILS-SUBMIT-YOUR-ADS']; ?></h4>
                             <form name="create_ads_form" id="create_ads_form" method="post" action="new_ads_insert.php"
                                   enctype="multipart/form-data">
                                 <input type="hidden" value="" name="ad_total_days" id="ad_total_days" class="validate">
@@ -42,7 +42,7 @@ include "header.php";
                                                     <select name="all_ads_price_id" required="required"
                                                             class="form-control"
                                                             id="adposi">
-                                                        <option value=""><?php echo $BIZBOOK['AD-DETAILS-CHOOSE-ADS-POSITION']; ?></option>
+                                                        <option value=""><?php echo $Zitiziti['AD-DETAILS-CHOOSE-ADS-POSITION']; ?></option>
                                                         <?php
                                                         foreach (getAllActiveAdsPrice() as $row) {
                                                             ?>
@@ -55,7 +55,7 @@ include "header.php";
                                                         }
                                                         ?>
                                                     </select>
-                                                    <a href="ad-details" class="frmtip" target="_blank"><?php echo $BIZBOOK['AD-DETAILS-PRICING-DETAILS']; ?></a>
+                                                    <a href="ad-details" class="frmtip" target="_blank"><?php echo $Zitiziti['AD-DETAILS-PRICING-DETAILS']; ?></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -65,7 +65,7 @@ include "header.php";
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <input type="date" autocomplete="off" name="ad_start_date"
-                                                           class="form-control" placeholder="<?php echo $BIZBOOK['AD-DETAILS-AD-START-DATE']; ?>"
+                                                           class="form-control" placeholder="<?php echo $Zitiziti['AD-DETAILS-AD-START-DATE']; ?>"
                                                            required>
                                                 </div>
                                             </div>
@@ -76,7 +76,7 @@ include "header.php";
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <input type="date" autocomplete="off" name="ad_end_date"
-                                                           class="form-control" placeholder="<?php echo $BIZBOOK['AD-DETAILS-AD-END-DATE']; ?>"
+                                                           class="form-control" placeholder="<?php echo $Zitiziti['AD-DETAILS-AD-END-DATE']; ?>"
                                                            required>
                                                 </div>
                                             </div>
@@ -86,7 +86,7 @@ include "header.php";
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label><?php echo $BIZBOOK['AD-DETAILS-CHOOSE-AD-IMAGE']; ?></label>
+                                                    <label><?php echo $Zitiziti['AD-DETAILS-CHOOSE-AD-IMAGE']; ?></label>
                                                     <input type="file" name="ad_enquiry_photo" class="form-control"
                                                            required>
                                                 </div>
@@ -98,7 +98,7 @@ include "header.php";
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                 <textarea id="ad_link" name="ad_link" class="form-control"
-                                                          placeholder="<?php echo $BIZBOOK['AD-DETAILS-ADVERTISEMENT-EXTERNAL-LINK']; ?>" required></textarea>
+                                                          placeholder="<?php echo $Zitiziti['AD-DETAILS-ADVERTISEMENT-EXTERNAL-LINK']; ?>" required></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -110,26 +110,26 @@ include "header.php";
                                                     <ul>
                                                         <li>
                                                             <div>
-                                                                <span><?php echo $BIZBOOK['PROMOTE-BUSINESS-TOTAL-DAYS']; ?></span>
+                                                                <span><?php echo $Zitiziti['PROMOTE-BUSINESS-TOTAL-DAYS']; ?></span>
                                                                 <h5 class="ad-tdays">0</h5>
                                                             </div>
                                                         </li>
                                                         <li>
                                                             <div>
-                                                                <span><?php echo $BIZBOOK['PROMOTE-BUSINESS-COST-PER-DAY']; ?></span>
+                                                                <span><?php echo $Zitiziti['PROMOTE-BUSINESS-COST-PER-DAY']; ?></span>
                                                                 <h5><?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?><b
                                                                         class="ad-pocost">0</b><?php if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?></h5>
                                                             </div>
                                                         </li>
                                                         <li>
                                                             <div>
-                                                                <span><?php echo $BIZBOOK['TAX']; ?></span>
+                                                                <span><?php echo $Zitiziti['TAX']; ?></span>
                                                                 <h5><?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?>4<?php if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?></h5>
                                                             </div>
                                                         </li>
                                                         <li>
                                                             <div>
-                                                                <span><?php echo $BIZBOOK['PROMOTE-BUSINESS-TOTAL-COST']; ?></span>
+                                                                <span><?php echo $Zitiziti['PROMOTE-BUSINESS-TOTAL-COST']; ?></span>
                                                                 <h5><?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?><b
                                                                         class="ad-tcost">0</b><?php if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?></h5>
                                                             </div>
@@ -144,16 +144,16 @@ include "header.php";
                                 <!--FILED START-->
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <button type="submit" name="create_ad_submit" class="btn btn-primary"><?php echo $BIZBOOK['AD-DETAILS-PUBLISH-THIS-AD'];?></button>
+                                        <button type="submit" name="create_ad_submit" class="btn btn-primary"><?php echo $Zitiziti['AD-DETAILS-PUBLISH-THIS-AD'];?></button>
                                     </div>
                                     <div class="col-md-12">
-                                        <a href="dashboard" class="skip"><?php echo $BIZBOOK['GO_TO_USER_DASHBOARD']; ?> >></a>
+                                        <a href="dashboard" class="skip"><?php echo $Zitiziti['GO_TO_USER_DASHBOARD']; ?> >></a>
                                     </div>
                                 </div>
                                 <!--FILED END-->
                             </form>
                             <div class="ud-notes">
-                                <p><b><?php echo $BIZBOOK['DB-PAYMENTS-FOOTER-NOTES']; ?>:</b> <?php echo $BIZBOOK['AD-DETAILS-NOTES-MESSAGE']; ?></p>
+                                <p><b><?php echo $Zitiziti['DB-PAYMENTS-FOOTER-NOTES']; ?>:</b> <?php echo $Zitiziti['AD-DETAILS-NOTES-MESSAGE']; ?></p>
                             </div>
                         </div>
                     </div>

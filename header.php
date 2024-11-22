@@ -271,7 +271,7 @@ foreach (getAllCities() as $city) {
                                 <?php endif; ?>
 
                                 <div class="menu">
-                                    <div class="explore-cls"><?php echo $BIZBOOK['EXPLORE']; ?></div>
+                                    <div class="explore-cls"><?php echo $Zitiziti['EXPLORE']; ?></div>
                                 </div>
 
                                 <div class="pop-menu">
@@ -282,56 +282,56 @@ foreach (getAllCities() as $city) {
                                                 <ul>
                                                     <?php if ($footer_row['admin_listing_show'] == 1) { ?>
                                                     <li><a href="/all-category" class="act"><img
-                                                                src="<?php echo $slash; ?>/images/icon/shop.png"><?php echo $BIZBOOK['ALL_SERVICES']; ?>
+                                                                src="<?php echo $slash; ?>/images/icon/shop.png"><?php echo $Zitiziti['ALL_SERVICES']; ?>
                                                         </a></li>
                                                     <?php }
                                                     if ($footer_row['admin_expert_show'] == 1) { ?>
                                                     <li><a href="/service-experts" class="act"><img
-                                                                src="<?php echo $slash; ?>/images/icon/expert.png"><?php echo $BIZBOOK['SERVICE-EXPERTS']; ?>
+                                                                src="<?php echo $slash; ?>/images/icon/expert.png"><?php echo $Zitiziti['SERVICE-EXPERTS']; ?>
                                                         </a></li>
                                                     <?php }
                                                     if ($footer_row['admin_job_show'] == 1) { ?>
                                                     <li><a href="/jobs" class="act"><img
-                                                                src="<?php echo $slash; ?>/images/icon/employee.png"><?php echo $BIZBOOK['JOBS']; ?>
+                                                                src="<?php echo $slash; ?>/images/icon/employee.png"><?php echo $Zitiziti['JOBS']; ?>
                                                         </a></li>
                                                     <?php }
                                                     if ($footer_row['admin_place_show'] == 1) { ?>
                                                     <li><a href="/places" class="act"><img
-                                                                src="<?php echo $slash; ?>/images/places/icons/hot-air-balloon.png"><?php echo $BIZBOOK['PLACE-MENU']; ?>
+                                                                src="<?php echo $slash; ?>/images/places/icons/hot-air-balloon.png"><?php echo $Zitiziti['PLACE-MENU']; ?>
                                                         </a></li>
                                                     <?php }
                                                     if ($footer_row['admin_news_show'] == 1) { ?>
                                                     <li><a href="/news"><img
-                                                                src="<?php echo $slash; ?>/images/icon/news.png"><?php echo $BIZBOOK['NEWS-MAGA']; ?>
+                                                                src="<?php echo $slash; ?>/images/icon/news.png"><?php echo $Zitiziti['NEWS-MAGA']; ?>
                                                         </a></li>
                                                     <?php }
                                                     if ($footer_row['admin_event_show'] == 1) { ?>
                                                     <li><a href="/events"><img
-                                                                src="<?php echo $slash; ?>/images/icon/calendar.png"><?php echo $BIZBOOK['EVENTS']; ?>
+                                                                src="<?php echo $slash; ?>/images/icon/calendar.png"><?php echo $Zitiziti['EVENTS']; ?>
                                                         </a></li>
                                                     <?php }
                                                     if ($footer_row['admin_product_show'] == 1) { ?>
                                                     <li><a href="/all-products"><img
-                                                                src="<?php echo $slash; ?>/images/icon/cart.png"><?php echo $BIZBOOK['PRODUCTS']; ?>
+                                                                src="<?php echo $slash; ?>/images/icon/cart.png"><?php echo $Zitiziti['PRODUCTS']; ?>
                                                         </a></li>
                                                     <?php }
                                                     if ($footer_row['admin_coupon_show'] == 1) { ?>
                                                     <li><a href="/coupons"><img
-                                                                src="<?php echo $slash; ?>/images/icon/coupons.png"><?php echo $BIZBOOK['COUPONS_AND_DEALS']; ?>
+                                                                src="<?php echo $slash; ?>/images/icon/coupons.png"><?php echo $Zitiziti['COUPONS_AND_DEALS']; ?>
                                                         </a></li>
                                                     <?php }
                                                     if ($footer_row['admin_blog_show'] == 1) { ?>
                                                     <li><a href="/blog-posts"><img
-                                                                src="<?php echo $slash; ?>/images/icon/blog1.png"><?php echo $BIZBOOK['BLOGS']; ?>
+                                                                src="<?php echo $slash; ?>/images/icon/blog1.png"><?php echo $Zitiziti['BLOGS']; ?>
                                                         </a></li>
                                                     <?php } ?>
                                                     <li><a href="/community"><img
-                                                                src="<?php echo $slash; ?>/images/icon/11.png"><?php echo $BIZBOOK['COMMUNITY']; ?>
+                                                                src="<?php echo $slash; ?>/images/icon/11.png"><?php echo $Zitiziti['COMMUNITY']; ?>
                                                         </a></li>
                                                 </ul>
                                             </div>
                                             <div class="pmenu-cat">
-                                                <h4><?php echo $BIZBOOK['ALL_CATEGORIES']; ?></h4>
+                                                <h4><?php echo $Zitiziti['ALL_CATEGORIES']; ?></h4>
                                                 <input type="text" id="pg-sear" placeholder="Search category">
                                                 <ul id="pg-resu">
                                                     <?php
@@ -349,19 +349,19 @@ foreach (getAllCities() as $city) {
                                             </div>
                                             <div class="dir-home-nav-bot">
                                                 <ul>
-                                                    <li><?php echo $BIZBOOK['HOM-FEW-REASON-LOVE']; ?>
-                                                        <span><?php echo $BIZBOOK['HOM-CALL-US-ON']; ?></span>
+                                                    <li><?php echo $Zitiziti['HOM-FEW-REASON-LOVE']; ?>
+                                                        <span><?php echo $Zitiziti['HOM-CALL-US-ON']; ?></span>
                                                     </li>
                                                     <li><a href="/post-your-ads"
                                                             class="waves-effect waves-light btn-large"><i
                                                                 class="material-icons">font_download</i>
-                                                            <?php echo $BIZBOOK['POST_ADS']; ?>
+                                                            <?php echo $Zitiziti['POST_ADS']; ?>
                                                         </a>
                                                     </li>
                                                     <li><a href="/pricing-details"
                                                             class="waves-effect waves-light btn-large"> <i
                                                                 class="material-icons">store</i>
-                                                            <?php echo $BIZBOOK['HOM-HOW-P-TIT-2']; ?>
+                                                            <?php echo $Zitiziti['HOM-HOW-P-TIT-2']; ?>
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -377,7 +377,7 @@ foreach (getAllCities() as $city) {
                                         <ul>
                                             <li class="sr-sea">
                                                 <input type="text" autocomplete="off" id="top-select-search"
-                                                    placeholder="<?php echo $BIZBOOK['SEARCHBOX_LABEL']; ?>"
+                                                    placeholder="<?php echo $Zitiziti['SEARCHBOX_LABEL']; ?>"
                                                     class="pe-2">
                                                 <ul id="tser-res1" class="tser-res tser-res2">
                                                     <?php
@@ -443,7 +443,7 @@ foreach (getAllCities() as $city) {
                                     </li>
                                     <li>
                                         <a href="/pricing-details"
-                                            class="text-decoration-none"><?php echo $BIZBOOK['ADD_BUSINESS']; ?></a>
+                                            class="text-decoration-none"><?php echo $Zitiziti['ADD_BUSINESS']; ?></a>
                                     </li>
 
 
@@ -452,11 +452,11 @@ foreach (getAllCities() as $city) {
                                     ?>
                                     <li>
                                         <a href="/login"
-                                            class="text-decoration-none"><?php echo $BIZBOOK['SIGN_IN']; ?></a>
+                                            class="text-decoration-none"><?php echo $Zitiziti['SIGN_IN']; ?></a>
                                     </li>
                                     <li>
                                         <a href="/login?login=register"
-                                            class="text-decoration-none"><?php echo $BIZBOOK['CREATE_AN_ACCOUNT']; ?></a>
+                                            class="text-decoration-none"><?php echo $Zitiziti['CREATE_AN_ACCOUNT']; ?></a>
                                     </li>
                                     <?php
                                     } else {
@@ -481,9 +481,9 @@ foreach (getAllCities() as $city) {
                                                     } ?>" alt="">
                                                 <div class="ud-lhs-pro-bio">
                                                     <h4><?php echo $user_details_row['first_name']; ?></h4>
-                                                    <b><?php echo $BIZBOOK['JOIN_ON']; ?><?php echo dateFormatconverter($user_details_row['user_cdt']) ?></b>
+                                                    <b><?php echo $Zitiziti['JOIN_ON']; ?><?php echo dateFormatconverter($user_details_row['user_cdt']) ?></b>
                                                     <a class="ud-lhs-view-pro" target="_blank"
-                                                        href="<?php echo $PROFILE_URL . urlModifier($user_details_row['user_slug']); ?>"><?php echo $BIZBOOK['MY_PROFILE']; ?></a>
+                                                        href="<?php echo $PROFILE_URL . urlModifier($user_details_row['user_slug']); ?>"><?php echo $Zitiziti['MY_PROFILE']; ?></a>
                                                 </div>
                                             </div>
                                             <ul>
@@ -492,19 +492,19 @@ foreach (getAllCities() as $city) {
                                                             echo "db-lact";
                                                         } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/dbl1.png" alt="" />
-                                                        <?php echo $BIZBOOK['MY_DASHBOARD']; ?></a>
+                                                        <?php echo $Zitiziti['MY_DASHBOARD']; ?></a>
                                                 </li>
                                                 <?php
                                                     if ($user_details_row['user_type'] == "Service provider") {  //To Check User type is Service provider
                                                         ?>
                                                 <?php if ($footer_row['admin_listing_show'] == 1 && $user_details_row['setting_listing_show'] == 1) { ?>
                                                 <li>
-                                                    <h4><?php echo $BIZBOOK['DASH-LHS-ALL-MOD']; ?></h4>
+                                                    <h4><?php echo $Zitiziti['DASH-LHS-ALL-MOD']; ?></h4>
                                                     <a href="<?php echo $slash; ?>db-all-listing" class="<?php if ($current_page == "db-all-listing.php") {
                                                                     echo "db-lact";
                                                                 } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/shop.png"
-                                                            alt="" /><?php echo $BIZBOOK['ALL_LISTING']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['ALL_LISTING']; ?></a>
                                                 </li>
                                                 <?php } ?>
                                                 <?php if ($footer_row['admin_job_show'] == 1 && $user_details_row['setting_job_show'] == 1) { ?>
@@ -513,7 +513,7 @@ foreach (getAllCities() as $city) {
                                                                     echo "db-lact";
                                                                 } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/employee.png"
-                                                            alt="" /><?php echo $BIZBOOK['JOBS']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['JOBS']; ?></a>
                                                 </li>
                                                 <?php } ?>
                                                 <?php if ($footer_row['admin_product_show'] == 1 && $user_details_row['setting_product_show'] == 1) { ?>
@@ -522,7 +522,7 @@ foreach (getAllCities() as $city) {
                                                                     echo "db-lact";
                                                                 } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/cart.png"
-                                                            alt="" /><?php echo $BIZBOOK['ALL_PRODUCTS']; ?>
+                                                            alt="" /><?php echo $Zitiziti['ALL_PRODUCTS']; ?>
                                                     </a>
                                                 </li>
                                                 <?php } ?>
@@ -532,7 +532,7 @@ foreach (getAllCities() as $city) {
                                                                     echo "db-lact";
                                                                 } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/calendar.png"
-                                                            alt="" /><?php echo $BIZBOOK['EVENTS']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['EVENTS']; ?></a>
                                                 </li>
                                                 <?php } ?>
                                                 <?php if ($footer_row['admin_blog_show'] == 1 && $user_details_row['setting_blog_show'] == 1) { ?>
@@ -541,7 +541,7 @@ foreach (getAllCities() as $city) {
                                                                     echo "db-lact";
                                                                 } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/blog1.png"
-                                                            alt="" /><?php echo $BIZBOOK['BLOG_POSTS']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['BLOG_POSTS']; ?></a>
                                                 </li>
                                                 <?php } ?>
 
@@ -551,18 +551,18 @@ foreach (getAllCities() as $city) {
                                                                     echo "db-lact";
                                                                 } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/coupons.png"
-                                                            alt="" /><?php echo $BIZBOOK['COUPONS']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['COUPONS']; ?></a>
                                                 </li>
                                                 <?php } ?>
 
                                                 <?php if ($footer_row['admin_listing_show'] == 1 && $user_details_row['setting_listing_show'] == 1) { ?>
                                                 <li>
-                                                    <h4><?php echo $BIZBOOK['DASH-LHS-LEAD']; ?></h4>
+                                                    <h4><?php echo $Zitiziti['DASH-LHS-LEAD']; ?></h4>
                                                     <a href="<?php echo $slash; ?>db-enquiry" class="<?php if ($current_page == "db-enquiry.php") {
                                                                     echo "db-lact";
                                                                 } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/tick.png"
-                                                            alt="" /><?php echo $BIZBOOK['LEAD_ENQUIRY']; ?>
+                                                            alt="" /><?php echo $Zitiziti['LEAD_ENQUIRY']; ?>
                                                     </a>
                                                 </li>
                                                 <?php } ?>
@@ -573,64 +573,64 @@ foreach (getAllCities() as $city) {
                                                                     echo "db-lact";
                                                                 } ?>"><img
                                                             src="<?php echo $slash; ?>/images/icon/expert.png"
-                                                            alt="" /><?php echo $BIZBOOK['ALL_SERVICE_EXPERT_LEADS']; ?>
+                                                            alt="" /><?php echo $Zitiziti['ALL_SERVICE_EXPERT_LEADS']; ?>
                                                     </a>
                                                 </li>
                                                 <?php } ?>
                                                 <li>
-                                                    <h4><?php echo $BIZBOOK['DASH-LHS-PAY']; ?></h4>
+                                                    <h4><?php echo $Zitiziti['DASH-LHS-PAY']; ?></h4>
                                                     <a href="<?php echo $slash; ?>db-payment" class="<?php if ($current_page == "db-payment.php") {
                                                                 echo "db-lact";
                                                             } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/dbl9.png"
-                                                            alt=""><?php echo $BIZBOOK['CHECK_OUT']; ?></a>
+                                                            alt=""><?php echo $Zitiziti['CHECK_OUT']; ?></a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo $slash; ?>db-promote" class="<?php if ($current_page == "db-promote.php") {
                                                                 echo "db-lact";
                                                             } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/promotion.png"
-                                                            alt="" /><?php echo $BIZBOOK['PROMOTIONS']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['PROMOTIONS']; ?></a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo $slash; ?>db-seo" class="<?php if ($current_page == "db-seo.php") {
                                                                 echo "db-lact";
                                                             } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/seo.png"
-                                                            alt="" /><?php echo $BIZBOOK['SEO']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['SEO']; ?></a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo $slash; ?>db-point-history" class="<?php if ($current_page == "db-point-history.php") {
                                                                 echo "db-lact";
                                                             } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/point.png"
-                                                            alt="" /><?php echo $BIZBOOK['POINTS_HISTORY']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['POINTS_HISTORY']; ?></a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo $slash; ?>db-post-ads" class="<?php if ($current_page == "db-post-ads.php") {
                                                                 echo "db-lact";
                                                             } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/dbl11.png"
-                                                            alt="" /><?php echo $BIZBOOK['AD_SUMMARY']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['AD_SUMMARY']; ?></a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo $slash; ?>db-invoice-all" class="<?php if ($current_page == "db-invoice-all.php") {
                                                                 echo "db-lact";
                                                             } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/dbl16.png"
-                                                            alt="" /><?php echo $BIZBOOK['PAYMENT_INVOICE']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['PAYMENT_INVOICE']; ?></a>
                                                 </li>
                                                 <?php
                                                     }
                                                     ?>
 
                                                 <li>
-                                                    <h4><?php echo $BIZBOOK['DASH-LHS-PAGES']; ?></h4>
+                                                    <h4><?php echo $Zitiziti['DASH-LHS-PAGES']; ?></h4>
                                                     <a href="<?php echo $slash; ?>db-my-profile" class="<?php if ($current_page == "db-my-profile.php" || $current_page == "db-my-profile-edit") {
                                                             echo "db-lact";
                                                         } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/profile.png"
-                                                            alt="" /><?php echo $BIZBOOK['MY_PROFILE']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['MY_PROFILE']; ?></a>
                                                 </li>
                                                 <?php if ($user_details_row['user_type'] == "Service provider" && $footer_row['admin_expert_show'] == 1 && $user_details_row['setting_expert_show'] == 1) { ?>
                                                 <li>
@@ -639,7 +639,7 @@ foreach (getAllCities() as $city) {
                                                                     echo "db-lact";
                                                                 } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/profile.png"
-                                                            alt="" /><?php echo $BIZBOOK['ADD_NEW_SERVICE_EXPERT']; ?>
+                                                            alt="" /><?php echo $Zitiziti['ADD_NEW_SERVICE_EXPERT']; ?>
                                                     </a>
                                                 </li>
                                                 <?php } ?>
@@ -649,16 +649,16 @@ foreach (getAllCities() as $city) {
                                                                 echo "db-lact";
                                                             } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/profile.png"
-                                                            alt="" /><?php echo $BIZBOOK['PROFI_JOB_SEEKER_TIT']; ?>
+                                                            alt="" /><?php echo $Zitiziti['PROFI_JOB_SEEKER_TIT']; ?>
                                                     </a>
                                                 </li>
                                                 <?php } ?>
                                                 <li>
-                                                    <h4><?php echo $BIZBOOK['DASH-LHS-ACTI']; ?></h4>
+                                                    <h4><?php echo $Zitiziti['DASH-LHS-ACTI']; ?></h4>
                                                     <a href="<?php echo $slash; ?>jobs/db-user-applied-jobs">
                                                         <imgsrc="<?php echo $slash; ?>
                                                             /images/icon/job-apply.png"alt="" />
-                                                        <?php echo $BIZBOOK['ALL_APPLIED_JOBS']; ?>
+                                                        <?php echo $Zitiziti['ALL_APPLIED_JOBS']; ?>
                                                     </a>
                                                 </li>
                                                 <?php if ($footer_row['admin_expert_show'] == 1 && $user_details_row['setting_expert_show'] == 1) { ?>
@@ -668,7 +668,7 @@ foreach (getAllCities() as $city) {
                                                                     echo "db-lact";
                                                                 } ?>"><img
                                                             src="<?php echo $slash; ?>/images/icon/expert-book.png"
-                                                            alt="" /><?php echo $BIZBOOK['MY_SERVICE_BOOKINGS']; ?>
+                                                            alt="" /><?php echo $Zitiziti['MY_SERVICE_BOOKINGS']; ?>
                                                     </a>
                                                 </li>
                                                 <?php } ?>
@@ -677,21 +677,21 @@ foreach (getAllCities() as $city) {
                                                             echo "db-lact";
                                                         } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/dbl13.png"
-                                                            alt="" /><?php echo $BIZBOOK['REVIEWS']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['REVIEWS']; ?></a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo $slash; ?>db-like-listings" class="<?php if ($current_page == "db-like-listings.php") {
                                                             echo "db-lact";
                                                         } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/dbl15.png"
-                                                            alt="" /><?php echo $BIZBOOK['LIKED_LISTINGS']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['LIKED_LISTINGS']; ?></a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo $slash; ?>db-followings" class="<?php if ($current_page == "db-followings.php") {
                                                             echo "db-lact";
                                                         } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/dbl18.png"
-                                                            alt="" /><?php echo $BIZBOOK['FOLLOWINGS']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['FOLLOWINGS']; ?></a>
                                                 </li>
 
                                                 <li>
@@ -699,28 +699,28 @@ foreach (getAllCities() as $city) {
                                                             echo "db-lact";
                                                         } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/dbl19.png"
-                                                            alt="" /><?php echo $BIZBOOK['NOTIFICATIONS']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['NOTIFICATIONS']; ?></a>
                                                 </li>
                                                 <li>
-                                                    <h4><?php echo $BIZBOOK['DASH-LHS-SETT']; ?></h4>
+                                                    <h4><?php echo $Zitiziti['DASH-LHS-SETT']; ?></h4>
                                                     <a href="<?php echo $slash; ?>db-setting" class="<?php if ($current_page == "db-setting.php") {
                                                             echo "db-lact";
                                                         } ?>"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/dbl210.png"
-                                                            alt="" /><?php echo $BIZBOOK['SETTING']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['SETTING']; ?></a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo $slash; ?>how-to" class="<?php if ($current_page == "how-to.php") {
                                                             echo "db-lact";
                                                         } ?>" target="_blank"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/dbl17.png"
-                                                            alt="" /><?php echo $BIZBOOK['HOW_TOS']; ?>
+                                                            alt="" /><?php echo $Zitiziti['HOW_TOS']; ?>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo $slash; ?>logout"><img loading="lazy"
                                                             src="<?php echo $slash; ?>/images/icon/dbl12.png"
-                                                            alt="" /><?php echo $BIZBOOK['LOG_OUT']; ?>
+                                                            alt="" /><?php echo $Zitiziti['LOG_OUT']; ?>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -786,16 +786,16 @@ foreach (getAllCities() as $city) {
                                             <ul>
                                                 <li>
                                                     <a
-                                                        href="/pricing-details"><?php echo $BIZBOOK['ADD_BUSINESS']; ?></a>
+                                                        href="/pricing-details"><?php echo $Zitiziti['ADD_BUSINESS']; ?></a>
                                                 </li>
                                                 <li>
                                                     <a href="/login">
-                                                        <?php echo $BIZBOOK['SIGN_IN']; ?>
+                                                        <?php echo $Zitiziti['SIGN_IN']; ?>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="/login?login=register"><?php echo $BIZBOOK['CREATE_AN_ACCOUNT']; ?></a>
+                                                        href="/login?login=register"><?php echo $Zitiziti['CREATE_AN_ACCOUNT']; ?></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -810,7 +810,7 @@ foreach (getAllCities() as $city) {
                                                    } ?>" alt="">
                                             <div class="ud-lhs-pro-bio">
                                                 <h4><?php echo $user_details_row['first_name']; ?></h4>
-                                                <b><?php echo $BIZBOOK['JOIN_ON']; ?><?php echo dateFormatconverter($user_details_row['user_cdt']) ?></b>
+                                                <b><?php echo $Zitiziti['JOIN_ON']; ?><?php echo dateFormatconverter($user_details_row['user_cdt']) ?></b>
                                             </div>
                                         </div>
                                         <div class="mv-pro-menu ud-lhs-s2">
@@ -819,7 +819,7 @@ foreach (getAllCities() as $city) {
                                                     <a href="<?php echo $slash; ?>dashboard" class="<?php if ($current_page == "dashboard.php") {
                                                                echo "db-lact";
                                                            } ?>"><img src="<?php echo $slash; ?>/images/icon/dbl1.png"
-                                                            alt="" /> <?php echo $BIZBOOK['MY_DASHBOARD']; ?></a>
+                                                            alt="" /> <?php echo $Zitiziti['MY_DASHBOARD']; ?></a>
                                                 </li>
                                                 <?php
                                                     if ($user_details_row['user_type'] == "Service provider") {  //To Check User type is Service provider
@@ -829,20 +829,20 @@ foreach (getAllCities() as $city) {
                                                                    echo "db-lact";
                                                                } ?>"><img
                                                             src="<?php echo $slash; ?>/images/icon/shop.png"
-                                                            alt="" /><?php echo $BIZBOOK['ALL_LISTING']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['ALL_LISTING']; ?></a>
                                                 </li>
 
 
 
                                                 <li><a href="<?php echo $slash; ?>add-listing-start"><img
                                                             src="<?php echo $slash; ?>/images/icon/dbl3.png"
-                                                            alt="" /><?php echo $BIZBOOK['ADD_NEW_LISTING']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['ADD_NEW_LISTING']; ?></a>
                                                 </li>
                                                 <li><a href="<?php echo $slash; ?>db-enquiry" class="<?php if ($current_page == "db-enquiry.php") {
                                                                    echo "db-lact";
                                                                } ?>"><img
                                                             src="<?php echo $slash; ?>/images/icon/tick.png"
-                                                            alt="" /><?php echo $BIZBOOK['LEAD_ENQUIRY']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['LEAD_ENQUIRY']; ?></a>
                                                 </li>
                                                 <?php } ?>
                                                 <?php if ($footer_row['admin_job_show'] == 1 && $user_details_row['setting_job_show'] == 1) { ?>
@@ -850,7 +850,7 @@ foreach (getAllCities() as $city) {
                                                                    echo "db-lact";
                                                                } ?>"><img
                                                             src="<?php echo $slash; ?>jobs/images/icon/employee.png"
-                                                            alt="" /><?php echo $BIZBOOK['JOBS']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['JOBS']; ?></a>
                                                 </li>
                                                 <?php } ?>
                                                 <?php if ($footer_row['admin_product_show'] == 1 && $user_details_row['setting_product_show'] == 1) { ?>
@@ -858,7 +858,7 @@ foreach (getAllCities() as $city) {
                                                                    echo "db-lact";
                                                                } ?>"><img
                                                             src="<?php echo $slash; ?>/images/icon/cart.png"
-                                                            alt="" /><?php echo $BIZBOOK['ALL_PRODUCTS']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['ALL_PRODUCTS']; ?></a>
                                                 </li>
                                                 <?php } ?>
                                                 <?php if ($footer_row['admin_event_show'] == 1 && $user_details_row['setting_event_show'] == 1) { ?>
@@ -866,7 +866,7 @@ foreach (getAllCities() as $city) {
                                                                    echo "db-lact";
                                                                } ?>"><img
                                                             src="<?php echo $slash; ?>/images/icon/calendar.png"
-                                                            alt="" /><?php echo $BIZBOOK['EVENTS']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['EVENTS']; ?></a>
                                                 </li>
                                                 <?php } ?>
                                                 <?php if ($footer_row['admin_blog_show'] == 1 && $user_details_row['setting_blog_show'] == 1) { ?>
@@ -874,7 +874,7 @@ foreach (getAllCities() as $city) {
                                                                    echo "db-lact";
                                                                } ?>"><img
                                                             src="<?php echo $slash; ?>/images/icon/blog1.png"
-                                                            alt="" /><?php echo $BIZBOOK['BLOG_POSTS']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['BLOG_POSTS']; ?></a>
                                                 </li>
                                                 <?php } ?>
                                                 <?php if ($footer_row['admin_expert_show'] == 1 && $user_details_row['setting_expert_show'] == 1) { ?>
@@ -883,14 +883,14 @@ foreach (getAllCities() as $city) {
                                                                         echo "db-lact";
                                                                     } ?>"><img
                                                             src="<?php echo $slash; ?>/images/icon/profile.png"
-                                                            alt="" /><?php echo $BIZBOOK['ADD_NEW_SERVICE_EXPERT']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['ADD_NEW_SERVICE_EXPERT']; ?></a>
                                                 </li>
                                                 <li><a href="<?php echo $slash; ?>service-experts/db-service-expert"
                                                         class="<?php if ($current_page == "db-service-expert.php") {
                                                                         echo "db-lact";
                                                                     } ?>"><img
                                                             src="<?php echo $slash; ?>/images/icon/expert.png"
-                                                            alt="" /><?php echo $BIZBOOK['ALL_SERVICE_EXPERT_LEADS']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['ALL_SERVICE_EXPERT_LEADS']; ?></a>
                                                 </li>
                                                 <?php } ?>
                                                 <?php if ($footer_row['admin_coupon_show'] == 1 && $user_details_row['setting_coupon_show'] == 1) { ?>
@@ -898,7 +898,7 @@ foreach (getAllCities() as $city) {
                                                                    echo "db-lact";
                                                                } ?>"><img
                                                             src="<?php echo $slash; ?>/images/icon/coupons.png"
-                                                            alt="" /><?php echo $BIZBOOK['COUPONS']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['COUPONS']; ?></a>
                                                 </li>
                                                 <?php } ?>
                                                 <li>
@@ -906,21 +906,21 @@ foreach (getAllCities() as $city) {
                                                                    echo "db-lact";
                                                                } ?>"><img
                                                             src="<?php echo $slash; ?>/images/icon/promotion.png"
-                                                            alt="" /><?php echo $BIZBOOK['PROMOTIONS']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['PROMOTIONS']; ?></a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo $slash; ?>db-seo" class="<?php if ($current_page == "db-seo.php") {
                                                                    echo "db-lact";
                                                                } ?>"><img
                                                             src="<?php echo $slash; ?>/images/icon/seo.png"
-                                                            alt="" /><?php echo $BIZBOOK['SEO']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['SEO']; ?></a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo $slash; ?>db-point-history" class="<?php if ($current_page == "db-point-history.php") {
                                                                    echo "db-lact";
                                                                } ?>"><img
                                                             src="<?php echo $slash; ?>/images/icon/point.png"
-                                                            alt="" /><?php echo $BIZBOOK['POINTS_HISTORY']; ?>
+                                                            alt="" /><?php echo $Zitiziti['POINTS_HISTORY']; ?>
                                                     </a>
                                                 </li>
                                                 <?php
@@ -932,7 +932,7 @@ foreach (getAllCities() as $city) {
                                                                echo "db-lact";
                                                            } ?>"><img
                                                             src="<?php echo $slash; ?>/images/icon/profile.png"
-                                                            alt="" /><?php echo $BIZBOOK['MY_PROFILE']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['MY_PROFILE']; ?></a>
                                                 </li>
                                                 <?php if ($footer_row['admin_job_show'] == 1 && $user_details_row['setting_job_show'] == 1) { ?>
                                                 <li>
@@ -940,13 +940,13 @@ foreach (getAllCities() as $city) {
                                                                    echo "db-lact";
                                                                } ?>"><img
                                                             src="<?php echo $slash; ?>/images/icon/profile.png"
-                                                            alt="" /><?php echo $BIZBOOK['PROFI_JOB_SEEKER_TIT']; ?>
+                                                            alt="" /><?php echo $Zitiziti['PROFI_JOB_SEEKER_TIT']; ?>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo $slash; ?>jobs/db-user-applied-jobs"><img
                                                             src="<?php echo $slash; ?>/images/icon/job-apply.png"
-                                                            alt="" /><?php echo $BIZBOOK['ALL_APPLIED_JOBS']; ?>
+                                                            alt="" /><?php echo $Zitiziti['ALL_APPLIED_JOBS']; ?>
                                                     </a>
                                                 </li>
                                                 <?php }
@@ -957,7 +957,7 @@ foreach (getAllCities() as $city) {
                                                                     echo "db-lact";
                                                                 } ?>"><img
                                                             src="<?php echo $slash; ?>/images/icon/expert-book.png"
-                                                            alt="" /><?php echo $BIZBOOK['MY_SERVICE_BOOKINGS']; ?>
+                                                            alt="" /><?php echo $Zitiziti['MY_SERVICE_BOOKINGS']; ?>
                                                     </a>
                                                 </li>
                                                 <?php } ?>
@@ -965,19 +965,19 @@ foreach (getAllCities() as $city) {
                                                     <a href="<?php echo $slash; ?>db-review" class="<?php if ($current_page == "db-review.php") {
                                                                echo "db-lact";
                                                            } ?>"><img src="<?php echo $slash; ?>/images/icon/dbl13.png"
-                                                            alt="" /><?php echo $BIZBOOK['REVIEWS']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['REVIEWS']; ?></a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo $slash; ?>db-like-listings" class="<?php if ($current_page == "db-like-listings.php") {
                                                                echo "db-lact";
                                                            } ?>"><img src="<?php echo $slash; ?>/images/icon/dbl15.png"
-                                                            alt="" /><?php echo $BIZBOOK['LIKED_LISTINGS']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['LIKED_LISTINGS']; ?></a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo $slash; ?>db-followings" class="<?php if ($current_page == "db-followings.php") {
                                                                echo "db-lact";
                                                            } ?>"><img src="<?php echo $slash; ?>/images/icon/dbl18.png"
-                                                            alt="" /><?php echo $BIZBOOK['FOLLOWINGS']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['FOLLOWINGS']; ?></a>
                                                 </li>
                                                 <?php
                                                     if ($user_details_row['user_type'] == "Service provider") {  //To Check User type is Service provider
@@ -987,21 +987,21 @@ foreach (getAllCities() as $city) {
                                                                    echo "db-lact";
                                                                } ?>"><img
                                                             src="<?php echo $slash; ?>/images/icon/dbl11.png"
-                                                            alt="" /><?php echo $BIZBOOK['AD_SUMMARY']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['AD_SUMMARY']; ?></a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo $slash; ?>db-payment" class="<?php if ($current_page == "db-payment.php") {
                                                                    echo "db-lact";
                                                                } ?>"><img
                                                             src="<?php echo $slash; ?>/images/icon/dbl9.png"
-                                                            alt=""><?php echo $BIZBOOK['CHECK_OUT']; ?></a>
+                                                            alt=""><?php echo $Zitiziti['CHECK_OUT']; ?></a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo $slash; ?>db-invoice-all" class="<?php if ($current_page == "db-invoice-all.php") {
                                                                    echo "db-lact";
                                                                } ?>"><img
                                                             src="<?php echo $slash; ?>/images/icon/dbl16.png"
-                                                            alt="" /><?php echo $BIZBOOK['PAYMENT_INVOICE']; ?>
+                                                            alt="" /><?php echo $Zitiziti['PAYMENT_INVOICE']; ?>
                                                     </a>
                                                 </li>
                                                 <?php
@@ -1011,14 +1011,14 @@ foreach (getAllCities() as $city) {
                                                     <a href="<?php echo $slash; ?>db-notifications" class="<?php if ($current_page == "db-notifications.php") {
                                                                echo "db-lact";
                                                            } ?>"><img src="<?php echo $slash; ?>/images/icon/dbl19.png"
-                                                            alt="" /><?php echo $BIZBOOK['NOTIFICATIONS']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['NOTIFICATIONS']; ?></a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo $slash; ?>how-to" class="<?php if ($current_page == "how-to.php") {
                                                                echo "db-lact";
                                                            } ?>" target="_blank"><img
                                                             src="<?php echo $slash; ?>/images/icon/dbl17.png"
-                                                            alt="" /><?php echo $BIZBOOK['HOW_TOS']; ?>
+                                                            alt="" /><?php echo $Zitiziti['HOW_TOS']; ?>
                                                     </a>
                                                 </li>
                                                 <li>
@@ -1026,12 +1026,12 @@ foreach (getAllCities() as $city) {
                                                                echo "db-lact";
                                                            } ?>"><img
                                                             src="<?php echo $slash; ?>/images/icon/dbl210.png"
-                                                            alt="" /><?php echo $BIZBOOK['SETTING']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['SETTING']; ?></a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo $slash; ?>logout"><img
                                                             src="<?php echo $slash; ?>/images/icon/dbl12.png"
-                                                            alt="" /><?php echo $BIZBOOK['LOG_OUT']; ?></a>
+                                                            alt="" /><?php echo $Zitiziti['LOG_OUT']; ?></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1039,7 +1039,7 @@ foreach (getAllCities() as $city) {
                                         }
                                         ?>
                                         <div class="mv-cate">
-                                            <h4><?php echo $BIZBOOK['ALL_CATEGORIES']; ?></h4>
+                                            <h4><?php echo $Zitiziti['ALL_CATEGORIES']; ?></h4>
                                             <ul>
                                                 <?php foreach (getAllCategoriesPos() as $row) { ?>
                                                 <li>
@@ -1064,9 +1064,9 @@ foreach (getAllCities() as $city) {
                         <div class="ban-tit">
                             <h1>
                                 <?php if ($current_page == "all-category.php") { ?>
-                                <b><?php echo $BIZBOOK['HOM-BAN-TIT-CAT']; ?></b>
+                                <b><?php echo $Zitiziti['HOM-BAN-TIT-CAT']; ?></b>
                                 <?php } else { ?>
-                                <b><?php echo $BIZBOOK['HOM-BAN-TIT']; ?></b> <?php echo $BIZBOOK['HOM-BAN-SUB-TIT']; ?>
+                                <b><?php echo $Zitiziti['HOM-BAN-TIT']; ?></b> <?php echo $Zitiziti['HOM-BAN-SUB-TIT']; ?>
                                 <?php } ?>
                             </h1>
                         </div>
@@ -1076,39 +1076,39 @@ foreach (getAllCities() as $city) {
                                     <!-- <li class="sr-cate">
                                         <select onChange="getSearchCategories(this.value);" name="explor_select"
                                             id="explor_select" class="chosen-select rounded">
-                                            <option value=""><?php echo $BIZBOOK['SEARCHBOX_LABEL_SER']; ?></option>
+                                            <option value=""><?php echo $Zitiziti['SEARCHBOX_LABEL_SER']; ?></option>
                                             <?php if ($footer_row['admin_listing_show'] == 1) { ?>
-                                            <option value="1"><?php echo $BIZBOOK['ALL_SERVICES']; ?></option>
+                                            <option value="1"><?php echo $Zitiziti['ALL_SERVICES']; ?></option>
                                             <?php }
                                                 if ($footer_row['admin_expert_show'] == 1) { ?>
-                                            <option value="2"><?php echo $BIZBOOK['SERVICE-EXPERTS']; ?></option>
+                                            <option value="2"><?php echo $Zitiziti['SERVICE-EXPERTS']; ?></option>
                                             <?php }
                                                 if ($footer_row['admin_job_show'] == 1) { ?>
-                                            <option value="3"><?php echo $BIZBOOK['JOBS']; ?></option>
+                                            <option value="3"><?php echo $Zitiziti['JOBS']; ?></option>
                                             <?php }
                                                 if ($footer_row['admin_place_show'] == 1) { ?>
-                                            <option value="4"><?php echo $BIZBOOK['PLACE-MENU']; ?></option>
+                                            <option value="4"><?php echo $Zitiziti['PLACE-MENU']; ?></option>
                                             <?php }
                                                 if ($footer_row['admin_news_show'] == 1) { ?>
-                                            <option value="5"><?php echo $BIZBOOK['NEWS-MAGA']; ?></option>
+                                            <option value="5"><?php echo $Zitiziti['NEWS-MAGA']; ?></option>
                                             <?php }
                                                 if ($footer_row['admin_event_show'] == 1) { ?>
-                                            <option value="6"><?php echo $BIZBOOK['EVENTS']; ?></option>
+                                            <option value="6"><?php echo $Zitiziti['EVENTS']; ?></option>
                                             <?php }
                                                 if ($footer_row['admin_product_show'] == 1) { ?>
-                                            <option value="7"><?php echo $BIZBOOK['PRODUCTS']; ?></option>
+                                            <option value="7"><?php echo $Zitiziti['PRODUCTS']; ?></option>
                                             <?php }
                                                 if ($footer_row['admin_coupon_show'] == 1) { ?>
-                                            <option value="8"><?php echo $BIZBOOK['COUPONS_AND_DEALS']; ?></option>
+                                            <option value="8"><?php echo $Zitiziti['COUPONS_AND_DEALS']; ?></option>
                                             <?php }
                                                 if ($footer_row['admin_blog_show'] == 1) { ?>
-                                            <option value="9"><?php echo $BIZBOOK['BLOGS']; ?></option>
+                                            <option value="9"><?php echo $Zitiziti['BLOGS']; ?></option>
                                             <?php } ?>
                                         </select>
                                     </li> -->
                                     <!-- <li class="sr-cit">
                                             <select id="city_check" name="city_check" class="chosen-select">
-                                                <option value=""><?php echo $BIZBOOK['SELECT_CITY']; ?></option>
+                                                <option value=""><?php echo $Zitiziti['SELECT_CITY']; ?></option>
                                                 <?php if (isset($_SESSION['google_city_name']) && ($_SESSION['google_city_name']) != NULL) { ?>
                                                     <option <?php
                                                     echo 'selected';
@@ -1147,7 +1147,7 @@ foreach (getAllCities() as $city) {
                                         <li class="sr-nor">
                                             <select class="chosen-select" id="expert-select-search"
                                                 name="expert-select-search">
-                                                <option value=""><?php echo $BIZBOOK['SEARCHBOX_LABEL']; ?></option>
+                                                <option value=""><?php echo $Zitiziti['SEARCHBOX_LABEL']; ?></option>
                                                 <?php
                                                 foreach (getAllCategoriesPos() as $expert_search_categories_row) {
 
@@ -1165,7 +1165,7 @@ foreach (getAllCities() as $city) {
                                     </li> -->
                                     <li class="sr-cate">
                                         <input type="text" autocomplete="off" id="select-search"
-                                            placeholder="<?php echo $BIZBOOK['SEARCHBOX_LABEL']; ?>"
+                                            placeholder="<?php echo $Zitiziti['SEARCHBOX_LABEL']; ?>"
                                             class="search-field rounded" required>
 
                                             <ul id="results" class="tser-res tser-res1">
@@ -1187,7 +1187,7 @@ foreach (getAllCities() as $city) {
                                     </li>
                                     <li class="sr-btn">
                                         <input type="submit" id="filter_submit" name="filter_submit"
-                                            value="<?php echo $BIZBOOK['SEARCH']; ?>" class="filter_submit rounded">
+                                            value="<?php echo $Zitiziti['SEARCH']; ?>" class="filter_submit rounded">
                                     </li>
                                 </ul>
                             </form>
@@ -1198,7 +1198,7 @@ foreach (getAllCities() as $city) {
                                 <li>
                                     <div>
                                         <img src="<?php echo $slash; ?>/images/icon/shop.png" alt="">
-                                        <h4><?php echo $BIZBOOK['ALL_SERVICES']; ?></h4>
+                                        <h4><?php echo $Zitiziti['ALL_SERVICES']; ?></h4>
                                         <a href="/all-category" class="fclick"></a>
                                     </div>
                                 </li>
@@ -1207,7 +1207,7 @@ foreach (getAllCities() as $city) {
                                 <li>
                                     <div>
                                         <img src="<?php echo $slash; ?>/images/icon/expert.png" alt="">
-                                        <h4><?php echo $BIZBOOK['SERVICE-EXPERTS-EXPERTS']; ?></h4>
+                                        <h4><?php echo $Zitiziti['SERVICE-EXPERTS-EXPERTS']; ?></h4>
                                         <a href="/service-experts" class="fclick"></a>
                                     </div>
                                 </li>
@@ -1216,7 +1216,7 @@ foreach (getAllCities() as $city) {
                                 <li>
                                     <div>
                                         <img src="<?php echo $slash; ?>/images/icon/employee.png" alt="">
-                                        <h4><?php echo $BIZBOOK['JOBS']; ?></h4>
+                                        <h4><?php echo $Zitiziti['JOBS']; ?></h4>
                                         <a href="/jobs" class="fclick"></a>
                                     </div>
                                 </li>
@@ -1225,7 +1225,7 @@ foreach (getAllCities() as $city) {
                                 <li>
                                     <div>
                                         <img src="<?php echo $slash; ?>/images/places/icons/hot-air-balloon.png" alt="">
-                                        <h4><?php echo $BIZBOOK['PLACE-TRAVEL']; ?></h4>
+                                        <h4><?php echo $Zitiziti['PLACE-TRAVEL']; ?></h4>
                                         <a href="/places" class="fclick"></a>
                                     </div>
                                 </li>
@@ -1234,7 +1234,7 @@ foreach (getAllCities() as $city) {
                                 <li>
                                     <div>
                                         <img src="<?php echo $slash; ?>/images/icon/news.png" alt="">
-                                        <h4><?php echo $BIZBOOK['NEWS']; ?></h4>
+                                        <h4><?php echo $Zitiziti['NEWS']; ?></h4>
                                         <a href="/news" class="fclick"></a>
                                     </div>
                                 </li>
@@ -1243,7 +1243,7 @@ foreach (getAllCities() as $city) {
                                 <li>
                                     <div>
                                         <img src="<?php echo $slash; ?>/images/icon/calendar.png" alt="">
-                                        <h4><?php echo $BIZBOOK['EVENTS']; ?></h4>
+                                        <h4><?php echo $Zitiziti['EVENTS']; ?></h4>
                                         <a href="/events" class="fclick"></a>
                                     </div>
                                 </li>
@@ -1252,7 +1252,7 @@ foreach (getAllCities() as $city) {
                                 <li>
                                     <div>
                                         <img src="<?php echo $slash; ?>/images/icon/cart.png" alt="">
-                                        <h4><?php echo $BIZBOOK['PRODUCTS']; ?></h4>
+                                        <h4><?php echo $Zitiziti['PRODUCTS']; ?></h4>
                                         <a href="/all-products" class="fclick"></a>
                                     </div>
                                 </li>
@@ -1261,7 +1261,7 @@ foreach (getAllCities() as $city) {
                                 <li>
                                     <div>
                                         <img src="<?php echo $slash; ?>/images/icon/coupons.png" alt="">
-                                        <h4><?php echo $BIZBOOK['COUPONS']; ?></h4>
+                                        <h4><?php echo $Zitiziti['COUPONS']; ?></h4>
                                         <a href="/coupons" class="fclick"></a>
                                     </div>
                                 </li>
@@ -1270,7 +1270,7 @@ foreach (getAllCities() as $city) {
                                 <li>
                                     <div>
                                         <img src="<?php echo $slash; ?>/images/icon/blog1.png" alt="">
-                                        <h4><?php echo $BIZBOOK['BLOGS']; ?></h4>
+                                        <h4><?php echo $Zitiziti['BLOGS']; ?></h4>
                                         <a href="/blog-posts" class="fclick"></a>
                                     </div>
                                 </li>
@@ -1284,7 +1284,7 @@ foreach (getAllCities() as $city) {
                                     <div>
                                         <img src="<?php echo $slash; ?>/images/icon/listing.png" alt="">
                                         <h5><span
-                                                class="count1"><?php echo AddingZero_BeforeNumber(getCountCategory()); ?></span><?php echo $BIZBOOK['ALL_SERVICES']; ?>
+                                                class="count1"><?php echo AddingZero_BeforeNumber(getCountCategory()); ?></span><?php echo $Zitiziti['ALL_SERVICES']; ?>
                                         </h5>
                                         <a href="/all-category">&nbsp;</a>
                                     </div>
@@ -1295,7 +1295,7 @@ foreach (getAllCities() as $city) {
                                     <div>
                                         <img src="<?php echo $slash; ?>/images/icon/expert.png" alt="">
                                         <h5><span
-                                                class="count1"><?php echo AddingZero_BeforeNumber(getCountCategory()); ?></span><?php echo $BIZBOOK['SERVICE-EXPERTS']; ?>
+                                                class="count1"><?php echo AddingZero_BeforeNumber(getCountCategory()); ?></span><?php echo $Zitiziti['SERVICE-EXPERTS']; ?>
                                         </h5>
                                         <a href="/service-experts">&nbsp;</a>
                                     </div>
@@ -1307,7 +1307,7 @@ foreach (getAllCities() as $city) {
                                         <img src="<?php echo $slash; ?>/images/icon/employee.png" alt="">
                                         <h5>
                                             <span
-                                                class="count1"><?php echo AddingZero_BeforeNumber(getCountCategory()); ?></span><?php echo $BIZBOOK['JOBS']; ?>
+                                                class="count1"><?php echo AddingZero_BeforeNumber(getCountCategory()); ?></span><?php echo $Zitiziti['JOBS']; ?>
                                         </h5>
                                         <a href="/jobs">&nbsp;</a>
                                     </div>
@@ -1318,7 +1318,7 @@ foreach (getAllCities() as $city) {
                                     <div>
                                         <img src="<?php echo $slash; ?>/images/icon/shop.png" alt="">
                                         <h5><span
-                                                class="count1"><?php echo AddingZero_BeforeNumber(getCountProduct()); ?></span><?php echo $BIZBOOK['PRODUCTS']; ?>
+                                                class="count1"><?php echo AddingZero_BeforeNumber(getCountProduct()); ?></span><?php echo $Zitiziti['PRODUCTS']; ?>
                                         </h5>
                                         <a href="/all-products">&nbsp;</a>
                                     </div>
@@ -1329,7 +1329,7 @@ foreach (getAllCities() as $city) {
                                     <div>
                                         <img src="<?php echo $slash; ?>/images/icon/event.png" alt="">
                                         <h5><span
-                                                class="count1"><?php echo AddingZero_BeforeNumber(getCountEvent()); ?></span><?php echo $BIZBOOK['EVENTS']; ?>
+                                                class="count1"><?php echo AddingZero_BeforeNumber(getCountEvent()); ?></span><?php echo $Zitiziti['EVENTS']; ?>
                                         </h5>
                                         <a href="/events">&nbsp;</a>
                                     </div>
@@ -1340,7 +1340,7 @@ foreach (getAllCities() as $city) {
                                     <div>
                                         <img src="<?php echo $slash; ?>/images/icon/coupons.png" alt="">
                                         <h5><span
-                                                class="count1"><?php echo AddingZero_BeforeNumber(getCountCoupon()); ?></span><?php echo $BIZBOOK['COUPONS']; ?>
+                                                class="count1"><?php echo AddingZero_BeforeNumber(getCountCoupon()); ?></span><?php echo $Zitiziti['COUPONS']; ?>
                                         </h5>
                                         <a href="/coupons">&nbsp;</a>
                                     </div>
@@ -1351,7 +1351,7 @@ foreach (getAllCities() as $city) {
                                     <div>
                                         <img src="<?php echo $slash; ?>/images/icon/blog.png" alt="">
                                         <h5><span
-                                                class="count1"><?php echo AddingZero_BeforeNumber(getCountBlog()); ?></span><?php echo $BIZBOOK['BLOGS']; ?>
+                                                class="count1"><?php echo AddingZero_BeforeNumber(getCountBlog()); ?></span><?php echo $Zitiziti['BLOGS']; ?>
                                         </h5>
                                         <a href="/blog-posts">&nbsp;</a>
                                     </div>
@@ -1361,7 +1361,7 @@ foreach (getAllCities() as $city) {
                                     <div>
                                         <img src="<?php echo $slash; ?>/images/icon/general.png" alt="">
                                         <h5><span
-                                                class="count1"><?php echo AddingZero_BeforeNumber(getCountUser()); ?></span><?php echo $BIZBOOK['COMMUNITY']; ?>
+                                                class="count1"><?php echo AddingZero_BeforeNumber(getCountUser()); ?></span><?php echo $Zitiziti['COMMUNITY']; ?>
                                         </h5>
                                         <a href="/community">&nbsp;</a>
                                     </div>

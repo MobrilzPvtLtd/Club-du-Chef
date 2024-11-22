@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     }
                 } else {
 
-                    $_SESSION['status_msg'] = $BIZBOOK['YOUR_PASSWORD_IS_WRONG'];
+                    $_SESSION['status_msg'] = $Zitiziti['YOUR_PASSWORD_IS_WRONG'];
                     $_SESSION['login_status_msg'] = 1;
 
                     header("location: login");
@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         } else {
 
-            $_SESSION['status_msg'] = $BIZBOOK['YOUR_EMAIL_ID_IS_WRONG'];
+            $_SESSION['status_msg'] = $Zitiziti['YOUR_EMAIL_ID_IS_WRONG'];
             $_SESSION['login_status_msg'] = 1;
 
             header("location: login");
@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } else {
 
-    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
     $_SESSION['login_status_msg'] = 1;
 
     header('Location: login');

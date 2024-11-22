@@ -19,20 +19,20 @@ if (file_exists('config/general_user_authentication.php')) {
    <div class="ud-main-inn ud-no-rhs">
     <div class="ud-cen">
         <div class="log-bor">&nbsp;</div>
-        <span class="udb-inst"><?php echo $BIZBOOK['POINTS_HISTORY']; ?></span>
+        <span class="udb-inst"><?php echo $Zitiziti['POINTS_HISTORY']; ?></span>
         <?php include('config/user_activation_checker.php'); ?>
         <div class="ud-cen-s2">
-            <h2><?php echo $BIZBOOK['POINTS_HISTORY']; ?></h2>
+            <h2><?php echo $Zitiziti['POINTS_HISTORY']; ?></h2>
             <?php include "page_level_message.php"; ?>
-            <a href="buy-points" class="db-tit-btn"><?php echo $BIZBOOK['BUY_MORE_POINTS'];?></a>
+            <a href="buy-points" class="db-tit-btn"><?php echo $Zitiziti['BUY_MORE_POINTS'];?></a>
             <table class="responsive-table bordered">
                 <thead>
                 <tr>
-                    <th><?php echo $BIZBOOK['S_NO']; ?></th>
-                    <th><?php echo $BIZBOOK['PURCHASE_DATE'];?></th>
-                    <th><?php echo $BIZBOOK['POINTS'];?></th>
-                    <th><?php echo $BIZBOOK['TOTAL_COST'];?></th>
-                    <th><?php echo $BIZBOOK['DELETE'];?></th>
+                    <th><?php echo $Zitiziti['S_NO']; ?></th>
+                    <th><?php echo $Zitiziti['PURCHASE_DATE'];?></th>
+                    <th><?php echo $Zitiziti['POINTS'];?></th>
+                    <th><?php echo $Zitiziti['TOTAL_COST'];?></th>
+                    <th><?php echo $Zitiziti['DELETE'];?></th>
 
                 </tr>
                 </thead>
@@ -55,7 +55,7 @@ if (file_exists('config/general_user_authentication.php')) {
                         <td><?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?><?php $row['total_cost']; ?><?php if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?></td>
                         <td>
                             <a href="<?php echo $delete_url; ?>">
-                                <span style="background-color: #f33d45;" class="db-list-ststus"> <?php echo $BIZBOOK['DELETE'];?> </span>
+                                <span style="background-color: #f33d45;" class="db-list-ststus"> <?php echo $Zitiziti['DELETE'];?> </span>
                             </a>
                         </td>
                     </tr>

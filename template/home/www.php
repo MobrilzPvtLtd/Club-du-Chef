@@ -68,8 +68,8 @@ if ($current_home_page != '2' && $current_home_page != '3') {
             
                 <div class="d-flex flex-column justify-content-center align-items-center ">
                     <div class="home-tit d-flex flex-column justify-content-center align-items-center">
-                        <h2><span><?php echo $BIZBOOK['HOM-POP-TIT']; ?></span> <?php echo $BIZBOOK['HOM-POP-TIT1']; ?></h2>
-                        <p><?php echo $BIZBOOK['HOM-POP-SUB-TIT']; ?></p>
+                        <h2><span><?php echo $Zitiziti['HOM-POP-TIT']; ?></span> <?php echo $Zitiziti['HOM-POP-TIT1']; ?></h2>
+                        <p><?php echo $Zitiziti['HOM-POP-SUB-TIT']; ?></p>
                     </div>
                     <div class="plac-hom-all-pla">
 
@@ -106,17 +106,17 @@ if ($current_home_page != '2' && $current_home_page != '3') {
                                             if ($current_home_page == '3' || $current_home_page == '4' || $current_home_page == '5' || $current_home_page == '6' || $current_home_page == '7' || $current_home_page == '8' || $current_home_page == '9') {
                                             ?>
                                                 <span
-                                                    class="dir-ho-cat"><?php echo $BIZBOOK['LISTINGS']; ?> <?php echo AddingZero_BeforeNumber(getCountCategoryListing($category_sql_row['category_id'])); ?></span>
+                                                    class="dir-ho-cat"><?php echo $Zitiziti['LISTINGS']; ?> <?php echo AddingZero_BeforeNumber(getCountCategoryListing($category_sql_row['category_id'])); ?></span>
                                             <?php
                                             } else {
                                             ?>
                                                 <span
-                                                    class="dir-ho-cat"><?php echo $BIZBOOK['SHOW_ALL']; ?> (<?php echo AddingZero_BeforeNumber(getCountCategoryListing($category_sql_row['category_id'])); ?>
+                                                    class="dir-ho-cat"><?php echo $Zitiziti['SHOW_ALL']; ?> (<?php echo AddingZero_BeforeNumber(getCountCategoryListing($category_sql_row['category_id'])); ?>
                                                     )</span>
                                             <?php
                                             }
                                             ?>
-                                            <span class="rat-more-cta-ic"><?php echo $BIZBOOK['PLACE-MORE-DETAILS']; ?></span>
+                                            <span class="rat-more-cta-ic"><?php echo $Zitiziti['PLACE-MORE-DETAILS']; ?></span>
                                         </div>
                                         <a href="<?php echo $ALL_LISTING_URL . urlModifier($category_sql_row['category_slug']); ?>" class="fclick"></a>
                                     </div>
@@ -128,7 +128,7 @@ if ($current_home_page != '2' && $current_home_page != '3') {
                     </div>
                     <div class="hom-cate-more">
                         <?php if ($current_home_page == '1' || $current_home_page == '2') { ?>
-                        <a href=" all-category" class="cta-new-blue"><?php echo $BIZBOOK['HOM-VI-ALL-SER']; ?></a>
+                        <a href=" all-category" class="cta-new-blue"><?php echo $Zitiziti['HOM-VI-ALL-SER']; ?></a>
                         <?php } ?>
                     </div>
                 </div>
@@ -154,7 +154,7 @@ include "home_page_mid_section.php"
                         $ad_enquiry_photo = $get_ad_row['ad_enquiry_photo'];
                         ?>
                         <a href="<?php echo stripslashes($get_ad_row['ad_link']); ?>">
-                            <span><?php echo $BIZBOOK['AD']; ?></span>
+                            <span><?php echo $Zitiziti['AD']; ?></span>
 
                             <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
                                                                                                                                                                                             echo $ad_enquiry_photo;
@@ -173,9 +173,9 @@ include "home_page_mid_section.php"
 <!-- START -->
 <div class="ani-quo">
     <div class="ani-q1">
-        <h4><?php echo $BIZBOOK['HOM-WHAT-LOOK-TIT']; ?></h4>
-        <p><?php echo $BIZBOOK['HOM-WHAT-LOOK-SUB']; ?></p>
-        <span><?php echo $BIZBOOK['HOM-WHAT-LOOK-CTA']; ?></span>
+        <h4><?php echo $Zitiziti['HOM-WHAT-LOOK-TIT']; ?></h4>
+        <p><?php echo $Zitiziti['HOM-WHAT-LOOK-SUB']; ?></p>
+        <span><?php echo $Zitiziti['HOM-WHAT-LOOK-CTA']; ?></span>
     </div>
     <div class="ani-q2">
         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/quote.png" alt="">

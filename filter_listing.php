@@ -175,7 +175,7 @@ $total_count_listings = mysqli_num_rows($query);
 ?>
 
 <div class="all-list-sh all-listing-total">
-    <div class="container ser-re-hu ser-re-cout"><?php echo $BIZBOOK['ALL-LISTING-TOTAL-OF']; ?> <?php echo $total_count_listings; ?> <?php echo $BIZBOOK['ALL-LISTING-BUSINESS-RESULTS-FOUND']; ?></div>
+    <div class="container ser-re-hu ser-re-cout"><?php echo $Zitiziti['ALL-LISTING-TOTAL-OF']; ?> <?php echo $total_count_listings; ?> <?php echo $Zitiziti['ALL-LISTING-BUSINESS-RESULTS-FOUND']; ?></div>
     <ul class="all-list-wrapper">
         <?php
         if ($total_count_listings > 0) {
@@ -221,10 +221,10 @@ $total_count_listings = mysqli_num_rows($query);
                 <li class="all-list-item">
                 <div class="listing-box">
                                         <div class="pg-pro-buy-cta">
-                                                    <a class="cta-buy-now" href="<?php echo $BIZBOOK['TEL']; ?>:<?php
+                                                    <a class="cta-buy-now" href="<?php echo $Zitiziti['TEL']; ?>:<?php
                                                     if ($listrow['listing_mobile'] != NULL || $usersqlrow['mobile_number'] != NULL) {
                                                             echo $listrow['listing_mobile'];
-                                                    } ?>"><?php echo $BIZBOOK['CALL_NOW']; ?></a>
+                                                    } ?>"><?php echo $Zitiziti['CALL_NOW']; ?></a>
                                                     <a class="cta-add-cart" href="https://wa.me/<?php
                                                     if ($listrow['listing_whatsapp'] != NULL) {
                                                         echo $listrow['listing_whatsapp'];
@@ -234,14 +234,14 @@ $total_count_listings = mysqli_num_rows($query);
                                                         }
                                                     }
                                                     ?>" class="what"
-                                                       target="_blank"><?php echo $BIZBOOK['WHATSAPP']; ?></a>
+                                                       target="_blank"><?php echo $Zitiziti['WHATSAPP']; ?></a>
                                                 </div>
                                             <!---LISTING IMAGE--->
                                             <div class="al-img">
                                                 <?php
                                                 if ($listrow['listing_open'] == 1) {
                                                     ?>
-                                                    <span class="open-stat"><?php echo $BIZBOOK['OPEN']; ?></span>
+                                                    <span class="open-stat"><?php echo $Zitiziti['OPEN']; ?></span>
                                                     <?php
                                                 }
                                                 ?>
@@ -296,10 +296,10 @@ $total_count_listings = mysqli_num_rows($query);
                                                                 data-target="#quote<?php echo $listing_id ?>"
                                                                 <?php
                                                             }
-                                                            ?> class="quo"><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></a>
+                                                            ?> class="quo"><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></a>
                                                         <?php
                                                     } else { ?>
-                                                        <a href="<?php echo $LOGIN_URL; ?>"><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></a>
+                                                        <a href="<?php echo $LOGIN_URL; ?>"><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></a>
                                                         <?php
                                                     }
                                                     ?>
@@ -331,21 +331,21 @@ $total_count_listings = mysqli_num_rows($query);
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="log-bor">&nbsp;</div>
-                                    <span class="udb-inst"><?php echo $BIZBOOK['LEAD-SEND-ENQUIRY']; ?></span>
+                                    <span class="udb-inst"><?php echo $Zitiziti['LEAD-SEND-ENQUIRY']; ?></span>
                                     <button type="button" class="close"
                                             data-dismiss="modal">&times;</button>
                                     <!-- Modal Header -->
                                     <div class="quote-pop">
-                                        <h4><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></h4>
+                                        <h4><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></h4>
                                         <div id="enq_success" class="log"
                                              style="display: none;">
-                                            <p><?php echo $BIZBOOK['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
+                                            <p><?php echo $Zitiziti['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
                                         </div>
                                         <div id="enq_fail" class="log" style="display: none;">
-                                            <p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                                            <p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                                         </div>
                                         <div id="enq_same" class="log" style="display: none;">
-                                            <p><?php echo $BIZBOOK['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
+                                            <p><?php echo $Zitiziti['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
                                         </div>
                                         <form method="post" name="enquiry_form" id="enquiry_form">
                                             <input type="hidden" class="form-control" name="listing_id"
@@ -365,33 +365,33 @@ $total_count_listings = mysqli_num_rows($query);
                                                 <input type="text" readonly name="enquiry_name"
                                                        value="<?php echo $user_details_row['first_name'] ?>"
                                                        required="required" class="form-control"
-                                                       placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>">
+                                                       placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>">
                                             </div>
                                             <div class="form-group">
                                                 <input type="email" class="form-control"
-                                                       placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>" readonly="readonly"
+                                                       placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>" readonly="readonly"
                                                        value="<?php echo $user_details_row['email_id'] ?>"
                                                        name="enquiry_email"
                                                        pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                                       title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
+                                                       title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" class="form-control"
                                                        readonly="readonly"
                                                        value="<?php echo $user_details_row['mobile_number'] ?>"
                                                        name="enquiry_mobile"
-                                                       placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                                       placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
                                                        pattern="[7-9]{1}[0-9]{9}"
-                                                       title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>"
+                                                       title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>"
                                                        required>
                                             </div>
                                             <div class="form-group">
                                                 <textarea class="form-control" rows="3" name="enquiry_message"
-                                                          placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                                          placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                                             </div>
                                             <input type="hidden" id="source">
                                             <button type="submit" id="enquiry_submit" name="enquiry_submit"
-                                                    class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?>
+                                                    class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?>
                                             </button>
                                         </form>
                                     </div>
@@ -412,7 +412,7 @@ $total_count_listings = mysqli_num_rows($query);
     /* background: #525252; */
     text-shadow: 0px 0px 2px #fff;
     text-transform: uppercase;
-    margin-top: 5%;"><?php echo $BIZBOOK['LISTINGS_NO_LISTINGS_MESSAGE']; ?></span>
+    margin-top: 5%;"><?php echo $Zitiziti['LISTINGS_NO_LISTINGS_MESSAGE']; ?></span>
             <?php
         }
         ?>

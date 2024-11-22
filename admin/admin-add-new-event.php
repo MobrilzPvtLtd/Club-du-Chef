@@ -115,7 +115,7 @@ include "header.php";
                                                         <div class="form-group">
                                                             <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_id[]" id="city_id" multiple required="required"
                                                                     class="chosen-select form-control">
-                                                                <option value=""><?php echo $BIZBOOK['SELECT_YOUR_CITY']; ?></option>
+                                                                <option value=""><?php echo $Zitiziti['SELECT_YOUR_CITY']; ?></option>
 
                                                             </select>
                                                         </div>

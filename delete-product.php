@@ -22,7 +22,7 @@ if (file_exists('config/product_page_authentication.php')) {
         <div class="row">
             <div class="login-main add-list">
                 <div class="log-bor">&nbsp;</div>
-                <span class="steps"><?php echo $BIZBOOK['DELETE_PRODUCT']; ?></span>
+                <span class="steps"><?php echo $Zitiziti['DELETE_PRODUCT']; ?></span>
                 <div class="log">
                     <div class="login add-list-off">
                         <?php
@@ -31,7 +31,7 @@ if (file_exists('config/product_page_authentication.php')) {
 
                         ?>
 
-                        <h4><?php echo $BIZBOOK['DELETE_THIS_PRODUCT']; ?></h4>
+                        <h4><?php echo $Zitiziti['DELETE_THIS_PRODUCT']; ?></h4>
                         <?php include "page_level_message.php"; ?>
                         <form action="product_trash.php" class="product_form" id="product_form" name="product_form"
                               method="post" enctype="multipart/form-data">
@@ -53,7 +53,7 @@ if (file_exists('config/product_page_authentication.php')) {
                                                        id="product_name"
                                                        required="required" class="form-control"
                                                        value="<?php echo $products_a_row['product_name']; ?>"
-                                                       placeholder="<?php echo $BIZBOOK['PRODUCT_NAME_STAR']; ?>">
+                                                       placeholder="<?php echo $Zitiziti['PRODUCT_NAME_STAR']; ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -65,7 +65,7 @@ if (file_exists('config/product_page_authentication.php')) {
                                                 <select disabled="disabled"
                                                         onChange="getProductSubCategory(this.value);" name="category_id"
                                                         id="category_id" class="chosen-select form-control">
-                                                    <option value=""><?php echo $BIZBOOK['SELECT_CATEGORY']; ?></option>
+                                                    <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                                     <?php
                                                     foreach (getAllProductCategories() as $categories_row) {
                                                         ?>
@@ -118,7 +118,7 @@ if (file_exists('config/product_page_authentication.php')) {
                                                        id="product_price"
                                                        value="<?php echo $products_a_row['product_price']; ?>"
                                                        required="required" class="form-control"
-                                                       placeholder="<?php echo $BIZBOOK['PRICE']; ?>*">
+                                                       placeholder="<?php echo $Zitiziti['PRICE']; ?>*">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -127,7 +127,7 @@ if (file_exists('config/product_page_authentication.php')) {
                                                        id="product_price_offer"
                                                        value="<?php echo $products_a_row['product_price_offer']; ?>"
                                                        class="form-control"
-                                                       placeholder="<?php echo $BIZBOOK['PRODUCT_OFFER']; ?>">
+                                                       placeholder="<?php echo $Zitiziti['PRODUCT_OFFER']; ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -139,7 +139,7 @@ if (file_exists('config/product_page_authentication.php')) {
                                                <textarea class="form-control" readonly="readonly"
                                                          name="product_payment_link"
                                                          id="product_payment_link"
-                                                         placeholder="<?php echo $BIZBOOK['PRODUCT_PAYMENT_LINK']; ?>"><?php echo $products_a_row['product_payment_link']; ?></textarea>
+                                                         placeholder="<?php echo $Zitiziti['PRODUCT_PAYMENT_LINK']; ?>"><?php echo $products_a_row['product_payment_link']; ?></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -150,7 +150,7 @@ if (file_exists('config/product_page_authentication.php')) {
                                             <div class="form-group">
                                                 <textarea class="form-control" required="required" readonly="readonly"
                                                           name="product_description" id="product_description"
-                                                          placeholder="<?php echo $BIZBOOK['PRODUCT_DETAILS']; ?>"><?php echo $products_a_row['product_description']; ?></textarea>
+                                                          placeholder="<?php echo $Zitiziti['PRODUCT_DETAILS']; ?>"><?php echo $products_a_row['product_description']; ?></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -161,7 +161,7 @@ if (file_exists('config/product_page_authentication.php')) {
                                             <div class="log">
                                                 <div class="login add-prod-high-oth">
 
-                                                    <h4><?php echo $BIZBOOK['HIGHLIGHTS']; ?></h4>
+                                                    <h4><?php echo $Zitiziti['HIGHLIGHTS']; ?></h4>
                                                     <ul>
                                                         <?php
                                                         $products_a_row_product_highlights = $products_a_row['product_highlights'];
@@ -181,7 +181,7 @@ if (file_exists('config/product_page_authentication.php')) {
                                                                                    name="product_highlights[]"
                                                                                    value="<?php echo $tuple; ?>"
                                                                                    class="form-control"
-                                                                                   placeholder="<?php echo $BIZBOOK['HIGHLIGHTS_PLACEHOLDER']; ?>">
+                                                                                   placeholder="<?php echo $Zitiziti['HIGHLIGHTS_PLACEHOLDER']; ?>">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -203,7 +203,7 @@ if (file_exists('config/product_page_authentication.php')) {
                                             <div class="log">
                                                 <div class="login add-prod-oth">
 
-                                                    <h4><?php echo $BIZBOOK['SPECIFICATIONS']; ?></h4>
+                                                    <h4><?php echo $Zitiziti['SPECIFICATIONS']; ?></h4>
                                                     <ul>
                                                         <?php
                                                         $products_a_row_product_info_question = $products_a_row['product_info_question'];
@@ -228,7 +228,7 @@ if (file_exists('config/product_page_authentication.php')) {
                                                                                    class="form-control"
                                                                                    name="product_info_question[]"
                                                                                    value="<?php echo $tuple[0]; ?>"
-                                                                                   placeholder="<?php echo $BIZBOOK['SPECIFICATIONS_QUESTION']; ?>">
+                                                                                   placeholder="<?php echo $Zitiziti['SPECIFICATIONS_QUESTION']; ?>">
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-2">
@@ -242,7 +242,7 @@ if (file_exists('config/product_page_authentication.php')) {
                                                                                    class="form-control"
                                                                                    name="product_info_answer[]"
                                                                                    value="<?php echo $tuple[1]; ?>"
-                                                                                   placeholder="<?php echo $BIZBOOK['SPECIFICATIONS_ANSWER']; ?>">
+                                                                                   placeholder="<?php echo $Zitiziti['SPECIFICATIONS_ANSWER']; ?>">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -265,7 +265,7 @@ if (file_exists('config/product_page_authentication.php')) {
                                                <textarea class="form-control" readonly="readonly"
                                                          name="product_tags"
                                                          id="product_tags"
-                                                         placeholder="<?php echo $BIZBOOK['PRODUCT_TAGS_PLACEHOLDER']; ?>"><?php echo $products_a_row['product_tags']; ?></textarea>
+                                                         placeholder="<?php echo $Zitiziti['PRODUCT_TAGS_PLACEHOLDER']; ?>"><?php echo $products_a_row['product_tags']; ?></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -276,10 +276,10 @@ if (file_exists('config/product_page_authentication.php')) {
                             <div class="row">
                                 <div class="col-md-12">
                                     <button type="submit" name="product_submit"
-                                            class="btn btn-primary"><?php echo $BIZBOOK['DELETE_PRODUCT']; ?></button>
+                                            class="btn btn-primary"><?php echo $Zitiziti['DELETE_PRODUCT']; ?></button>
                                 </div>
                                 <div class="col-md-12">
-                                    <a href="dashboard" class="skip"><?php echo $BIZBOOK['GO_TO_USER_DASHBOARD']; ?>
+                                    <a href="dashboard" class="skip"><?php echo $Zitiziti['GO_TO_USER_DASHBOARD']; ?>
                                         >></a>
                                 </div>
                             </div>

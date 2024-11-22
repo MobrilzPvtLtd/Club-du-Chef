@@ -11,18 +11,18 @@ include "dashboard_left_pane.php";
 <!--CENTER SECTION-->
 <div class="ud-cen">
     <div class="log-bor">&nbsp;</div>
-    <span class="udb-inst"><?php echo $BIZBOOK['MESSAGE']; ?></span>
+    <span class="udb-inst"><?php echo $Zitiziti['MESSAGE']; ?></span>
     <?php include('config/user_activation_checker.php'); ?>
     <div class="ud-cen-s2">
-        <h2><?php echo $BIZBOOK['DB-MESSAGES-ALL-MESSAGES']; ?></h2>
+        <h2><?php echo $Zitiziti['DB-MESSAGES-ALL-MESSAGES']; ?></h2>
         <?php include "page_level_message.php"; ?>
-        <a href="#" class="db-tit-btn comm-msg-act-btn"><?php echo $BIZBOOK['DB-MESSAGES-SEND-MESSAGES']; ?></a>
+        <a href="#" class="db-tit-btn comm-msg-act-btn"><?php echo $Zitiziti['DB-MESSAGES-SEND-MESSAGES']; ?></a>
         <div id="indox" class="container tab-pane active"><br>
             <div class="mess-dash">
                 <div class="mess-tit">
-                    <div class="s1"><?php echo $BIZBOOK['S_NO']; ?></div>
-                    <div class="s2"><?php echo $BIZBOOK['USER']; ?></div>
-                    <div class="s3"><?php echo $BIZBOOK['MESSAGE']; ?></div>
+                    <div class="s1"><?php echo $Zitiziti['S_NO']; ?></div>
+                    <div class="s2"><?php echo $Zitiziti['USER']; ?></div>
+                    <div class="s3"><?php echo $Zitiziti['MESSAGE']; ?></div>
                 </div>
                 <div class="mess-bd">
                     <!--=== MAIL THREAD ===-->
@@ -77,14 +77,14 @@ include "dashboard_left_pane.php";
                                             } else {
                                                 echo $user_details_row['profile_image'];
                                             } ?>" alt="">
-                                        <h4><?php echo $BIZBOOK['HI']; ?>, <?php echo $user_details_row['first_name']; ?></h4>
+                                        <h4><?php echo $Zitiziti['HI']; ?>, <?php echo $user_details_row['first_name']; ?></h4>
                                         <input type="hidden" id="chat_from_user" name="chat_from_user"
                                                value="<?php echo $_SESSION['user_id']; ?>">
                                         <input type="hidden" name="chat_to_user" value="<?php echo $other_user_id; ?>">
                                         <select disabled="disabled" class="chosen-select"
                                                 data-id="<?php echo $_SESSION['user_id']; ?>" id="chat_to_user234"
                                                 name="chat_to_user234">
-                                            <option value=""><?php echo $BIZBOOK['CHOOSE_A_USER']; ?></option>
+                                            <option value=""><?php echo $Zitiziti['CHOOSE_A_USER']; ?></option>
                                             <?php
                                             foreach (getAllServiceUserExceptUserIdWithoutLimit($_SESSION['user_id']) as $except_user_row) {
 
@@ -119,15 +119,15 @@ include "dashboard_left_pane.php";
 
                                         } else {
                                             ?>
-                                            <span><?php echo $BIZBOOK['COMMUNITY-PAGE-START-A-NEW-CHAT']; ?></span>
+                                            <span><?php echo $Zitiziti['COMMUNITY-PAGE-START-A-NEW-CHAT']; ?></span>
                                             <?php
                                         }
                                         ?>
                                     </div>
                                     <div class="s3">
                                         <textarea name="chat_message" id="chat_message"
-                                                  placeholder="<?php echo $BIZBOOK['DB-MESSAGES-PLACEHOLDER']; ?>" required=""></textarea>
-                                        <button id="chat_send<?php echo $si; ?>" name="chat_send" type="submit"><?php echo $BIZBOOK['SEND']; ?> <i
+                                                  placeholder="<?php echo $Zitiziti['DB-MESSAGES-PLACEHOLDER']; ?>" required=""></textarea>
+                                        <button id="chat_send<?php echo $si; ?>" name="chat_send" type="submit"><?php echo $Zitiziti['SEND']; ?> <i
                                                 class="material-icons">send</i></button>
                                     </div>
                                 </form>
@@ -168,7 +168,7 @@ include "dashboard_right_pane.php";
                        value="<?php echo $_SESSION['user_id']; ?>">
                 <select class="chosen-select" data-id="<?php echo $_SESSION['user_id']; ?>" id="chat_to_user"
                         name="chat_to_user">
-                    <option value=""><?php echo $BIZBOOK['CHOOSE_A_USER']; ?></option>
+                    <option value=""><?php echo $Zitiziti['CHOOSE_A_USER']; ?></option>
                     <?php
                     foreach (getAllServiceUserExceptUserIdWithoutLimit($_SESSION['user_id']) as $except_user_row) {
 
@@ -182,12 +182,12 @@ include "dashboard_right_pane.php";
             </div>
             <div class="s2 chat-box-messages">
                 <!-- FROM -->
-                <div><?php echo $BIZBOOK['COMMUNITY-PAGE-START-A-NEW-CHAT']; ?></div>
+                <div><?php echo $Zitiziti['COMMUNITY-PAGE-START-A-NEW-CHAT']; ?></div>
             </div>
             <div class="s3">
-                <textarea name="chat_message" id="chat_message" placeholder="<?php echo $BIZBOOK['DB-MESSAGES-PLACEHOLDER']; ?>"
+                <textarea name="chat_message" id="chat_message" placeholder="<?php echo $Zitiziti['DB-MESSAGES-PLACEHOLDER']; ?>"
                           required=""></textarea>
-                <button id="chat_send" name="chat_send" type="submit"><?php echo $BIZBOOK['SEND']; ?> <i class="material-icons">send</i></button>
+                <button id="chat_send" name="chat_send" type="submit"><?php echo $Zitiziti['SEND']; ?> <i class="material-icons">send</i></button>
             </div>
         </form>
     </div>

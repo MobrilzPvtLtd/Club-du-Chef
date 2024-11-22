@@ -123,7 +123,7 @@ $json = json_encode($data);
         display: none !important;
     }
 </style>
-<?php echo $BIZBOOK['REDIRECTING_TO_RAZOR_PAY']; ?>
+<?php echo $Zitiziti['REDIRECTING_TO_RAZOR_PAY']; ?>
 <form name="frmRazorPay1" id="frmRazorPay1" action="razor_pay_verify.php" method="POST">
     <script
         src="https://checkout.razorpay.com/v1/checkout.js"

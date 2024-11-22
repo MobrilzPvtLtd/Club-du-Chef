@@ -15,7 +15,7 @@ if (getCountJobSubCategoryCategory($category_id) <= 0) {
 } else {
     ?>
     <div class="sub_cat_section filt-com lhs-sub">
-        <h4><?php echo $BIZBOOK['ALL-LISTING-SUB-CATEGORY']; ?></h4>
+        <h4><?php echo $Zitiziti['ALL-LISTING-SUB-CATEGORY']; ?></h4>
         <ul>
             <?php
             foreach (getCategoryJobSubCategories($category_id) as $sub_category_row) {

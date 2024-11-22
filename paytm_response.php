@@ -120,7 +120,7 @@ if($isValidChecksum == "TRUE") {
             unset($_SESSION['paytm_payment_user_contact_mobile']);
             unset($_SESSION['paytm_payment_user_contact_email']);
 
-            $_SESSION['status_msg'] = $BIZBOOK['PAYMENT_SUCCESSFULL_USER_UPGRADE_SUCESS'];
+            $_SESSION['status_msg'] = $Zitiziti['PAYMENT_SUCCESSFULL_USER_UPGRADE_SUCESS'];
 
             header('Location: db-payment');
             exit;
@@ -140,7 +140,7 @@ if($isValidChecksum == "TRUE") {
         unset($_SESSION['paytm_payment_user_contact_mobile']);
         unset($_SESSION['paytm_payment_user_contact_email']);
 
-        $_SESSION['status_msg'] = $BIZBOOK['RAZOR_POINT_PAYMENT_FAILURE_MESSAGE'];
+        $_SESSION['status_msg'] = $Zitiziti['RAZOR_POINT_PAYMENT_FAILURE_MESSAGE'];
         header('Location: db-payment');
         exit;
         //echo "<b>Transaction status is failure</b>" . "<br/>";
@@ -166,7 +166,7 @@ else {
     unset($_SESSION['paytm_payment_user_contact_mobile']);
     unset($_SESSION['paytm_payment_user_contact_email']);
 
-    $_SESSION['status_msg'] = $BIZBOOK['RAZOR_POINT_PAYMENT_FAILURE_MESSAGE'];
+    $_SESSION['status_msg'] = $Zitiziti['RAZOR_POINT_PAYMENT_FAILURE_MESSAGE'];
     header('Location: db-payment');
     exit;
     

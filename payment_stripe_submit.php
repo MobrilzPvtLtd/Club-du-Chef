@@ -185,7 +185,7 @@ if ($paymenyResponse['amount_refunded'] == 0 && empty($paymenyResponse['failure_
 
         $_SESSION['register_status_msg'] = 1;
 
-        $_SESSION['status_msg'] = $BIZBOOK['PAYMENT_SUCCESSFULL_USER_UPGRADE_SUCESS'];
+        $_SESSION['status_msg'] = $Zitiziti['PAYMENT_SUCCESSFULL_USER_UPGRADE_SUCESS'];
 
         if ($path == 1) {
 
@@ -216,12 +216,12 @@ if ($paymenyResponse['amount_refunded'] == 0 && empty($paymenyResponse['failure_
         unset($_SESSION['stripe_payment_user_contact_mobile']);
         unset($_SESSION['stripe_payment_user_contact_email']);
 
-        $_SESSION['status_msg'] = $BIZBOOK['STRIPE_PAYMENT_FAILURE_MESSAGE'];
+        $_SESSION['status_msg'] = $Zitiziti['STRIPE_PAYMENT_FAILURE_MESSAGE'];
         header('Location: stripe_payment');
         exit;
     }
 } else {
-    $_SESSION['status_msg'] = $BIZBOOK['STRIPE_PAYMENT_FAILURE_MESSAGE'];
+    $_SESSION['status_msg'] = $Zitiziti['STRIPE_PAYMENT_FAILURE_MESSAGE'];
     header('Location: stripe_payment');
     exit;
 }

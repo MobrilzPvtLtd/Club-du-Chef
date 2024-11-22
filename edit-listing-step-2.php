@@ -40,38 +40,38 @@ $listing_codea = $_GET['row'];
                     <ul>
                         <li>
                             <a href="edit-listing-step-1?row=<?php echo $listing_codea; ?>">
-                                <span><?php echo $BIZBOOK['STEP1']; ?></span>
-                                <b><?php echo $BIZBOOK['BASIC_INFO']; ?></b>
+                                <span><?php echo $Zitiziti['STEP1']; ?></span>
+                                <b><?php echo $Zitiziti['BASIC_INFO']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="edit-listing-step-2?row=<?php echo $listing_codea; ?>" class="act">
-                                <span><?php echo $BIZBOOK['STEP2']; ?></span>
-                                <b><?php echo $BIZBOOK['SERVICES']; ?></b>
+                                <span><?php echo $Zitiziti['STEP2']; ?></span>
+                                <b><?php echo $Zitiziti['SERVICES']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="edit-listing-step-3?row=<?php echo $listing_codea; ?>">
-                                <span><?php echo $BIZBOOK['STEP3']; ?></span>
-                                <b><?php echo $BIZBOOK['OFFERS']; ?></b>
+                                <span><?php echo $Zitiziti['STEP3']; ?></span>
+                                <b><?php echo $Zitiziti['OFFERS']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="edit-listing-step-4?row=<?php echo $listing_codea; ?>">
-                                <span><?php echo $BIZBOOK['STEP4']; ?></span>
-                                <b><?php echo $BIZBOOK['MAP']; ?></b>
+                                <span><?php echo $Zitiziti['STEP4']; ?></span>
+                                <b><?php echo $Zitiziti['MAP']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="edit-listing-step-5?row=<?php echo $listing_codea; ?>">
-                                <span><?php echo $BIZBOOK['STEP5']; ?></span>
-                                <b><?php echo $BIZBOOK['OTHER']; ?></b>
+                                <span><?php echo $Zitiziti['STEP5']; ?></span>
+                                <b><?php echo $Zitiziti['OTHER']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="edit-listing-step-6?row=<?php echo $listing_codea; ?>">
-                                <span><?php echo $BIZBOOK['STEP6']; ?></span>
-                                <b><?php echo $BIZBOOK['DONE']; ?></b>
+                                <span><?php echo $Zitiziti['STEP6']; ?></span>
+                                <b><?php echo $Zitiziti['DONE']; ?></b>
                             </a>
                         </li>
                     </ul>
@@ -82,14 +82,14 @@ $listing_codea = $_GET['row'];
         <div class="row">
             <div class="login-main add-list add-list-ser">
                 <div class="log-bor">&nbsp;</div>
-                <span class="steps"><?php echo $BIZBOOK['STEP2']; ?></span>
+                <span class="steps"><?php echo $Zitiziti['STEP2']; ?></span>
                 <div class="log">
                     <div class="login">
                         <?php
                         $listings_a_row = getListing($listing_codea);
                         
                         ?>
-                        <h4><?php echo $BIZBOOK['SERVICES_PROVIDE']; ?></h4>
+                        <h4><?php echo $Zitiziti['SERVICES_PROVIDE']; ?></h4>
                         <span class="add-list-add-btn lis-ser-add-btn" title="add new offer">+</span>
                         <span class="add-list-rem-btn lis-ser-rem-btn" title="remove offer">-</span>
                         <form action="listing_update.php" class="listing_form_2" id="listing_form_2"
@@ -119,16 +119,16 @@ $listing_codea = $_GET['row'];
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label><?php echo $BIZBOOK['SERVICE_NAME']; ?>:</label>
+                                                    <label><?php echo $Zitiziti['SERVICE_NAME']; ?>:</label>
                                                     <input type="text" name="service_id[]"
                                                            value="<?php echo $service_Array; ?>" class="form-control"
-                                                           placeholder="<?php echo $BIZBOOK['SERVICE_NAME_PLACEHOLDER']; ?>">
+                                                           placeholder="<?php echo $Zitiziti['SERVICE_NAME_PLACEHOLDER']; ?>">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <div class="fil-img-uplo">
-                                                        <span class="dumfil"><?php echo $BIZBOOK['SERVICE_NAME_IMAGE']; ?></span>
+                                                        <span class="dumfil"><?php echo $Zitiziti['SERVICE_NAME_IMAGE']; ?></span>
                                                         <input type="file" name="service_image[]" accept="image/*,.jpg,.jpeg,.png" class="form-control">
                                                     </div>
                                                 </div>
@@ -145,20 +145,20 @@ $listing_codea = $_GET['row'];
                                 <div class="col-md-6">
                                     <a href="edit-listing-step-1?row=<?php echo $listing_codea; ?>">
                                         <button type="button"
-                                                class="btn btn-primary"><?php echo $BIZBOOK['PREVIOUS']; ?></button>
+                                                class="btn btn-primary"><?php echo $Zitiziti['PREVIOUS']; ?></button>
                                     </a>
                                 </div>
                                 <div class="col-md-6">
                                     <button type="submit" name="listing_submit"
-                                            class="btn btn-primary"><?php echo $BIZBOOK['SAVE_AND_EXIT']; ?></button>
+                                            class="btn btn-primary"><?php echo $Zitiziti['SAVE_AND_EXIT']; ?></button>
                                 </div>
                                 
                                 <div class="col-md-12">
                                     <a href="edit-listing-step-3?row=<?php echo $listing_codea; ?>"
-                                       class="skip"><?php echo $BIZBOOK['SKIP_THIS']; ?> >></a>
+                                       class="skip"><?php echo $Zitiziti['SKIP_THIS']; ?> >></a>
                                 </div>
                                 <div class="col-md-12">
-                                    <a href="dashboard" class="skip"><?php echo $BIZBOOK['GO_TO_USER_DASHBOARD']; ?>
+                                    <a href="dashboard" class="skip"><?php echo $Zitiziti['GO_TO_USER_DASHBOARD']; ?>
                                         >></a>
                                 </div>
                             </div>

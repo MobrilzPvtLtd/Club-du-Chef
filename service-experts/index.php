@@ -91,8 +91,8 @@ if($footer_row['admin_expert_show'] != 1) {
         <div class="container">
             <div class="row">
                 <div class="jtit">
-                    <h1><?php echo $BIZBOOK['SERVICE-EXPERT-FIND-SERVICE-EXPERT-H1']; ?></h1>
-                    <p><?php echo $BIZBOOK['SERVICE-EXPERT-FIND-SERVICE-EXPERT-P']; ?></p>
+                    <h1><?php echo $Zitiziti['SERVICE-EXPERT-FIND-SERVICE-EXPERT-H1']; ?></h1>
+                    <p><?php echo $Zitiziti['SERVICE-EXPERT-FIND-SERVICE-EXPERT-P']; ?></p>
                 </div>
                 <br>
                 
@@ -167,8 +167,8 @@ if($footer_row['admin_expert_show'] != 1) {
         <div class="container">
             <div class="row">
                 <div class="home-tit">
-                    <h2><span><?php echo $BIZBOOK['SERVICE-EXPERT-SECTION-2-H1']; ?></span></h2>
-                    <p><?php echo $BIZBOOK['SERVICE-EXPERT-SECTION-2-P']; ?></p>
+                    <h2><span><?php echo $Zitiziti['SERVICE-EXPERT-SECTION-2-H1']; ?></span></h2>
+                    <p><?php echo $Zitiziti['SERVICE-EXPERT-SECTION-2-P']; ?></p>
                 </div>
                 <div class="land-pack">
                     <ul>
@@ -190,11 +190,11 @@ if($footer_row['admin_expert_show'] != 1) {
                                     </div>
                                     <div class="land-pack-grid-text">
                                         <h4><?php echo $category_name; ?><span
-                                                class="dir-ho-cat"><?php echo $BIZBOOK['SERVICE-EXPERTS-EXPERTS']; ?> <?php echo $total_experts_category; ?></span>
+                                                class="dir-ho-cat"><?php echo $Zitiziti['SERVICE-EXPERTS-EXPERTS']; ?> <?php echo $total_experts_category; ?></span>
                                         </h4>
                                     </div>
                                     <a href="<?php echo $ALL_EXPERTS_URL . urlModifier($expert_categories_row['category_slug']); ?>"
-                                       class="land-pack-grid-btn"><?php echo $BIZBOOK['SERVICE-EXPERT-VIEW-ALL']; ?></a>
+                                       class="land-pack-grid-btn"><?php echo $Zitiziti['SERVICE-EXPERT-VIEW-ALL']; ?></a>
                                 </div>
                             </li>
                             <?php
@@ -214,19 +214,19 @@ if($footer_row['admin_expert_show'] != 1) {
         <div class="container">
             <div class="row">
                 <div class="home-tit">
-                    <h2><span><?php echo $BIZBOOK['HOM3-OW-TIT']; ?></span></h2>
-                    <p><?php echo $BIZBOOK['HOM3-OW-TIT-SUB']; ?></p>
+                    <h2><span><?php echo $Zitiziti['HOM3-OW-TIT']; ?></span></h2>
+                    <p><?php echo $Zitiziti['HOM3-OW-TIT-SUB']; ?></p>
                 </div>
                 <div class="hom2-hom-ban-main">
                     <div class="hom2-hom-ban hom2-hom-ban1">
-                        <h2><?php echo $BIZBOOK['EXP-HOME-JOIN-EMP-TIT']; ?></h2>
-                        <p><?php echo $BIZBOOK['EXP-HOME-JOIN-EMP-SUB-TIT']; ?></p>
-                        <a href="<?php echo $slash; ?>login?login=register"><?php echo $BIZBOOK['EXP-HOME-JOIN-EMP-CTA']; ?></a>
+                        <h2><?php echo $Zitiziti['EXP-HOME-JOIN-EMP-TIT']; ?></h2>
+                        <p><?php echo $Zitiziti['EXP-HOME-JOIN-EMP-SUB-TIT']; ?></p>
+                        <a href="<?php echo $slash; ?>login?login=register"><?php echo $Zitiziti['EXP-HOME-JOIN-EMP-CTA']; ?></a>
                     </div>
                     <div class="hom2-hom-ban hom2-hom-ban2">
-                        <h2><?php echo $BIZBOOK['EXP-HOME-JOIN-COMP-TIT']; ?></h2>
-                        <p><?php echo $BIZBOOK['EXP-HOME-JOIN-COMP-SUB-TIT']; ?></p>
-                        <a href="<?php echo $slash; ?>login?login=register"><?php echo $BIZBOOK['EXP-HOME-JOIN-COMP-CTA']; ?></a>
+                        <h2><?php echo $Zitiziti['EXP-HOME-JOIN-COMP-TIT']; ?></h2>
+                        <p><?php echo $Zitiziti['EXP-HOME-JOIN-COMP-SUB-TIT']; ?></p>
+                        <a href="<?php echo $slash; ?>login?login=register"><?php echo $Zitiziti['EXP-HOME-JOIN-COMP-CTA']; ?></a>
                     </div>
                 </div>
             </div>
@@ -240,8 +240,8 @@ if($footer_row['admin_expert_show'] != 1) {
         <div class="container">
             <div class="row">
                 <div class="home-tit">
-                    <h2><span><?php echo $BIZBOOK['SERVICE-EXPERT-OUR-USER-REVIEWS']; ?></span></h2>
-                    <p><?php echo $BIZBOOK['SERVICE-EXPERT-OUR-USER-REVIEWS-P']; ?></p>
+                    <h2><span><?php echo $Zitiziti['SERVICE-EXPERT-OUR-USER-REVIEWS']; ?></span></h2>
+                    <p><?php echo $Zitiziti['SERVICE-EXPERT-OUR-USER-REVIEWS-P']; ?></p>
                 </div>
 
                 <div class="hom2-cus-sli">
@@ -270,7 +270,7 @@ if($footer_row['admin_expert_show'] != 1) {
                                         } ?>"
                                         alt="">
                                     <h4><?php echo $revuser_details_row['first_name']; ?></h4>
-                                    <span><?php echo $BIZBOOK['SERVICE-EXPERT-WRITTEN-REVIEW-TO']; ?> <a href="#"><?php echo $rev_expert_details_row['profile_name']; ?></a></span>
+                                    <span><?php echo $Zitiziti['SERVICE-EXPERT-WRITTEN-REVIEW-TO']; ?> <a href="#"><?php echo $rev_expert_details_row['profile_name']; ?></a></span>
                                     <label class="rat">
                                         <?php if ($reviewsqlrow['expert_rating'] == 1) { ?>
                                             <i class="material-icons">star</i>
@@ -330,8 +330,8 @@ if($footer_row['admin_expert_show'] != 1) {
 
                 <div class="how-wrks">
                     <div class="home-tit">
-                        <h2><span><?php echo $BIZBOOK['HOM-HOW-TIT']; ?></span></h2>
-                        <p><?php echo $BIZBOOK['HOM-HOW-SUB-TIT']; ?></p>
+                        <h2><span><?php echo $Zitiziti['HOM-HOW-TIT']; ?></span></h2>
+                        <p><?php echo $Zitiziti['HOM-HOW-SUB-TIT']; ?></p>
                     </div>
                     <div class="how-wrks-inn">
                         <ul>
@@ -339,32 +339,32 @@ if($footer_row['admin_expert_show'] != 1) {
                                 <div>
                                     <span>1</span>
                                     <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>images/icon/how1.png" alt="">
-                                    <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-1']; ?></h4>
-                                    <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-1']; ?></p>
+                                    <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-1']; ?></h4>
+                                    <p><?php echo $Zitiziti['HOM-HOW-P-SUB-1']; ?></p>
                                 </div>
                             </li>
                             <li>
                                 <div>
                                     <span>2</span>
                                     <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>images/icon/how2.png" alt="">
-                                    <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-2']; ?></h4>
-                                    <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-2']; ?></p>
+                                    <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-2']; ?></h4>
+                                    <p><?php echo $Zitiziti['HOM-HOW-P-SUB-2']; ?></p>
                                 </div>
                             </li>
                             <li>
                                 <div>
                                     <span>3</span>
                                     <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>images/icon/how3.png" alt="">
-                                    <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-3']; ?></h4>
-                                    <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-3']; ?></p>
+                                    <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-3']; ?></h4>
+                                    <p><?php echo $Zitiziti['HOM-HOW-P-SUB-3']; ?></p>
                                 </div>
                             </li>
                             <li>
                                 <div>
                                     <span>4</span>
                                     <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>images/icon/how4.png" alt="">
-                                    <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-4']; ?></h4>
-                                    <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-4']; ?></p>
+                                    <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-4']; ?></h4>
+                                    <p><?php echo $Zitiziti['HOM-HOW-P-SUB-4']; ?></p>
                                 </div>
                             </li>
                         </ul>
@@ -376,15 +376,15 @@ if($footer_row['admin_expert_show'] != 1) {
                         <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>images/mobile.png" alt="">
                     </div>
                     <div class="rhs">
-                        <h2><?php echo $BIZBOOK['HOM-APP-TIT']; ?>
-                            <span><?php echo $BIZBOOK['HOM-APP-TIT-SUB']; ?></span></h2>
+                        <h2><?php echo $Zitiziti['HOM-APP-TIT']; ?>
+                            <span><?php echo $Zitiziti['HOM-APP-TIT-SUB']; ?></span></h2>
                         <ul>
-                            <li><?php echo $BIZBOOK['HOM-APP-PO-1']; ?></li>
-                            <li><?php echo $BIZBOOK['HOM-APP-PO-2']; ?></li>
-                            <li><?php echo $BIZBOOK['HOM-APP-PO-3']; ?></li>
-                            <li><?php echo $BIZBOOK['HOM-APP-PO-4']; ?></li>
+                            <li><?php echo $Zitiziti['HOM-APP-PO-1']; ?></li>
+                            <li><?php echo $Zitiziti['HOM-APP-PO-2']; ?></li>
+                            <li><?php echo $Zitiziti['HOM-APP-PO-3']; ?></li>
+                            <li><?php echo $Zitiziti['HOM-APP-PO-4']; ?></li>
                         </ul>
-                        <span><?php echo $BIZBOOK['HOM-APP-SEND']; ?></span>
+                        <span><?php echo $Zitiziti['HOM-APP-SEND']; ?></span>
                         <form>
                             <ul>
                                 <li>
@@ -437,9 +437,9 @@ if($footer_row['admin_expert_show'] != 1) {
 <!-- START -->
 <div class="ani-quo">
     <div class="ani-q1">
-        <h4><?php echo $BIZBOOK['HOM-WHAT-LOOK-TIT']; ?></h4>
-        <p><?php echo $BIZBOOK['HOM-WHAT-LOOK-SUB']; ?></p>
-        <span><?php echo $BIZBOOK['HOM-WHAT-LOOK-CTA']; ?></span>
+        <h4><?php echo $Zitiziti['HOM-WHAT-LOOK-TIT']; ?></h4>
+        <p><?php echo $Zitiziti['HOM-WHAT-LOOK-SUB']; ?></p>
+        <span><?php echo $Zitiziti['HOM-WHAT-LOOK-CTA']; ?></span>
     </div>
     <div class="ani-q2">
         <img loading="lazy" src="<?php echo $slash; ?>images/quote.png" alt="">

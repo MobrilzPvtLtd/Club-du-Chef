@@ -234,11 +234,11 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 
         if ($company_profile_res) {
 
-            $_POST['status_msg'] = $BIZBOOK['COMPANY_PROFILE_SUCCESS_MESSAGE'];
+            $_POST['status_msg'] = $Zitiziti['COMPANY_PROFILE_SUCCESS_MESSAGE'];
             header('Location: dashboard');
         } else {
 
-            $_POST['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+            $_POST['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
             header('Location: dashboard');
         }
@@ -248,7 +248,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
     }
 }else {
 
-    $_POST['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+    $_POST['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: dashboard');
 }

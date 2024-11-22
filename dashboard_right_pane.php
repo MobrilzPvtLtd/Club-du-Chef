@@ -13,38 +13,38 @@ $session_user_id = $_SESSION['user_id'];
     if ($user_details_row['user_type'] == 'Service provider') {
         ?>
         <div class="ud-rhs-promo">
-            <h3><?php echo $BIZBOOK['PROMOTE_MY_BUSINESS']; ?></h3>
-            <p><?php echo $BIZBOOK['PROMOTE_MY_BUSINESS_P_TAG']; ?></p>
-            <a href="<?php echo $webpage_full_link; ?>promote-business"><?php echo $BIZBOOK['PROMOTE_MY_BUSINESS_START_NOW']; ?></a>
+            <h3><?php echo $Zitiziti['PROMOTE_MY_BUSINESS']; ?></h3>
+            <p><?php echo $Zitiziti['PROMOTE_MY_BUSINESS_P_TAG']; ?></p>
+            <a href="<?php echo $webpage_full_link; ?>promote-business"><?php echo $Zitiziti['PROMOTE_MY_BUSINESS_START_NOW']; ?></a>
         </div>
         <!--    //Total Point Section Starts-->
         <div class="ud-rhs-poin">
             <div class="ud-rhs-poin1">
-                <h4><?php echo $BIZBOOK['YOUR_POINTS']; ?></h4>
+                <h4><?php echo $Zitiziti['YOUR_POINTS']; ?></h4>
                 <span class="count1"><?php echo $user_details_row['user_points']; ?></span>
             </div>
             <div class="ud-rhs-poin2">
-                <h3><?php echo $BIZBOOK['EARN_MORE_CREDIT_POINTS']; ?></h3>
-                <p><?php echo $BIZBOOK['EARN_MORE_CREDIT_POINTS_P_TAG']; ?> <a
-                            href="#"><?php echo $BIZBOOK['PROMOTE_MY_BUSINESS_CLICK_HERE']; ?></a> <?php echo $BIZBOOK['PROMOTE_MY_BUSINESS_FOR_DEMO']; ?>
+                <h3><?php echo $Zitiziti['EARN_MORE_CREDIT_POINTS']; ?></h3>
+                <p><?php echo $Zitiziti['EARN_MORE_CREDIT_POINTS_P_TAG']; ?> <a
+                            href="#"><?php echo $Zitiziti['PROMOTE_MY_BUSINESS_CLICK_HERE']; ?></a> <?php echo $Zitiziti['PROMOTE_MY_BUSINESS_FOR_DEMO']; ?>
                 </p>
                 <a href="<?php echo $webpage_full_link; ?>buy-points"
-                   class="cta"><?php echo $BIZBOOK['BUY_POINTS']; ?></a>
+                   class="cta"><?php echo $Zitiziti['BUY_POINTS']; ?></a>
             </div>
         </div>
         <!--    //Total Point Section Ends-->
 
         <div class="ud-rhs-pay">
             <div class="ud-rhs-pay-inn">
-                <h3><?php echo $BIZBOOK['PAYMENT_INFORMATION']; ?></h3>
+                <h3><?php echo $Zitiziti['PAYMENT_INFORMATION']; ?></h3>
                 <ul class="ps-1">
-                    <li><b><?php echo $BIZBOOK['DASH_RIGHT_PLAN_NAME']; ?>
+                    <li><b><?php echo $Zitiziti['DASH_RIGHT_PLAN_NAME']; ?>
                             : </b> <?php if ($user_details_row['user_type'] == "Service provider") {
                             echo $user_plan_type['plan_type_name'];
                         } else {
                             echo "General User";
                         } ?></li>
-                    <li><b><?php echo $BIZBOOK['DASH_RIGHT_START_DATE']; ?>
+                    <li><b><?php echo $Zitiziti['DASH_RIGHT_START_DATE']; ?>
                             : </b> <?php if ($user_details_row['user_cdt'] == '0000-00-00 00:00:00') {
                             echo 'N/A';
                         } else {
@@ -64,7 +64,7 @@ $session_user_id = $_SESSION['user_id'];
                     //To calculate the expiry date from user created date ends
                     ?>
 
-                    <li><b><?php echo $BIZBOOK['DASH_RIGHT_EXPIRY_DATE']; ?>
+                    <li><b><?php echo $Zitiziti['DASH_RIGHT_EXPIRY_DATE']; ?>
                             : </b> <?php if ($user_details_row['user_type'] == "Service provider") {
                             if ($user_details_row['user_cdt'] == '0000-00-00 00:00:00') {
                                 echo 'N/A';
@@ -74,7 +74,7 @@ $session_user_id = $_SESSION['user_id'];
                         } else {
                             echo "Unlimited";
                         } ?></li>
-                    <li><b><?php echo $BIZBOOK['DURATION']; ?> : </b> <?php
+                    <li><b><?php echo $Zitiziti['DURATION']; ?> : </b> <?php
                         if ($user_details_row['user_type'] == "Service provider") {
                             if ($plan_type_duration >= 7) {
                                 echo $plan_type_duration / 12 . ' ' . "year";
@@ -94,7 +94,7 @@ $session_user_id = $_SESSION['user_id'];
                     //To calculate the remaining days from expiry date to current date ends
                     ?>
 
-                    <li><b><?php echo $BIZBOOK['DASH_RIGHT_REMAINING_DAYS']; ?>: </b> <?php
+                    <li><b><?php echo $Zitiziti['DASH_RIGHT_REMAINING_DAYS']; ?>: </b> <?php
                         if ($user_details_row['user_type'] == "Service provider") {
                             if ($user_details_row['payment_cdt'] == '0000-00-00 00:00:00') {
                                 echo 'N/A';
@@ -105,14 +105,14 @@ $session_user_id = $_SESSION['user_id'];
                             echo "Unlimited";
                         } ?></li>
                     <li><span
-                                class="ud-stat-pay-btn"><b><?php echo $BIZBOOK['DASH_RIGHT_CHECKOUT_COST']; ?>
+                                class="ud-stat-pay-btn"><b><?php echo $Zitiziti['DASH_RIGHT_CHECKOUT_COST']; ?>
                                 :</b> <?php if ($user_plan_type['plan_type_price'] == 0) {
                                 echo "FREE";
                             } else { ?>
                                 <?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?><?php echo '' . $user_plan_type['plan_type_price']; if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; }
                             } ?></span></li>
                     <li><span
-                                class="ud-stat-pay-btn"><b><?php echo $BIZBOOK['DASH_RIGHT_PAYMENT_STATUS']; ?>
+                                class="ud-stat-pay-btn"><b><?php echo $Zitiziti['DASH_RIGHT_PAYMENT_STATUS']; ?>
                                 :</b> <?php
                             if ($user_details_row['user_type'] == "Service provider") {
                                 if ($user_details_row['payment_status'] == 'Paid') {
@@ -135,16 +135,16 @@ $session_user_id = $_SESSION['user_id'];
                 if ($user_details_row['user_type'] == "Service provider") {
                     if ($user_plan_type['plan_type_id'] != 4) { ?>
                         <a href="<?php echo $webpage_full_link; ?>pricing-details"
-                           class="btn btn1"><?php echo $BIZBOOK['DASH_RIGHT_CHANGE_MY_PLAN']; ?></a>
+                           class="btn btn1"><?php echo $Zitiziti['DASH_RIGHT_CHANGE_MY_PLAN']; ?></a>
                         <?php
                     }
                     if ($user_details_row['payment_status'] != 'Paid' && $user_plan_type['plan_type_id'] != 1) { ?>
                         <a href="<?php echo $webpage_full_link; ?>db-payment"
-                           class="btn btn2"><?php echo $BIZBOOK['PAY_NOW']; ?></a>
+                           class="btn btn2"><?php echo $Zitiziti['PAY_NOW']; ?></a>
                         <?php
                     }
                 } else { ?> <a href="<?php echo $webpage_full_link; ?>pricing-details"
-                               class="btn btn1"><?php echo $BIZBOOK['DASH_RIGHT_CHANGE_MY_PLAN']; ?></a> <?php }
+                               class="btn btn1"><?php echo $Zitiziti['DASH_RIGHT_CHANGE_MY_PLAN']; ?></a> <?php }
                 ?>
             </div>
         </div>
@@ -157,7 +157,7 @@ $session_user_id = $_SESSION['user_id'];
         <?php if ($footer_row['admin_listing_show'] == 1 && $user_details_row['setting_listing_show'] == 1) { ?>
             <div class="ud-rhs-pay ud-rhs-status">
                 <div class="ud-rhs-pay-inn">
-                    <h3><?php echo $BIZBOOK['LISTING_OPEN_CLOSE_TITLE']; ?></h3>
+                    <h3><?php echo $Zitiziti['LISTING_OPEN_CLOSE_TITLE']; ?></h3>
                     <ul class="ps-1">
                         <?php
                         foreach (getAllListingUser($_SESSION['user_id']) as $list_switch_row) {
@@ -172,7 +172,7 @@ $session_user_id = $_SESSION['user_id'];
                                     <label class="custom-control-label"
                                            for="<?php echo $list_switch_row['listing_id']; ?>"
                                            data-toggle="tooltip"
-                                           title="<?php echo $BIZBOOK['LISTING_OPEN_CLOSE_TITLE_POPUP']; ?>">
+                                           title="<?php echo $Zitiziti['LISTING_OPEN_CLOSE_TITLE_POPUP']; ?>">
                                         &nbsp;</label>
                                 </div>
                             </li>
@@ -191,49 +191,49 @@ $session_user_id = $_SESSION['user_id'];
         ?>
         <div class="ud-rhs-pay ud-rhs-repo">
             <div class="ud-rhs-pay-inn">
-                <h3><?php echo $BIZBOOK['LAST_WEEK_REPORT']; ?></h3>
+                <h3><?php echo $Zitiziti['LAST_WEEK_REPORT']; ?></h3>
                 <ul class="ps-1">
                     <li>
-                        <span class="view"><?php echo $BIZBOOK['ENQUIRY']; ?></span>
+                        <span class="view"><?php echo $Zitiziti['ENQUIRY']; ?></span>
                         <span
                                 class="cout"><?php echo AddingZero_BeforeNumber(getLastWeekCountUserEnquiries($_SESSION['user_id'])); ?></span>
-                        <span class="name"><?php echo $BIZBOOK['LEADS']; ?></span>
+                        <span class="name"><?php echo $Zitiziti['LEADS']; ?></span>
                     </li>
                     <li>
-                        <span class="view"><?php echo $BIZBOOK['VIEWS']; ?></span>
+                        <span class="view"><?php echo $Zitiziti['VIEWS']; ?></span>
                         <span
                                 class="cout"><?php echo AddingZero_BeforeNumber(last_week_all_listing_pageview_count($_SESSION['user_id'])); ?></span>
-                        <span class="name"><?php echo $BIZBOOK['LISTING']; ?></span>
+                        <span class="name"><?php echo $Zitiziti['LISTING']; ?></span>
                     </li>
                     <li>
-                        <span class="view"><?php echo $BIZBOOK['VIEWS']; ?></span>
+                        <span class="view"><?php echo $Zitiziti['VIEWS']; ?></span>
                         <span
                                 class="cout"><?php echo AddingZero_BeforeNumber(last_week_all_event_pageview_count($_SESSION['user_id'])); ?></span>
-                        <span class="name"><?php echo $BIZBOOK['EVENTS']; ?></span>
+                        <span class="name"><?php echo $Zitiziti['EVENTS']; ?></span>
                     </li>
                     <li>
-                        <span class="view"><?php echo $BIZBOOK['VIEWS']; ?></span>
+                        <span class="view"><?php echo $Zitiziti['VIEWS']; ?></span>
                         <span
                                 class="cout"><?php echo AddingZero_BeforeNumber(last_week_all_blog_pageview_count($_SESSION['user_id'])); ?></span>
-                        <span class="name"><?php echo $BIZBOOK['BLOGS']; ?></span>
+                        <span class="name"><?php echo $Zitiziti['BLOGS']; ?></span>
                     </li>
                     <li>
-                        <span class="view"><?php echo $BIZBOOK['VIEWS']; ?></span>
+                        <span class="view"><?php echo $Zitiziti['VIEWS']; ?></span>
                         <span
                                 class="cout"><?php echo AddingZero_BeforeNumber(last_week_all_product_pageview_count($_SESSION['user_id'])); ?></span>
-                        <span class="name"><?php echo $BIZBOOK['PRODUCTS']; ?></span>
+                        <span class="name"><?php echo $Zitiziti['PRODUCTS']; ?></span>
                     </li>
                     <li>
                     <span
                             class="cout"><?php echo AddingZero_BeforeNumber(last_week_all_messages_count($_SESSION['user_id'])); ?></span>
-                        <span class="name"><?php echo $BIZBOOK['MESSAGES']; ?></span>
+                        <span class="name"><?php echo $Zitiziti['MESSAGES']; ?></span>
                     </li>
                 </ul>
             </div>
         </div>
 
         <div class="ud-rhs-sec-1">
-            <h4><?php echo $BIZBOOK['ADMIN_NOTIFICATION']; ?></h4>
+            <h4><?php echo $Zitiziti['ADMIN_NOTIFICATION']; ?></h4>
             <ul class="ps-1">
                 <?php
                 if ($user_details_row['user_type'] == 'Service provider') {
@@ -264,14 +264,14 @@ $session_user_id = $_SESSION['user_id'];
     }
     ?>
     <div class="ud-rhs-promo ud-rhs-promo-1">
-        <h3><?php echo $BIZBOOK['COMMUNITY_MEMBERS']; ?></h3>
-        <p><?php echo $BIZBOOK['COMMUNITY_MEMBERS_TITLE']; ?></p>
-        <a href="<?php echo $webpage_full_link; ?>community"><?php echo $BIZBOOK['COMMUNITY']; ?></a>
+        <h3><?php echo $Zitiziti['COMMUNITY_MEMBERS']; ?></h3>
+        <p><?php echo $Zitiziti['COMMUNITY_MEMBERS_TITLE']; ?></p>
+        <a href="<?php echo $webpage_full_link; ?>community"><?php echo $Zitiziti['COMMUNITY']; ?></a>
     </div>
     <div class="ud-rhs-sec-3">
         <div class="list-mig-like">
             <div class="list-ri-peo-like">
-                <h3><?php echo $BIZBOOK['WHO_ALL_FOLLOW_YOU']; ?></h3>
+                <h3><?php echo $Zitiziti['WHO_ALL_FOLLOW_YOU']; ?></h3>
                 <ul>
                     <?php
                     $user_followers_array = explode(",", $user_details_row['user_followers']);

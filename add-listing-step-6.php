@@ -20,7 +20,7 @@ $listing_count_user = getCountUserListing($_SESSION['user_id']);
 
 if ($listing_count_user >= $plan_type_listing_count) {
 
-    $_SESSION['status_msg'] = $BIZBOOK['LISTINGS_LIMIT_EXCEED_MESSAGE'];
+    $_SESSION['status_msg'] = $Zitiziti['LISTINGS_LIMIT_EXCEED_MESSAGE'];
 
     header('Location: db-all-listing');
 }
@@ -42,38 +42,38 @@ $listing_row = getListing($listing_codea);
                     <ul>
                         <li>
                             <a href="add-listing-step-1">
-                                <span><?php echo $BIZBOOK['STEP1']; ?></span>
-                                <b><?php echo $BIZBOOK['BASIC_INFO']; ?></b>
+                                <span><?php echo $Zitiziti['STEP1']; ?></span>
+                                <b><?php echo $Zitiziti['BASIC_INFO']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="#!">
-                                <span><?php echo $BIZBOOK['STEP2']; ?></span>
-                                <b><?php echo $BIZBOOK['SERVICES']; ?></b>
+                                <span><?php echo $Zitiziti['STEP2']; ?></span>
+                                <b><?php echo $Zitiziti['SERVICES']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="#!">
-                                <span><?php echo $BIZBOOK['STEP3']; ?></span>
-                                <b><?php echo $BIZBOOK['OFFERS']; ?></b>
+                                <span><?php echo $Zitiziti['STEP3']; ?></span>
+                                <b><?php echo $Zitiziti['OFFERS']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="#!">
-                                <span><?php echo $BIZBOOK['STEP4']; ?></span>
-                                <b><?php echo $BIZBOOK['MAP']; ?></b>
+                                <span><?php echo $Zitiziti['STEP4']; ?></span>
+                                <b><?php echo $Zitiziti['MAP']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="#!">
-                                <span><?php echo $BIZBOOK['STEP5']; ?></span>
-                                <b><?php echo $BIZBOOK['OTHER']; ?></b>
+                                <span><?php echo $Zitiziti['STEP5']; ?></span>
+                                <b><?php echo $Zitiziti['OTHER']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="#!" class="act">
-                                <span><?php echo $BIZBOOK['STEP6']; ?></span>
-                                <b><?php echo $BIZBOOK['DONE']; ?></b>
+                                <span><?php echo $Zitiziti['STEP6']; ?></span>
+                                <b><?php echo $Zitiziti['DONE']; ?></b>
                             </a>
                         </li>
                     </ul>
@@ -83,11 +83,11 @@ $listing_row = getListing($listing_codea);
         <div class="row">
             <div class="login-main add-list">
                 <div class="log-bor">&nbsp;</div>
-                <span class="steps"><?php echo $BIZBOOK['STEP6']; ?></span>
+                <span class="steps"><?php echo $Zitiziti['STEP6']; ?></span>
                 <div class="log">
                     <div class="login add-lis-done">
-                        <h4><?php echo $BIZBOOK['SUCCESS']; ?></h4>
-                        <p><?php echo $BIZBOOK['LISTING_INSERT_SUCCESS_MESSAGE']; ?></p>
+                        <h4><?php echo $Zitiziti['SUCCESS']; ?></h4>
+                        <p><?php echo $Zitiziti['LISTING_INSERT_SUCCESS_MESSAGE']; ?></p>
                         <form>
                             <!--FILED START-->
                             <div class="row">
@@ -103,12 +103,12 @@ $listing_row = getListing($listing_codea);
                             <div class="row">
                                 <div class="col-md-6">
                                     <a href="db-all-listing"
-                                       class="btn btn-primary"><?php echo $BIZBOOK['GO_TO_ALL_LISTING']; ?></a>
+                                       class="btn btn-primary"><?php echo $Zitiziti['GO_TO_ALL_LISTING']; ?></a>
                                 </div>
                                 <div class="col-md-6">
                                     <a target="_blank"
                                        href="<?php echo $LISTING_URL . urlModifier($listing_row['listing_slug']); ?>"
-                                       class="btn btn-primary"><?php echo $BIZBOOK['LISTING_PREVIEW']; ?></a>
+                                       class="btn btn-primary"><?php echo $Zitiziti['LISTING_PREVIEW']; ?></a>
                                 </div>
                             </div>
                             <!--FILED END-->
