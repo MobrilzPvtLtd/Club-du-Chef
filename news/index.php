@@ -315,7 +315,7 @@ if (file_exists('../config/news_page_authentication.php')) {
                     $get_ad_row_1 = getAds($ad_position_id_1);
                     $ad_enquiry_photo_1 = $get_ad_row_1['ad_enquiry_photo'];
                     ?>
-                    <div class="news-rhs-ads-ban">
+                    <!-- <div class="news-rhs-ads-ban">
                         <div class="ban-ati-com">
                             <a href="<?php echo stripslashes($get_ad_row_1['ad_link']); ?>"><span><?php echo $Zitiziti['AD']; ?></span><img
                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo_1 != NULL || !empty($ad_enquiry_photo_1)) {
@@ -324,7 +324,7 @@ if (file_exists('../config/news_page_authentication.php')) {
                                         echo "ads2.jpg";
                                     } ?>"></a>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- ADS END-->
                     <?php
                     $ad_position_id_2 = 9;   //Ad position on News Detail Page -2
@@ -332,7 +332,7 @@ if (file_exists('../config/news_page_authentication.php')) {
                     $ad_enquiry_photo_2 = $get_ad_row_2['ad_enquiry_photo'];
                     ?>
                     <!-- ADS START-->
-                    <div class="news-rhs-ads-ban">
+                    <!-- <div class="news-rhs-ads-ban">
                         <div class="ban-ati-com">
                             <a href="<?php echo stripslashes($get_ad_row_2['ad_link']); ?>"><span><?php echo $Zitiziti['AD']; ?></span><img
                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo_2 != NULL || !empty($ad_enquiry_photo_2)) {
@@ -341,7 +341,7 @@ if (file_exists('../config/news_page_authentication.php')) {
                                         echo "ads1.jpg";
                                     } ?>"></a>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- ADS END-->
                     <!-- SUBSCRIBE START-->
                     <div class="news-subsc px-1 pb-1">
