@@ -18,18 +18,18 @@ include "../dashboard_left_pane.php";
    <div class="ud-main-inn ud-no-rhs">
     <div class="ud-cen">
         <div class="log-bor">&nbsp;</div>
-        <span class="udb-inst"><?php echo $BIZBOOK['ALL_APPLIED_JOBS']; ?></span>
+        <span class="udb-inst"><?php echo $Zitiziti['ALL_APPLIED_JOBS']; ?></span>
         <?php include('../config/user_activation_checker.php'); ?>
         <div class="ud-cen-s2">
-            <h2><?php echo $BIZBOOK['JOB_APPLI_DETAILS']; ?></h2>
+            <h2><?php echo $Zitiziti['JOB_APPLI_DETAILS']; ?></h2>
             <?php include "../page_level_message.php"; ?>
             <table class="responsive-table bordered">
                 <thead>
                 <tr>
-                    <th><?php echo $BIZBOOK['S_NO']; ?></th>
-                    <th><?php echo $BIZBOOK['JOB-TITLE-LABEL']; ?></th>
-                    <th><?php echo $BIZBOOK['JOB_APPLI_DATE']; ?></th>
-                    <th><?php echo $BIZBOOK['PREVIEW']; ?></th>
+                    <th><?php echo $Zitiziti['S_NO']; ?></th>
+                    <th><?php echo $Zitiziti['JOB-TITLE-LABEL']; ?></th>
+                    <th><?php echo $Zitiziti['JOB_APPLI_DATE']; ?></th>
+                    <th><?php echo $Zitiziti['PREVIEW']; ?></th>
                 </tr>
                 </thead>
                 <tbody>

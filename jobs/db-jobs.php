@@ -23,23 +23,23 @@ include "../dashboard_left_pane.php";
    <div class="ud-main-inn ud-no-rhs">
     <div class="ud-cen">
         <div class="log-bor">&nbsp;</div>
-        <span class="udb-inst"><?php echo $BIZBOOK['ALL_JOBS']; ?></span>
+        <span class="udb-inst"><?php echo $Zitiziti['ALL_JOBS']; ?></span>
         <?php include('../config/user_activation_checker.php'); ?>
         <div class="ud-cen-s2">
-            <h2><?php echo $BIZBOOK['JOB_DETAILS']; ?></h2>
+            <h2><?php echo $Zitiziti['JOB_DETAILS']; ?></h2>
             <?php include "../page_level_message.php"; ?>
-            <a href="create-job" class="db-tit-btn"><?php echo $BIZBOOK['ADD_NEW_JOB']; ?></a>
+            <a href="create-job" class="db-tit-btn"><?php echo $Zitiziti['ADD_NEW_JOB']; ?></a>
             <table class="responsive-table bordered">
                 <thead>
                 <tr>
-                    <th><?php echo $BIZBOOK['S_NO']; ?></th>
-                    <th><?php echo $BIZBOOK['JOB_NAME']; ?></th>
-                    <th><?php echo $BIZBOOK['JOB_APPLICANTS']; ?></th>
-                    <th><?php echo $BIZBOOK['JOB_APPLICANT_PROFILE']; ?></th>
-                    <th><?php echo $BIZBOOK['VIEWS']; ?></th>
-                    <th><?php echo $BIZBOOK['EDIT']; ?></th>
-                    <th><?php echo $BIZBOOK['DELETE']; ?></th>
-                    <th><?php echo $BIZBOOK['PREVIEW']; ?></th>
+                    <th><?php echo $Zitiziti['S_NO']; ?></th>
+                    <th><?php echo $Zitiziti['JOB_NAME']; ?></th>
+                    <th><?php echo $Zitiziti['JOB_APPLICANTS']; ?></th>
+                    <th><?php echo $Zitiziti['JOB_APPLICANT_PROFILE']; ?></th>
+                    <th><?php echo $Zitiziti['VIEWS']; ?></th>
+                    <th><?php echo $Zitiziti['EDIT']; ?></th>
+                    <th><?php echo $Zitiziti['DELETE']; ?></th>
+                    <th><?php echo $Zitiziti['PREVIEW']; ?></th>
                 </tr>
                 </thead>
                 <tbody>

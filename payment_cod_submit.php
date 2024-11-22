@@ -49,7 +49,7 @@ $upres = mysqli_query($conn,$upqry);
 
 // Update Billing details of user ends
 if($upres) {
-    $_SESSION['status_msg'] = $BIZBOOK['COD_PAYMENT_SUCCESS_MESSAGE'];
+    $_SESSION['status_msg'] = $Zitiziti['COD_PAYMENT_SUCCESS_MESSAGE'];
 
     header('Location: db-invoice-all');
     exit();

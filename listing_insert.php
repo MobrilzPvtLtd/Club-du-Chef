@@ -456,7 +456,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //****************************    Admin email starts    *************************
 
             $to = $admin_email;
-            $LISTING_INSERT_ADMIN_SUBJECT = $BIZBOOK['LISTING_INSERT_ADMIN_SUBJECT'];
+            $LISTING_INSERT_ADMIN_SUBJECT = $Zitiziti['LISTING_INSERT_ADMIN_SUBJECT'];
             $subject = "$admin_site_name $LISTING_INSERT_ADMIN_SUBJECT";
 
 
@@ -484,7 +484,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //****************************    Client email starts    *************************
 
             $to1 = $email_id;
-            $LISTING_INSERT_CLIENT_SUBJECT = $BIZBOOK['LISTING_INSERT_CLIENT_SUBJECT'];
+            $LISTING_INSERT_CLIENT_SUBJECT = $Zitiziti['LISTING_INSERT_CLIENT_SUBJECT'];
             $subject1 = "$admin_site_name $LISTING_INSERT_CLIENT_SUBJECT";
 
             $client_sql_fetch = mysqli_query($conn, "SELECT * FROM " . TBL . "mail  WHERE mail_id = 6 "); //User mail template fetch
@@ -588,7 +588,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header('Location: add-listing-step-6?code=' . $ListCode);
         } else {
 
-            $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+            $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
             header('Location: add-listing-step-1');
         }
@@ -598,7 +598,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } else {
 
-    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: add-listing-step-1');
 }

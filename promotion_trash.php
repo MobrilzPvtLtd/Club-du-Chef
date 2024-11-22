@@ -93,14 +93,14 @@ if (isset($_GET['code'])) {
         }
 
 
-        $_SESSION['status_msg'] = $BIZBOOK['EXPIRED_PROMOTION_DELETE_SUCCESS_MESSAGE'];
+        $_SESSION['status_msg'] = $Zitiziti['EXPIRED_PROMOTION_DELETE_SUCCESS_MESSAGE'];
 
 
         header('Location: db-promote');
 
     } else {
 
-        $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+        $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
 
         header('Location:db-promote');

@@ -51,7 +51,7 @@
                     window.location.href = 'dashboard';
                 }else{
                     fbLogout();
-                    <?php //$_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?>
+                    <?php //$_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?>
                     window.location.href = 'login';
                 }
 

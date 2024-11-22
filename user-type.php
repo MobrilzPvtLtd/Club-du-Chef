@@ -18,22 +18,22 @@ include "header.php";
                             <div class="pri-box">
                                 <div class="c6">
                                     <img loading="lazy" src="images/icon/service.png" alt="">
-                                    <h4><?php echo $BIZBOOK['pg_utype_tit1']; ?></h4>
+                                    <h4><?php echo $Zitiziti['pg_utype_tit1']; ?></h4>
                                 </div>
                                 <div class="c4">
                                     <ol>
-                                        <li><?php echo $BIZBOOK['pg_utype_sp1']; ?></li>
-                                        <li><?php echo $BIZBOOK['pg_utype_sp2']; ?></li>
-                                        <li><?php echo $BIZBOOK['pg_utype_sp3']; ?></li>
-                                        <li><?php echo $BIZBOOK['pg_utype_sp4']; ?></li>
-                                        <li><?php echo $BIZBOOK['pg_utype_sp5']; ?></li>
-                                        <li><?php echo $BIZBOOK['pg_utype_sp6']; ?></li>
-                                        <li><?php echo $BIZBOOK['pg_utype_sp7']; ?></li>
-                                        <li><?php echo $BIZBOOK['pg_utype_sp8']; ?></li>
+                                        <li><?php echo $Zitiziti['pg_utype_sp1']; ?></li>
+                                        <li><?php echo $Zitiziti['pg_utype_sp2']; ?></li>
+                                        <li><?php echo $Zitiziti['pg_utype_sp3']; ?></li>
+                                        <li><?php echo $Zitiziti['pg_utype_sp4']; ?></li>
+                                        <li><?php echo $Zitiziti['pg_utype_sp5']; ?></li>
+                                        <li><?php echo $Zitiziti['pg_utype_sp6']; ?></li>
+                                        <li><?php echo $Zitiziti['pg_utype_sp7']; ?></li>
+                                        <li><?php echo $Zitiziti['pg_utype_sp8']; ?></li>
                                     </ol>
                                 </div>
                                 <div class="c5">
-                                    <a href="login"><?php echo $BIZBOOK['pg_utype_start']; ?></a>
+                                    <a href="login"><?php echo $Zitiziti['pg_utype_start']; ?></a>
                                 </div>
                             </div>
                         </li>
@@ -41,22 +41,22 @@ include "header.php";
                             <div class="pri-box">
                                 <div class="c6">
                                     <img loading="lazy" src="images/icon/general.png" alt="">
-                                    <h4><?php echo $BIZBOOK['pg_utype_tit2']; ?></h4>
+                                    <h4><?php echo $Zitiziti['pg_utype_tit2']; ?></h4>
                                 </div>
                                 <div class="c4">
                                     <ol>
-                                        <li><?php echo $BIZBOOK['pg_utype_gp1']; ?></li>
-                                        <li><?php echo $BIZBOOK['pg_utype_gp2']; ?></li>
-                                        <li><?php echo $BIZBOOK['pg_utype_gp3']; ?></li>
-                                        <li><?php echo $BIZBOOK['pg_utype_gp4']; ?></li>
-                                        <li><?php echo $BIZBOOK['pg_utype_gp5']; ?></li>
-                                        <li class="no"><?php echo $BIZBOOK['pg_utype_gp6']; ?></li>
-                                        <li class="no"><?php echo $BIZBOOK['pg_utype_gp7']; ?></li>
-                                        <li class="no"><?php echo $BIZBOOK['pg_utype_gp8']; ?></li>
+                                        <li><?php echo $Zitiziti['pg_utype_gp1']; ?></li>
+                                        <li><?php echo $Zitiziti['pg_utype_gp2']; ?></li>
+                                        <li><?php echo $Zitiziti['pg_utype_gp3']; ?></li>
+                                        <li><?php echo $Zitiziti['pg_utype_gp4']; ?></li>
+                                        <li><?php echo $Zitiziti['pg_utype_gp5']; ?></li>
+                                        <li class="no"><?php echo $Zitiziti['pg_utype_gp6']; ?></li>
+                                        <li class="no"><?php echo $Zitiziti['pg_utype_gp7']; ?></li>
+                                        <li class="no"><?php echo $Zitiziti['pg_utype_gp8']; ?></li>
                                     </ol>
                                 </div>
                                 <div class="c5">
-                                    <a href="login"><?php echo $BIZBOOK['pg_utype_start']; ?></a>
+                                    <a href="login"><?php echo $Zitiziti['pg_utype_start']; ?></a>
                                 </div>
                             </div>
                         </li>
@@ -78,26 +78,26 @@ include "header.php";
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <!-- Modal Header -->
                     <div class="quote-pop">
-                        <h4><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></h4>
+                        <h4><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></h4>
                         <form>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>" required>
+                                <input type="text" class="form-control" placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>"
+                                <input type="email" class="form-control" placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>"
                                        pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                       title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
+                                       title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                <input type="text" class="form-control" placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
                                        pattern="[7-9]{1}[0-9]{9}"
-                                       title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>" required>
+                                       title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>" required>
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control" rows="3"
-                                          placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                          placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
+                            <button type="submit" class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?></button>
                         </form>
                     </div>
                 </div>

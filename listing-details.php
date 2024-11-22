@@ -145,27 +145,27 @@ for ($j = 1; $j <= 4; $j++) {
                 <div class="v3-list-ql-inn">
                     <ul>
                         <li class="active"><a href="#ld-abo"><i
-                                        class="material-icons">person</i> <?php echo $BIZBOOK['LISTING_DETAILS_ABOUT']; ?>
+                                        class="material-icons">person</i> <?php echo $Zitiziti['LISTING_DETAILS_ABOUT']; ?>
                             </a>
                         </li>
                         <li><a href="#ld-ser"><i
-                                        class="material-icons">business_center</i> <?php echo $BIZBOOK['LISTING_DETAILS_SERVICES']; ?>
+                                        class="material-icons">business_center</i> <?php echo $Zitiziti['LISTING_DETAILS_SERVICES']; ?>
                             </a>
                         </li>
                         <li><a href="#ld-off"><i
-                                        class="material-icons">style</i> <?php echo $BIZBOOK['LISTING_DETAILS_OFFERS']; ?>
+                                        class="material-icons">style</i> <?php echo $Zitiziti['LISTING_DETAILS_OFFERS']; ?>
                             </a>
                         </li>
                         <li><a href="#location"><i
-                                        class="material-icons">map</i> <?php echo $BIZBOOK['LOCATION']; ?>
+                                        class="material-icons">map</i> <?php echo $Zitiziti['LOCATION']; ?>
                             </a>
                         </li>
                                                <li><a href="#ld-360"><i
-                                                               class="material-icons">camera</i><?php echo $BIZBOOK['LISTING_DETAILS_360_VIEW']; ?>
+                                                               class="material-icons">camera</i><?php echo $Zitiziti['LISTING_DETAILS_360_VIEW']; ?>
                                                    </a>
                                                </li>
                         <li><a href="#ld-rev"><i
-                                        class="material-icons">star_half</i> <?php echo $BIZBOOK['LISTING_DETAILS_WRITE_REVIEW']; ?>
+                                        class="material-icons">star_half</i> <?php echo $Zitiziti['LISTING_DETAILS_WRITE_REVIEW']; ?>
                             </a>
                         </li>
                         <?php
@@ -176,7 +176,7 @@ for ($j = 1; $j <= 4; $j++) {
                         if ($user_details_row['user_type'] == 'Service provider' && $setting_guarantee_show == 0) {
                             ?>
                             <li><a href="#" data-toggle="modal" data-target="#claim"><i
-                                            class="material-icons">store</i><?php echo $BIZBOOK['LISTING_DETAILS_CLAIM_BUSINESS']; ?>
+                                            class="material-icons">store</i><?php echo $Zitiziti['LISTING_DETAILS_CLAIM_BUSINESS']; ?>
                                 </a>
                             </li>
                         <?php } ?>
@@ -205,11 +205,11 @@ for ($j = 1; $j <= 4; $j++) {
                     </div>
                     <div class="list-fix-tit">
                         <h3><?php echo $listrow['listing_name']; ?></h3>
-                        <p><b><?php echo $BIZBOOK['ADDRESS']; ?>:</b> <?php echo $listrow['listing_address']; ?></p>
+                        <p><b><?php echo $Zitiziti['ADDRESS']; ?>:</b> <?php echo $listrow['listing_address']; ?></p>
                     </div>
                     <div class="list-fix-btn">
                         <span data-toggle="modal" data-target="#quote"
-                              class="pulse"><?php echo $BIZBOOK['SEND_AN_ENQIRY']; ?></span>
+                              class="pulse"><?php echo $Zitiziti['SEND_AN_ENQIRY']; ?></span>
                     </div>
                 </div>
             </div>
@@ -228,7 +228,7 @@ for ($j = 1; $j <= 4; $j++) {
                 <div>
                     <div class="eve-bred-crum">
                         <ul>
-                            <li><a href="<?php echo $webpage_full_link; ?>"><?php echo $BIZBOOK['HOME']; ?></a></li>
+                            <li><a href="<?php echo $webpage_full_link; ?>"><?php echo $Zitiziti['HOME']; ?></a></li>
                             <li>
                                 <a href="<?php echo $ALL_LISTING_URL . urlModifier($category_search_slug); ?>"><?php echo $category_search_name; ?></a>
                             </li>
@@ -330,11 +330,11 @@ for ($j = 1; $j <= 4; $j++) {
                                                         <b><?php echo $star_rate_two; ?></b>
                                                         <?php
                                                     } ?>
-                                                    average based on <?php echo $review_count; ?> <?php echo $BIZBOOK['REVIEWS']; ?></span>
+                                                    average based on <?php echo $review_count; ?> <?php echo $Zitiziti['REVIEWS']; ?></span>
                                                 <?php
                                             } else {
                                                 ?>
-                                                <span><?php echo $BIZBOOK['NO_REVIEWS_YET']; ?></span>
+                                                <span><?php echo $Zitiziti['NO_REVIEWS_YET']; ?></span>
                                                 <?php
                                             }
                                             ?>
@@ -381,11 +381,11 @@ for ($j = 1; $j <= 4; $j++) {
                                 <ul>
                                     <li>
                                         <a href="tel:<?php echo $usersqlrow['mobile_number']; ?>"
-                                           class="cta cta-call"><?php echo $BIZBOOK['CALL_NOW']; ?></a>
+                                           class="cta cta-call"><?php echo $Zitiziti['CALL_NOW']; ?></a>
                                     </li>
                                     <li>
                             <span data-toggle="modal" data-target="#quote"
-                                  class="pulse cta cta-get"><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></span>
+                                  class="pulse cta cta-get"><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></span>
                                     </li>
                                 </ul>
                             </div>
@@ -400,13 +400,13 @@ for ($j = 1; $j <= 4; $j++) {
                                                 data-id='<?php echo $listrow['listing_id'] ?>'> <i
                                                     class="material-icons">thumb_up</i>
                                 <b class="like-content<?php echo $listrow['listing_id'] ?>"><?php echo listing_total_like_count($listrow['listing_id']); ?></b>
-                                            <?php echo $BIZBOOK['LIKES']; ?></span>
+                                            <?php echo $Zitiziti['LIKES']; ?></span>
                                     </li>
                                     <?php if ($listrow['listing_whatsapp'] != NULL) { ?>
                                         <li>
                                             <a href="https://wa.me/<?php echo $listrow['listing_whatsapp']; ?>"
                                                class="cta cta-rev" target="_blank"><i
-                                                        class="material-icons">chat</i><?php echo $BIZBOOK['WHATSAPP']; ?>
+                                                        class="material-icons">chat</i><?php echo $Zitiziti['WHATSAPP']; ?>
                                             </a>
                                         </li>
                                     <?php } ?> 
@@ -423,7 +423,7 @@ for ($j = 1; $j <= 4; $j++) {
                                         if ($setting_share == 0) {
                                             ?>
                                             <li><span data-toggle="modal" data-target="#sharepop"><i
-                                                            class="material-icons">share</i><?php echo $BIZBOOK['JOB_SHARE']; ?></span>
+                                                            class="material-icons">share</i><?php echo $Zitiziti['JOB_SHARE']; ?></span>
                                             </li>
                                             <?php
                                         }
@@ -440,7 +440,7 @@ for ($j = 1; $j <= 4; $j++) {
                             ?>
                             <div class="pglist-p3 pglist-bg pglist-p-com">
                                 <div class="pglist-p-com-ti">
-                                    <h3><span><?php echo $BIZBOOK['COMPANY']; ?></span> <?php echo $BIZBOOK['INFO']; ?></h3>
+                                    <h3><span><?php echo $Zitiziti['COMPANY']; ?></span> <?php echo $Zitiziti['INFO']; ?></h3>
                                 </div>
                                 <div class="list-pg-inn-sp">
                                     <div class="list-work-hrs">
@@ -593,9 +593,9 @@ for ($j = 1; $j <= 4; $j++) {
                                                                 class="b-lazy"
                                                                 data-src="<?php echo $slash; ?>images/icon/g2.png" alt=""
                                                                 loading="lazy"/></div>
-                                                    <h4><?php echo $BIZBOOK['LISTING_DETAILS_CLAIM_THIS_BUSINESS']; ?></h4>
+                                                    <h4><?php echo $Zitiziti['LISTING_DETAILS_CLAIM_THIS_BUSINESS']; ?></h4>
                                                     <span data-toggle="modal" data-target="#claim"
-                                                        class="clim-edit"><?php echo $BIZBOOK['LISTING_DETAILS_SUGGEST_AN_EDIT']; ?></span>
+                                                        class="clim-edit"><?php echo $Zitiziti['LISTING_DETAILS_SUGGEST_AN_EDIT']; ?></span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -616,7 +616,7 @@ for ($j = 1; $j <= 4; $j++) {
                             <div class="ld-rhs-pro pglist-bg pglist-p-com">
                                 <div class="pglist-p-com-ti">
                                     <h3>
-                                        <span><?php echo $BIZBOOK['LISTING']; ?></span> <?php echo $BIZBOOK['CREATED_BY']; ?>
+                                        <span><?php echo $Zitiziti['LISTING']; ?></span> <?php echo $Zitiziti['CREATED_BY']; ?>
                                     </h3>
                                 </div>
                                 <div class="lis-pro-badg-23">
@@ -649,7 +649,7 @@ for ($j = 1; $j <= 4; $j++) {
 
                         <div class="ld-rhs-pro pglist-bg pglist-p-com">
                             <div class="pglist-p-com-ti">
-                                <h3><?php echo $BIZBOOK['LISTING_DETAILS_BUSINESS_PROFILE']; ?> </h3>
+                                <h3><?php echo $Zitiziti['LISTING_DETAILS_BUSINESS_PROFILE']; ?> </h3>
                             </div>
                             <div class="lis-pro-badg-23">
                                 <img
@@ -757,7 +757,7 @@ for ($j = 1; $j <= 4; $j++) {
                             <!--LISTING DETAILS: LEFT PART 10-->
                             <div class="list-mig-like">
                                 <div class="list-ri-peo-like">
-                                    <h3><?php echo $BIZBOOK['LISTING_DETAILS_WHO_ARE_LIKE_THIS']; ?></h3>
+                                    <h3><?php echo $Zitiziti['LISTING_DETAILS_WHO_ARE_LIKE_THIS']; ?></h3>
                                     <ul>
                                         <?php
                                         foreach (getAllLikedListingListing($listing_id) as $likesuser_row) {
@@ -837,7 +837,7 @@ for ($j = 1; $j <= 4; $j++) {
                         $get_ad_row = getAds($ad_position_id);
                         $ad_enquiry_photo = $get_ad_row['ad_enquiry_photo'];
                         ?>
-                        <a href="<?php echo stripslashes($get_ad_row['ad_link']); ?>"><span><?php echo $BIZBOOK['AD']; ?></span><img
+                        <a href="<?php echo stripslashes($get_ad_row['ad_link']); ?>"><span><?php echo $Zitiziti['AD']; ?></span><img
                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                                     class="b-lazy"
                                     data-src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
@@ -975,7 +975,7 @@ for ($j = 1; $j <= 4; $j++) {
                         <div id="ld-abo" class="pglist-bg pglist-p-com">
                             <div class="pglist-p-com-ti">
                                 <h3>
-                                    <span><?php echo $BIZBOOK['LISTING_DETAILS_ABOUT']; ?></span> <?php echo $listrow['listing_name']; ?>
+                                    <span><?php echo $Zitiziti['LISTING_DETAILS_ABOUT']; ?></span> <?php echo $listrow['listing_name']; ?>
                                 </h3></div>
                             <div class="list-pg-inn-sp list-pg-inn-abo">
                                 <?php
@@ -994,7 +994,7 @@ for ($j = 1; $j <= 4; $j++) {
                             <div id="ld-ser" class="pglist-bg pglist-p-com">
                                 <div class="pglist-p-com-ti">
                                     <h3>
-                                        <span><?php echo $BIZBOOK['LISTING_DETAILS_SERVICES']; ?></span> <?php echo $BIZBOOK['LISTING_DETAILS_OFFERED']; ?>
+                                        <span><?php echo $Zitiziti['LISTING_DETAILS_SERVICES']; ?></span> <?php echo $Zitiziti['LISTING_DETAILS_OFFERED']; ?>
                                     </h3></div>
                                 <div class="list-pg-inn-sp">
                                     <div class="row pg-list-ser">
@@ -1043,7 +1043,7 @@ for ($j = 1; $j <= 4; $j++) {
                         <div id="ld-ser" class="pglist-bg pglist-p-com">
                             <div class="pglist-p-com-ti">
                                 <h3>
-                                    <span><?php echo $BIZBOOK['LISTING_DETAILS_SERVICE']; ?></span> <?php echo $BIZBOOK['LISTING_DETAILS_AREAS']; ?>
+                                    <span><?php echo $Zitiziti['LISTING_DETAILS_SERVICE']; ?></span> <?php echo $Zitiziti['LISTING_DETAILS_AREAS']; ?>
                                 </h3></div>
                             <div class="list-pg-inn-sp">
                                 <div class="row pg-list-ser-area">
@@ -1071,7 +1071,7 @@ for ($j = 1; $j <= 4; $j++) {
                         <!--START PRODUCTS-->
                         <div id="ld-products" class="pglist-bg pglist-p-com pg-list-prod-sec">
                             <div class="pglist-p-com-ti">
-                                <h3><?php echo $BIZBOOK['PRODUCTS']; ?>
+                                <h3><?php echo $Zitiziti['PRODUCTS']; ?>
                                 </h3></div>
                             <div class="list-pg-inn-sp">
                                 <div class="row plac-hom-all-pla pg-list-prod">
@@ -1123,7 +1123,7 @@ for ($j = 1; $j <= 4; $j++) {
                         <!--START EVENTS-->
                         <div id="ld-events" class="pglist-bg pglist-p-com pg-list-prod-sec">
                             <div class="pglist-p-com-ti">
-                                <h3><?php echo $BIZBOOK['EVENTS']; ?>
+                                <h3><?php echo $Zitiziti['EVENTS']; ?>
                                 </h3></div>
                             <div class="list-pg-inn-sp">
                                 <div class="row plac-hom-all-pla pg-list-prod">
@@ -1168,7 +1168,7 @@ for ($j = 1; $j <= 4; $j++) {
                             <div id="ld-off" class="pglist-bg pglist-off-last pglist-p-com">
                                 <div class="pglist-p-com-ti">
                                     <h3>
-                                        <span><?php echo $BIZBOOK['LISTING_DETAILS_SPECIAL']; ?></span> <?php echo $BIZBOOK['LISTING_DETAILS_OFFERS']; ?>
+                                        <span><?php echo $Zitiziti['LISTING_DETAILS_SPECIAL']; ?></span> <?php echo $Zitiziti['LISTING_DETAILS_OFFERS']; ?>
                                     </h3></div>
                                 <?php
 
@@ -1221,10 +1221,10 @@ for ($j = 1; $j <= 4; $j++) {
                                                             <a <?php if ($tuple[4] != NULL){ ?>target="_blank" <?php } ?>
                                                                href="<?php if ($tuple[4] != NULL) {
                                                                    echo $tuple[4];
-                                                               } else { ?>#! <?php } ?>"><?php echo $BIZBOOK['VIEW_MORE']; ?></a>
+                                                               } else { ?>#! <?php } ?>"><?php echo $Zitiziti['VIEW_MORE']; ?></a>
                                                         </li>
                                                         <li><a href="#!" data-toggle="modal"
-                                                               data-target="#quote"><?php echo $BIZBOOK['LEAD-SEND-ENQUIRY']; ?></a>
+                                                               data-target="#quote"><?php echo $Zitiziti['LEAD-SEND-ENQUIRY']; ?></a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -1248,7 +1248,7 @@ for ($j = 1; $j <= 4; $j++) {
                         <?php if (!empty($listrow['google_map'])) { ?>
                             <div id="location" class="pglist-p3 pglist-bg pglist-p-com">
                                 <div class="pglist-p-com-ti">
-                                    <h3><span><?php echo $BIZBOOK['OUR']; ?></span> <?php echo $BIZBOOK['LOCATION']; ?>
+                                    <h3><span><?php echo $Zitiziti['OUR']; ?></span> <?php echo $Zitiziti['LOCATION']; ?>
                                     </h3></div>
 
                                 <div class="list-pg-inn-sp">
@@ -1286,7 +1286,7 @@ for ($j = 1; $j <= 4; $j++) {
                                 <?php if (empty($session_user_id) || $session_user_id == Null) {
                                     ?>
                                     <span
-                                            id="Review_Disable"><?php echo $BIZBOOK['LISTING_DETAILS_LOGIN_AND_WRITE_REVIEW']; ?></span>
+                                            id="Review_Disable"><?php echo $Zitiziti['LISTING_DETAILS_LOGIN_AND_WRITE_REVIEW']; ?></span>
                                     <?php
                                 }
                                 ?>
@@ -1301,7 +1301,7 @@ for ($j = 1; $j <= 4; $j++) {
                                      ?>" id="ld-rev">
                                     <div class="pglist-p-com-ti">
                                         <h3>
-                                            <span><?php echo $BIZBOOK['LISTING_DETAILS_WRITE_YOUR']; ?></span> <?php echo $BIZBOOK['REVIEWS']; ?>
+                                            <span><?php echo $Zitiziti['LISTING_DETAILS_WRITE_YOUR']; ?></span> <?php echo $Zitiziti['REVIEWS']; ?>
                                         </h3></div>
                                     <div class="list-pg-inn-sp">
                                         <div class="list-pg-write-rev">
@@ -1315,12 +1315,12 @@ for ($j = 1; $j <= 4; $j++) {
                                                 <input name="review_user_id" value="<?php echo $session_user_id; ?>"
                                                        type="hidden"
                                                 >
-                                                <p><?php echo $BIZBOOK['LISTING_DETAILS_REVIEW_P_TAG']; ?>:</p>
+                                                <p><?php echo $Zitiziti['LISTING_DETAILS_REVIEW_P_TAG']; ?>:</p>
                                                 <div id="review_success"
-                                                     style="text-align:center;display: none;color: green;"><?php echo $BIZBOOK['LISTING_DETAILS_REVIEW_SUCCESS_MESSAGE']; ?>
+                                                     style="text-align:center;display: none;color: green;"><?php echo $Zitiziti['LISTING_DETAILS_REVIEW_SUCCESS_MESSAGE']; ?>
                                                 </div>
                                                 <div id="review_fail"
-                                                     style="text-align:center;display: none;color: red;"><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></div>
+                                                     style="text-align:center;display: none;color: red;"><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></div>
                                                 <div class="row">
                                                     <div>
                                                         <fieldset class="rating">
@@ -1405,10 +1405,10 @@ for ($j = 1; $j <= 4; $j++) {
                                                         <?php if ($session_plan_type_row['plan_type_ratings'] == 0 && $user_details_row['user_type'] != "General") { ?>
                                                             <input type="submit" id="" name="" disabled="disabled"
                                                                    readonly="readonly"
-                                                                   value="<?php echo $BIZBOOK['LISTING_DETAILS_UNABLE_SUBMIT_REVIEW']; ?>">
+                                                                   value="<?php echo $Zitiziti['LISTING_DETAILS_UNABLE_SUBMIT_REVIEW']; ?>">
                                                         <?php } else { ?>
                                                             <input type="submit" id="review_submit" name="review_submit"
-                                                                   value="<?php echo $BIZBOOK['LISTING_DETAILS_SUBMIT_REVIEW']; ?>">
+                                                                   value="<?php echo $Zitiziti['LISTING_DETAILS_SUBMIT_REVIEW']; ?>">
                                                         <?php } ?>
                                                     </div>
                                                 </div>
@@ -1439,48 +1439,48 @@ for ($j = 1; $j <= 4; $j++) {
                             <!--LISTING DETAILS: LEFT PART 5-->
                             <div class="pglist-p3 pglist-bg pglist-p-com" id="ld-rev">
                                 <div class="pglist-p-com-ti">
-                                    <h3><span><?php echo $BIZBOOK['USER']; ?></span> <?php echo $BIZBOOK['REVIEWS']; ?>
+                                    <h3><span><?php echo $Zitiziti['USER']; ?></span> <?php echo $Zitiziti['REVIEWS']; ?>
                                     </h3></div>
                                 <div class="list-pg-inn-sp">
                                     <div class="lp-ur-all">
                                         <div class="lp-ur-all-left">
                                             <div class="lp-ur-all-left-1">
                                                 <div
-                                                        class="lp-ur-all-left-11"><?php echo $BIZBOOK['EXCELLENT']; ?></div>
+                                                        class="lp-ur-all-left-11"><?php echo $Zitiziti['EXCELLENT']; ?></div>
                                                 <div class="lp-ur-all-left-12">
                                                     <div class="lp-ur-all-left-13"></div>
                                                 </div>
                                             </div>
                                             <div class="lp-ur-all-left-1">
-                                                <div class="lp-ur-all-left-11"><?php echo $BIZBOOK['GOOD']; ?></div>
+                                                <div class="lp-ur-all-left-11"><?php echo $Zitiziti['GOOD']; ?></div>
                                                 <div class="lp-ur-all-left-12">
                                                     <div class="lp-ur-all-left-13 lp-ur-all-left-Good"></div>
                                                 </div>
                                             </div>
                                             <div class="lp-ur-all-left-1">
                                                 <div
-                                                        class="lp-ur-all-left-11"><?php echo $BIZBOOK['SATISFACTORY']; ?></div>
+                                                        class="lp-ur-all-left-11"><?php echo $Zitiziti['SATISFACTORY']; ?></div>
                                                 <div class="lp-ur-all-left-12">
                                                     <div class="lp-ur-all-left-13 lp-ur-all-left-satis"></div>
                                                 </div>
                                             </div>
                                             <div class="lp-ur-all-left-1">
                                                 <div
-                                                        class="lp-ur-all-left-11"><?php echo $BIZBOOK['BELOW_AVERAGE']; ?></div>
+                                                        class="lp-ur-all-left-11"><?php echo $Zitiziti['BELOW_AVERAGE']; ?></div>
                                                 <div class="lp-ur-all-left-12">
                                                     <div class="lp-ur-all-left-13 lp-ur-all-left-below"></div>
                                                 </div>
                                             </div>
                                             <div class="lp-ur-all-left-1">
                                                 <div
-                                                        class="lp-ur-all-left-11"><?php echo $BIZBOOK['BELOW_AVERAGE']; ?></div>
+                                                        class="lp-ur-all-left-11"><?php echo $Zitiziti['BELOW_AVERAGE']; ?></div>
                                                 <div class="lp-ur-all-left-12">
                                                     <div class="lp-ur-all-left-13 lp-ur-all-left-poor"></div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="lp-ur-all-right">
-                                            <h5><?php echo $BIZBOOK['OVERALL_RATINGS']; ?></h5>
+                                            <h5><?php echo $Zitiziti['OVERALL_RATINGS']; ?></h5>
                                             <p>
                                                 <?php
                                                 if ($star_rate != 0) {
@@ -1504,12 +1504,12 @@ for ($j = 1; $j <= 4; $j++) {
                                                     <?php
                                                 }
                                                 ?>
-                                                <span><?php echo $BIZBOOK['BASED_ON']; ?><?php echo $review_count; ?><?php echo $BIZBOOK['REVIEWS']; ?></span>
+                                                <span><?php echo $Zitiziti['BASED_ON']; ?><?php echo $review_count; ?><?php echo $Zitiziti['REVIEWS']; ?></span>
                                             </p>
                                         </div>
                                     </div>
                                     <div class="lp-ur-all-rat">
-                                        <h5><?php echo $BIZBOOK['REVIEWS']; ?></h5>
+                                        <h5><?php echo $Zitiziti['REVIEWS']; ?></h5>
                                         <ul>
                                             <?php
                                             foreach (getAllListingReviews($listing_id) as $reviewsqlrow) {
@@ -1586,7 +1586,7 @@ for ($j = 1; $j <= 4; $j++) {
                         } else {
                             ?>
                             <div
-                                    class="spa-first-review"><?php echo $BIZBOOK['LISTING_DETAILS_BE_FIRST_REVIEW']; ?></div>
+                                    class="spa-first-review"><?php echo $Zitiziti['LISTING_DETAILS_BE_FIRST_REVIEW']; ?></div>
                             <?php
                         }
                         ?>
@@ -1603,7 +1603,7 @@ for ($j = 1; $j <= 4; $j++) {
                         $get_ad_row = getAds($ad_position_id);
                         $ad_enquiry_photo = $get_ad_row['ad_enquiry_photo'];
                         ?>
-                        <a href="<?php echo stripslashes($get_ad_row['ad_link']); ?>"><span><?php echo $BIZBOOK['AD']; ?></span><img
+                        <a href="<?php echo stripslashes($get_ad_row['ad_link']); ?>"><span><?php echo $Zitiziti['AD']; ?></span><img
                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                                     class="b-lazy"
                                     data-src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
@@ -1617,7 +1617,7 @@ for ($j = 1; $j <= 4; $j++) {
 
                 <!--RELATED PREMIUM LISTINGS-->
                 <div class="list-det-rel-pre">
-                    <h2><?php echo $BIZBOOK['LISTING_DETAILS_RELATED_LISTINGS']; ?>:</h2>
+                    <h2><?php echo $Zitiziti['LISTING_DETAILS_RELATED_LISTINGS']; ?>:</h2>
                     <ul class="multiple-items1">
                         <?php
                         foreach (getExceptListingCategoryListing($list_category_id, $listing_id) as $except_list_row) {
@@ -1659,7 +1659,7 @@ for ($j = 1; $j <= 4; $j++) {
                                             } else {
                                                 echo $star_rate_two_except;
                                             } ?></span>
-                                        <span class="rat-more-cta-ic"><?php echo $BIZBOOK['PLACE-MORE-DETAILS']; ?></span>
+                                        <span class="rat-more-cta-ic"><?php echo $Zitiziti['PLACE-MORE-DETAILS']; ?></span>
                                     </div>
                                     <a href="<?php echo $LISTING_URL . urlModifier($except_list_row['listing_slug']); ?>"
                                        class="fclick"></a>
@@ -1687,19 +1687,19 @@ include "footer.php";
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="log-bor">&nbsp;</div>
-                    <span class="udb-inst"><?php echo $BIZBOOK['LEAD-SEND-ENQUIRY']; ?></span>
+                    <span class="udb-inst"><?php echo $Zitiziti['LEAD-SEND-ENQUIRY']; ?></span>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <!-- Modal Header -->
                     <div class="quote-pop">
-                        <h4><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></h4>
+                        <h4><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></h4>
                         <div id="pop_enq_success" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
+                            <p><?php echo $Zitiziti['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
                         </div>
                         <div id="pop_enq_same" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
+                            <p><?php echo $Zitiziti['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
                         </div>
                         <div id="pop_enq_fail" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                            <p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                         </div>
                         <form method="post" name="popup_enquiry_form" id="popup_enquiry_form">
                             <input type="hidden" class="form-control" name="listing_id"
@@ -1728,41 +1728,41 @@ include "footer.php";
                                 <input type="text" name="enquiry_name"
                                        value="<?php echo $user_details_row['first_name'] ?>"
                                        required="required" class="form-control"
-                                       placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>">
+                                       placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>">
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control"
-                                       placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>" required="required"
+                                       placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>" required="required"
                                        value="<?php echo $user_details_row['email_id'] ?>"
                                        name="enquiry_email"
                                        pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                       title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>">
+                                       title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control"
                                        value="<?php echo $user_details_row['mobile_number'] ?>"
                                        name="enquiry_mobile"
-                                       placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                       placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
                                        pattern="[7-9]{1}[0-9]{9}"
-                                       title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>"
+                                       title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>"
                                        required>
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control" rows="3" name="enquiry_message"
-                                          placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                          placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                             </div>
                             <input type="hidden" id="source">
                             <?php if ($session_plan_type_row['plan_type_ratings'] == 0 && $user_details_row['user_type'] != "General") { ?>
                                 <button disabled="disabled" type="submit" id="popup_enquiry_submit"
                                         name="popup_enquiry_submit"
-                                        class="btn btn-primary"><?php echo $BIZBOOK['LISTING_DETAILS_UNABLE_SUBMIT_ENQUIRY']; ?>
+                                        class="btn btn-primary"><?php echo $Zitiziti['LISTING_DETAILS_UNABLE_SUBMIT_ENQUIRY']; ?>
                                 </button>
                             <?php } else { ?>
                                 <button <?php if ($session_user_id == NULL || empty($session_user_id)) {
                                     ?> disabled="disabled" <?php } ?> type="submit" id="popup_enquiry_submit"
                                                                       name="popup_enquiry_submit"
                                                                       class="btn btn-primary"><?php if ($session_user_id == NULL || empty($session_user_id)) {
-                                        ?><?php echo $BIZBOOK['LOG_IN_TO_SUBMIT']; ?><?php } else { ?><?php echo $BIZBOOK['SUBMIT']; ?><?php } ?>
+                                        ?><?php echo $Zitiziti['LOG_IN_TO_SUBMIT']; ?><?php } else { ?><?php echo $Zitiziti['SUBMIT']; ?><?php } ?>
                                 </button>
                             <?php } ?>
                         </form>
@@ -1776,19 +1776,19 @@ include "footer.php";
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="log-bor">&nbsp;</div>
-                    <span class="udb-inst"><?php echo $BIZBOOK['LISTING_DETAILS_CLAIM_NOW']; ?></span>
+                    <span class="udb-inst"><?php echo $Zitiziti['LISTING_DETAILS_CLAIM_NOW']; ?></span>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <!-- Modal Header -->
                     <div class="quote-pop">
-                        <h4><?php echo $BIZBOOK['LISTING_DETAILS_CLAIM_THIS_BUSINESS']; ?></h4>
+                        <h4><?php echo $Zitiziti['LISTING_DETAILS_CLAIM_THIS_BUSINESS']; ?></h4>
                         <div id="pop_claim_success" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['LISTING_DETAILS_CLAIM_SUCCESS_MESSAGE']; ?></p>
+                            <p><?php echo $Zitiziti['LISTING_DETAILS_CLAIM_SUCCESS_MESSAGE']; ?></p>
                         </div>
                         <div id="pop_claim_same" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
+                            <p><?php echo $Zitiziti['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
                         </div>
                         <div id="pop_claim_fail" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                            <p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                         </div>
                         <form method="post" name="popup_claim_form" id="popup_claim_form">
                             <fieldset <?php if ($list_user_id == $session_user_id || empty($session_user_id) || $session_user_id == Null) {
@@ -1819,36 +1819,36 @@ include "footer.php";
                                     <input type="text" name="enquiry_name"
                                            value=""
                                            required="required" class="form-control"
-                                           placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>">
+                                           placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>">
                                 </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control"
-                                           placeholder="<?php echo $BIZBOOK['LEAD-EMAIL-PLACEHOLDER']; ?>"
+                                           placeholder="<?php echo $Zitiziti['LEAD-EMAIL-PLACEHOLDER']; ?>"
                                            required="required"
                                            value=""
                                            name="enquiry_email"
                                            pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                           title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>">
+                                           title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>">
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control"
                                            value=""
                                            name="enquiry_mobile"
-                                           placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                           placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
                                            pattern="[7-9]{1}[0-9]{9}"
-                                           title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>"
+                                           title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>"
                                            required>
                                 </div>
                                 <div class="form-group">
                                     <div class="fil-img-uplo">
-                                        <span class="dumfil"><?php echo $BIZBOOK['LEAD-IDENTIFICATION-PROOF-TITLE']; ?></span>
+                                        <span class="dumfil"><?php echo $Zitiziti['LEAD-IDENTIFICATION-PROOF-TITLE']; ?></span>
                                         <input type="file" name="enquiry_image" accept="image/*,.jpg,.jpeg,.png"
                                                class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                 <textarea class="form-control" rows="3" name="enquiry_message"
-                                          placeholder="<?php echo $BIZBOOK['LEAD-WHY-CLAIM-BUSINESS-TITLE']; ?>"></textarea>
+                                          placeholder="<?php echo $Zitiziti['LEAD-WHY-CLAIM-BUSINESS-TITLE']; ?>"></textarea>
                                 </div>
                                 <input type="hidden" id="source">
                                 <button type="submit"
@@ -1856,13 +1856,13 @@ include "footer.php";
                                         ?> disabled="disabled" <?php } ?> id="popup_claim_submit"
                                         name="popup_claim_submit"
                                         class="btn btn-primary"><?php if (empty($session_user_id) || $session_user_id == Null) {
-                                        ?><?php echo $BIZBOOK['LOG_IN_TO_SUBMIT']; ?>
-                                    <?php } elseif ($list_user_id == $session_user_id) { ?><?php echo $BIZBOOK['LISTING_DETAILS_ITS_YOURS']; ?>
-                                    <?php } else { ?><?php echo $BIZBOOK['LISTING_DETAILS_CLAIM_NOW']; ?><?php } ?>
+                                        ?><?php echo $Zitiziti['LOG_IN_TO_SUBMIT']; ?>
+                                    <?php } elseif ($list_user_id == $session_user_id) { ?><?php echo $Zitiziti['LISTING_DETAILS_ITS_YOURS']; ?>
+                                    <?php } else { ?><?php echo $Zitiziti['LISTING_DETAILS_CLAIM_NOW']; ?><?php } ?>
                                 </button>
                             </fieldset>
                         </form>
-                        <div class="form-notes"><p><?php echo $BIZBOOK['LISTING_DETAILS_CLAIM_P_TAG']; ?></p></div>
+                        <div class="form-notes"><p><?php echo $Zitiziti['LISTING_DETAILS_CLAIM_P_TAG']; ?></p></div>
                     </div>
                 </div>
             </div>
@@ -1902,7 +1902,7 @@ include "footer.php";
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <!-- Modal body -->
             <div class="modal-body">
-                <img src="http://localhost/bizbook/images/listings/34803pexels-photo-1779487.jpeg" alt="">
+                <img src="http://localhost/Zitiziti/images/listings/34803pexels-photo-1779487.jpeg" alt="">
             </div>
 
 

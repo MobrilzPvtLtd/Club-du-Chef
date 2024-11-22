@@ -25,11 +25,11 @@ $company_row = getUserCompanyUser($user_id);
         <div class="row">
             <div class="login-main add-list">
                 <div class="log-bor">&nbsp;</div>
-                <span class="steps"><?php echo $BIZBOOK['COMP-PRO']; ?></span>
+                <span class="steps"><?php echo $Zitiziti['COMP-PRO']; ?></span>
                 <div class="log">
                     <div class="login add-list-off comp-pro-edit">
                         <?php include "page_level_message.php"; ?>
-                        <h4><?php echo $BIZBOOK['COMP-PRO-EDIT']; ?></h4>
+                        <h4><?php echo $Zitiziti['COMP-PRO-EDIT']; ?></h4>
                         <form action="company_profile_insert.php" class="company_profile_form" id="company_profile_form"
                               name="company_profile_form"
                               method="post" enctype="multipart/form-data">
@@ -50,12 +50,12 @@ $company_row = getUserCompanyUser($user_id);
                                     <!--FILED START-->
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <h6><?php echo $BIZBOOK['COMP-PRO-INFO']; ?></h6>
+                                            <h6><?php echo $Zitiziti['COMP-PRO-INFO']; ?></h6>
                                             <div class="form-group">
                                                 <input type="text" name="company_name" id="company_name"
                                                        value="<?php echo $company_row['company_name']; ?>"
                                                        required="required" class="form-control"
-                                                       placeholder="<?php echo $BIZBOOK['COMP-PRO-NAME']; ?>">
+                                                       placeholder="<?php echo $Zitiziti['COMP-PRO-NAME']; ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -67,7 +67,7 @@ $company_row = getUserCompanyUser($user_id);
                                                 <input type="text" name="company_address"
                                                        value="<?php echo $company_row['company_address']; ?>"
                                                        id="company_address" required="required" class="form-control"
-                                                       placeholder="<?php echo $BIZBOOK['COMP-PRO-ADDRESS']; ?>">
+                                                       placeholder="<?php echo $Zitiziti['COMP-PRO-ADDRESS']; ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -79,7 +79,7 @@ $company_row = getUserCompanyUser($user_id);
                                                 <input type="text" name="company_mobile" id="company_mobile"
                                                        value="<?php echo $company_row['company_mobile']; ?>"
                                                        required="required" class="form-control"
-                                                       placeholder="<?php echo $BIZBOOK['COMP-PRO-PHONE']; ?>">
+                                                       placeholder="<?php echo $Zitiziti['COMP-PRO-PHONE']; ?>">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -87,7 +87,7 @@ $company_row = getUserCompanyUser($user_id);
                                                 <input type="text" name="company_email_id" id="company_email_id"
                                                        value="<?php echo $company_row['company_email_id']; ?>"
                                                        required="required" class="form-control"
-                                                       placeholder="<?php echo $BIZBOOK['COMP-PRO-EMAIL']; ?>">
+                                                       placeholder="<?php echo $Zitiziti['COMP-PRO-EMAIL']; ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -99,35 +99,35 @@ $company_row = getUserCompanyUser($user_id);
                                                 <input type="text" name="company_website" id="company_website"
                                                        value="<?php echo $company_row['company_website']; ?>"
                                                        class="form-control"
-                                                       placeholder="<?php echo $BIZBOOK['COMP-PRO-WEBSITE']; ?>">
+                                                       placeholder="<?php echo $Zitiziti['COMP-PRO-WEBSITE']; ?>">
                                             </div>
                                         </div>
                                     </div>
                                     <!--FILED END-->
 
                                     <!--FILED START-->
-                                    <h6><?php echo $BIZBOOK['COMP-PRO-TAX-DETAILS']; ?>:</h6>
+                                    <h6><?php echo $Zitiziti['COMP-PRO-TAX-DETAILS']; ?>:</h6>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <input type="text" name="company_tax" id="company_tax"
                                                        value="<?php echo $company_row['company_tax']; ?>"
                                                        class="form-control"
-                                                       placeholder="<?php echo $BIZBOOK['COMP-PRO-TAX-GST']; ?>">
+                                                       placeholder="<?php echo $Zitiziti['COMP-PRO-TAX-GST']; ?>">
                                             </div>
                                         </div>
                                     </div>
                                     <!--FILED END-->
 
                                     <!--FILED START-->
-                                    <h6><?php echo $BIZBOOK['SOCIAL_MEDIA']; ?>:</h6>
+                                    <h6><?php echo $Zitiziti['SOCIAL_MEDIA']; ?>:</h6>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <input type="text" name="company_facebook" id="company_facebook"
                                                        value="<?php echo $company_row['company_facebook']; ?>"
                                                        class="form-control"
-                                                       placeholder="<?php echo $BIZBOOK['COMP-PRO-FB']; ?>">
+                                                       placeholder="<?php echo $Zitiziti['COMP-PRO-FB']; ?>">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -135,7 +135,7 @@ $company_row = getUserCompanyUser($user_id);
                                                 <input type="text" name="company_twitter" id="company_twitter"
                                                        value="<?php echo $company_row['company_twitter']; ?>"
                                                        class="form-control"
-                                                       placeholder="<?php echo $BIZBOOK['COMP-PRO-TWITTER']; ?>">
+                                                       placeholder="<?php echo $Zitiziti['COMP-PRO-TWITTER']; ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -147,7 +147,7 @@ $company_row = getUserCompanyUser($user_id);
                                                 <input type="text" name="company_linkedin" id="company_linkedin"
                                                        value="<?php echo $company_row['company_linkedin']; ?>"
                                                        class="form-control"
-                                                       placeholder="<?php echo $BIZBOOK['COMP-PRO-LINKEDIN']; ?>">
+                                                       placeholder="<?php echo $Zitiziti['COMP-PRO-LINKEDIN']; ?>">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -155,7 +155,7 @@ $company_row = getUserCompanyUser($user_id);
                                                 <input type="text" name="company_instagram" id="company_instagram"
                                                        value="<?php echo $company_row['company_instagram']; ?>"
                                                        class="form-control"
-                                                       placeholder="<?php echo $BIZBOOK['COMP-PRO-INSTAGRAM']; ?>">
+                                                       placeholder="<?php echo $Zitiziti['COMP-PRO-INSTAGRAM']; ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -167,7 +167,7 @@ $company_row = getUserCompanyUser($user_id);
                                                 <input type="text" name="company_youtube" id="company_youtube"
                                                        value="<?php echo $company_row['company_youtube']; ?>"
                                                        class="form-control"
-                                                       placeholder="<?php echo $BIZBOOK['COMP-PRO-YOUTUBE']; ?>">
+                                                       placeholder="<?php echo $Zitiziti['COMP-PRO-YOUTUBE']; ?>">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -175,20 +175,20 @@ $company_row = getUserCompanyUser($user_id);
                                                 <input type="text" name="company_whatsapp" id="company_whatsapp"
                                                        value="<?php echo $company_row['company_whatsapp']; ?>"
                                                        class="form-control"
-                                                       placeholder="<?php echo $BIZBOOK['COMP-PRO-WHAPP']; ?>">
+                                                       placeholder="<?php echo $Zitiziti['COMP-PRO-WHAPP']; ?>">
                                             </div>
                                         </div>
                                     </div>
                                     <!--FILED END-->
 
                                     <!--FILED START-->
-                                    <h6><?php echo $BIZBOOK['COMPANY-PROFILE-HEADING-LABEL']; ?>:</h6>
+                                    <h6><?php echo $Zitiziti['COMPANY-PROFILE-HEADING-LABEL']; ?>:</h6>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <textarea class="form-control" required="required"
                                                           name="company_description" id="company_description"
-                                                          placeholder="<?php echo $BIZBOOK['PRODUCT_DETAILS']; ?>"><?php echo $company_row['company_description']; ?></textarea>
+                                                          placeholder="<?php echo $Zitiziti['PRODUCT_DETAILS']; ?>"><?php echo $company_row['company_description']; ?></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -197,10 +197,10 @@ $company_row = getUserCompanyUser($user_id);
                                     <!--FILED START-->
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <label><?php echo $BIZBOOK['COMPANY-PROFILE-LOGO-LABEL']; ?>:</label>
+                                            <label><?php echo $Zitiziti['COMPANY-PROFILE-LOGO-LABEL']; ?>:</label>
                                             <div class="form-group">
                                                 <div class="fil-img-uplo">
-                                                    <span class="dumfil"><?php echo $BIZBOOK['UPLOAD_A_FILE'];  ?></span>
+                                                    <span class="dumfil"><?php echo $Zitiziti['UPLOAD_A_FILE'];  ?></span>
                                                     <input type="file" name="comp-head-logo" accept="image/*,.jpg,.jpeg,.png" class="form-control">
                                                 </div>
                                             </div>
@@ -209,19 +209,19 @@ $company_row = getUserCompanyUser($user_id);
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <label><?php echo $BIZBOOK['COMPANY-PROFILE-BANNER-LABEL']; ?>:</label>
+                                            <label><?php echo $Zitiziti['COMPANY-PROFILE-BANNER-LABEL']; ?>:</label>
                                             <div class="form-group">
                                                 <div class="fil-img-uplo">
-                                                    <span class="dumfil"><?php echo $BIZBOOK['UPLOAD_A_FILE'];  ?></span>
+                                                    <span class="dumfil"><?php echo $Zitiziti['UPLOAD_A_FILE'];  ?></span>
                                                     <input type="file" name="comp-top-logo" accept="image/*,.jpg,.jpeg,.png" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <label><?php echo $BIZBOOK['COMPANY-PROFILE-BACKGROUND-LABEL']; ?>:</label>
+                                            <label><?php echo $Zitiziti['COMPANY-PROFILE-BACKGROUND-LABEL']; ?>:</label>
                                             <div class="form-group">
                                                 <div class="fil-img-uplo">
-                                                    <span class="dumfil"><?php echo $BIZBOOK['UPLOAD_A_FILE'];  ?></span>
+                                                    <span class="dumfil"><?php echo $Zitiziti['UPLOAD_A_FILE'];  ?></span>
                                                     <input type="file" name="comp-bann-logo" accept="image/*,.jpg,.jpeg,.png" class="form-control">
                                                 </div>
                                             </div>
@@ -231,7 +231,7 @@ $company_row = getUserCompanyUser($user_id);
                                     <!--FILED END-->
 
                                     <!--FILED START-->
-                                    <h6><?php echo $BIZBOOK['COMPANY-PROFILE-CHOOSE-PRODUCTS']; ?>:</h6>
+                                    <h6><?php echo $Zitiziti['COMPANY-PROFILE-CHOOSE-PRODUCTS']; ?>:</h6>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
@@ -239,7 +239,7 @@ $company_row = getUserCompanyUser($user_id);
                                                         name="company_products[]" id="company_products"
                                                         class="chosen-select form-control">
                                                     <option disabled
-                                                            value=""><?php echo $BIZBOOK['COMP-PRO-CHOO-PROD']; ?></option>
+                                                            value=""><?php echo $Zitiziti['COMP-PRO-CHOO-PROD']; ?></option>
                                                     <?php
                                                     foreach (getAllProductUser($user_id) as $product_row) {
                                                         ?>
@@ -260,7 +260,7 @@ $company_row = getUserCompanyUser($user_id);
                                     <!--FILED END-->
 
                                     <!--FILED START-->
-                                    <h6><?php echo $BIZBOOK['COMPANY-PROFILE-CHOOSE-EVENTS']; ?>:</h6>
+                                    <h6><?php echo $Zitiziti['COMPANY-PROFILE-CHOOSE-EVENTS']; ?>:</h6>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
@@ -268,7 +268,7 @@ $company_row = getUserCompanyUser($user_id);
                                                         name="company_events[]" id="company_events"
                                                         class="chosen-select form-control">
                                                     <option disabled
-                                                            value=""><?php echo $BIZBOOK['COMP-PRO-CHOO-EVENTS']; ?></option>
+                                                            value=""><?php echo $Zitiziti['COMP-PRO-CHOO-EVENTS']; ?></option>
                                                     <?php
                                                     foreach (getAllUserEvents($user_id) as $event_row) {
                                                         ?>
@@ -289,7 +289,7 @@ $company_row = getUserCompanyUser($user_id);
                                     <!--FILED END-->
 
                                     <!--FILED START-->
-                                    <h6><?php echo $BIZBOOK['COMPANY-PROFILE-CHOOSE-BLOGS']; ?>:</h6>
+                                    <h6><?php echo $Zitiziti['COMPANY-PROFILE-CHOOSE-BLOGS']; ?>:</h6>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
@@ -297,7 +297,7 @@ $company_row = getUserCompanyUser($user_id);
                                                         name="company_blogs[]" id="company_blogs"
                                                         class="chosen-select form-control">
                                                     <option disabled
-                                                            value=""><?php echo $BIZBOOK['COMP-PRO-CHOO-BLOG']; ?></option>
+                                                            value=""><?php echo $Zitiziti['COMP-PRO-CHOO-BLOG']; ?></option>
                                                     <?php
                                                     foreach (getAllUserBlogs($user_id) as $blog_row) {
                                                         ?>
@@ -318,13 +318,13 @@ $company_row = getUserCompanyUser($user_id);
                                     <!--FILED END-->
 
                                     <!--FILED START-->
-                                    <h6><?php echo $BIZBOOK['COMPANY-PROFILE-SEO-LABEL']; ?></h6>
+                                    <h6><?php echo $Zitiziti['COMPANY-PROFILE-SEO-LABEL']; ?></h6>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <textarea class="form-control" name="company_seo_description"
                                                           id="company_seo_description"
-                                                          placeholder="<?php echo $BIZBOOK['COMP-PRO-SEO-DESC']; ?>"><?php echo $company_row['company_seo_description']; ?></textarea>
+                                                          placeholder="<?php echo $Zitiziti['COMP-PRO-SEO-DESC']; ?>"><?php echo $company_row['company_seo_description']; ?></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -335,7 +335,7 @@ $company_row = getUserCompanyUser($user_id);
                                             <div class="form-group">
                                                 <textarea class="form-control" name="company_seo_keywords"
                                                           id="company_seo_keywords"
-                                                          placeholder="<?php echo $BIZBOOK['COMP-PRO-SEO-KEYWORDS']; ?>"><?php echo $company_row['company_seo_keywords']; ?></textarea>
+                                                          placeholder="<?php echo $Zitiziti['COMP-PRO-SEO-KEYWORDS']; ?>"><?php echo $company_row['company_seo_keywords']; ?></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -346,10 +346,10 @@ $company_row = getUserCompanyUser($user_id);
                             <div class="row">
                                 <div class="col-md-12">
                                     <button type="submit" name="company_profile_submit"
-                                            class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
+                                            class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?></button>
                                 </div>
                                 <div class="col-md-12">
-                                    <a href="dashboard" class="skip"><?php echo $BIZBOOK['GO_TO_USER_DASHBOARD']; ?>
+                                    <a href="dashboard" class="skip"><?php echo $Zitiziti['GO_TO_USER_DASHBOARD']; ?>
                                         >></a>
                                 </div>
                             </div>

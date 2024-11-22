@@ -54,7 +54,7 @@ if (mysqli_num_rows($activation) > 0) {
 //****************************    Client email starts    *************************
 
         $to1 = $email_id;
-        $USER_INSERT_CLIENT_SUBJECT = $BIZBOOK['USER_VERIFICATION_RESENT_CLIENT_SUBJECT'];
+        $USER_INSERT_CLIENT_SUBJECT = $Zitiziti['USER_VERIFICATION_RESENT_CLIENT_SUBJECT'];
         $subject1 = "$admin_site_name $USER_INSERT_CLIENT_SUBJECT";
 
         $client_sql_fetch = mysqli_query($conn, "SELECT * FROM " . TBL . "mail WHERE mail_id = 22 "); //User mail template fetch
@@ -76,14 +76,14 @@ if (mysqli_num_rows($activation) > 0) {
 //****************************    client email ends    *************************
         if ($mail_success){
 
-            $_SESSION['status_msg'] = $BIZBOOK['USER_RESEND_VERIFICATION_SUCCESS_MESSAGE'];  // Success Message in session
+            $_SESSION['status_msg'] = $Zitiziti['USER_RESEND_VERIFICATION_SUCCESS_MESSAGE'];  // Success Message in session
 
             header('Location: activate?q=' . $verification_link);
             exit();
             
         } else {
 
-            $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+            $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
             header('Location: activate?q=' . $verification_link);
             exit();
@@ -91,7 +91,7 @@ if (mysqli_num_rows($activation) > 0) {
 
     } else {
 
-        $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+        $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
         $_SESSION['login_status_msg'] = 1;
 
         header('Location: login');
@@ -100,7 +100,7 @@ if (mysqli_num_rows($activation) > 0) {
 
 } else {
 
-    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
     $_SESSION['login_status_msg'] = 1;
 
     header('Location: login');

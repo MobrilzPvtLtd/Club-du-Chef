@@ -9,9 +9,9 @@ if ($current_home_page == '1') {
             <div class="container">
                 <div class="hom-mpop-main">
                     <div class="home-tit">
-                        <h2><span><?php //echo $BIZBOOK['HOM-BEST-TIT']; ?></span>
+                        <h2><span><?php //echo $Zitiziti['HOM-BEST-TIT']; ?></span>
                         </h2>
-                        <p><?php //echo $BIZBOOK['HOM-BEST-SUB-TIT']; ?></p>
+                        <p><?php //echo $Zitiziti['HOM-BEST-SUB-TIT']; ?></p>
                     </div>
 
                     <div class="hom2-cus-sli">
@@ -92,27 +92,27 @@ if ($current_home_page == '1') {
                 <div class="hlead-coll">
                     <div class="col-md-6">
                         <div class="hom-cre-acc-left">
-                            <h3><?php // echo $BIZBOOK['HOM-WHAT-SER']; ?>
-                                <span><?php //echo $BIZBOOK['HOM-WHAT-BIZ']; ?></span>
+                            <h3><?php // echo $Zitiziti['HOM-WHAT-SER']; ?>
+                                <span><?php //echo $Zitiziti['HOM-WHAT-BIZ']; ?></span>
                             </h3>
-                            <p><?php //echo $BIZBOOK['HOM-WHAT-SUB-HEAD']; ?></p>
+                            <p><?php //echo $Zitiziti['HOM-WHAT-SUB-HEAD']; ?></p>
                             <ul>
                                 <li><img src="images/icon/blog.png" alt="">
                                     <div>
-                                        <h5><?php // echo $BIZBOOK['HOM-WHAT-SER-PO1']; ?></h5>
-                                        <p><?php // echo $BIZBOOK['HOM-WHAT-SER-PO1-SUB']; ?></p>
+                                        <h5><?php // echo $Zitiziti['HOM-WHAT-SER-PO1']; ?></h5>
+                                        <p><?php // echo $Zitiziti['HOM-WHAT-SER-PO1-SUB']; ?></p>
                                     </div>
                                 </li>
                                 <li><img src="images/icon/shield.png" alt="">
                                     <div>
-                                        <h5><?php //echo $BIZBOOK['HOM-WHAT-SER-PO2']; ?></h5>
-                                        <p><?php //echo $BIZBOOK['HOM-WHAT-SER-PO2-SUB']; ?></p>
+                                        <h5><?php //echo $Zitiziti['HOM-WHAT-SER-PO2']; ?></h5>
+                                        <p><?php //echo $Zitiziti['HOM-WHAT-SER-PO2-SUB']; ?></p>
                                     </div>
                                 </li>
                                 <li><img src="images/icon/general.png" alt="">
                                     <div>
-                                        <h5><?php // echo $BIZBOOK['HOM-WHAT-SER-PO3']; ?></h5>
-                                        <p><?php // echo $BIZBOOK['HOM-WHAT-SER-PO3-SUB']; ?></p>
+                                        <h5><?php // echo $Zitiziti['HOM-WHAT-SER-PO3']; ?></h5>
+                                        <p><?php // echo $Zitiziti['HOM-WHAT-SER-PO3-SUB']; ?></p>
                                     </div>
                                 </li>
                             </ul>
@@ -121,17 +121,17 @@ if ($current_home_page == '1') {
                     <div class="col-md-6">
                         <div class="hom-col-req">
                             <div class="log-bor">&nbsp;</div>
-                            <span class="udb-inst"><?php //echo $BIZBOOK['LEAD-FILL-THE-FORM']; ?></span>
-                            <h4><?php //echo $BIZBOOK['HOM-WHT-LOOK-TIT']; ?></h4>
+                            <span class="udb-inst"><?php //echo $Zitiziti['LEAD-FILL-THE-FORM']; ?></span>
+                            <h4><?php //echo $Zitiziti['HOM-WHT-LOOK-TIT']; ?></h4>
                             <div id="home_enq_success" class="log"
                                  style="display: none;">
-                                <p><?php //echo $BIZBOOK['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
+                                <p><?php //echo $Zitiziti['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
                             </div>
                             <div id="home_enq_fail" class="log" style="display: none;">
-                                <p><?php // echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                                <p><?php // echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                             </div>
                             <div id="home_enq_same" class="log" style="display: none;">
-                                <p><?php //echo $BIZBOOK['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
+                                <p><?php //echo $Zitiziti['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
                             </div>
                             <form name="home_enquiry_form" id="home_enquiry_form" method="post"
                                   enctype="multipart/form-data">
@@ -153,26 +153,26 @@ if ($current_home_page == '1') {
                                 <div class="form-group">
                                     <input type="text" name="enquiry_name" value="" required="required"
                                            class="form-control"
-                                           placeholder="<?php //echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>">
+                                           placeholder="<?php //echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>">
                                 </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control"
-                                           placeholder="<?php //echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>"
+                                           placeholder="<?php //echo $Zitiziti['ENTER_EMAIL_STAR']; ?>"
                                            required="required"
                                            value="" name="enquiry_email"
                                            pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                           title="<?php //echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>">
+                                           title="<?php //echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>">
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control" value="" name="enquiry_mobile"
-                                           placeholder="<?php // echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                           placeholder="<?php // echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
                                            pattern="[7-9]{1}[0-9]{9}"
-                                           title="<?php //echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>"
+                                           title="<?php //echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>"
                                            required="">
                                 </div>
                                 <div class="form-group">
                                     <select name="enquiry_category" id="enquiry_category" class="form-control">
-                                        <option value=""><?php // echo $BIZBOOK['SELECT_CATEGORY']; ?></option>
+                                        <option value=""><?php // echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                         <?php
     //foreach (getAllCategories() as $categories_row) {
     ?>
@@ -185,12 +185,12 @@ if ($current_home_page == '1') {
                                 </div>
                                 <div class="form-group">
                         <textarea class="form-control" rows="3" name="enquiry_message"
-                                  placeholder="<?php //echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                  placeholder="<?php //echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                                 </div>
                                 <input type="hidden" id="source">
                                 <button type="submit" id="home_enquiry_submit" name="home_enquiry_submit"
                                         class="btn btn-primary">
-                                    <?php // echo $BIZBOOK['SUBMIT_REQUIREMENTS']; ?>
+                                    <?php // echo $Zitiziti['SUBMIT_REQUIREMENTS']; ?>
                                 </button>
                             </form>
                         </div>
@@ -208,9 +208,9 @@ if ($current_home_page == '1') {
                 <div class="row">
                     <div class="home-tit">
                         <h2>
-                            <span><?php //echo $BIZBOOK['HOM-TOPSER-TIT']; ?></span> <?php //echo $BIZBOOK['HOM-TOPSER-TIT1']; ?>
+                            <span><?php //echo $Zitiziti['HOM-TOPSER-TIT']; ?></span> <?php //echo $Zitiziti['HOM-TOPSER-TIT1']; ?>
                         </h2>
-                        <p><?php //echo $BIZBOOK['HOM-TOPSER-SUB-TIT']; ?></p>
+                        <p><?php //echo $Zitiziti['HOM-TOPSER-SUB-TIT']; ?></p>
                     </div>
                     <div class="ho-popu-bod">
                         <?php
@@ -328,7 +328,7 @@ if ($current_home_page == '1') {
             <div class="container">
                 <div class="row">
                     <div class="plac-det-tit-inn">
-                        <h2><?php echo $BIZBOOK['EXPL-MORE-FEA']; ?></h2>
+                        <h2><?php echo $Zitiziti['EXPL-MORE-FEA']; ?></h2>
                     </div>
                     <div class="plac-hom-all-pla hom-more-modu">
                         <ul class="travel-sliser-auto">
@@ -352,8 +352,8 @@ if ($current_home_page == '1') {
                                         <div class="plac-hom-box-im">
                                             <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/user/<?php echo $footer_row['job_default_image']; ?>" class="b-lazy" alt="">
                                             <div class="inn-text">
-                                                <h4><?php echo $BIZBOOK['HOM-MODU-TIT-JOB']; ?></h4>
-                                                <a href="jobs/"><?php echo $BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-3']; ?> <i
+                                                <h4><?php echo $Zitiziti['HOM-MODU-TIT-JOB']; ?></h4>
+                                                <a href="jobs/"><?php echo $Zitiziti['PROFILE-QUICK-ACCESS-SPAN-3']; ?> <i
                                                         class="material-icons">arrow_forward</i></a>
                                             </div>
                                         </div>
@@ -366,8 +366,8 @@ if ($current_home_page == '1') {
                                         <div class="plac-hom-box-im">
                                             <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/user/<?php echo $footer_row['product_default_image']; ?>" class="b-lazy" alt="">
                                             <div class="inn-text">
-                                                <h4><?php echo $BIZBOOK['HOM-MODU-TIT-PROD']; ?></h4>
-                                                <a href="all-products"><?php echo $BIZBOOK['HOM-MODU-START-SELLING']; ?> <i class="material-icons">arrow_forward</i></a>
+                                                <h4><?php echo $Zitiziti['HOM-MODU-TIT-PROD']; ?></h4>
+                                                <a href="all-products"><?php echo $Zitiziti['HOM-MODU-START-SELLING']; ?> <i class="material-icons">arrow_forward</i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -379,8 +379,8 @@ if ($current_home_page == '1') {
                                         <div class="plac-hom-box-im">
                                             <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/user/<?php echo $footer_row['coupon_default_image']; ?>" class="b-lazy" alt="">
                                             <div class="inn-text">
-                                                <h4><?php echo $BIZBOOK['HOM-MODU-TIT-DEAL']; ?></h4>
-                                                <a href="coupons"><?php echo $BIZBOOK['COUPON']; ?> <i
+                                                <h4><?php echo $Zitiziti['HOM-MODU-TIT-DEAL']; ?></h4>
+                                                <a href="coupons"><?php echo $Zitiziti['COUPON']; ?> <i
                                                         class="material-icons">arrow_forward</i></a>
                                             </div>
                                         </div>
@@ -393,8 +393,8 @@ if ($current_home_page == '1') {
                                         <div class="plac-hom-box-im">
                                             <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/user/<?php echo $footer_row['travel_default_image']; ?>" class="b-lazy" alt="">
                                             <div class="inn-text">
-                                                <h4><?php echo $BIZBOOK['HOM-MODU-TIT-TRAVEL']; ?></h4>
-                                                <a href="places/"><?php echo $BIZBOOK['PLACE-MENU']; ?> <i
+                                                <h4><?php echo $Zitiziti['HOM-MODU-TIT-TRAVEL']; ?></h4>
+                                                <a href="places/"><?php echo $Zitiziti['PLACE-MENU']; ?> <i
                                                         class="material-icons">arrow_forward</i></a>
                                             </div>
                                         </div>
@@ -407,8 +407,8 @@ if ($current_home_page == '1') {
                                         <div class="plac-hom-box-im">
                                         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/user/<?php echo $footer_row['expert_default_image']; ?>" class="b-lazy" alt="">
                                             <div class="inn-text">
-                                                <h4><?php echo $BIZBOOK['HOM-MODU-TIT-EXP']; ?></h4>
-                                                <a href="service-experts/"><?php echo $BIZBOOK['HOM-MODU-BOOK-EXPERT-NOW']; ?> <i class="material-icons">arrow_forward</i></a>
+                                                <h4><?php echo $Zitiziti['HOM-MODU-TIT-EXP']; ?></h4>
+                                                <a href="service-experts/"><?php echo $Zitiziti['HOM-MODU-BOOK-EXPERT-NOW']; ?> <i class="material-icons">arrow_forward</i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -420,8 +420,8 @@ if ($current_home_page == '1') {
                                         <div class="plac-hom-box-im">
                                             <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/user/<?php echo $footer_row['news_default_image']; ?>" class="b-lazy" alt="">
                                             <div class="inn-text">
-                                                <h4><?php echo $BIZBOOK['HOM-MODU-TIT-NEWS']; ?></h4>
-                                                <a href="news/"><?php echo $BIZBOOK['NEWS-HOMEPAGE-BANNER-H1-TEXT-2']; ?> <i
+                                                <h4><?php echo $Zitiziti['HOM-MODU-TIT-NEWS']; ?></h4>
+                                                <a href="news/"><?php echo $Zitiziti['NEWS-HOMEPAGE-BANNER-H1-TEXT-2']; ?> <i
                                                         class="material-icons">arrow_forward</i></a>
                                             </div>
                                         </div>
@@ -454,7 +454,7 @@ if ($current_home_page == '1') {
                             <img loading="lazy" src="/images/events/<?php echo $top_event_row['event_image']; ?>" alt="">
                         </div>
                         <div class="txt">
-                            <span class="news-cate"><?php echo $BIZBOOK['EVENT_TOP_EVENTS']; ?></span><br>
+                            <span class="news-cate"><?php echo $Zitiziti['EVENT_TOP_EVENTS']; ?></span><br>
                             <span class="eve-date-sli"><?php echo dateDayFormatconverter($top_event_row['event_start_date']); ?>
                                 <b><?php echo dateMonthFormatconverter($top_event_row['event_start_date']); ?></b></span>
                             <h2><?php echo $top_event_row['event_name']; ?></h2>
@@ -478,7 +478,7 @@ if ($current_home_page == '1') {
         <div class="container">
             <div class="row">
                 <div class="plac-det-tit-inn">
-                    <h2><?php echo $BIZBOOK['CHOOSE_YOUR_PLAN']; ?></h2>
+                    <h2><?php echo $Zitiziti['CHOOSE_YOUR_PLAN']; ?></h2>
                 </div>
                 <div>
                     <ul>
@@ -489,34 +489,34 @@ if ($current_home_page == '1') {
                             <li>
                                 <div class="pri-box">
                                     <div class="c2">
-                                        <h4><?php echo $plan_type_row['plan_type_name']; ?><?php echo $BIZBOOK['PLAN']; ?></h4>
+                                        <h4><?php echo $plan_type_row['plan_type_name']; ?><?php echo $Zitiziti['PLAN']; ?></h4>
 
                                         <?php if ($plan_type_row['plan_type_id'] == 1) { ?>
-                                            <p><?php echo $BIZBOOK['PRICING_GETTING_STARTED']; ?></p>
+                                            <p><?php echo $Zitiziti['PRICING_GETTING_STARTED']; ?></p>
                                         <?php } elseif ($plan_type_row['plan_type_id'] == 2) { ?>
-                                            <p><?php echo $BIZBOOK['PRICING_PERFECT_SMALL_TEAMS']; ?></p>
+                                            <p><?php echo $Zitiziti['PRICING_PERFECT_SMALL_TEAMS']; ?></p>
                                         <?php } elseif ($plan_type_row['plan_type_id'] == 3) { ?>
-                                            <p><?php echo $BIZBOOK['PRICING_BEST_VALUE_LARGE']; ?></p>
+                                            <p><?php echo $Zitiziti['PRICING_BEST_VALUE_LARGE']; ?></p>
                                         <?php } else { ?>
-                                            <p><?php echo $BIZBOOK['PRICING_MADE_ENTERPRISES']; ?></p>
+                                            <p><?php echo $Zitiziti['PRICING_MADE_ENTERPRISES']; ?></p>
                                             <?php
                                         } ?>
 
                                     </div>
                                     <div class="c3">
                                         <h2><span></span><?php if ($plan_type_row['plan_type_price'] == 0) {
-                                                echo $BIZBOOK['FREE'];
+                                                echo $Zitiziti['FREE'];
                                             } else {
                                             if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } echo '' . $plan_type_row['plan_type_price']; if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; }
                                             } ?></h2>
                                         <?php if ($plan_type_row['plan_type_id'] == 1) { ?>
-                                            <p><?php echo $BIZBOOK['PRICING_SINGLE_USER']; ?></p>
+                                            <p><?php echo $Zitiziti['PRICING_SINGLE_USER']; ?></p>
                                         <?php } elseif ($plan_type_row['plan_type_id'] == 2) { ?>
-                                            <p><?php echo $BIZBOOK['PRICING_STARTUP_BUSINESS']; ?></p>
+                                            <p><?php echo $Zitiziti['PRICING_STARTUP_BUSINESS']; ?></p>
                                         <?php } elseif ($plan_type_row['plan_type_id'] == 3) { ?>
-                                            <p><?php echo $BIZBOOK['PRICING_MEDIUM_BUSINESS']; ?></p>
+                                            <p><?php echo $Zitiziti['PRICING_MEDIUM_BUSINESS']; ?></p>
                                         <?php } else { ?>
-                                            <p><?php echo $BIZBOOK['PRICING_MADE_ENTERPRISES']; ?></p>
+                                            <p><?php echo $Zitiziti['PRICING_MADE_ENTERPRISES']; ?></p>
                                             <?php
                                         } ?>
 
@@ -527,9 +527,9 @@ if ($current_home_page == '1') {
                                             echo "db-plan-change";
                                         } else {
                                             echo "login";
-                                        } ?>" class="cta1"><?php echo $BIZBOOK['PRICING_GET_START']; ?></a>
+                                        } ?>" class="cta1"><?php echo $Zitiziti['PRICING_GET_START']; ?></a>
                                         <a href="pricing-details" class="cta2"
-                                           target="_blank"><?php echo $BIZBOOK['HOM-VI-KNOW-MORE']; ?></a>
+                                           target="_blank"><?php echo $Zitiziti['HOM-VI-KNOW-MORE']; ?></a>
                                     </div>
                                 </div>
                             </li>
@@ -550,9 +550,9 @@ if ($current_home_page == '1') {
             <div class="container">
                 <div class="row">
                     <!-- <div class="home-tit">
-                        <h2><span><?php echo $BIZBOOK['HOM-EVE-TIT']; ?></span> <?php echo $BIZBOOK['HOM-EVE-TIT1']; ?>
+                        <h2><span><?php echo $Zitiziti['HOM-EVE-TIT']; ?></span> <?php echo $Zitiziti['HOM-EVE-TIT1']; ?>
                         </h2>
-                        <p><?php echo $BIZBOOK['HOM-EVE-SUB-TIT']; ?></p>
+                        <p><?php echo $Zitiziti['HOM-EVE-SUB-TIT']; ?></p>
                     </div>
                     <div class="hom-event">
                         <div class="hom-eve-com hom-eve-lhs">
@@ -595,7 +595,7 @@ if ($current_home_page == '1') {
                         } else {
                             echo $user_details_row['profile_image'];
                         } ?>" alt="">
-                                                <b><?php echo $BIZBOOK['EVENT_HOSTED_BY']; ?></b><br>
+                                                <b><?php echo $Zitiziti['EVENT_HOSTED_BY']; ?></b><br>
                                                 <h4><?php echo $user_details_row['first_name']; ?></h4>
                                                 <a target="_blank"
                                                    href="<?php echo $PROFILE_URL . urlModifier($user_details_row['user_slug']); ?>"
@@ -645,8 +645,8 @@ if ($current_home_page == '1') {
 
                     <div class="how-wrks">
                         <div class="home-tit">
-                            <h2><span><?php echo $BIZBOOK['HOM-HOW-TIT']; ?></span></h2>
-                            <p><?php echo $BIZBOOK['HOM-HOW-SUB-TIT']; ?></p>
+                            <h2><span><?php echo $Zitiziti['HOM-HOW-TIT']; ?></span></h2>
+                            <p><?php echo $Zitiziti['HOM-HOW-SUB-TIT']; ?></p>
                         </div>
                         <div class="how-wrks-inn">
                             <ul>
@@ -654,32 +654,32 @@ if ($current_home_page == '1') {
                                     <div>
                                         <span>1</span>
                                         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="images/icon/how1.png" alt="">
-                                        <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-1']; ?></h4>
-                                        <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-1']; ?></p>
+                                        <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-1']; ?></h4>
+                                        <p><?php echo $Zitiziti['HOM-HOW-P-SUB-1']; ?></p>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
                                         <span>2</span>
                                         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="images/icon/how2.png" alt="">
-                                        <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-2']; ?></h4>
-                                        <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-2']; ?></p>
+                                        <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-2']; ?></h4>
+                                        <p><?php echo $Zitiziti['HOM-HOW-P-SUB-2']; ?></p>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
                                         <span>3</span>
                                         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="images/icon/how3.png" alt="">
-                                        <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-3']; ?></h4>
-                                        <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-3']; ?></p>
+                                        <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-3']; ?></h4>
+                                        <p><?php echo $Zitiziti['HOM-HOW-P-SUB-3']; ?></p>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
                                         <span>4</span>
                                         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="images/icon/how4.png" alt="">
-                                        <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-4']; ?></h4>
-                                        <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-4']; ?></p>
+                                        <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-4']; ?></h4>
+                                        <p><?php echo $Zitiziti['HOM-HOW-P-SUB-4']; ?></p>
                                     </div>
                                 </li>
                             </ul>
@@ -691,15 +691,15 @@ if ($current_home_page == '1') {
                                 <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="images/mobile.png" alt="">
                             </div>
                             <div class="rhs">
-                                <h2><?php echo $BIZBOOK['HOM-APP-TIT']; ?>
-                                    <span><?php echo $BIZBOOK['HOM-APP-TIT-SUB']; ?></span></h2>
+                                <h2><?php echo $Zitiziti['HOM-APP-TIT']; ?>
+                                    <span><?php echo $Zitiziti['HOM-APP-TIT-SUB']; ?></span></h2>
                                 <ul>
-                                    <li><?php echo $BIZBOOK['HOM-APP-PO-1']; ?></li>
-                                    <li><?php echo $BIZBOOK['HOM-APP-PO-2']; ?></li>
-                                    <li><?php echo $BIZBOOK['HOM-APP-PO-3']; ?></li>
-                                    <li><?php echo $BIZBOOK['HOM-APP-PO-4']; ?></li>
+                                    <li><?php echo $Zitiziti['HOM-APP-PO-1']; ?></li>
+                                    <li><?php echo $Zitiziti['HOM-APP-PO-2']; ?></li>
+                                    <li><?php echo $Zitiziti['HOM-APP-PO-3']; ?></li>
+                                    <li><?php echo $Zitiziti['HOM-APP-PO-4']; ?></li>
                                 </ul>
-                                <span><?php echo $BIZBOOK['HOM-APP-SEND']; ?></span>
+                                <span><?php echo $Zitiziti['HOM-APP-SEND']; ?></span>
                                 <a href="#"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="images/gstore.png" alt=""> </a>
                                 <a href="#"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="images/astore.png" alt=""> </a>
                             </div>
@@ -720,7 +720,7 @@ if ($current_home_page == '1') {
             <div class="container">
                 <div class="row">
                     <div class="plac-det-tit-inn">
-                        <h2><span><?php echo $BIZBOOK['HOM-POP-TIT']; ?></span> <?php echo $BIZBOOK['HOM-POP-TIT1']; ?>
+                        <h2><span><?php echo $Zitiziti['HOM-POP-TIT']; ?></span> <?php echo $Zitiziti['HOM-POP-TIT1']; ?>
                         </h2>
                     </div>
                     <div class="plac-hom-all-pla">
@@ -760,7 +760,7 @@ if ($current_home_page == '1') {
             <div class="container">
                 <div class="row">
                     <div class="plac-det-tit-inn">
-                        <h2><span><?php echo $BIZBOOK['HOM-BAN-TIT-CAT']; ?></span></h2>
+                        <h2><span><?php echo $Zitiziti['HOM-BAN-TIT-CAT']; ?></span></h2>
                     </div>
                     <div class="plac-hom-all-pla">
                         <ul class="travel-sliser">
@@ -782,7 +782,7 @@ if ($current_home_page == '1') {
                                             <h4><?php echo $category_name; ?></h4>
                                         </div>
                                         <div class="plac-hom-box-txt">
-                                            <span><?php echo $BIZBOOK['SERVICE-EXPERTS-EXPERTS']; ?><?php echo $total_experts_category; ?></span>
+                                            <span><?php echo $Zitiziti['SERVICE-EXPERTS-EXPERTS']; ?><?php echo $total_experts_category; ?></span>
                                             <span>More details</span>
                                         </div>
                                         <a href="<?php echo $ALL_EXPERTS_URL . urlModifier($expert_categories_row['category_slug']); ?>"
@@ -807,7 +807,7 @@ if ($current_home_page == '1') {
             <div class="container">
                 <div class="row">
                     <div class="plac-det-tit-inn">
-                        <h2><?php echo $BIZBOOK['EXPL-MORE-FEA']; ?></h2>
+                        <h2><?php echo $Zitiziti['EXPL-MORE-FEA']; ?></h2>
                     </div>
                     <div class="plac-hom-all-pla hom-more-modu">
                         <ul>
@@ -862,9 +862,9 @@ if ($current_home_page == '1') {
                 <div class="row">
                     <div class="plac-hom-tit plac-hom-tit-ic-ser">
                         <h2>
-                            <span><?php echo $BIZBOOK['HOM-BEST-TIT']; ?></span> <?php echo $BIZBOOK['HOM-BEST-TIT1']; ?>
+                            <span><?php echo $Zitiziti['HOM-BEST-TIT']; ?></span> <?php echo $Zitiziti['HOM-BEST-TIT1']; ?>
                         </h2>
-                        <p><?php echo $BIZBOOK['HOM-BEST-SUB-TIT']; ?></p>
+                        <p><?php echo $Zitiziti['HOM-BEST-SUB-TIT']; ?></p>
                     </div>
                     <div class="plac-hom-all-pla">
                         <ul class="travel-sliser">
@@ -958,9 +958,9 @@ if ($current_home_page == '1') {
             <div class="container">
                 <div class="row">
                     <div class="plac-hom-tit plac-hom-tit-ic-eve">
-                        <h2><span><?php echo $BIZBOOK['HOM-EVE-TIT']; ?></span> <?php echo $BIZBOOK['HOM-EVE-TIT1']; ?>
+                        <h2><span><?php echo $Zitiziti['HOM-EVE-TIT']; ?></span> <?php echo $Zitiziti['HOM-EVE-TIT1']; ?>
                         </h2>
-                        <p><?php echo $BIZBOOK['HOM-EVE-SUB-TIT']; ?></p>
+                        <p><?php echo $Zitiziti['HOM-EVE-SUB-TIT']; ?></p>
                     </div>
                     <div class="plac-hom-all-pla plac-det-eve">
                         <ul class="travel-sliser">
@@ -1008,10 +1008,10 @@ if ($current_home_page == '1') {
             <div class="container">
                 <div class="row">
                     <div class="plac-hom-tit plac-hom-tit-ic-nws">
-                        <h2><?php echo $BIZBOOK['NEWS-HOMEPAGE-BANNER-H1-TEXT-2']; ?>
+                        <h2><?php echo $Zitiziti['NEWS-HOMEPAGE-BANNER-H1-TEXT-2']; ?>
                             <b><?php echo $place_row['place_name']; ?></b></h2>
-                        <p><?php echo $BIZBOOK['NEWS-HOMEPAGE-BANNER-P-TEXT']; ?>
-                            <b><?php echo $BIZBOOK['PLACE-NEWS-B']; ?></b></p>
+                        <p><?php echo $Zitiziti['NEWS-HOMEPAGE-BANNER-P-TEXT']; ?>
+                            <b><?php echo $Zitiziti['PLACE-NEWS-B']; ?></b></p>
                     </div>
                     <div class="plac-hom-all-pla plac-det-eve">
                         <ul class="travel-sliser">
@@ -1061,7 +1061,7 @@ if ($current_home_page == '1') {
             <div class="container">
                 <div class="row">
                     <div class="plac-det-tit-inn">
-                        <h2><?php echo $BIZBOOK['PLACE-MENU']; ?></h2>
+                        <h2><?php echo $Zitiziti['PLACE-MENU']; ?></h2>
                     </div>
                     <div class="plac-hom-all-pla">
                         <ul class="travel-sliser">
@@ -1085,7 +1085,7 @@ if ($current_home_page == '1') {
                                         </div>
                                         <div class="plac-hom-box-txt">
                                             <span><?php echo $category_row['category_name']; ?></span>
-                                            <span><?php echo $BIZBOOK['PLACE-MORE-DETAILS']; ?></span>
+                                            <span><?php echo $Zitiziti['PLACE-MORE-DETAILS']; ?></span>
                                         </div>
                                         <a href="<?php echo $PLACE_DETAIL_URL . urlModifier($placerow['place_slug']); ?>"
                                            class="fclick"></a>
@@ -1114,9 +1114,9 @@ if ($current_home_page == '1') {
                         <h2><span>Top Services</span> Cras nulla nulla, pulvinar sit amet nunc at, lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.</h2>
                     </div>-->
                     <div class="home-tit">
-                        <h2><span><?php echo $BIZBOOK['HOM-POP-TIT']; ?></span> <?php echo $BIZBOOK['HOM-POP-TIT1']; ?>
+                        <h2><span><?php echo $Zitiziti['HOM-POP-TIT']; ?></span> <?php echo $Zitiziti['HOM-POP-TIT1']; ?>
                         </h2>
-                        <p><?php echo $BIZBOOK['HOM-POP-SUB-TIT']; ?></p>
+                        <p><?php echo $Zitiziti['HOM-POP-SUB-TIT']; ?></p>
                     </div>
                     <div class="land-pack">
                         <ul>
@@ -1133,11 +1133,11 @@ if ($current_home_page == '1') {
                                         <div class="land-pack-grid-text">
                                             <h4><?php echo $category_sql_row['category_name']; ?>
                                                 <span
-                                                    class="dir-ho-cat"><?php echo $BIZBOOK['LISTINGS']; ?><?php echo AddingZero_BeforeNumber(getCountCategoryListing($category_sql_row['category_id'])); ?></span>
+                                                    class="dir-ho-cat"><?php echo $Zitiziti['LISTINGS']; ?><?php echo AddingZero_BeforeNumber(getCountCategoryListing($category_sql_row['category_id'])); ?></span>
                                             </h4>
                                         </div>
                                         <a href="<?php echo $ALL_LISTING_URL . urlModifier($category_sql_row['category_slug']); ?>"
-                                           class="land-pack-grid-btn"><?php echo $BIZBOOK['VIEW_ALL_LISTINGS']; ?></a>
+                                           class="land-pack-grid-btn"><?php echo $Zitiziti['VIEW_ALL_LISTINGS']; ?></a>
                                     </div>
                                 </li>
                                 <?php
@@ -1158,9 +1158,9 @@ if ($current_home_page == '1') {
                 <div class="row">
                     <div class="home-tit">
                         <h2>
-                            <span><?php echo $BIZBOOK['HOM-BEST-TIT']; ?></span> <?php echo $BIZBOOK['HOM-BEST-TIT1']; ?>
+                            <span><?php echo $Zitiziti['HOM-BEST-TIT']; ?></span> <?php echo $Zitiziti['HOM-BEST-TIT1']; ?>
                         </h2>
-                        <p><?php echo $BIZBOOK['HOM-BEST-SUB-TIT']; ?></p>
+                        <p><?php echo $Zitiziti['HOM-BEST-SUB-TIT']; ?></p>
                     </div>
 
                     <div class="hom2-cus-sli">
@@ -1252,7 +1252,7 @@ if ($current_home_page == '1') {
             <div class="row">
                 <div class="tit">
                     <h2>
-                        <span><?php echo $BIZBOOK['CHOOSE_YOUR_PLAN']; ?></span></h2>
+                        <span><?php echo $Zitiziti['CHOOSE_YOUR_PLAN']; ?></span></h2>
                 </div>
                 <div>
                     <ul>
@@ -1266,31 +1266,31 @@ if ($current_home_page == '1') {
                                         <h4><?php echo $plan_type_row['plan_type_name']; ?> plan</h4>
 
                                         <?php if ($plan_type_row['plan_type_id'] == 1) { ?>
-                                            <p><?php echo $BIZBOOK['PRICING_GETTING_STARTED']; ?></p>
+                                            <p><?php echo $Zitiziti['PRICING_GETTING_STARTED']; ?></p>
                                         <?php } elseif ($plan_type_row['plan_type_id'] == 2) { ?>
-                                            <p><?php echo $BIZBOOK['PRICING_PERFECT_SMALL_TEAMS']; ?></p>
+                                            <p><?php echo $Zitiziti['PRICING_PERFECT_SMALL_TEAMS']; ?></p>
                                         <?php } elseif ($plan_type_row['plan_type_id'] == 3) { ?>
-                                            <p><?php echo $BIZBOOK['PRICING_BEST_VALUE_LARGE']; ?></p>
+                                            <p><?php echo $Zitiziti['PRICING_BEST_VALUE_LARGE']; ?></p>
                                         <?php } else { ?>
-                                            <p><?php echo $BIZBOOK['PRICING_MADE_ENTERPRISES']; ?></p>
+                                            <p><?php echo $Zitiziti['PRICING_MADE_ENTERPRISES']; ?></p>
                                             <?php
                                         } ?>
 
                                     </div>
                                     <div class="c3">
                                         <h2><span></span><?php if ($plan_type_row['plan_type_price'] == 0) {
-                                                echo $BIZBOOK['FREE'];
+                                                echo $Zitiziti['FREE'];
                                             } else {
                                             if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?><?php echo '' . $plan_type_row['plan_type_price']; if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; }
                                             } ?></h2>
                                         <?php if ($plan_type_row['plan_type_id'] == 1) { ?>
-                                            <p><?php echo $BIZBOOK['PRICING_SINGLE_USER']; ?></p>
+                                            <p><?php echo $Zitiziti['PRICING_SINGLE_USER']; ?></p>
                                         <?php } elseif ($plan_type_row['plan_type_id'] == 2) { ?>
-                                            <p><?php echo $BIZBOOK['PRICING_STARTUP_BUSINESS']; ?></p>
+                                            <p><?php echo $Zitiziti['PRICING_STARTUP_BUSINESS']; ?></p>
                                         <?php } elseif ($plan_type_row['plan_type_id'] == 3) { ?>
-                                            <p><?php echo $BIZBOOK['PRICING_MEDIUM_BUSINESS']; ?></p>
+                                            <p><?php echo $Zitiziti['PRICING_MEDIUM_BUSINESS']; ?></p>
                                         <?php } else { ?>
-                                            <p><?php echo $BIZBOOK['PRICING_MADE_ENTERPRISES']; ?></p>
+                                            <p><?php echo $Zitiziti['PRICING_MADE_ENTERPRISES']; ?></p>
                                             <?php
                                         } ?>
 
@@ -1301,9 +1301,9 @@ if ($current_home_page == '1') {
                                             echo "db-plan-change";
                                         } else {
                                             echo "login";
-                                        } ?>" class="cta1"><?php echo $BIZBOOK['PRICING_GET_START']; ?></a>
+                                        } ?>" class="cta1"><?php echo $Zitiziti['PRICING_GET_START']; ?></a>
                                         <a href="pricing-details" class="cta2"
-                                           target="_blank"><?php echo $BIZBOOK['HOM-VI-KNOW-MORE']; ?></a>
+                                           target="_blank"><?php echo $Zitiziti['HOM-VI-KNOW-MORE']; ?></a>
                                     </div>
                                 </div>
                             </li>
@@ -1321,8 +1321,8 @@ if ($current_home_page == '1') {
     <!-- START -->
     <section class="news-hom-ban-sli">
         <div class="home-tit">
-            <h2><span><?php echo $BIZBOOK['HOM-EVE-TIT']; ?></span> <?php echo $BIZBOOK['HOM-EVE-TIT1']; ?></h2>
-            <p><?php echo $BIZBOOK['HOM-EVE-SUB-TIT']; ?></p>
+            <h2><span><?php echo $Zitiziti['HOM-EVE-TIT']; ?></span> <?php echo $Zitiziti['HOM-EVE-TIT1']; ?></h2>
+            <p><?php echo $Zitiziti['HOM-EVE-SUB-TIT']; ?></p>
         </div>
 
         <div class="news-hom-ban-sli-inn">
@@ -1351,7 +1351,7 @@ if ($current_home_page == '1') {
                                 <span
                                     class="news-cate"><?php echo dateMonthFormatconverter($event_sql_row['event_start_date']); ?><?php echo dateDayFormatconverter($event_sql_row['event_start_date']); ?></span>
                                 <h2><?php echo $event_sql_row['event_name']; ?></h2>
-                                <span class="news-date"><?php echo $BIZBOOK['HOM3-OW-POSTED-ON']; ?>
+                                <span class="news-date"><?php echo $Zitiziti['HOM3-OW-POSTED-ON']; ?>
                                     : <?php echo dateFormatconverter($event_sql_row['event_cdt']); ?></span>
                             </div>
                             <a href="<?php echo $EVENT_URL . urlModifier($event_sql_row['event_slug']); ?>"
@@ -1372,8 +1372,8 @@ if ($current_home_page == '1') {
             <div class="container">
                 <div class="row">
                     <div class="home-tit">
-                        <h2><span><?php echo $BIZBOOK['HOM3-OW-USER-REVIEW']; ?></span></h2>
-                        <p><?php echo $BIZBOOK['HOM3-OW-TIT-SUB']; ?></p>
+                        <h2><span><?php echo $Zitiziti['HOM3-OW-USER-REVIEW']; ?></span></h2>
+                        <p><?php echo $Zitiziti['HOM3-OW-TIT-SUB']; ?></p>
                     </div>
                     <div class="hom2-cus-sli">
                         <ul class="multiple-items">
@@ -1412,7 +1412,7 @@ if ($current_home_page == '1') {
                                                 echo $user_details_row['profile_image'];
                                             } ?>" alt="">
                                         <h4><?php echo $user_details_row['first_name']; ?></h4>
-                                    <span><?php echo $BIZBOOK['SERVICE-EXPERT-WRITTEN-REVIEW-TO']; ?> <a
+                                    <span><?php echo $Zitiziti['SERVICE-EXPERT-WRITTEN-REVIEW-TO']; ?> <a
                                             href="<?php echo $LISTING_URL . urlModifier($listing_sql_row['listing_slug']); ?>"><?php echo $listing_sql_row['listing_name']; ?></a></span>
 
                                         <?php
@@ -1456,8 +1456,8 @@ if ($current_home_page == '1') {
                 <div class="row">
                     <div class="how-wrks">
                         <div class="home-tit">
-                            <h2><span><?php echo $BIZBOOK['HOM-HOW-TIT']; ?></span></h2>
-                            <p><?php echo $BIZBOOK['HOM-HOW-SUB-TIT']; ?></p>
+                            <h2><span><?php echo $Zitiziti['HOM-HOW-TIT']; ?></span></h2>
+                            <p><?php echo $Zitiziti['HOM-HOW-SUB-TIT']; ?></p>
                         </div>
                         <div class="how-wrks-inn">
                             <ul>
@@ -1466,8 +1466,8 @@ if ($current_home_page == '1') {
                                         <span>1</span>
                                         <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/icon/how1.png"
                                              alt="">
-                                        <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-1']; ?></h4>
-                                        <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-1']; ?></p>
+                                        <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-1']; ?></h4>
+                                        <p><?php echo $Zitiziti['HOM-HOW-P-SUB-1']; ?></p>
                                     </div>
                                 </li>
                                 <li>
@@ -1475,8 +1475,8 @@ if ($current_home_page == '1') {
                                         <span>2</span>
                                         <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/icon/how2.png"
                                              alt="">
-                                        <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-2']; ?></h4>
-                                        <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-2']; ?></p>
+                                        <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-2']; ?></h4>
+                                        <p><?php echo $Zitiziti['HOM-HOW-P-SUB-2']; ?></p>
                                     </div>
                                 </li>
                                 <li>
@@ -1484,8 +1484,8 @@ if ($current_home_page == '1') {
                                         <span>3</span>
                                         <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/icon/how3.png"
                                              alt="">
-                                        <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-3']; ?></h4>
-                                        <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-3']; ?></p>
+                                        <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-3']; ?></h4>
+                                        <p><?php echo $Zitiziti['HOM-HOW-P-SUB-3']; ?></p>
                                     </div>
                                 </li>
                                 <li>
@@ -1493,8 +1493,8 @@ if ($current_home_page == '1') {
                                         <span>4</span>
                                         <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/icon/how4.png"
                                              alt="">
-                                        <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-4']; ?></h4>
-                                        <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-4']; ?></p>
+                                        <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-4']; ?></h4>
+                                        <p><?php echo $Zitiziti['HOM-HOW-P-SUB-4']; ?></p>
                                     </div>
                                 </li>
                             </ul>
@@ -1506,15 +1506,15 @@ if ($current_home_page == '1') {
                                 <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/mobile.png" alt="">
                             </div>
                             <div class="rhs">
-                                <h2><?php echo $BIZBOOK['HOM-APP-TIT']; ?>
-                                    <span><?php echo $BIZBOOK['HOM-APP-TIT-SUB']; ?></span></h2>
+                                <h2><?php echo $Zitiziti['HOM-APP-TIT']; ?>
+                                    <span><?php echo $Zitiziti['HOM-APP-TIT-SUB']; ?></span></h2>
                                 <ul>
-                                    <li><?php echo $BIZBOOK['HOM-APP-PO-1']; ?></li>
-                                    <li><?php echo $BIZBOOK['HOM-APP-PO-2']; ?></li>
-                                    <li><?php echo $BIZBOOK['HOM-APP-PO-3']; ?></li>
-                                    <li><?php echo $BIZBOOK['HOM-APP-PO-4']; ?></li>
+                                    <li><?php echo $Zitiziti['HOM-APP-PO-1']; ?></li>
+                                    <li><?php echo $Zitiziti['HOM-APP-PO-2']; ?></li>
+                                    <li><?php echo $Zitiziti['HOM-APP-PO-3']; ?></li>
+                                    <li><?php echo $Zitiziti['HOM-APP-PO-4']; ?></li>
                                 </ul>
-                                <span><?php echo $BIZBOOK['HOM-APP-SEND']; ?></span>
+                                <span><?php echo $Zitiziti['HOM-APP-SEND']; ?></span>
                                 <form>
                                     <ul>
                                         <li>
@@ -1549,9 +1549,9 @@ if ($current_home_page == '1') {
                 <div class="row">
                     <div class="home-tit">
                         <h2>
-                            <span><?php echo $BIZBOOK['HOM-BEST-TIT']; ?></span> <?php echo $BIZBOOK['HOM-BEST-TIT1']; ?>
+                            <span><?php echo $Zitiziti['HOM-BEST-TIT']; ?></span> <?php echo $Zitiziti['HOM-BEST-TIT1']; ?>
                         </h2>
-                        <p><?php echo $BIZBOOK['HOM-BEST-SUB-TIT']; ?></p>
+                        <p><?php echo $Zitiziti['HOM-BEST-SUB-TIT']; ?></p>
                     </div>
 
                     <!-- NEW FEATURE SERVICES -->
@@ -1642,19 +1642,19 @@ if ($current_home_page == '1') {
             <div class="container">
                 <div class="row">
                     <div class="home-tit">
-                        <h2><span><?php echo $BIZBOOK['HOM3-OW-TIT']; ?></span></h2>
-                        <p><?php echo $BIZBOOK['HOM3-OW-TIT-SUB']; ?></p>
+                        <h2><span><?php echo $Zitiziti['HOM3-OW-TIT']; ?></span></h2>
+                        <p><?php echo $Zitiziti['HOM3-OW-TIT-SUB']; ?></p>
                     </div>
                     <div class="hom2-hom-ban-main">
                         <div class="hom2-hom-ban hom2-hom-ban1">
-                            <h2><?php echo $BIZBOOK['HOM3-OW-LHS-TIT']; ?></h2>
-                            <p><?php echo $BIZBOOK['HOM3-OW-LHS-SUB']; ?></p>
-                            <a href="pricing-details"><?php echo $BIZBOOK['HOM3-OW-LHS-CTA']; ?></a>
+                            <h2><?php echo $Zitiziti['HOM3-OW-LHS-TIT']; ?></h2>
+                            <p><?php echo $Zitiziti['HOM3-OW-LHS-SUB']; ?></p>
+                            <a href="pricing-details"><?php echo $Zitiziti['HOM3-OW-LHS-CTA']; ?></a>
                         </div>
                         <div class="hom2-hom-ban hom2-hom-ban2">
-                            <h2><?php echo $BIZBOOK['HOM3-OW-RHS-TIT']; ?></h2>
-                            <p><?php echo $BIZBOOK['HOM3-OW-RHS-SUB']; ?></p>
-                            <a href="login?login=register"><?php echo $BIZBOOK['HOM3-OW-RHS-CTA']; ?></a>
+                            <h2><?php echo $Zitiziti['HOM3-OW-RHS-TIT']; ?></h2>
+                            <p><?php echo $Zitiziti['HOM3-OW-RHS-SUB']; ?></p>
+                            <a href="login?login=register"><?php echo $Zitiziti['HOM3-OW-RHS-CTA']; ?></a>
                         </div>
                     </div>
                 </div>
@@ -1669,8 +1669,8 @@ if ($current_home_page == '1') {
             <div class="container">
                 <div class="row">
                     <div class="home-tit">
-                        <h2><span><?php echo $BIZBOOK['HOM3-OW-USER-REVIEW']; ?></span></h2>
-                        <p><?php echo $BIZBOOK['HOM3-OW-TIT-SUB']; ?></p>
+                        <h2><span><?php echo $Zitiziti['HOM3-OW-USER-REVIEW']; ?></span></h2>
+                        <p><?php echo $Zitiziti['HOM3-OW-TIT-SUB']; ?></p>
                     </div>
 
                     <div class="hom2-cus-sli">
@@ -1710,7 +1710,7 @@ if ($current_home_page == '1') {
                                                 echo $user_details_row['profile_image'];
                                             } ?>" alt="">
                                         <h4><?php echo $user_details_row['first_name']; ?></h4>
-                                    <span><?php echo $BIZBOOK['SERVICE-EXPERT-WRITTEN-REVIEW-TO']; ?> <a
+                                    <span><?php echo $Zitiziti['SERVICE-EXPERT-WRITTEN-REVIEW-TO']; ?> <a
                                             href="<?php echo $LISTING_URL . urlModifier($listing_sql_row['listing_slug']); ?>"><?php echo $listing_sql_row['listing_name']; ?></a></span>
 
                                         <?php
@@ -1756,8 +1756,8 @@ if ($current_home_page == '1') {
 
                     <div class="how-wrks">
                         <div class="home-tit">
-                            <h2><span><?php echo $BIZBOOK['HOM-HOW-TIT']; ?></span></h2>
-                            <p><?php echo $BIZBOOK['HOM-HOW-SUB-TIT']; ?></p>
+                            <h2><span><?php echo $Zitiziti['HOM-HOW-TIT']; ?></span></h2>
+                            <p><?php echo $Zitiziti['HOM-HOW-SUB-TIT']; ?></p>
                         </div>
                         <div class="how-wrks-inn">
                             <ul>
@@ -1766,8 +1766,8 @@ if ($current_home_page == '1') {
                                         <span>1</span>
                                         <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/icon/how1.png"
                                              alt="">
-                                        <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-1']; ?></h4>
-                                        <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-1']; ?></p>
+                                        <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-1']; ?></h4>
+                                        <p><?php echo $Zitiziti['HOM-HOW-P-SUB-1']; ?></p>
                                     </div>
                                 </li>
                                 <li>
@@ -1775,8 +1775,8 @@ if ($current_home_page == '1') {
                                         <span>2</span>
                                         <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/icon/how2.png"
                                              alt="">
-                                        <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-2']; ?></h4>
-                                        <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-2']; ?></p>
+                                        <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-2']; ?></h4>
+                                        <p><?php echo $Zitiziti['HOM-HOW-P-SUB-2']; ?></p>
                                     </div>
                                 </li>
                                 <li>
@@ -1784,8 +1784,8 @@ if ($current_home_page == '1') {
                                         <span>3</span>
                                         <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/icon/how3.png"
                                              alt="">
-                                        <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-3']; ?></h4>
-                                        <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-3']; ?></p>
+                                        <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-3']; ?></h4>
+                                        <p><?php echo $Zitiziti['HOM-HOW-P-SUB-3']; ?></p>
                                     </div>
                                 </li>
                                 <li>
@@ -1793,8 +1793,8 @@ if ($current_home_page == '1') {
                                         <span>4</span>
                                         <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/icon/how4.png"
                                              alt="">
-                                        <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-4']; ?></h4>
-                                        <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-4']; ?></p>
+                                        <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-4']; ?></h4>
+                                        <p><?php echo $Zitiziti['HOM-HOW-P-SUB-4']; ?></p>
                                     </div>
                                 </li>
                             </ul>
@@ -1807,15 +1807,15 @@ if ($current_home_page == '1') {
                                 <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/mobile.png" alt="">
                             </div>
                             <div class="rhs">
-                                <h2><?php echo $BIZBOOK['HOM-APP-TIT']; ?>
-                                    <span><?php echo $BIZBOOK['HOM-APP-TIT-SUB']; ?></span></h2>
+                                <h2><?php echo $Zitiziti['HOM-APP-TIT']; ?>
+                                    <span><?php echo $Zitiziti['HOM-APP-TIT-SUB']; ?></span></h2>
                                 <ul>
-                                    <li><?php echo $BIZBOOK['HOM-APP-PO-1']; ?></li>
-                                    <li><?php echo $BIZBOOK['HOM-APP-PO-2']; ?></li>
-                                    <li><?php echo $BIZBOOK['HOM-APP-PO-3']; ?></li>
-                                    <li><?php echo $BIZBOOK['HOM-APP-PO-4']; ?></li>
+                                    <li><?php echo $Zitiziti['HOM-APP-PO-1']; ?></li>
+                                    <li><?php echo $Zitiziti['HOM-APP-PO-2']; ?></li>
+                                    <li><?php echo $Zitiziti['HOM-APP-PO-3']; ?></li>
+                                    <li><?php echo $Zitiziti['HOM-APP-PO-4']; ?></li>
                                 </ul>
-                                <span><?php echo $BIZBOOK['HOM-APP-SEND']; ?></span>
+                                <span><?php echo $Zitiziti['HOM-APP-SEND']; ?></span>
                                 <form>
                                     <ul>
                                         <li>

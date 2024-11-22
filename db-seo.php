@@ -17,18 +17,18 @@ if (file_exists('config/general_user_authentication.php')) {
    <div class="ud-main-inn ud-no-rhs d-flex justify-content-center">
     <div class="ud-cen">
         <div class="log-bor">&nbsp;</div>
-        <span class="udb-inst"><?php echo $BIZBOOK['SEO_DETAILS']; ?></span>
+        <span class="udb-inst"><?php echo $Zitiziti['SEO_DETAILS']; ?></span>
         <?php include('config/user_activation_checker.php'); ?>
         <div class="ud-cen-s2">
-            <h2><?php echo $BIZBOOK['SEO_LABEL']; ?></h2>
+            <h2><?php echo $Zitiziti['SEO_LABEL']; ?></h2>
             <?php include "page_level_message.php"; ?>
             <table class="responsive-table bordered">
                 <thead>
                 <tr>
-                    <th><?php echo $BIZBOOK['S_NO']; ?></th>
-                    <th><?php echo $BIZBOOK['NAME']; ?></th>
-                    <th><?php echo $BIZBOOK['TYPE']; ?></th>
-                    <th><?php echo $BIZBOOK['EDIT']; ?></th>
+                    <th><?php echo $Zitiziti['S_NO']; ?></th>
+                    <th><?php echo $Zitiziti['NAME']; ?></th>
+                    <th><?php echo $Zitiziti['TYPE']; ?></th>
+                    <th><?php echo $Zitiziti['EDIT']; ?></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -46,8 +46,8 @@ if (file_exists('config/general_user_authentication.php')) {
                                 } ?>"><?php echo $seo_details_row['listing_name']; ?>
                             <span><?php echo dateFormatconverter($seo_details_row['listing_cdt']); ?></span>
                         </td>
-                        <td><span class="db-list-ststus"><?php echo $BIZBOOK['LISTINGS']; ?></span></td>
-                        <td><a href="edit-seo?path=listing&&code=<?php echo $seo_details_row['listing_code']; ?>" class="db-list-edit"><?php echo $BIZBOOK['EDIT']; ?></a></td>
+                        <td><span class="db-list-ststus"><?php echo $Zitiziti['LISTINGS']; ?></span></td>
+                        <td><a href="edit-seo?path=listing&&code=<?php echo $seo_details_row['listing_code']; ?>" class="db-list-edit"><?php echo $Zitiziti['EDIT']; ?></a></td>
                     </tr>
                     <?php
                     $k++;
@@ -61,8 +61,8 @@ if (file_exists('config/general_user_authentication.php')) {
                                 src="images/events/<?php echo $seo_details_row['event_image']; ?>"><?php echo $seo_details_row['event_name']; ?>
                             <span><?php echo dateFormatconverter($seo_details_row['event_cdt']); ?></span>
                         </td>
-                        <td><span class="db-list-ststus"><?php echo $BIZBOOK['EVENTS']; ?></span></td>
-                        <td><a href="edit-seo?path=event&&code=<?php echo $seo_details_row['event_id']; ?>" class="db-list-edit"><?php echo $BIZBOOK['EDIT']; ?></a></td>
+                        <td><span class="db-list-ststus"><?php echo $Zitiziti['EVENTS']; ?></span></td>
+                        <td><a href="edit-seo?path=event&&code=<?php echo $seo_details_row['event_id']; ?>" class="db-list-edit"><?php echo $Zitiziti['EDIT']; ?></a></td>
                     </tr>
                     <?php
                     $s++;
@@ -76,8 +76,8 @@ if (file_exists('config/general_user_authentication.php')) {
                                 src="images/blogs/<?php echo $seo_details_row['blog_image']; ?>"><?php echo $seo_details_row['blog_name']; ?>
                             <span><?php echo dateFormatconverter($seo_details_row['blog_cdt']); ?></span>
                         </td>
-                        <td><span class="db-list-ststus"><?php echo $BIZBOOK['BLOGS']; ?></span></td>
-                        <td><a href="edit-seo?path=blog&&code=<?php echo $seo_details_row['blog_id']; ?>" class="db-list-edit"><?php echo $BIZBOOK['EDIT']; ?></a></td>
+                        <td><span class="db-list-ststus"><?php echo $Zitiziti['BLOGS']; ?></span></td>
+                        <td><a href="edit-seo?path=blog&&code=<?php echo $seo_details_row['blog_id']; ?>" class="db-list-edit"><?php echo $Zitiziti['EDIT']; ?></a></td>
                     </tr>
                     <?php
                     $p++;
@@ -96,8 +96,8 @@ if (file_exists('config/general_user_authentication.php')) {
                                 } ?>"><?php echo $seo_details_row['product_name']; ?>
                             <span><?php echo dateFormatconverter($seo_details_row['product_cdt']); ?></span>
                         </td>
-                        <td><span class="db-list-ststus"><?php echo $BIZBOOK['PRODUCTS']; ?></span></td>
-                        <td><a href="edit-seo?path=product&&code=<?php echo $seo_details_row['product_code']; ?>" class="db-list-edit"><?php echo $BIZBOOK['EDIT']; ?></a></td>
+                        <td><span class="db-list-ststus"><?php echo $Zitiziti['PRODUCTS']; ?></span></td>
+                        <td><a href="edit-seo?path=product&&code=<?php echo $seo_details_row['product_code']; ?>" class="db-list-edit"><?php echo $Zitiziti['EDIT']; ?></a></td>
                     </tr>
                     <?php
                     $q++;

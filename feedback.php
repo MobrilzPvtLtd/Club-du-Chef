@@ -8,48 +8,48 @@ include "header.php";
     <img loading="lazy" src="images/admin-log-bg.jpg" alt="" class="fed">
     <div class="fed-box">
         <div class="lhs">
-            <h3><?php echo $BIZBOOK['FEEDBACK-SEND-YOUR-FEEDBACK']; ?></h3>
+            <h3><?php echo $Zitiziti['FEEDBACK-SEND-YOUR-FEEDBACK']; ?></h3>
             <?php include "page_level_message.php"; ?>
             <form name="feedback_form" id="feedback_form" method="post" action="feedback_submit.php"
                   enctype="multipart/form-data">
                 <div class="form-group">
-                    <input type="text" placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>" name="feedback_name" id="feedback_name" class="form-control"
+                    <input type="text" placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>" name="feedback_name" id="feedback_name" class="form-control"
                            required="required">
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>" required="required"
+                    <input type="email" class="form-control" placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>" required="required"
                            name="feedback_email"
                            pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                           title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>">
+                           title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>">
                 </div>
                 <div class="form-group">
                     <input type="text" onkeypress="return isNumber(event)" class="form-control" id="feedback_mobile"
                            name="feedback_mobile"
-                           placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>" pattern="[7-9]{1}[0-9]{9}"
-                           title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>" required="">
+                           placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>" pattern="[7-9]{1}[0-9]{9}"
+                           title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>" required="">
                 </div>
                 <div class="form-group">
                     <textarea name="feedback_message" id="feedback_message" required="required"
-                              placeholder="<?php echo $BIZBOOK['LEAD-WRITE-YOUR-FEEDBACK-PLACEHOLDER']; ?>"></textarea>
+                              placeholder="<?php echo $Zitiziti['LEAD-WRITE-YOUR-FEEDBACK-PLACEHOLDER']; ?>"></textarea>
                 </div>
                 <button type="submit" id="feedback_submit" name="feedback_submit"
                         class="btn btn-primary">
-                    <?php echo $BIZBOOK['LEAD-SUBMIT-FEEDBACK']; ?>
+                    <?php echo $Zitiziti['LEAD-SUBMIT-FEEDBACK']; ?>
                 </button>
             </form>
         </div>
         <div class="rhs">
-            <h2><?php echo $BIZBOOK['FEEDBACK-YOUR-FEEDBACK']; ?></h2>
-            <p><?php echo $BIZBOOK['FEEDBACK-P-TAG-MESSAGE']; ?></p>
+            <h2><?php echo $Zitiziti['FEEDBACK-YOUR-FEEDBACK']; ?></h2>
+            <p><?php echo $Zitiziti['FEEDBACK-P-TAG-MESSAGE']; ?></p>
             <ul>
                 <li><a href="#"><img loading="lazy" src="images/icon/facebook.png" alt=""></a></li>
                 <li><a href="#"><img loading="lazy" src="images/icon/twitter.png" alt=""></a></li>
                 <li><a href="#"><img loading="lazy" src="images/icon/linkedin.png" alt=""></a></li>
                 <li><a href="#"><img loading="lazy" src="images/icon/whatsapp.png" alt=""></a></li>
             </ul>
-            <h4><?php echo $BIZBOOK['FEEDBACK-WHY-SEND-FEEDBACK']; ?></h4>
-            <p><?php echo $BIZBOOK['FEEDBACK-WHY-SEND-FEEDBACK-P-1']; ?></p>
-            <p><?php echo $BIZBOOK['FEEDBACK-WHY-SEND-FEEDBACK-P-2']; ?></p>
+            <h4><?php echo $Zitiziti['FEEDBACK-WHY-SEND-FEEDBACK']; ?></h4>
+            <p><?php echo $Zitiziti['FEEDBACK-WHY-SEND-FEEDBACK-P-1']; ?></p>
+            <p><?php echo $Zitiziti['FEEDBACK-WHY-SEND-FEEDBACK-P-2']; ?></p>
         </div>
     </div>
 </section>

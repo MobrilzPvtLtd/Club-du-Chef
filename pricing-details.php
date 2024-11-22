@@ -11,8 +11,8 @@ include "header.php";
         <div class="row">
             <div class="tit">
                 <h2>
-                    <span><?php echo $BIZBOOK['PRICING_TITLE_2']; ?></span></h2>
-                <p><?php echo $BIZBOOK['PRICING_SUB_TITLE_2']; ?></p>
+                    <span><?php echo $Zitiziti['PRICING_TITLE_2']; ?></span></h2>
+                <p><?php echo $Zitiziti['PRICING_SUB_TITLE_2']; ?></p>
             </div>
             <div>
                 <ul>
@@ -23,34 +23,34 @@ include "header.php";
                         <li>
                             <div class="pri-box">
                                 <div class="c2">
-                                    <h4><?php echo $plan_type_row['plan_type_name']; ?> <?php echo $BIZBOOK['PLAN']; ?></h4>
+                                    <h4><?php echo $plan_type_row['plan_type_name']; ?> <?php echo $Zitiziti['PLAN']; ?></h4>
 
                                     <?php if ($plan_type_row['plan_type_id'] == 1) { ?>
-                                        <p><?php echo $BIZBOOK['PRICING_GETTING_STARTED']; ?></p>
+                                        <p><?php echo $Zitiziti['PRICING_GETTING_STARTED']; ?></p>
                                     <?php } elseif ($plan_type_row['plan_type_id'] == 2) { ?>
-                                        <p><?php echo $BIZBOOK['PRICING_PERFECT_SMALL_TEAMS']; ?></p>
+                                        <p><?php echo $Zitiziti['PRICING_PERFECT_SMALL_TEAMS']; ?></p>
                                     <?php } elseif ($plan_type_row['plan_type_id'] == 3) { ?>
-                                        <p><?php echo $BIZBOOK['PRICING_BEST_VALUE_LARGE']; ?></p>
+                                        <p><?php echo $Zitiziti['PRICING_BEST_VALUE_LARGE']; ?></p>
                                     <?php } else { ?>
-                                        <p><?php echo $BIZBOOK['PRICING_MADE_ENTERPRISES']; ?></p>
+                                        <p><?php echo $Zitiziti['PRICING_MADE_ENTERPRISES']; ?></p>
                                         <?php
                                     } ?>
 
                                 </div>
                                 <div class="c3">
                                     <h2><span></span><?php if ($plan_type_row['plan_type_price'] == 0) {
-                                            echo $BIZBOOK['FREE'];
+                                            echo $Zitiziti['FREE'];
                                         } else {
                                         if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } echo '' . $plan_type_row['plan_type_price']; if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; }
                                         } ?></h2>
                                     <?php if ($plan_type_row['plan_type_id'] == 1) { ?>
-                                        <p><?php echo $BIZBOOK['PRICING_SINGLE_USER']; ?></p>
+                                        <p><?php echo $Zitiziti['PRICING_SINGLE_USER']; ?></p>
                                     <?php } elseif ($plan_type_row['plan_type_id'] == 2) { ?>
-                                        <p><?php echo $BIZBOOK['PRICING_STARTUP_BUSINESS']; ?></p>
+                                        <p><?php echo $Zitiziti['PRICING_STARTUP_BUSINESS']; ?></p>
                                     <?php } elseif ($plan_type_row['plan_type_id'] == 3) { ?>
-                                        <p><?php echo $BIZBOOK['PRICING_MEDIUM_BUSINESS']; ?></p>
+                                        <p><?php echo $Zitiziti['PRICING_MEDIUM_BUSINESS']; ?></p>
                                     <?php } else { ?>
-                                        <p><?php echo $BIZBOOK['PRICING_MADE_ENTERPRISES']; ?></p>
+                                        <p><?php echo $Zitiziti['PRICING_MADE_ENTERPRISES']; ?></p>
                                         <?php
                                     } ?>
 
@@ -59,100 +59,100 @@ include "header.php";
                                         echo "db-plan-change";
                                     } else {
                                         echo "login";
-                                    } ?>"><?php echo $BIZBOOK['ADD_LISTING']; ?></a>
+                                    } ?>"><?php echo $Zitiziti['ADD_LISTING']; ?></a>
                                 </div>
                                 <div class="c4">
                                     <ol>
                                         <li><?php if ($plan_type_row['plan_type_listing_count'] == 1000) {
-                                                echo $BIZBOOK['UNLIMITED'];
+                                                echo $Zitiziti['UNLIMITED'];
                                             } else {
                                                 echo $plan_type_row['plan_type_listing_count'];
-                                            } ?> <?php echo $BIZBOOK['LISTING']; ?>
+                                            } ?> <?php echo $Zitiziti['LISTING']; ?>
                                         </li>
 
                                         <li>
                                             <?php if ($plan_type_row['plan_type_duration'] >= 7) {
-                                                echo $plan_type_row['plan_type_duration'] / 12 . ' ' . $BIZBOOK['YEAR-S'];
+                                                echo $plan_type_row['plan_type_duration'] / 12 . ' ' . $Zitiziti['YEAR-S'];
                                             } else {
-                                                echo $plan_type_row['plan_type_duration'] . ' ' . $BIZBOOK['MONTH-S'];
-                                            } ?> (<?php echo $BIZBOOK['DURATION']; ?>)
+                                                echo $plan_type_row['plan_type_duration'] . ' ' . $Zitiziti['MONTH-S'];
+                                            } ?> (<?php echo $Zitiziti['DURATION']; ?>)
                                         </li>
 
                                         <li><?php if ($plan_type_row['plan_type_event_count'] == 1000) {
-                                                echo $BIZBOOK['UNLIMITED'];
+                                                echo $Zitiziti['UNLIMITED'];
                                             } else {
                                                 echo $plan_type_row['plan_type_event_count'];
-                                            } ?> <?php echo $BIZBOOK['EVENTS']; ?>
+                                            } ?> <?php echo $Zitiziti['EVENTS']; ?>
                                         </li>
 
                                         <li><?php if ($plan_type_row['plan_type_blog_count'] == 1000) {
-                                                echo $BIZBOOK['UNLIMITED'];
+                                                echo $Zitiziti['UNLIMITED'];
                                             } else {
                                                 echo $plan_type_row['plan_type_blog_count'];
-                                            } ?> <?php echo $BIZBOOK['BLOG_POSTS']; ?>
+                                            } ?> <?php echo $Zitiziti['BLOG_POSTS']; ?>
                                         </li>
 
                                         <li><?php if ($plan_type_row['plan_type_job_count'] == 1000) {
-                                                echo $BIZBOOK['UNLIMITED'];
+                                                echo $Zitiziti['UNLIMITED'];
                                             } else {
                                                 echo $plan_type_row['plan_type_job_count'];
-                                            } ?> <?php echo $BIZBOOK['JOBS']; ?>
+                                            } ?> <?php echo $Zitiziti['JOBS']; ?>
                                         </li>
 
                                         <li><?php if ($plan_type_row['plan_type_coupon_count'] == 1000) {
-                                                echo $BIZBOOK['UNLIMITED'];
+                                                echo $Zitiziti['UNLIMITED'];
                                             } else {
                                                 echo $plan_type_row['plan_type_coupon_count'];
-                                            } ?> <?php echo $BIZBOOK['COUPONS']; ?>
+                                            } ?> <?php echo $Zitiziti['COUPONS']; ?>
                                         </li>
 
                                         <?php if ($plan_type_row['plan_type_direct_lead'] == 1) { ?>
-                                            <li><?php echo $BIZBOOK['PRICING_GET_DIRECT_LEADS']; ?></li>
+                                            <li><?php echo $Zitiziti['PRICING_GET_DIRECT_LEADS']; ?></li>
                                         <?php } ?>
 
                                         <?php if ($plan_type_row['plan_type_email_notification'] == 1) { ?>
-                                            <li><?php echo $BIZBOOK['PRICING_EMAIL_NOTIFICATION']; ?></li>
+                                            <li><?php echo $Zitiziti['PRICING_EMAIL_NOTIFICATION']; ?></li>
                                         <?php } ?>
 
                                         <?php if ($plan_type_row['plan_type_verified'] == 1) { ?>
-                                            <li><?php echo $BIZBOOK['PRICING_VERIFIED_LISTING']; ?></li>
+                                            <li><?php echo $Zitiziti['PRICING_VERIFIED_LISTING']; ?></li>
                                         <?php } ?>
 
                                         <?php if ($plan_type_row['plan_type_trusted'] == 1) { ?>
-                                            <li><?php echo $BIZBOOK['PRICING_TRUSTED_LISTING']; ?></li>
+                                            <li><?php echo $Zitiziti['PRICING_TRUSTED_LISTING']; ?></li>
                                         <?php } ?>
 
                                         <?php if ($plan_type_row['plan_type_offers'] == 1) { ?>
-                                            <li><?php echo $BIZBOOK['SPECIAL_OFFERS']; ?></li>
+                                            <li><?php echo $Zitiziti['SPECIAL_OFFERS']; ?></li>
                                         <?php } ?>
 
-                                        <li><?php echo $BIZBOOK['USER_DASHBOARD']; ?></li>
+                                        <li><?php echo $Zitiziti['USER_DASHBOARD']; ?></li>
 
                                         <li><?php if ($plan_type_row['plan_type_photos_count'] == 1000) {
-                                                echo $BIZBOOK['UNLIMITED'];
+                                                echo $Zitiziti['UNLIMITED'];
                                             } else {
                                                 echo $plan_type_row['plan_type_photos_count'];
-                                            } ?> <?php echo $BIZBOOK['PHOTOS']; ?>
+                                            } ?> <?php echo $Zitiziti['PHOTOS']; ?>
                                         </li>
 
                                         <li><?php if ($plan_type_row['plan_type_videos_count'] == 1000) {
-                                                echo $BIZBOOK['UNLIMITED'];
+                                                echo $Zitiziti['UNLIMITED'];
                                             } else {
                                                 echo $plan_type_row['plan_type_videos_count'];
-                                            } ?> <?php echo $BIZBOOK['VIDEOS']; ?>
+                                            } ?> <?php echo $Zitiziti['VIDEOS']; ?>
                                         </li>
 
-                                        <li><?php echo $BIZBOOK['CREATE_DUPLICATE_LISTING_LABEL']; ?></li>
+                                        <li><?php echo $Zitiziti['CREATE_DUPLICATE_LISTING_LABEL']; ?></li>
 
                                         <?php if ($plan_type_row['plan_type_social'] == 1) { ?>
-                                            <li><?php echo $BIZBOOK['PRICING_SOCIAL_SHARE']; ?></li>
+                                            <li><?php echo $Zitiziti['PRICING_SOCIAL_SHARE']; ?></li>
                                         <?php } ?>
 
                                         <?php if ($plan_type_row['plan_type_ratings'] == 1) { ?>
-                                            <li><?php echo $BIZBOOK['PRICING_REVIEW_CONTROL']; ?></li>
+                                            <li><?php echo $Zitiziti['PRICING_REVIEW_CONTROL']; ?></li>
                                         <?php } ?>
 
-                                        <li><?php echo $BIZBOOK['PRICING_ADMIN_TIPS']; ?></li>
+                                        <li><?php echo $Zitiziti['PRICING_ADMIN_TIPS']; ?></li>
                                     </ol>
                                 </div>
                                 <div class="c5">
@@ -161,7 +161,7 @@ include "header.php";
                                         echo "db-plan-change";
                                     } else {
                                         echo "login";
-                                    } ?>"><?php echo $BIZBOOK['PRICING_GET_START']; ?></a>
+                                    } ?>"><?php echo $Zitiziti['PRICING_GET_START']; ?></a>
                                 </div>
                             </div>
                         </li>
@@ -186,29 +186,29 @@ include "header.php";
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <!-- Modal Header -->
                     <div class="quote-pop">
-                        <h4><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></h4>
+                        <h4><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></h4>
                         <form>
                             <div class="form-group">
                                 <input type="text" class="form-control"
-                                       placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>" required>
+                                       placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>" required>
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control"
-                                       placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>"
+                                       placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>"
                                        pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                       title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
+                                       title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control"
-                                       placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                       placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
                                        pattern="[7-9]{1}[0-9]{9}"
-                                       title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>" required>
+                                       title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>" required>
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control" rows="3"
-                                          placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                          placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
+                            <button type="submit" class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?></button>
                         </form>
                     </div>
                 </div>

@@ -58,15 +58,15 @@ if (isset($_GET['category'])) {
         <div class="container">
             <div class="row">
                 <div class="plac-hom-ban-inn">
-                    <h1><?php echo $BIZBOOK['PLACE-HOME-H-1']; ?></h1>
-                    <p><?php echo $BIZBOOK['PLACE-HOME-P-1-1']; ?> <b><?php echo $BIZBOOK['PLACE-HOME-B-1-1']; ?></b>. <?php echo $BIZBOOK['PLACE-HOME-P-1-2']; ?></p>
+                    <h1><?php echo $Zitiziti['PLACE-HOME-H-1']; ?></h1>
+                    <p><?php echo $Zitiziti['PLACE-HOME-P-1-1']; ?> <b><?php echo $Zitiziti['PLACE-HOME-B-1-1']; ?></b>. <?php echo $Zitiziti['PLACE-HOME-P-1-2']; ?></p>
                     <div class="plac-hom-search">
                         <div class="job-sear">
                     <form name="place_filter_form" id="place_filter_form" class="place_filter_form">
                         <ul>
                             <li class="sr-sea">
                                 <select class="chosen-select py-1" id="place-select-search" name="place-select-search">
-                                    <option value="0"><?php echo $BIZBOOK['PLACE-HOME-SEARCH-OPTION-1']; ?></option>
+                                    <option value="0"><?php echo $Zitiziti['PLACE-HOME-SEARCH-OPTION-1']; ?></option>
                                     <?php
                                     foreach (getAllPlaces() as $placerow) {
 
@@ -98,8 +98,8 @@ if (isset($_GET['category'])) {
         <div class="container">
             <div class="row">
                 <div class="plac-hom-tit plac-hom-tit-ic-pla">
-                    <h2><?php echo $BIZBOOK['PLACE-HOME-H-2-1']; ?></h2>
-                    <p><?php echo $BIZBOOK['PLACE-HOME-P-2-1']; ?> <b><?php echo $BIZBOOK['PLACE-HOME-B-2-1']; ?></b></p>
+                    <h2><?php echo $Zitiziti['PLACE-HOME-H-2-1']; ?></h2>
+                    <p><?php echo $Zitiziti['PLACE-HOME-P-2-1']; ?> <b><?php echo $Zitiziti['PLACE-HOME-B-2-1']; ?></b></p>
                 </div>
                 <div class="plac-hom-all-pla">
                     <ul>
@@ -129,7 +129,7 @@ if (isset($_GET['category'])) {
                                     </div>
                                     <div class="plac-hom-box-txt">
                                         <span><?php echo $category_row['category_name']; ?></span>
-                                        <span><?php echo $BIZBOOK['PLACE-MORE-DETAILS']; ?></span>
+                                        <span><?php echo $Zitiziti['PLACE-MORE-DETAILS']; ?></span>
                                     </div>
                                     <a href="<?php echo $PLACE_DETAIL_URL . urlModifier($placerow['place_slug']); ?>" class="fclick"></a>
                                 </div>
@@ -144,7 +144,7 @@ if (isset($_GET['category'])) {
     /* background: #525252; */
     text-shadow: 0px 0px 2px #fff;
     text-transform: uppercase;
-    margin-top: 5%;"><?php echo $BIZBOOK['PLACES_NO_PLACES_MESSAGE']; ?></span>
+    margin-top: 5%;"><?php echo $Zitiziti['PLACES_NO_PLACES_MESSAGE']; ?></span>
                             <?php
                         }
                         ?>
@@ -160,9 +160,9 @@ if (isset($_GET['category'])) {
     <div class="container">
         <div class="row">
             <div class="plac-hom-tit plac-hom-tit-ic-sugg">
-                    <h2><?php echo $BIZBOOK['PLACE-HOME-H-3-1']; ?></h2>
-                    <p><?php echo $BIZBOOK['PLACE-HOME-P-3-1']; ?> <b><?php echo $BIZBOOK['PLACE-HOME-B-3-1']; ?></b></p>
-                    <span data-toggle="modal" data-target="#addplacepop"><?php echo $BIZBOOK['PLACE-HOME-SPAN-3-1']; ?></span>
+                    <h2><?php echo $Zitiziti['PLACE-HOME-H-3-1']; ?></h2>
+                    <p><?php echo $Zitiziti['PLACE-HOME-P-3-1']; ?> <b><?php echo $Zitiziti['PLACE-HOME-B-3-1']; ?></b></p>
+                    <span data-toggle="modal" data-target="#addplacepop"><?php echo $Zitiziti['PLACE-HOME-SPAN-3-1']; ?></span>
                 </div>
         </div>
     </div>
@@ -175,16 +175,16 @@ if (isset($_GET['category'])) {
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="log-bor">&nbsp;</div>
-                    <span class="udb-inst"><?php echo $BIZBOOK['PLACE-HOME-P-4-1']; ?></span>
+                    <span class="udb-inst"><?php echo $Zitiziti['PLACE-HOME-P-4-1']; ?></span>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <!-- Modal Header -->
                     <div class="quote-pop">
-                        <h4><?php echo $BIZBOOK['PLACE-PLACE-DETAILS']; ?></h4>
+                        <h4><?php echo $Zitiziti['PLACE-PLACE-DETAILS']; ?></h4>
                         <div id="place_pop_enq_success" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['PLACE_ADD_SUCCESSFUL_MESSAGE']; ?></p>
+                            <p><?php echo $Zitiziti['PLACE_ADD_SUCCESSFUL_MESSAGE']; ?></p>
                         </div>
                         <div id="place_pop_enq_fail" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                            <p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                         </div>
                         <form method="post" name="place_add_request_form" id="place_add_request_form" class="place_add_request_form">
                             <input type="hidden" class="form-control"
@@ -193,33 +193,33 @@ if (isset($_GET['category'])) {
                                    placeholder=""
                                    required>
                             <div class="form-group">
-                                <input type="text" name="place_name" class="form-control" placeholder="<?php echo $BIZBOOK['PLACE-PLACE-NAME-LABEL']; ?>" required>
+                                <input type="text" name="place_name" class="form-control" placeholder="<?php echo $Zitiziti['PLACE-PLACE-NAME-LABEL']; ?>" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="place_address" class="form-control" placeholder="<?php echo $BIZBOOK['PLACE-PLACE-ADDRESS-LABEL']; ?>" required>
+                                <input type="text" name="place_address" class="form-control" placeholder="<?php echo $Zitiziti['PLACE-PLACE-ADDRESS-LABEL']; ?>" required>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" rows="3" name="place_description" placeholder="<?php echo $BIZBOOK['PLACE-PLACE-DESCRIPTION-LABEL']; ?>"></textarea>
+                                <textarea class="form-control" rows="3" name="place_description" placeholder="<?php echo $Zitiziti['PLACE-PLACE-DESCRIPTION-LABEL']; ?>"></textarea>
                             </div>
                             <div class="form-group">
                                 <div class="fil-img-uplo">
-                                    <span class="dumfil"><?php echo $BIZBOOK['PLACE-PLACE-IMAGE-LABEL']; ?></span>
+                                    <span class="dumfil"><?php echo $Zitiziti['PLACE-PLACE-IMAGE-LABEL']; ?></span>
                                     <input type="file" name="place_image" accept="image/*,.jpg,.jpeg,.png" class="form-control" required="">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="enquiry_name" class="form-control" placeholder="<?php echo $BIZBOOK['PLACE-PLACE-ENQUIRY-NAME-LABEL']; ?>" required>
+                                <input type="text" name="enquiry_name" class="form-control" placeholder="<?php echo $Zitiziti['PLACE-PLACE-ENQUIRY-NAME-LABEL']; ?>" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="<?php echo $BIZBOOK['PLACE-PLACE-ENQUIRY-EMAIL-LABEL']; ?>" required="required" value="" name="enquiry_email" pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$" title="<?php echo $BIZBOOK['PLACE-PLACE-ENQUIRY-INVALID-EMAIL-TITLE']; ?>">
+                                <input type="email" class="form-control" placeholder="<?php echo $Zitiziti['PLACE-PLACE-ENQUIRY-EMAIL-LABEL']; ?>" required="required" value="" name="enquiry_email" pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$" title="<?php echo $Zitiziti['PLACE-PLACE-ENQUIRY-INVALID-EMAIL-TITLE']; ?>">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" value="" name="enquiry_mobile" placeholder="<?php echo $BIZBOOK['PLACE-PLACE-ENQUIRY-MOBILE-LABEL']; ?>" pattern="[7-9]{1}[0-9]{9}" title="<?php echo $BIZBOOK['PLACE-PLACE-ENQUIRY-INVALID-MOBILE-TITLE']; ?>" required>
+                                <input type="text" class="form-control" value="" name="enquiry_mobile" placeholder="<?php echo $Zitiziti['PLACE-PLACE-ENQUIRY-MOBILE-LABEL']; ?>" pattern="[7-9]{1}[0-9]{9}" title="<?php echo $Zitiziti['PLACE-PLACE-ENQUIRY-INVALID-MOBILE-TITLE']; ?>" required>
                             </div>
                             <input type="hidden" id="source">
                             <button <?php if ($session_user_id == NULL || empty($session_user_id)) {
                                 ?> disabled="disabled" <?php } ?> type="submit" id="place_add_request_submit"  name="place_add_request_submit" class="place_add_request_submit btn btn-primary"><?php if ($session_user_id == NULL || empty($session_user_id)) {
-                                    ?> <?php echo $BIZBOOK['LOG_IN_TO_SUBMIT'];?> <?php }else{ ?><?php echo $BIZBOOK['SUBMIT']; ?> <?php }?></button>
+                                    ?> <?php echo $Zitiziti['LOG_IN_TO_SUBMIT'];?> <?php }else{ ?><?php echo $Zitiziti['SUBMIT']; ?> <?php }?></button>
                         </form>
                     </div>
                 </div>

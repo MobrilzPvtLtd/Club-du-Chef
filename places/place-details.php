@@ -50,7 +50,7 @@ placedetailpageview($place_id); //Function To Find Page View
             <div class="row">
                 <div class="all-list-bre plac-det-bred">
                     <ul>
-                        <li><a href="<?php echo $slash ?>places"><?php echo $BIZBOOK['PLACE-ALL-PLACES']; ?></a></li>
+                        <li><a href="<?php echo $slash ?>places"><?php echo $Zitiziti['PLACE-ALL-PLACES']; ?></a></li>
                         <li>
                             <a href="<?php echo $PLACE_DETAIL_URL . urlModifier($place_row['place_slug']); ?>"><?php echo stripslashes($place_row['place_name']); ?></a>
                         </li>
@@ -69,24 +69,24 @@ placedetailpageview($place_id); //Function To Find Page View
                     </div>
                     <div class="plac-det-ban-sub">
                         <ul>
-                            <li><span><?php echo $BIZBOOK['PLACE-STATUS']; ?>: <?php
+                            <li><span><?php echo $Zitiziti['PLACE-STATUS']; ?>: <?php
                                     if ($place_row['place_status'] == 1) {
-                                        echo $BIZBOOK['PLACE-ACTIVE'];
+                                        echo $Zitiziti['PLACE-ACTIVE'];
                                     } elseif ($place_row['place_status'] == 2) {
-                                        echo $BIZBOOK['PLACE-OPEN'];
+                                        echo $Zitiziti['PLACE-OPEN'];
                                     } elseif ($place_row['place_status'] == 3) {
-                                        echo $BIZBOOK['PLACE-CLOSED'];
+                                        echo $Zitiziti['PLACE-CLOSED'];
                                     } elseif ($place_row['place_status'] == 4) {
-                                        echo $BIZBOOK['PLACE-TEMPORARILY-CLOSED'];
+                                        echo $Zitiziti['PLACE-TEMPORARILY-CLOSED'];
                                     } elseif ($place_row['place_status'] == 5) {
-                                        echo $BIZBOOK['PLACE-PERMANENTLY-CLOSED'];
+                                        echo $Zitiziti['PLACE-PERMANENTLY-CLOSED'];
                                     }
                                     ?></span></li>
-                            <li><span><?php echo $BIZBOOK['PLACE-OPEN-TIME']; ?>: <?php echo $place_row['opening_time']; ?></span></li>
-                            <li><span><?php echo $BIZBOOK['PLACE-CLOSE-TIME']; ?>: <?php echo $place_row['closing_time']; ?></span></li>
-                            <li><span><?php echo $BIZBOOK['PLACE-TOURISM-FEE']; ?>: <?php echo $place_row['place_fee']; ?></span></li>
-                            <li><a href="<?php echo $place_row['google_map']; ?>" target="_blank"><?php echo $BIZBOOK['PLACE-DIRECTION']; ?></a></li>
-                            <li><a href="#near" class="cta-near"><?php echo $BIZBOOK['PLACE-NEAR-BY-SERVICES']; ?></a></li>
+                            <li><span><?php echo $Zitiziti['PLACE-OPEN-TIME']; ?>: <?php echo $place_row['opening_time']; ?></span></li>
+                            <li><span><?php echo $Zitiziti['PLACE-CLOSE-TIME']; ?>: <?php echo $place_row['closing_time']; ?></span></li>
+                            <li><span><?php echo $Zitiziti['PLACE-TOURISM-FEE']; ?>: <?php echo $place_row['place_fee']; ?></span></li>
+                            <li><a href="<?php echo $place_row['google_map']; ?>" target="_blank"><?php echo $Zitiziti['PLACE-DIRECTION']; ?></a></li>
+                            <li><a href="#near" class="cta-near"><?php echo $Zitiziti['PLACE-NEAR-BY-SERVICES']; ?></a></li>
                         </ul>
                     </div>
                 </div>
@@ -102,7 +102,7 @@ placedetailpageview($place_id); //Function To Find Page View
         <div class="container">
             <div class="row">
                 <div class="plac-det-tit-inn">
-                    <h2><?php echo $BIZBOOK['PLACE-PHOTO-GALLERY']; ?></h2>
+                    <h2><?php echo $Zitiziti['PLACE-PHOTO-GALLERY']; ?></h2>
                 </div>
                 <section id="gallery">
                     <div id="image-gallery">
@@ -138,7 +138,7 @@ if ((!empty($place_row['place_discover']))) {
             <div class="container">
                 <div class="row">
                     <div class="plac-det-tit-inn">
-                        <h2><?php echo $BIZBOOK['PLACE-DISCOVER']; ?> <?php echo stripslashes($place_row['place_name']); ?></h2>
+                        <h2><?php echo $Zitiziti['PLACE-DISCOVER']; ?> <?php echo stripslashes($place_row['place_name']); ?></h2>
                     </div>
                     <div class="plac-hom-all-pla">
                         <ul class="multiple-items1">
@@ -161,7 +161,7 @@ if ((!empty($place_row['place_discover']))) {
                                         </div>
                                         <div class="plac-hom-box-txt">
                                             <span><?php echo $place_discover_category_row['category_name']; ?></span>
-                                            <span><?php echo $BIZBOOK['PLACE-MORE-DETAILS']; ?></span>
+                                            <span><?php echo $Zitiziti['PLACE-MORE-DETAILS']; ?></span>
                                         </div>
                                         <a href="<?php echo $PLACE_DETAIL_URL . urlModifier($place_discover['place_slug']); ?>"
                                            class="fclick"></a>
@@ -187,7 +187,7 @@ if ((!empty($place_row['place_info_question']))) {
             <div class="container">
                 <div class="row">
                     <div class="plac-det-tit-inn">
-                        <h2><?php echo $BIZBOOK['PLACE-WHAT-PEOPLE-ASK']; ?></h2>
+                        <h2><?php echo $Zitiziti['PLACE-WHAT-PEOPLE-ASK']; ?></h2>
                     </div>
                     <div class="plac-det-faq">
                         <div class="how-to-coll">
@@ -232,7 +232,7 @@ if ((!empty($place_row['place_related']))) {
             <div class="container">
                 <div class="row">
                     <div class="plac-det-tit-inn">
-                        <h2><?php echo $BIZBOOK['PLACE-RELATED-PLACES']; ?></h2>
+                        <h2><?php echo $Zitiziti['PLACE-RELATED-PLACES']; ?></h2>
                     </div>
                     <div class="plac-hom-all-pla">
                         <ul class="multiple-items1">
@@ -255,7 +255,7 @@ if ((!empty($place_row['place_related']))) {
                                         </div>
                                         <div class="plac-hom-box-txt">
                                             <span><?php echo $place_related_category_row['category_name']; ?></span>
-                                            <span><?php echo $BIZBOOK['PLACE-MORE-DETAILS']; ?></span>
+                                            <span><?php echo $Zitiziti['PLACE-MORE-DETAILS']; ?></span>
                                         </div>
                                         <a href="<?php echo $PLACE_DETAIL_URL . urlModifier($place_related['place_slug']); ?>"
                                            class="fclick"></a>
@@ -282,8 +282,8 @@ if ((!empty($place_row['place_listings']))) {
             <div class="container">
                 <div class="row">
                     <div class="plac-hom-tit plac-hom-tit-ic-ser">
-                        <h2><?php echo $BIZBOOK['PLACE-TOP-NEARBY-SERVICES']; ?></h2>
-                        <p><?php echo $BIZBOOK['PLACE-TOP-NEARBY-SERVICES-P']; ?> <b><?php echo $BIZBOOK['PLACE-TOP-NEARBY-SERVICES-B']; ?></b></p>
+                        <h2><?php echo $Zitiziti['PLACE-TOP-NEARBY-SERVICES']; ?></h2>
+                        <p><?php echo $Zitiziti['PLACE-TOP-NEARBY-SERVICES-P']; ?> <b><?php echo $Zitiziti['PLACE-TOP-NEARBY-SERVICES-B']; ?></b></p>
                     </div>
                     <div class="plac-hom-all-pla">
                         <ul class="multiple-items1">
@@ -364,11 +364,11 @@ if ((!empty($place_row['place_listings']))) {
                                                 if ($star_rate != 0) {
                                                     ?>
                                                     <span
-                                                        class="re-cnt"><?php echo $review_count; ?><?php echo $BIZBOOK['REVIEWS']; ?></span>
+                                                        class="re-cnt"><?php echo $review_count; ?><?php echo $Zitiziti['REVIEWS']; ?></span>
                                                     <?php
                                                 } ?>
                                             </div>
-                                            <span><?php echo $BIZBOOK['PLACE-MORE-DETAILS']; ?></span>
+                                            <span><?php echo $Zitiziti['PLACE-MORE-DETAILS']; ?></span>
                                         </div>
                                         <a href="<?php echo $LISTING_URL . urlModifier($place_listings['listing_slug']); ?>"
                                            class="fclick"></a>
@@ -394,8 +394,8 @@ if ((!empty($place_row['place_events']))) {
             <div class="container">
                 <div class="row">
                     <div class="plac-hom-tit plac-hom-tit-ic-eve">
-                        <h2><?php echo $BIZBOOK['PLACE-EVENTS-H2']; ?> <b><?php echo stripslashes($place_row['place_name']); ?></b></h2>
-                        <p><?php echo $BIZBOOK['PLACE-EVENTS-P']; ?> <b><?php echo $BIZBOOK['PLACE-EVENTS-B']; ?></b></p>
+                        <h2><?php echo $Zitiziti['PLACE-EVENTS-H2']; ?> <b><?php echo stripslashes($place_row['place_name']); ?></b></h2>
+                        <p><?php echo $Zitiziti['PLACE-EVENTS-P']; ?> <b><?php echo $Zitiziti['PLACE-EVENTS-B']; ?></b></p>
                     </div>
                     <div class="plac-hom-all-pla plac-det-eve">
                         <ul class="multiple-items1">
@@ -437,8 +437,8 @@ if ((!empty($place_row['place_experts']))) {
             <div class="container">
                 <div class="row">
                     <div class="plac-hom-tit plac-hom-tit-ic-exp">
-                        <h2><?php echo $BIZBOOK['PLACE-EXPERTS-H2']; ?> <b><?php echo stripslashes($place_row['place_name']); ?></b></h2>
-                        <p><?php echo $BIZBOOK['PLACE-EXPERTS-P']; ?> <b><?php echo $BIZBOOK['PLACE-EXPERTS-B']; ?></b></p>
+                        <h2><?php echo $Zitiziti['PLACE-EXPERTS-H2']; ?> <b><?php echo stripslashes($place_row['place_name']); ?></b></h2>
+                        <p><?php echo $Zitiziti['PLACE-EXPERTS-P']; ?> <b><?php echo $Zitiziti['PLACE-EXPERTS-B']; ?></b></p>
                     </div>
                     <div class="plac-hom-all-pla">
                         <ul class="multiple-items1">
@@ -514,11 +514,11 @@ if ((!empty($place_row['place_experts']))) {
                                             if ($star_rate != 0) {
                                                 ?>
                                                 <span
-                                                    class="re-cnt"><?php echo $review_count; ?><?php echo $BIZBOOK['REVIEWS']; ?></span>
+                                                    class="re-cnt"><?php echo $review_count; ?><?php echo $Zitiziti['REVIEWS']; ?></span>
                                                 <?php
                                             } ?>
                                         </div>
-                                        <span><?php echo $BIZBOOK['PLACE-MORE-DETAILS']; ?></span>
+                                        <span><?php echo $Zitiziti['PLACE-MORE-DETAILS']; ?></span>
                                     </div>
                                     <a href="<?php echo $SERVICE_EXPERT_URL . urlModifier($place_experts['expert_slug']); ?>" class="fclick"></a>
                                 </div>
@@ -543,8 +543,8 @@ if ((!empty($place_row['places_news']))) {
             <div class="container">
                 <div class="row">
                     <div class="plac-hom-tit plac-hom-tit-ic-nws">
-                        <h2><?php echo $BIZBOOK['PLACE-NEWS-H2']; ?> <b><?php echo stripslashes($place_row['place_name']); ?></b></h2>
-                        <p><?php echo $BIZBOOK['PLACE-NEWS-P']; ?> <b><?php echo $BIZBOOK['PLACE-NEWS-B']; ?></b></p>
+                        <h2><?php echo $Zitiziti['PLACE-NEWS-H2']; ?> <b><?php echo stripslashes($place_row['place_name']); ?></b></h2>
+                        <p><?php echo $Zitiziti['PLACE-NEWS-P']; ?> <b><?php echo $Zitiziti['PLACE-NEWS-B']; ?></b></p>
                     </div>
                     <div class="plac-hom-all-pla plac-det-eve">
                         <ul class="multiple-items1">
@@ -584,10 +584,10 @@ if ((!empty($place_row['places_news']))) {
     <div class="container">
         <div class="row">
             <div class="plac-hom-tit plac-hom-tit-ic-sugg">
-                <h2><?php echo $BIZBOOK['PLACE-HOME-H-3-1']; ?></h2>
-                <p><?php echo $BIZBOOK['PLACE-HOME-P-3-1']; ?> <b><?php echo $BIZBOOK['PLACE-HOME-B-3-1']; ?></b></p>
+                <h2><?php echo $Zitiziti['PLACE-HOME-H-3-1']; ?></h2>
+                <p><?php echo $Zitiziti['PLACE-HOME-P-3-1']; ?> <b><?php echo $Zitiziti['PLACE-HOME-B-3-1']; ?></b></p>
                 <span data-toggle="modal"
-                      data-target="#addplacepop"><?php echo $BIZBOOK['PLACE-HOME-SPAN-3-1']; ?></span>
+                      data-target="#addplacepop"><?php echo $Zitiziti['PLACE-HOME-SPAN-3-1']; ?></span>
             </div>
         </div>
     </div>
@@ -600,16 +600,16 @@ if ((!empty($place_row['places_news']))) {
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="log-bor">&nbsp;</div>
-                <span class="udb-inst"><?php echo $BIZBOOK['PLACE-HOME-P-4-1']; ?></span>
+                <span class="udb-inst"><?php echo $Zitiziti['PLACE-HOME-P-4-1']; ?></span>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <!-- Modal Header -->
                 <div class="quote-pop">
-                    <h4><?php echo $BIZBOOK['PLACE-PLACE-DETAILS']; ?></h4>
+                    <h4><?php echo $Zitiziti['PLACE-PLACE-DETAILS']; ?></h4>
                     <div id="place_pop_enq_success" class="log" style="display: none;">
-                        <p><?php echo $BIZBOOK['PLACE_ADD_SUCCESSFUL_MESSAGE']; ?></p>
+                        <p><?php echo $Zitiziti['PLACE_ADD_SUCCESSFUL_MESSAGE']; ?></p>
                     </div>
                     <div id="place_pop_enq_fail" class="log" style="display: none;">
-                        <p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                        <p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                     </div>
                     <form method="post" name="place_add_request_form" id="place_add_request_form"
                           class="place_add_request_form">
@@ -620,46 +620,46 @@ if ((!empty($place_row['places_news']))) {
                                required>
                         <div class="form-group">
                             <input type="text" name="place_name" class="form-control"
-                                   placeholder="<?php echo $BIZBOOK['PLACE-PLACE-NAME-LABEL']; ?>" required>
+                                   placeholder="<?php echo $Zitiziti['PLACE-PLACE-NAME-LABEL']; ?>" required>
                         </div>
                         <div class="form-group">
                             <input type="text" name="place_address" class="form-control"
-                                   placeholder="<?php echo $BIZBOOK['PLACE-PLACE-ADDRESS-LABEL']; ?>" required>
+                                   placeholder="<?php echo $Zitiziti['PLACE-PLACE-ADDRESS-LABEL']; ?>" required>
                         </div>
                         <div class="form-group">
                             <textarea class="form-control" rows="3" name="place_description"
-                                      placeholder="<?php echo $BIZBOOK['PLACE-PLACE-DESCRIPTION-LABEL']; ?>"></textarea>
+                                      placeholder="<?php echo $Zitiziti['PLACE-PLACE-DESCRIPTION-LABEL']; ?>"></textarea>
                         </div>
                         <div class="form-group">
                             <div class="fil-img-uplo">
-                                <span class="dumfil"><?php echo $BIZBOOK['PLACE-PLACE-IMAGE-LABEL']; ?></span>
+                                <span class="dumfil"><?php echo $Zitiziti['PLACE-PLACE-IMAGE-LABEL']; ?></span>
                                 <input type="file" name="place_image" accept="image/*,.jpg,.jpeg,.png"
                                        class="form-control" required="">
                             </div>
                         </div>
                         <div class="form-group">
                             <input type="text" name="enquiry_name" class="form-control"
-                                   placeholder="<?php echo $BIZBOOK['PLACE-PLACE-ENQUIRY-NAME-LABEL']; ?>" required>
+                                   placeholder="<?php echo $Zitiziti['PLACE-PLACE-ENQUIRY-NAME-LABEL']; ?>" required>
                         </div>
                         <div class="form-group">
                             <input type="email" class="form-control"
-                                   placeholder="<?php echo $BIZBOOK['PLACE-PLACE-ENQUIRY-EMAIL-LABEL']; ?>"
+                                   placeholder="<?php echo $Zitiziti['PLACE-PLACE-ENQUIRY-EMAIL-LABEL']; ?>"
                                    required="required" value="" name="enquiry_email"
                                    pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                   title="<?php echo $BIZBOOK['PLACE-PLACE-ENQUIRY-INVALID-EMAIL-TITLE']; ?>">
+                                   title="<?php echo $Zitiziti['PLACE-PLACE-ENQUIRY-INVALID-EMAIL-TITLE']; ?>">
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-control" value="" name="enquiry_mobile"
-                                   placeholder="<?php echo $BIZBOOK['PLACE-PLACE-ENQUIRY-MOBILE-LABEL']; ?>"
+                                   placeholder="<?php echo $Zitiziti['PLACE-PLACE-ENQUIRY-MOBILE-LABEL']; ?>"
                                    pattern="[7-9]{1}[0-9]{9}"
-                                   title="<?php echo $BIZBOOK['PLACE-PLACE-ENQUIRY-INVALID-MOBILE-TITLE']; ?>" required>
+                                   title="<?php echo $Zitiziti['PLACE-PLACE-ENQUIRY-INVALID-MOBILE-TITLE']; ?>" required>
                         </div>
                         <input type="hidden" id="source">
                         <button <?php if ($session_user_id == NULL || empty($session_user_id)) {
                             ?> disabled="disabled" <?php } ?> type="submit" id="place_add_request_submit"
                                                               name="place_add_request_submit"
                                                               class="place_add_request_submit btn btn-primary"><?php if ($session_user_id == NULL || empty($session_user_id)) {
-                                ?><?php echo $BIZBOOK['LOG_IN_TO_SUBMIT']; ?><?php } else { ?><?php echo $BIZBOOK['SUBMIT']; ?><?php } ?></button>
+                                ?><?php echo $Zitiziti['LOG_IN_TO_SUBMIT']; ?><?php } else { ?><?php echo $Zitiziti['SUBMIT']; ?><?php } ?></button>
                     </form>
                 </div>
             </div>
@@ -674,7 +674,7 @@ if ((!empty($place_row['places_news']))) {
 
             <!-- Modal Header -->
             <div class="modal-header">
-                <h4 class="modal-title"><?php echo $BIZBOOK['NEWS-SHARE-NOW']; ?></h4>
+                <h4 class="modal-title"><?php echo $Zitiziti['NEWS-SHARE-NOW']; ?></h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
@@ -683,7 +683,7 @@ if ((!empty($place_row['places_news']))) {
                 <input type="text" value="" id="shareurl">
                 <div class="shareurltip">
                     <button onclick="shareurl()" onmouseout="shareurlout()">
-                        <span class="shareurltxt" id="myTooltip"><?php echo $BIZBOOK['NEWS-COPY-TO-CLIPBOARD']; ?></span>
+                        <span class="shareurltxt" id="myTooltip"><?php echo $Zitiziti['NEWS-COPY-TO-CLIPBOARD']; ?></span>
                         Copy text
                     </button>
                 </div>

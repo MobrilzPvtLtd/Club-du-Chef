@@ -11,14 +11,14 @@ include "header.php";
 
             <div class="ad-dash-s1">
                 <div class="cd-cen-intr-inn cd-cen-intr-inn1">
-                <h2>Welcome to <b>Bizbook updates</b></h2>
+                <h2>Welcome to <b>Zitiziti updates</b></h2>
                 <p>You can you can easy to update your template with our update wizard.</p>
                 </div>
             </div>
 
 <!--User Welcome Div ends -->
             <div class="update-panel">
-                <iframe src="https://directoryfinder.net/bizbook-updates/bizbook-update.html" title="Iframe Example"></iframe>
+                <iframe src="https://directoryfinder.net/Zitiziti-updates/Zitiziti-update.html" title="Iframe Example"></iframe>
             </div>
             
             

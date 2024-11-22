@@ -43,7 +43,7 @@ if ((getCountCategoryCategory($category_id) <= 0) || $category_id == NULL){
                     </div>
                     <div class="ne-2">
                         <h5><?php echo $nearby_listrow['listing_name']; ?></h5>
-                        <p><?php echo $BIZBOOK['CITY'].':'; ?> <?php echo $nearby_listrow['listing_address']; ?></p>
+                        <p><?php echo $Zitiziti['CITY'].':'; ?> <?php echo $nearby_listrow['listing_address']; ?></p>
                     </div>
                     <div class="ne-3">
                         <span>5.0</span>

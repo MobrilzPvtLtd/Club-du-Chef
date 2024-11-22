@@ -10,67 +10,67 @@ include "header.php";
         <div class="row">
             <div class="login-main add-list posr">
                 <div class="log-bor">&nbsp;</div>
-                <span class="udb-inst"><?php echo $BIZBOOK['pg_faq_head']; ?></span>
+                <span class="udb-inst"><?php echo $Zitiziti['pg_faq_head']; ?></span>
                 <div class="log log-1">
                     <div class="login">
-                        <h4><?php echo $BIZBOOK['pg_faq_tit']; ?></h4>
-                        <p><?php echo $BIZBOOK['pg_faq_sub_tit']; ?></p>
+                        <h4><?php echo $Zitiziti['pg_faq_tit']; ?></h4>
+                        <p><?php echo $Zitiziti['pg_faq_sub_tit']; ?></p>
                         <div class="col-md-12">
                             <div class="how-to-coll">
                                 <ul>
                                     <li>
-                                        <h4><?php echo $BIZBOOK['pg_faq_q1']; ?></h4>
+                                        <h4><?php echo $Zitiziti['pg_faq_q1']; ?></h4>
                                         <div>
-                                            <p><?php echo $BIZBOOK['pg_faq_a1']; ?></p>
+                                            <p><?php echo $Zitiziti['pg_faq_a1']; ?></p>
                                         </div>
                                     </li>
                                     <li>
-                                        <h4><?php echo $BIZBOOK['pg_faq_q2']; ?></h4>
+                                        <h4><?php echo $Zitiziti['pg_faq_q2']; ?></h4>
                                         <div>
-                                            <p><?php echo $BIZBOOK['pg_faq_a2']; ?></p>
+                                            <p><?php echo $Zitiziti['pg_faq_a2']; ?></p>
                                         </div>
                                     </li>
                                     <li>
-                                        <h4><?php echo $BIZBOOK['pg_faq_q3']; ?></h4>
+                                        <h4><?php echo $Zitiziti['pg_faq_q3']; ?></h4>
                                         <div>
-                                            <p><?php echo $BIZBOOK['pg_faq_a3']; ?></p>
+                                            <p><?php echo $Zitiziti['pg_faq_a3']; ?></p>
                                         </div>
                                     </li>
                                     <li>
-                                        <h4><?php echo $BIZBOOK['pg_faq_q4']; ?></h4>
+                                        <h4><?php echo $Zitiziti['pg_faq_q4']; ?></h4>
                                         <div>
-                                            <p><?php echo $BIZBOOK['pg_faq_a4']; ?></p>
+                                            <p><?php echo $Zitiziti['pg_faq_a4']; ?></p>
                                         </div>
                                     </li>
                                     <li>
-                                        <h4><?php echo $BIZBOOK['pg_faq_q5']; ?></h4>
+                                        <h4><?php echo $Zitiziti['pg_faq_q5']; ?></h4>
                                         <div>
-                                            <p><?php echo $BIZBOOK['pg_faq_a5']; ?></p>
+                                            <p><?php echo $Zitiziti['pg_faq_a5']; ?></p>
                                         </div>
                                     </li>
                                     <li>
-                                        <h4><?php echo $BIZBOOK['pg_faq_q6']; ?></h4>
+                                        <h4><?php echo $Zitiziti['pg_faq_q6']; ?></h4>
                                         <div>
-                                            <p><?php echo $BIZBOOK['pg_faq_a6']; ?></p>
+                                            <p><?php echo $Zitiziti['pg_faq_a6']; ?></p>
                                         </div>
                                     </li>
                                     <li>
-                                        <h4><?php echo $BIZBOOK['pg_faq_q7']; ?></h4>
+                                        <h4><?php echo $Zitiziti['pg_faq_q7']; ?></h4>
                                         <div>
-                                            <p><?php echo $BIZBOOK['pg_faq_a7']; ?></p>
+                                            <p><?php echo $Zitiziti['pg_faq_a7']; ?></p>
                                         </div>
                                     </li>
                                     <li>
-                                        <h4><?php echo $BIZBOOK['pg_faq_q8']; ?></h4>
+                                        <h4><?php echo $Zitiziti['pg_faq_q8']; ?></h4>
                                         <div>
-                                            <p><?php echo $BIZBOOK['pg_faq_a8']; ?></p>
+                                            <p><?php echo $Zitiziti['pg_faq_a8']; ?></p>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <a href="dashboard" class="skip"><?php echo $BIZBOOK['GO_TO_USER_DASHBOARD']; ?> &gt;&gt;</a>
+                            <a href="dashboard" class="skip"><?php echo $Zitiziti['GO_TO_USER_DASHBOARD']; ?> &gt;&gt;</a>
                         </div>
                     </div>
                 </div>

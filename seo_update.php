@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
         }else{
             
-            $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+            $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
             header('Location: db-seo');
             exit;
@@ -55,14 +55,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($sql) {
 
-            $_SESSION['status_msg'] = $BIZBOOK['USER_SEO_UPDATE_SUCCESS_MESSAGE'];
+            $_SESSION['status_msg'] = $Zitiziti['USER_SEO_UPDATE_SUCCESS_MESSAGE'];
 
             header('Location: db-seo');
             exit;
 
         } else {
 
-            $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+            $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
             header('Location: db-seo');
             exit;
@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } else {
 
-    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: db-seo');
     exit;

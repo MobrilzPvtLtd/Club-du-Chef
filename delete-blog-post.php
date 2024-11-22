@@ -22,7 +22,7 @@ if (file_exists('config/blog_page_authentication.php')) {
         <div class="row">
             <div class="login-main add-list">
                 <div class="log-bor">&nbsp;</div>
-                <span class="steps"><?php echo $BIZBOOK['DELETE_BLOG_POST']; ?></span>
+                <span class="steps"><?php echo $Zitiziti['DELETE_BLOG_POST']; ?></span>
                 <div class="log">
                     <div class="login add-list-off">
                         <?php
@@ -30,7 +30,7 @@ if (file_exists('config/blog_page_authentication.php')) {
                         $blogs_a_row = getBlog($blog_codea);
 
                         ?>
-                        <h4><?php echo $BIZBOOK['DELETE_THIS_BLOG_POST']; ?></h4>
+                        <h4><?php echo $Zitiziti['DELETE_THIS_BLOG_POST']; ?></h4>
                         <form action="blog_delete.php" class="blog_delete_form" id="blog_delete_form"
                               name="blog_delete_form"
                               method="post" enctype="multipart/form-data">
@@ -50,7 +50,7 @@ if (file_exists('config/blog_page_authentication.php')) {
                                                 <input type="text" name="blog_name"
                                                        value="<?php echo $blogs_a_row['blog_name']; ?>"
                                                        readonly="readonly" class="form-control"
-                                                       placeholder="<?php echo $BIZBOOK['POST_NAME']; ?>*">
+                                                       placeholder="<?php echo $Zitiziti['POST_NAME']; ?>*">
                                             </div>
                                         </div>
                                     </div>
@@ -61,7 +61,7 @@ if (file_exists('config/blog_page_authentication.php')) {
                                             <div class="form-group">
                                                 <select disabled="disabled" name="category_id"
                                                         id="category_id" class="chosen-select form-control">
-                                                    <option value=""><?php echo $BIZBOOK['SELECT_CATEGORY']; ?></option>
+                                                    <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                                     <?php
                                                     foreach (getAllBlogCategories() as $categories_row) {
                                                         ?>
@@ -84,7 +84,7 @@ if (file_exists('config/blog_page_authentication.php')) {
                                             <div class="form-group">
                                                 <textarea name="blog_description" readonly="readonly"
                                                           class="form-control"
-                                                          placeholder="<?php echo $BIZBOOK['POST_DETAILS']; ?>"><?php echo $blogs_a_row['blog_description'] ?></textarea>
+                                                          placeholder="<?php echo $Zitiziti['POST_DETAILS']; ?>"><?php echo $blogs_a_row['blog_description'] ?></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -97,7 +97,7 @@ if (file_exists('config/blog_page_authentication.php')) {
                                                            id="evefmenab"
                                                            <?php if ($blogs_a_row['isenquiry'] == 1){ ?>checked="" <?php } ?>>
                                                     <label
-                                                        for="evefmenab"><?php echo $BIZBOOK['ENQUIRY_BOX_ENABLE']; ?></label>
+                                                        for="evefmenab"><?php echo $Zitiziti['ENQUIRY_BOX_ENABLE']; ?></label>
                                                 </div>
                                             </div>
                                         </div>
@@ -109,10 +109,10 @@ if (file_exists('config/blog_page_authentication.php')) {
                             <div class="row">
                                 <div class="col-md-12">
                                     <button type="submit" name="blog_submit"
-                                            class="btn btn-primary"><?php echo $BIZBOOK['DELETE_BLOG']; ?></button>
+                                            class="btn btn-primary"><?php echo $Zitiziti['DELETE_BLOG']; ?></button>
                                 </div>
                                 <div class="col-md-12">
-                                    <a href="dashboard" class="skip"><?php echo $BIZBOOK['GO_TO_USER_DASHBOARD']; ?>
+                                    <a href="dashboard" class="skip"><?php echo $Zitiziti['GO_TO_USER_DASHBOARD']; ?>
                                         >></a>
                                 </div>
                             </div>

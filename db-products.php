@@ -20,13 +20,13 @@ if (file_exists('config/product_page_authentication.php')) {
     <div class="ud-main-inn ud-no-rhs">
         <div class="ud-cen">
             <div class="log-bor">&nbsp;</div>
-            <span class="udb-inst"><?php echo $BIZBOOK['ALL_PRODUCTS']; ?></span>
+            <span class="udb-inst"><?php echo $Zitiziti['ALL_PRODUCTS']; ?></span>
             <?php include('config/user_activation_checker.php'); ?>
             <div class="ud-cen-s2 px-2">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab"
-                           href="#myproducts"><?php echo $BIZBOOK['PRODUCT_DETAILS']; ?></a>
+                           href="#myproducts"><?php echo $Zitiziti['PRODUCT_DETAILS']; ?></a>
                     </li>
                     <!--                <li class="nav-item">-->
                     <!--                    <a class="nav-link" data-toggle="tab" href="#mycart">Cart</a>-->
@@ -43,19 +43,19 @@ if (file_exists('config/product_page_authentication.php')) {
                 </ul>
                 <div class="tab-content">
                     <div id="myproducts" class="container mx-auto px-0 tab-pane active">
-                        <h2><?php echo $BIZBOOK['PRODUCT_DETAILS']; ?></h2>
+                        <h2><?php echo $Zitiziti['PRODUCT_DETAILS']; ?></h2>
                         <?php include "page_level_message.php"; ?>
-                        <a href="add-new-product" class="db-tit-btn"><?php echo $BIZBOOK['ADD_NEW_PRODUCT']; ?></a>
+                        <a href="add-new-product" class="db-tit-btn"><?php echo $Zitiziti['ADD_NEW_PRODUCT']; ?></a>
                         <table class="responsive-table bordered">
                             <thead>
                             <tr>
-                                <th><?php echo $BIZBOOK['S_NO']; ?></th>
-                                <th><?php echo $BIZBOOK['PRODUCT_NAME']; ?></th>
-                                <th><?php echo $BIZBOOK['VIEWS']; ?></th>
-                                <th><?php echo $BIZBOOK['STATUS']; ?></th>
-                                <th><?php echo $BIZBOOK['EDIT']; ?></th>
-                                <th><?php echo $BIZBOOK['DELETE']; ?></th>
-                                <th><?php echo $BIZBOOK['PREVIEW']; ?></th>
+                                <th><?php echo $Zitiziti['S_NO']; ?></th>
+                                <th><?php echo $Zitiziti['PRODUCT_NAME']; ?></th>
+                                <th><?php echo $Zitiziti['VIEWS']; ?></th>
+                                <th><?php echo $Zitiziti['STATUS']; ?></th>
+                                <th><?php echo $Zitiziti['EDIT']; ?></th>
+                                <th><?php echo $Zitiziti['DELETE']; ?></th>
+                                <th><?php echo $Zitiziti['PREVIEW']; ?></th>
                             </tr>
                             </thead>
                             <tbody>
@@ -82,11 +82,11 @@ if (file_exists('config/product_page_authentication.php')) {
                                     <td><span class="db-list-ststus"><?php echo $productrow['product_status']; ?></span>
                                     </td>
                                     <td><a href="edit-product?code=<?php echo $productrow['product_code']; ?>"
-                                           class="db-list-edit"><?php echo $BIZBOOK['EDIT']; ?></a></td>
+                                           class="db-list-edit"><?php echo $Zitiziti['EDIT']; ?></a></td>
                                     <td><a href="delete-product?code=<?php echo $productrow['product_code']; ?>"
-                                           class="db-list-edit"><?php echo $BIZBOOK['DELETE']; ?></a></td>
+                                           class="db-list-edit"><?php echo $Zitiziti['DELETE']; ?></a></td>
                                     <td><a href="<?php echo $PRODUCT_URL . urlModifier($productrow['product_slug']); ?>"
-                                           class="db-list-edit" target="_blank"><?php echo $BIZBOOK['PREVIEW']; ?></a>
+                                           class="db-list-edit" target="_blank"><?php echo $Zitiziti['PREVIEW']; ?></a>
                                     </td>
                                 </tr>
 
@@ -111,7 +111,7 @@ if (file_exists('config/product_page_authentication.php')) {
 <!--                            </div>-->
 <!--                            <div class="product">-->
 <!--                                <div class="product-image">-->
-<!--                                    <img src="http://localhost/bizbook/images/products/92311apple-iphone-12-dummyapplefsn-original-imafwg8dpyjvgg3j.jpeg">-->
+<!--                                    <img src="http://localhost/Zitiziti/images/products/92311apple-iphone-12-dummyapplefsn-original-imafwg8dpyjvgg3j.jpeg">-->
 <!--                                </div>-->
 <!--                                <div class="product-details">-->
 <!--                                    <div class="product-title"><a href="#">Dingo Dog Bones</a></div>-->
@@ -130,7 +130,7 @@ if (file_exists('config/product_page_authentication.php')) {
 <!---->
 <!--                            <div class="product">-->
 <!--                                <div class="product-image">-->
-<!--                                    <img src="http://localhost/bizbook/images/products/92311apple-iphone-12-dummyapplefsn-original-imafwg8dpyjvgg3j.jpeg">-->
+<!--                                    <img src="http://localhost/Zitiziti/images/products/92311apple-iphone-12-dummyapplefsn-original-imafwg8dpyjvgg3j.jpeg">-->
 <!--                                </div>-->
 <!--                                <div class="product-details">-->
 <!--                                    <div class="product-title"><a href="#">Dingo Dog Bones</a></div>-->
@@ -170,7 +170,7 @@ if (file_exists('config/product_page_authentication.php')) {
 <!--                                <td><span class="db-list-rat">$99</span></td>-->
 <!--                                <td><span class="db-list-ststus">Delivered</span></td>-->
 <!--                                <td>03, Aug 2022</td>-->
-<!--                                <td><a href="http://localhost/bizbook/product/cotton-and-accessories"-->
+<!--                                <td><a href="http://localhost/Zitiziti/product/cotton-and-accessories"-->
 <!--                                       class="db-list-edit" target="_blank">View</a></td>-->
 <!--                            </tr>-->
 <!--                            </tbody>-->
@@ -304,7 +304,7 @@ if (file_exists('config/product_page_authentication.php')) {
 <!--                                </div>-->
 <!--                                <button type="submit" id="expert_manage_lead_submit--><?php //echo $enquiry_id; ?><!--"-->
 <!--                                        name="expert_manage_lead_submit"-->
-<!--                                        class="btn btn-primary">--><?php //echo $BIZBOOK['SUBMIT']; ?><!--</button>-->
+<!--                                        class="btn btn-primary">--><?php //echo $Zitiziti['SUBMIT']; ?><!--</button>-->
 <!--                            </form>-->
 <!--                        </div>-->
 <!--                    </div>-->
@@ -337,7 +337,7 @@ if (file_exists('config/product_page_authentication.php')) {
 <!--                                </div>-->
 <!--                                <button type="submit" id="expert_manage_lead_submit--><?php //echo $enquiry_id; ?><!--"-->
 <!--                                        name="expert_manage_lead_submit"-->
-<!--                                        class="btn btn-primary">--><?php //echo $BIZBOOK['SUBMIT']; ?><!--</button>-->
+<!--                                        class="btn btn-primary">--><?php //echo $Zitiziti['SUBMIT']; ?><!--</button>-->
 <!--                            </form>-->
 <!--                        </div>-->
 <!--                    </div>-->

@@ -9,9 +9,9 @@ include "header.php";
     <div class="container">
         <div class="row">
             <div class="plainpg">
-                <h1><?php echo $BIZBOOK['pg_pri_tit']; ?></h1>
-                <p><?php echo $BIZBOOK['pg_pri_txt1']; ?></p>
-                <p><?php echo $BIZBOOK['pg_pri_txt2']; ?></p>
+                <h1><?php echo $Zitiziti['pg_pri_tit']; ?></h1>
+                <p><?php echo $Zitiziti['pg_pri_txt1']; ?></p>
+                <p><?php echo $Zitiziti['pg_pri_txt2']; ?></p>
             </div>
         </div>
     </div>

@@ -56,8 +56,8 @@ jobprofilepageview($job_profile_id); //Function To Find Page View
                     <!--START-->
                     <div class="profile">
                         <div class="jpro-ban-bg-img">
-                            <span><b><?php if($user_details_row['user_followers'] != ''){ echo substr_count($user_details_row['user_followers'], ",")+1; } else{ echo "0"; }?></b> <?php echo $BIZBOOK['FOLLOWERS']; ?></span>
-                            <p><?php echo $BIZBOOK['JOB-INTERVIEW-AVAILABLE-TIME-TO-TALK-LABEL']; ?>:
+                            <span><b><?php if($user_details_row['user_followers'] != ''){ echo substr_count($user_details_row['user_followers'], ",")+1; } else{ echo "0"; }?></b> <?php echo $Zitiziti['FOLLOWERS']; ?></span>
+                            <p><?php echo $Zitiziti['JOB-INTERVIEW-AVAILABLE-TIME-TO-TALK-LABEL']; ?>:
                                 <b><?php echo timeFormatconverter($job_profile_row['available_time_start']); ?></b></p>
                             <img
                                 src="<?php echo $slash; ?>jobs/images/jobs/<?php echo $job_profile_row['cover_image']; ?>"
@@ -78,29 +78,29 @@ jobprofilepageview($job_profile_id); //Function To Find Page View
                                 <p><?php echo $job_sub_category_name . " - " . $job_profile_row['current_company']; ?></p>
                             </div>
                             <div class="s3">
-                                <a href="mailto:<?php echo $user_details_row['email_id']; ?>" class="cta fol" target="_blank"><?php echo $BIZBOOK['MESSAGE']; ?></a>
-                                <span class="cta"><?php echo $BIZBOOK['FOLLOW']; ?></span>
+                                <a href="mailto:<?php echo $user_details_row['email_id']; ?>" class="cta fol" target="_blank"><?php echo $Zitiziti['MESSAGE']; ?></a>
+                                <span class="cta"><?php echo $Zitiziti['FOLLOW']; ?></span>
                             </div>
                         </div>
                     </div>
                     <!--END-->
                     <!--START-->
                     <div class="jb-pro-bio">
-                        <h4><?php echo $BIZBOOK['JOB-INTERVIEW-EMPLOYEE-DETAILS-LABEL']; ?></h4>
+                        <h4><?php echo $Zitiziti['JOB-INTERVIEW-EMPLOYEE-DETAILS-LABEL']; ?></h4>
                         <ul>
                             <li>
-                                <?php echo $BIZBOOK['PHONE']; ?>
+                                <?php echo $Zitiziti['PHONE']; ?>
                                 <span><?php echo $user_details_row['mobile_number']; ?></span>
                             </li>
                             <li>
-                                <?php echo $BIZBOOK['EMAIL']; ?>
+                                <?php echo $Zitiziti['EMAIL']; ?>
                                 <span><?php echo $user_details_row['email_id']; ?></span>
                             </li>
                             <?php
                             if ($job_profile_row['current_company'] != NULL) {
                                 ?>
                                 <li>
-                                    <?php echo $BIZBOOK['JOB-INTERVIEW-CURRENT-COMPANY-LABEL']; ?>
+                                    <?php echo $Zitiziti['JOB-INTERVIEW-CURRENT-COMPANY-LABEL']; ?>
                                     <span><?php echo $job_profile_row['current_company']; ?></span>
                                 </li>
                                 <?php
@@ -108,25 +108,25 @@ jobprofilepageview($job_profile_id); //Function To Find Page View
                             if ($job_profile_row['notice_period'] != NULL) {
                                 ?>
                                 <li>
-                                    <?php echo $BIZBOOK['JOB-INTERVIEW-NOTICE-PERIOD-LABEL']; ?>
+                                    <?php echo $Zitiziti['JOB-INTERVIEW-NOTICE-PERIOD-LABEL']; ?>
                                     <span><?php
                                         $notice_period = $job_profile_row['notice_period'];
                                         if ($notice_period == 1) {
-                                            echo $BIZBOOK['JOB_IMMEDIATE_JOINEE'];
+                                            echo $Zitiziti['JOB_IMMEDIATE_JOINEE'];
                                         } elseif ($notice_period == 2) {
-                                            echo $BIZBOOK['JOB_15_DAYS'];
+                                            echo $Zitiziti['JOB_15_DAYS'];
                                         } elseif ($notice_period == 3) {
-                                            echo $BIZBOOK['JOB_1_MONTH'];
+                                            echo $Zitiziti['JOB_1_MONTH'];
                                         } elseif ($notice_period == 4) {
-                                            echo $BIZBOOK['JOB_2_MONTHS'];
+                                            echo $Zitiziti['JOB_2_MONTHS'];
                                         } elseif ($notice_period == 5) {
-                                            echo $BIZBOOK['JOB_3_MONTHS'];
+                                            echo $Zitiziti['JOB_3_MONTHS'];
                                         } elseif ($notice_period == 6) {
-                                            echo $BIZBOOK['JOB_6_MONTHS'];
+                                            echo $Zitiziti['JOB_6_MONTHS'];
                                         } elseif ($notice_period == 7) {
-                                            echo $BIZBOOK['JOB_1_YEAR'];
+                                            echo $Zitiziti['JOB_1_YEAR'];
                                         } elseif ($notice_period == 8) {
-                                            echo $BIZBOOK['JOB_2_YEARS'];
+                                            echo $Zitiziti['JOB_2_YEARS'];
                                         }
                                         ?></span>
                                 </li>
@@ -135,18 +135,18 @@ jobprofilepageview($job_profile_id); //Function To Find Page View
                             if ($job_profile_row['years_of_experience'] != NULL) {
                                 ?>
                                 <li>
-                                    <?php echo $BIZBOOK['OTHER_INFORMATIONS_PLACEHOLDER_LEFT']; ?>
-                                    <span><?php echo $job_profile_row['years_of_experience']; ?><?php echo $BIZBOOK['YEARS']; ?></span>
+                                    <?php echo $Zitiziti['OTHER_INFORMATIONS_PLACEHOLDER_LEFT']; ?>
+                                    <span><?php echo $job_profile_row['years_of_experience']; ?><?php echo $Zitiziti['YEARS']; ?></span>
                                 </li>
                                 <?php
                             }
                             if ($job_profile_row['job_profile_resume'] != NULL) {
                                 ?>
                                 <li>
-                                    <?php echo $BIZBOOK['JOB_APPLI_RESUME']; ?>
+                                    <?php echo $Zitiziti['JOB_APPLI_RESUME']; ?>
                                     <a href="<?php echo $slash; ?>jobs/images/jobs/<?php echo $job_profile_row['job_profile_resume']; ?>"
                                        download="<?php echo $job_profile_row['profile_name'] . ' - Resume'; ?>"><i
-                                            class="material-icons">file_download</i> <?php echo $BIZBOOK['DOWNLOAD']; ?>
+                                            class="material-icons">file_download</i> <?php echo $Zitiziti['DOWNLOAD']; ?>
                                     </a>
                                 </li>
                                 <?php
@@ -158,7 +158,7 @@ jobprofilepageview($job_profile_id); //Function To Find Page View
                     <!--START-->
                     <div class="jpro-bd">
                         <div class="jpro-bd-com">
-                            <h4><?php echo $BIZBOOK['OTHER_INFORMATIONS_PLACEHOLDER_LEFT']; ?></h4>
+                            <h4><?php echo $Zitiziti['OTHER_INFORMATIONS_PLACEHOLDER_LEFT']; ?></h4>
                             <ul>
                                 <?php
                                 if ($job_profile_row['experience_1'] != NULL) {
@@ -185,7 +185,7 @@ jobprofilepageview($job_profile_id); //Function To Find Page View
                             </ul>
                         </div>
                         <div class="jpro-bd-com">
-                            <h4><?php echo $BIZBOOK['JOB-SKILL-SET-LABEL']; ?></h4>
+                            <h4><?php echo $Zitiziti['JOB-SKILL-SET-LABEL']; ?></h4>
                             <?php
                             $skill_set = explode(',', $job_profile_row['skill_set']);
                             foreach ($skill_set as $skill_set_id) {
@@ -197,7 +197,7 @@ jobprofilepageview($job_profile_id); //Function To Find Page View
                             ?>
                         </div>
                         <div class="jpro-bd-com">
-                            <h4><?php echo $BIZBOOK['JOB_EDUCATION']; ?></h4>
+                            <h4><?php echo $Zitiziti['JOB_EDUCATION']; ?></h4>
                             <ul>
                                 <?php
                                 if ($job_profile_row['education_1'] != NULL) {
@@ -224,7 +224,7 @@ jobprofilepageview($job_profile_id); //Function To Find Page View
                             </ul>
                         </div>
                         <div class="jpro-bd-com">
-                            <h4><?php echo $BIZBOOK['JOB-INTERVIEW-ADDITIONAL-INFORMATION-LABEL']; ?></h4>
+                            <h4><?php echo $Zitiziti['JOB-INTERVIEW-ADDITIONAL-INFORMATION-LABEL']; ?></h4>
                             <?php
                             if ($job_profile_row['additional_info_1'] != NULL) {
                                 ?>
@@ -253,13 +253,13 @@ jobprofilepageview($job_profile_id); //Function To Find Page View
                 </div>
                 <div class="rhs">
                     <div class="ud-rhs-promo">
-                        <h3><?php echo $BIZBOOK['JOB-PROFILE-H1']; ?></h3>
-                        <p><?php echo $BIZBOOK['JOB-PROFILE-P']; ?></p>
-                        <a href="<?php echo $slash; ?>login"><?php echo $BIZBOOK['JOB-PROFILE-A']; ?></a>
+                        <h3><?php echo $Zitiziti['JOB-PROFILE-H1']; ?></h3>
+                        <p><?php echo $Zitiziti['JOB-PROFILE-P']; ?></p>
+                        <a href="<?php echo $slash; ?>login"><?php echo $Zitiziti['JOB-PROFILE-A']; ?></a>
                     </div>
                     <div class="job-rel-pro">
                         <div class="hot-page2-hom-pre">
-                            <h4><?php echo $BIZBOOK['JOB-RELATED-PROFILES']; ?></h4>
+                            <h4><?php echo $Zitiziti['JOB-RELATED-PROFILES']; ?></h4>
                             <ul>
                                 <?php
                                 foreach (getAllCategoryJobProfileLimit($job_profile_category_id, $job_profile_id) as $jobrow) {
@@ -278,7 +278,7 @@ jobprofilepageview($job_profile_id); //Function To Find Page View
                                         </div>
                                         <div class="hot-page2-hom-pre-2">
                                             <h5><?php echo $jobrow['profile_name']; ?></h5>
-                                            <span><b><?php echo $jobrow['educational_qualification']; ?></b>, <?php echo $jobrow['years_of_experience']; ?> <?php echo $BIZBOOK['YEARS']; ?></span>
+                                            <span><b><?php echo $jobrow['educational_qualification']; ?></b>, <?php echo $jobrow['years_of_experience']; ?> <?php echo $Zitiziti['YEARS']; ?></span>
                                         </div>
                                         <a href="<?php echo $JOB_PROFILE_URL . urlModifier($jobrow['job_profile_slug']); ?>"
                                            class="fclick"></a>
@@ -291,7 +291,7 @@ jobprofilepageview($job_profile_id); //Function To Find Page View
                     </div>
                     <div class="job-rel-pro">
                         <div class="hot-page2-hom-pre">
-                            <h4><?php echo $BIZBOOK['JOB_RELATED_JOB_OPENINGS']; ?></h4>
+                            <h4><?php echo $Zitiziti['JOB_RELATED_JOB_OPENINGS']; ?></h4>
                             <ul>
                                 <?php
                                 foreach (getAllCategoryJobLimit5($job_profile_category_id) as $job_rel_row) {
@@ -305,16 +305,16 @@ jobprofilepageview($job_profile_id); //Function To Find Page View
                                         </div>
                                         <div class="hot-page2-hom-pre-2">
                                             <h5><?php echo $job_rel_row['job_title']; ?></h5>
-                                            <span><b><?php echo AddingZero_BeforeNumber($job_rel_row['no_of_openings']); ?><?php echo $BIZBOOK['JOB_OPENINGS']; ?></b>, <?php
+                                            <span><b><?php echo AddingZero_BeforeNumber($job_rel_row['no_of_openings']); ?><?php echo $Zitiziti['JOB_OPENINGS']; ?></b>, <?php
                                                 $job_type = $job_rel_row['job_type'];
                                                 if ($job_type == 1) {
-                                                    echo $BIZBOOK['JOB-PERMANENT'];
+                                                    echo $Zitiziti['JOB-PERMANENT'];
                                                 } elseif ($job_type == 2) {
-                                                    echo $BIZBOOK['JOB-CONTRACT'];
+                                                    echo $Zitiziti['JOB-CONTRACT'];
                                                 } elseif ($job_type == 3) {
-                                                    echo $BIZBOOK['JOB-PART-TIME'];
+                                                    echo $Zitiziti['JOB-PART-TIME'];
                                                 } elseif ($job_type == 4) {
-                                                    echo $BIZBOOK['JOB-FREELANCE'];
+                                                    echo $Zitiziti['JOB-FREELANCE'];
                                                 }
                                                 ?></span>
                                         </div>
@@ -328,9 +328,9 @@ jobprofilepageview($job_profile_id); //Function To Find Page View
                         </div>
                     </div>
                     <div class="ud-rhs-promo job-rel-post-jb">
-                        <h3><?php echo $BIZBOOK['JOB-PROFILE-POST-H1']; ?></h3>
-                        <p><?php echo $BIZBOOK['JOB-PROFILE-POST-P']; ?></p>
-                        <a href="<?php echo $slash; ?>jobs/db-jobs"><?php echo $BIZBOOK['JOB-PROFILE-POST-A']; ?></a>
+                        <h3><?php echo $Zitiziti['JOB-PROFILE-POST-H1']; ?></h3>
+                        <p><?php echo $Zitiziti['JOB-PROFILE-POST-P']; ?></p>
+                        <a href="<?php echo $slash; ?>jobs/db-jobs"><?php echo $Zitiziti['JOB-PROFILE-POST-A']; ?></a>
                     </div>
                 </div>
             </div>

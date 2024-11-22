@@ -18,7 +18,7 @@ include "header.php";
                     <div class="log log-1">
                         <div class="login">
                             <h4>XML Sitemap</h4>
-                            <p><a href="https://www.xml-sitemaps.com/?bizbook-tempate" target="_blank" rel="nofollow">Click here</a> to generate your sitemap then upload to below box.</p>
+                            <p><a href="https://www.xml-sitemaps.com/?Zitiziti-tempate" target="_blank" rel="nofollow">Click here</a> to generate your sitemap then upload to below box.</p>
                             <?php include "../page_level_message.php"; ?>
                              <form name="seo_xml_sitemap_form" id="seo_xml_sitemap_form" method="post" action="update_seo_xml_sitemap.php"
                                    enctype="multipart/form-data" class="cre-dup-form cre-dup-form-show">

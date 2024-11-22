@@ -108,16 +108,16 @@ include "header.php";
                     <div class="hom-col-req">
                         <div class="log-bor">&nbsp;</div>
                         <span class="udb-inst">Fill the form</span>
-                        <h4><?php echo $BIZBOOK['HOM-WHT-LOOK-TIT']; ?></h4>
+                        <h4><?php echo $Zitiziti['HOM-WHT-LOOK-TIT']; ?></h4>
                         <div id="home_enq_success" class="log"
                              style="display: none;">
-                            <p><?php echo $BIZBOOK['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
+                            <p><?php echo $Zitiziti['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
                         </div>
                         <div id="home_enq_fail" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                            <p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                         </div>
                         <div id="home_enq_same" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
+                            <p><?php echo $Zitiziti['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
                         </div>
                         <form name="home_enquiry_form" id="home_enquiry_form" method="post"
                               enctype="multipart/form-data">
@@ -132,15 +132,15 @@ include "header.php";
                                        echo "Website";
                                    }; ?>" placeholder="" required>
                             <div class="form-group">
-                                <input type="text" name="enquiry_name" value="" required="required" class="form-control" placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>">
+                                <input type="text" name="enquiry_name" value="" required="required" class="form-control" placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>">
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>" required="required" value="" name="enquiry_email" pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$" title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>">
+                                <input type="email" class="form-control" placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>" required="required" value="" name="enquiry_email" pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$" title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" value="" name="enquiry_mobile"
-                                       placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>" pattern="[7-9]{1}[0-9]{9}"
-                                       title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>" required="">
+                                       placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>" pattern="[7-9]{1}[0-9]{9}"
+                                       title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>" required="">
                             </div>
                             <div class="form-group">
                                 <select name="enquiry_category" id="enquiry_category" class="form-control">
@@ -157,12 +157,12 @@ include "header.php";
                             </div>
                             <div class="form-group">
                         <textarea class="form-control" rows="3" name="enquiry_message"
-                                  placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                  placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                             </div>
                             <input type="hidden" id="source">
                             <button type="submit" id="home_enquiry_submit" name="home_enquiry_submit"
                                     class="btn btn-primary">
-                                <?php echo $BIZBOOK['SUBMIT_REQUIREMENTS']; ?>
+                                <?php echo $Zitiziti['SUBMIT_REQUIREMENTS']; ?>
                             </button>
                         </form>
                         <div class="log-bor">&nbsp;</div>
@@ -183,8 +183,8 @@ include "header.php";
                     <h2><span>Top Services</span> Cras nulla nulla, pulvinar sit amet nunc at, lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.</h2>
                 </div>-->
                 <div class="home-tit">
-                    <h2><span><?php echo $BIZBOOK['HOM-POP-TIT']; ?></span> <?php echo $BIZBOOK['HOM-POP-TIT1']; ?></h2>
-                    <p><?php echo $BIZBOOK['HOM-POP-SUB-TIT']; ?></p>
+                    <h2><span><?php echo $Zitiziti['HOM-POP-TIT']; ?></span> <?php echo $Zitiziti['HOM-POP-TIT1']; ?></h2>
+                    <p><?php echo $Zitiziti['HOM-POP-SUB-TIT']; ?></p>
                 </div>
                 <div class="land-pack">
                     <ul>
@@ -221,9 +221,9 @@ include "header.php";
         <div class="container">
             <div class="row">
                 <div class="home-tit">
-                    <h2><span><?php echo $BIZBOOK['HOM-BEST-TIT']; ?></span> <?php echo $BIZBOOK['HOM-BEST-TIT1']; ?>
+                    <h2><span><?php echo $Zitiziti['HOM-BEST-TIT']; ?></span> <?php echo $Zitiziti['HOM-BEST-TIT1']; ?>
                     </h2>
-                    <p><?php echo $BIZBOOK['HOM-BEST-SUB-TIT']; ?></p>
+                    <p><?php echo $Zitiziti['HOM-BEST-SUB-TIT']; ?></p>
                 </div>
                 
                 <div class="hom2-cus-sli">
@@ -327,19 +327,19 @@ include "header.php";
         <div class="container">
             <div class="row">
                 <div class="home-tit">
-                    <h2><span><?php echo $BIZBOOK['HOM3-OW-TIT']; ?></span></h2>
-                    <p><?php echo $BIZBOOK['HOM3-OW-TIT-SUB']; ?></p>
+                    <h2><span><?php echo $Zitiziti['HOM3-OW-TIT']; ?></span></h2>
+                    <p><?php echo $Zitiziti['HOM3-OW-TIT-SUB']; ?></p>
                 </div>
                 <div class="hom2-hom-ban-main">
                     <div class="hom2-hom-ban hom2-hom-ban1">
-                        <h2><?php echo $BIZBOOK['HOM3-OW-LHS-TIT']; ?></h2>
-                        <p><?php echo $BIZBOOK['HOM3-OW-LHS-SUB']; ?></p>
-                        <a href="pricing-details"><?php echo $BIZBOOK['HOM3-OW-LHS-CTA']; ?></a>
+                        <h2><?php echo $Zitiziti['HOM3-OW-LHS-TIT']; ?></h2>
+                        <p><?php echo $Zitiziti['HOM3-OW-LHS-SUB']; ?></p>
+                        <a href="pricing-details"><?php echo $Zitiziti['HOM3-OW-LHS-CTA']; ?></a>
                     </div>
                     <div class="hom2-hom-ban hom2-hom-ban2">
-                        <h2><?php echo $BIZBOOK['HOM3-OW-RHS-TIT']; ?></h2>
-                        <p><?php echo $BIZBOOK['HOM3-OW-RHS-SUB']; ?></p>
-                        <a href="login?login=register"><?php echo $BIZBOOK['HOM3-OW-RHS-CTA']; ?></a>
+                        <h2><?php echo $Zitiziti['HOM3-OW-RHS-TIT']; ?></h2>
+                        <p><?php echo $Zitiziti['HOM3-OW-RHS-SUB']; ?></p>
+                        <a href="login?login=register"><?php echo $Zitiziti['HOM3-OW-RHS-CTA']; ?></a>
                     </div>
                 </div>
             </div>
@@ -355,7 +355,7 @@ include "header.php";
             <div class="row">
                 <div class="home-tit">
                     <h2><span>Our user reviews</span></h2>
-                    <p><?php echo $BIZBOOK['HOM3-OW-TIT-SUB']; ?></p>
+                    <p><?php echo $Zitiziti['HOM3-OW-TIT-SUB']; ?></p>
                 </div>
                 
                 <div class="hom2-cus-sli">
@@ -484,8 +484,8 @@ include "header.php";
                 
                 <div class="how-wrks">
                     <div class="home-tit">
-                        <h2><span><?php echo $BIZBOOK['HOM-HOW-TIT']; ?></span></h2>
-                        <p><?php echo $BIZBOOK['HOM-HOW-SUB-TIT']; ?></p>
+                        <h2><span><?php echo $Zitiziti['HOM-HOW-TIT']; ?></span></h2>
+                        <p><?php echo $Zitiziti['HOM-HOW-SUB-TIT']; ?></p>
                     </div>
                     <div class="how-wrks-inn">
                         <ul>
@@ -493,32 +493,32 @@ include "header.php";
                                 <div>
                                     <span>1</span>
                                     <img loading="lazy" src="images/icon/how1.png" alt="">
-                                    <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-1']; ?></h4>
-                                    <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-1']; ?></p>
+                                    <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-1']; ?></h4>
+                                    <p><?php echo $Zitiziti['HOM-HOW-P-SUB-1']; ?></p>
                                 </div>
                             </li>
                             <li>
                                 <div>
                                     <span>2</span>
                                     <img loading="lazy" src="images/icon/how2.png" alt="">
-                                    <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-2']; ?></h4>
-                                    <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-2']; ?></p>
+                                    <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-2']; ?></h4>
+                                    <p><?php echo $Zitiziti['HOM-HOW-P-SUB-2']; ?></p>
                                 </div>
                             </li>
                             <li>
                                 <div>
                                     <span>3</span>
                                     <img loading="lazy" src="images/icon/how3.png" alt="">
-                                    <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-3']; ?></h4>
-                                    <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-3']; ?></p>
+                                    <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-3']; ?></h4>
+                                    <p><?php echo $Zitiziti['HOM-HOW-P-SUB-3']; ?></p>
                                 </div>
                             </li>
                             <li>
                                 <div>
                                     <span>4</span>
                                     <img loading="lazy" src="images/icon/how4.png" alt="">
-                                    <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-4']; ?></h4>
-                                    <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-4']; ?></p>
+                                    <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-4']; ?></h4>
+                                    <p><?php echo $Zitiziti['HOM-HOW-P-SUB-4']; ?></p>
                                 </div>
                             </li>
                         </ul>
@@ -532,14 +532,14 @@ include "header.php";
                         <img loading="lazy" src="images/mobile.png" alt="">
                     </div>
                     <div class="rhs">
-                        <h2><?php echo $BIZBOOK['HOM-APP-TIT']; ?><span><?php echo $BIZBOOK['HOM-APP-TIT-SUB']; ?></span></h2>
+                        <h2><?php echo $Zitiziti['HOM-APP-TIT']; ?><span><?php echo $Zitiziti['HOM-APP-TIT-SUB']; ?></span></h2>
                         <ul>
-                            <li><?php echo $BIZBOOK['HOM-APP-PO-1']; ?></li>
-                            <li><?php echo $BIZBOOK['HOM-APP-PO-2']; ?></li>
-                            <li><?php echo $BIZBOOK['HOM-APP-PO-3']; ?></li>
-                            <li><?php echo $BIZBOOK['HOM-APP-PO-4']; ?></li>
+                            <li><?php echo $Zitiziti['HOM-APP-PO-1']; ?></li>
+                            <li><?php echo $Zitiziti['HOM-APP-PO-2']; ?></li>
+                            <li><?php echo $Zitiziti['HOM-APP-PO-3']; ?></li>
+                            <li><?php echo $Zitiziti['HOM-APP-PO-4']; ?></li>
                         </ul>
-                        <span><?php echo $BIZBOOK['HOM-APP-SEND']; ?></span>
+                        <span><?php echo $Zitiziti['HOM-APP-SEND']; ?></span>
                         <form>
                             <ul>
                                 <li>
@@ -591,9 +591,9 @@ include "header.php";
 <!-- START -->
 <div class="ani-quo">
     <div class="ani-q1">
-        <h4><?php echo $BIZBOOK['HOM-WHAT-LOOK-TIT']; ?></h4>
-        <p><?php echo $BIZBOOK['HOM-WHAT-LOOK-SUB']; ?></p>
-        <span><?php echo $BIZBOOK['HOM-WHAT-LOOK-CTA']; ?></span>
+        <h4><?php echo $Zitiziti['HOM-WHAT-LOOK-TIT']; ?></h4>
+        <p><?php echo $Zitiziti['HOM-WHAT-LOOK-SUB']; ?></p>
+        <span><?php echo $Zitiziti['HOM-WHAT-LOOK-CTA']; ?></span>
     </div>
     <div class="ani-q2">
         <img loading="lazy" src="images/quote.png" alt="">

@@ -54,9 +54,9 @@ foreach (getAllCities() as $city) {
 
 <section class="abou-pg commun-pg-main">
     <div class="about-ban comunity-ban">
-        <h1><?php echo $BIZBOOK['ALL_SERVICES']; ?></h1>
-        <p><?php echo $BIZBOOK['ALL-CATEGORY-MESSAGE']; ?></p>
-        <input type="text" id="tail-se" placeholder="<?php echo $BIZBOOK['ALL-CATEGORY-PLACEHOLDER']; ?>">
+        <h1><?php echo $Zitiziti['ALL_SERVICES']; ?></h1>
+        <p><?php echo $Zitiziti['ALL-CATEGORY-MESSAGE']; ?></p>
+        <input type="text" id="tail-se" placeholder="<?php echo $Zitiziti['ALL-CATEGORY-PLACEHOLDER']; ?>">
     </div>
 </section>
 

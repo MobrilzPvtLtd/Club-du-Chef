@@ -26,7 +26,7 @@ include "header.php";
                     <div class="product">
                         <div class="product-image">
                             <img
-                                src="http://localhost/bizbook/images/products/92311apple-iphone-12-dummyapplefsn-original-imafwg8dpyjvgg3j.jpeg">
+                                src="http://localhost/Zitiziti/images/products/92311apple-iphone-12-dummyapplefsn-original-imafwg8dpyjvgg3j.jpeg">
                         </div>
                         <div class="product-details">
                             <div class="product-title"><a href="#">Dingo Dog Bones</a></div>
@@ -46,7 +46,7 @@ include "header.php";
                     <div class="product">
                         <div class="product-image">
                             <img
-                                src="http://localhost/bizbook/images/products/92311apple-iphone-12-dummyapplefsn-original-imafwg8dpyjvgg3j.jpeg">
+                                src="http://localhost/Zitiziti/images/products/92311apple-iphone-12-dummyapplefsn-original-imafwg8dpyjvgg3j.jpeg">
                         </div>
                         <div class="product-details">
                             <div class="product-title"><a href="#">Dingo Dog Bones</a></div>

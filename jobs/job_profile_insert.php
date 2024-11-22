@@ -252,11 +252,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($job_profile_profile_res) {
 
-            $_POST['status_msg'] = $BIZBOOK['JOB_PROFILE_SUCCESS_MESSAGE'];
+            $_POST['status_msg'] = $Zitiziti['JOB_PROFILE_SUCCESS_MESSAGE'];
             header('Location: ' . $root_path . 'dashboard');
         } else {
 
-            $_POST['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+            $_POST['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
             header('Location: ' . $root_path . 'dashboard');
         }
@@ -266,7 +266,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } else {
 
-    $_POST['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+    $_POST['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: ' . $root_path . 'dashboard');
 }

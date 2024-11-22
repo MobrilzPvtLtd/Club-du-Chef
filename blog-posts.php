@@ -71,7 +71,7 @@ if (isset($_REQUEST['sort_by']) && !empty($_REQUEST['sort_by'])) {
                             </div>
 
                             <div class="rhs">
-                                <span class="hig"><?php echo $BIZBOOK['BLOG_TOP_POSTS']; ?></span>
+                                <span class="hig"><?php echo $Zitiziti['BLOG_TOP_POSTS']; ?></span>
                                 <h4><?php echo $top_blog_row['blog_name']; ?></h4>
                                 <div class="auth">
                                     <img loading="lazy"
@@ -81,7 +81,7 @@ if (isset($_REQUEST['sort_by']) && !empty($_REQUEST['sort_by'])) {
                                          } else {
                                              echo $top_user_details_row['profile_image'];
                                          } ?>" alt="" class="b-lazy">
-                                    <b><?php echo $BIZBOOK['HOM3-OW-POSTED-BY']; ?></b><br>
+                                    <b><?php echo $Zitiziti['HOM3-OW-POSTED-BY']; ?></b><br>
                                     <h6><?php echo $top_blog_row['first_name']; ?></h6>
                                 </div>
                             </div>
@@ -97,18 +97,18 @@ if (isset($_REQUEST['sort_by']) && !empty($_REQUEST['sort_by'])) {
         <?php //} ?>
 
         <div class="blog-head-inn">
-            <h1><?php echo $BIZBOOK['BLOG_POSTS']; ?></h1>
-            <p><?php echo $BIZBOOK['BLOG-POST-HEAD']; ?></p>
+            <h1><?php echo $Zitiziti['BLOG_POSTS']; ?></h1>
+            <p><?php echo $Zitiziti['BLOG-POST-HEAD']; ?></p>
             <div class="ban-search">
                 <form>
                     <ul>
                         <li class="sr-sea">
                             <input type="text" id="blog-search" class="autocomplete"
-                                   placeholder="<?php echo $BIZBOOK['BLOG-POST-SEARCH-LABEL']; ?>">
+                                   placeholder="<?php echo $Zitiziti['BLOG-POST-SEARCH-LABEL']; ?>">
                         </li>
                         <li class="sr-cate">
                             <select name="cat_check" id="cat_check" class="cat_check chosen-select form-control">
-                                <option value=""><?php echo $BIZBOOK['SELECT_CATEGORY']; ?></option>
+                                <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                 <?php
                                 foreach (getAllBlogCategories() as $categories_row) {
                                     ?>
@@ -148,7 +148,7 @@ if (isset($_REQUEST['sort_by']) && !empty($_REQUEST['sort_by'])) {
                             $ad_enquiry_photo = $get_ad_row['ad_enquiry_photo'];
                             ?>
                             <a href="<?php echo stripslashes($get_ad_row['ad_link']); ?>">
-                                <span><?php echo $BIZBOOK['AD']; ?></span>
+                                <span><?php echo $Zitiziti['AD']; ?></span>
 
                                 <img
                                         src="<?php echo $slash; ?>/images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
@@ -239,7 +239,7 @@ if (isset($_REQUEST['sort_by']) && !empty($_REQUEST['sort_by'])) {
     /* background: #525252; */
     text-shadow: 0px 0px 2px #fff;
     text-transform: uppercase;
-    margin-top: 5%;"><?php echo $BIZBOOK['BLOGS_NO_BLOGS_MESSAGE']; ?></span>
+    margin-top: 5%;"><?php echo $Zitiziti['BLOGS_NO_BLOGS_MESSAGE']; ?></span>
                     <?php
                 }
                 ?>
@@ -259,29 +259,29 @@ if (isset($_REQUEST['sort_by']) && !empty($_REQUEST['sort_by'])) {
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <!-- Modal Header -->
                     <div class="quote-pop">
-                        <h4><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></h4>
+                        <h4><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></h4>
                         <form>
                             <div class="form-group">
                                 <input type="text" class="form-control"
-                                       placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>" required>
+                                       placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>" required>
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control"
-                                       placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>"
+                                       placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>"
                                        pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                       title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
+                                       title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control"
-                                       placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                       placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
                                        pattern="[7-9]{1}[0-9]{9}"
-                                       title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>" required>
+                                       title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>" required>
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control" rows="3"
-                                          placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                          placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
+                            <button type="submit" class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?></button>
                         </form>
                     </div>
                     <div class="log-bor">&nbsp;</div>

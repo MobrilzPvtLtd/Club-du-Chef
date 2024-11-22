@@ -50,7 +50,7 @@ $usersqlrow = getUser($job_user_id); // To Fetch particular User Data
             <div class="job-det-desc">
                 <!---->
                 <div class="s1">
-                    <h4 class="job-lhs-tit"><?php echo $BIZBOOK['COMPANY-PROFILE-HEADING-LABEL']; ?></h4>
+                    <h4 class="job-lhs-tit"><?php echo $Zitiziti['COMPANY-PROFILE-HEADING-LABEL']; ?></h4>
                     <div class="job-comp-pro">
                         <div class="job-comp-img">
                             <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>jobs/images/jobs/<?php echo $job_row['company_logo']; ?>"
@@ -69,7 +69,7 @@ $usersqlrow = getUser($job_user_id); // To Fetch particular User Data
                     <div class="job-comp-abo">
                         <p><?php echo stripslashes($job_row['job_small_description']); ?></p>
                         <a href="<?php echo $job_row['contact_website']; ?>" target="_blank"
-                           class="cta"><?php echo $BIZBOOK['COMP-PRO']; ?></a>
+                           class="cta"><?php echo $Zitiziti['COMP-PRO']; ?></a>
                     </div>
                 </div>
                 <!---->
@@ -83,7 +83,7 @@ $usersqlrow = getUser($job_user_id); // To Fetch particular User Data
                         <div class="desc">
                             <p><?php echo stripslashes($job_row['job_description']); ?></p>
                             <div class="jb-skil-set">
-                                <h4><?php echo $BIZBOOK['JOB-SKILL-SET-LABEL']; ?>:</h4>
+                                <h4><?php echo $Zitiziti['JOB-SKILL-SET-LABEL']; ?>:</h4>
                                 <ul>
                                     <?php
                                     $skill_set = explode(',', $job_row['skill_set']);
@@ -105,12 +105,12 @@ $usersqlrow = getUser($job_user_id); // To Fetch particular User Data
                             if (getCountJobAppliedProfileJob($session_user_id, $job_id) == 0) {
                                 ?>
                                 <span class="cta-app" data-toggle="modal"
-                                      data-target="#apply"><?php echo $BIZBOOK['JOB_APPLY_THIS_JOB_NOW']; ?></span>
+                                      data-target="#apply"><?php echo $Zitiziti['JOB_APPLY_THIS_JOB_NOW']; ?></span>
                                 <?php
                             } else {
                                 ?>
                                 <span class="cta-app" data-toggle="modal"
-                                      data-target="#!"><?php echo $BIZBOOK['JOB_ALREADY_APPLIED_THIS_JOB']; ?></span>
+                                      data-target="#!"><?php echo $Zitiziti['JOB_ALREADY_APPLIED_THIS_JOB']; ?></span>
                                 <?php
                             }
                             ?>
@@ -124,52 +124,52 @@ $usersqlrow = getUser($job_user_id); // To Fetch particular User Data
                     <div class="rhs">
                         <!--START-->
                         <div class="job-summ">
-                            <h4><?php echo $BIZBOOK['JOB_SUMMARY']; ?></h4>
+                            <h4><?php echo $Zitiziti['JOB_SUMMARY']; ?></h4>
                             <ul>
-                                <li><span><?php echo $BIZBOOK['JOB-VACANCY']; ?>
+                                <li><span><?php echo $Zitiziti['JOB-VACANCY']; ?>
                                         :</span> <?php echo AddingZero_BeforeNumber($job_row['no_of_openings']); ?></li>
-                                <li><span><?php echo $BIZBOOK['JOB-TYPE-LABEL']; ?>:</span> <?php
+                                <li><span><?php echo $Zitiziti['JOB-TYPE-LABEL']; ?>:</span> <?php
                                     $job_type = $job_row['job_type'];
                                     if ($job_type == 1) {
-                                        echo $BIZBOOK['JOB-PERMANENT'];
+                                        echo $Zitiziti['JOB-PERMANENT'];
                                     } elseif ($job_type == 2) {
-                                        echo $BIZBOOK['JOB-CONTRACT'];
+                                        echo $Zitiziti['JOB-CONTRACT'];
                                     } elseif ($job_type == 3) {
-                                        echo $BIZBOOK['JOB-PART-TIME'];
+                                        echo $Zitiziti['JOB-PART-TIME'];
                                     } elseif ($job_type == 4) {
-                                        echo $BIZBOOK['JOB-FREELANCE'];
+                                        echo $Zitiziti['JOB-FREELANCE'];
                                     }
                                     ?></li>
-                                <li><span><?php echo $BIZBOOK['OTHER_INFORMATIONS_PLACEHOLDER_LEFT']; ?>
+                                <li><span><?php echo $Zitiziti['OTHER_INFORMATIONS_PLACEHOLDER_LEFT']; ?>
                                         :</span> <?php echo $job_row['years_of_experience']; ?></li>
-                                <li><span><?php echo $BIZBOOK['JOB-LOCATION-LABEL']; ?>
+                                <li><span><?php echo $Zitiziti['JOB-LOCATION-LABEL']; ?>
                                         :</span> <?php $job_location_row = getJobCity($job_row['job_location']); echo $job_location_row['city_name']; ?></li>
-                                <li><span><?php echo $BIZBOOK['JOB-SALARY-LABEL']; ?>
+                                <li><span><?php echo $Zitiziti['JOB-SALARY-LABEL']; ?>
                                         :</span> <?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?><?php echo $job_row['job_salary']; ?><?php if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?>
                                 </li>
-                                <li><span><?php echo $BIZBOOK['JOB-INTERVIEW-ROLE-LABEL']; ?>
+                                <li><span><?php echo $Zitiziti['JOB-INTERVIEW-ROLE-LABEL']; ?>
                                         :</span> <?php echo $job_row['job_role']; ?></li>
-                                <li><span><?php echo $BIZBOOK['JOB_GENDER']; ?>:</span> Any</li>
-                                <li><span><?php echo $BIZBOOK['JOB_EDUCATION']; ?>
+                                <li><span><?php echo $Zitiziti['JOB_GENDER']; ?>:</span> Any</li>
+                                <li><span><?php echo $Zitiziti['JOB_EDUCATION']; ?>
                                         :</span> <?php echo $job_row['educational_qualification']; ?></li>
-                                <li><span><?php echo $BIZBOOK['DATE']; ?>
+                                <li><span><?php echo $Zitiziti['DATE']; ?>
                                         :</span> <?php echo dateFormatconverter($job_row['job_interview_date']); ?>
                                 </li>
-                                <li><span><?php echo $BIZBOOK['TIME']; ?>
+                                <li><span><?php echo $Zitiziti['TIME']; ?>
                                         :</span><?php echo timeFormatconverter($job_row['job_interview_time']); ?></li>
-                                <li><span><?php echo $BIZBOOK['JOB_PUBLISHED_ON']; ?>
+                                <li><span><?php echo $Zitiziti['JOB_PUBLISHED_ON']; ?>
                                         :</span> <?php echo dateFormatconverter($job_row['job_cdt']); ?></li>
                             </ul>
                             <?php
                             if (getCountJobAppliedProfileJob($session_user_id, $job_id) == 0) {
                                 ?>
                                 <span class="cta-app" data-toggle="modal"
-                                      data-target="#apply"><?php echo $BIZBOOK['JOB_APPLY_NOW']; ?></span>
+                                      data-target="#apply"><?php echo $Zitiziti['JOB_APPLY_NOW']; ?></span>
                                 <?php
                             }else {
                                 ?>
                                 <span class="cta-app" data-toggle="modal"
-                                      data-target="#!"><?php echo $BIZBOOK['JOB_ALREADY_APPLIED']; ?></span>
+                                      data-target="#!"><?php echo $Zitiziti['JOB_ALREADY_APPLIED']; ?></span>
                                 <?php
                             }
                             ?>
@@ -177,7 +177,7 @@ $usersqlrow = getUser($job_user_id); // To Fetch particular User Data
                         <!--END-->
                         <!--START-->
                         <div class="shar">
-                            <h4><?php echo $BIZBOOK['JOB_SHARE']; ?></h4>
+                            <h4><?php echo $Zitiziti['JOB_SHARE']; ?></h4>
                             <span class="share-new-top share-ic-com" data-toggle="modal" data-target="#sharepop"><i class="material-icons">share</i></span>
                         </div>
                         <!--END-->
@@ -190,7 +190,7 @@ $usersqlrow = getUser($job_user_id); // To Fetch particular User Data
 
             <!--START-->
             <div class="job-tre ">
-                <h2><?php echo $BIZBOOK['JOB_RELATED_JOB_OPENINGS']; ?></h2>
+                <h2><?php echo $Zitiziti['JOB_RELATED_JOB_OPENINGS']; ?></h2>
                 <ul>
                     <?php
                     foreach (getAllCategoryJobLimit($job_category_id, $job_id) as $job_profile_row) {
@@ -212,7 +212,7 @@ $usersqlrow = getUser($job_user_id); // To Fetch particular User Data
                                         <span><?php $job_location_row = getJobCity($job_profile_row['job_location']); echo $job_location_row['city_name']; ?></span>
                                         <div class="jbtre-days">
                                             <span><?php echo time_elapsed_string($job_profile_row['job_cdt']); ?></span>
-                                            <span><?php echo $total_count_jobs_applied; ?> <?php echo $BIZBOOK['APPLICANTS']; ?></span>
+                                            <span><?php echo $total_count_jobs_applied; ?> <?php echo $Zitiziti['APPLICANTS']; ?></span>
                                         </div>
                                     </div>
                                 </div>
@@ -220,25 +220,25 @@ $usersqlrow = getUser($job_user_id); // To Fetch particular User Data
                                         <span><?php
                                             $job_type = $job_profile_row['job_type'];
                                             if ($job_type == 1) {
-                                                echo $BIZBOOK['JOB-PERMANENT'];
+                                                echo $Zitiziti['JOB-PERMANENT'];
                                             } elseif ($job_type == 2) {
-                                                echo $BIZBOOK['JOB-CONTRACT'];
+                                                echo $Zitiziti['JOB-CONTRACT'];
                                             } elseif ($job_type == 3) {
-                                                echo $BIZBOOK['JOB-PART-TIME'];
+                                                echo $Zitiziti['JOB-PART-TIME'];
                                             } elseif ($job_type == 4) {
-                                                echo $BIZBOOK['JOB-FREELANCE'];
+                                                echo $Zitiziti['JOB-FREELANCE'];
                                             }
                                             ?></span>
                                     <span><?php echo $job_profile_row['job_role']; ?></span>
-                                    <span><?php echo AddingZero_BeforeNumber($job_profile_row['no_of_openings']); ?> <?php echo $BIZBOOK['JOB_OPENINGS']; ?></span>
+                                    <span><?php echo AddingZero_BeforeNumber($job_profile_row['no_of_openings']); ?> <?php echo $Zitiziti['JOB_OPENINGS']; ?></span>
                                 </div>
                                 <div class="jbtre-sale">
-                                    <span><?php echo $BIZBOOK['JOB-SALARY-LABEL']; ?></span>
+                                    <span><?php echo $Zitiziti['JOB-SALARY-LABEL']; ?></span>
                                     <span class="empsal"><?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?><?php echo $job_profile_row['job_salary']; ?><?php if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?></span>
                                 </div>
                                 <div class="jbtre-apl">
-                                    <span class="job-box-cta"><?php echo $BIZBOOK['JOB_APPLY_NOW']; ?></span>
-                                    <span><?php echo $BIZBOOK['JOB_MORE_DETAILS']; ?></span>
+                                    <span class="job-box-cta"><?php echo $Zitiziti['JOB_APPLY_NOW']; ?></span>
+                                    <span><?php echo $Zitiziti['JOB_MORE_DETAILS']; ?></span>
                                 </div>
                                 <a href="<?php echo $JOB_URL . urlModifier($job_profile_row['job_slug']); ?>"
                                    class="job-full-cta"></a>
@@ -266,24 +266,24 @@ include "../footer.php";
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="log-bor">&nbsp;</div>
-                    <span class="udb-inst"><?php echo $BIZBOOK['JOB_APPLY_THIS_JOB']; ?></span>
+                    <span class="udb-inst"><?php echo $Zitiziti['JOB_APPLY_THIS_JOB']; ?></span>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <!-- Modal Header -->
                     <div class="quote-pop">
                         <div id="pop_enq_success" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['JOB_ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
+                            <p><?php echo $Zitiziti['JOB_ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
                         </div>
                         <div id="pop_enq_same" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['JOB_ENQUIRY_OWN_JOB_MESSAGE']; ?></p>
+                            <p><?php echo $Zitiziti['JOB_ENQUIRY_OWN_JOB_MESSAGE']; ?></p>
                         </div>
                         <div id="pop_enq_already_applied" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['JOB_ENQUIRY_ALREADY_APPLIED_JOB_MESSAGE']; ?></p>
+                            <p><?php echo $Zitiziti['JOB_ENQUIRY_ALREADY_APPLIED_JOB_MESSAGE']; ?></p>
                         </div>
                         <div id="pop_enq_no_profile" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['JOB_ENQUIRY_NO_PROFILE_MESSAGE']; ?> </p>
+                            <p><?php echo $Zitiziti['JOB_ENQUIRY_NO_PROFILE_MESSAGE']; ?> </p>
                         </div>
                         <div id="pop_enq_fail" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                            <p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                         </div>
                         <form method="post" name="popup_job_enquiry_form" id="popup_job_enquiry_form">
                             <input type="hidden" class="form-control" name="job_id"
@@ -312,23 +312,23 @@ include "../footer.php";
                                 <input type="text" name="enquiry_name"
                                        value="<?php echo $user_details_row['first_name'] ?>"
                                        required="required" class="form-control"
-                                       placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>">
+                                       placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>">
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control"
-                                       placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>" required="required"
+                                       placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>" required="required"
                                        value="<?php echo $user_details_row['email_id'] ?>"
                                        name="enquiry_email"
                                        pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                       title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>">
+                                       title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control"
                                        value="<?php echo $user_details_row['mobile_number'] ?>"
                                        name="enquiry_mobile"
-                                       placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                       placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
                                        pattern="[7-9]{1}[0-9]{9}"
-                                       title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>"
+                                       title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>"
                                        required>
                             </div>
                             <input type="hidden" id="source">
@@ -336,7 +336,7 @@ include "../footer.php";
                                 ?> disabled="disabled" <?php } ?> type="submit" id="popup_job_enquiry_submit"
                                                                   name="popup_job_enquiry_submit"
                                                                   class="btn btn-primary"><?php if ($session_user_id == NULL || empty($session_user_id)) {
-                                    ?><?php echo $BIZBOOK['LOG_IN_TO_SUBMIT']; ?><?php } else { ?><?php echo $BIZBOOK['SUBMIT']; ?><?php } ?></button>
+                                    ?><?php echo $Zitiziti['LOG_IN_TO_SUBMIT']; ?><?php } else { ?><?php echo $Zitiziti['SUBMIT']; ?><?php } ?></button>
                         </form>
                     </div>
                 </div>

@@ -210,7 +210,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $webpage_full_link_with_login = $webpage_full_link . "login";  //URL Login Link
 
-            $JOB_UPDATE_ADMIN_SUBJECT = $BIZBOOK['JOB_UPDATE_ADMIN_SUBJECT'];
+            $JOB_UPDATE_ADMIN_SUBJECT = $Zitiziti['JOB_UPDATE_ADMIN_SUBJECT'];
 
 //****************************    Admin email starts    *************************
 
@@ -240,7 +240,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //****************************    Client email starts    *************************
 
             $to1 = $email_id;
-            $JOB_UPDATE_CLIENT_SUBJECT = $BIZBOOK['JOB_UPDATE_CLIENT_SUBJECT'];
+            $JOB_UPDATE_CLIENT_SUBJECT = $Zitiziti['JOB_UPDATE_CLIENT_SUBJECT'];
 
             $subject1 = "$admin_site_name $JOB_UPDATE_CLIENT_SUBJECT";
 
@@ -265,14 +265,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //****************************    client email ends    *************************
 
 
-            $_SESSION['status_msg'] = $BIZBOOK['JOB_UPDATE_SUCCESS_MESSAGE'];
+            $_SESSION['status_msg'] = $Zitiziti['JOB_UPDATE_SUCCESS_MESSAGE'];
 
             header('Location: db-jobs');
             exit;
 
         } else {
 
-            $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+            $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
             header("Location: edit-product?row=$product_code");
         }
@@ -282,7 +282,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } else {
 
-    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: ../dashboard');
 }

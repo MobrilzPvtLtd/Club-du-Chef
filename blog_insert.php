@@ -167,7 +167,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 
             $webpage_full_link_with_login = $webpage_full_link. "login";  //URL Login Link
 
-            $BLOG_INSERT_ADMIN_SUBJECT = $BIZBOOK['BLOG_INSERT_ADMIN_SUBJECT'];
+            $BLOG_INSERT_ADMIN_SUBJECT = $Zitiziti['BLOG_INSERT_ADMIN_SUBJECT'];
 
 //****************************    Admin email starts    *************************
 
@@ -199,7 +199,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 
             $to1 = $email_id;
             
-            $BLOG_INSERT_CLIENT_SUBJECT = $BIZBOOK['BLOG_INSERT_CLIENT_SUBJECT'];
+            $BLOG_INSERT_CLIENT_SUBJECT = $Zitiziti['BLOG_INSERT_CLIENT_SUBJECT'];
             
             $subject1 = "$admin_site_name $BLOG_INSERT_CLIENT_SUBJECT";
 
@@ -225,7 +225,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 
             if ($blog_type_id == 1) {
 
-                $_SESSION['status_msg'] = $BIZBOOK['BLOGS_INSERT_SUCCESSFUL_MESSAGE'];
+                $_SESSION['status_msg'] = $Zitiziti['BLOGS_INSERT_SUCCESSFUL_MESSAGE'];
 
                 header('Location: db-blog-posts');
 
@@ -233,7 +233,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 
                 header("Location: paypal_pay?map_id=$listlastID&type_id=$blog_type_id");
 
-                $_SESSION['status_msg'] = $BIZBOOK['BLOGS_INSERT_SUCCESSFUL_MESSAGE'];
+                $_SESSION['status_msg'] = $Zitiziti['BLOGS_INSERT_SUCCESSFUL_MESSAGE'];
 
                 //           header('Location: db-payment');
 
@@ -242,7 +242,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 
         } else {
 
-            $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+            $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
             header('Location: create-new-blog-post');
         }
@@ -252,7 +252,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
     }
 }else {
 
-    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: dashboard');
 }

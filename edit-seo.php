@@ -19,7 +19,7 @@ if (file_exists('config/general_user_authentication.php')) {
         <div class="row">
             <div class="login-main add-list">
                 <div class="log-bor">&nbsp;</div>
-                <span class="steps"><?php echo $BIZBOOK['SEO']; ?></span>
+                <span class="steps"><?php echo $Zitiziti['SEO']; ?></span>
                 <div class="log">
                     <div class="login add-list-off">
                         <?php
@@ -50,7 +50,7 @@ if (file_exists('config/general_user_authentication.php')) {
 
 
                         ?>
-                        <h4><?php echo $BIZBOOK['EDIT_THIS_SEO']; ?></h4>
+                        <h4><?php echo $Zitiziti['EDIT_THIS_SEO']; ?></h4>
                         <?php include "page_level_message.php"; ?>
                         <form action="seo_update.php" class="seo_edit_form" id="seo_edit_form" name="seo_edit_form"
                               method="post" enctype="multipart/form-data">
@@ -68,7 +68,7 @@ if (file_exists('config/general_user_authentication.php')) {
                                             <div class="form-group">
                                                 <input type="text" readonly="readonly" name="seo_name"
                                                        required="required" class="form-control"
-                                                       value="<?php echo $name; ?>" placeholder="<?php echo $BIZBOOK['SEO_NAME']; ?>">
+                                                       value="<?php echo $name; ?>" placeholder="<?php echo $Zitiziti['SEO_NAME']; ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -79,7 +79,7 @@ if (file_exists('config/general_user_authentication.php')) {
                                             <div class="form-group">
                                                 <input type="text" name="seo_title" class="form-control"
                                                        value="<?php echo $seos_a_row['seo_title']; ?>"
-                                                       placeholder="<?php echo $BIZBOOK['SEO_TITLE']; ?>">
+                                                       placeholder="<?php echo $Zitiziti['SEO_TITLE']; ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -90,7 +90,7 @@ if (file_exists('config/general_user_authentication.php')) {
                                             <div class="form-group">
                                                 <textarea class="form-control" required="required"
                                                           name="seo_description" id="seo_description"
-                                                          placeholder="<?php echo $BIZBOOK['SEO_DESCRIPTION']; ?>"><?php echo $seos_a_row['seo_description'] ?></textarea>
+                                                          placeholder="<?php echo $Zitiziti['SEO_DESCRIPTION']; ?>"><?php echo $seos_a_row['seo_description'] ?></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -100,7 +100,7 @@ if (file_exists('config/general_user_authentication.php')) {
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <textarea class="form-control" name="seo_keywords"
-                                                          placeholder="<?php echo $BIZBOOK['SEO_KEYWORDS']; ?>"><?php echo $seos_a_row['seo_keywords']; ?></textarea>
+                                                          placeholder="<?php echo $Zitiziti['SEO_KEYWORDS']; ?>"><?php echo $seos_a_row['seo_keywords']; ?></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -112,10 +112,10 @@ if (file_exists('config/general_user_authentication.php')) {
                             <div class="row">
                                 <div class="col-md-12">
                                     <button type="submit" name="seo_submit"
-                                            class="btn btn-primary"><?php echo $BIZBOOK['SAVE_CHANGES']; ?></button>
+                                            class="btn btn-primary"><?php echo $Zitiziti['SAVE_CHANGES']; ?></button>
                                 </div>
                                 <div class="col-md-12">
-                                    <a href="dashboard" class="skip"><?php echo $BIZBOOK['GO_TO_USER_DASHBOARD']; ?>
+                                    <a href="dashboard" class="skip"><?php echo $Zitiziti['GO_TO_USER_DASHBOARD']; ?>
                                         >></a>
                                 </div>
                             </div>

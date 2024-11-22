@@ -33,16 +33,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($listing_res) {
 
             if($listing_is_delete == 2){
-                $_SESSION['status_msg'] = $BIZBOOK['LISTING_RESTORED_SUCCESS_MESSAGE'];
+                $_SESSION['status_msg'] = $Zitiziti['LISTING_RESTORED_SUCCESS_MESSAGE'];
             }elseif($listing_is_delete == 0){
-                $_SESSION['status_msg'] = $BIZBOOK['LISTING_DELETED_SUCCESS_MESSAGE'];
+                $_SESSION['status_msg'] = $Zitiziti['LISTING_DELETED_SUCCESS_MESSAGE'];
             }
 
 
             header('Location: db-all-listing');
         } else {
 
-            $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+            $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
             header('Location: delete-listing?row=' . $listing_code);
         }
@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } else {
 
-    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: db-all-listing');
 }

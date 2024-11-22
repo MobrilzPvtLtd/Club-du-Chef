@@ -13,11 +13,11 @@ $category_id = $_POST['category_id'];
 if ((getCountCategoryCategory($category_id) <= 0) || $category_id == NULL){
     ?>
     <div class="row">
-        <h1><?php echo $BIZBOOK['ALL_CATEGORIES']; ?></h1>
+        <h1><?php echo $Zitiziti['ALL_CATEGORIES']; ?></h1>
 
         <ul>
-            <li><a href="<?php echo $webpage_full_link; ?>"><?php echo $BIZBOOK['HOME']; ?></a></li>
-            <li><a href="<?php echo $webpage_full_link.'all-listing'; ?>"><?php echo $BIZBOOK['ALL_CATEGORY']; ?></a></li>
+            <li><a href="<?php echo $webpage_full_link; ?>"><?php echo $Zitiziti['HOME']; ?></a></li>
+            <li><a href="<?php echo $webpage_full_link.'all-listing'; ?>"><?php echo $Zitiziti['ALL_CATEGORY']; ?></a></li>
 
         </ul>
     </div>
@@ -33,8 +33,8 @@ if ((getCountCategoryCategory($category_id) <= 0) || $category_id == NULL){
         <h1><?php echo $category_name; ?></h1>
 
         <ul>
-            <li><a href="<?php echo $webpage_full_link; ?>"><?php echo $BIZBOOK['HOME']; ?></a></li>
-            <li><a href="<?php echo $webpage_full_link.'all-listing'; ?>"><?php echo $BIZBOOK['ALL_CATEGORY']; ?></a></li>
+            <li><a href="<?php echo $webpage_full_link; ?>"><?php echo $Zitiziti['HOME']; ?></a></li>
+            <li><a href="<?php echo $webpage_full_link.'all-listing'; ?>"><?php echo $Zitiziti['ALL_CATEGORY']; ?></a></li>
             <li>
                 <a href="<?php echo $ALL_LISTING_URL . urlModifier($category_slug); ?>"><?php echo $category_name; ?></a>
             </li>

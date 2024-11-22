@@ -232,28 +232,28 @@ if (file_exists('config/places_page_authentication.php')) {
                                         <h5>How to update windows 10 to 11?</h5>
                                         <span>by <b>John smith</b>, on <b>Web development</b></span>
                                     </div>
-                                    <a href="http://localhost/bizbook/all-service-experts/laptop-service" class="fclick"></a>
+                                    <a href="http://localhost/Zitiziti/all-service-experts/laptop-service" class="fclick"></a>
                                 </li>
                                 <li>
                                     <div class="hot-page2-hom-pre-2">
                                         <h5>How to update windows 10 to 11?</h5>
                                         <span>by <b>John smith</b>, on <b>Web development</b></span>
                                     </div>
-                                    <a href="http://localhost/bizbook/all-service-experts/laptop-service" class="fclick"></a>
+                                    <a href="http://localhost/Zitiziti/all-service-experts/laptop-service" class="fclick"></a>
                                 </li>
                                 <li>
                                     <div class="hot-page2-hom-pre-2">
                                         <h5>How to update windows 10 to 11?</h5>
                                         <span>by <b>John smith</b>, on <b>Web development</b></span>
                                     </div>
-                                    <a href="http://localhost/bizbook/all-service-experts/laptop-service" class="fclick"></a>
+                                    <a href="http://localhost/Zitiziti/all-service-experts/laptop-service" class="fclick"></a>
                                 </li>
                                 <li>
                                     <div class="hot-page2-hom-pre-2">
                                         <h5>How to update windows 10 to 11?</h5>
                                         <span>by <b>John smith</b>, on <b>Web development</b></span>
                                     </div>
-                                    <a href="http://localhost/bizbook/all-service-experts/laptop-service" class="fclick"></a>
+                                    <a href="http://localhost/Zitiziti/all-service-experts/laptop-service" class="fclick"></a>
                                 </li>
                             </ul>
                         </div>
@@ -297,14 +297,14 @@ if (file_exists('config/places_page_authentication.php')) {
                                         <h5>How to update windows 10 to 11?</h5>
                                         <span><b>Web development</b></span>
                                     </div>
-                                    <a href="http://localhost/bizbook/all-service-experts/laptop-service" class="fclick"></a>
+                                    <a href="http://localhost/Zitiziti/all-service-experts/laptop-service" class="fclick"></a>
                                 </li>
                                 <li>
                                     <div class="hot-page2-hom-pre-2">
                                         <h5>How to update windows 10 to 11?</h5>
                                         <span><b>Web development</b></span>
                                     </div>
-                                    <a href="http://localhost/bizbook/all-service-experts/laptop-service" class="fclick"></a>
+                                    <a href="http://localhost/Zitiziti/all-service-experts/laptop-service" class="fclick"></a>
                                 </li>
                             </ul>
                         </div>
@@ -331,10 +331,10 @@ if (file_exists('config/places_page_authentication.php')) {
                     <div class="quote-pop">
                         <h4>Post your comments</h4>
                         <div id="place_pop_enq_success" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['PLACE_ADD_SUCCESSFUL_MESSAGE']; ?></p>
+                            <p><?php echo $Zitiziti['PLACE_ADD_SUCCESSFUL_MESSAGE']; ?></p>
                         </div>
                         <div id="place_pop_enq_fail" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                            <p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                         </div>
                         <form method="post" name="place_add_request_form" id="place_add_request_form" class="place_add_request_form">
                             <input type="hidden" class="form-control"
@@ -348,7 +348,7 @@ if (file_exists('config/places_page_authentication.php')) {
                             <input type="hidden" id="source">
                             <button <?php if ($session_user_id == NULL || empty($session_user_id)) {
                                 ?> disabled="disabled" <?php } ?> type="submit" id="place_add_request_submit"  name="place_add_request_submit" class="cta_submit_green btn btn-primary"><?php if ($session_user_id == NULL || empty($session_user_id)) {
-                                    ?> <?php echo $BIZBOOK['LOG_IN_TO_SUBMIT'];?> <?php }else{ ?><?php echo $BIZBOOK['SUBMIT']; ?> <?php }?></button>
+                                    ?> <?php echo $Zitiziti['LOG_IN_TO_SUBMIT'];?> <?php }else{ ?><?php echo $Zitiziti['SUBMIT']; ?> <?php }?></button>
                         </form>
                     </div>
                 </div>
@@ -423,10 +423,10 @@ if (file_exists('config/places_page_authentication.php')) {
                     <div class="quote-pop">
                         <h4>Post your question</h4>
                         <div id="place_pop_enq_success" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['PLACE_ADD_SUCCESSFUL_MESSAGE']; ?></p>
+                            <p><?php echo $Zitiziti['PLACE_ADD_SUCCESSFUL_MESSAGE']; ?></p>
                         </div>
                         <div id="place_pop_enq_fail" class="log" style="display: none;">
-                            <p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                            <p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                         </div>
                         <form method="post" name="place_add_request_form" id="place_add_request_form" class="place_add_request_form">
                             <input type="hidden" class="form-control"
@@ -458,7 +458,7 @@ if (file_exists('config/places_page_authentication.php')) {
                             <input type="hidden" id="source">
                             <button <?php if ($session_user_id == NULL || empty($session_user_id)) {
                                 ?> disabled="disabled" <?php } ?> type="submit" id="place_add_request_submit"  name="place_add_request_submit" class="cta_submit_green btn btn-primary"><?php if ($session_user_id == NULL || empty($session_user_id)) {
-                                    ?> <?php echo $BIZBOOK['LOG_IN_TO_SUBMIT'];?> <?php }else{ ?><?php echo $BIZBOOK['SUBMIT']; ?> <?php }?></button>
+                                    ?> <?php echo $Zitiziti['LOG_IN_TO_SUBMIT'];?> <?php }else{ ?><?php echo $Zitiziti['SUBMIT']; ?> <?php }?></button>
                         </form>
                     </div>
                 </div>

@@ -128,7 +128,7 @@ if ($success === true) {
         unset($_SESSION['razor_pay_payment_user_contact_mobile']);
         unset($_SESSION['razor_pay_payment_user_contact_email']);
 
-        $_SESSION['status_msg'] = $BIZBOOK['PAYMENT_SUCCESSFULL_USER_UPGRADE_SUCESS'];
+        $_SESSION['status_msg'] = $Zitiziti['PAYMENT_SUCCESSFULL_USER_UPGRADE_SUCESS'];
 
         header('Location: db-payment');
         exit;
@@ -151,7 +151,7 @@ if ($success === true) {
     unset($_SESSION['razor_pay_payment_user_contact_mobile']);
     unset($_SESSION['razor_pay_payment_user_contact_email']);
 
-    $_SESSION['status_msg'] = $BIZBOOK['RAZOR_PAYMENT_FAILURE_MESSAGE'];
+    $_SESSION['status_msg'] = $Zitiziti['RAZOR_PAYMENT_FAILURE_MESSAGE'];
     header('Location: db-payment');
     exit;
 

@@ -5,9 +5,9 @@ if ($user_details_row['user_status'] == 'Inactive') {
         <p>
             <?php
             if ($user_details_row['user_type'] == "Service Provider") {
-                echo $BIZBOOK['USER_NOT_ACTIVATED_MESSAGE'];
+                echo $Zitiziti['USER_NOT_ACTIVATED_MESSAGE'];
             } else {
-                echo $BIZBOOK['GENERAL_USER_NOT_ACTIVATED_MESSAGE'];
+                echo $Zitiziti['GENERAL_USER_NOT_ACTIVATED_MESSAGE'];
             }
             ?>
         </p>

@@ -11,19 +11,19 @@ include "dashboard_left_pane.php";
    <div class="ud-main-inn ud-no-rhs">
     <div class="ud-cen">
         <div class="log-bor">&nbsp;</div>
-        <span class="udb-inst"><?php echo $BIZBOOK['DB-INVOICE-INVOICES']; ?></span>
+        <span class="udb-inst"><?php echo $Zitiziti['DB-INVOICE-INVOICES']; ?></span>
         <?php include('config/user_activation_checker.php'); ?>
         <div class="ud-cen-s2">
-            <h2><?php echo $BIZBOOK['DB-INVOICE-PAYMENT-INVOICE']; ?></h2>
+            <h2><?php echo $Zitiziti['DB-INVOICE-PAYMENT-INVOICE']; ?></h2>
             <?php include "page_level_message.php"; ?>
             <table class="responsive-table bordered">
                 <thead>
                 <tr>
-                    <th><?php echo $BIZBOOK['S_NO']; ?></th>
-                    <th><?php echo $BIZBOOK['NAME']; ?></th>
-                    <th><?php echo $BIZBOOK['DB-INVOICE-PAYMENT-DATE']; ?></th>
-                    <th><?php echo $BIZBOOK['AMOUNT']; ?></th>
-                    <th><?php echo $BIZBOOK['DOWNLOAD']; ?></th>
+                    <th><?php echo $Zitiziti['S_NO']; ?></th>
+                    <th><?php echo $Zitiziti['NAME']; ?></th>
+                    <th><?php echo $Zitiziti['DB-INVOICE-PAYMENT-DATE']; ?></th>
+                    <th><?php echo $Zitiziti['AMOUNT']; ?></th>
+                    <th><?php echo $Zitiziti['DOWNLOAD']; ?></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -47,11 +47,11 @@ include "dashboard_left_pane.php";
                             ?>
                             <td><a href="images/invoices/<?php echo $row['transaction_invoice']; ?>"
                                    download="<?php echo $user_details1['first_name']; ?>-Invoice-<?php echo strtotime($row['transaction_cdt']); ?>"
-                                   class="db-invo-dwn"><?php echo $BIZBOOK['DB-INVOICE-DOWNLOAD-INVOICE']; ?></a></td>
+                                   class="db-invo-dwn"><?php echo $Zitiziti['DB-INVOICE-DOWNLOAD-INVOICE']; ?></a></td>
                             <?php
                         }else {
                             ?>
-                            <td><?php echo $BIZBOOK['DB-INVOICE-INVOICE-N_A']; ?></td>
+                            <td><?php echo $Zitiziti['DB-INVOICE-INVOICE-N_A']; ?></td>
                             <?php
                         }
                             ?>

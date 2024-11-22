@@ -1099,7 +1099,7 @@ if ($current_page == "listing-details.php") {
     echo $footer_row['admin_seo_description'];
 } ?>"/>
 <meta property="og:url" content="<?php echo $actual_website_link; ?>"/>
-<meta property="og:site_name" content="Bizbook directory template"/>
+<meta property="og:site_name" content="Zitiziti directory template"/>
 <meta property="og:image" content="<?php
 if ($current_page == "listing-details.php") {
     if ($listrow['profile_image'] != NULL || !empty($listrow['profile_image'])) {
