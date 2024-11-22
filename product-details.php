@@ -51,8 +51,8 @@ $plan_type_row = getPlanType($user_plan); //User Plan Type Database Fetch
         <div class="row">
             <h2><?php echo $product_category_row['category_name']; ?></h2>
             <ul>
-                <li><a href="<?php echo $slash; ?>index"><?php echo $Zitiziti['HOME']; ?></a></li>
-                <li><a href="<?php echo $slash; ?>all-products"><?php echo $Zitiziti['ALL_CATEGORY']; ?></a></li>
+                <li><a href="<?php echo $slash; ?>index"><?php echo $BIZBOOK['HOME']; ?></a></li>
+                <li><a href="<?php echo $slash; ?>all-products"><?php echo $BIZBOOK['ALL_CATEGORY']; ?></a></li>
                 <li><a href="<?php echo $ALL_PRODUCTS_URL . urlModifier($product_category_slug); ?>"><?php echo $product_category_row['category_name']; ?></a></li>
                 <li><a href="#!"><?php echo $productrow['product_name']; ?></a></li>
             </ul>
@@ -107,10 +107,10 @@ $plan_type_row = getPlanType($user_plan); //User Plan Type Database Fetch
                     </div>
                 </div>
                 <div class="biz-pro-btn">
-                <a data-toggle="modal" data-target="#quote" class="btn btn1"><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></a>
+                <a data-toggle="modal" data-target="#quote" class="btn btn1"><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></a>
                     <!--<span class="btn btn1 cta-add-cart">Add to cart</span>
                     <a href="cart" class="btn btn2">Buy now</a>-->
-                    <a <?php if($productrow['product_payment_link'] != NULL ){ ?> target="_blank" href="<?php echo $productrow['product_payment_link']; } else{ echo "#!";} ?>" class="btn btn2" rel="nofollow"><?php echo $Zitiziti['BUY_NOW']; ?></a>
+                    <a <?php if($productrow['product_payment_link'] != NULL ){ ?> target="_blank" href="<?php echo $productrow['product_payment_link']; } else{ echo "#!";} ?>" class="btn btn2" rel="nofollow"><?php echo $BIZBOOK['BUY_NOW']; ?></a>
                 </div>
             </div>
             <div class="col-md-7 rhs">
@@ -119,7 +119,7 @@ $plan_type_row = getPlanType($user_plan); //User Plan Type Database Fetch
                         <?php
                         if ($plan_type_row['plan_type_verified'] == '1') {
                             ?>
-                            <span class="veri"><?php echo $Zitiziti['VERIFIED']; ?></span>
+                            <span class="veri"><?php echo $BIZBOOK['VERIFIED']; ?></span>
                             <?php
                         }
                         ?>
@@ -131,7 +131,7 @@ $plan_type_row = getPlanType($user_plan); //User Plan Type Database Fetch
                     </div>
                     <?php if ($productrow['product_highlights'] != NULL) { ?>
                         <div class="pro-pbox-3 pro-pbox-com">
-                            <h4><?php echo $Zitiziti['HIGHLIGHTS']; ?></h4>
+                            <h4><?php echo $BIZBOOK['HIGHLIGHTS']; ?></h4>
                             <ul>
                                 <?php
                                 $products_a_row_product_highlights_Array = explode('|', $productrow['product_highlights']);
@@ -150,13 +150,13 @@ $plan_type_row = getPlanType($user_plan); //User Plan Type Database Fetch
                     }
                     ?>
                     <div class="pro-pbox-4 pro-pbox-com">
-                        <h4><?php echo $Zitiziti['DESCRIPTIONS']; ?></h4>
+                        <h4><?php echo $BIZBOOK['DESCRIPTIONS']; ?></h4>
                         <p><?php echo $productrow['product_description']; ?></p>
                     </div>
 
                     <?php if ($productrow['product_info_question'] != NULL) { ?>
                         <div class="pro-pbox-5 pro-pbox-com">
-                            <h4><?php echo $Zitiziti['SPECIFICATIONS'];?></h4>
+                            <h4><?php echo $BIZBOOK['SPECIFICATIONS'];?></h4>
                             <ul>
                                 <?php
                                 $products_a_row_product_info_question_Array = explode(',', $productrow['product_info_question']);
@@ -183,7 +183,7 @@ $plan_type_row = getPlanType($user_plan); //User Plan Type Database Fetch
                     }
                     ?>
                     <div class="pro-pbox-7 pro-pbox-com">
-                        <h4><?php echo $Zitiziti['TAGS']; ?></h4>
+                        <h4><?php echo $BIZBOOK['TAGS']; ?></h4>
                         <?php
                         $products_a_row_product_tags_Array = explode(',', $productrow['product_tags']);
 
@@ -197,7 +197,7 @@ $plan_type_row = getPlanType($user_plan); //User Plan Type Database Fetch
                         ?>
                     </div>
                     <div class="pro-pbox-6 pro-pbox-com">
-                        <h4><?php echo $Zitiziti['CREATED_BY']; ?></h4>
+                        <h4><?php echo $BIZBOOK['CREATED_BY']; ?></h4>
                         <div class="pro-bad-sml">
                             <img loading="lazy" src="/images/user/<?php if (($usersqlrow['profile_image'] == NULL) || empty($usersqlrow['profile_image'])) {
                                 echo $footer_row['user_default_image'];
@@ -205,7 +205,7 @@ $plan_type_row = getPlanType($user_plan); //User Plan Type Database Fetch
                                 echo $usersqlrow['profile_image'];
                             } ?>" alt="">
                             <h4><?php echo $usersqlrow['first_name']; ?></h4>
-                            <b><?php echo $Zitiziti['JOIN_ON']; ?> <?php $user_date = $usersqlrow['user_cdt'];
+                            <b><?php echo $BIZBOOK['JOIN_ON']; ?> <?php $user_date = $usersqlrow['user_cdt'];
                                 $user_date1 = strtotime($user_date);
                                 echo date("M Y", $user_date1); ?></b>
                             <a href="<?php echo $PROFILE_URL.urlModifier($usersqlrow['user_slug']); ?>" target="_blank" class="fclick">&nbsp;</a>
@@ -225,7 +225,7 @@ $plan_type_row = getPlanType($user_plan); //User Plan Type Database Fetch
 <section class="eve-deta-body blog-deta-body">
     <div class="container">
         <div class="list-det-rel-pre pro-rel-pros">
-            <h2><?php echo $Zitiziti['BLOG-DETAILS-RELATED-POST']; ?></h2>
+            <h2><?php echo $BIZBOOK['BLOG-DETAILS-RELATED-POST']; ?></h2>
                 <ul class="multiple-items1">
                     <?php
                     $si = 1;
@@ -240,7 +240,7 @@ $plan_type_row = getPlanType($user_plan); //User Plan Type Database Fetch
                                 </div>
                                 <div class="plac-hom-box-txt">
                                     <span><?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?><?php echo $productErow['product_price']; ?><?php if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?></span>
-                                    <span><?php echo $Zitiziti['PLACE-MORE-DETAILS']; ?></span>
+                                    <span><?php echo $BIZBOOK['PLACE-MORE-DETAILS']; ?></span>
                                 </div>
                                 <a href="<?php echo $PRODUCT_URL.urlModifier($productErow['product_slug']); ?>"
                                     class="fclick"></a>
@@ -268,12 +268,12 @@ include "footer.php";
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <!-- Modal Header -->
                     <div class="quote-pop">
-                        <h4><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></h4>
-                        <div id="product_detail_enq_success" class="log" style="display: none;"><p><?php echo $Zitiziti['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
+                        <h4><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></h4>
+                        <div id="product_detail_enq_success" class="log" style="display: none;"><p><?php echo $BIZBOOK['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
                         </div>
-                        <div id="product_detail_enq_same" class="log" style="display: none;"><p><?php echo $Zitiziti['ENQUIRY_OWN_PRODUCT_MESSAGE']; ?></p>
+                        <div id="product_detail_enq_same" class="log" style="display: none;"><p><?php echo $BIZBOOK['ENQUIRY_OWN_PRODUCT_MESSAGE']; ?></p>
                         </div>
-                        <div id="product_detail_enq_fail" class="log" style="display: none;"><p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                        <div id="product_detail_enq_fail" class="log" style="display: none;"><p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                         </div>
                         <form method="post" name="product_detail_enquiry_form" id="product_detail_enquiry_form">
                             <input type="hidden" class="form-control" name="product_id"
@@ -302,34 +302,34 @@ include "footer.php";
                                 <input type="text" name="enquiry_name"
                                        value="<?php echo $user_details_row['first_name'] ?>"
                                        required="required" class="form-control"
-                                       placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>">
+                                       placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>">
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control"
-                                       placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>" required="required"
+                                       placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>" required="required"
                                        value="<?php echo $user_details_row['email_id'] ?>"
                                        name="enquiry_email"
                                        pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                       title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>">
+                                       title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control"
                                        value="<?php echo $user_details_row['mobile_number'] ?>"
                                        name="enquiry_mobile"
-                                       placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                       placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
                                        pattern="[7-9]{1}[0-9]{9}"
-                                       title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>"
+                                       title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>"
                                        required>
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control" rows="3" name="enquiry_message"
-                                          placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                          placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                             </div>
                             <input type="hidden" id="source">
                             <button  <?php if ($session_user_id == NULL || empty($session_user_id)) {
                                 ?> disabled="disabled" <?php } ?> type="submit" id="product_detail_enquiry_submit" name="enquiry_submit"
                                                                   class="btn btn-primary"><?php if ($session_user_id == NULL || empty($session_user_id)) {
-                                    ?> <?php echo $Zitiziti['LOG_IN_TO_SUBMIT'];?> <?php }else{ ?><?php echo $Zitiziti['SUBMIT']; ?> <?php }?>
+                                    ?> <?php echo $BIZBOOK['LOG_IN_TO_SUBMIT'];?> <?php }else{ ?><?php echo $BIZBOOK['SUBMIT']; ?> <?php }?>
                             </button>
                         </form>
                     </div>

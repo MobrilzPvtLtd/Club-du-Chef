@@ -18,8 +18,8 @@ $activation_status = $admin_sql_row['activation_status'];
 
             <div class="ad-dash-s1">
                 <div class="cd-cen-intr-inn cd-cen-intr-inn2">
-                    <h2>Welcome to <b>Zitiziti activation</b></h2>
-                    <p>Easy to activate and enjoy our Zitiziti template.</p>
+                    <h2>Welcome to <b>Bizbook activation</b></h2>
+                    <p>Easy to activate and enjoy our Bizbook template.</p>
                 </div>
             </div>
 
@@ -27,7 +27,7 @@ $activation_status = $admin_sql_row['activation_status'];
             <?php include "../page_level_message.php"; ?>
             <div class="biz-updates">
                 <div class="ud-notes">
-                    <p><b>Notes:</b> Enter your purchase code to the below box and activate your Zitiziti Directory
+                    <p><b>Notes:</b> Enter your purchase code to the below box and activate your Bizbook Directory
                         template. Once you use your purchase code for your domain means you can't use the same purchase
                         code to another domain. Your purchase code only for one domain not for multi-domain use.</p>
                 </div>

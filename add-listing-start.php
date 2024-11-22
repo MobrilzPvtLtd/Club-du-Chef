@@ -20,7 +20,7 @@ $listing_count_user = getCountUserListing($_SESSION['user_id']);
 
 if ($listing_count_user >= $plan_type_listing_count) {
 
-    $_SESSION['status_msg'] = $Zitiziti['LISTINGS_LIMIT_EXCEED_MESSAGE'];
+    $_SESSION['status_msg'] = $BIZBOOK['LISTINGS_LIMIT_EXCEED_MESSAGE'];
 
     header('Location: db-all-listing');
 }
@@ -35,18 +35,18 @@ if ($listing_count_user >= $plan_type_listing_count) {
         <div class="row">
             <div class="login-main add-list">
                 <div class="log-bor">&nbsp;</div>
-                <span class="steps"><?php echo $Zitiziti['CREATE_NEW']; ?></span>
+                <span class="steps"><?php echo $BIZBOOK['CREATE_NEW']; ?></span>
                 <div class="log">
                     <div class="login">
 
-                        <h4><?php echo $Zitiziti['ADD_NEW_LISTING']; ?></h4>
+                        <h4><?php echo $BIZBOOK['ADD_NEW_LISTING']; ?></h4>
                         <div class="row cre-dup">
                             <div class="col-md-6">
-                                <a href="add-listing-step-1"><?php echo $Zitiziti['CREATE_SCRATCH_LISTING_LABEL']; ?></a>
+                                <a href="add-listing-step-1"><?php echo $BIZBOOK['CREATE_SCRATCH_LISTING_LABEL']; ?></a>
                             </div>
                             <div class="col-md-6">
                                 <span
-                                    class="cre-dup-btn"><?php echo $Zitiziti['CREATE_DUPLICATE_LISTING_LABEL']; ?></span>
+                                    class="cre-dup-btn"><?php echo $BIZBOOK['CREATE_DUPLICATE_LISTING_LABEL']; ?></span>
                             </div>
                         </div>
                         <form name="duplicate_listing_form" action="duplicate_listing_insert.php"
@@ -58,7 +58,7 @@ if ($listing_count_user >= $plan_type_listing_count) {
                                         <select name="listing_id" id="listing_id" class="chosen-select form-control"
                                                 required="required">
                                             <option value="" disabled
-                                                    selected><?php echo $Zitiziti['LISTING_NAME']; ?></option>
+                                                    selected><?php echo $BIZBOOK['LISTING_NAME']; ?></option>
                                             <?php
                                             $user_id = $_SESSION['user_id'];
                                             $listsql = "SELECT * FROM " . TBL . "listings  WHERE  listing_is_delete != '2' AND user_id = $user_id  ORDER BY listing_id DESC";
@@ -84,16 +84,16 @@ if ($listing_count_user >= $plan_type_listing_count) {
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <input type="text" name="listing_name" required="required" class="form-control"
-                                               placeholder="<?php echo $Zitiziti['NEW_LISTING_NAME_STAR']; ?>">
+                                               placeholder="<?php echo $BIZBOOK['NEW_LISTING_NAME_STAR']; ?>">
                                     </div>
                                 </div>
                             </div>
                             <!--FILED END-->
                             <button type="submit" name="listing_submit"
-                                    class="btn btn-primary"><?php echo $Zitiziti['CREATE_NOW']; ?></button>
+                                    class="btn btn-primary"><?php echo $BIZBOOK['CREATE_NOW']; ?></button>
                         </form>
                         <div class="col-md-12">
-                            <a href="dashboard" class="skip"><?php echo $Zitiziti['GO_TO_USER_DASHBOARD']; ?> >></a>
+                            <a href="dashboard" class="skip"><?php echo $BIZBOOK['GO_TO_USER_DASHBOARD']; ?> >></a>
                         </div>
                     </div>
                 </div>

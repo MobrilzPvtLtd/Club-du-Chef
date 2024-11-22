@@ -19,37 +19,37 @@ include "header.php";
         <div class="row">
             <div class="col-md-12">
                 <div class="tit">
-                    <h2><?php echo $Zitiziti['pg_contus_tit']; ?></h2>
-                    <p><?php echo $Zitiziti['pg_contus_tit_sub']; ?></p>
+                    <h2><?php echo $BIZBOOK['pg_contus_tit']; ?></h2>
+                    <p><?php echo $BIZBOOK['pg_contus_tit_sub']; ?></p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="con-pg-addr ">
-                    <h4><?php echo $Zitiziti['pg_contus_addre']; ?></h4>
-                    <h5><?php echo $Zitiziti['pg_contus_cont1']; ?></h5>
-                    <p><?php echo $Zitiziti['pg_contus_cont1_addr']; ?></p>
-                    <h5><?php echo $Zitiziti['pg_contus_cont2']; ?></h5>
-                    <p><?php echo $Zitiziti['pg_contus_cont2_addr']; ?></p>
+                    <h4><?php echo $BIZBOOK['pg_contus_addre']; ?></h4>
+                    <h5><?php echo $BIZBOOK['pg_contus_cont1']; ?></h5>
+                    <p><?php echo $BIZBOOK['pg_contus_cont1_addr']; ?></p>
+                    <h5><?php echo $BIZBOOK['pg_contus_cont2']; ?></h5>
+                    <p><?php echo $BIZBOOK['pg_contus_cont2_addr']; ?></p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="con-pg-info">
-                    <h4><?php echo $Zitiziti['pg_contus_coninfo']; ?></h4>
+                    <h4><?php echo $BIZBOOK['pg_contus_coninfo']; ?></h4>
                     <ul>
-                        <li class="ic-pho"><?php echo $Zitiziti['pg_contus_sup_pho']; ?></li>
-                        <li class="ic-pho"><?php echo $Zitiziti['pg_contus_enqu']; ?></li>
-                        <li class="ic-eml"><?php echo $Zitiziti['pg_contus_email1']; ?></li>
-                        <li class="ic-eml"><?php echo $Zitiziti['pg_contus_email2']; ?></li>
+                        <li class="ic-pho"><?php echo $BIZBOOK['pg_contus_sup_pho']; ?></li>
+                        <li class="ic-pho"><?php echo $BIZBOOK['pg_contus_enqu']; ?></li>
+                        <li class="ic-eml"><?php echo $BIZBOOK['pg_contus_email1']; ?></li>
+                        <li class="ic-eml"><?php echo $BIZBOOK['pg_contus_email2']; ?></li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="con-pg-soc">
-                    <h4><?php echo $Zitiziti['pg_contus_web_tit']; ?></h4>
+                    <h4><?php echo $BIZBOOK['pg_contus_web_tit']; ?></h4>
                     <ul>
-                        <li class="ic-man-web"><a href="<?php echo $Zitiziti['pg_contus_web_link']; ?>" target="_blank"><?php echo $Zitiziti['pg_contus_web']; ?></a></li>
-                        <li class="ic-man-fb"><a href="<?php echo $Zitiziti['pg_contus_fb_link']; ?>" target="_blank"><?php echo $Zitiziti['pg_contus_fb']; ?></a></li>
-                        <li class="ic-man-tw"><a href="<?php echo $Zitiziti['pg_contus_twi_link']; ?>" target="_blank"><?php echo $Zitiziti['pg_contus_twi']; ?></a></li>
+                        <li class="ic-man-web"><a href="<?php echo $BIZBOOK['pg_contus_web_link']; ?>" target="_blank"><?php echo $BIZBOOK['pg_contus_web']; ?></a></li>
+                        <li class="ic-man-fb"><a href="<?php echo $BIZBOOK['pg_contus_fb_link']; ?>" target="_blank"><?php echo $BIZBOOK['pg_contus_fb']; ?></a></li>
+                        <li class="ic-man-tw"><a href="<?php echo $BIZBOOK['pg_contus_twi_link']; ?>" target="_blank"><?php echo $BIZBOOK['pg_contus_twi']; ?></a></li>
                     </ul>
                 </div>
             </div>

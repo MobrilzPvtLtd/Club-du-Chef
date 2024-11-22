@@ -43,7 +43,7 @@
             id="noti-count"><?php echo AddingZero_BeforeNumber($total_notification_count); ?></i>notifications</span>
     <div class="db-noti top-noti-win">
         <span class="material-icons db-menu-clo">close</span>
-        <h4><?php echo $Zitiziti['pg_utype_sp7']; ?></h4>
+        <h4><?php echo $BIZBOOK['pg_utype_sp7']; ?></h4>
         <ul id="all-notif-ul">
 
             <!--     Listings enquiry notification starts-->
@@ -67,10 +67,10 @@
                         <li>
                             <div>
                                 <a target="_blank"
-                                   href="<?php echo $PROFILE_URL . urlModifier($enquiry_user['user_slug']); ?>"><?php echo $enquiry_user['first_name']; ?></a><?php echo $Zitiziti['DB-NOTIFICATION-SEND-LISTING-ENQUIRY']; ?>
+                                   href="<?php echo $PROFILE_URL . urlModifier($enquiry_user['user_slug']); ?>"><?php echo $enquiry_user['first_name']; ?></a><?php echo $BIZBOOK['DB-NOTIFICATION-SEND-LISTING-ENQUIRY']; ?>
                                 <a href="<?php echo $LISTING_URL . urlModifier($enquiry_listing['listing_slug']); ?>"><?php echo $enquiry_listing['listing_name']; ?></a>.
                             </div>
-                            <span><?php echo $Zitiziti['DB-NOTIFICATION-ON']; ?><?php echo dateFormatconverter($enquiry_cdt); ?></span>
+                            <span><?php echo $BIZBOOK['DB-NOTIFICATION-ON']; ?><?php echo dateFormatconverter($enquiry_cdt); ?></span>
                         </li>
                         <?php
                     }
@@ -101,10 +101,10 @@
                         <li>
                             <div>
                                 <a target="_blank"
-                                   href="<?php echo $PROFILE_URL . urlModifier($enquiry_user['user_slug']); ?>"><?php echo $enquiry_user['first_name']; ?></a><?php echo $Zitiziti['DB-NOTIFICATION-SEND-EVENT-ENQUIRY']; ?>
+                                   href="<?php echo $PROFILE_URL . urlModifier($enquiry_user['user_slug']); ?>"><?php echo $enquiry_user['first_name']; ?></a><?php echo $BIZBOOK['DB-NOTIFICATION-SEND-EVENT-ENQUIRY']; ?>
                                 <a href="<?php echo $EVENT_URL . urlModifier($enquiry_event['event_slug']); ?>"><?php echo $enquiry_event['event_name']; ?></a>.
                             </div>
-                            <span><?php echo $Zitiziti['DB-NOTIFICATION-ON']; ?><?php echo dateFormatconverter($enquiry_cdt); ?></span>
+                            <span><?php echo $BIZBOOK['DB-NOTIFICATION-ON']; ?><?php echo dateFormatconverter($enquiry_cdt); ?></span>
                         </li>
                         <?php
                     }
@@ -134,10 +134,10 @@
                         <li>
                             <div>
                                 <a target="_blank"
-                                   href="<?php echo $PROFILE_URL . urlModifier($enquiry_user['user_slug']); ?>"><?php echo $enquiry_user['first_name']; ?></a><?php echo $Zitiziti['DB-NOTIFICATION-SEND-BLOG-ENQUIRY']; ?>
+                                   href="<?php echo $PROFILE_URL . urlModifier($enquiry_user['user_slug']); ?>"><?php echo $enquiry_user['first_name']; ?></a><?php echo $BIZBOOK['DB-NOTIFICATION-SEND-BLOG-ENQUIRY']; ?>
                                 <a href="<?php echo $BLOG_URL . urlModifier($enquiry_blog['blog_slug']); ?>"><?php echo $enquiry_blog['blog_name']; ?></a>.
                             </div>
-                            <span><?php echo $Zitiziti['DB-NOTIFICATION-ON']; ?><?php echo dateFormatconverter($enquiry_cdt); ?></span>
+                            <span><?php echo $BIZBOOK['DB-NOTIFICATION-ON']; ?><?php echo dateFormatconverter($enquiry_cdt); ?></span>
                         </li>
                         <?php
                     }
@@ -167,10 +167,10 @@
                         <li>
                             <div>
                                 <a target="_blank"
-                                   href="<?php echo $PROFILE_URL . urlModifier($enquiry_user['user_slug']); ?>"><?php echo $enquiry_user['first_name']; ?></a><?php echo $Zitiziti['DB-NOTIFICATION-SEND-PRODUCT-ENQUIRY']; ?>
+                                   href="<?php echo $PROFILE_URL . urlModifier($enquiry_user['user_slug']); ?>"><?php echo $enquiry_user['first_name']; ?></a><?php echo $BIZBOOK['DB-NOTIFICATION-SEND-PRODUCT-ENQUIRY']; ?>
                                 <a href="<?php echo $PRODUCT_URL . urlModifier($enquiry_listing['product_slug']); ?>"><?php echo $enquiry_listing['product_name']; ?></a>.
                             </div>
-                            <span><?php echo $Zitiziti['DB-NOTIFICATION-ON']; ?><?php echo dateFormatconverter($enquiry_cdt); ?></span>
+                            <span><?php echo $BIZBOOK['DB-NOTIFICATION-ON']; ?><?php echo dateFormatconverter($enquiry_cdt); ?></span>
                         </li>
                         <?php
                     }
@@ -200,10 +200,10 @@
                         <li>
                             <div>
                                 <a target="_blank"
-                                   href="<?php echo $PROFILE_URL . urlModifier($enquiry_user['user_slug']); ?>"><?php echo $enquiry_user['first_name']; ?></a><?php echo $Zitiziti['DB-NOTIFICATION-SEND-EXPERT-ENQUIRY']; ?>
+                                   href="<?php echo $PROFILE_URL . urlModifier($enquiry_user['user_slug']); ?>"><?php echo $enquiry_user['first_name']; ?></a><?php echo $BIZBOOK['DB-NOTIFICATION-SEND-EXPERT-ENQUIRY']; ?>
                                 <a href="<?php echo $SERVICE_EXPERT_URL . urlModifier($enquiry_expert['expert_slug']); ?>"><?php echo $enquiry_expert['profile_name']; ?></a>.
                             </div>
-                            <span><?php echo $Zitiziti['DB-NOTIFICATION-ON']; ?><?php echo dateFormatconverter($enquiry_cdt); ?></span>
+                            <span><?php echo $BIZBOOK['DB-NOTIFICATION-ON']; ?><?php echo dateFormatconverter($enquiry_cdt); ?></span>
                         </li>
                         <?php
                     }
@@ -233,10 +233,10 @@
                         <li>
                             <div>
                                 <a target="_blank"
-                                   href="<?php echo $PROFILE_URL . urlModifier($enquiry_user['user_slug']); ?>"><?php echo $enquiry_user['first_name']; ?></a><?php echo $Zitiziti['DB-NOTIFICATION-SEND-JOB-APPLIED']; ?>
+                                   href="<?php echo $PROFILE_URL . urlModifier($enquiry_user['user_slug']); ?>"><?php echo $enquiry_user['first_name']; ?></a><?php echo $BIZBOOK['DB-NOTIFICATION-SEND-JOB-APPLIED']; ?>
                                 <a href="<?php echo $JOB_URL . urlModifier($job_notification['job_slug']); ?>"><?php echo $job_notification['job_title']; ?></a>.
                             </div>
-                            <span><?php echo $Zitiziti['DB-NOTIFICATION-ON']; ?><?php echo dateFormatconverter($job_applied_cdt); ?></span>
+                            <span><?php echo $BIZBOOK['DB-NOTIFICATION-ON']; ?><?php echo dateFormatconverter($job_applied_cdt); ?></span>
                         </li>
                         <?php
                     }
@@ -266,10 +266,10 @@
                         <li>
                             <div>
                                 <a target="_blank"
-                                   href="<?php echo $PROFILE_URL . urlModifier($enquiry_user['user_slug']); ?>"><?php echo $enquiry_user['first_name']; ?></a><?php echo $Zitiziti['DB-NOTIFICATION-SEND-LISTING-LIKES']; ?>
+                                   href="<?php echo $PROFILE_URL . urlModifier($enquiry_user['user_slug']); ?>"><?php echo $enquiry_user['first_name']; ?></a><?php echo $BIZBOOK['DB-NOTIFICATION-SEND-LISTING-LIKES']; ?>
                                 <a href="<?php echo $LISTING_URL . urlModifier($enquiry_listing['listing_slug']); ?>"><?php echo $enquiry_listing['listing_name']; ?></a>.
                             </div>
-                            <span><?php echo $Zitiziti['DB-NOTIFICATION-ON']; ?><?php echo dateFormatconverter($listing_likes_cdt); ?></span>
+                            <span><?php echo $BIZBOOK['DB-NOTIFICATION-ON']; ?><?php echo dateFormatconverter($listing_likes_cdt); ?></span>
                         </li>
                         <?php
                     }
@@ -299,10 +299,10 @@
                         <li>
                             <div>
                                 <a target="_blank"
-                                   href="<?php echo $PROFILE_URL . urlModifier($enquiry_user['user_slug']); ?>"><?php echo $enquiry_user['first_name']; ?></a><?php echo $Zitiziti['DB-NOTIFICATION-SEND-LISTING-REVIEW']; ?>
+                                   href="<?php echo $PROFILE_URL . urlModifier($enquiry_user['user_slug']); ?>"><?php echo $enquiry_user['first_name']; ?></a><?php echo $BIZBOOK['DB-NOTIFICATION-SEND-LISTING-REVIEW']; ?>
                                 <a href="<?php echo $LISTING_URL . urlModifier($enquiry_listing['listing_slug']); ?>"><?php echo $enquiry_listing['listing_name']; ?></a>.
                             </div>
-                            <span><?php echo $Zitiziti['DB-NOTIFICATION-ON']; ?><?php echo dateFormatconverter($review_cdt); ?></span>
+                            <span><?php echo $BIZBOOK['DB-NOTIFICATION-ON']; ?><?php echo dateFormatconverter($review_cdt); ?></span>
                         </li>
                         <?php
                     }
@@ -323,7 +323,7 @@
                                href="<?php echo $notificationrow['notification_link']; ?>"><?php echo $notificationrow['notification_title']; ?></a>
                             <?php echo $notificationrow['notification_message']; ?>.
                         </div>
-                        <span><?php echo $Zitiziti['DB-NOTIFICATION-ON']; ?><?php echo dateFormatconverter($notificationrow['notification_cdt']) ?></span>
+                        <span><?php echo $BIZBOOK['DB-NOTIFICATION-ON']; ?><?php echo dateFormatconverter($notificationrow['notification_cdt']) ?></span>
                     </li>
                     <?php
                 }
@@ -333,13 +333,13 @@
         <?php
         if ($total_notification_count >= 1) {
             ?>
-            <span id="noti-clr-noti" class="noti-clr-noti"><span class="material-icons">delete</span><?php echo $Zitiziti['CLEAR-ALL-NOTIFICATIONS']; ?></span>
+            <span id="noti-clr-noti" class="noti-clr-noti"><span class="material-icons">delete</span><?php echo $BIZBOOK['CLEAR-ALL-NOTIFICATIONS']; ?></span>
             <?php
         }
         ?>
         <span <?php if ($total_notification_count >= 1) {
             ?> style="display: none;" <?php } ?> id="no-noti-clr-noti"
-                                                 class="no-noti-clr-noti"><?php echo $Zitiziti['NO-NOTIFICATIONS-TO-SHOW']; ?></span>
+                                                 class="no-noti-clr-noti"><?php echo $BIZBOOK['NO-NOTIFICATIONS-TO-SHOW']; ?></span>
     </div>
 </div>
 

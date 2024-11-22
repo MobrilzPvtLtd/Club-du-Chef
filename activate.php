@@ -27,7 +27,7 @@ if (mysqli_num_rows($activation) > 0) {
 
     } else {
 
-        $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+        $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
         $_SESSION['login_status_msg'] = 1;
 
         header('Location: login');
@@ -36,7 +36,7 @@ if (mysqli_num_rows($activation) > 0) {
 
 } else {
 
-    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
     $_SESSION['login_status_msg'] = 1;
 
     header('Location: login');
@@ -72,9 +72,9 @@ if (mysqli_num_rows($activation) > 0) {
                 <div class="user-act-code">
                     <div class="login">
                         <?php include "page_level_message.php"; ?>
-                        <h4><?php echo $Zitiziti['ACTIVATE_VERIFY_YOUR_EMAIL']; ?></h4>
+                        <h4><?php echo $BIZBOOK['ACTIVATE_VERIFY_YOUR_EMAIL']; ?></h4>
                         <p><b>Hi <?php echo $user_name; ?>,</b></p>
-                        <p><?php echo $Zitiziti['ACTIVATE_TEXT']; ?></p>
+                        <p><?php echo $BIZBOOK['ACTIVATE_TEXT']; ?></p>
                         <div class="biz-updates">
                             <div class="templ-acti">
                                 <form name="verification_form" id="verification_form" method="post" action="activation_check.php"
@@ -82,8 +82,8 @@ if (mysqli_num_rows($activation) > 0) {
                                     <input type="hidden" name="verification_link" value="<?php echo $activation_row['verification_link']; ?>">
                                     <ul>
                                         <li>
-                                            <input autocomplete="off" type="text" name="verification_code" placeholder="<?php echo $Zitiziti['ACTIVATE_PAGE_PLACEHOLDER']; ?>" required>
-                                            <button type="submit" name="verification_submit" class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?></button>
+                                            <input autocomplete="off" type="text" name="verification_code" placeholder="<?php echo $BIZBOOK['ACTIVATE_PAGE_PLACEHOLDER']; ?>" required>
+                                            <button type="submit" name="verification_submit" class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
                                         </li>
                                     </ul>
                                 </form>

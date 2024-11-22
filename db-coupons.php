@@ -21,18 +21,18 @@ if (file_exists('config/coupon_page_authentication.php')) {
    <div class="ud-main-inn ud-no-rhs">
     <div class="ud-cen">
         <div class="log-bor">&nbsp;</div>
-        <span class="udb-inst"><?php echo $Zitiziti['COUPONS']; ?></span>
+        <span class="udb-inst"><?php echo $BIZBOOK['COUPONS']; ?></span>
         <?php include('config/user_activation_checker.php'); ?>
         <div class="ud-cen-s2">
             <?php include "page_level_message.php"; ?>
-            <h2><?php echo $Zitiziti['COUPONS']; ?></h2>
-            <a href="add-coupons" class="db-tit-btn"><?php echo $Zitiziti['COUPON-ADD-NEW-COUPON']; ?></a>
+            <h2><?php echo $BIZBOOK['COUPONS']; ?></h2>
+            <a href="add-coupons" class="db-tit-btn"><?php echo $BIZBOOK['COUPON-ADD-NEW-COUPON']; ?></a>
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#coupon"><?php echo $Zitiziti['COUPON-ALL-COUPON-DETAILS']; ?></a>
+                    <a class="nav-link active" data-toggle="tab" href="#coupon"><?php echo $BIZBOOK['COUPON-ALL-COUPON-DETAILS']; ?></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#couponacc"><?php echo $Zitiziti['COUPON-COUPON-USED-MEMBERS']; ?></a>
+                    <a class="nav-link" data-toggle="tab" href="#couponacc"><?php echo $BIZBOOK['COUPON-COUPON-USED-MEMBERS']; ?></a>
                 </li>
             </ul>
             <div class="tab-content">
@@ -63,12 +63,12 @@ if (file_exists('config/coupon_page_authentication.php')) {
                                                 </div>
                                                 <div class="s2">
                                                     <div class="lhs">
-                                                        <span><?php echo $Zitiziti['COUPON-EXPIRES']; ?></span>
+                                                        <span><?php echo $BIZBOOK['COUPON-EXPIRES']; ?></span>
                                                         <h6><?php echo dateFormatconverter($couponrow['coupon_end_date']); ?></h6>
-                                                        <a href="coupons"><?php echo $Zitiziti['COUPON-TERMS-CONDITION-APPLY']; ?></a>
+                                                        <a href="coupons"><?php echo $BIZBOOK['COUPON-TERMS-CONDITION-APPLY']; ?></a>
                                                     </div>
                                                     <div class="rhs">
-                                                        <a href="coupons"><span class="get-coup-btn get-coup-act"><?php echo $Zitiziti['COUPON-GET-COUPON']; ?></span></a>
+                                                        <a href="coupons"><span class="get-coup-btn get-coup-act"><?php echo $BIZBOOK['COUPON-GET-COUPON']; ?></span></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -77,17 +77,17 @@ if (file_exists('config/coupon_page_authentication.php')) {
                                     <div class="db-coup-rhs">
                                         <h5>
                                             <b><?php echo AddingZero_BeforeNumber(coupon_pageview_count($couponrow['coupon_id'])); ?></b>
-                                            <span><?php echo $Zitiziti['COUPON-MEMBER-ACCESS-THIS-COUPON']; ?></span>
+                                            <span><?php echo $BIZBOOK['COUPON-MEMBER-ACCESS-THIS-COUPON']; ?></span>
                                         </h5>
                                         <ol>
-                                            <li><b><?php echo $Zitiziti['COUPON-START-DATE-PLACEHOLDER']; ?>:</b> <?php echo dateFormatconverter($couponrow['coupon_start_date']); ?>
+                                            <li><b><?php echo $BIZBOOK['COUPON-START-DATE-PLACEHOLDER']; ?>:</b> <?php echo dateFormatconverter($couponrow['coupon_start_date']); ?>
                                             </li>
-                                            <li><b><?php echo $Zitiziti['COUPON-EXPIRY-DATE-PLACEHOLDER']; ?>:</b> <?php echo dateFormatconverter($couponrow['coupon_end_date']); ?>
+                                            <li><b><?php echo $BIZBOOK['COUPON-EXPIRY-DATE-PLACEHOLDER']; ?>:</b> <?php echo dateFormatconverter($couponrow['coupon_end_date']); ?>
                                             </li>
-                                            <li><b><?php echo $Zitiziti['COUPON-COUPON-CODE-PLACEHOLDER']; ?>:</b> <?php echo $couponrow['coupon_code']; ?></li>
+                                            <li><b><?php echo $BIZBOOK['COUPON-COUPON-CODE-PLACEHOLDER']; ?>:</b> <?php echo $couponrow['coupon_code']; ?></li>
                                             <li>
-                                                <a href="edit-coupon?YLYLLE=OOYXZLEAFUK35ATJWJJSFMFJGVPWOVGYMFMFJ188WOVGYMFUKEX82JWJJS&&FMFJGVPWERFGVPWOVGYMFMFJ188WOVGYMFUKEX8=<?php echo $couponrow['coupon_id']; ?>&&JSFMFJG=VPWOVGYMFMFJ188WOVGYMFUKEXMFMFJ177"><?php echo $Zitiziti['EDIT']; ?></a>
-                                                <a href="delete-coupon?YLYLLE=OOYXZLEAFUK35ATJWJJSFMFJGVPWOVGYMFMFJ188WOVGYMFUKEX82JWJJS&&FMFJGVPWERFGVPWOVGYMFMFJ188WOVGYMFUKEX8=<?php echo $couponrow['coupon_id']; ?>&&JSFMFJG=VPWOVGYMFMFJ188WOVGYMFUKEXMFMFJ145"><?php echo $Zitiziti['DELETE']; ?></a>
+                                                <a href="edit-coupon?YLYLLE=OOYXZLEAFUK35ATJWJJSFMFJGVPWOVGYMFMFJ188WOVGYMFUKEX82JWJJS&&FMFJGVPWERFGVPWOVGYMFMFJ188WOVGYMFUKEX8=<?php echo $couponrow['coupon_id']; ?>&&JSFMFJG=VPWOVGYMFMFJ188WOVGYMFUKEXMFMFJ177"><?php echo $BIZBOOK['EDIT']; ?></a>
+                                                <a href="delete-coupon?YLYLLE=OOYXZLEAFUK35ATJWJJSFMFJGVPWOVGYMFMFJ188WOVGYMFUKEX82JWJJS&&FMFJGVPWERFGVPWOVGYMFMFJ188WOVGYMFUKEX8=<?php echo $couponrow['coupon_id']; ?>&&JSFMFJG=VPWOVGYMFMFJ188WOVGYMFUKEXMFMFJ145"><?php echo $BIZBOOK['DELETE']; ?></a>
                                             </li>
                                         </ol>
                                     </div>
@@ -103,13 +103,13 @@ if (file_exists('config/coupon_page_authentication.php')) {
                     <table class="responsive-table bordered">
                         <thead>
                         <tr>
-                            <th><?php echo $Zitiziti['S_NO']; ?></th>
-                            <th><?php echo $Zitiziti['NAME']; ?></th>
-                            <th><?php echo $Zitiziti['EMAIL']; ?></th>
-                            <th><?php echo $Zitiziti['PHONE']; ?></th>
-                            <th><?php echo $Zitiziti['COUPON-COUPON-NAME-PLACEHOLDER']; ?></th>
-                            <th><?php echo $Zitiziti['PROFILE']; ?></th>
-                            <th><?php echo $Zitiziti['DELETE']; ?></th>
+                            <th><?php echo $BIZBOOK['S_NO']; ?></th>
+                            <th><?php echo $BIZBOOK['NAME']; ?></th>
+                            <th><?php echo $BIZBOOK['EMAIL']; ?></th>
+                            <th><?php echo $BIZBOOK['PHONE']; ?></th>
+                            <th><?php echo $BIZBOOK['COUPON-COUPON-NAME-PLACEHOLDER']; ?></th>
+                            <th><?php echo $BIZBOOK['PROFILE']; ?></th>
+                            <th><?php echo $BIZBOOK['DELETE']; ?></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -132,8 +132,8 @@ if (file_exists('config/coupon_page_authentication.php')) {
                                 <td><?php echo $user_coupo_details_row['email_id']; ?></td>
                                 <td><?php echo $user_coupo_details_row['mobile_number']; ?></td>
                                 <td><?php echo $coupon_name;?></td>
-                                <td><a href="<?php echo $PROFILE_URL.urlModifier($user_coupo_details_row['user_slug']); ?>" target="_blank" class="db-list-edit"><?php echo $Zitiziti['VIEW']; ?></a></td>
-                                <td><a href="" class="db-list-edit"><?php echo $Zitiziti['DELETE']; ?></a></td>
+                                <td><a href="<?php echo $PROFILE_URL.urlModifier($user_coupo_details_row['user_slug']); ?>" target="_blank" class="db-list-edit"><?php echo $BIZBOOK['VIEW']; ?></a></td>
+                                <td><a href="" class="db-list-edit"><?php echo $BIZBOOK['DELETE']; ?></a></td>
                             </tr>
                             <?php
                             $si++;

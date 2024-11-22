@@ -21,12 +21,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if ($mode_path == "XeBaCk_MoDeX_PATHXHU") {
 
-                $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+                $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
                 header('Location: admin/admin-add-new-user.php');
                 exit();
             } else {
-                $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+                $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
                 $_SESSION['register_status_msg'] = 1;
 
                 header('Location: login?login=register');
@@ -158,13 +158,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if ($mode_path == "XeBaCk_MoDeX_PATHXHU") {
 
-                $_SESSION['status_msg'] = $Zitiziti['GIVEN_EMAIL_ID_ALREADY_EXISTS_MESSAGE'];
+                $_SESSION['status_msg'] = $BIZBOOK['GIVEN_EMAIL_ID_ALREADY_EXISTS_MESSAGE'];
 
                 header('Location: admin/admin-add-new-user.php');
                 exit();
             } else {
 
-                $_SESSION['status_msg'] = $Zitiziti['GIVEN_EMAIL_ID_ALREADY_EXISTS_MESSAGE'];
+                $_SESSION['status_msg'] = $BIZBOOK['GIVEN_EMAIL_ID_ALREADY_EXISTS_MESSAGE'];
                 $_SESSION['register_status_msg'] = 1;
 
                 header('Location: login?login=register');
@@ -185,13 +185,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if ($mode_path == "XeBaCk_MoDeX_PATHXHU") {
 
-                $_SESSION['status_msg'] = $Zitiziti['GIVEN_MOBILE_NUMBER_ALREADY_EXISTS_MESSAGE'];
+                $_SESSION['status_msg'] = $BIZBOOK['GIVEN_MOBILE_NUMBER_ALREADY_EXISTS_MESSAGE'];
 
                 header('Location: admin/admin-add-new-user.php');
                 exit();
             } else {
 
-                $_SESSION['status_msg'] = $Zitiziti['GIVEN_MOBILE_NUMBER_ALREADY_EXISTS_MESSAGE'];
+                $_SESSION['status_msg'] = $BIZBOOK['GIVEN_MOBILE_NUMBER_ALREADY_EXISTS_MESSAGE'];
                 $_SESSION['register_status_msg'] = 1;
 
                 header('Location: login?login=register');
@@ -251,7 +251,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $webpage_full_link_with_login = $webpage_full_link . "login";  //URL Login Link
 
-            $USER_INSERT_ADMIN_SUBJECT = $Zitiziti['USER_INSERT_ADMIN_SUBJECT'];
+            $USER_INSERT_ADMIN_SUBJECT = $BIZBOOK['USER_INSERT_ADMIN_SUBJECT'];
 
 //****************************    Admin email starts    *************************
 
@@ -280,7 +280,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //****************************    Client email starts    *************************
 
             $to1 = $email_id;
-            $USER_INSERT_CLIENT_SUBJECT = $Zitiziti['USER_INSERT_CLIENT_SUBJECT'];
+            $USER_INSERT_CLIENT_SUBJECT = $BIZBOOK['USER_INSERT_CLIENT_SUBJECT'];
             $subject1 = "$admin_site_name $USER_INSERT_CLIENT_SUBJECT";
 
             $client_sql_fetch = mysqli_query($conn, "SELECT * FROM " . TBL . "mail WHERE mail_id = 1 "); //User mail template fetch
@@ -303,13 +303,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
             if ($mode_path == "XeBaCk_MoDeX_PATHXHU") {
-                $_SESSION['status_msg'] = $Zitiziti['USER_INSERT_SUCCESS_MESSAGE'];  // Success Message in session
+                $_SESSION['status_msg'] = $BIZBOOK['USER_INSERT_SUCCESS_MESSAGE'];  // Success Message in session
 
                 header('Location: admin/admin-new-user-requests.php');
                 exit();
             } else {
 
-                $_SESSION['status_msg'] = $Zitiziti['USER_INSERT_SUCCESS_MESSAGE'];  // Success Message in session
+                $_SESSION['status_msg'] = $BIZBOOK['USER_INSERT_SUCCESS_MESSAGE'];  // Success Message in session
                 $_SESSION['register_status_msg'] = 1;
 
                 header('Location: login?login=register');
@@ -320,12 +320,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
             if ($mode_path == "XeBaCk_MoDeX_PATHXHU") {
-                $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+                $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
                 header('Location: admin/admin-add-new-user.php');
                 exit();
             } else {
-                $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+                $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
                 $_SESSION['register_status_msg'] = 1;
 
                 header('Location: login?login=register');
@@ -338,12 +338,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     if ($mode_path == "XeBaCk_MoDeX_PATHXHU") {
-        $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+        $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
         header('Location: admin/admin-add-new-user.php');
         exit();
     } else {
-        $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+        $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
         $_SESSION['register_status_msg'] = 1;
 
         header('Location: login?login=register');

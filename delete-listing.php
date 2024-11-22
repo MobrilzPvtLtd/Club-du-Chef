@@ -57,7 +57,7 @@ if (file_exists('config/listing_page_authentication.php')) {
                         <div class="row">
                             <div class="login-main add-list posr">
                                 <div class="log-bor">&nbsp;</div>
-                                <span class="udb-inst"><?php echo $Zitiziti['DELETE_LISTING']; ?></span>
+                                <span class="udb-inst"><?php echo $BIZBOOK['DELETE_LISTING']; ?></span>
                                 <div class="log log-1">
                                     <div class="login">
                                         <h4><?php
@@ -71,7 +71,7 @@ if (file_exists('config/listing_page_authentication.php')) {
                                             } else {
                                                 echo "Delete";
                                             }
-                                            ?><?php echo $Zitiziti['LISTING_DETAILS']; ?></h4>
+                                            ?><?php echo $BIZBOOK['LISTING_DETAILS']; ?></h4>
                                         <?php include "page_level_message.php"; ?>
                                         <!--FILED START-->
                                         <div class="row">
@@ -81,7 +81,7 @@ if (file_exists('config/listing_page_authentication.php')) {
                                                            type="text" required="required"
                                                            value="<?php echo $listings_a_row['listing_name']; ?>"
                                                            class="form-control"
-                                                           placeholder="<?php echo $Zitiziti['LISTING_NAME_STAR']; ?>">
+                                                           placeholder="<?php echo $BIZBOOK['LISTING_NAME_STAR']; ?>">
                                                 </div>
                                             </div>
                                         </div>
@@ -94,7 +94,7 @@ if (file_exists('config/listing_page_authentication.php')) {
                                                            type="text"
                                                            value="<?php echo $listings_a_row['listing_mobile']; ?>"
                                                            class="form-control"
-                                                           placeholder="<?php echo $Zitiziti['PHONE_NUMBER']; ?>">
+                                                           placeholder="<?php echo $BIZBOOK['PHONE_NUMBER']; ?>">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -103,7 +103,7 @@ if (file_exists('config/listing_page_authentication.php')) {
                                                            type="text"
                                                            value="<?php echo $listings_a_row['listing_email']; ?>"
                                                            class="form-control"
-                                                           placeholder="<?php echo $Zitiziti['EMAIL_ID']; ?>">
+                                                           placeholder="<?php echo $BIZBOOK['EMAIL_ID']; ?>">
                                                 </div>
                                             </div>
                                         </div>
@@ -116,7 +116,7 @@ if (file_exists('config/listing_page_authentication.php')) {
                                                            name="listing_website" type="text"
                                                            value="<?php echo $listings_a_row['listing_website']; ?>"
                                                            class="form-control"
-                                                           placeholder="<?php echo $Zitiziti['WEBSITE']; ?>">
+                                                           placeholder="<?php echo $BIZBOOK['WEBSITE']; ?>">
                                                 </div>
                                             </div>
                                         </div>
@@ -129,7 +129,7 @@ if (file_exists('config/listing_page_authentication.php')) {
                                                            name="listing_address" required="required"
                                                            value="<?php echo $listings_a_row['listing_address']; ?>"
                                                            class="form-control"
-                                                           placeholder="<?php echo $Zitiziti['SHOP_ADDRESS']; ?>">
+                                                           placeholder="<?php echo $BIZBOOK['SHOP_ADDRESS']; ?>">
                                                 </div>
                                             </div>
                                         </div>
@@ -142,7 +142,7 @@ if (file_exists('config/listing_page_authentication.php')) {
                                                     <select disabled="disabled" name="country_id" required="required"
                                                             class="form-control">
                                                         <option
-                                                            value=""><?php echo $Zitiziti['SELECT_YOUR_COUNTRY']; ?></option>
+                                                            value=""><?php echo $BIZBOOK['SELECT_YOUR_COUNTRY']; ?></option>
                                                         <?php
                                                         //Countries Query
 
@@ -179,7 +179,7 @@ if (file_exists('config/listing_page_authentication.php')) {
                                                     <select disabled="disabled" name="category_id" id="category_id"
                                                             class="form-control">
                                                         <option
-                                                            value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
+                                                            value=""><?php echo $BIZBOOK['SELECT_CATEGORY']; ?></option>
                                                         <?php
                                                         foreach (getAllCategories() as $categories_row) {
                                                             ?>
@@ -204,7 +204,7 @@ if (file_exists('config/listing_page_authentication.php')) {
                                                             id="sub_category_id"
                                                             class="form-control">
                                                         <option
-                                                            value=""><?php echo $Zitiziti['SELECT_SUB_CATEGORY']; ?></option>
+                                                            value=""><?php echo $BIZBOOK['SELECT_SUB_CATEGORY']; ?></option>
                                                         <?php
                                                         foreach (getAllSubCategories() as $sub_categories_row) {
                                                             ?>
@@ -227,7 +227,7 @@ if (file_exists('config/listing_page_authentication.php')) {
                                                 <textarea readonly="readonly" class="form-control"
                                                           id="listing_description"
                                                           name="listing_description"
-                                                          placeholder="<?php echo $Zitiziti['DETAILS_ABOUT_LISTING']; ?>"><?php echo $listings_a_row['listing_description']; ?></textarea>
+                                                          placeholder="<?php echo $BIZBOOK['DETAILS_ABOUT_LISTING']; ?>"><?php echo $listings_a_row['listing_description']; ?></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -630,11 +630,11 @@ if (file_exists('config/listing_page_authentication.php')) {
                         <div class="row">
                             <div class="login-main add-list add-list-ser">
                                 <div class="log-bor">&nbsp;</div>
-                                <span class="steps"><?php echo $Zitiziti['STEP2']; ?></span>
+                                <span class="steps"><?php echo $BIZBOOK['STEP2']; ?></span>
                                 <div class="log">
                                     <div class="login">
 
-                                        <h4><?php echo $Zitiziti['SERVICES_PROVIDE']; ?></h4>
+                                        <h4><?php echo $BIZBOOK['SERVICES_PROVIDE']; ?></h4>
                                         <ul>
                                             <?php
                                             $listings_a_row_service_id = $listings_a_row['service_id'];
@@ -648,12 +648,12 @@ if (file_exists('config/listing_page_authentication.php')) {
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-group">
-                                                                <label><?php echo $Zitiziti['SERVICE_NAME']; ?>:</label>
+                                                                <label><?php echo $BIZBOOK['SERVICE_NAME']; ?>:</label>
                                                                 <input type="text" readonly="readonly"
                                                                        name="service_id[]"
                                                                        value="<?php echo $service_Array; ?>"
                                                                        class="form-control"
-                                                                       placeholder="<?php echo $Zitiziti['SERVICE_NAME_PLACEHOLDER']; ?>">
+                                                                       placeholder="<?php echo $BIZBOOK['SERVICE_NAME_PLACEHOLDER']; ?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -672,10 +672,10 @@ if (file_exists('config/listing_page_authentication.php')) {
                         <div class="row">
                             <div class="login-main add-list">
                                 <div class="log-bor">&nbsp;</div>
-                                <span class="steps"><?php echo $Zitiziti['STEP3']; ?></span>
+                                <span class="steps"><?php echo $BIZBOOK['STEP3']; ?></span>
                                 <div class="log">
                                     <div class="login add-list-off">
-                                        <h4><?php echo $Zitiziti['SPECIAL_OFFERS']; ?></h4>
+                                        <h4><?php echo $BIZBOOK['SPECIAL_OFFERS']; ?></h4>
                                         <ul>
                                             <?php
                                             $listings_a_row_service_1_name = $listings_a_row['service_1_name'];
@@ -703,7 +703,7 @@ if (file_exists('config/listing_page_authentication.php')) {
                                                                        class="form-control"
                                                                        value="<?php echo $tuple[0]; ?>"
                                                                        name="service_1_name[]"
-                                                                       placeholder="<?php echo $Zitiziti['OFFER_NAME']; ?>">
+                                                                       placeholder="<?php echo $BIZBOOK['OFFER_NAME']; ?>">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
@@ -712,7 +712,7 @@ if (file_exists('config/listing_page_authentication.php')) {
                                                                        class="form-control"
                                                                        value="<?php echo $tuple[1]; ?>"
                                                                        name="service_1_price[]"
-                                                                       placeholder="<?php echo $Zitiziti['PRICE']; ?>">
+                                                                       placeholder="<?php echo $BIZBOOK['PRICE']; ?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -723,7 +723,7 @@ if (file_exists('config/listing_page_authentication.php')) {
                                                             <div class="form-group">
                                                             <textarea readonly="readonly" class="form-control"
                                                                       name="service_1_detail[]"
-                                                                      placeholder="<?php echo $Zitiziti['DETAILS_ABOUT_OFFER']; ?>"><?php echo $tuple[2]; ?></textarea>
+                                                                      placeholder="<?php echo $BIZBOOK['DETAILS_ABOUT_OFFER']; ?>"><?php echo $tuple[2]; ?></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -741,17 +741,17 @@ if (file_exists('config/listing_page_authentication.php')) {
                         <div class="row">
                             <div class="login-main add-list">
                                 <div class="log-bor">&nbsp;</div>
-                                <span class="steps"><?php echo $Zitiziti['STEP4']; ?></span>
+                                <span class="steps"><?php echo $BIZBOOK['STEP4']; ?></span>
                                 <div class="log add-list-map">
                                     <div class="login add-list-map">
 
-                                        <h4><?php echo $Zitiziti['MAP_360_VIEW']; ?></h4>
+                                        <h4><?php echo $BIZBOOK['MAP_360_VIEW']; ?></h4>
                                         <!--FILED START-->
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <textarea readonly="readonly" class="form-control" name="google_map"
-                                                              placeholder="<?php echo $Zitiziti['SHOP_LOCATION']; ?>"><?php echo $listings_a_row['google_map']; ?></textarea>
+                                                              placeholder="<?php echo $BIZBOOK['SHOP_LOCATION']; ?>"><?php echo $listings_a_row['google_map']; ?></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -761,7 +761,7 @@ if (file_exists('config/listing_page_authentication.php')) {
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <textarea readonly="readonly" class="form-control" name="360_view"
-                                                              placeholder="<?php echo $Zitiziti['360_VIEW']; ?>"><?php echo $listings_a_row['360_view']; ?></textarea>
+                                                              placeholder="<?php echo $BIZBOOK['360_VIEW']; ?>"><?php echo $listings_a_row['360_view']; ?></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -773,11 +773,11 @@ if (file_exists('config/listing_page_authentication.php')) {
                         <div class="row">
                             <div class="login-main add-list">
                                 <div class="log-bor">&nbsp;</div>
-                                <span class="steps"><?php echo $Zitiziti['STEP5']; ?></span>
+                                <span class="steps"><?php echo $BIZBOOK['STEP5']; ?></span>
                                 <div class="log">
                                     <div class="login add-lis-oth">
 
-                                        <h4><?php echo $Zitiziti['OTHER_INFORMATIONS']; ?></h4>
+                                        <h4><?php echo $BIZBOOK['OTHER_INFORMATIONS']; ?></h4>
                                         <ul>
                                             <?php
                                             $listings_a_row_listing_info_question = $listings_a_row['listing_info_question'];
@@ -802,7 +802,7 @@ if (file_exists('config/listing_page_authentication.php')) {
                                                                        class="form-control"
                                                                        name="listing_info_question[]"
                                                                        value="<?php echo $tuple[0]; ?>"
-                                                                       placeholder="<?php echo $Zitiziti['OTHER_INFORMATIONS_PLACEHOLDER_LEFT']; ?>">
+                                                                       placeholder="<?php echo $BIZBOOK['OTHER_INFORMATIONS_PLACEHOLDER_LEFT']; ?>">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-2">
@@ -816,7 +816,7 @@ if (file_exists('config/listing_page_authentication.php')) {
                                                                        class="form-control"
                                                                        name="listing_info_answer[]"
                                                                        value="<?php echo $tuple[1]; ?>"
-                                                                       placeholder="<?php echo $Zitiziti['OTHER_INFORMATIONS_PLACEHOLDER_RIGHT']; ?>">
+                                                                       placeholder="<?php echo $BIZBOOK['OTHER_INFORMATIONS_PLACEHOLDER_RIGHT']; ?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -843,11 +843,11 @@ if (file_exists('config/listing_page_authentication.php')) {
                                                     } else {
                                                         echo "Delete";
                                                     }
-                                                    ?><?php echo $Zitiziti['LISTING']; ?></button>
+                                                    ?><?php echo $BIZBOOK['LISTING']; ?></button>
                                             </div>
                                             <div class="col-md-12">
                                                 <a href="profile"
-                                                   class="skip"><?php echo $Zitiziti['GO_TO_USER_DASHBOARD']; ?> >></a>
+                                                   class="skip"><?php echo $BIZBOOK['GO_TO_USER_DASHBOARD']; ?> >></a>
                                             </div>
                                         </div>
                                         <!--FILED END-->

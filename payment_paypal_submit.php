@@ -60,7 +60,7 @@ $link_with_payment_success = $webpage_full_link. "payment_paypal_success";  //UR
 ?>
 
 <body onload="document.getElementById('frmPayPal1').submit();">
-<?php echo $Zitiziti['REDIRECTING_TO_PAYPAL']; ?>
+<?php echo $BIZBOOK['REDIRECTING_TO_PAYPAL']; ?>
 <form action="<?php echo $paypal_url; ?>" method="post" name="frmPayPal1" id="frmPayPal1">
     <input type="hidden" name="business" value="<?php echo $admin_paypal_id; ?>">
     <input type="hidden" name="cmd" value="_xclick">

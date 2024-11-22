@@ -16,9 +16,9 @@ $session_user_id = $user_details_row['user_id'];
     <?php include('config/user_activation_checker.php'); ?>
     <div class="cd-cen-intr">
         <div class="cd-cen-intr-inn">
-            <h2><?php echo $Zitiziti['USER_DASHBOARD_WELCOME_TITLE']; ?>
+            <h2><?php echo $BIZBOOK['USER_DASHBOARD_WELCOME_TITLE']; ?>
                 <b><?php echo $user_details_row['first_name']; ?></b></h2>
-            <p><?php echo $Zitiziti['USER_DASHBOARD_WELCOME_P_TAG']; ?></p>
+            <p><?php echo $BIZBOOK['USER_DASHBOARD_WELCOME_P_TAG']; ?></p>
         </div>
     </div>
     <div class="ud-cen-s1">
@@ -28,16 +28,16 @@ $session_user_id = $user_details_row['user_id'];
                 <li>
                     <div>
                         <b><?php echo AddingZero_BeforeNumber(getCountSentReview($session_user_id)); ?></b>
-                        <h4><?php echo $Zitiziti['ALL_REVIEWS']; ?></h4>
-                        <p><?php echo $Zitiziti['TOTAL_NO_OF_REVIEWS']; ?></p>
+                        <h4><?php echo $BIZBOOK['ALL_REVIEWS']; ?></h4>
+                        <p><?php echo $BIZBOOK['TOTAL_NO_OF_REVIEWS']; ?></p>
                         <a href="db-notifications">&nbsp;</a>
                     </div>
                 </li>
                 <li>
                     <div>
                         <b><?php echo AddingZero_BeforeNumber(getCountLikedListing($session_user_id)); ?></b>
-                        <h4><?php echo $Zitiziti['LIKED_LISTINGS']; ?></h4>
-                        <p><?php echo $Zitiziti['NO_OF_LIKED_LISTINGS']; ?></p>
+                        <h4><?php echo $BIZBOOK['LIKED_LISTINGS']; ?></h4>
+                        <p><?php echo $BIZBOOK['NO_OF_LIKED_LISTINGS']; ?></p>
                         <a href="db-like-listings">&nbsp;</a>
                     </div>
                 </li>
@@ -45,16 +45,16 @@ $session_user_id = $user_details_row['user_id'];
                 <li>
                     <div>
                         <b><?php echo AddingZero_BeforeNumber(getCountUserListing($session_user_id)); ?></b>
-                        <h4><?php echo $Zitiziti['ALL_LISTING']; ?></h4>
-                        <p><?php echo $Zitiziti['TOTAL_NO_LISTINGS']; ?></p>
+                        <h4><?php echo $BIZBOOK['ALL_LISTING']; ?></h4>
+                        <p><?php echo $BIZBOOK['TOTAL_NO_LISTINGS']; ?></p>
                         <a href="db-all-listing">&nbsp;</a>
                     </div>
                 </li>
                 <li>
                     <div>
                         <b><?php echo AddingZero_BeforeNumber(getCountUserEnquiries($session_user_id)); ?></b>
-                        <h4><?php echo $Zitiziti['ENQUIRIES']; ?></h4>
-                        <p><?php echo $Zitiziti['TOTAL_NO_ENQUIRY']; ?></p>
+                        <h4><?php echo $BIZBOOK['ENQUIRIES']; ?></h4>
+                        <p><?php echo $BIZBOOK['TOTAL_NO_ENQUIRY']; ?></p>
                         <a href="db-enquiry">&nbsp;</a>
                     </div>
                 </li>
@@ -62,8 +62,8 @@ $session_user_id = $user_details_row['user_id'];
             <li>
                 <div>
                     <b><?php echo AddingZero_BeforeNumber(getCountUserFollowing($session_user_id)); ?></b>
-                    <h4><?php echo $Zitiziti['FOLLOWINGS']; ?></h4>
-                    <p><?php echo $Zitiziti['TOTAL_NO_FOLLOWINGS']; ?></p>
+                    <h4><?php echo $BIZBOOK['FOLLOWINGS']; ?></h4>
+                    <p><?php echo $BIZBOOK['TOTAL_NO_FOLLOWINGS']; ?></p>
                     <a href="db-followings">&nbsp;</a>
                 </div>
             </li>
@@ -71,8 +71,8 @@ $session_user_id = $user_details_row['user_id'];
     </div>
         <!-- START -->
         <div class="ud-cen-s3 ud-cen-s4">
-            <h2><?php echo $Zitiziti['PROFILE_PAGE']; ?></h2>
-            <a href="db-my-profile-edit" class="db-tit-btn"><?php echo $Zitiziti['EDIT_MY_PROFILE']; ?></a>
+            <h2><?php echo $BIZBOOK['PROFILE_PAGE']; ?></h2>
+            <a href="db-my-profile-edit" class="db-tit-btn"><?php echo $BIZBOOK['EDIT_MY_PROFILE']; ?></a>
             <div class="ud-payment ud-pro-link">
                 <div class="pay-lhs">
                     <div class="lis-pro-badg">
@@ -84,7 +84,7 @@ $session_user_id = $user_details_row['user_id'];
                                     echo $user_details_row['profile_image'];
                                 } ?>" alt="">
                             <h4><?php echo $user_details_row['first_name']; ?></h4>
-                            <p><?php echo $Zitiziti['MEMBER_SINCE']; ?><?php echo dateFormatconverter($user_details_row['user_cdt']) ?></p>
+                            <p><?php echo $BIZBOOK['MEMBER_SINCE']; ?><?php echo dateFormatconverter($user_details_row['user_cdt']) ?></p>
                         </div>
                         <a href="<?php echo $PROFILE_URL . urlModifier($user_details_row['user_slug']); ?>"
                            class="fclick" target="_blank">&nbsp;</a>
@@ -92,27 +92,27 @@ $session_user_id = $user_details_row['user_id'];
                 </div>
                 <div class="pay-rhs">
                     <ul>
-                        <li><b><?php echo $Zitiziti['NAME']; ?> : </b> <?php echo $user_details_row['first_name']; ?>
+                        <li><b><?php echo $BIZBOOK['NAME']; ?> : </b> <?php echo $user_details_row['first_name']; ?>
                         </li>
-                        <li><b><?php echo $Zitiziti['FOLLOWERS']; ?>
+                        <li><b><?php echo $BIZBOOK['FOLLOWERS']; ?>
                                 : </b> <span><?php $user = getUser($session_user_id);
                                 if ($user['user_followers'] == NULL) {
                                     echo "00";
                                 } else {
                                     echo AddingZero_BeforeNumber(count(explode(",", $user['user_followers'])));
                                 } ?></span></li>
-                        <li><b><?php echo $Zitiziti['CITY']; ?>
+                        <li><b><?php echo $BIZBOOK['CITY']; ?>
                                 : </b> <?php if ($user_details_row['user_city'] == NULL) {
                                 echo "N/A";
                             } else {
                                 echo $user_details_row['user_city'];
                             } ?></li>
-                        <li><b><?php echo $Zitiziti['EMAIL']; ?> : </b> <?php echo $user_details_row['email_id']; ?></li>
+                        <li><b><?php echo $BIZBOOK['EMAIL']; ?> : </b> <?php echo $user_details_row['email_id']; ?></li>
                         <li class="pro"><input type="text"
                                                value="<?php echo $PROFILE_URL . urlModifier($user_details_row['user_slug']); ?>"
                                                readonly></li>
                         <li class="pre"><a target="_blank"
-                                           href="<?php echo $PROFILE_URL . urlModifier($user_details_row['user_slug']); ?>"><?php echo $Zitiziti['VIEW_MY_PROFILE_PAGE']; ?></a>
+                                           href="<?php echo $PROFILE_URL . urlModifier($user_details_row['user_slug']); ?>"><?php echo $BIZBOOK['VIEW_MY_PROFILE_PAGE']; ?></a>
                         </li>
                     </ul>
                 </div>
@@ -129,8 +129,8 @@ $session_user_id = $user_details_row['user_id'];
         ?>
         <!-- START -->
         <div class="ud-cen-s3 ud-cen-s4">
-            <h2><?php echo $Zitiziti['PROFI_BUSINES_TIT']; ?></h2>
-            <a href="company-profile-edit" class="db-tit-btn"><?php echo $Zitiziti['EDIT_BUSINES_PROFILE']; ?></a>
+            <h2><?php echo $BIZBOOK['PROFI_BUSINES_TIT']; ?></h2>
+            <a href="company-profile-edit" class="db-tit-btn"><?php echo $BIZBOOK['EDIT_BUSINES_PROFILE']; ?></a>
             <div class="ud-payment ud-pro-link bus-pg">
                 <div class="pay-lhs">
                     <div class="lis-pro-badg">
@@ -146,7 +146,7 @@ $session_user_id = $user_details_row['user_id'];
                                 } else {
                                     echo 'N/A';
                                 } ?></h4>
-                            <p><?php echo $Zitiziti['MEMBER_SINCE']; ?><?php echo dateFormatconverter($user_details_row['user_cdt']) ?></p>
+                            <p><?php echo $BIZBOOK['MEMBER_SINCE']; ?><?php echo dateFormatconverter($user_details_row['user_cdt']) ?></p>
                         </div>
                         <a href="<?php if ($company_row['company_name'] != NULL) {
                             echo $COMPANY_URL . urlModifier($company_row['company_slug']);
@@ -157,13 +157,13 @@ $session_user_id = $user_details_row['user_id'];
                 </div>
                 <div class="pay-rhs">
                     <ul>
-                        <li><b><?php echo $Zitiziti['NAME']; ?> : </b> <?php if ($company_row['company_name'] != NULL) {
+                        <li><b><?php echo $BIZBOOK['NAME']; ?> : </b> <?php if ($company_row['company_name'] != NULL) {
                                 echo $company_row['company_name'];
                             } else {
                                 echo 'N/A';
                             } ?>
                         </li>
-                        <li><b><?php echo $Zitiziti['PAGE_VIEWS']; ?> : </b>
+                        <li><b><?php echo $BIZBOOK['PAGE_VIEWS']; ?> : </b>
                             <span><?php echo AddingZero_BeforeNumber(business_pageview_count($company_row['user_id'])); ?></span>
                         </li>
                         <li class="pro"><input type="text"
@@ -174,7 +174,7 @@ $session_user_id = $user_details_row['user_id'];
                                                echo $COMPANY_URL . urlModifier($company_row['company_slug']);
                                            } else {
                                                echo "#!";
-                                           } ?>"><?php echo $Zitiziti['VIEW_BUSINESS_PAGE']; ?></a>
+                                           } ?>"><?php echo $BIZBOOK['VIEW_BUSINESS_PAGE']; ?></a>
                         </li>
                     </ul>
                 </div>
@@ -215,9 +215,9 @@ $session_user_id = $user_details_row['user_id'];
                 ?>
                 <!-- START -->
                 <div class="ud-cen-s3 ud-cen-s4">
-                    <h2><?php echo $Zitiziti['PROFI_SERVICE_EXPERT_TIT']; ?></h2>
+                    <h2><?php echo $BIZBOOK['PROFI_SERVICE_EXPERT_TIT']; ?></h2>
                     <a href="service-experts/create-service-expert-profile"
-                       class="db-tit-btn"><?php echo $Zitiziti['EDIT_SERVICE_EXPERT_PROFILE']; ?></a>
+                       class="db-tit-btn"><?php echo $BIZBOOK['EDIT_SERVICE_EXPERT_PROFILE']; ?></a>
                     <div class="ud-payment ud-pro-link bus-pg">
                         <div class="pay-lhs">
                             <div class="lis-pro-badg">
@@ -226,7 +226,7 @@ $session_user_id = $user_details_row['user_id'];
                                         src="<?php echo $slash; ?>service-experts/images/services/<?php echo $service_expert_row['profile_image']; ?>"
                                         alt="">
                                     <h4><?php echo $service_expert_row['profile_name']; ?></h4>
-                                    <p><?php echo $Zitiziti['MEMBER_SINCE']; ?><?php echo dateFormatconverter($user_details_row['user_cdt']) ?></p>
+                                    <p><?php echo $BIZBOOK['MEMBER_SINCE']; ?><?php echo dateFormatconverter($user_details_row['user_cdt']) ?></p>
                                     <span class="db-list-rat"><?php echo $star_rate_two; ?></span>
                                 </div>
                                 <a href="<?php echo $SERVICE_EXPERT_URL . urlModifier($service_expert_row['expert_slug']); ?>"
@@ -235,17 +235,17 @@ $session_user_id = $user_details_row['user_id'];
                         </div>
                         <div class="pay-rhs">
                             <ul>
-                                <li><b><?php echo $Zitiziti['NAME']; ?>
+                                <li><b><?php echo $BIZBOOK['NAME']; ?>
                                         : </b> <?php echo $service_expert_row['profile_name']; ?>
                                 </li>
-                                <li><b><?php echo $Zitiziti['PAGE_VIEWS']; ?> : </b>
+                                <li><b><?php echo $BIZBOOK['PAGE_VIEWS']; ?> : </b>
                                     <span><?php echo AddingZero_BeforeNumber(expert_profile_pageview_count($service_expert_row['expert_id'])); ?></span>
                                 </li>
                                 <li class="pro"><input type="text"
                                                        value="<?php echo $SERVICE_EXPERT_URL . urlModifier($service_expert_row['expert_slug']); ?>"
                                                        readonly></li>
                                 <li class="pre"><a target="_blank"
-                                                   href="<?php echo $SERVICE_EXPERT_URL . urlModifier($service_expert_row['expert_slug']); ?>"><?php echo $Zitiziti['VIEW_SERVICE_EXPERT_PROFILE_PAGE']; ?></a>
+                                                   href="<?php echo $SERVICE_EXPERT_URL . urlModifier($service_expert_row['expert_slug']); ?>"><?php echo $BIZBOOK['VIEW_SERVICE_EXPERT_PROFILE_PAGE']; ?></a>
                                 </li>
                             </ul>
                         </div>
@@ -268,9 +268,9 @@ $session_user_id = $user_details_row['user_id'];
         ?>
         <!-- START -->
         <div class="ud-cen-s3 ud-cen-s4">
-            <h2><?php echo $Zitiziti['PROFI_JOB_SEEKER_TIT']; ?></h2>
+            <h2><?php echo $BIZBOOK['PROFI_JOB_SEEKER_TIT']; ?></h2>
             <a href="jobs/create-job-seeker-profile"
-               class="db-tit-btn"><?php echo $Zitiziti['EDIT_JOB_SEEKER_PROFILE']; ?></a>
+               class="db-tit-btn"><?php echo $BIZBOOK['EDIT_JOB_SEEKER_PROFILE']; ?></a>
             <div class="ud-payment ud-pro-link bus-pg">
                 <div class="pay-lhs">
                     <div class="lis-pro-badg">
@@ -286,7 +286,7 @@ $session_user_id = $user_details_row['user_id'];
                                 } else {
                                     echo 'N/A';
                                 } ?></h4>
-                            <p><?php echo $Zitiziti['MEMBER_SINCE']; ?><?php echo dateFormatconverter($user_details_row['user_cdt']) ?></p>
+                            <p><?php echo $BIZBOOK['MEMBER_SINCE']; ?><?php echo dateFormatconverter($user_details_row['user_cdt']) ?></p>
                         </div>
                         <a href="<?php if ($job_profile_row['profile_name'] != NULL) {
                             echo $JOB_PROFILE_URL . urlModifier($job_profile_row['job_profile_slug']);
@@ -297,14 +297,14 @@ $session_user_id = $user_details_row['user_id'];
                 </div>
                 <div class="pay-rhs">
                     <ul>
-                        <li><b><?php echo $Zitiziti['NAME']; ?>
+                        <li><b><?php echo $BIZBOOK['NAME']; ?>
                                 : </b> <?php if ($job_profile_row['profile_name'] != NULL) {
                                 echo $job_profile_row['profile_name'];
                             } else {
                                 echo 'N/A';
                             } ?>
                         </li>
-                        <li><b><?php echo $Zitiziti['PAGE_VIEWS']; ?> : </b>
+                        <li><b><?php echo $BIZBOOK['PAGE_VIEWS']; ?> : </b>
                             <span><?php if($job_profile_row['user_id'] != 0){ echo AddingZero_BeforeNumber(job_profile_pageview_count($job_profile_row['user_id'])); } else { echo "00"; } ?></span>
                         </li>
                         <li class="pro"><input type="text"
@@ -315,7 +315,7 @@ $session_user_id = $user_details_row['user_id'];
                                                echo $JOB_PROFILE_URL . urlModifier($job_profile_row['job_profile_slug']);
                                            } else {
                                                echo "#!";
-                                           } ?>"><?php echo $Zitiziti['VIEW_JOB_PROFILE_PAGE']; ?></a>
+                                           } ?>"><?php echo $BIZBOOK['VIEW_JOB_PROFILE_PAGE']; ?></a>
                         </li>
                     </ul>
                 </div>
@@ -329,19 +329,19 @@ $session_user_id = $user_details_row['user_id'];
     <?php
     if ($user_details_row['user_type'] == "Service Provider") { ?>
         <div class="ud-cen-s2">
-            <h2><?php echo $Zitiziti['LISTING_DETAILS']; ?></h2>
-            <a href="add-listing-start" class="db-tit-btn"><?php echo $Zitiziti['ADD_NEW_LISTING']; ?></a>
+            <h2><?php echo $BIZBOOK['LISTING_DETAILS']; ?></h2>
+            <a href="add-listing-start" class="db-tit-btn"><?php echo $BIZBOOK['ADD_NEW_LISTING']; ?></a>
             <table class="responsive-table bordered">
                 <thead>
                 <tr>
-                    <th><?php echo $Zitiziti['S_NO']; ?></th>
-                    <th><?php echo $Zitiziti['LISTING_NAME']; ?></th>
-                    <th><?php echo $Zitiziti['RATING']; ?></th>
-                    <th><?php echo $Zitiziti['VIEWS']; ?></th>
-                    <th><?php echo $Zitiziti['STATUS']; ?></th>
-                    <th><?php echo $Zitiziti['EDIT']; ?></th>
-                    <th><?php echo $Zitiziti['DELETE']; ?></th>
-                    <th><?php echo $Zitiziti['PREVIEW']; ?></th>
+                    <th><?php echo $BIZBOOK['S_NO']; ?></th>
+                    <th><?php echo $BIZBOOK['LISTING_NAME']; ?></th>
+                    <th><?php echo $BIZBOOK['RATING']; ?></th>
+                    <th><?php echo $BIZBOOK['VIEWS']; ?></th>
+                    <th><?php echo $BIZBOOK['STATUS']; ?></th>
+                    <th><?php echo $BIZBOOK['EDIT']; ?></th>
+                    <th><?php echo $BIZBOOK['DELETE']; ?></th>
+                    <th><?php echo $BIZBOOK['PREVIEW']; ?></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -388,11 +388,11 @@ $session_user_id = $user_details_row['user_id'];
                         </td>
                         <td><span class="db-list-ststus"><?php echo $listrow['listing_status']; ?></span></td>
                         <td><a href="edit-listing-step-1?row=<?php echo $listrow['listing_code']; ?>"
-                               class="db-list-edit"><?php echo $Zitiziti['EDIT']; ?></a></td>
+                               class="db-list-edit"><?php echo $BIZBOOK['EDIT']; ?></a></td>
                         <td><a href="delete-listing?row=<?php echo $listrow['listing_code']; ?>"
-                               class="db-list-edit"><?php echo $Zitiziti['DELETE']; ?></a></td>
+                               class="db-list-edit"><?php echo $BIZBOOK['DELETE']; ?></a></td>
                         <td><a href="<?php echo $LISTING_URL . urlModifier($listrow['listing_slug']); ?>"
-                               class="db-list-edit" target="_blank"><?php echo $Zitiziti['PREVIEW']; ?></a></td>
+                               class="db-list-edit" target="_blank"><?php echo $BIZBOOK['PREVIEW']; ?></a></td>
                     </tr>
                     <?php
                     $si++;
@@ -402,8 +402,8 @@ $session_user_id = $user_details_row['user_id'];
             </table>
         </div>
         <div class="ud-cen-s3">
-            <h2><?php echo $Zitiziti['EVENTS']; ?></h2>
-            <a href="create-new-event" class="db-tit-btn"><?php echo $Zitiziti['ADD_NEW_EVENT']; ?></a>
+            <h2><?php echo $BIZBOOK['EVENTS']; ?></h2>
+            <a href="create-new-event" class="db-tit-btn"><?php echo $BIZBOOK['ADD_NEW_EVENT']; ?></a>
             <ul>
                 <?php foreach (getAllUserEvents($_SESSION['user_id']) as $eventrow) { ?>
                     <li>
@@ -411,7 +411,7 @@ $session_user_id = $user_details_row['user_id'];
                             <a href="<?php echo $EVENT_URL . urlModifier($eventrow['event_slug']); ?>">
                                 <img loading="lazy" src="images/events/<?php echo $eventrow['event_image']; ?>" alt="">
                                 <h5><?php echo $eventrow['event_name']; ?></h5>
-                                <span><?php echo $Zitiziti['CREATED']; ?>
+                                <span><?php echo $BIZBOOK['CREATED']; ?>
                                     : <?php echo dateFormatconverter($eventrow['event_cdt']); ?></span>
                             </a>
                         </div>
@@ -420,8 +420,8 @@ $session_user_id = $user_details_row['user_id'];
             </ul>
         </div>
         <div class="ud-cen-s3 ud-cen-s4">
-            <h2><?php echo $Zitiziti['BLOG_POSTS']; ?></h2>
-            <a href="create-new-blog-post" class="db-tit-btn"><?php echo $Zitiziti['ADD_NEW_POST']; ?></a>
+            <h2><?php echo $BIZBOOK['BLOG_POSTS']; ?></h2>
+            <a href="create-new-blog-post" class="db-tit-btn"><?php echo $BIZBOOK['ADD_NEW_POST']; ?></a>
             <ul>
                 <?php foreach (getAllUserBlogs($_SESSION['user_id']) as $blogrow) { ?>
                     <li>
@@ -429,7 +429,7 @@ $session_user_id = $user_details_row['user_id'];
                             <a href="<?php echo $BLOG_URL . urlModifier($blogrow['blog_slug']); ?>">
                                 <img loading="lazy" src="images/blogs/<?php echo $blogrow['blog_image']; ?>" alt="">
                                 <h5><?php echo $blogrow['blog_name']; ?></h5>
-                                <span><?php echo $Zitiziti['CREATED']; ?>
+                                <span><?php echo $BIZBOOK['CREATED']; ?>
                                     : <?php echo dateFormatconverter($blogrow['blog_cdt']); ?></span>
                             </a>
                         </div>

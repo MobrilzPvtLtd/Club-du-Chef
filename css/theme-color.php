@@ -12,7 +12,7 @@ $color_setting_row = getAllCustomCss();
 
 /*-----------------------------------------
  [MASTER STYLE SHEET]
- * Project: Zitiziti Business Directory Template
+ * Project: Bizbook Business Directory Template
  * Version: v5.3
  * Copyright 2020-2022 rn53themes
  * Last Changes: 1 jan 2021

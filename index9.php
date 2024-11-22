@@ -25,7 +25,7 @@ include "header.php";
             <div class="container">
                 <div class="row">
                     <div class="plac-det-tit-inn">
-                        <h2><h2><span><?php echo $Zitiziti['HOM-POP-TIT']; ?></span> <?php echo $Zitiziti['HOM-POP-TIT1']; ?></h2></h2>
+                        <h2><h2><span><?php echo $BIZBOOK['HOM-POP-TIT']; ?></span> <?php echo $BIZBOOK['HOM-POP-TIT1']; ?></h2></h2>
                     </div>
                     <div class="plac-hom-all-pla">
                         <ul class="travel-sliser">
@@ -61,7 +61,7 @@ include "header.php";
             <div class="container">
                 <div class="row">
                     <div class="plac-det-tit-inn">
-                        <h2><span><?php echo $Zitiziti['HOM-BAN-TIT-CAT']; ?></span></h2>
+                        <h2><span><?php echo $BIZBOOK['HOM-BAN-TIT-CAT']; ?></span></h2>
                     </div>
                     <div class="plac-hom-all-pla">
                     <ul class="travel-sliser">
@@ -82,7 +82,7 @@ include "header.php";
                                     <h4><?php echo $category_name; ?></h4>
                                     </div>
                                     <div class="plac-hom-box-txt">
-                                        <span><?php echo $Zitiziti['SERVICE-EXPERTS-EXPERTS']; ?> <?php echo $total_experts_category; ?></span>
+                                        <span><?php echo $BIZBOOK['SERVICE-EXPERTS-EXPERTS']; ?> <?php echo $total_experts_category; ?></span>
                                         <span>More details</span>
                                     </div>
                                         <a href="<?php echo $ALL_EXPERTS_URL . urlModifier($expert_categories_row['category_slug']); ?>" class="fclick"></a>
@@ -106,9 +106,9 @@ include "header.php";
             <div class="container">
                 <div class="row">
                     <div class="plac-hom-tit plac-hom-tit-ic-ser">
-                    <h2><span><?php echo $Zitiziti['HOM-BEST-TIT']; ?></span> <?php echo $Zitiziti['HOM-BEST-TIT1']; ?>
+                    <h2><span><?php echo $BIZBOOK['HOM-BEST-TIT']; ?></span> <?php echo $BIZBOOK['HOM-BEST-TIT1']; ?>
                     </h2>
-                    <p><?php echo $Zitiziti['HOM-BEST-SUB-TIT']; ?></p>
+                    <p><?php echo $BIZBOOK['HOM-BEST-SUB-TIT']; ?></p>
                     </div>
                     <div class="plac-hom-all-pla">
                     <ul class="travel-sliser">
@@ -200,8 +200,8 @@ include "header.php";
             <div class="container">
                 <div class="row">
                     <div class="plac-hom-tit plac-hom-tit-ic-eve">
-                    <h2><span><?php echo $Zitiziti['HOM-EVE-TIT']; ?></span> <?php echo $Zitiziti['HOM-EVE-TIT1']; ?></h2>
-        <p><?php echo $Zitiziti['HOM-EVE-SUB-TIT']; ?></p>
+                    <h2><span><?php echo $BIZBOOK['HOM-EVE-TIT']; ?></span> <?php echo $BIZBOOK['HOM-EVE-TIT1']; ?></h2>
+        <p><?php echo $BIZBOOK['HOM-EVE-SUB-TIT']; ?></p>
                     </div>
                     <div class="plac-hom-all-pla plac-det-eve">
                     <ul class="travel-sliser">
@@ -246,8 +246,8 @@ include "header.php";
             <div class="container">
                 <div class="row">
                 <div class="plac-hom-tit plac-hom-tit-ic-nws">
-                    <h2><?php echo $Zitiziti['NEWS-HOMEPAGE-BANNER-H1-TEXT-2']; ?> <b><?php echo $place_row['place_name']; ?></b></h2>
-                    <p><?php echo $Zitiziti['NEWS-HOMEPAGE-BANNER-P-TEXT']; ?> <b><?php echo $Zitiziti['PLACE-NEWS-B']; ?></b></p>
+                    <h2><?php echo $BIZBOOK['NEWS-HOMEPAGE-BANNER-H1-TEXT-2']; ?> <b><?php echo $place_row['place_name']; ?></b></h2>
+                    <p><?php echo $BIZBOOK['NEWS-HOMEPAGE-BANNER-P-TEXT']; ?> <b><?php echo $BIZBOOK['PLACE-NEWS-B']; ?></b></p>
                 </div>
                     <div class="plac-hom-all-pla plac-det-eve">
                     <ul class="travel-sliser">
@@ -295,8 +295,8 @@ include "header.php";
         <div class="container">
             <div class="row">
             <div class="plac-hom-tit plac-hom-tit-ic-jbs">
-                    <h2><?php echo $Zitiziti['JOB-HEADER-H4']; ?> <b><?php echo $place_row['place_name']; ?></b></h2>
-                    <p><?php echo $Zitiziti['HOM-BEST-SUB-TIT']; ?> <b><?php echo $Zitiziti['PLACE-NEWS-B']; ?></b></p>
+                    <h2><?php echo $BIZBOOK['JOB-HEADER-H4']; ?> <b><?php echo $place_row['place_name']; ?></b></h2>
+                    <p><?php echo $BIZBOOK['HOM-BEST-SUB-TIT']; ?> <b><?php echo $BIZBOOK['PLACE-NEWS-B']; ?></b></p>
                 </div>
                 <div class="plac-hom-all-pla job-list">
                     <ul class="travel-sliser">
@@ -321,27 +321,27 @@ include "header.php";
                                     </div>
                                     <div class="job-days">
                                         <span class="day"><?php echo time_elapsed_string($job_sql_row['job_cdt']); ?></span>
-                                        <span class="apl"><?php echo $total_count_jobs_applied; ?> <?php echo $Zitiziti['APPLICANTS']; ?></span>
+                                        <span class="apl"><?php echo $total_count_jobs_applied; ?> <?php echo $BIZBOOK['APPLICANTS']; ?></span>
                                     </div>
                                     <div class="job-box-con">
                                         <h4><?php echo $job_sql_row['job_title']; ?></h4>
                                         <span><?php
                                             $job_type = $job_sql_row['job_type'];
                                             if ($job_type == 1) {
-                                                echo $Zitiziti['JOB-PERMANENT'];
+                                                echo $BIZBOOK['JOB-PERMANENT'];
                                             } elseif ($job_type == 2) {
-                                                echo $Zitiziti['JOB-CONTRACT'];
+                                                echo $BIZBOOK['JOB-CONTRACT'];
                                             } elseif ($job_type == 3) {
-                                                echo $Zitiziti['JOB-PART-TIME'];
+                                                echo $BIZBOOK['JOB-PART-TIME'];
                                             } elseif ($job_type == 4) {
-                                                echo $Zitiziti['JOB-FREELANCE'];
+                                                echo $BIZBOOK['JOB-FREELANCE'];
                                             }
                                             ?></span>
                                         <span><?php echo $job_sql_row['job_role']; ?></span>
-                                        <span><?php echo AddingZero_BeforeNumber($job_sql_row['no_of_openings']); ?> <?php echo $Zitiziti['JOB_OPENINGS']; ?></span>
+                                        <span><?php echo AddingZero_BeforeNumber($job_sql_row['no_of_openings']); ?> <?php echo $BIZBOOK['JOB_OPENINGS']; ?></span>
                                     </div>
                                     <div class="job-box-apl">
-                                        <span class="job-box-cta"><?php echo $Zitiziti['JOB_APPLY_NOW']; ?></span>
+                                        <span class="job-box-cta"><?php echo $BIZBOOK['JOB_APPLY_NOW']; ?></span>
                                     </div>
                                     <a href="<?php echo $JOB_URL . urlModifier($job_sql_row['job_slug']); ?>" class="job-full-cta"></a>
                                 </div>
@@ -368,8 +368,8 @@ include "header.php";
                 
                 <div class="how-wrks">
                     <div class="home-tit">
-                        <h2><span><?php echo $Zitiziti['HOM-HOW-TIT']; ?></span></h2>
-                        <p><?php echo $Zitiziti['HOM-HOW-SUB-TIT']; ?></p>
+                        <h2><span><?php echo $BIZBOOK['HOM-HOW-TIT']; ?></span></h2>
+                        <p><?php echo $BIZBOOK['HOM-HOW-SUB-TIT']; ?></p>
                     </div>
                     <div class="how-wrks-inn">
                         <ul>
@@ -377,32 +377,32 @@ include "header.php";
                                 <div>
                                     <span>1</span>
                                     <img src="images/icon/how1.png" alt="">
-                                    <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-1']; ?></h4>
-                                    <p><?php echo $Zitiziti['HOM-HOW-P-SUB-1']; ?></p>
+                                    <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-1']; ?></h4>
+                                    <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-1']; ?></p>
                                 </div>
                             </li>
                             <li>
                                 <div>
                                     <span>2</span>
                                     <img src="images/icon/how2.png" alt="">
-                                    <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-2']; ?></h4>
-                                    <p><?php echo $Zitiziti['HOM-HOW-P-SUB-2']; ?></p>
+                                    <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-2']; ?></h4>
+                                    <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-2']; ?></p>
                                 </div>
                             </li>
                             <li>
                                 <div>
                                     <span>3</span>
                                     <img src="images/icon/how3.png" alt="">
-                                    <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-3']; ?></h4>
-                                    <p><?php echo $Zitiziti['HOM-HOW-P-SUB-3']; ?></p>
+                                    <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-3']; ?></h4>
+                                    <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-3']; ?></p>
                                 </div>
                             </li>
                             <li>
                                 <div>
                                     <span>4</span>
                                     <img src="images/icon/how4.png" alt="">
-                                    <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-4']; ?></h4>
-                                    <p><?php echo $Zitiziti['HOM-HOW-P-SUB-4']; ?></p>
+                                    <h4><?php echo $BIZBOOK['HOM-HOW-P-TIT-4']; ?></h4>
+                                    <p><?php echo $BIZBOOK['HOM-HOW-P-SUB-4']; ?></p>
                                 </div>
                             </li>
                         </ul>
@@ -448,9 +448,9 @@ include "header.php";
 <!-- START -->
 <div class="ani-quo">
     <div class="ani-q1">
-        <h4><?php echo $Zitiziti['HOM-WHAT-LOOK-TIT']; ?></h4>
-        <p><?php echo $Zitiziti['HOM-WHAT-LOOK-SUB']; ?></p>
-        <span><?php echo $Zitiziti['HOM-WHAT-LOOK-CTA']; ?></span>
+        <h4><?php echo $BIZBOOK['HOM-WHAT-LOOK-TIT']; ?></h4>
+        <p><?php echo $BIZBOOK['HOM-WHAT-LOOK-SUB']; ?></p>
+        <span><?php echo $BIZBOOK['HOM-WHAT-LOOK-CTA']; ?></span>
     </div>
     <div class="ani-q2">
         <img src="images/quote.png" alt="">

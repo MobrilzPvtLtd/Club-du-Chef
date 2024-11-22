@@ -18,64 +18,64 @@ if (file_exists('config/user_authentication.php')) {
                 <span class="udb-inst">How tos</span>
                 <div class="log log-1">
                     <div class="login">
-                        <h4><?php echo $Zitiziti['pg_howto_tit']; ?></h4>
-                        <p><?php echo $Zitiziti['pg_howto_sub_tit']; ?></p>
+                        <h4><?php echo $BIZBOOK['pg_howto_tit']; ?></h4>
+                        <p><?php echo $BIZBOOK['pg_howto_sub_tit']; ?></p>
                         <div class="col-md-12">
                             <div class="how-to-coll">
                                 <ul>
                                     <li>
-                                        <h4><?php echo $Zitiziti['pg_howto_q1']; ?></h4>
+                                        <h4><?php echo $BIZBOOK['pg_howto_q1']; ?></h4>
                                         <div>
-                                            <p><?php echo $Zitiziti['pg_howto_a1']; ?></p>
+                                            <p><?php echo $BIZBOOK['pg_howto_a1']; ?></p>
                                         </div>
                                     </li>
                                     <li>
-                                        <h4><?php echo $Zitiziti['pg_howto_q2']; ?></h4>
+                                        <h4><?php echo $BIZBOOK['pg_howto_q2']; ?></h4>
                                         <div>
-                                            <p><?php echo $Zitiziti['pg_howto_a2']; ?></p>
+                                            <p><?php echo $BIZBOOK['pg_howto_a2']; ?></p>
                                         </div>
                                     </li>
                                     <li>
-                                        <h4><?php echo $Zitiziti['pg_howto_q3']; ?></h4>
+                                        <h4><?php echo $BIZBOOK['pg_howto_q3']; ?></h4>
                                         <div>
-                                            <p><?php echo $Zitiziti['pg_howto_a3']; ?></p>
+                                            <p><?php echo $BIZBOOK['pg_howto_a3']; ?></p>
                                         </div>
                                     </li>
                                     <li>
-                                        <h4><?php echo $Zitiziti['pg_howto_q4']; ?></h4>
+                                        <h4><?php echo $BIZBOOK['pg_howto_q4']; ?></h4>
                                         <div>
-                                            <p><?php echo $Zitiziti['pg_howto_a4']; ?></p>
+                                            <p><?php echo $BIZBOOK['pg_howto_a4']; ?></p>
                                         </div>
                                     </li>
                                     <li>
-                                        <h4><?php echo $Zitiziti['pg_howto_q5']; ?></h4>
+                                        <h4><?php echo $BIZBOOK['pg_howto_q5']; ?></h4>
                                         <div>
-                                            <p><?php echo $Zitiziti['pg_howto_a5']; ?></p>
+                                            <p><?php echo $BIZBOOK['pg_howto_a5']; ?></p>
                                         </div>
                                     </li>
                                     <li>
-                                        <h4><?php echo $Zitiziti['pg_howto_q6']; ?></h4>
+                                        <h4><?php echo $BIZBOOK['pg_howto_q6']; ?></h4>
                                         <div>
-                                            <p><?php echo $Zitiziti['pg_howto_a6']; ?></p>
+                                            <p><?php echo $BIZBOOK['pg_howto_a6']; ?></p>
                                         </div>
                                     </li>
                                     <li>
-                                        <h4><?php echo $Zitiziti['pg_howto_q7']; ?></h4>
+                                        <h4><?php echo $BIZBOOK['pg_howto_q7']; ?></h4>
                                         <div>
-                                            <p><?php echo $Zitiziti['pg_howto_a7']; ?></p>
+                                            <p><?php echo $BIZBOOK['pg_howto_a7']; ?></p>
                                         </div>
                                     </li>
                                     <li>
-                                        <h4><?php echo $Zitiziti['pg_howto_q8']; ?></h4>
+                                        <h4><?php echo $BIZBOOK['pg_howto_q8']; ?></h4>
                                         <div>
-                                            <p><?php echo $Zitiziti['pg_howto_a8']; ?></p>
+                                            <p><?php echo $BIZBOOK['pg_howto_a8']; ?></p>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <a href="dashboard" class="skip"><?php echo $Zitiziti['GO_TO_USER_DASHBOARD']; ?> &gt;&gt;</a>
+                            <a href="dashboard" class="skip"><?php echo $BIZBOOK['GO_TO_USER_DASHBOARD']; ?> &gt;&gt;</a>
                         </div>
                     </div>
                 </div>
@@ -95,26 +95,26 @@ if (file_exists('config/user_authentication.php')) {
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <!-- Modal Header -->
                     <div class="quote-pop">
-                        <h4><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></h4>
+                        <h4><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></h4>
                         <form>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>" required>
+                                <input type="text" class="form-control" placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>"
+                                <input type="email" class="form-control" placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>"
                                        pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                       title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
+                                       title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                <input type="text" class="form-control" placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
                                        pattern="[7-9]{1}[0-9]{9}"
-                                       title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>" required>
+                                       title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>" required>
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control" rows="3"
-                                          placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                          placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?></button>
+                            <button type="submit" class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
                         </form>
                     </div>
                 </div>

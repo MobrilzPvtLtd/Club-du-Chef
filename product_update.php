@@ -226,7 +226,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $webpage_full_link_with_login = $webpage_full_link. "login";  //URL Login Link
 
-            $PRODUCT_UPDATE_ADMIN_SUBJECT = $Zitiziti['PRODUCT_UPDATE_ADMIN_SUBJECT'];
+            $PRODUCT_UPDATE_ADMIN_SUBJECT = $BIZBOOK['PRODUCT_UPDATE_ADMIN_SUBJECT'];
 
 //****************************    Admin email starts    *************************
 
@@ -256,7 +256,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //****************************    Client email starts    *************************
 
             $to1 = $email_id;
-            $PRODUCT_UPDATE_CLIENT_SUBJECT = $Zitiziti['PRODUCT_UPDATE_CLIENT_SUBJECT'];
+            $PRODUCT_UPDATE_CLIENT_SUBJECT = $BIZBOOK['PRODUCT_UPDATE_CLIENT_SUBJECT'];
             
             $subject1 = "$admin_site_name $PRODUCT_UPDATE_CLIENT_SUBJECT";
 
@@ -282,7 +282,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if ($product_type_id == 1) {
 
-                $_SESSION['status_msg'] = $Zitiziti['PRODUCT_UPDATE_SUCCESS_MESSAGE'];
+                $_SESSION['status_msg'] = $BIZBOOK['PRODUCT_UPDATE_SUCCESS_MESSAGE'];
 
                 header('Location: db-products');
                 exit;
@@ -290,14 +290,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 header("Location: paypal_pay?map_id=$product_id&type_id=$product_type_id");
 
-                $_SESSION['status_msg'] = $Zitiziti['PRODUCT_UPDATE_SUCCESS_MESSAGE'];
+                $_SESSION['status_msg'] = $BIZBOOK['PRODUCT_UPDATE_SUCCESS_MESSAGE'];
 
                 exit;
             }
             
         } else {
 
-            $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+            $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
             header("Location: edit-product?code=$product_code");
         }
@@ -307,7 +307,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } else {
 
-    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: dashboard');
 }

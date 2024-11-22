@@ -21,7 +21,7 @@ if (isset($_SESSION['user_name']) && !empty($_SESSION['user_name'])) {
                 <div class="log-bor">&nbsp;</div>
                 <div class="log log-1">
                     <div class="login login-new">
-                        <h4><?php echo $Zitiziti['MEMBER_LOGIN']; ?></h4>
+                        <h4><?php echo $BIZBOOK['MEMBER_LOGIN']; ?></h4>
                         <?php
                         if (isset($_SESSION['login_status_msg'])) {
                             include "page_level_message.php";
@@ -39,17 +39,17 @@ if (isset($_SESSION['user_name']) && !empty($_SESSION['user_name'])) {
                             ?>
                             <div class="form-group">
                                 <input type="email" autocomplete="off" name="email_id" id="email_id"
-                                       class="form-control" placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>"
+                                       class="form-control" placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>"
                                        pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
                                        title="Enter email address" value="" required>
                             </div>
                             <div class="form-group">
                                 <input type="password" name="password" id="password" class="form-control"
-                                       placeholder="<?php echo $Zitiziti['ENTER_PASSWORD_STAR']; ?>" required
+                                       placeholder="<?php echo $BIZBOOK['ENTER_PASSWORD_STAR']; ?>" required
                                        value="">
                             </div>
                             <button type="submit" name="login_submit" value="submit"
-                                    class="btn btn-primary"><?php echo $Zitiziti['SIGN_IN']; ?>
+                                    class="btn btn-primary"><?php echo $BIZBOOK['SIGN_IN']; ?>
                             </button>
                         </form>
 
@@ -70,7 +70,7 @@ if (isset($_SESSION['user_name']) && !empty($_SESSION['user_name'])) {
                                         ?>
                                         <li>
                                             <a href="javascript:void(0);" onclick="fbLogin();" class="login-fb"><img
-                                                    src="images/icon/facebook.png"> <?php echo $Zitiziti['CONTINUE_WITH_FACEBOOK']; ?>
+                                                    src="images/icon/facebook.png"> <?php echo $BIZBOOK['CONTINUE_WITH_FACEBOOK']; ?>
                                             </a>
                                         </li>
                                         <?php
@@ -92,8 +92,8 @@ if (isset($_SESSION['user_name']) && !empty($_SESSION['user_name'])) {
                             unset($_SESSION['register_status_msg']);
                         }
                         ?>
-                        <h4><?php echo $Zitiziti['CREATE_AN_ACCOUNT']; ?></h4>
-                        <p><?php echo $Zitiziti['REGISTER_LABEL']; ?></p>
+                        <h4><?php echo $BIZBOOK['CREATE_AN_ACCOUNT']; ?></h4>
+                        <p><?php echo $BIZBOOK['REGISTER_LABEL']; ?></p>
                         <form name="register_form" id="register_form" method="post" action="register_update.php">
 
                             <input type="hidden" autocomplete="off" name="trap_box" id="trap_box" class="validate">
@@ -103,36 +103,36 @@ if (isset($_SESSION['user_name']) && !empty($_SESSION['user_name'])) {
 
                             <div class="form-group">
                                 <input type="text" autocomplete="off" name="first_name" id="first_name"
-                                       class="form-control" placeholder="<?php echo $Zitiziti['NAME']; ?>">
+                                       class="form-control" placeholder="<?php echo $BIZBOOK['NAME']; ?>">
                             </div>
                             <div class="form-group">
                                 <input type="email" autocomplete="off" name="email_id" id="email_id"
-                                       class="form-control" placeholder="<?php echo $Zitiziti['EMAIL_ID_STAR']; ?>"
+                                       class="form-control" placeholder="<?php echo $BIZBOOK['EMAIL_ID_STAR']; ?>"
                                        required>
                             </div>
                             <div class="form-group">
                                 <input type="password" name="password" id="password" class="form-control"
-                                       placeholder="<?php echo $Zitiziti['PASSWORD_STAR']; ?>" required>
+                                       placeholder="<?php echo $BIZBOOK['PASSWORD_STAR']; ?>" required>
                             </div>
                             <div class="form-group">
                                 <input type="text" onkeypress="return isNumber(event)" autocomplete="off"
                                        name="mobile_number" id="mobile_number" class="form-control"
-                                       placeholder="<?php echo $Zitiziti['PHONE']; ?>">
+                                       placeholder="<?php echo $BIZBOOK['PHONE']; ?>">
                             </div>
                             <div class="form-group ca-sh-user">
                                 <select name="user_type" id="user_type" class="form-control ca-check-plan">
-                                    <option value=""><?php echo $Zitiziti['USER_TYPE']; ?></option>
-                                    <option value="General"><?php echo $Zitiziti['GENERAL_USER']; ?></option>
+                                    <option value=""><?php echo $BIZBOOK['USER_TYPE']; ?></option>
+                                    <option value="General"><?php echo $BIZBOOK['GENERAL_USER']; ?></option>
                                     <option
-                                        value="Service provider"><?php echo $Zitiziti['SERVICE_PROVIDER']; ?></option>
+                                        value="Service provider"><?php echo $BIZBOOK['SERVICE_PROVIDER']; ?></option>
                                 </select>
                                 <a href="user-type" class="frmtip"
-                                   target="_blank"><?php echo $Zitiziti['USER_OPTIONS']; ?></a>
+                                   target="_blank"><?php echo $BIZBOOK['USER_OPTIONS']; ?></a>
                             </div>
                             <div class="form-group ca-sh-plan">
                                 <select name="user_plan" id="user_plan" class="form-control">
                                     <option value="" disabled="disabled"
-                                            selected="selected"><?php echo $Zitiziti['CHOOSE_YOUR_PLAN']; ?></option>
+                                            selected="selected"><?php echo $BIZBOOK['CHOOSE_YOUR_PLAN']; ?></option>
                                     <?php
                                     $plan_type = "SELECT *
 										FROM " . TBL . "plan_type WHERE plan_type_status='Active'
@@ -162,10 +162,10 @@ if (isset($_SESSION['user_name']) && !empty($_SESSION['user_name'])) {
                                     ?>
                                 </select>
                                 <a href="pricing-details" class="frmtip"
-                                   target="_blank"><?php echo $Zitiziti['PLAN_DETAILS']; ?></a>
+                                   target="_blank"><?php echo $BIZBOOK['PLAN_DETAILS']; ?></a>
                             </div>
                             <button type="submit" name="register_submit"
-                                    class="btn btn-primary"><?php echo $Zitiziti['REGISTER_NOW']; ?></button>
+                                    class="btn btn-primary"><?php echo $BIZBOOK['REGISTER_NOW']; ?></button>
                         </form>
                         <?php
                         if ($footer_row['admin_google_login'] == 1 || $footer_row['admin_facebook_login'] == 1) {
@@ -187,7 +187,7 @@ if (isset($_SESSION['user_name']) && !empty($_SESSION['user_name'])) {
                                         ?>
                                         <li>
                                             <a href="javascript:void(0);" onclick="fbLogin();" class="login-fb"><img
-                                                    src="images/icon/facebook.png"> <?php echo $Zitiziti['CONTINUE_WITH_FACEBOOK']; ?>
+                                                    src="images/icon/facebook.png"> <?php echo $BIZBOOK['CONTINUE_WITH_FACEBOOK']; ?>
                                             </a>
                                         </li>
                                         <?php
@@ -211,29 +211,29 @@ if (isset($_SESSION['user_name']) && !empty($_SESSION['user_name'])) {
                             unset($_SESSION['forgot_status_msg']);
                         }
                         ?>
-                        <h4><?php echo $Zitiziti['FORGOT_PASSWORD']; ?></h4>
+                        <h4><?php echo $BIZBOOK['FORGOT_PASSWORD']; ?></h4>
                         <form id="forget_form" name="forget_form" method="post" action="forgot_process.php">
                             <div class="form-group">
                                 <input type="email" autocomplete="off" name="email_id" id="email_id"
-                                       class="form-control" placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>"
+                                       class="form-control" placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>"
                                        pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                       title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
+                                       title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
                             </div>
                             <button type="submit" name="forgot_submit"
-                                    class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?></button>
+                                    class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
                         </form>
                     </div>
                 </div>
                 <div class="log-bot">
                     <ul>
                         <li>
-                            <span class="ll-1"><?php echo $Zitiziti['LOGIN_QUESTIONMARK']; ?></span>
+                            <span class="ll-1"><?php echo $BIZBOOK['LOGIN_QUESTIONMARK']; ?></span>
                         </li>
                         <li>
-                            <span class="ll-2"><?php echo $Zitiziti['CREATE_ACCOUNT_QUESTIONMARK']; ?></span>
+                            <span class="ll-2"><?php echo $BIZBOOK['CREATE_ACCOUNT_QUESTIONMARK']; ?></span>
                         </li>
                         <li>
-                            <span class="ll-3"><?php echo $Zitiziti['FORGOT_PASSWORD_QUESTIONMARK']; ?></span>
+                            <span class="ll-3"><?php echo $BIZBOOK['FORGOT_PASSWORD_QUESTIONMARK']; ?></span>
                         </li>
                     </ul>
                 </div>
@@ -253,29 +253,29 @@ if (isset($_SESSION['user_name']) && !empty($_SESSION['user_name'])) {
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <!-- Modal Header -->
                     <div class="quote-pop">
-                        <h4><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></h4>
+                        <h4><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></h4>
                         <form>
                             <div class="form-group">
                                 <input type="text" class="form-control"
-                                       placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>" required>
+                                       placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>" required>
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control"
-                                       placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>"
+                                       placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>"
                                        pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                       title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
+                                       title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control"
-                                       placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                       placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
                                        pattern="[7-9]{1}[0-9]{9}"
                                        title="Phone number starting with 7-9 and remaining 9 digit with 0-9" required>
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control" rows="3"
-                                          placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                          placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?></button>
+                            <button type="submit" class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
                         </form>
                     </div>
                 </div>

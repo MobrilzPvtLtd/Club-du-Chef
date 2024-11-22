@@ -31,13 +31,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             //Query to delete the page view ends  
 
-            $_SESSION['status_msg'] = $Zitiziti['PRODUCT_DELETE_SUCCESS_MESSAGE'];
+            $_SESSION['status_msg'] = $BIZBOOK['PRODUCT_DELETE_SUCCESS_MESSAGE'];
 
             header('Location: db-products');
 
         } else {
 
-            $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+            $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
             header('Location: db-products');
         }
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } else {
 
-    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: dashboard');
 }

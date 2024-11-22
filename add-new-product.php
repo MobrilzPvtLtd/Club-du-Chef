@@ -19,7 +19,7 @@ $product_count_user = getCountUserProduct($_SESSION['user_id']);
 
 if($product_count_user >= $plan_type_product_count){
 
-    $_SESSION['status_msg'] = $Zitiziti['PRODUCTS_LIMIT_EXCEED_MESSAGE'];
+    $_SESSION['status_msg'] = $BIZBOOK['PRODUCTS_LIMIT_EXCEED_MESSAGE'];
 
     header('Location: db-products');
     exit();
@@ -36,11 +36,11 @@ if($product_count_user >= $plan_type_product_count){
         <div class="row">
             <div class="login-main add-list">
                 <div class="log-bor">&nbsp;</div>
-                <span class="steps"><?php echo $Zitiziti['NEW_PRODUCT']; ?></span>
+                <span class="steps"><?php echo $BIZBOOK['NEW_PRODUCT']; ?></span>
                 <div class="log">
                     <div class="login add-list-off add-pro-fie">
                         <?php include "page_level_message.php"; ?>
-                        <h4><?php echo $Zitiziti['ADD_NEW_PRODUCT']; ?></h4>
+                        <h4><?php echo $BIZBOOK['ADD_NEW_PRODUCT']; ?></h4>
                         <form action="product_insert.php" class="product_form" id="product_form" name="product_form"
                               method="post" enctype="multipart/form-data">
                             <ul>
@@ -51,7 +51,7 @@ if($product_count_user >= $plan_type_product_count){
                                             <div class="form-group">
                                                 <input type="text" name="product_name" id="product_name"
                                                        required="required" class="form-control"
-                                                       placeholder="<?php echo $Zitiziti['PRODUCT_NAME_STAR']; ?>">
+                                                       placeholder="<?php echo $BIZBOOK['PRODUCT_NAME_STAR']; ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -62,7 +62,7 @@ if($product_count_user >= $plan_type_product_count){
                                             <div class="form-group">
                                                 <select onChange="getProductSubCategory(this.value);" name="category_id"
                                                         id="category_id" class="chosen-select form-control">
-                                                    <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
+                                                    <option value=""><?php echo $BIZBOOK['SELECT_CATEGORY']; ?></option>
                                                     <?php
                                                     foreach (getAllProductCategories() as $categories_row) {
                                                         ?>
@@ -84,7 +84,7 @@ if($product_count_user >= $plan_type_product_count){
                                             <div class="form-group">
                                                 <select data-placeholder="Select Sub Category" name="sub_category_id[]"
                                                         id="sub_category_id" multiple class="chosen-select form-control">
-                                                    <option value=""><?php echo $Zitiziti['SELECT_SUB_CATEGORY']; ?></option>
+                                                    <option value=""><?php echo $BIZBOOK['SELECT_SUB_CATEGORY']; ?></option>
                                                 </select>
                                             </div>
                                         </div>
@@ -95,13 +95,13 @@ if($product_count_user >= $plan_type_product_count){
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <input type="text" name="product_price" id="product_price" onkeypress="return isNumber(event)"
-                                                       required="required" class="form-control" placeholder="<?php echo $Zitiziti['PRICE']; ?>*">
+                                                       required="required" class="form-control" placeholder="<?php echo $BIZBOOK['PRICE']; ?>*">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <input type="text" name="product_price_offer" id="product_price_offer" onkeypress="return isNumber(event)"
-                                                       class="form-control" placeholder="<?php echo $Zitiziti['PRODUCT_OFFER']; ?>">
+                                                       class="form-control" placeholder="<?php echo $BIZBOOK['PRODUCT_OFFER']; ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -113,11 +113,11 @@ if($product_count_user >= $plan_type_product_count){
                                                 <input type="text" class="form-control"
                                                        name="product_payment_link"
                                                        id="product_payment_link"
-                                                       placeholder="<?php echo $Zitiziti['PRODUCT_PAYMENT_LINK']; ?>" required>
+                                                       placeholder="<?php echo $BIZBOOK['PRODUCT_PAYMENT_LINK']; ?>" required>
                                                 <!-- INPUT TOOL TIP -->
                                                 <div class="inp-ttip">
-                                                    <b><?php echo $Zitiziti['PRODUCT_PAYMENT_LINK_P_TAG']; ?></b>
-                                                    <?php echo $Zitiziti['PRODUCT_PAYMENT_LINK_INFO']; ?>
+                                                    <b><?php echo $BIZBOOK['PRODUCT_PAYMENT_LINK_P_TAG']; ?></b>
+                                                    <?php echo $BIZBOOK['PRODUCT_PAYMENT_LINK_INFO']; ?>
                                                 </div>
                                                 <!-- END INPUT TOOL TIP -->
                                             </div>
@@ -128,7 +128,7 @@ if($product_count_user >= $plan_type_product_count){
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <textarea class="form-control" required="required"  name="product_description" id="product_description" placeholder="<?php echo $Zitiziti['PRODUCT_DETAILS']; ?>"></textarea>
+                                                <textarea class="form-control" required="required"  name="product_description" id="product_description" placeholder="<?php echo $BIZBOOK['PRODUCT_DETAILS']; ?>"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -137,9 +137,9 @@ if($product_count_user >= $plan_type_product_count){
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label><?php echo $Zitiziti['PRODUCT_IMAGE_LABEL']; ?></label>
+                                                <label><?php echo $BIZBOOK['PRODUCT_IMAGE_LABEL']; ?></label>
                                                 <div class="fil-img-uplo">
-                                                    <span class="dumfil"><?php echo $Zitiziti['UPLOAD_A_FILE'];  ?></span>
+                                                    <span class="dumfil"><?php echo $BIZBOOK['UPLOAD_A_FILE'];  ?></span>
                                                     <input type="file" name="gallery_image[]" accept="image/*,.jpg,.jpeg,.png" class="form-control" multiple>
                                                 </div>
                                             </div>
@@ -152,7 +152,7 @@ if($product_count_user >= $plan_type_product_count){
                                             <div class="log">
                                                 <div class="add-prod-high-oth">
 
-                                                    <h4><?php echo $Zitiziti['HIGHLIGHTS']; ?></h4>
+                                                    <h4><?php echo $BIZBOOK['HIGHLIGHTS']; ?></h4>
                                                     <span class="add-list-add-btn prod-add-high-oad"
                                                           title="add new offer">+</span>
                                                     <span class="add-list-rem-btn prod-add-high-ore"
@@ -166,7 +166,7 @@ if($product_count_user >= $plan_type_product_count){
                                                                         <input type="text"
                                                                                name="product_highlights[]"
                                                                                class="form-control"
-                                                                               placeholder="<?php echo $Zitiziti['HIGHLIGHTS_PLACEHOLDER']; ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['HIGHLIGHTS_PLACEHOLDER']; ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -186,7 +186,7 @@ if($product_count_user >= $plan_type_product_count){
                                             <div class="log">
                                                 <div class="add-prod-oth">
 
-                                                    <h4><?php echo $Zitiziti['SPECIFICATIONS']; ?></h4>
+                                                    <h4><?php echo $BIZBOOK['SPECIFICATIONS']; ?></h4>
                                                     <span class="add-list-add-btn prod-add-oad"
                                                           title="add new offer">+</span>
                                                     <span class="add-list-rem-btn prod-add-ore"
@@ -200,7 +200,7 @@ if($product_count_user >= $plan_type_product_count){
                                                                         <input type="text"
                                                                                name="product_info_question[]"
                                                                                class="form-control"
-                                                                               placeholder="<?php echo $Zitiziti['SPECIFICATIONS_QUESTION']; ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['SPECIFICATIONS_QUESTION']; ?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-2">
@@ -212,7 +212,7 @@ if($product_count_user >= $plan_type_product_count){
                                                                     <div class="form-group">
                                                                         <input type="text" name="product_info_answer[]"
                                                                                class="form-control"
-                                                                               placeholder="<?php echo $Zitiziti['SPECIFICATIONS_ANSWER']; ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['SPECIFICATIONS_ANSWER']; ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -233,7 +233,7 @@ if($product_count_user >= $plan_type_product_count){
                                                <textarea class="form-control"
                                                          name="product_tags"
                                                          id="product_tags"
-                                                         placeholder="<?php echo $Zitiziti['PRODUCT_TAGS_PLACEHOLDER']; ?>"></textarea>
+                                                         placeholder="<?php echo $BIZBOOK['PRODUCT_TAGS_PLACEHOLDER']; ?>"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -243,10 +243,10 @@ if($product_count_user >= $plan_type_product_count){
                             <!--FILED START-->
                             <div class="row">
                                 <div class="col-md-12">
-                                    <button type="submit" name="product_submit" class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?></button>
+                                    <button type="submit" name="product_submit" class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
                                 </div>
                                 <div class="col-md-12">
-                                    <a href="dashboard" class="skip"><?php echo $Zitiziti['GO_TO_USER_DASHBOARD']; ?> >></a>
+                                    <a href="dashboard" class="skip"><?php echo $BIZBOOK['GO_TO_USER_DASHBOARD']; ?> >></a>
                                 </div>
                             </div>
                             <!--FILED END-->

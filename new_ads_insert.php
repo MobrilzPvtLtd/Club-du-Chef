@@ -163,14 +163,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header('Location: payment_paypal_ads.php');
             exit;
 
-            // $_SESSION['status_msg'] = $Zitiziti['NEW_AD_REQUEST_SUCCESS_MESSAGE'];
+            // $_SESSION['status_msg'] = $BIZBOOK['NEW_AD_REQUEST_SUCCESS_MESSAGE'];
 
             // header('Location: db-post-ads');
             // exit;
 
         } else {
 
-            $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+            $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
             header('Location: post-your-ads');
             exit;
@@ -179,7 +179,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } else {
 
-    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: post-your-ads');
     exit;

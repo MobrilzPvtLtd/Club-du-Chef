@@ -23,10 +23,10 @@ if (file_exists('config/coupon_page_authentication.php')) {
         <div class="row">
             <div class="login-main add-list">
                 <div class="log-bor">&nbsp;</div>
-                <span class="steps"><?php echo $Zitiziti['DELETE_THIS_COUPON']; ?></span>
+                <span class="steps"><?php echo $BIZBOOK['DELETE_THIS_COUPON']; ?></span>
                 <div class="log">
                     <div class="login">
-                        <h4><?php echo $Zitiziti['DELETE_THIS_COUPON']; ?></h4>
+                        <h4><?php echo $BIZBOOK['DELETE_THIS_COUPON']; ?></h4>
                         <?php include "page_level_message.php"; ?>
                         <?php
                         $coupon_row_code = $_GET['FMFJGVPWERFGVPWOVGYMFMFJ188WOVGYMFUKEX8'];
@@ -45,7 +45,7 @@ if (file_exists('config/coupon_page_authentication.php')) {
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="coupon_name" readonly
                                                value="<?php echo $coupon_row['coupon_name']; ?>"
-                                               placeholder="<?php echo $Zitiziti['COUPON-COUPON-NAME-PLACEHOLDER']; ?>" required>
+                                               placeholder="<?php echo $BIZBOOK['COUPON-COUPON-NAME-PLACEHOLDER']; ?>" required>
                                     </div>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@ if (file_exists('config/coupon_page_authentication.php')) {
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="coupon_code" readonly
                                                value="<?php echo $coupon_row['coupon_code']; ?>"
-                                               placeholder="<?php echo $Zitiziti['COUPON-OFFER-CODE-PLACEHOLDER']; ?>" required>
+                                               placeholder="<?php echo $BIZBOOK['COUPON-OFFER-CODE-PLACEHOLDER']; ?>" required>
                                     </div>
                                 </div>
                             </div>
@@ -67,7 +67,7 @@ if (file_exists('config/coupon_page_authentication.php')) {
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="coupon_link" readonly
                                                value="<?php echo $coupon_row['coupon_link']; ?>"
-                                               placeholder="<?php echo $Zitiziti['COUPON-WEBSITE-LINK-PLACEHOLDER']; ?>">
+                                               placeholder="<?php echo $BIZBOOK['COUPON-WEBSITE-LINK-PLACEHOLDER']; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@ if (file_exists('config/coupon_page_authentication.php')) {
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label><?php echo $Zitiziti['COUPON-START-DATE-PLACEHOLDER']; ?></label>
+                                        <label><?php echo $BIZBOOK['COUPON-START-DATE-PLACEHOLDER']; ?></label>
                                         <input type="date" class="form-control"
                                                value="<?php echo $coupon_row['coupon_start_date']; ?>" readonly
                                                name="coupon_start_date" required>
@@ -84,7 +84,7 @@ if (file_exists('config/coupon_page_authentication.php')) {
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label><?php echo $Zitiziti['COUPON-END-DATE-PLACEHOLDER']; ?></label>
+                                        <label><?php echo $BIZBOOK['COUPON-END-DATE-PLACEHOLDER']; ?></label>
                                         <input type="date" class="form-control"
                                                value="<?php echo $coupon_row['coupon_end_date']; ?>" readonly
                                                name="coupon_end_date" required>
@@ -93,7 +93,7 @@ if (file_exists('config/coupon_page_authentication.php')) {
                             </div>
                             <!--FILED END-->
 
-                            <button type="submit" name="coupon_submit" class="btn btn-primary"><?php echo $Zitiziti['DELETE']; ?></button>
+                            <button type="submit" name="coupon_submit" class="btn btn-primary"><?php echo $BIZBOOK['DELETE']; ?></button>
                         </form>
                     </div>
                 </div>

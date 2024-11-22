@@ -11,7 +11,7 @@ include "header.php";
 
             <div class="ad-dash-s1">
                 <div class="cd-cen-intr-inn cd-cen-intr-inn2">
-                <h2>Welcome to <b>Zitiziti Add-Ons</b></h2>
+                <h2>Welcome to <b>Bizbook Add-Ons</b></h2>
                 <p>It's more simplify your work with additional awesome features.</p>
                 </div>
             </div>
@@ -37,7 +37,7 @@ include "header.php";
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>Zitiziti Lead Manager</td>
+                                <td>Bizbook Lead Manager</td>
                                 <td><a href="../admin/lead-manager/" class="btn-sml btn-c-blu" target="_blank">Go to my addon</a></td>
                                 <td>02 Jan 2023</td>
                                 <td>24 Feb 2023</td>
@@ -48,7 +48,7 @@ include "header.php";
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>Zitiziti Visitors Manager</td>
+                                <td>Bizbook Visitors Manager</td>
                                 <td>-</td>
                                 <td>-</td>
                                 <td>-</td>
@@ -59,7 +59,7 @@ include "header.php";
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>Zitiziti Support Manager</td>
+                                <td>Bizbook Support Manager</td>
                                 <td>-</td>
                                 <td>-</td>
                                 <td>-</td>
@@ -70,7 +70,7 @@ include "header.php";
                             </tr>
                             <tr>
                                 <td>4</td>
-                                <td>Zitiziti Mobile App</td>
+                                <td>Bizbook Mobile App</td>
                                 <td>-</td>
                                 <td>-</td>
                                 <td>-</td>
@@ -83,7 +83,7 @@ include "header.php";
                     </table>
             </div>
                 <div class="ud-notes">
-                    <p><b>Notes:</b> Enter your purchase code to the below box and activate your Zitiziti Directory template. Once you use your purchase code for your domain means you can't use  the same purchase code to anothor domain. Your purchase code only for one domain not for multi-domain use.</p>
+                    <p><b>Notes:</b> Enter your purchase code to the below box and activate your Bizbook Directory template. Once you use your purchase code for your domain means you can't use  the same purchase code to anothor domain. Your purchase code only for one domain not for multi-domain use.</p>
                 </div>
             </div>
             

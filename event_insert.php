@@ -196,7 +196,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //****************************    Admin email starts    *************************
 
             $to = $admin_email;
-            $EVENT_INSERT_ADMIN_SUBJECT = $Zitiziti['EVENT_INSERT_ADMIN_SUBJECT'];
+            $EVENT_INSERT_ADMIN_SUBJECT = $BIZBOOK['EVENT_INSERT_ADMIN_SUBJECT'];
             $subject = "$admin_site_name $EVENT_INSERT_ADMIN_SUBJECT";
 
             $admin_sql_fetch = mysqli_query($conn, "SELECT * FROM " . TBL . "mail  WHERE mail_id = 11 "); //admin mail template fetch
@@ -223,7 +223,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //****************************    Client email starts    *************************
 
             $to1 = $email_id;
-            $EVENT_INSERT_CLIENT_SUBJECT = $Zitiziti['EVENT_INSERT_CLIENT_SUBJECT'];
+            $EVENT_INSERT_CLIENT_SUBJECT = $BIZBOOK['EVENT_INSERT_CLIENT_SUBJECT'];
             $subject1 = "$admin_site_name $EVENT_INSERT_CLIENT_SUBJECT";
 
             $client_sql_fetch = mysqli_query($conn, "SELECT * FROM " . TBL . "mail  WHERE mail_id = 10 "); //User mail template fetch
@@ -248,7 +248,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if ($event_type_id == 1) {
 
-                $_SESSION['status_msg'] = $Zitiziti['EVENT_INSERT_SUCCESS_MESSAGE'];
+                $_SESSION['status_msg'] = $BIZBOOK['EVENT_INSERT_SUCCESS_MESSAGE'];
 
                 header('Location: db-events');
 
@@ -256,7 +256,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 header("Location: paypal_pay?map_id=$listlastID&type_id=$event_type_id");
 
-                $_SESSION['status_msg'] = $Zitiziti['EVENT_INSERT_SUCCESS_MESSAGE'];
+                $_SESSION['status_msg'] = $BIZBOOK['EVENT_INSERT_SUCCESS_MESSAGE'];
 
                 //           header('Location: db-payment');
 
@@ -265,7 +265,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         } else {
 
-            $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+            $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
             header('Location: create-new-event');
         }
@@ -275,7 +275,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } else {
 
-    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: dashboard');
 }

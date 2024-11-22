@@ -45,7 +45,7 @@ if ($page_row['page_css'] != NULL) {
                 <div class="lhs">
                     <h1><?php echo $page_row['page_name']; ?></h1>
                     <p><?php echo $page_row['page_name_2']; ?></p>
-                    <a href="<?php echo $page_row['page_download_link']; ?>" class="btn"><?php echo $Zitiziti['E-BOOK-DOWNLOAD-NOW']; ?></a>
+                    <a href="<?php echo $page_row['page_download_link']; ?>" class="btn"><?php echo $BIZBOOK['E-BOOK-DOWNLOAD-NOW']; ?></a>
                 </div>
                 <div class="rhs">
                     <img loading="lazy" src="<?php echo $slash; ?>images/services/<?php echo $page_row['page_image']; ?>">
@@ -61,32 +61,32 @@ if ($page_row['page_css'] != NULL) {
                 <div class="lhs">
                     <?php include "page_level_message.php"; ?>
                 <form name="feedback_form" id="feedback_form" method="post" action="feedback_submit.php" enctype="multipart/form-data">
-                    <h4><?php echo $Zitiziti['E-BOOK-DOWNLOAD-REQUEST']; ?></h4>
+                    <h4><?php echo $BIZBOOK['E-BOOK-DOWNLOAD-REQUEST']; ?></h4>
                     <div class="form-group">
-                        <input type="text" placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>" name="feedback_name" id="feedback_name" class="form-control" required="required">
+                        <input type="text" placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>" name="feedback_name" id="feedback_name" class="form-control" required="required">
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>" required="required"
+                        <input type="email" class="form-control" placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>" required="required"
                                name="feedback_email"
                                pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                               title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>">
+                               title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>">
                     </div>
                     <div class="form-group">
                         <input type="text" onkeypress="return isNumber(event)" class="form-control" id="feedback_mobile" name="feedback_mobile"
-                               placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>" pattern="[7-9]{1}[0-9]{9}"
-                               title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>" required="">
+                               placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>" pattern="[7-9]{1}[0-9]{9}"
+                               title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>" required="">
                     </div>
                     <div class="form-group">
-                        <textarea name="feedback_message" id="feedback_message" required="required" placeholder="<?php echo $Zitiziti['LEAD-WRITE-YOUR-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                        <textarea name="feedback_message" id="feedback_message" required="required" placeholder="<?php echo $BIZBOOK['LEAD-WRITE-YOUR-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                     </div>
                     <button type="submit" id="feedback_submit" name="feedback_submit"
                             class="btn btn-primary">
-                        <?php echo $Zitiziti['LEAD-SUBMIT-FEEDBACK']; ?>
+                        <?php echo $BIZBOOK['LEAD-SUBMIT-FEEDBACK']; ?>
                     </button>
                 </form>
                 </div>
                 <div class="rhs">
-                    <h4><?php echo $Zitiziti['ABOUT']; ?> <?php echo $page_row['page_name']; ?></h4>
+                    <h4><?php echo $BIZBOOK['ABOUT']; ?> <?php echo $page_row['page_name']; ?></h4>
                     <p><?php echo stripslashes($page_row['page_description']); ?></p>
                 </div>
             </div>

@@ -22,7 +22,7 @@ if (file_exists('config/event_page_authentication.php')) {
         <div class="row">
             <div class="login-main add-list">
                 <div class="log-bor">&nbsp;</div>
-                <span class="steps"><?php echo $Zitiziti['EDIT_EVENT']; ?></span>
+                <span class="steps"><?php echo $BIZBOOK['EDIT_EVENT']; ?></span>
                 <div class="log">
                     <div class="login add-list-off">
                         <?php
@@ -30,7 +30,7 @@ if (file_exists('config/event_page_authentication.php')) {
                         $events_a_row = getEvent($event_codea);
 
                         ?>
-                        <h4><?php echo $Zitiziti['EDIT_THIS_EVENT']; ?></h4>
+                        <h4><?php echo $BIZBOOK['EDIT_THIS_EVENT']; ?></h4>
                         <?php include "page_level_message.php"; ?>
                         <form action="event_update.php" class="event_edit_form" id="event_edit_form"
                               name="event_edit_form"
@@ -50,7 +50,7 @@ if (file_exists('config/event_page_authentication.php')) {
                                                 <input type="text" name="event_name" required="required"
                                                        class="form-control"
                                                        value="<?php echo $events_a_row['event_name']; ?>"
-                                                       placeholder="<?php echo $Zitiziti['EVENT_NAME']; ?>*">
+                                                       placeholder="<?php echo $BIZBOOK['EVENT_NAME']; ?>*">
                                             </div>
                                         </div>
                                     </div>
@@ -62,7 +62,7 @@ if (file_exists('config/event_page_authentication.php')) {
                                                 <input type="text" name="event_address" required="required"
                                                        class="form-control" id="event_address"
                                                        value="<?php echo $events_a_row['event_address']; ?>"
-                                                       placeholder="<?php echo $Zitiziti['ADDRESS']; ?>*">
+                                                       placeholder="<?php echo $BIZBOOK['ADDRESS']; ?>*">
                                             </div>
                                         </div>
                                     </div>
@@ -73,7 +73,7 @@ if (file_exists('config/event_page_authentication.php')) {
                                             <div class="form-group">
                                                 <select name="category_id"
                                                         id="category_id" class="chosen-select form-control">
-                                                    <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
+                                                    <option value=""><?php echo $BIZBOOK['SELECT_CATEGORY']; ?></option>
                                                     <?php
                                                     foreach (getAllEventCategories() as $categories_row) {
                                                         ?>
@@ -95,7 +95,7 @@ if (file_exists('config/event_page_authentication.php')) {
                                             <div class="form-group">
                                                 <select onChange="geteventCities(this.value);" name="country_id" required="required"
                                                         class="chosen-select form-control">
-                                                    <option value=""><?php echo $Zitiziti['SELECT_YOUR_COUNTRY']; ?></option>
+                                                    <option value=""><?php echo $BIZBOOK['SELECT_YOUR_COUNTRY']; ?></option>
                                                     <?php
                                                     //Countries Query
                                                     $admin_countries = $footer_row['admin_countries'];
@@ -121,7 +121,7 @@ if (file_exists('config/event_page_authentication.php')) {
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <select data-placeholder="<?php echo $Zitiziti['SELECT_YOUR_CITY']; ?>"
+                                                <select data-placeholder="<?php echo $BIZBOOK['SELECT_YOUR_CITY']; ?>"
                                                         name="city_id[]" id="city_id"
                                                         multiple required="required"
                                                         class="chosen-select form-control">
@@ -155,7 +155,7 @@ if (file_exists('config/event_page_authentication.php')) {
                                                 <input type="text" id="event_start_date" name="event_start_date"
                                                        required="required" class="form-control"
                                                        value="<?php echo $event_start_date; ?>"
-                                                       placeholder="<?php echo $Zitiziti['DATE']; ?>*">
+                                                       placeholder="<?php echo $BIZBOOK['DATE']; ?>*">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -163,7 +163,7 @@ if (file_exists('config/event_page_authentication.php')) {
                                                 <input type="text" name="event_time" required="required"
                                                        class="form-control"
                                                        value="<?php echo $events_a_row['event_time']; ?>"
-                                                       placeholder="<?php echo $Zitiziti['TIME']; ?>*">
+                                                       placeholder="<?php echo $BIZBOOK['TIME']; ?>*">
                                             </div>
                                         </div>
                                     </div>
@@ -174,7 +174,7 @@ if (file_exists('config/event_page_authentication.php')) {
                                             <div class="form-group">
                                                 <textarea class="form-control" required="required"
                                                           name="event_description" id="event_description"
-                                                          placeholder="<?php echo $Zitiziti['EVENT_DETAILS']; ?>"><?php echo $events_a_row['event_description'] ?></textarea>
+                                                          placeholder="<?php echo $BIZBOOK['EVENT_DETAILS']; ?>"><?php echo $events_a_row['event_description'] ?></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -184,7 +184,7 @@ if (file_exists('config/event_page_authentication.php')) {
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <textarea class="form-control" name="event_map"
-                                                          placeholder="<?php echo $Zitiziti['GOOGLE_MAP_LOCATION']; ?>"><?php echo $events_a_row['event_map']; ?></textarea>
+                                                          placeholder="<?php echo $BIZBOOK['GOOGLE_MAP_LOCATION']; ?>"><?php echo $events_a_row['event_map']; ?></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -193,9 +193,9 @@ if (file_exists('config/event_page_authentication.php')) {
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label><?php echo $Zitiziti['CHOOSE_BANNER_IMAGE']; ?></label>
+                                                <label><?php echo $BIZBOOK['CHOOSE_BANNER_IMAGE']; ?></label>
                                                 <div class="fil-img-uplo">
-                                                    <span class="dumfil"><?php echo $Zitiziti['UPLOAD_A_FILE'];  ?></span>
+                                                    <span class="dumfil"><?php echo $BIZBOOK['UPLOAD_A_FILE'];  ?></span>
                                                     <input type="file" name="event_image" accept="image/*,.jpg,.jpeg,.png" class="form-control">
                                                 </div>
                                             </div>
@@ -209,7 +209,7 @@ if (file_exists('config/event_page_authentication.php')) {
                                                 <input type="text" name="event_contact_name" required="required"
                                                        class="form-control"
                                                        value="<?php echo $events_a_row['event_contact_name']; ?>"
-                                                       placeholder="<?php echo $Zitiziti['CONTACT_PERSON']; ?>*">
+                                                       placeholder="<?php echo $BIZBOOK['CONTACT_PERSON']; ?>*">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -217,7 +217,7 @@ if (file_exists('config/event_page_authentication.php')) {
                                                 <input type="text" name="event_mobile" required="required"
                                                        class="form-control"
                                                        value="<?php echo $events_a_row['event_mobile']; ?>"
-                                                       placeholder="<?php echo $Zitiziti['CONTACT_PHONE_NUMBER']; ?>*">
+                                                       placeholder="<?php echo $BIZBOOK['CONTACT_PHONE_NUMBER']; ?>*">
                                             </div>
                                         </div>
                                     </div>
@@ -230,14 +230,14 @@ if (file_exists('config/event_page_authentication.php')) {
                                                 <input type="email" name="event_email" required="required"
                                                        class="form-control"
                                                        value="<?php echo $events_a_row['event_email']; ?>"
-                                                       placeholder="<?php echo $Zitiziti['CONTACT_EMAIL_ID']; ?>*">
+                                                       placeholder="<?php echo $BIZBOOK['CONTACT_EMAIL_ID']; ?>*">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <input type="text" name="event_website" class="form-control"
                                                        value="<?php echo $events_a_row['event_website']; ?>"
-                                                       placeholder="<?php echo $Zitiziti['EVENT_WEBSITE']; ?>">
+                                                       placeholder="<?php echo $BIZBOOK['EVENT_WEBSITE']; ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -250,7 +250,7 @@ if (file_exists('config/event_page_authentication.php')) {
                                                     <input type="checkbox" id="isenquiry" name="isenquiry"
                                                            <?php if ($events_a_row['isenquiry'] == 1){ ?>checked="" <?php } ?>>
                                                     <label
-                                                        for="isenquiry"><?php echo $Zitiziti['ENQUIRY_BOX_ENABLE']; ?></label>
+                                                        for="isenquiry"><?php echo $BIZBOOK['ENQUIRY_BOX_ENABLE']; ?></label>
                                                 </div>
                                             </div>
                                         </div>
@@ -262,10 +262,10 @@ if (file_exists('config/event_page_authentication.php')) {
                             <div class="row">
                                 <div class="col-md-12">
                                     <button type="submit" name="event_submit"
-                                            class="btn btn-primary"><?php echo $Zitiziti['SAVE_CHANGES']; ?></button>
+                                            class="btn btn-primary"><?php echo $BIZBOOK['SAVE_CHANGES']; ?></button>
                                 </div>
                                 <div class="col-md-12">
-                                    <a href="dashboard" class="skip"><?php echo $Zitiziti['GO_TO_USER_DASHBOARD']; ?>
+                                    <a href="dashboard" class="skip"><?php echo $BIZBOOK['GO_TO_USER_DASHBOARD']; ?>
                                         >></a>
                                 </div>
                             </div>

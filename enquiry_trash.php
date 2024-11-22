@@ -28,12 +28,12 @@ if(isset($_GET['messageenquirymessageenquirymessageenquirymessageenquiry'])){
 
     if ($listing_res) {
 
-        $_SESSION['status_msg'] = $Zitiziti['ENQUIRY_DELETE_SUCCESS_MESSAGE'];
+        $_SESSION['status_msg'] = $BIZBOOK['ENQUIRY_DELETE_SUCCESS_MESSAGE'];
 
         header('Location: db-enquiry');
     } else {
 
-        $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+        $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
         header('Location: db-enquiry');
     }

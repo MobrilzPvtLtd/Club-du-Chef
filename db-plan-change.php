@@ -15,7 +15,7 @@ if (file_exists('config/user_authentication.php')) {
                 <div class="log-bor">&nbsp;</div>
                 <div class="log log-1">
                     <div class="login login-new">
-                        <h4><?php echo $Zitiziti['DASH_RIGHT_CHANGE_MY_PLAN']; ?></h4>
+                        <h4><?php echo $BIZBOOK['DASH_RIGHT_CHANGE_MY_PLAN']; ?></h4>
                         <?php include "page_level_message.php"; ?>
                         <?php
                         //To calculate the expiry date from user created date starts
@@ -29,12 +29,12 @@ if (file_exists('config/user_authentication.php')) {
 
                         //To calculate the expiry date from user created date ends
                         ?>
-                        <p><?php echo $Zitiziti['HI']; ?> <?php echo $user_details_row['first_name']; ?>, </br><?php echo $Zitiziti['DASH_RIGHT_YOUR_CURRENT_PLAN']; ?>
+                        <p><?php echo $BIZBOOK['HI']; ?> <?php echo $user_details_row['first_name']; ?>, </br><?php echo $BIZBOOK['DASH_RIGHT_YOUR_CURRENT_PLAN']; ?>
                             <b><?php if ($user_details_row['user_type'] == "Service provider") {
                                     echo $user_plan_type['plan_type_name'];
                                 } else {
                                     echo "General User";
-                                } ?></b></br> <?php echo $Zitiziti['DASH_RIGHT_EXPIRATION_DATE']; ?> <?php if ($user_details_row['user_type'] == "Service provider") {
+                                } ?></b></br> <?php echo $BIZBOOK['DASH_RIGHT_EXPIRATION_DATE']; ?> <?php if ($user_details_row['user_type'] == "Service provider") {
                                 echo dateFormatconverter($expiry_date);
                             } else {
                                 echo "Unlimited";
@@ -45,7 +45,7 @@ if (file_exists('config/user_authentication.php')) {
                                 <div class="form-group">
                                     <select name="user_plan" required="required" id="user_plan" class="form-control chosen-select">
                                         <option value=""
-                                                selected="selected"><?php echo $Zitiziti['CHOOSE_YOUR_PLAN']; ?></option>
+                                                selected="selected"><?php echo $BIZBOOK['CHOOSE_YOUR_PLAN']; ?></option>
                                         <?php
                                         if ($user_details_row['user_type'] == "Service provider") {
                                             $plan_type_id = $user_plan_type['plan_type_id'];
@@ -78,13 +78,13 @@ if (file_exists('config/user_authentication.php')) {
                                         }
                                         ?>
                                     </select>
-                                    <a href="pricing-details" class="frmtip" target="_blank"><?php echo $Zitiziti['PLAN_DETAILS'];?></a>
+                                    <a href="pricing-details" class="frmtip" target="_blank"><?php echo $BIZBOOK['PLAN_DETAILS'];?></a>
                                 </div>
                             </div>
-                            <button type="submit" name="plan_type_submit" class="btn btn-primary"><?php echo $Zitiziti['CHANGE'];?></button>
+                            <button type="submit" name="plan_type_submit" class="btn btn-primary"><?php echo $BIZBOOK['CHANGE'];?></button>
                         </form>
                         <div class="col-md-12">
-                            <a href="dashboard" class="skip"><?php echo $Zitiziti['GO_TO_USER_DASHBOARD']; ?> &gt;&gt;</a>
+                            <a href="dashboard" class="skip"><?php echo $BIZBOOK['GO_TO_USER_DASHBOARD']; ?> &gt;&gt;</a>
                         </div>
                     </div>
                 </div>
@@ -104,26 +104,26 @@ if (file_exists('config/user_authentication.php')) {
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <!-- Modal Header -->
                     <div class="quote-pop">
-                        <h4><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></h4>
+                        <h4><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></h4>
                         <form>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>" required>
+                                <input type="text" class="form-control" placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>"
+                                <input type="email" class="form-control" placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>"
                                        pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                       title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
+                                       title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                <input type="text" class="form-control" placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
                                        pattern="[7-9]{1}[0-9]{9}"
-                                       title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>" required>
+                                       title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>" required>
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control" rows="3"
-                                          placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                          placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?></button>
+                            <button type="submit" class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
                         </form>
                     </div>
                 </div>

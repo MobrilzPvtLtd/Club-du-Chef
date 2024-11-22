@@ -28,12 +28,12 @@ if(isset($_GET['jobprofilejobprofilejobprofilejobprofile'])){
 
     if ($listing_res) {
 
-        $_SESSION['status_msg'] = $Zitiziti['JOB_PROFILE_DELETE_SUCCESS_MESSAGE'];
+        $_SESSION['status_msg'] = $BIZBOOK['JOB_PROFILE_DELETE_SUCCESS_MESSAGE'];
 
         header('Location: job-seeker-details.php');
     } else {
 
-        $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+        $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
         header('Location: job-seeker-details.php');
     }

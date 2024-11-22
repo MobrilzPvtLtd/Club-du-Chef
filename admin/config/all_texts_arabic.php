@@ -13,11 +13,11 @@ This file helps you to update or change the text on the website.
 
 -- Find the text Apple in this page
 
-+ $Zitiziti['APPLE'] = "Apple";   //Old Value
++ $BIZBOOK['APPLE'] = "Apple";   //Old Value
 
 -- Update the Apple value to Orange
 
-+ $Zitiziti['APPLE'] = "Orange";  //New Value
++ $BIZBOOK['APPLE'] = "Orange";  //New Value
 
 -- Finally Save this file.
 
@@ -26,2936 +26,2936 @@ This file helps you to update or change the text on the website.
 
 //************************* All Common Texts Starts ***************************
 
-$Zitiziti['NAME'] = "Name";
+$BIZBOOK['NAME'] = "Name";
 
-$Zitiziti['EMAIL'] = "Email";
+$BIZBOOK['EMAIL'] = "Email";
 
-$Zitiziti['EMAIL_ID'] = "Email Id";
+$BIZBOOK['EMAIL_ID'] = "Email Id";
 
-$Zitiziti['PHONE'] = "Phone";
+$BIZBOOK['PHONE'] = "Phone";
 
-$Zitiziti['PHONE_NUMBER'] = "Phone number";
+$BIZBOOK['PHONE_NUMBER'] = "Phone number";
 
-$Zitiziti['MOBILE_NUMBER'] = "Mobile Number";
+$BIZBOOK['MOBILE_NUMBER'] = "Mobile Number";
 
-$Zitiziti['LISTING'] = "Listing";
+$BIZBOOK['LISTING'] = "Listing";
 
-$Zitiziti['LISTINGS'] = "Listings";
+$BIZBOOK['LISTINGS'] = "Listings";
 
-$Zitiziti['ADD_LISTING'] = "Add listing";
+$BIZBOOK['ADD_LISTING'] = "Add listing";
 
-$Zitiziti['ALL_LISTING'] = "All Listings";
+$BIZBOOK['ALL_LISTING'] = "All Listings";
 
-$Zitiziti['ALL_CATEGORIES'] = "All Categories";
+$BIZBOOK['ALL_CATEGORIES'] = "All Categories";
 
-$Zitiziti['EXPLORE'] = "Explore";
+$BIZBOOK['EXPLORE'] = "Explore";
 
-$Zitiziti['ALL_CATEGORY'] = "All Category";
+$BIZBOOK['ALL_CATEGORY'] = "All Category";
 
-$Zitiziti['ALL_SERVICES'] = "All Services";
+$BIZBOOK['ALL_SERVICES'] = "All Services";
 
-$Zitiziti['ALL_REVIEWS'] = "All Reviews";
+$BIZBOOK['ALL_REVIEWS'] = "All Reviews";
 
-$Zitiziti['PRODUCTS'] = "Products";
+$BIZBOOK['PRODUCTS'] = "Products";
 
-$Zitiziti['PRODUCT'] = "Product";
+$BIZBOOK['PRODUCT'] = "Product";
 
-$Zitiziti['EVENTS'] = "Events";
+$BIZBOOK['EVENTS'] = "Events";
 
-$Zitiziti['EVENT'] = "Event";
+$BIZBOOK['EVENT'] = "Event";
 
-$Zitiziti['BLOG_POSTS'] = "Blog posts";
+$BIZBOOK['BLOG_POSTS'] = "Blog posts";
 
-$Zitiziti['BLOGS'] = "Blogs";
+$BIZBOOK['BLOGS'] = "Blogs";
 
-$Zitiziti['BLOG'] = "Blog";
+$BIZBOOK['BLOG'] = "Blog";
 
-$Zitiziti['JOBS'] = "Jobs";
+$BIZBOOK['JOBS'] = "Jobs";
 
-$Zitiziti['JOB'] = "Job";
+$BIZBOOK['JOB'] = "Job";
 
-$Zitiziti['JOBS_BRACKET'] = "job(s)";
+$BIZBOOK['JOBS_BRACKET'] = "job(s)";
 
-$Zitiziti['LEADS'] = "Leads";
+$BIZBOOK['LEADS'] = "Leads";
 
-$Zitiziti['UNLIMITED'] = "Unlimited";
+$BIZBOOK['UNLIMITED'] = "Unlimited";
 
-$Zitiziti['YEAR-S'] = "year(s)";
+$BIZBOOK['YEAR-S'] = "year(s)";
 
-$Zitiziti['MONTH-S'] = "month(s)";
+$BIZBOOK['MONTH-S'] = "month(s)";
 
-$Zitiziti['ENQUIRIES'] = "Enquiries";
+$BIZBOOK['ENQUIRIES'] = "Enquiries";
 
-$Zitiziti['ENQUIRY'] = "Enquiry";
+$BIZBOOK['ENQUIRY'] = "Enquiry";
 
-$Zitiziti['COMMUNITY'] = "Community";
+$BIZBOOK['COMMUNITY'] = "Community";
 
-$Zitiziti['COUPONS'] = "Coupons";
+$BIZBOOK['COUPONS'] = "Coupons";
 
-$Zitiziti['EDIT_THIS_COUPON'] = "Edit This Coupon";
+$BIZBOOK['EDIT_THIS_COUPON'] = "Edit This Coupon";
 
-$Zitiziti['DELETE_THIS_COUPON'] = "Delete This Coupon";
+$BIZBOOK['DELETE_THIS_COUPON'] = "Delete This Coupon";
 
-$Zitiziti['PROMOTIONS'] = "Promotions";
+$BIZBOOK['PROMOTIONS'] = "Promotions";
 
-$Zitiziti['POINTS_HISTORY'] = "Points History";
+$BIZBOOK['POINTS_HISTORY'] = "Points History";
 
-$Zitiziti['MESSAGES'] = "Messages";
+$BIZBOOK['MESSAGES'] = "Messages";
 
-$Zitiziti['MESSAGE'] = "Message";
+$BIZBOOK['MESSAGE'] = "Message";
 
-$Zitiziti['COUPONS_AND_DEALS'] = "Coupon & deals";
+$BIZBOOK['COUPONS_AND_DEALS'] = "Coupon & deals";
 
-$Zitiziti['USER'] = "User";
+$BIZBOOK['USER'] = "User";
 
-$Zitiziti['SUBMIT'] = "Submit";
+$BIZBOOK['SUBMIT'] = "Submit";
 
-$Zitiziti['SUBMIT_NOW'] = "Submit Now";
+$BIZBOOK['SUBMIT_NOW'] = "Submit Now";
 
-$Zitiziti['SUBMIT_REQUIREMENTS'] = "Submit Requirements";
+$BIZBOOK['SUBMIT_REQUIREMENTS'] = "Submit Requirements";
 
-$Zitiziti['SEARCH'] = "Search";
+$BIZBOOK['SEARCH'] = "Search";
 
-$Zitiziti['SEND'] = "Send";
+$BIZBOOK['SEND'] = "Send";
 
-$Zitiziti['BACK'] = "Back";
+$BIZBOOK['BACK'] = "Back";
 
-$Zitiziti['CHANGE'] = "Change";
+$BIZBOOK['CHANGE'] = "Change";
 
-$Zitiziti['AMOUNT'] = "Amount";
+$BIZBOOK['AMOUNT'] = "Amount";
 
-$Zitiziti['DOWNLOAD'] = "Download";
+$BIZBOOK['DOWNLOAD'] = "Download";
 
-$Zitiziti['PROFILE'] = "Profile";
+$BIZBOOK['PROFILE'] = "Profile";
 
-$Zitiziti['YEARS'] = "Years";
+$BIZBOOK['YEARS'] = "Years";
 
-$Zitiziti['YEARS_EXP'] = "yearsExp.";
+$BIZBOOK['YEARS_EXP'] = "yearsExp.";
 
-$Zitiziti['CASH_ON_DELIVERY'] = "Cash on delivery";
+$BIZBOOK['CASH_ON_DELIVERY'] = "Cash on delivery";
 
-$Zitiziti['CONGRATULATIONS'] = "Congratulations";
+$BIZBOOK['CONGRATULATIONS'] = "Congratulations";
 
-$Zitiziti['ADD_BUSINESS'] = "Add business";
+$BIZBOOK['ADD_BUSINESS'] = "Add business";
 
-$Zitiziti['FOLLOWERS'] = "Followers";
+$BIZBOOK['FOLLOWERS'] = "Followers";
 
-$Zitiziti['TAX'] = "Tax";
+$BIZBOOK['TAX'] = "Tax";
 
-$Zitiziti['LISTING_NAME'] = "Listing Name";
+$BIZBOOK['LISTING_NAME'] = "Listing Name";
 
-$Zitiziti['S_NO'] = "No";
+$BIZBOOK['S_NO'] = "No";
 
-$Zitiziti['MESSAGE'] = "Message";
+$BIZBOOK['MESSAGE'] = "Message";
 
-$Zitiziti['FOLLOW'] = "Follow";
+$BIZBOOK['FOLLOW'] = "Follow";
 
-$Zitiziti['RATING'] = "Rating";
+$BIZBOOK['RATING'] = "Rating";
 
-$Zitiziti['RATINGS'] = "Ratings";
+$BIZBOOK['RATINGS'] = "Ratings";
 
-$Zitiziti['VIEWS'] = "Views";
+$BIZBOOK['VIEWS'] = "Views";
 
-$Zitiziti['CLICKS'] = "Clicks";
+$BIZBOOK['CLICKS'] = "Clicks";
 
-$Zitiziti['STATUS'] = "Status";
+$BIZBOOK['STATUS'] = "Status";
 
-$Zitiziti['EDIT'] = "Edit";
+$BIZBOOK['EDIT'] = "Edit";
 
-$Zitiziti['DELETE'] = "Delete";
+$BIZBOOK['DELETE'] = "Delete";
 
-$Zitiziti['VIEW'] = "View";
+$BIZBOOK['VIEW'] = "View";
 
-$Zitiziti['PREVIEW'] = "Preview";
+$BIZBOOK['PREVIEW'] = "Preview";
 
-$Zitiziti['ADDRESS'] = "Address";
+$BIZBOOK['ADDRESS'] = "Address";
 
-$Zitiziti['TYPE'] = "Type";
+$BIZBOOK['TYPE'] = "Type";
 
-$Zitiziti['VERIFIED'] = "Verified";
+$BIZBOOK['VERIFIED'] = "Verified";
 
-$Zitiziti['DATE'] = "Date";
+$BIZBOOK['DATE'] = "Date";
 
-$Zitiziti['DAYS'] = "Days";
+$BIZBOOK['DAYS'] = "Days";
 
-$Zitiziti['TIME'] = "Time";
+$BIZBOOK['TIME'] = "Time";
 
-$Zitiziti['CITY'] = "City";
+$BIZBOOK['CITY'] = "City";
 
-$Zitiziti['CITIES'] = "Cities";
+$BIZBOOK['CITIES'] = "Cities";
 
-$Zitiziti['STATE'] = "State";
+$BIZBOOK['STATE'] = "State";
 
-$Zitiziti['COUNTRY'] = "Country";
+$BIZBOOK['COUNTRY'] = "Country";
 
-$Zitiziti['NEXT'] = "Next";
+$BIZBOOK['NEXT'] = "Next";
 
-$Zitiziti['PREVIOUS'] = "Previous";
+$BIZBOOK['PREVIOUS'] = "Previous";
 
-$Zitiziti['FINISH'] = "Finish";
+$BIZBOOK['FINISH'] = "Finish";
 
-$Zitiziti['PRICE'] = "Price";
+$BIZBOOK['PRICE'] = "Price";
 
-$Zitiziti['SKIP_THIS'] = "Skip this";
+$BIZBOOK['SKIP_THIS'] = "Skip this";
 
-$Zitiziti['CREATED'] = "Created";
+$BIZBOOK['CREATED'] = "Created";
 
-$Zitiziti['CREATE_NEW'] = "Create new";
+$BIZBOOK['CREATE_NEW'] = "Create new";
 
-$Zitiziti['REMOVE'] = "Remove";
+$BIZBOOK['REMOVE'] = "Remove";
 
-$Zitiziti['SUCCESS'] = "Success";
+$BIZBOOK['SUCCESS'] = "Success";
 
-$Zitiziti['UPGRADE'] = "Upgrade";
+$BIZBOOK['UPGRADE'] = "Upgrade";
 
-$Zitiziti['SAVE_AND_EXIT'] = "Save & Exit";
+$BIZBOOK['SAVE_AND_EXIT'] = "Save & Exit";
 
-$Zitiziti['SAVE_CHANGES'] = "Save Changes";
+$BIZBOOK['SAVE_CHANGES'] = "Save Changes";
 
-$Zitiziti['UPDATE_AND_SUBMIT'] = "Update & Submit";
+$BIZBOOK['UPDATE_AND_SUBMIT'] = "Update & Submit";
 
-$Zitiziti['LOG_IN_TO_SUBMIT'] = "Log In To Submit";
+$BIZBOOK['LOG_IN_TO_SUBMIT'] = "Log In To Submit";
 
-$Zitiziti['SEND_AN_ENQIRY'] = "Send an enquiry";
+$BIZBOOK['SEND_AN_ENQIRY'] = "Send an enquiry";
 
-$Zitiziti['JOIN_ON'] = "Join on";
+$BIZBOOK['JOIN_ON'] = "Join on";
 
-$Zitiziti['CREATED_BY'] = "Created by";
+$BIZBOOK['CREATED_BY'] = "Created by";
 
-$Zitiziti['JOIN_DATE'] = "Join date";
+$BIZBOOK['JOIN_DATE'] = "Join date";
 
-$Zitiziti['LOG_OUT'] = "Log Out";
+$BIZBOOK['LOG_OUT'] = "Log Out";
 
-$Zitiziti['GO_TO_USER_DASHBOARD'] = "Go to user dashboard";
+$BIZBOOK['GO_TO_USER_DASHBOARD'] = "Go to user dashboard";
 
-$Zitiziti['GO_TO_ALL_LISTING'] = "Go to all listing";
+$BIZBOOK['GO_TO_ALL_LISTING'] = "Go to all listing";
 
-$Zitiziti['ALL_LIKED_LISTINGS'] = "All Liked Listings";
+$BIZBOOK['ALL_LIKED_LISTINGS'] = "All Liked Listings";
 
-$Zitiziti['PHOTOS'] = "photos";
+$BIZBOOK['PHOTOS'] = "photos";
 
-$Zitiziti['PHOTO'] = "photo";
+$BIZBOOK['PHOTO'] = "photo";
 
-$Zitiziti['VIDEOS'] = "videos";
+$BIZBOOK['VIDEOS'] = "videos";
 
-$Zitiziti['DURATION'] = "duration";
+$BIZBOOK['DURATION'] = "duration";
 
-$Zitiziti['SUPPORT'] = "Support";
+$BIZBOOK['SUPPORT'] = "Support";
 
-$Zitiziti['HOME'] = "Home";
+$BIZBOOK['HOME'] = "Home";
 
-$Zitiziti['NEWS_HOME'] = "News Home";
+$BIZBOOK['NEWS_HOME'] = "News Home";
 
-$Zitiziti['SHARE_NOW'] = "Share now";
+$BIZBOOK['SHARE_NOW'] = "Share now";
 
-$Zitiziti['OPEN'] = "Open";
+$BIZBOOK['OPEN'] = "Open";
 
-$Zitiziti['AD'] = "Ad";
+$BIZBOOK['AD'] = "Ad";
 
-$Zitiziti['HI'] = "Hi";
+$BIZBOOK['HI'] = "Hi";
 
-$Zitiziti['ABOUT_US'] = "About Us";
+$BIZBOOK['ABOUT_US'] = "About Us";
 
-$Zitiziti['VIEW_MORE'] = "view more";
+$BIZBOOK['VIEW_MORE'] = "view more";
 
-$Zitiziti['CALL_NOW'] = "Call Now";
+$BIZBOOK['CALL_NOW'] = "Call Now";
 
-$Zitiziti['BUY_NOW'] = "Buy now";
+$BIZBOOK['BUY_NOW'] = "Buy now";
 
-$Zitiziti['TEL'] = "Tel";
+$BIZBOOK['TEL'] = "Tel";
 
-$Zitiziti['WHATSAPP'] = "WhatsApp";
+$BIZBOOK['WHATSAPP'] = "WhatsApp";
 
-$Zitiziti['WHATSAPP_PLACEHOLDER'] = "Whatsapp Number (e.g. +919876543210)";
+$BIZBOOK['WHATSAPP_PLACEHOLDER'] = "Whatsapp Number (e.g. +919876543210)";
 
-$Zitiziti['ABOVE'] = "Above";
+$BIZBOOK['ABOVE'] = "Above";
 
-$Zitiziti['BELOW'] = "Below";
+$BIZBOOK['BELOW'] = "Below";
 
-$Zitiziti['PAYPAL'] = "PayPal";
+$BIZBOOK['PAYPAL'] = "PayPal";
 
-$Zitiziti['STRIPE'] = "Stripe";
+$BIZBOOK['STRIPE'] = "Stripe";
 
-$Zitiziti['RAZOR_PAY'] = "Razor Pay";
+$BIZBOOK['RAZOR_PAY'] = "Razor Pay";
 
-$Zitiziti['PAYTM'] = "Paytm";
+$BIZBOOK['PAYTM'] = "Paytm";
 
-$Zitiziti['PAY_NOW'] = "Pay Now";
+$BIZBOOK['PAY_NOW'] = "Pay Now";
 
-$Zitiziti['PAY'] = "Pay";
+$BIZBOOK['PAY'] = "Pay";
 
-$Zitiziti['NOW'] = "Now";
+$BIZBOOK['NOW'] = "Now";
 
-$Zitiziti['FAQ'] = "FAQ";
+$BIZBOOK['FAQ'] = "FAQ";
 
-$Zitiziti['CHOOSE_A_USER'] = "Choose a User";
+$BIZBOOK['CHOOSE_A_USER'] = "Choose a User";
 
-$Zitiziti['SOCIAL_MEDIA'] = "Social media";
+$BIZBOOK['SOCIAL_MEDIA'] = "Social media";
 
-$Zitiziti['MEMBER_SINCE'] = "Member since";
+$BIZBOOK['MEMBER_SINCE'] = "Member since";
 
-$Zitiziti['PAGE_VIEWS'] = "Page views";
+$BIZBOOK['PAGE_VIEWS'] = "Page views";
 
-$Zitiziti['FULL_NAME'] = "Full name";
+$BIZBOOK['FULL_NAME'] = "Full name";
 
-$Zitiziti['VILLAGE_STREET_NAME'] = "Village & Street name";
+$BIZBOOK['VILLAGE_STREET_NAME'] = "Village & Street name";
 
-$Zitiziti['POSTCODE_ZIP'] = "Postcode/ZIP";
+$BIZBOOK['POSTCODE_ZIP'] = "Postcode/ZIP";
 
-$Zitiziti['FOLLOVERS'] = "Follovers";
+$BIZBOOK['FOLLOVERS'] = "Follovers";
 
-$Zitiziti['SHARE_THIS_PROFILE'] = "Share this profile";
+$BIZBOOK['SHARE_THIS_PROFILE'] = "Share this profile";
 
-$Zitiziti['LIKES'] = "LIKES";
+$BIZBOOK['LIKES'] = "LIKES";
 
-$Zitiziti['EXCELLENT'] = "Excellent";
+$BIZBOOK['EXCELLENT'] = "Excellent";
 
-$Zitiziti['GOOD'] = "Good";
+$BIZBOOK['GOOD'] = "Good";
 
-$Zitiziti['SATISFACTORY'] = "Satisfactory";
+$BIZBOOK['SATISFACTORY'] = "Satisfactory";
 
-$Zitiziti['BELOW_AVERAGE'] = "Below Average";
+$BIZBOOK['BELOW_AVERAGE'] = "Below Average";
 
-$Zitiziti['OVERALL_RATINGS'] = "Overall Ratings";
+$BIZBOOK['OVERALL_RATINGS'] = "Overall Ratings";
 
-$Zitiziti['BASED_ON'] = "based on";
+$BIZBOOK['BASED_ON'] = "based on";
 
-$Zitiziti['OUR'] = "Our";
+$BIZBOOK['OUR'] = "Our";
 
-$Zitiziti['LOCATION'] = "Location";
+$BIZBOOK['LOCATION'] = "Location";
 
-$Zitiziti['COMPANY'] = "Company";
+$BIZBOOK['COMPANY'] = "Company";
 
-$Zitiziti['INFO'] = "Info";
+$BIZBOOK['INFO'] = "Info";
 
-$Zitiziti['UPLOAD_A_FILE'] = "Upload a file";
+$BIZBOOK['UPLOAD_A_FILE'] = "Upload a file";
 
-$Zitiziti['TRENDING_POSTS'] = "Trending Posts";
+$BIZBOOK['TRENDING_POSTS'] = "Trending Posts";
 
 //************************* All Common Texts Ends ***************************
 
 //************************* Header Texts Starts ***************************
 
-$Zitiziti['SEARCHBOX_LABEL'] = "What are you looking for?";
+$BIZBOOK['SEARCHBOX_LABEL'] = "What are you looking for?";
 
-$Zitiziti['4K+_USERS'] = "Community";
+$BIZBOOK['4K+_USERS'] = "Community";
 
-$Zitiziti['POST_ADS'] = "Advertise with us";
+$BIZBOOK['POST_ADS'] = "Advertise with us";
 
-$Zitiziti['OUR_ALL_SER'] = "Our other Services";
+$BIZBOOK['OUR_ALL_SER'] = "Our other Services";
 
-$Zitiziti['OUR_ALL_SER_SUB'] = "Browse Businesses by Category";
+$BIZBOOK['OUR_ALL_SER_SUB'] = "Browse Businesses by Category";
 
-$Zitiziti['PROFILE_BY'] = "Profile by";
+$BIZBOOK['PROFILE_BY'] = "Profile by";
 
-$Zitiziti['MENU-SER-ALL'] = "Services provide the easy way to selling your products here.";
+$BIZBOOK['MENU-SER-ALL'] = "Services provide the easy way to selling your products here.";
 
-$Zitiziti['MENU-PRO-PERA'] = "Products provide the easy way to selling your products here.";
+$BIZBOOK['MENU-PRO-PERA'] = "Products provide the easy way to selling your products here.";
 
-$Zitiziti['MENU-EVE-PERA'] = "Evets provide the easy way to selling your products here.";
+$BIZBOOK['MENU-EVE-PERA'] = "Evets provide the easy way to selling your products here.";
 
-$Zitiziti['MENU-BLO-PERA'] = "Blog provide the easy way to selling your products here.";
+$BIZBOOK['MENU-BLO-PERA'] = "Blog provide the easy way to selling your products here.";
 
-$Zitiziti['MENU-COMM-PERA'] = "Make your own community and bring your bus nxt level.";
+$BIZBOOK['MENU-COMM-PERA'] = "Make your own community and bring your bus nxt level.";
 
-$Zitiziti['MENU-ADS-PERA'] = "Post your Ads and get more quality leads from us.";
+$BIZBOOK['MENU-ADS-PERA'] = "Post your Ads and get more quality leads from us.";
 
-$Zitiziti['MENU-ADD-LIS-PERA']  = "Post your Ads and get more quality leads from us.";
+$BIZBOOK['MENU-ADD-LIS-PERA']  = "Post your Ads and get more quality leads from us.";
 
-$Zitiziti['CLEAR-ALL-NOTIFICATIONS']  = "Clear all notifications";
+$BIZBOOK['CLEAR-ALL-NOTIFICATIONS']  = "Clear all notifications";
 
-$Zitiziti['NO-NOTIFICATIONS-TO-SHOW']  = "No Notifications to Show";
+$BIZBOOK['NO-NOTIFICATIONS-TO-SHOW']  = "No Notifications to Show";
 
 //************************* Header Texts Ends ***************************
 
 
 //************************* Home page *********************
-$Zitiziti['HOM-BAN-TIT-CAT'] = "Find the Service Experts";
+$BIZBOOK['HOM-BAN-TIT-CAT'] = "Find the Service Experts";
 
-$Zitiziti['HOM-BAN-TIT'] = "Find your <span>Local needs <i></i></span>";
+$BIZBOOK['HOM-BAN-TIT'] = "Find your <span>Local needs <i></i></span>";
 
-$Zitiziti['HOM-BAN-SUB-TIT'] = "Restaurants, cafe's, and bars in New york";
+$BIZBOOK['HOM-BAN-SUB-TIT'] = "Restaurants, cafe's, and bars in New york";
 
-$Zitiziti['HOM-POP-TIT'] = "Popular Services";
+$BIZBOOK['HOM-POP-TIT'] = "Popular Services";
 
-$Zitiziti['HOM-POP-TIT1'] = "near you";
+$BIZBOOK['HOM-POP-TIT1'] = "near you";
 
-$Zitiziti['HOM-POP-SUB-TIT'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
+$BIZBOOK['HOM-POP-SUB-TIT'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
 
-$Zitiziti['HOM-VI-ALL-SER'] = "View all services";
+$BIZBOOK['HOM-VI-ALL-SER'] = "View all services";
 
-$Zitiziti['HOM-VI-ALL-SER-EXPERTS'] = "View all service experts";
+$BIZBOOK['HOM-VI-ALL-SER-EXPERTS'] = "View all service experts";
 
-$Zitiziti['HOM-VI-ALL-JOB-OPENINGS'] = "View all Job openings";
+$BIZBOOK['HOM-VI-ALL-JOB-OPENINGS'] = "View all Job openings";
 
-$Zitiziti['HOM-VI-KNOW-MORE'] = "Know more";
+$BIZBOOK['HOM-VI-KNOW-MORE'] = "Know more";
 
-$Zitiziti['HOM-EXP-TIT'] = "Explore City";
+$BIZBOOK['HOM-EXP-TIT'] = "Explore City";
 
-$Zitiziti['HOM-EXP-TIT1'] = "Category";
+$BIZBOOK['HOM-EXP-TIT1'] = "Category";
 
-$Zitiziti['HOM-EXP-SUB-TIT'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
+$BIZBOOK['HOM-EXP-SUB-TIT'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
 
-$Zitiziti['HOM-BEST-TIT'] = "Featured Services";
+$BIZBOOK['HOM-BEST-TIT'] = "Featured Services";
 
-$Zitiziti['HOM-BEST-TIT1'] = "in your city";
+$BIZBOOK['HOM-BEST-TIT1'] = "in your city";
 
-$Zitiziti['HOM-BEST-SUB-TIT'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
+$BIZBOOK['HOM-BEST-SUB-TIT'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
 
-$Zitiziti['HOM-WHAT-SER'] = "What service do you need?";
+$BIZBOOK['HOM-WHAT-SER'] = "What service do you need?";
 
-$Zitiziti['HOM-WHAT-BIZ'] = "Zitiziti Directory";
+$BIZBOOK['HOM-WHAT-BIZ'] = "BizBook Directory";
 
-$Zitiziti['HOM-WHAT-BIZ-BOOK-HELP-YOU'] = "Zitiziti will help you";
+$BIZBOOK['HOM-WHAT-BIZ-BOOK-HELP-YOU'] = "BizBook will help you";
 
-$Zitiziti['HOM-WHAT-SUB-HEAD'] = "Tell us more about your requirements so that we can connect you to the right service provider.";
+$BIZBOOK['HOM-WHAT-SUB-HEAD'] = "Tell us more about your requirements so that we can connect you to the right service provider.";
 
-$Zitiziti['HOM-WHAT-SER-PO1'] = "Tell us more about your requirements";
+$BIZBOOK['HOM-WHAT-SER-PO1'] = "Tell us more about your requirements";
 
-$Zitiziti['HOM-WHAT-SER-PO1-SUB'] = "HI Imagine you have made your presence online through a local online directory, but your competitors have..";
+$BIZBOOK['HOM-WHAT-SER-PO1-SUB'] = "HI Imagine you have made your presence online through a local online directory, but your competitors have..";
 
-$Zitiziti['HOM-WHAT-SER-PO2'] = "We connect with right service provider";
+$BIZBOOK['HOM-WHAT-SER-PO2'] = "We connect with right service provider";
 
-$Zitiziti['HOM-WHAT-SER-PO2-SUB'] = "Advertising your business to area specific has many advantages. For local businessmen, it is an opportunity..";
+$BIZBOOK['HOM-WHAT-SER-PO2-SUB'] = "Advertising your business to area specific has many advantages. For local businessmen, it is an opportunity..";
 
-$Zitiziti['HOM-WHAT-SER-PO3'] = "Happy with our service";
+$BIZBOOK['HOM-WHAT-SER-PO3'] = "Happy with our service";
 
-$Zitiziti['HOM-WHAT-SER-PO3-SUB'] = "Your local business too needs brand management and image making. As you know the local market..";
+$BIZBOOK['HOM-WHAT-SER-PO3-SUB'] = "Your local business too needs brand management and image making. As you know the local market..";
 
-$Zitiziti['HOM-WHT-LOOK-TIT'] = "What you looking for?";
+$BIZBOOK['HOM-WHT-LOOK-TIT'] = "What you looking for?";
 
-$Zitiziti['HOM-TOPSER-TIT'] = "Top Service Provider";
+$BIZBOOK['HOM-TOPSER-TIT'] = "Top Service Provider";
 
-$Zitiziti['HOM-TOPSER-TIT1'] = "in city";
+$BIZBOOK['HOM-TOPSER-TIT1'] = "in city";
 
-$Zitiziti['HOM-TOPSER-SUB-TIT'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
+$BIZBOOK['HOM-TOPSER-SUB-TIT'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
 
-$Zitiziti['HOM-EVE-TIT'] = "Feature Events";
+$BIZBOOK['HOM-EVE-TIT'] = "Feature Events";
 
-$Zitiziti['HOM-EVE-TIT1'] = "in city";
+$BIZBOOK['HOM-EVE-TIT1'] = "in city";
 
-$Zitiziti['HOM-EVE-SUB-TIT'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
+$BIZBOOK['HOM-EVE-SUB-TIT'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
 
-$Zitiziti['HOM-HOW-TIT'] = "How It Works";
+$BIZBOOK['HOM-HOW-TIT'] = "How It Works";
 
-$Zitiziti['HOM-HOW-SUB-TIT'] = "Explore some of the best tips from around the world from our<br>partners and friends.lacinia viverra lectus.";
+$BIZBOOK['HOM-HOW-SUB-TIT'] = "Explore some of the best tips from around the world from our<br>partners and friends.lacinia viverra lectus.";
 
-$Zitiziti['HOM-HOW-P-TIT-1'] = "Create an account";
+$BIZBOOK['HOM-HOW-P-TIT-1'] = "Create an account";
 
-$Zitiziti['HOM-HOW-P-SUB-1'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
+$BIZBOOK['HOM-HOW-P-SUB-1'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
 
-$Zitiziti['HOM-HOW-P-TIT-2'] = "Add your business";
+$BIZBOOK['HOM-HOW-P-TIT-2'] = "Add your business";
 
-$Zitiziti['HOM-HOW-P-SUB-2'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
+$BIZBOOK['HOM-HOW-P-SUB-2'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
 
-$Zitiziti['HOM-HOW-P-TIT-3'] = "Get more leads";
+$BIZBOOK['HOM-HOW-P-TIT-3'] = "Get more leads";
 
-$Zitiziti['HOM-HOW-P-SUB-3'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
+$BIZBOOK['HOM-HOW-P-SUB-3'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
 
-$Zitiziti['HOM-HOW-P-TIT-4'] = "Archive goles";
+$BIZBOOK['HOM-HOW-P-TIT-4'] = "Archive goles";
 
-$Zitiziti['HOM-HOW-P-SUB-4'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
+$BIZBOOK['HOM-HOW-P-SUB-4'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
 
-$Zitiziti['HOM-APP-TIT'] = "Looking for the Best Service Provider?";
+$BIZBOOK['HOM-APP-TIT'] = "Looking for the Best Service Provider?";
 
-$Zitiziti['HOM-APP-TIT-SUB'] = "Get the App!";
+$BIZBOOK['HOM-APP-TIT-SUB'] = "Get the App!";
 
-$Zitiziti['HOM-APP-PO-1'] = "HOM-APP-TITFind nearby listings";
+$BIZBOOK['HOM-APP-PO-1'] = "HOM-APP-TITFind nearby listings";
 
-$Zitiziti['HOM-APP-PO-2'] = "Easy service enquiry";
+$BIZBOOK['HOM-APP-PO-2'] = "Easy service enquiry";
 
-$Zitiziti['HOM-APP-PO-3'] = "Listing reviews and ratings";
+$BIZBOOK['HOM-APP-PO-3'] = "Listing reviews and ratings";
 
-$Zitiziti['HOM-APP-PO-4'] = "Manage your listing, enquiry and reviews";
+$BIZBOOK['HOM-APP-PO-4'] = "Manage your listing, enquiry and reviews";
 
-$Zitiziti['HOM-APP-SEND'] = "We'll send you a link, to you below provided email id & open it on your smart phone to download the app";
+$BIZBOOK['HOM-APP-SEND'] = "We'll send you a link, to you below provided email id & open it on your smart phone to download the app";
 
-$Zitiziti['HOM-WHAT-LOOK-TIT'] = "What you looking for?";
+$BIZBOOK['HOM-WHAT-LOOK-TIT'] = "What you looking for?";
 
-$Zitiziti['HOM-WHAT-LOOK-SUB'] = "We connect you to service experts.";
+$BIZBOOK['HOM-WHAT-LOOK-SUB'] = "We connect you to service experts.";
 
-$Zitiziti['HOM-WHAT-LOOK-CTA'] = "Get experts";
+$BIZBOOK['HOM-WHAT-LOOK-CTA'] = "Get experts";
 
-$Zitiziti['HOM-FEW-REASON-LOVE'] = "A few reasons you’ll love Online Business Directory";
+$BIZBOOK['HOM-FEW-REASON-LOVE'] = "A few reasons you’ll love Online Business Directory";
 
-$Zitiziti['HOM-CALL-US-ON'] = "Call us on: +01 6214 6548";
+$BIZBOOK['HOM-CALL-US-ON'] = "Call us on: +01 6214 6548";
 
-$Zitiziti['HOM-NO1-BEST-CHOICE'] = "#1 Best choice";
+$BIZBOOK['HOM-NO1-BEST-CHOICE'] = "#1 Best choice";
 
-$Zitiziti['HOM-FIND-YOUR-RIGHT'] = "Find your right";
+$BIZBOOK['HOM-FIND-YOUR-RIGHT'] = "Find your right";
 
-$Zitiziti['HOM-NOW'] = "now";
+$BIZBOOK['HOM-NOW'] = "now";
 
-$Zitiziti['HOM-HERE'] = "here";
+$BIZBOOK['HOM-HERE'] = "here";
 
-$Zitiziti['HOM-CAR'] = "Car";
+$BIZBOOK['HOM-CAR'] = "Car";
 
-$Zitiziti['HOM-P-TAG-PAGE-4'] = "New Cars, Car Prices, Buy & Sell Used Cars in United States";
+$BIZBOOK['HOM-P-TAG-PAGE-4'] = "New Cars, Car Prices, Buy & Sell Used Cars in United States";
 
-$Zitiziti['HOM-EXPLORE-PAGE-4'] = "Explore all cars";
+$BIZBOOK['HOM-EXPLORE-PAGE-4'] = "Explore all cars";
 
-$Zitiziti['HOM-PROPERTY'] = "Property";
+$BIZBOOK['HOM-PROPERTY'] = "Property";
 
-$Zitiziti['HOM-P-TAG-PAGE-5'] = "Find your best property like villas, plots, flats & more in United States";
+$BIZBOOK['HOM-P-TAG-PAGE-5'] = "Find your best property like villas, plots, flats & more in United States";
 
-$Zitiziti['HOM-EXPLORE-PAGE-5'] = "Explore all Property";
+$BIZBOOK['HOM-EXPLORE-PAGE-5'] = "Explore all Property";
 
-$Zitiziti['HOM-SAY-HELLO-DOCTOR'] = "Say Hello Doctors";
+$BIZBOOK['HOM-SAY-HELLO-DOCTOR'] = "Say Hello Doctors";
 
-$Zitiziti['HOM-DOCTORS'] = "Doctors";
+$BIZBOOK['HOM-DOCTORS'] = "Doctors";
 
-$Zitiziti['HOM-P-TAG-PAGE-6'] = "We help you to find doctors near you with online inquiry, contact details, photos, map, review and more";
+$BIZBOOK['HOM-P-TAG-PAGE-6'] = "We help you to find doctors near you with online inquiry, contact details, photos, map, review and more";
 
-$Zitiziti['HOM-EXPLORE-PAGE-6'] = "Explore all Doctors";
+$BIZBOOK['HOM-EXPLORE-PAGE-6'] = "Explore all Doctors";
 
-$Zitiziti['HOM-NO1-SALON-SPA'] = "#1 Salon And Spa Treatment";
+$BIZBOOK['HOM-NO1-SALON-SPA'] = "#1 Salon And Spa Treatment";
 
-$Zitiziti['HOM-SPA-SALON'] = "Spa and Salon";
+$BIZBOOK['HOM-SPA-SALON'] = "Spa and Salon";
 
-$Zitiziti['HOM-P-TAG-PAGE-7'] = "We help you to find the best Salon, Spa Treatment & Thai Massage Near You.";
+$BIZBOOK['HOM-P-TAG-PAGE-7'] = "We help you to find the best Salon, Spa Treatment & Thai Massage Near You.";
 
-$Zitiziti['HOM-EXPLORE-PAGE-7'] = "Explore all Services";
+$BIZBOOK['HOM-EXPLORE-PAGE-7'] = "Explore all Services";
 
-$Zitiziti['HOM-NO1-HOTEL-BOOKING'] = "#1 Hotel booking website";
+$BIZBOOK['HOM-NO1-HOTEL-BOOKING'] = "#1 Hotel booking website";
 
-$Zitiziti['HOM-HOTELS-RESORTS'] = "Hotel and Resort";
+$BIZBOOK['HOM-HOTELS-RESORTS'] = "Hotel and Resort";
 
-$Zitiziti['HOM-P-TAG-PAGE-8'] = "We help you to find the best Hotel, Resert, Night life, Parties, Events, Celebrations and more";
+$BIZBOOK['HOM-P-TAG-PAGE-8'] = "We help you to find the best Hotel, Resert, Night life, Parties, Events, Celebrations and more";
 
-$Zitiziti['HOM-RESTURANT-IN-POCKET'] = "Restaurants in your pocket";
+$BIZBOOK['HOM-RESTURANT-IN-POCKET'] = "Restaurants in your pocket";
 
-$Zitiziti['HOM-ORDER-YOUR'] = "Order Your";
+$BIZBOOK['HOM-ORDER-YOUR'] = "Order Your";
 
-$Zitiziti['HOM-FOOD-ONLINE'] = "Food online";
+$BIZBOOK['HOM-FOOD-ONLINE'] = "Food online";
 
-$Zitiziti['HOM-P-TAG-PAGE-9'] = "Easy to order your favourite food from your favourite restaurants with more special offers.";
+$BIZBOOK['HOM-P-TAG-PAGE-9'] = "Easy to order your favourite food from your favourite restaurants with more special offers.";
 
-$Zitiziti['HOM-EXPLORE-PAGE-9'] = "Explore all Foods";
+$BIZBOOK['HOM-EXPLORE-PAGE-9'] = "Explore all Foods";
 
 //************************* Dashboard Menu's Starts *********************
 
-$Zitiziti['MY_DASHBOARD'] = "My Dashboard";
+$BIZBOOK['MY_DASHBOARD'] = "My Dashboard";
 
-$Zitiziti['ADD_NEW_LISTING'] = "Add New Listing";
+$BIZBOOK['ADD_NEW_LISTING'] = "Add New Listing";
 
-$Zitiziti['LEAD_ENQUIRY'] = "Lead enquiry";
+$BIZBOOK['LEAD_ENQUIRY'] = "Lead enquiry";
 
-$Zitiziti['ALL_PRODUCTS'] = "All Products";
+$BIZBOOK['ALL_PRODUCTS'] = "All Products";
 
-$Zitiziti['SEO'] = "SEO";
+$BIZBOOK['SEO'] = "SEO";
 
-$Zitiziti['REVIEWS'] = "Reviews";
+$BIZBOOK['REVIEWS'] = "Reviews";
 
-$Zitiziti['SHOW_ALL'] = "Show All";
+$BIZBOOK['SHOW_ALL'] = "Show All";
 
-$Zitiziti['VIEW_ALL_LISTINGS'] = "View all listings";
+$BIZBOOK['VIEW_ALL_LISTINGS'] = "View all listings";
 
-$Zitiziti['VIEW_PROFILE'] = "View profile";
+$BIZBOOK['VIEW_PROFILE'] = "View profile";
 
-$Zitiziti['NO_REVIEWS_YET'] = "No Reviews Yet";
+$BIZBOOK['NO_REVIEWS_YET'] = "No Reviews Yet";
 
-$Zitiziti['ALL_RECEIVED_REVIEWS'] = "All Received Reviews";
+$BIZBOOK['ALL_RECEIVED_REVIEWS'] = "All Received Reviews";
 
-$Zitiziti['ALL_SENT_REVIEWS'] = "All Sent Reviews";
+$BIZBOOK['ALL_SENT_REVIEWS'] = "All Sent Reviews";
 
-$Zitiziti['REVIEW_DETAILS'] = "review details";
+$BIZBOOK['REVIEW_DETAILS'] = "review details";
 
-$Zitiziti['PAYMENT'] = "Payment";
+$BIZBOOK['PAYMENT'] = "Payment";
 
-$Zitiziti['SENT'] = "Sent";
+$BIZBOOK['SENT'] = "Sent";
 
-$Zitiziti['RECEIVED'] = "Received";
+$BIZBOOK['RECEIVED'] = "Received";
 
-$Zitiziti['PLAN'] = "PLAN";
+$BIZBOOK['PLAN'] = "PLAN";
 
-$Zitiziti['FREE'] = "FREE";
+$BIZBOOK['FREE'] = "FREE";
 
-$Zitiziti['MY_PROFILE'] = "My Profile";
+$BIZBOOK['MY_PROFILE'] = "My Profile";
 
-$Zitiziti['LIKED_LISTINGS'] = "Liked Listings";
+$BIZBOOK['LIKED_LISTINGS'] = "Liked Listings";
 
-$Zitiziti['FOLLOWINGS'] = "Followings";
+$BIZBOOK['FOLLOWINGS'] = "Followings";
 
-$Zitiziti['UN_FOLLOW'] = "Un-follow";
+$BIZBOOK['UN_FOLLOW'] = "Un-follow";
 
-$Zitiziti['AD_SUMMARY'] = "Ad Summary";
+$BIZBOOK['AD_SUMMARY'] = "Ad Summary";
 
-$Zitiziti['CHECK_OUT'] = "Payment & plan";
+$BIZBOOK['CHECK_OUT'] = "Payment & plan";
 
-$Zitiziti['PAYMENT_INVOICE'] = "Payment invoice";
+$BIZBOOK['PAYMENT_INVOICE'] = "Payment invoice";
 
-$Zitiziti['NOTIFICATIONS'] = "Notifications";
+$BIZBOOK['NOTIFICATIONS'] = "Notifications";
 
-$Zitiziti['HOW_TOS'] = "How to's";
+$BIZBOOK['HOW_TOS'] = "How to's";
 
-$Zitiziti['SETTING'] = "Setting";
+$BIZBOOK['SETTING'] = "Setting";
 
 //************************* Dashboard Menu's Ends *********************
 
 //************************* Login Page Starts *************************
 
-$Zitiziti['MEMBER_LOGIN'] = "Member Login";
+$BIZBOOK['MEMBER_LOGIN'] = "Member Login";
 
-$Zitiziti['ENTER_EMAIL_STAR'] = "Enter email*";
+$BIZBOOK['ENTER_EMAIL_STAR'] = "Enter email*";
 
-$Zitiziti['ENTER_PASSWORD_STAR'] = "Enter password*";
+$BIZBOOK['ENTER_PASSWORD_STAR'] = "Enter password*";
 
-$Zitiziti['SIGN_IN'] = "Sign in";
+$BIZBOOK['SIGN_IN'] = "Sign in";
 
-$Zitiziti['LOGIN_QUESTIONMARK'] = "Login?";
+$BIZBOOK['LOGIN_QUESTIONMARK'] = "Login?";
 
-$Zitiziti['CREATE_ACCOUNT_QUESTIONMARK'] = "Create an account?";
+$BIZBOOK['CREATE_ACCOUNT_QUESTIONMARK'] = "Create an account?";
 
-$Zitiziti['FORGOT_PASSWORD_QUESTIONMARK'] = "Forgot password?";
+$BIZBOOK['FORGOT_PASSWORD_QUESTIONMARK'] = "Forgot password?";
 
-$Zitiziti['CONTINUE_WITH_FACEBOOK'] = "Continue with Facebook";
+$BIZBOOK['CONTINUE_WITH_FACEBOOK'] = "Continue with Facebook";
 
 //************************* Login Page Ends *************************
 
 //************************* Register Page Starts ********************
 
-$Zitiziti['CREATE_AN_ACCOUNT'] = "Create an account";
+$BIZBOOK['CREATE_AN_ACCOUNT'] = "Create an account";
 
-$Zitiziti['REGISTER_LABEL'] = "Don't have an account? Create your account. It's take less then a minutes";
+$BIZBOOK['REGISTER_LABEL'] = "Don't have an account? Create your account. It's take less then a minutes";
 
-$Zitiziti['EMAIL_ID_STAR'] = "Email id*";
+$BIZBOOK['EMAIL_ID_STAR'] = "Email id*";
 
-$Zitiziti['PASSWORD_STAR'] = "Password*";
+$BIZBOOK['PASSWORD_STAR'] = "Password*";
 
-$Zitiziti['USER_TYPE'] = "User type";
+$BIZBOOK['USER_TYPE'] = "User type";
 
-$Zitiziti['USER_OPTIONS'] = "User options";
+$BIZBOOK['USER_OPTIONS'] = "User options";
 
-$Zitiziti['CHOOSE_YOUR_PLAN'] = "Choose your plan";
+$BIZBOOK['CHOOSE_YOUR_PLAN'] = "Choose your plan";
 
-$Zitiziti['PLAN_DETAILS'] = "Plan details";
+$BIZBOOK['PLAN_DETAILS'] = "Plan details";
 
-$Zitiziti['PLAN_DETAILS_SUB'] = "Make your service on next level";
+$BIZBOOK['PLAN_DETAILS_SUB'] = "Make your service on next level";
 
-$Zitiziti['REGISTER_NOW'] = "Register Now";
+$BIZBOOK['REGISTER_NOW'] = "Register Now";
 
-$Zitiziti['GENERAL_USER'] = "General user";
+$BIZBOOK['GENERAL_USER'] = "General user";
 
-$Zitiziti['JOB_SEEKER'] = "Job Seeker";
+$BIZBOOK['JOB_SEEKER'] = "Job Seeker";
 
-$Zitiziti['SERVICE_PROVIDER'] = "Service provider";
+$BIZBOOK['SERVICE_PROVIDER'] = "Service provider";
 
 //************************* Register Page Ends ********************
 
 //************************* Pricing Details Page Texts Starts ***********************
 
-$Zitiziti['PRICING_TITLE_2'] = "Choose your pricing plan";
+$BIZBOOK['PRICING_TITLE_2'] = "Choose your pricing plan";
 
-$Zitiziti['PRICING_SUB_TITLE_2'] = "Cras nulla nulla, pulvinar sit amet nunc at, lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
+$BIZBOOK['PRICING_SUB_TITLE_2'] = "Cras nulla nulla, pulvinar sit amet nunc at, lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
 
-$Zitiziti['PRICING_GETTING_STARTED'] = "For getting started";
+$BIZBOOK['PRICING_GETTING_STARTED'] = "For getting started";
 
-$Zitiziti['PRICING_PERFECT_SMALL_TEAMS'] = "Perfect for small teams";
+$BIZBOOK['PRICING_PERFECT_SMALL_TEAMS'] = "Perfect for small teams";
 
-$Zitiziti['PRICING_BEST_VALUE_LARGE'] = "Best value for large teams";
+$BIZBOOK['PRICING_BEST_VALUE_LARGE'] = "Best value for large teams";
 
-$Zitiziti['PRICING_MADE_ENTERPRISES'] = "Made for enterprises";
+$BIZBOOK['PRICING_MADE_ENTERPRISES'] = "Made for enterprises";
 
-$Zitiziti['PRICING_SINGLE_USER'] = "Single user";
+$BIZBOOK['PRICING_SINGLE_USER'] = "Single user";
 
-$Zitiziti['PRICING_STARTUP_BUSINESS'] = "Startup business";
+$BIZBOOK['PRICING_STARTUP_BUSINESS'] = "Startup business";
 
-$Zitiziti['PRICING_MEDIUM_BUSINESS'] = "Medium business";
+$BIZBOOK['PRICING_MEDIUM_BUSINESS'] = "Medium business";
 
-$Zitiziti['PRICING_GLOBAL_BUSINESS'] = "Global business";
+$BIZBOOK['PRICING_GLOBAL_BUSINESS'] = "Global business";
 
-$Zitiziti['PRICING_GET_DIRECT_LEADS'] = "Get direct leads";
+$BIZBOOK['PRICING_GET_DIRECT_LEADS'] = "Get direct leads";
 
-$Zitiziti['PRICING_EMAIL_NOTIFICATION'] = "Email notification(leads)";
+$BIZBOOK['PRICING_EMAIL_NOTIFICATION'] = "Email notification(leads)";
 
-$Zitiziti['PRICING_VERIFIED_LISTING'] = "Verified listing";
+$BIZBOOK['PRICING_VERIFIED_LISTING'] = "Verified listing";
 
-$Zitiziti['PRICING_TRUSTED_LISTING'] = "Trusted listing";
+$BIZBOOK['PRICING_TRUSTED_LISTING'] = "Trusted listing";
 
-$Zitiziti['PRICING_SOCIAL_SHARE'] = "Social media share";
+$BIZBOOK['PRICING_SOCIAL_SHARE'] = "Social media share";
 
-$Zitiziti['PRICING_REVIEW_CONTROL'] = "Review control";
+$BIZBOOK['PRICING_REVIEW_CONTROL'] = "Review control";
 
-$Zitiziti['PRICING_ADMIN_TIPS'] = "Admin tips";
+$BIZBOOK['PRICING_ADMIN_TIPS'] = "Admin tips";
 
-$Zitiziti['PRICING_GET_START'] = "Get Start";
+$BIZBOOK['PRICING_GET_START'] = "Get Start";
 
 //************************* Pricing Details Page Texts Ends ***********************
 
 //************************* Forgot Password Page Starts ***********
 
-$Zitiziti['FORGOT_PASSWORD'] = "Forgot password";
+$BIZBOOK['FORGOT_PASSWORD'] = "Forgot password";
 
 //************************* Forgot Password Page Ends ***********
 
 //************************* User Dashboard Page Starts ***********
 
-$Zitiziti['USER_DASHBOARD_WELCOME_TITLE'] = "Welcom back,";
+$BIZBOOK['USER_DASHBOARD_WELCOME_TITLE'] = "Welcom back,";
 
-$Zitiziti['USER_DASHBOARD_WELCOME_P_TAG'] = "Stay up to date reports in your listing, products, events and blog reports here";
+$BIZBOOK['USER_DASHBOARD_WELCOME_P_TAG'] = "Stay up to date reports in your listing, products, events and blog reports here";
 
-$Zitiziti['USER_DASHBOARD'] = "User Dashboard";
+$BIZBOOK['USER_DASHBOARD'] = "User Dashboard";
 
-$Zitiziti['TOTAL_NO_OF_REVIEWS'] = "Total no of reviews";
+$BIZBOOK['TOTAL_NO_OF_REVIEWS'] = "Total no of reviews";
 
-$Zitiziti['NO_OF_LIKED_LISTINGS'] = "No of Liked Listings";
+$BIZBOOK['NO_OF_LIKED_LISTINGS'] = "No of Liked Listings";
 
-$Zitiziti['TOTAL_NO_LISTINGS'] = "Total no of listings";
+$BIZBOOK['TOTAL_NO_LISTINGS'] = "Total no of listings";
 
-$Zitiziti['TOTAL_NO_ENQUIRY'] = "Total no of enquiry";
+$BIZBOOK['TOTAL_NO_ENQUIRY'] = "Total no of enquiry";
 
-$Zitiziti['TOTAL_NO_FOLLOWINGS'] = "Total no of followings";
+$BIZBOOK['TOTAL_NO_FOLLOWINGS'] = "Total no of followings";
 
-$Zitiziti['PROFILE_PAGE'] = "Profile page";
+$BIZBOOK['PROFILE_PAGE'] = "Profile page";
 
-$Zitiziti['EDIT_MY_PROFILE'] = "Edit profile page";
+$BIZBOOK['EDIT_MY_PROFILE'] = "Edit profile page";
 
-$Zitiziti['VIEW_MY_PROFILE_PAGE'] = "View my profile page";
+$BIZBOOK['VIEW_MY_PROFILE_PAGE'] = "View my profile page";
 
-$Zitiziti['VIEW_BUSINESS_PAGE'] = "View business page";
+$BIZBOOK['VIEW_BUSINESS_PAGE'] = "View business page";
 
-$Zitiziti['VIEW_JOB_PROFILE_PAGE'] = "View Job Profile page";
+$BIZBOOK['VIEW_JOB_PROFILE_PAGE'] = "View Job Profile page";
 
-$Zitiziti['VIEW_SERVICE_EXPERT_PROFILE_PAGE'] = "View Expert Profile page";
+$BIZBOOK['VIEW_SERVICE_EXPERT_PROFILE_PAGE'] = "View Expert Profile page";
 
-$Zitiziti['LISTING_DETAILS'] = "Listing Details";
+$BIZBOOK['LISTING_DETAILS'] = "Listing Details";
 
-$Zitiziti['ADD_NEW_EVENT'] = "Add new event";
+$BIZBOOK['ADD_NEW_EVENT'] = "Add new event";
 
-$Zitiziti['ADD_NEW_POST'] = "Add new post";
+$BIZBOOK['ADD_NEW_POST'] = "Add new post";
 
-$Zitiziti['PROFI_BUSINES_TIT'] = "Business page";
+$BIZBOOK['PROFI_BUSINES_TIT'] = "Business page";
 
-$Zitiziti['EDIT_BUSINES_PROFILE'] = "Edit business page";
+$BIZBOOK['EDIT_BUSINES_PROFILE'] = "Edit business page";
 
-$Zitiziti['PROFI_JOB_SEEKER_TIT'] = "Job Profile";
+$BIZBOOK['PROFI_JOB_SEEKER_TIT'] = "Job Profile";
 
-$Zitiziti['EDIT_JOB_SEEKER_PROFILE'] = "Edit Your Job Profile";
+$BIZBOOK['EDIT_JOB_SEEKER_PROFILE'] = "Edit Your Job Profile";
 
-$Zitiziti['PROFI_SERVICE_EXPERT_TIT'] = "Service Expert Profile";
+$BIZBOOK['PROFI_SERVICE_EXPERT_TIT'] = "Service Expert Profile";
 
-$Zitiziti['EDIT_SERVICE_EXPERT_PROFILE'] = "Edit Your Expert Profile";
+$BIZBOOK['EDIT_SERVICE_EXPERT_PROFILE'] = "Edit Your Expert Profile";
 
-$Zitiziti['ALL_APPLIED_JOBS'] = "All Applied Jobs";
+$BIZBOOK['ALL_APPLIED_JOBS'] = "All Applied Jobs";
 
-$Zitiziti['USER_SETTING_LISTING_LABEL'] = "Enable or Disable Listing related feature in your Dashboard";
+$BIZBOOK['USER_SETTING_LISTING_LABEL'] = "Enable or Disable Listing related feature in your Dashboard";
 
-$Zitiziti['USER_SETTING_JOB_LABEL'] = "Enable or Disable Job related feature in your Dashboard";
+$BIZBOOK['USER_SETTING_JOB_LABEL'] = "Enable or Disable Job related feature in your Dashboard";
 
-$Zitiziti['USER_SETTING_EXPERT_LABEL'] = "Enable or Disable Service Expert related feature in your Dashboard";
+$BIZBOOK['USER_SETTING_EXPERT_LABEL'] = "Enable or Disable Service Expert related feature in your Dashboard";
 
-$Zitiziti['USER_SETTING_PRODUCT_LABEL'] = "Enable or Disable Product related feature in your Dashboard";
+$BIZBOOK['USER_SETTING_PRODUCT_LABEL'] = "Enable or Disable Product related feature in your Dashboard";
 
-$Zitiziti['USER_SETTING_BLOG_LABEL'] = "Enable or Disable Blog related feature in your Dashboard";
+$BIZBOOK['USER_SETTING_BLOG_LABEL'] = "Enable or Disable Blog related feature in your Dashboard";
 
-$Zitiziti['USER_SETTING_EVENT_LABEL'] = "Enable or Disable Event related feature in your Dashboard";
+$BIZBOOK['USER_SETTING_EVENT_LABEL'] = "Enable or Disable Event related feature in your Dashboard";
 
-$Zitiziti['USER_SETTING_COUPON_LABEL'] = "Enable or Disable Coupons related feature in your Dashboard";
+$BIZBOOK['USER_SETTING_COUPON_LABEL'] = "Enable or Disable Coupons related feature in your Dashboard";
 
-$Zitiziti['USER_SETTING_LISTING_MODULE'] = "Listing Module";
+$BIZBOOK['USER_SETTING_LISTING_MODULE'] = "Listing Module";
 
-$Zitiziti['USER_SETTING_JOB_MODULE'] = "Job Module";
+$BIZBOOK['USER_SETTING_JOB_MODULE'] = "Job Module";
 
-$Zitiziti['USER_SETTING_EXPERT_MODULE'] = "Service Expert Module";
+$BIZBOOK['USER_SETTING_EXPERT_MODULE'] = "Service Expert Module";
 
-$Zitiziti['USER_SETTING_PRODUCT_MODULE'] = "Product Module";
+$BIZBOOK['USER_SETTING_PRODUCT_MODULE'] = "Product Module";
 
-$Zitiziti['USER_SETTING_BLOG_MODULE'] = "Blog Module";
+$BIZBOOK['USER_SETTING_BLOG_MODULE'] = "Blog Module";
 
-$Zitiziti['USER_SETTING_EVENT_MODULE'] = "Event Module";
+$BIZBOOK['USER_SETTING_EVENT_MODULE'] = "Event Module";
 
-$Zitiziti['USER_SETTING_COUPON_MODULE'] = "Discount & Coupon Module";
+$BIZBOOK['USER_SETTING_COUPON_MODULE'] = "Discount & Coupon Module";
 
 //************************* User Dashboard Page Ends ***********
 
 //************************* User Dashboard Right Section Starts ***********
 
-$Zitiziti['OTHER_USER_PROFILES'] = "Other user profiles";
+$BIZBOOK['OTHER_USER_PROFILES'] = "Other user profiles";
 
-$Zitiziti['ADMIN_NOTIFICATION'] = "Admin Notification";
+$BIZBOOK['ADMIN_NOTIFICATION'] = "Admin Notification";
 
-$Zitiziti['WHO_ALL_FOLLOW_YOU'] = "Who all are follow you";
+$BIZBOOK['WHO_ALL_FOLLOW_YOU'] = "Who all are follow you";
 
-$Zitiziti['PROMOTE_MY_BUSINESS'] = "Promote my business";
+$BIZBOOK['PROMOTE_MY_BUSINESS'] = "Promote my business";
 
-$Zitiziti['PROMOTE_MY_BUSINESS_P_TAG'] = "Your listing show on the top of the respective category page";
+$BIZBOOK['PROMOTE_MY_BUSINESS_P_TAG'] = "Your listing show on the top of the respective category page";
 
-$Zitiziti['PROMOTE_MY_BUSINESS_CLICK_HERE'] = "Click here";
+$BIZBOOK['PROMOTE_MY_BUSINESS_CLICK_HERE'] = "Click here";
 
-$Zitiziti['PROMOTE_MY_BUSINESS_FOR_DEMO'] = "for demo";
+$BIZBOOK['PROMOTE_MY_BUSINESS_FOR_DEMO'] = "for demo";
 
-$Zitiziti['PROMOTE_MY_BUSINESS_START_NOW'] = "Start now";
+$BIZBOOK['PROMOTE_MY_BUSINESS_START_NOW'] = "Start now";
 
-$Zitiziti['YOUR_POINTS'] = "Your points";
+$BIZBOOK['YOUR_POINTS'] = "Your points";
 
-$Zitiziti['POINTS'] = "Points";
+$BIZBOOK['POINTS'] = "Points";
 
-$Zitiziti['EARN_MORE_CREDIT_POINTS'] = "Earn more credit points";
+$BIZBOOK['EARN_MORE_CREDIT_POINTS'] = "Earn more credit points";
 
-$Zitiziti['EARN_MORE_CREDIT_POINTS_P_TAG'] = "Use this poins to promote your listing.";
+$BIZBOOK['EARN_MORE_CREDIT_POINTS_P_TAG'] = "Use this poins to promote your listing.";
 
-$Zitiziti['BUY_POINTS'] = "Buy Points";
+$BIZBOOK['BUY_POINTS'] = "Buy Points";
 
-$Zitiziti['BUY_MORE_POINTS'] = "Buy More Points";
+$BIZBOOK['BUY_MORE_POINTS'] = "Buy More Points";
 
-$Zitiziti['PURCHASE_DATE'] = "Purchase date";
+$BIZBOOK['PURCHASE_DATE'] = "Purchase date";
 
-$Zitiziti['TOTAL_COST'] = "Total Cost";
+$BIZBOOK['TOTAL_COST'] = "Total Cost";
 
-$Zitiziti['DASH_RIGHT_PLAN_NAME'] = "Plan name";
+$BIZBOOK['DASH_RIGHT_PLAN_NAME'] = "Plan name";
 
-$Zitiziti['DASH_RIGHT_START_DATE'] = "Start date";
+$BIZBOOK['DASH_RIGHT_START_DATE'] = "Start date";
 
-$Zitiziti['DASH_RIGHT_EXPIRY_DATE'] = "Expiry date";
+$BIZBOOK['DASH_RIGHT_EXPIRY_DATE'] = "Expiry date";
 
-$Zitiziti['DASH_RIGHT_EXPIRATION_DATE'] = "Expiration date";
+$BIZBOOK['DASH_RIGHT_EXPIRATION_DATE'] = "Expiration date";
 
-$Zitiziti['DASH_RIGHT_REMAINING_DAYS'] = "Remaining Days";
+$BIZBOOK['DASH_RIGHT_REMAINING_DAYS'] = "Remaining Days";
 
-$Zitiziti['DASH_RIGHT_CHECKOUT_COST'] = "Checkout cost";
+$BIZBOOK['DASH_RIGHT_CHECKOUT_COST'] = "Checkout cost";
 
-$Zitiziti['DASH_RIGHT_CHECKOUT_AMOUNT'] = "Checkout amount";
+$BIZBOOK['DASH_RIGHT_CHECKOUT_AMOUNT'] = "Checkout amount";
 
-$Zitiziti['DASH_RIGHT_CHANGE_MY_PLAN'] = "Change My Plan";
+$BIZBOOK['DASH_RIGHT_CHANGE_MY_PLAN'] = "Change My Plan";
 
-$Zitiziti['DASH_RIGHT_PAYMENT_STATUS'] = "Payment Status";
+$BIZBOOK['DASH_RIGHT_PAYMENT_STATUS'] = "Payment Status";
 
-$Zitiziti['DASH_RIGHT_YOUR_CURRENT_PLAN'] = "Your Current Plan";
+$BIZBOOK['DASH_RIGHT_YOUR_CURRENT_PLAN'] = "Your Current Plan";
 
-$Zitiziti['PAYMENT_INFORMATION'] = "Payment Information";
+$BIZBOOK['PAYMENT_INFORMATION'] = "Payment Information";
 
-$Zitiziti['LISTING_OPEN_CLOSE_TITLE'] = "Listing open & close status";
+$BIZBOOK['LISTING_OPEN_CLOSE_TITLE'] = "Listing open & close status";
 
-$Zitiziti['LISTING_OPEN_CLOSE_TITLE_POPUP'] = "Click here to update your listing status, Open or Closed.";
+$BIZBOOK['LISTING_OPEN_CLOSE_TITLE_POPUP'] = "Click here to update your listing status, Open or Closed.";
 
-$Zitiziti['LAST_WEEK_REPORT'] = "Last week report";
+$BIZBOOK['LAST_WEEK_REPORT'] = "Last week report";
 
-$Zitiziti['COMMUNITY_MEMBERS'] = "Community members";
+$BIZBOOK['COMMUNITY_MEMBERS'] = "Community members";
 
-$Zitiziti['COMMUNITY_MEMBERS_TITLE'] = "Follow your favorite business users and grow your online business now.";
+$BIZBOOK['COMMUNITY_MEMBERS_TITLE'] = "Follow your favorite business users and grow your online business now.";
 
 //************************* User Dashboard Right Section Ends ***********
 
 //************************* Company profile ***********
 
-$Zitiziti['COMP-PRO'] = "Company profile";
+$BIZBOOK['COMP-PRO'] = "Company profile";
 
-$Zitiziti['COMP-PRO-EDIT'] = "Edit company profile";
+$BIZBOOK['COMP-PRO-EDIT'] = "Edit company profile";
 
-$Zitiziti['COMP-PRO-NAME'] = "Company name";
+$BIZBOOK['COMP-PRO-NAME'] = "Company name";
 
-$Zitiziti['COMP-PRO-ADDRESS'] = "Address";
+$BIZBOOK['COMP-PRO-ADDRESS'] = "Address";
 
-$Zitiziti['COMP-PRO-PHONE'] = "Phone";
+$BIZBOOK['COMP-PRO-PHONE'] = "Phone";
 
-$Zitiziti['COMP-PRO-EMAIL'] = "Email id";
+$BIZBOOK['COMP-PRO-EMAIL'] = "Email id";
 
-$Zitiziti['COMP-PRO-WEBSITE'] = "Website";
+$BIZBOOK['COMP-PRO-WEBSITE'] = "Website";
 
-$Zitiziti['COMP-PRO-WHAPP'] = "WhatsApp No";
+$BIZBOOK['COMP-PRO-WHAPP'] = "WhatsApp No";
 
-$Zitiziti['COMP-PRO-INFO'] = "Company info";
+$BIZBOOK['COMP-PRO-INFO'] = "Company info";
 
-$Zitiziti['COMP-PRO-TAX-DETAILS'] = "Tax Details";
+$BIZBOOK['COMP-PRO-TAX-DETAILS'] = "Tax Details";
 
-$Zitiziti['COMP-PRO-TAX-GST'] = "Tax No./ GST No.";
+$BIZBOOK['COMP-PRO-TAX-GST'] = "Tax No./ GST No.";
 
-$Zitiziti['COMP-PRO-CALLNOW'] = "";
+$BIZBOOK['COMP-PRO-CALLNOW'] = "";
 
-$Zitiziti['COMP-PRO-FB'] = "Facebook profile";
+$BIZBOOK['COMP-PRO-FB'] = "Facebook profile";
 
-$Zitiziti['COMP-PRO-TWITTER'] = "Twitter profile";
+$BIZBOOK['COMP-PRO-TWITTER'] = "Twitter profile";
 
-$Zitiziti['COMP-PRO-LINKEDIN'] = "Linkedin profile";
+$BIZBOOK['COMP-PRO-LINKEDIN'] = "Linkedin profile";
 
-$Zitiziti['COMP-PRO-INSTAGRAM'] = "Instagram profile";
+$BIZBOOK['COMP-PRO-INSTAGRAM'] = "Instagram profile";
 
-$Zitiziti['COMP-PRO-YOUTUBE'] = "Youtube profile";
+$BIZBOOK['COMP-PRO-YOUTUBE'] = "Youtube profile";
 
-$Zitiziti['COMP-PRO-CHOO-PROD'] = "Select products";
+$BIZBOOK['COMP-PRO-CHOO-PROD'] = "Select products";
 
-$Zitiziti['COMP-PRO-CHOO-EVENTS'] = "Select events";
+$BIZBOOK['COMP-PRO-CHOO-EVENTS'] = "Select events";
 
-$Zitiziti['COMP-PRO-CHOO-BLOG'] = "Select blogs";
+$BIZBOOK['COMP-PRO-CHOO-BLOG'] = "Select blogs";
 
-$Zitiziti['COMP-PRO-SEO-DESC'] = "Meta descriptions(Write some short description about your company. It's more helps for google indexing and characters limit 155–160)";
+$BIZBOOK['COMP-PRO-SEO-DESC'] = "Meta descriptions(Write some short description about your company. It's more helps for google indexing and characters limit 155–160)";
 
-$Zitiziti['COMP-PRO-SEO-KEYWORDS'] = "Meta keywords(Write some short keywords, related your company profile. (i.e) electronics,laptop,hp,canon)";
+$BIZBOOK['COMP-PRO-SEO-KEYWORDS'] = "Meta keywords(Write some short keywords, related your company profile. (i.e) electronics,laptop,hp,canon)";
 
 //************************* Company profile Ends ***********
 
 //************************* Listing Texts Starts ***********************
 
-$Zitiziti['CREATE_SCRATCH_LISTING_LABEL'] = "Create listing from scratch";
+$BIZBOOK['CREATE_SCRATCH_LISTING_LABEL'] = "Create listing from scratch";
 
-$Zitiziti['CREATE_DUPLICATE_LISTING_LABEL'] = "Create duplicate listing";
+$BIZBOOK['CREATE_DUPLICATE_LISTING_LABEL'] = "Create duplicate listing";
 
-$Zitiziti['NEW_LISTING_NAME_STAR'] = "New Listing Name*";
+$BIZBOOK['NEW_LISTING_NAME_STAR'] = "New Listing Name*";
 
-$Zitiziti['LISTING_NAME_STAR'] = "Listing Name*";
+$BIZBOOK['LISTING_NAME_STAR'] = "Listing Name*";
 
-$Zitiziti['CREATE_NOW'] = "Create Now";
+$BIZBOOK['CREATE_NOW'] = "Create Now";
 
-$Zitiziti['BASIC_INFO'] = "Basic Info";
+$BIZBOOK['BASIC_INFO'] = "Basic Info";
 
-$Zitiziti['SERVICES'] = "Services";
+$BIZBOOK['SERVICES'] = "Services";
 
-$Zitiziti['OFFERS'] = "offers";
+$BIZBOOK['OFFERS'] = "offers";
 
-$Zitiziti['MAP'] = "map";
+$BIZBOOK['MAP'] = "map";
 
-$Zitiziti['OTHER'] = "Other";
+$BIZBOOK['OTHER'] = "Other";
 
-$Zitiziti['DONE'] = "done";
+$BIZBOOK['DONE'] = "done";
 
-$Zitiziti['STEP1'] = "Step 1";
+$BIZBOOK['STEP1'] = "Step 1";
 
-$Zitiziti['STEP2'] = "Step 2";
+$BIZBOOK['STEP2'] = "Step 2";
 
-$Zitiziti['STEP3'] = "Step 3";
+$BIZBOOK['STEP3'] = "Step 3";
 
-$Zitiziti['STEP4'] = "Step 4";
+$BIZBOOK['STEP4'] = "Step 4";
 
-$Zitiziti['STEP5'] = "Step 5";
+$BIZBOOK['STEP5'] = "Step 5";
 
-$Zitiziti['STEP6'] = "Step 6";
+$BIZBOOK['STEP6'] = "Step 6";
 
-$Zitiziti['WEBSITE'] = "Website(www.rn53themes.net)";
+$BIZBOOK['WEBSITE'] = "Website(www.rn53themes.net)";
 
-$Zitiziti['SHOP_ADDRESS'] = "Shop address";
+$BIZBOOK['SHOP_ADDRESS'] = "Shop address";
 
-$Zitiziti['LATITUDE_PLACEHOLDER'] = "Latitude i.e 40.730610";
+$BIZBOOK['LATITUDE_PLACEHOLDER'] = "Latitude i.e 40.730610";
 
-$Zitiziti['LONGITUDE_PLACEHOLDER'] = "Longitude i.e -73.935242";
+$BIZBOOK['LONGITUDE_PLACEHOLDER'] = "Longitude i.e -73.935242";
 
-$Zitiziti['SELECT_YOUR_COUNTRY'] = "Select your Country";
+$BIZBOOK['SELECT_YOUR_COUNTRY'] = "Select your Country";
 
-$Zitiziti['SELECT_YOUR_CITY'] = "Select your Cities";
+$BIZBOOK['SELECT_YOUR_CITY'] = "Select your Cities";
 
-$Zitiziti['SELECT_CATEGORY'] = "Select Category";
+$BIZBOOK['SELECT_CATEGORY'] = "Select Category";
 
-$Zitiziti['SELECT_CITY'] = "Select City";
+$BIZBOOK['SELECT_CITY'] = "Select City";
 
-$Zitiziti['ALL_CITIES'] = "All Cities";
+$BIZBOOK['ALL_CITIES'] = "All Cities";
 
-$Zitiziti['SELECT_FEATURE'] = "Select Feature";
+$BIZBOOK['SELECT_FEATURE'] = "Select Feature";
 
-$Zitiziti['SELECT_SUB_CATEGORY'] = "Select Sub Category";
+$BIZBOOK['SELECT_SUB_CATEGORY'] = "Select Sub Category";
 
-$Zitiziti['DETAILS_ABOUT_LISTING'] = "Details about your listing";
+$BIZBOOK['DETAILS_ABOUT_LISTING'] = "Details about your listing";
 
-$Zitiziti['CHOOSE_PROFILE_IMAGE'] = "Choose profile image";
+$BIZBOOK['CHOOSE_PROFILE_IMAGE'] = "Choose profile image";
 
-$Zitiziti['CHOOSE_COVER_IMAGE'] = "Choose cover image";
+$BIZBOOK['CHOOSE_COVER_IMAGE'] = "Choose cover image";
 
-$Zitiziti['ENTER_SERVICE_LOCATION'] = "Enter your service locations... &#10;(i.e) London, Dallas, Wall Street, Opera House";
+$BIZBOOK['ENTER_SERVICE_LOCATION'] = "Enter your service locations... &#10;(i.e) London, Dallas, Wall Street, Opera House";
 
-$Zitiziti['SERVICES_PROVIDE'] = "Services provide";
+$BIZBOOK['SERVICES_PROVIDE'] = "Services provide";
 
-$Zitiziti['SERVICE_NAME'] = "Service name";
+$BIZBOOK['SERVICE_NAME'] = "Service name";
 
-$Zitiziti['SERVICE_NAME_PLACEHOLDER'] = "Ex: Plumbile";
+$BIZBOOK['SERVICE_NAME_PLACEHOLDER'] = "Ex: Plumbile";
 
-$Zitiziti['SERVICE_NAME_IMAGE'] = "Service Image";
+$BIZBOOK['SERVICE_NAME_IMAGE'] = "Service Image";
 
-$Zitiziti['SPECIAL_OFFERS'] = "Special offers";
+$BIZBOOK['SPECIAL_OFFERS'] = "Special offers";
 
-$Zitiziti['OFFER_NAME'] = "Offer name*";
+$BIZBOOK['OFFER_NAME'] = "Offer name*";
 
-$Zitiziti['DETAILS_ABOUT_OFFER'] = "Details about this offer";
+$BIZBOOK['DETAILS_ABOUT_OFFER'] = "Details about this offer";
 
-$Zitiziti['CHOOSE_OFFER_IMAGE'] = "Choose offer image";
+$BIZBOOK['CHOOSE_OFFER_IMAGE'] = "Choose offer image";
 
-$Zitiziti['VIEW_MORE_LINK'] = "View More Link";
+$BIZBOOK['VIEW_MORE_LINK'] = "View More Link";
 
-$Zitiziti['VIDEO_GALLERY'] = "Video Gallery";
+$BIZBOOK['VIDEO_GALLERY'] = "Video Gallery";
 
-$Zitiziti['VIDEO_GALLERY_INFO'] = "Right click on YouTube video then get your iframe code";
+$BIZBOOK['VIDEO_GALLERY_INFO'] = "Right click on YouTube video then get your iframe code";
 
-$Zitiziti['PASTE_IFRAME_CODE'] = "Paste Your Youtube iframe Code here";
+$BIZBOOK['PASTE_IFRAME_CODE'] = "Paste Your Youtube iframe Code here";
 
-$Zitiziti['MAP_360_VIEW'] = "Map and 360 view";
+$BIZBOOK['MAP_360_VIEW'] = "Map and 360 view";
 
-$Zitiziti['MAP_360_VIEW_INFO'] = "Go to Google maps -> Choose your location -> Click share button - > Copy your iframe code then paste here.";
+$BIZBOOK['MAP_360_VIEW_INFO'] = "Go to Google maps -> Choose your location -> Click share button - > Copy your iframe code then paste here.";
 
-$Zitiziti['SHOP_LOCATION'] = "Shop location";
+$BIZBOOK['SHOP_LOCATION'] = "Shop location";
 
-$Zitiziti['360_VIEW'] = "360 view";
+$BIZBOOK['360_VIEW'] = "360 view";
 
-$Zitiziti['PHOTO_GALLERY'] = "Photo gallery";
+$BIZBOOK['PHOTO_GALLERY'] = "Photo gallery";
 
-$Zitiziti['OTHER_INFORMATIONS'] = "Other informations";
+$BIZBOOK['OTHER_INFORMATIONS'] = "Other informations";
 
-$Zitiziti['OTHER_INFORMATIONS_PLACEHOLDER_LEFT'] = "Experience";
+$BIZBOOK['OTHER_INFORMATIONS_PLACEHOLDER_LEFT'] = "Experience";
 
-$Zitiziti['OTHER_INFORMATIONS_PLACEHOLDER_RIGHT'] = "20 years";
+$BIZBOOK['OTHER_INFORMATIONS_PLACEHOLDER_RIGHT'] = "20 years";
 
-$Zitiziti['LISTING_PREVIEW'] = "Listing preview";
+$BIZBOOK['LISTING_PREVIEW'] = "Listing preview";
 
-$Zitiziti['DELETE_LISTING'] = "Delete Listing";
+$BIZBOOK['DELETE_LISTING'] = "Delete Listing";
 
-$Zitiziti['LISTING_INSERT_SUCCESS_MESSAGE'] = "Your listing has been submitted successfully.";
+$BIZBOOK['LISTING_INSERT_SUCCESS_MESSAGE'] = "Your listing has been submitted successfully.";
 
-$Zitiziti['LISTING_UPDATE_SUCCESS_MESSAGE'] = "Your listing has been updated successfully.";
+$BIZBOOK['LISTING_UPDATE_SUCCESS_MESSAGE'] = "Your listing has been updated successfully.";
 
-$Zitiziti['LISTING_DETAILS_ABOUT'] = "About";
+$BIZBOOK['LISTING_DETAILS_ABOUT'] = "About";
 
-$Zitiziti['LISTING_DETAILS_SERVICES'] = "Services";
+$BIZBOOK['LISTING_DETAILS_SERVICES'] = "Services";
 
-$Zitiziti['LISTING_DETAILS_SERVICE'] = "Service";
+$BIZBOOK['LISTING_DETAILS_SERVICE'] = "Service";
 
-$Zitiziti['LISTING_DETAILS_OFFERED'] = "Offered";
+$BIZBOOK['LISTING_DETAILS_OFFERED'] = "Offered";
 
-$Zitiziti['LISTING_DETAILS_AREAS'] = "Areas";
+$BIZBOOK['LISTING_DETAILS_AREAS'] = "Areas";
 
-$Zitiziti['LISTING_DETAILS_GALLERY'] = "Gallery";
+$BIZBOOK['LISTING_DETAILS_GALLERY'] = "Gallery";
 
-$Zitiziti['LISTING_DETAILS_SPECIAL'] = "Special";
+$BIZBOOK['LISTING_DETAILS_SPECIAL'] = "Special";
 
-$Zitiziti['LISTING_DETAILS_OFFERS'] = "Offers";
+$BIZBOOK['LISTING_DETAILS_OFFERS'] = "Offers";
 
-$Zitiziti['LISTING_DETAILS_360_VIEW'] = "360 View";
+$BIZBOOK['LISTING_DETAILS_360_VIEW'] = "360 View";
 
-$Zitiziti['LISTING_DETAILS_360'] = "360";
+$BIZBOOK['LISTING_DETAILS_360'] = "360";
 
-$Zitiziti['LISTING_DETAILS_DEGREE_VIEW'] = "Degree View";
+$BIZBOOK['LISTING_DETAILS_DEGREE_VIEW'] = "Degree View";
 
-$Zitiziti['LISTING_DETAILS_WRITE_REVIEW'] = "Write Review";
+$BIZBOOK['LISTING_DETAILS_WRITE_REVIEW'] = "Write Review";
 
-$Zitiziti['LISTING_DETAILS_CLAIM_BUSINESS'] = "Claim business";
+$BIZBOOK['LISTING_DETAILS_CLAIM_BUSINESS'] = "Claim business";
 
-$Zitiziti['LISTING_DETAILS_CLAIM'] = "Claim";
+$BIZBOOK['LISTING_DETAILS_CLAIM'] = "Claim";
 
-$Zitiziti['LISTING_DETAILS_CLAIM_NOW'] = "Claim now";
+$BIZBOOK['LISTING_DETAILS_CLAIM_NOW'] = "Claim now";
 
-$Zitiziti['LISTING_DETAILS_ITS_YOURS'] = "It's Yours!!";
+$BIZBOOK['LISTING_DETAILS_ITS_YOURS'] = "It's Yours!!";
 
-$Zitiziti['LISTING_DETAILS_CLAIM_THIS_BUSINESS'] = "Claim this business";
+$BIZBOOK['LISTING_DETAILS_CLAIM_THIS_BUSINESS'] = "Claim this business";
 
-$Zitiziti['LISTING_DETAILS_LOGIN_AND_WRITE_REVIEW'] = "Login And Write Your Review";
+$BIZBOOK['LISTING_DETAILS_LOGIN_AND_WRITE_REVIEW'] = "Login And Write Your Review";
 
-$Zitiziti['LISTING_DETAILS_WRITE_YOUR'] = "Write Your";
+$BIZBOOK['LISTING_DETAILS_WRITE_YOUR'] = "Write Your";
 
-$Zitiziti['LISTING_DETAILS_REVIEW_P_TAG'] = "Writing great reviews may help others discover the places that are just apt for them. Here are a few tips to write a good review";
+$BIZBOOK['LISTING_DETAILS_REVIEW_P_TAG'] = "Writing great reviews may help others discover the places that are just apt for them. Here are a few tips to write a good review";
 
-$Zitiziti['LISTING_DETAILS_REVIEW_SUCCESS_MESSAGE'] = "Thanks for your Review !! Your Review Is Successful!!";
+$BIZBOOK['LISTING_DETAILS_REVIEW_SUCCESS_MESSAGE'] = "Thanks for your Review !! Your Review Is Successful!!";
 
-$Zitiziti['LISTING_DETAILS_CLAIM_SUCCESS_MESSAGE'] = "Your Claim Request Submitted Successfully";
+$BIZBOOK['LISTING_DETAILS_CLAIM_SUCCESS_MESSAGE'] = "Your Claim Request Submitted Successfully";
 
-$Zitiziti['LISTING_DETAILS_CLAIM_P_TAG'] = "We send you the verification email to you provider the email id. Once you done the verification process then you can manage this business.";
+$BIZBOOK['LISTING_DETAILS_CLAIM_P_TAG'] = "We send you the verification email to you provider the email id. Once you done the verification process then you can manage this business.";
 
-$Zitiziti['LISTING_DETAILS_SUBMIT_REVIEW'] = "Submit Review";
+$BIZBOOK['LISTING_DETAILS_SUBMIT_REVIEW'] = "Submit Review";
 
-$Zitiziti['LISTING_DETAILS_UNABLE_SUBMIT_REVIEW'] = "You can't review this listing as per your plan !!";
+$BIZBOOK['LISTING_DETAILS_UNABLE_SUBMIT_REVIEW'] = "You can't review this listing as per your plan !!";
 
-$Zitiziti['LISTING_DETAILS_UNABLE_SUBMIT_ENQUIRY'] = "You can't make enquiry!! As per your plan !!";
+$BIZBOOK['LISTING_DETAILS_UNABLE_SUBMIT_ENQUIRY'] = "You can't make enquiry!! As per your plan !!";
 
-$Zitiziti['LISTING_DETAILS_BE_FIRST_REVIEW'] = "Be the First One To Review This Listing!!!";
+$BIZBOOK['LISTING_DETAILS_BE_FIRST_REVIEW'] = "Be the First One To Review This Listing!!!";
 
-$Zitiziti['LISTING_DETAILS_RELATED_LISTINGS'] = "Related listings";
+$BIZBOOK['LISTING_DETAILS_RELATED_LISTINGS'] = "Related listings";
 
-$Zitiziti['LISTING_DETAILS_BUSINESS_PROFILE'] = "Business profile";
+$BIZBOOK['LISTING_DETAILS_BUSINESS_PROFILE'] = "Business profile";
 
-$Zitiziti['LISTING_DETAILS_GET_IN_TOUCH'] = "Get in touch with us";
+$BIZBOOK['LISTING_DETAILS_GET_IN_TOUCH'] = "Get in touch with us";
 
-$Zitiziti['LISTING_DETAILS_SUGGEST_AN_EDIT'] = "Suggest an edit";
+$BIZBOOK['LISTING_DETAILS_SUGGEST_AN_EDIT'] = "Suggest an edit";
 
-$Zitiziti['LISTING_DETAILS_WHO_ARE_LIKE_THIS'] = "Who all are like this";
+$BIZBOOK['LISTING_DETAILS_WHO_ARE_LIKE_THIS'] = "Who all are like this";
 
 //************************* Listing Texts Ends ***************************
 
 //************************* Lead Page Texts Starts ***********************
 
-$Zitiziti['ENQUIRY_DETAILS'] = "Enquiry Details";
+$BIZBOOK['ENQUIRY_DETAILS'] = "Enquiry Details";
 
-$Zitiziti['PAGE_NAME'] = "Page name";
+$BIZBOOK['PAGE_NAME'] = "Page name";
 
-$Zitiziti['TRACKING_ID'] = "Tracking-id";
+$BIZBOOK['TRACKING_ID'] = "Tracking-id";
 
-$Zitiziti['URL'] = "URL";
+$BIZBOOK['URL'] = "URL";
 
 //************************* Lead Page Texts Ends ***********************
 
 //*************************** Setting Page Text Starts ***************************
 
-$Zitiziti['SETTING_PROFILE_SETTING'] = "Profile Setting";
+$BIZBOOK['SETTING_PROFILE_SETTING'] = "Profile Setting";
 
-$Zitiziti['SETTING_ACCOUNT_STATUS'] = "Account status";
+$BIZBOOK['SETTING_ACCOUNT_STATUS'] = "Account status";
 
-$Zitiziti['SETTING_ACTIVE'] = "Active";
+$BIZBOOK['SETTING_ACTIVE'] = "Active";
 
-$Zitiziti['SETTING_IN_ACTIVE'] = "In-Active";
+$BIZBOOK['SETTING_IN_ACTIVE'] = "In-Active";
 
-$Zitiziti['SETTING_CLOSE_ACCOUNT'] = "Close account";
+$BIZBOOK['SETTING_CLOSE_ACCOUNT'] = "Close account";
 
-$Zitiziti['SETTING_CLOSE_WARNING_MESSAGE'] = "Close Account will Delete your account permanently!! Think before submitting!!";
+$BIZBOOK['SETTING_CLOSE_WARNING_MESSAGE'] = "Close Account will Delete your account permanently!! Think before submitting!!";
 
-$Zitiziti['SETTING_LISTING_REVIEWS'] = "Listing reviews";
+$BIZBOOK['SETTING_LISTING_REVIEWS'] = "Listing reviews";
 
-$Zitiziti['SETTING_LISTING_SHARE'] = "Listing share";
+$BIZBOOK['SETTING_LISTING_SHARE'] = "Listing share";
 
-$Zitiziti['SETTING_SHOW_MY_PROFILE'] = "Show my profile on listing page";
+$BIZBOOK['SETTING_SHOW_MY_PROFILE'] = "Show my profile on listing page";
 
 //************************* Product Page Texts Starts ***********************
 
-$Zitiziti['PRODUCT_DETAILS'] = "Product Details";
+$BIZBOOK['PRODUCT_DETAILS'] = "Product Details";
 
-$Zitiziti['PRODUCT_NAME'] = "Product Name";
+$BIZBOOK['PRODUCT_NAME'] = "Product Name";
 
-$Zitiziti['PRODUCT_NAME_STAR'] = "Product Name*";
+$BIZBOOK['PRODUCT_NAME_STAR'] = "Product Name*";
 
-$Zitiziti['NEW_PRODUCT'] = "New Product";
+$BIZBOOK['NEW_PRODUCT'] = "New Product";
 
-$Zitiziti['ADD_NEW_PRODUCT'] = "Add new Product";
+$BIZBOOK['ADD_NEW_PRODUCT'] = "Add new Product";
 
-$Zitiziti['PRODUCT_OFFER'] = "Offer (i.e) 50";
+$BIZBOOK['PRODUCT_OFFER'] = "Offer (i.e) 50";
 
-$Zitiziti['PRODUCT_PAYMENT_LINK'] = "Product Payment External Link";
+$BIZBOOK['PRODUCT_PAYMENT_LINK'] = "Product Payment External Link";
 
-$Zitiziti['PRODUCT_PAYMENT_LINK_P_TAG'] = "Payment link";
+$BIZBOOK['PRODUCT_PAYMENT_LINK_P_TAG'] = "Payment link";
 
-$Zitiziti['PRODUCT_PAYMENT_LINK_INFO'] = "Customers click on 'Buy now' button means.. page automaticall redirect to you provided link.";
+$BIZBOOK['PRODUCT_PAYMENT_LINK_INFO'] = "Customers click on 'Buy now' button means.. page automaticall redirect to you provided link.";
 
-$Zitiziti['PRODUCT_IMAGE_LABEL'] = "Product images(max 5 images)";
+$BIZBOOK['PRODUCT_IMAGE_LABEL'] = "Product images(max 5 images)";
 
-$Zitiziti['HIGHLIGHTS'] = "Highlights";
+$BIZBOOK['HIGHLIGHTS'] = "Highlights";
 
-$Zitiziti['DESCRIPTIONS'] = "Descriptions";
+$BIZBOOK['DESCRIPTIONS'] = "Descriptions";
 
-$Zitiziti['TAGS'] = "Tags";
+$BIZBOOK['TAGS'] = "Tags";
 
-$Zitiziti['HIGHLIGHTS_PLACEHOLDER'] = "(i.e) 1 Year Onsite Warranty";
+$BIZBOOK['HIGHLIGHTS_PLACEHOLDER'] = "(i.e) 1 Year Onsite Warranty";
 
-$Zitiziti['SPECIFICATIONS'] = "Specifications";
+$BIZBOOK['SPECIFICATIONS'] = "Specifications";
 
-$Zitiziti['SPECIFICATIONS_QUESTION'] = "(i.e) Serial Number";
+$BIZBOOK['SPECIFICATIONS_QUESTION'] = "(i.e) Serial Number";
 
-$Zitiziti['SPECIFICATIONS_ANSWER'] = "(i.e) qwerty3421";
+$BIZBOOK['SPECIFICATIONS_ANSWER'] = "(i.e) qwerty3421";
 
-$Zitiziti['PRODUCT_TAGS_PLACEHOLDER'] = "Product Tags (i.e) electronics,laptop,hp,canon";
+$BIZBOOK['PRODUCT_TAGS_PLACEHOLDER'] = "Product Tags (i.e) electronics,laptop,hp,canon";
 
-$Zitiziti['EDIT_PRODUCT'] = "Edit Product";
+$BIZBOOK['EDIT_PRODUCT'] = "Edit Product";
 
-$Zitiziti['EDIT_THIS_PRODUCT'] = "Edit this product";
+$BIZBOOK['EDIT_THIS_PRODUCT'] = "Edit this product";
 
-$Zitiziti['DELETE_THIS_PRODUCT'] = "Delete this product";
+$BIZBOOK['DELETE_THIS_PRODUCT'] = "Delete this product";
 
-$Zitiziti['DELETE_PRODUCT'] = "Delete Product";
+$BIZBOOK['DELETE_PRODUCT'] = "Delete Product";
 
 //************************* Product Page Texts Ends *****************************
 
 //*************************** Events's Page Text Starts ***************************
 
-$Zitiziti['EVENT_DETAILS'] = "Event Details";
+$BIZBOOK['EVENT_DETAILS'] = "Event Details";
 
-$Zitiziti['ALL_EVENTS'] = "All Events";
+$BIZBOOK['ALL_EVENTS'] = "All Events";
 
-$Zitiziti['EVENT_NAME'] = "Event Name";
+$BIZBOOK['EVENT_NAME'] = "Event Name";
 
-$Zitiziti['EVENT_DATE'] = "Event Date";
+$BIZBOOK['EVENT_DATE'] = "Event Date";
 
-$Zitiziti['ADD_NEW_EVENT'] = "Add new Event";
+$BIZBOOK['ADD_NEW_EVENT'] = "Add new Event";
 
-$Zitiziti['CREATE_EVENT'] = "Create Event";
+$BIZBOOK['CREATE_EVENT'] = "Create Event";
 
-$Zitiziti['GOOGLE_MAP_LOCATION'] = "Google map location";
+$BIZBOOK['GOOGLE_MAP_LOCATION'] = "Google map location";
 
-$Zitiziti['CHOOSE_BANNER_IMAGE'] = "Choose banner image";
+$BIZBOOK['CHOOSE_BANNER_IMAGE'] = "Choose banner image";
 
-$Zitiziti['CONTACT_PERSON'] = "Contact person";
+$BIZBOOK['CONTACT_PERSON'] = "Contact person";
 
-$Zitiziti['CONTACT_PHONE_NUMBER'] = "Contact phone number";
+$BIZBOOK['CONTACT_PHONE_NUMBER'] = "Contact phone number";
 
-$Zitiziti['CONTACT_EMAIL_ID'] = "Contact Email Id ";
+$BIZBOOK['CONTACT_EMAIL_ID'] = "Contact Email Id ";
 
-$Zitiziti['EVENT_WEBSITE'] = "Event Website";
+$BIZBOOK['EVENT_WEBSITE'] = "Event Website";
 
-$Zitiziti['ENQUIRY_BOX_ENABLE'] = "Enquiry or Registration form enable";
+$BIZBOOK['ENQUIRY_BOX_ENABLE'] = "Enquiry or Registration form enable";
 
-$Zitiziti['EDIT_EVENT'] = "Edit Event";
+$BIZBOOK['EDIT_EVENT'] = "Edit Event";
 
-$Zitiziti['EDIT_THIS_EVENT'] = "Edit this Event";
+$BIZBOOK['EDIT_THIS_EVENT'] = "Edit this Event";
 
-$Zitiziti['DELETE_THIS_EVENT'] = "Delete this Event";
+$BIZBOOK['DELETE_THIS_EVENT'] = "Delete this Event";
 
-$Zitiziti['DELETE_EVENT'] = "Delete Event";
+$BIZBOOK['DELETE_EVENT'] = "Delete Event";
 
-$Zitiziti['EVENT_IFRAME_FROM_GOOGLE'] = "Iframe code from google";
+$BIZBOOK['EVENT_IFRAME_FROM_GOOGLE'] = "Iframe code from google";
 
-$Zitiziti['EVENT_COPY_PASTE_IFRAME_FROM_GOOGLE'] = "Copy and paste Google iframe code here.";
+$BIZBOOK['EVENT_COPY_PASTE_IFRAME_FROM_GOOGLE'] = "Copy and paste Google iframe code here.";
 
-$Zitiziti['EVENT_HEAD_MESSAGE'] = "Here post your events, seminar, webinar, fetivals and more";
+$BIZBOOK['EVENT_HEAD_MESSAGE'] = "Here post your events, seminar, webinar, fetivals and more";
 
-$Zitiziti['EVENT_SEARCH_EVENT_PLACEHOLDER'] = "Search event in your city...";
+$BIZBOOK['EVENT_SEARCH_EVENT_PLACEHOLDER'] = "Search event in your city...";
 
-$Zitiziti['EVENT_HOSTED_BY'] = "Hosted by";
+$BIZBOOK['EVENT_HOSTED_BY'] = "Hosted by";
 
-$Zitiziti['EVENT_TOP_EVENTS'] = "Top events";
+$BIZBOOK['EVENT_TOP_EVENTS'] = "Top events";
 
 //*************************** Events's Page Text Ends ***************************
 
 //*************************** Blog's Page Text Start ***************************
 
-$Zitiziti['BLOG_DETAILS'] = "Blog Details";
+$BIZBOOK['BLOG_DETAILS'] = "Blog Details";
 
-$Zitiziti['ALL_BLOG'] = "All Blogs";
+$BIZBOOK['ALL_BLOG'] = "All Blogs";
 
-$Zitiziti['POST_NAME'] = "Post Name";
+$BIZBOOK['POST_NAME'] = "Post Name";
 
-$Zitiziti['ADD_NEW_POST'] = "Add new post";
+$BIZBOOK['ADD_NEW_POST'] = "Add new post";
 
-$Zitiziti['ADD_NEW_BLOG_POST'] = "Add new Blog post";
+$BIZBOOK['ADD_NEW_BLOG_POST'] = "Add new Blog post";
 
-$Zitiziti['CREATE_BLOG_POST'] = "Create Blog Post";
+$BIZBOOK['CREATE_BLOG_POST'] = "Create Blog Post";
 
-$Zitiziti['POST_DETAILS'] = "Post Details";
+$BIZBOOK['POST_DETAILS'] = "Post Details";
 
-$Zitiziti['EDIT_BLOG_POST'] = "Edit Blog Post";
+$BIZBOOK['EDIT_BLOG_POST'] = "Edit Blog Post";
 
-$Zitiziti['EDIT_THIS_BLOG_POST'] = "Edit this Blog Post";
+$BIZBOOK['EDIT_THIS_BLOG_POST'] = "Edit this Blog Post";
 
-$Zitiziti['DELETE_THIS_BLOG_POST'] = "Delete this Blog Post";
+$BIZBOOK['DELETE_THIS_BLOG_POST'] = "Delete this Blog Post";
 
-$Zitiziti['DELETE_BLOG_POST'] = "Delete Blog Post";
+$BIZBOOK['DELETE_BLOG_POST'] = "Delete Blog Post";
 
-$Zitiziti['DELETE_BLOG'] = "Delete Blog";
+$BIZBOOK['DELETE_BLOG'] = "Delete Blog";
 
-$Zitiziti['BLOG_TOP_POSTS'] = "Top posts";
+$BIZBOOK['BLOG_TOP_POSTS'] = "Top posts";
 
 //*************************** Blog's Page Text Ends ***************************
 
 //*************************** SEO Page Text Starts***************************
 
-$Zitiziti['SEO_DETAILS'] = "SEO Details";
+$BIZBOOK['SEO_DETAILS'] = "SEO Details";
 
-$Zitiziti['SEO_LABEL'] = "Here you can update Title, descriptions and keywords of all your posts.";
+$BIZBOOK['SEO_LABEL'] = "Here you can update Title, descriptions and keywords of all your posts.";
 
-$Zitiziti['EDIT_THIS_SEO'] = "Edit this SEO";
+$BIZBOOK['EDIT_THIS_SEO'] = "Edit this SEO";
 
-$Zitiziti['SEO_TITLE'] = "SEO Title";
+$BIZBOOK['SEO_TITLE'] = "SEO Title";
 
-$Zitiziti['SEO_NAME'] = "SEO Name";
+$BIZBOOK['SEO_NAME'] = "SEO Name";
 
-$Zitiziti['SEO_DESCRIPTION'] = "SEO Description";
+$BIZBOOK['SEO_DESCRIPTION'] = "SEO Description";
 
-$Zitiziti['SEO_KEYWORDS'] = "SEO Keywords i.e products,market,health";
+$BIZBOOK['SEO_KEYWORDS'] = "SEO Keywords i.e products,market,health";
 
 //*************************** SEO Page Text Ends************************************
 
 //*************************** User Profile Page Text Starts***************************
 
-$Zitiziti['PROFILE_DETAILS'] = "Profile Details";
+$BIZBOOK['PROFILE_DETAILS'] = "Profile Details";
 
-$Zitiziti['USER_PROFILE'] = "User Profile";
+$BIZBOOK['USER_PROFILE'] = "User Profile";
 
-$Zitiziti['EDIT_USER_PROFILE'] = "Edit User Profile";
+$BIZBOOK['EDIT_USER_PROFILE'] = "Edit User Profile";
 
-$Zitiziti['PROFILE_EXPIRY_LISTING_EXP'] = "Profile Expiry(Listing exp)";
+$BIZBOOK['PROFILE_EXPIRY_LISTING_EXP'] = "Profile Expiry(Listing exp)";
 
-$Zitiziti['PROFILE_PASSWORD'] = "Profile Password";
+$BIZBOOK['PROFILE_PASSWORD'] = "Profile Password";
 
-$Zitiziti['PROFILE_PICTURE'] = "Profile Picture";
+$BIZBOOK['PROFILE_PICTURE'] = "Profile Picture";
 
-$Zitiziti['PROFILE_PICTURE_COVER'] = "Profile Cover Image";
+$BIZBOOK['PROFILE_PICTURE_COVER'] = "Profile Cover Image";
 
-$Zitiziti['PROFILE_IDPROOF'] = "Photo ID Proof";
+$BIZBOOK['PROFILE_IDPROOF'] = "Photo ID Proof";
 
-$Zitiziti['PREMIUM_SERVICE_PROVIDER'] = "Premium service provider";
+$BIZBOOK['PREMIUM_SERVICE_PROVIDER'] = "Premium service provider";
 
-$Zitiziti['PROFILE_LINK'] = "Profile Link";
+$BIZBOOK['PROFILE_LINK'] = "Profile Link";
 
-$Zitiziti['FACEBOOK'] = "Facebook";
+$BIZBOOK['FACEBOOK'] = "Facebook";
 
-$Zitiziti['TWITTER'] = "Twitter";
+$BIZBOOK['TWITTER'] = "Twitter";
 
-$Zitiziti['LINKEDIN'] = "Linkedin";
+$BIZBOOK['LINKEDIN'] = "Linkedin";
 
-$Zitiziti['PINTEREST'] = "Pinterest";
+$BIZBOOK['PINTEREST'] = "Pinterest";
 
-$Zitiziti['YOUTUBE'] = "Youtube";
+$BIZBOOK['YOUTUBE'] = "Youtube";
 
-$Zitiziti['USER_WEBSITE'] = "Website";
+$BIZBOOK['USER_WEBSITE'] = "Website";
 
-$Zitiziti['CHANGE_PASSWORD'] = "Change password";
+$BIZBOOK['CHANGE_PASSWORD'] = "Change password";
 
-$Zitiziti['PROFILE-PROMO-H3-TAG'] = "Tell us your Needs";
+$BIZBOOK['PROFILE-PROMO-H3-TAG'] = "Tell us your Needs";
 
-$Zitiziti['PROFILE-PROMO-P-TAG'] = "Tell us what kind of service or experts you are looking.";
+$BIZBOOK['PROFILE-PROMO-P-TAG'] = "Tell us what kind of service or experts you are looking.";
 
-$Zitiziti['PROFILE-QUICK-ACCESS'] = "Quick access";
+$BIZBOOK['PROFILE-QUICK-ACCESS'] = "Quick access";
 
-$Zitiziti['PROFILE-QUICK-ACCESS-P-1'] = "Easy to find your nearby Services";
+$BIZBOOK['PROFILE-QUICK-ACCESS-P-1'] = "Easy to find your nearby Services";
 
-$Zitiziti['PROFILE-QUICK-ACCESS-SPAN-1'] = "View services";
+$BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-1'] = "View services";
 
-$Zitiziti['PROFILE-QUICK-ACCESS-SPAN-2'] = "Book service experts";
+$BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-2'] = "Book service experts";
 
-$Zitiziti['PROFILE-QUICK-ACCESS-SPAN-3'] = "Start finding";
+$BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-3'] = "Start finding";
 
-$Zitiziti['PROFILE-QUICK-ACCESS-P-4'] = "Find upcoming events now";
+$BIZBOOK['PROFILE-QUICK-ACCESS-P-4'] = "Find upcoming events now";
 
-$Zitiziti['PROFILE-QUICK-ACCESS-SPAN-4'] = "More info";
+$BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-4'] = "More info";
 
-$Zitiziti['PROFILE-QUICK-ACCESS-P-5'] = "Now easy to Buy & Selling your products online";
+$BIZBOOK['PROFILE-QUICK-ACCESS-P-5'] = "Now easy to Buy & Selling your products online";
 
-$Zitiziti['PROFILE-QUICK-ACCESS-SPAN-5'] = "Start Buying";
+$BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-5'] = "Start Buying";
 
-$Zitiziti['PROFILE-QUICK-ACCESS-P-6'] = "Get the latest and up-to-date coupons";
+$BIZBOOK['PROFILE-QUICK-ACCESS-P-6'] = "Get the latest and up-to-date coupons";
 
-$Zitiziti['PROFILE-QUICK-ACCESS-SPAN-6'] = "View Coupon & deals";
+$BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-6'] = "View Coupon & deals";
 
-$Zitiziti['PROFILE-QUICK-ACCESS-P-7'] = "Create a unique and beautiful blog. It’s easy and free.";
+$BIZBOOK['PROFILE-QUICK-ACCESS-P-7'] = "Create a unique and beautiful blog. It’s easy and free.";
 
-$Zitiziti['PROFILE-QUICK-ACCESS-SPAN-8'] = "Join the Community";
+$BIZBOOK['PROFILE-QUICK-ACCESS-SPAN-8'] = "Join the Community";
 
 //*************************** User Profile Page Text Ends***************************
 
 
 //************************* Footer banner ***********
 
-$Zitiziti['FOOT-BAN-TIT'] = "List your business for FREE";
+$BIZBOOK['FOOT-BAN-TIT'] = "List your business for FREE";
 
-$Zitiziti['FOOT-BAN-SUB-TIT'] = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.";
+$BIZBOOK['FOOT-BAN-SUB-TIT'] = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.";
 
-$Zitiziti['FOOT-BAN-ADD'] = "Add my business";
+$BIZBOOK['FOOT-BAN-ADD'] = "Add my business";
 
 
 //************************* HOME PAGE 3 ***********
 
-$Zitiziti['HOM3-OW-TIT'] = "Join us Now";
+$BIZBOOK['HOM3-OW-TIT'] = "Join us Now";
 
-$Zitiziti['HOM3-OW-POSTED-BY'] = "Posted by";
+$BIZBOOK['HOM3-OW-POSTED-BY'] = "Posted by";
 
-$Zitiziti['HOM3-OW-POSTED-ON'] = "Posted on";
+$BIZBOOK['HOM3-OW-POSTED-ON'] = "Posted on";
 
-$Zitiziti['HOM3-OW-USER-REVIEW'] = "Our user reviews";
+$BIZBOOK['HOM3-OW-USER-REVIEW'] = "Our user reviews";
 
-$Zitiziti['HOM3-OW-TIT-SUB'] = "We connect with targeted customers for greater business conversion";
+$BIZBOOK['HOM3-OW-TIT-SUB'] = "We connect with targeted customers for greater business conversion";
 
-$Zitiziti['HOM3-OW-LHS-TIT'] = "Are you a business owner?";
+$BIZBOOK['HOM3-OW-LHS-TIT'] = "Are you a business owner?";
 
-$Zitiziti['HOM3-OW-LHS-SUB'] = "Update your business details including services, about, contact details payment options and more.";
+$BIZBOOK['HOM3-OW-LHS-SUB'] = "Update your business details including services, about, contact details payment options and more.";
 
-$Zitiziti['HOM3-OW-LHS-CTA'] = "Add my business";
+$BIZBOOK['HOM3-OW-LHS-CTA'] = "Add my business";
 
-$Zitiziti['HOM3-OW-RHS-TIT'] = "Are you looking for service?";
+$BIZBOOK['HOM3-OW-RHS-TIT'] = "Are you looking for service?";
 
-$Zitiziti['HOM3-OW-RHS-SUB'] = "Get everything in your pocket, What service do you need? Zitiziti will help you.";
+$BIZBOOK['HOM3-OW-RHS-SUB'] = "Get everything in your pocket, What service do you need? BizBook will help you.";
 
-$Zitiziti['HOM3-OW-RHS-CTA'] = "Create an account";
+$BIZBOOK['HOM3-OW-RHS-CTA'] = "Create an account";
 
 //************************* COMMON LEAD FORM TEXT ***********
 
-$Zitiziti['LEAD-GET-QUOTE'] = "Get quote";
+$BIZBOOK['LEAD-GET-QUOTE'] = "Get quote";
 
-$Zitiziti['LEAD-GET'] = "Get";
+$BIZBOOK['LEAD-GET'] = "Get";
 
-$Zitiziti['LEAD-QUOTE'] = "Quote";
+$BIZBOOK['LEAD-QUOTE'] = "Quote";
 
-$Zitiziti['LEAD-SEND-ENQUIRY'] = "Send enquiry";
+$BIZBOOK['LEAD-SEND-ENQUIRY'] = "Send enquiry";
 
-$Zitiziti['LEAD-NAME-PLACEHOLDER'] = "Enter name*";
+$BIZBOOK['LEAD-NAME-PLACEHOLDER'] = "Enter name*";
 
-$Zitiziti['LEAD-EMAIL-PLACEHOLDER'] = "Enter Email Id*";
+$BIZBOOK['LEAD-EMAIL-PLACEHOLDER'] = "Enter Email Id*";
 
-$Zitiziti['LEAD-MOBILE-PLACEHOLDER'] = "Enter mobile number *";
+$BIZBOOK['LEAD-MOBILE-PLACEHOLDER'] = "Enter mobile number *";
 
-$Zitiziti['LEAD-CARD-NUMBER-PLACEHOLDER'] = "Card Number *";
+$BIZBOOK['LEAD-CARD-NUMBER-PLACEHOLDER'] = "Card Number *";
 
-$Zitiziti['LEAD-CARD-NUMBER-MM-PLACEHOLDER'] = "MM";
+$BIZBOOK['LEAD-CARD-NUMBER-MM-PLACEHOLDER'] = "MM";
 
-$Zitiziti['LEAD-CARD-NUMBER-YYYY-PLACEHOLDER'] = "YYYY";
+$BIZBOOK['LEAD-CARD-NUMBER-YYYY-PLACEHOLDER'] = "YYYY";
 
-$Zitiziti['LEAD-CARD-NUMBER-CVC-PLACEHOLDER'] = "CVC";
+$BIZBOOK['LEAD-CARD-NUMBER-CVC-PLACEHOLDER'] = "CVC";
 
-$Zitiziti['LEAD-MESSAGE-PLACEHOLDER'] = "Enter your query or message";
+$BIZBOOK['LEAD-MESSAGE-PLACEHOLDER'] = "Enter your query or message";
 
-$Zitiziti['LEAD-LOCATION-PLACEHOLDER'] = "Enter your Location";
+$BIZBOOK['LEAD-LOCATION-PLACEHOLDER'] = "Enter your Location";
 
-$Zitiziti['LEAD-WRITE-YOUR-FEEDBACK-PLACEHOLDER'] = "Write your feedback here*";
+$BIZBOOK['LEAD-WRITE-YOUR-FEEDBACK-PLACEHOLDER'] = "Write your feedback here*";
 
-$Zitiziti['LEAD-WRITE-YOUR-MESSAGE-PLACEHOLDER'] = "Write your message here*";
+$BIZBOOK['LEAD-WRITE-YOUR-MESSAGE-PLACEHOLDER'] = "Write your message here*";
 
-$Zitiziti['LEAD-INVALID-EMAIL-TITLE'] = "Invalid email address";
+$BIZBOOK['LEAD-INVALID-EMAIL-TITLE'] = "Invalid email address";
 
-$Zitiziti['LEAD-INVALID-MOBILE-TITLE'] = "Phone number starting with 7-9 and remaining 9 digit with 0-9";
+$BIZBOOK['LEAD-INVALID-MOBILE-TITLE'] = "Phone number starting with 7-9 and remaining 9 digit with 0-9";
 
-$Zitiziti['LEAD-IDENTIFICATION-PROOF-TITLE'] = "Identification Proof *";
+$BIZBOOK['LEAD-IDENTIFICATION-PROOF-TITLE'] = "Identification Proof *";
 
-$Zitiziti['LEAD-WHY-CLAIM-BUSINESS-TITLE'] = "Enter your query and why claim this business";
+$BIZBOOK['LEAD-WHY-CLAIM-BUSINESS-TITLE'] = "Enter your query and why claim this business";
 
-$Zitiziti['LEAD-LOGIN-ENJOY-MESSAGE'] = "Login & Enjoy Our Services";
+$BIZBOOK['LEAD-LOGIN-ENJOY-MESSAGE'] = "Login & Enjoy Our Services";
 
-$Zitiziti['LEAD-FILL-THE-FORM'] = "Fill the form";
+$BIZBOOK['LEAD-FILL-THE-FORM'] = "Fill the form";
 
-$Zitiziti['LEAD-SUBMIT-FEEDBACK'] = "Submit Feedback";
+$BIZBOOK['LEAD-SUBMIT-FEEDBACK'] = "Submit Feedback";
 
 
 //************************* 404 PAGE TEXT ***********
 
-$Zitiziti['404_TEXT'] = "404";
+$BIZBOOK['404_TEXT'] = "404";
 
-$Zitiziti['404_PAGE_NOT_FOUND'] = "page not found";
+$BIZBOOK['404_PAGE_NOT_FOUND'] = "page not found";
 
-$Zitiziti['404_PAGE_NOT_FOUND_MESSAGE'] = "The page you are looking for was moved, removed,<br>renamed or might never existed.";
+$BIZBOOK['404_PAGE_NOT_FOUND_MESSAGE'] = "The page you are looking for was moved, removed,<br>renamed or might never existed.";
 
-$Zitiziti['404_GO_HOME'] = "Go home";
+$BIZBOOK['404_GO_HOME'] = "Go home";
 
-$Zitiziti['404_CONTACT_US'] = "Contact us";
+$BIZBOOK['404_CONTACT_US'] = "Contact us";
 
 //************************* ACTIVATE PAGE TEXT ***********
 
-$Zitiziti['ACTIVATE_VERIFY_YOUR_EMAIL'] = "Verify your email";
+$BIZBOOK['ACTIVATE_VERIFY_YOUR_EMAIL'] = "Verify your email";
 
-$Zitiziti['ACTIVATE_TEXT'] = "Enter your Verification code to the below and activate your account.";
+$BIZBOOK['ACTIVATE_TEXT'] = "Enter your Verification code to the below and activate your account.";
 
-$Zitiziti['ACTIVATE_PAGE_PLACEHOLDER'] = "Enter your verification code.";
+$BIZBOOK['ACTIVATE_PAGE_PLACEHOLDER'] = "Enter your verification code.";
 
 //************************* AD-DETAILS PAGE TEXT ***********
 
-$Zitiziti['AD-DETAILS'] = "Ad details";
+$BIZBOOK['AD-DETAILS'] = "Ad details";
 
-$Zitiziti['AD-DETAILS-ADS-NAME'] = "Ads Name";
+$BIZBOOK['AD-DETAILS-ADS-NAME'] = "Ads Name";
 
-$Zitiziti['AD-DETAILS-ADS-PREVIEW'] = "Ads Preview";
+$BIZBOOK['AD-DETAILS-ADS-PREVIEW'] = "Ads Preview";
 
-$Zitiziti['AD-DETAILS-ADS-SIZE'] = "Ads Size";
+$BIZBOOK['AD-DETAILS-ADS-SIZE'] = "Ads Size";
 
-$Zitiziti['AD-DETAILS-COST-DAY'] = "Cost P/Day";
+$BIZBOOK['AD-DETAILS-COST-DAY'] = "Cost P/Day";
 
-$Zitiziti['AD-DETAILS-START-ADS'] = "Start Ads";
+$BIZBOOK['AD-DETAILS-START-ADS'] = "Start Ads";
 
-$Zitiziti['AD-DETAILS-POST-YOUR-ADS'] = "Post your Ads";
+$BIZBOOK['AD-DETAILS-POST-YOUR-ADS'] = "Post your Ads";
 
-$Zitiziti['AD-DETAILS-SIGN-IN-POST-YOUR-ADS'] = "Sign in to post your ads";
+$BIZBOOK['AD-DETAILS-SIGN-IN-POST-YOUR-ADS'] = "Sign in to post your ads";
 
-$Zitiziti['AD-DETAILS-SIGN-IN-POST-YOUR-ADS-P-TAG'] = "Now its easier to post the advertisement requirement, by just a click on this form. Login to post your ads request.";
+$BIZBOOK['AD-DETAILS-SIGN-IN-POST-YOUR-ADS-P-TAG'] = "Now its easier to post the advertisement requirement, by just a click on this form. Login to post your ads request.";
 
-$Zitiziti['AD-DETAILS-CREATE-NEW-ADS'] = "Create new Ads";
+$BIZBOOK['AD-DETAILS-CREATE-NEW-ADS'] = "Create new Ads";
 
-$Zitiziti['AD-DETAILS-SUBMIT-YOUR-ADS'] = "Submit your Ads";
+$BIZBOOK['AD-DETAILS-SUBMIT-YOUR-ADS'] = "Submit your Ads";
 
-$Zitiziti['AD-DETAILS-CHOOSE-ADS-POSITION'] = "Choose Ads Position *";
+$BIZBOOK['AD-DETAILS-CHOOSE-ADS-POSITION'] = "Choose Ads Position *";
 
-$Zitiziti['AD-DETAILS-ADS-POSITION'] = "Ads Position";
+$BIZBOOK['AD-DETAILS-ADS-POSITION'] = "Ads Position";
 
-$Zitiziti['AD-DETAILS-BANNER-ADS'] = "Your Banner Ads";
+$BIZBOOK['AD-DETAILS-BANNER-ADS'] = "Your Banner Ads";
 
-$Zitiziti['AD-DETAILS-PAID-ADS'] = "Paid ads";
+$BIZBOOK['AD-DETAILS-PAID-ADS'] = "Paid ads";
 
-$Zitiziti['AD-DETAILS-PRICING-DETAILS'] = "Pricing details";
+$BIZBOOK['AD-DETAILS-PRICING-DETAILS'] = "Pricing details";
 
-$Zitiziti['AD-DETAILS-PRICING-OTHER-DETAILS'] = "Pricing and other details";
+$BIZBOOK['AD-DETAILS-PRICING-OTHER-DETAILS'] = "Pricing and other details";
 
-$Zitiziti['AD-DETAILS-AD-START-DATE'] = "Ad start date (MM/DD/YYYY)";
+$BIZBOOK['AD-DETAILS-AD-START-DATE'] = "Ad start date (MM/DD/YYYY)";
 
-$Zitiziti['AD-DETAILS-AD-END-DATE'] = "Ad end date (MM/DD/YYYY)";
+$BIZBOOK['AD-DETAILS-AD-END-DATE'] = "Ad end date (MM/DD/YYYY)";
 
-$Zitiziti['AD-DETAILS-CHOOSE-AD-IMAGE'] = "Choose Ad image";
+$BIZBOOK['AD-DETAILS-CHOOSE-AD-IMAGE'] = "Choose Ad image";
 
-$Zitiziti['AD-DETAILS-ADVERTISEMENT-EXTERNAL-LINK'] = "Advertisement External link";
+$BIZBOOK['AD-DETAILS-ADVERTISEMENT-EXTERNAL-LINK'] = "Advertisement External link";
 
-$Zitiziti['AD-DETAILS-PUBLISH-THIS-AD'] = "Publish this Ad";
+$BIZBOOK['AD-DETAILS-PUBLISH-THIS-AD'] = "Publish this Ad";
 
-$Zitiziti['AD-DETAILS-NOTES-MESSAGE'] = "Once you submit your Ad then Admin or support team will contact you shortly.";
+$BIZBOOK['AD-DETAILS-NOTES-MESSAGE'] = "Once you submit your Ad then Admin or support team will contact you shortly.";
 
 //************************* COUPON PAGE TEXT ***********
 
-$Zitiziti['COUPON'] = "Coupons";
+$BIZBOOK['COUPON'] = "Coupons";
 
-$Zitiziti['COUPON-ADD-NEW-COUPON'] = "Add new Coupon";
+$BIZBOOK['COUPON-ADD-NEW-COUPON'] = "Add new Coupon";
 
-$Zitiziti['COUPON-COUPON-NAME-PLACEHOLDER'] = "Coupon name";
+$BIZBOOK['COUPON-COUPON-NAME-PLACEHOLDER'] = "Coupon name";
 
-$Zitiziti['COUPON-COUPON-CODE-PLACEHOLDER'] = "Coupon code";
+$BIZBOOK['COUPON-COUPON-CODE-PLACEHOLDER'] = "Coupon code";
 
-$Zitiziti['COUPON-OFFER-CODE-PLACEHOLDER'] = "Offer code";
+$BIZBOOK['COUPON-OFFER-CODE-PLACEHOLDER'] = "Offer code";
 
-$Zitiziti['COUPON-WEBSITE-LINK-PLACEHOLDER'] = "Website link(if online offer)";
+$BIZBOOK['COUPON-WEBSITE-LINK-PLACEHOLDER'] = "Website link(if online offer)";
 
-$Zitiziti['COUPON-BRAND-LOGO-PLACEHOLDER'] = "Brand logo or Offer image(Recommended size 65 X 65)";
+$BIZBOOK['COUPON-BRAND-LOGO-PLACEHOLDER'] = "Brand logo or Offer image(Recommended size 65 X 65)";
 
-$Zitiziti['COUPON-START-DATE-PLACEHOLDER'] = "Start date";
+$BIZBOOK['COUPON-START-DATE-PLACEHOLDER'] = "Start date";
 
-$Zitiziti['COUPON-END-DATE-PLACEHOLDER'] = "End date";
+$BIZBOOK['COUPON-END-DATE-PLACEHOLDER'] = "End date";
 
-$Zitiziti['COUPON-EXPIRY-DATE-PLACEHOLDER'] = "Expiry date";
+$BIZBOOK['COUPON-EXPIRY-DATE-PLACEHOLDER'] = "Expiry date";
 
-$Zitiziti['COUPON-ALL-COUPON-DETAILS'] = "All Coupon Details";
+$BIZBOOK['COUPON-ALL-COUPON-DETAILS'] = "All Coupon Details";
 
-$Zitiziti['COUPON-COUPON-USED-MEMBERS'] = "Coupon used members";
+$BIZBOOK['COUPON-COUPON-USED-MEMBERS'] = "Coupon used members";
 
-$Zitiziti['COUPON-EXPIRES'] = "Expires";
+$BIZBOOK['COUPON-EXPIRES'] = "Expires";
 
 //************************* ALL CATEGORY PAGE TEXT ***********
 
-$Zitiziti['ALL-CATEGORY-MESSAGE'] = "Connect with the right Service Experts";
+$BIZBOOK['ALL-CATEGORY-MESSAGE'] = "Connect with the right Service Experts";
 
-$Zitiziti['ALL-CATEGORY-PLACEHOLDER'] = "Search sub category here..";
+$BIZBOOK['ALL-CATEGORY-PLACEHOLDER'] = "Search sub category here..";
 
 //************************* ALL LISTING PAGE TEXT ***********
 
-$Zitiziti['ALL-LISTING-LISTING-FILTERS'] = "Listing filters";
+$BIZBOOK['ALL-LISTING-LISTING-FILTERS'] = "Listing filters";
 
-$Zitiziti['ALL-LISTING-TOP-SERVICE-PROVIDERS'] = "Top Service Providers";
+$BIZBOOK['ALL-LISTING-TOP-SERVICE-PROVIDERS'] = "Top Service Providers";
 
-$Zitiziti['ALL-LISTING-SEARCH-SERVICE'] = "Search the service";
+$BIZBOOK['ALL-LISTING-SEARCH-SERVICE'] = "Search the service";
 
-$Zitiziti['ALL-LISTING-CATEGORIES'] = "Categories";
+$BIZBOOK['ALL-LISTING-CATEGORIES'] = "Categories";
 
-$Zitiziti['ALL-LISTING-SUB-CATEGORY'] = "Sub category";
+$BIZBOOK['ALL-LISTING-SUB-CATEGORY'] = "Sub category";
 
-$Zitiziti['ALL-LISTING-FEATURES'] = "Features";
+$BIZBOOK['ALL-LISTING-FEATURES'] = "Features";
 
-$Zitiziti['ALL-LISTING-FILTER-ALL'] = "All";
+$BIZBOOK['ALL-LISTING-FILTER-ALL'] = "All";
 
-$Zitiziti['ALL-LISTING-FILTER-POPULAR'] = "Popular";
+$BIZBOOK['ALL-LISTING-FILTER-POPULAR'] = "Popular";
 
-$Zitiziti['ALL-LISTING-FILTER-OPEN'] = "Open";
+$BIZBOOK['ALL-LISTING-FILTER-OPEN'] = "Open";
 
-$Zitiziti['ALL-LISTING-FILTER-VERIFIED'] = "Verified";
+$BIZBOOK['ALL-LISTING-FILTER-VERIFIED'] = "Verified";
 
-$Zitiziti['ALL-LISTING-FILTER-NEARBY'] = "Nearby";
+$BIZBOOK['ALL-LISTING-FILTER-NEARBY'] = "Nearby";
 
-$Zitiziti['ALL-LISTING-FILTER-OFFERS'] = "Offers";
+$BIZBOOK['ALL-LISTING-FILTER-OFFERS'] = "Offers";
 
-$Zitiziti['ALL-LISTING-OVERALL-RATING'] = "Overall rating";
+$BIZBOOK['ALL-LISTING-OVERALL-RATING'] = "Overall rating";
 
-$Zitiziti['ALL-LISTING-0-RATINGS'] = "0 Ratings";
+$BIZBOOK['ALL-LISTING-0-RATINGS'] = "0 Ratings";
 
-$Zitiziti['ALL-LISTING-TOTAL-OF'] = "Total of";
+$BIZBOOK['ALL-LISTING-TOTAL-OF'] = "Total of";
 
-$Zitiziti['ALL-LISTING-BUSINESS-RESULTS-FOUND'] = "business result(s) Found.";
+$BIZBOOK['ALL-LISTING-BUSINESS-RESULTS-FOUND'] = "business result(s) Found.";
 
 //************************* ALL PRODUCTS PAGE TEXT ***********
 
-$Zitiziti['ALL-PRODUCTS-PRODUCT-FILTERS'] = "Product filters";
+$BIZBOOK['ALL-PRODUCTS-PRODUCT-FILTERS'] = "Product filters";
 
 //************************* BLOG-DETAILS PAGE TEXT ***********
 
-$Zitiziti['BLOG-DETAILS-JOIN-ON'] = "Joined on";
+$BIZBOOK['BLOG-DETAILS-JOIN-ON'] = "Joined on";
 
-$Zitiziti['BLOG-DETAILS-OTHER-POST'] = "Other Post";
+$BIZBOOK['BLOG-DETAILS-OTHER-POST'] = "Other Post";
 
-$Zitiziti['BLOG-DETAILS-SEARCH-ALL-POST'] = "Search all posts..";
+$BIZBOOK['BLOG-DETAILS-SEARCH-ALL-POST'] = "Search all posts..";
 
-$Zitiziti['BLOG-DETAILS-SHARE-THIS-POST'] = "Share this post";
+$BIZBOOK['BLOG-DETAILS-SHARE-THIS-POST'] = "Share this post";
 
-$Zitiziti['BLOG-DETAILS-RELATED-POST'] = "Related Posts";
+$BIZBOOK['BLOG-DETAILS-RELATED-POST'] = "Related Posts";
 
 //************************* BLOG-POST PAGE TEXT ***********
 
-$Zitiziti['BLOG-POST-HEAD'] = "Here submit your blogs and make your own audiance.";
+$BIZBOOK['BLOG-POST-HEAD'] = "Here submit your blogs and make your own audiance.";
 
-$Zitiziti['BLOG-POST-SEARCH-LABEL'] = "Search blog posts...";
+$BIZBOOK['BLOG-POST-SEARCH-LABEL'] = "Search blog posts...";
 
 //************************* BUY-POINTS PAGE TEXT ***********
 
-$Zitiziti['BUY-POINTS-EXISTING-POINTS-LABEL'] = "Your Existing Points -";
+$BIZBOOK['BUY-POINTS-EXISTING-POINTS-LABEL'] = "Your Existing Points -";
 
-$Zitiziti['BUY-POINTS-COST-1-POINT'] = "Cost of 1 point =";
+$BIZBOOK['BUY-POINTS-COST-1-POINT'] = "Cost of 1 point =";
 
-$Zitiziti['BUY-POINTS-PLEASE-ENTER-POINT'] = "Please Enter Points:";
+$BIZBOOK['BUY-POINTS-PLEASE-ENTER-POINT'] = "Please Enter Points:";
 
-$Zitiziti['BUY-POINTS-PAYMENT-MODE'] = "Payment Mode";
+$BIZBOOK['BUY-POINTS-PAYMENT-MODE'] = "Payment Mode";
 
 //************************* COMMUNITY PAGE TEXT ***********
 
-$Zitiziti['COMMUNITY-PAGE-HEADING-LABEL'] = "Business Community";
+$BIZBOOK['COMMUNITY-PAGE-HEADING-LABEL'] = "Business Community";
 
-$Zitiziti['COMMUNITY-PAGE-P-TAG'] = "Build your business community and expand your business to next step.";
+$BIZBOOK['COMMUNITY-PAGE-P-TAG'] = "Build your business community and expand your business to next step.";
 
-$Zitiziti['COMMUNITY-PAGE-PLACEHOLDER'] = "Search user profiles..";
+$BIZBOOK['COMMUNITY-PAGE-PLACEHOLDER'] = "Search user profiles..";
 
-$Zitiziti['COMMUNITY-PAGE-START-A-NEW-CHAT'] = "Start A New Chat!!! Now";
+$BIZBOOK['COMMUNITY-PAGE-START-A-NEW-CHAT'] = "Start A New Chat!!! Now";
 
 //************************* COMPANY PROFILE PAGE TEXT ***********
 
-$Zitiziti['COMPANY-PROFILE-HEADING-LABEL'] = "About company";
+$BIZBOOK['COMPANY-PROFILE-HEADING-LABEL'] = "About company";
 
-$Zitiziti['COMPANY-PROFILE-LOGO-LABEL'] = "Header top logo(size 200X35)";
+$BIZBOOK['COMPANY-PROFILE-LOGO-LABEL'] = "Header top logo(size 200X35)";
 
-$Zitiziti['COMPANY-PROFILE-BANNER-LABEL'] = "Banner logo(size 200X35)";
+$BIZBOOK['COMPANY-PROFILE-BANNER-LABEL'] = "Banner logo(size 200X35)";
 
-$Zitiziti['COMPANY-PROFILE-BACKGROUND-LABEL'] = "Banner background(size 250X250)";
+$BIZBOOK['COMPANY-PROFILE-BACKGROUND-LABEL'] = "Banner background(size 250X250)";
 
-$Zitiziti['COMPANY-PROFILE-CHOOSE-PRODUCTS'] = "Choose Products";
+$BIZBOOK['COMPANY-PROFILE-CHOOSE-PRODUCTS'] = "Choose Products";
 
-$Zitiziti['COMPANY-PROFILE-CHOOSE-EVENTS'] = "Choose events";
+$BIZBOOK['COMPANY-PROFILE-CHOOSE-EVENTS'] = "Choose events";
 
-$Zitiziti['COMPANY-PROFILE-CHOOSE-BLOGS'] = "Choose blog posts";
+$BIZBOOK['COMPANY-PROFILE-CHOOSE-BLOGS'] = "Choose blog posts";
 
-$Zitiziti['COMPANY-PROFILE-SEO-LABEL'] = "SEO Settings";
+$BIZBOOK['COMPANY-PROFILE-SEO-LABEL'] = "SEO Settings";
 
 //************************* JOB PAGE TEXT ***********
 
-$Zitiziti['JOB-TITLE-LABEL'] = "Job Title";
+$BIZBOOK['JOB-TITLE-LABEL'] = "Job Title";
 
-$Zitiziti['JOB-SALARY-LABEL'] = "Salary";
+$BIZBOOK['JOB-SALARY-LABEL'] = "Salary";
 
-$Zitiziti['JOB-NO-OF-OPENINGS-LABEL'] = "No of openings";
+$BIZBOOK['JOB-NO-OF-OPENINGS-LABEL'] = "No of openings";
 
-$Zitiziti['JOB-INTERVIEW-DATE-LABEL'] = "Interview Date";
+$BIZBOOK['JOB-INTERVIEW-DATE-LABEL'] = "Interview Date";
 
-$Zitiziti['JOB-INTERVIEW-TIME-LABEL'] = "Interview Time";
+$BIZBOOK['JOB-INTERVIEW-TIME-LABEL'] = "Interview Time";
 
-$Zitiziti['JOB-INTERVIEW-ROLE-LABEL'] = "Role";
+$BIZBOOK['JOB-INTERVIEW-ROLE-LABEL'] = "Role";
 
-$Zitiziti['JOB-INTERVIEW-EDUCATIONAL-LABEL'] = "Education & Qualification";
+$BIZBOOK['JOB-INTERVIEW-EDUCATIONAL-LABEL'] = "Education & Qualification";
 
-$Zitiziti['JOB-INTERVIEW-EXPERIENCE-DETAILS-LABEL'] = "Experience Details";
+$BIZBOOK['JOB-INTERVIEW-EXPERIENCE-DETAILS-LABEL'] = "Experience Details";
 
-$Zitiziti['JOB-INTERVIEW-EMPLOYEE-NAME-LABEL'] = "Employee Name";
+$BIZBOOK['JOB-INTERVIEW-EMPLOYEE-NAME-LABEL'] = "Employee Name";
 
-$Zitiziti['JOB-INTERVIEW-EMPLOYEE-DETAILS-LABEL'] = "Employee details";
+$BIZBOOK['JOB-INTERVIEW-EMPLOYEE-DETAILS-LABEL'] = "Employee details";
 
-$Zitiziti['JOB-INTERVIEW-CURRENT-COMPANY-LABEL'] = "Current company";
+$BIZBOOK['JOB-INTERVIEW-CURRENT-COMPANY-LABEL'] = "Current company";
 
-$Zitiziti['JOB-INTERVIEW-NOTICE-PERIOD-LABEL'] = "Notice period";
+$BIZBOOK['JOB-INTERVIEW-NOTICE-PERIOD-LABEL'] = "Notice period";
 
-$Zitiziti['JOB-INTERVIEW-JOB-PROFESSION-LABEL'] = "Job profession";
+$BIZBOOK['JOB-INTERVIEW-JOB-PROFESSION-LABEL'] = "Job profession";
 
-$Zitiziti['JOB-INTERVIEW-AVAILABLE-TIME-TO-TALK-LABEL'] = "Available time to talk";
+$BIZBOOK['JOB-INTERVIEW-AVAILABLE-TIME-TO-TALK-LABEL'] = "Available time to talk";
 
-$Zitiziti['JOB-INTERVIEW-PROFILE-COVER-IMAGE-LABEL'] = "Profile cover image";
+$BIZBOOK['JOB-INTERVIEW-PROFILE-COVER-IMAGE-LABEL'] = "Profile cover image";
 
-$Zitiziti['JOB-INTERVIEW-PROFILE-IMAGE-LABEL'] = "Job profile image";
+$BIZBOOK['JOB-INTERVIEW-PROFILE-IMAGE-LABEL'] = "Job profile image";
 
-$Zitiziti['JOB-INTERVIEW-ADDITIONAL-INFORMATION-LABEL'] = "Additional information";
+$BIZBOOK['JOB-INTERVIEW-ADDITIONAL-INFORMATION-LABEL'] = "Additional information";
 
-$Zitiziti['JOB-INTERVIEW-EMPLOYEE-PROFILE-LABEL'] = "Employee profile";
+$BIZBOOK['JOB-INTERVIEW-EMPLOYEE-PROFILE-LABEL'] = "Employee profile";
 
-$Zitiziti['JOB-COMPANY-LOGO-LABEL'] = "Company logo";
+$BIZBOOK['JOB-COMPANY-LOGO-LABEL'] = "Company logo";
 
-$Zitiziti['JOB-COMPANY-NAME-LABEL'] = "Company Name";
+$BIZBOOK['JOB-COMPANY-NAME-LABEL'] = "Company Name";
 
-$Zitiziti['JOB-CATEGORY-LABEL'] = "Job category";
+$BIZBOOK['JOB-CATEGORY-LABEL'] = "Job category";
 
-$Zitiziti['JOB-SUB-CATEGORY-LABEL'] = "Job sub-category";
+$BIZBOOK['JOB-SUB-CATEGORY-LABEL'] = "Job sub-category";
 
-$Zitiziti['JOB-TYPE-LABEL'] = "Job Type";
+$BIZBOOK['JOB-TYPE-LABEL'] = "Job Type";
 
-$Zitiziti['JOB-LOCATION-LABEL'] = "Job Location";
+$BIZBOOK['JOB-LOCATION-LABEL'] = "Job Location";
 
-$Zitiziti['JOB-YEARS-OF-EXPERIENCE-LABEL'] = "Year(s) of experience";
+$BIZBOOK['JOB-YEARS-OF-EXPERIENCE-LABEL'] = "Year(s) of experience";
 
-$Zitiziti['JOB-CONTACT-NO-LABEL'] = "Contact no";
+$BIZBOOK['JOB-CONTACT-NO-LABEL'] = "Contact no";
 
-$Zitiziti['JOB-CONTACT-PERSON-LABEL'] = "Contact person";
+$BIZBOOK['JOB-CONTACT-PERSON-LABEL'] = "Contact person";
 
-$Zitiziti['JOB-INTERVIEW-LOCATION-LABEL'] = "Interview location";
+$BIZBOOK['JOB-INTERVIEW-LOCATION-LABEL'] = "Interview location";
 
-$Zitiziti['JOB-SKILL-SET-LABEL'] = "Skill set";
+$BIZBOOK['JOB-SKILL-SET-LABEL'] = "Skill set";
 
-$Zitiziti['JOB-DESCRIPTION-LABEL'] = "Job Descriptions";
+$BIZBOOK['JOB-DESCRIPTION-LABEL'] = "Job Descriptions";
 
-$Zitiziti['JOB-SMALL-DESCRIPTION-LABEL'] = "About your company(small description)";
+$BIZBOOK['JOB-SMALL-DESCRIPTION-LABEL'] = "About your company(small description)";
 
-$Zitiziti['JOB-SELECT-JOB-LOCATION-LABEL'] = "Select Job Location";
+$BIZBOOK['JOB-SELECT-JOB-LOCATION-LABEL'] = "Select Job Location";
 
-$Zitiziti['JOB-PERMANENT'] = "Permanent";
+$BIZBOOK['JOB-PERMANENT'] = "Permanent";
 
-$Zitiziti['JOB-CONTRACT'] = "Contract";
+$BIZBOOK['JOB-CONTRACT'] = "Contract";
 
-$Zitiziti['JOB-PART-TIME'] = "Part time";
+$BIZBOOK['JOB-PART-TIME'] = "Part time";
 
-$Zitiziti['JOB-FREELANCE'] = "Freelance";
+$BIZBOOK['JOB-FREELANCE'] = "Freelance";
 
-$Zitiziti['JOB-POST-NEW-JOB'] = "Post New Job";
+$BIZBOOK['JOB-POST-NEW-JOB'] = "Post New Job";
 
-$Zitiziti['JOB-EDIT-THIS-JOB'] = "Edit This Job";
+$BIZBOOK['JOB-EDIT-THIS-JOB'] = "Edit This Job";
 
-$Zitiziti['JOB-DELETE-THIS-JOB'] = "Delete This Job";
+$BIZBOOK['JOB-DELETE-THIS-JOB'] = "Delete This Job";
 
-$Zitiziti['ADD_NEW_JOB'] = "Add New Job";
+$BIZBOOK['ADD_NEW_JOB'] = "Add New Job";
 
-$Zitiziti['JOB_NAME'] = "Job Name";
+$BIZBOOK['JOB_NAME'] = "Job Name";
 
-$Zitiziti['JOB_APPLICANTS'] = "Job Applicants";
+$BIZBOOK['JOB_APPLICANTS'] = "Job Applicants";
 
-$Zitiziti['JOB_APPLICANT_PROFILE'] = "Job Applicant Profiles";
+$BIZBOOK['JOB_APPLICANT_PROFILE'] = "Job Applicant Profiles";
 
-$Zitiziti['JOB_DETAILS'] = "Job Details";
+$BIZBOOK['JOB_DETAILS'] = "Job Details";
 
-$Zitiziti['ALL_JOBS'] = "All Jobs";
+$BIZBOOK['ALL_JOBS'] = "All Jobs";
 
-$Zitiziti['JOB-UPDATE-NOW'] = "Update Now";
+$BIZBOOK['JOB-UPDATE-NOW'] = "Update Now";
 
-$Zitiziti['JOB_ALL_APPLI_PROFILE'] = "All Applicants Profile";
+$BIZBOOK['JOB_ALL_APPLI_PROFILE'] = "All Applicants Profile";
 
-$Zitiziti['JOB_APPLI_NAME'] = "Applicant Name";
+$BIZBOOK['JOB_APPLI_NAME'] = "Applicant Name";
 
-$Zitiziti['JOB_APPLI_PHONE'] = "Mobile";
+$BIZBOOK['JOB_APPLI_PHONE'] = "Mobile";
 
-$Zitiziti['JOB_APPLI_EMAIL'] = "Email Id";
+$BIZBOOK['JOB_APPLI_EMAIL'] = "Email Id";
 
-$Zitiziti['JOB_APPLI_DATE'] = "Applied Date";
+$BIZBOOK['JOB_APPLI_DATE'] = "Applied Date";
 
-$Zitiziti['JOB_APPLI_RESUME'] = "Resume";
+$BIZBOOK['JOB_APPLI_RESUME'] = "Resume";
 
-$Zitiziti['JOB_IMMEDIATE_JOINEE'] = "Immediate joinee";
+$BIZBOOK['JOB_IMMEDIATE_JOINEE'] = "Immediate joinee";
 
-$Zitiziti['JOB_15_DAYS'] = "15 Days";
+$BIZBOOK['JOB_15_DAYS'] = "15 Days";
 
-$Zitiziti['JOB_1_MONTH'] = "1 Month";
+$BIZBOOK['JOB_1_MONTH'] = "1 Month";
 
-$Zitiziti['JOB_2_MONTHS'] = "2 Months";
+$BIZBOOK['JOB_2_MONTHS'] = "2 Months";
 
-$Zitiziti['JOB_3_MONTHS'] = "3 Months";
+$BIZBOOK['JOB_3_MONTHS'] = "3 Months";
 
-$Zitiziti['JOB_6_MONTHS'] = "6 Months";
+$BIZBOOK['JOB_6_MONTHS'] = "6 Months";
 
-$Zitiziti['JOB_1_YEAR'] = "1 Year";
+$BIZBOOK['JOB_1_YEAR'] = "1 Year";
 
-$Zitiziti['JOB_2_YEARS'] = "2 Years";
+$BIZBOOK['JOB_2_YEARS'] = "2 Years";
 
-$Zitiziti['JOB_EXTRA_COURSES'] = "Extra courses";
+$BIZBOOK['JOB_EXTRA_COURSES'] = "Extra courses";
 
-$Zitiziti['JOB_TRAINING_DETAILS'] = "Training details";
+$BIZBOOK['JOB_TRAINING_DETAILS'] = "Training details";
 
-$Zitiziti['JOB_OTHERS_1'] = "Others 1";
+$BIZBOOK['JOB_OTHERS_1'] = "Others 1";
 
-$Zitiziti['JOB_OTHERS_2'] = "Others 2";
+$BIZBOOK['JOB_OTHERS_2'] = "Others 2";
 
-$Zitiziti['JOB_APPLY_THIS_JOB_NOW'] = "Apply this job now";
+$BIZBOOK['JOB_APPLY_THIS_JOB_NOW'] = "Apply this job now";
 
-$Zitiziti['JOB_ALREADY_APPLIED_THIS_JOB'] = "Already Applied this job";
+$BIZBOOK['JOB_ALREADY_APPLIED_THIS_JOB'] = "Already Applied this job";
 
-$Zitiziti['JOB_APPLY_THIS_JOB'] = "Apply this job";
+$BIZBOOK['JOB_APPLY_THIS_JOB'] = "Apply this job";
 
-$Zitiziti['JOB_SUMMARY'] = "Job Summary";
+$BIZBOOK['JOB_SUMMARY'] = "Job Summary";
 
-$Zitiziti['JOB_GENDER'] = "Gender";
+$BIZBOOK['JOB_GENDER'] = "Gender";
 
-$Zitiziti['JOB_EDUCATION'] = "Education";
+$BIZBOOK['JOB_EDUCATION'] = "Education";
 
-$Zitiziti['JOB_PUBLISHED_ON'] = "Published on";
+$BIZBOOK['JOB_PUBLISHED_ON'] = "Published on";
 
-$Zitiziti['JOB_APPLY_NOW'] = "Apply now";
+$BIZBOOK['JOB_APPLY_NOW'] = "Apply now";
 
-$Zitiziti['JOB_ALREADY_APPLIED'] = "Already Applied";
+$BIZBOOK['JOB_ALREADY_APPLIED'] = "Already Applied";
 
-$Zitiziti['JOB_SHARE'] = "Share";
+$BIZBOOK['JOB_SHARE'] = "Share";
 
-$Zitiziti['JOB_RELATED_JOB_OPENINGS'] = "Related job openings";
+$BIZBOOK['JOB_RELATED_JOB_OPENINGS'] = "Related job openings";
 
-$Zitiziti['JOB_MORE_DETAILS'] = "More details";
+$BIZBOOK['JOB_MORE_DETAILS'] = "More details";
 
-$Zitiziti['JOB_OPENINGS'] = "Openings";
+$BIZBOOK['JOB_OPENINGS'] = "Openings";
 
-$Zitiziti['APPLICANTS'] = "Applicants";
+$BIZBOOK['APPLICANTS'] = "Applicants";
 
-$Zitiziti['JOB-HEADER-H1'] = "Find your next job now";
+$BIZBOOK['JOB-HEADER-H1'] = "Find your next job now";
 
-$Zitiziti['JOB-HEADER-P'] = "Over 100,000+ jobs are waiting for you";
+$BIZBOOK['JOB-HEADER-P'] = "Over 100,000+ jobs are waiting for you";
 
-$Zitiziti['JOB-POSTED'] = "Job Posted";
+$BIZBOOK['JOB-POSTED'] = "Job Posted";
 
-$Zitiziti['JOB-COMPANIES'] = "Companies";
+$BIZBOOK['JOB-COMPANIES'] = "Companies";
 
-$Zitiziti['JOB-EMPLOYEES'] = "Employees";
+$BIZBOOK['JOB-EMPLOYEES'] = "Employees";
 
-$Zitiziti['JOB-HEADER-H2'] = "Popular Categories";
+$BIZBOOK['JOB-HEADER-H2'] = "Popular Categories";
 
-$Zitiziti['JOB-HEADER-P2'] = "Find jobs from various domain";
+$BIZBOOK['JOB-HEADER-P2'] = "Find jobs from various domain";
 
-$Zitiziti['JOB-HEADER-H3'] = "Trending Jobs";
+$BIZBOOK['JOB-HEADER-H3'] = "Trending Jobs";
 
-$Zitiziti['JOB-HEADER-P3'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
+$BIZBOOK['JOB-HEADER-P3'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
 
-$Zitiziti['JOB-HEADER-H4'] = "Premium Jobs";
+$BIZBOOK['JOB-HEADER-H4'] = "Premium Jobs";
 
-$Zitiziti['JOB-SHOWING'] = "Showing";
+$BIZBOOK['JOB-SHOWING'] = "Showing";
 
-$Zitiziti['JOB-VACANCY'] = "Vacancy";
+$BIZBOOK['JOB-VACANCY'] = "Vacancy";
 
-$Zitiziti['JOB-PROFILE-H1'] = "Get Personalised Jobs";
+$BIZBOOK['JOB-PROFILE-H1'] = "Get Personalised Jobs";
 
-$Zitiziti['JOB-PROFILE-P'] = "Tell us what kind of a job you are looking for and stay updated with latest opportunities.";
+$BIZBOOK['JOB-PROFILE-P'] = "Tell us what kind of a job you are looking for and stay updated with latest opportunities.";
 
-$Zitiziti['JOB-PROFILE-A'] = "Register for free";
+$BIZBOOK['JOB-PROFILE-A'] = "Register for free";
 
-$Zitiziti['JOB-RELATED-PROFILES'] = "Related profiles";
+$BIZBOOK['JOB-RELATED-PROFILES'] = "Related profiles";
 
-$Zitiziti['JOB-PROFILE-POST-H1'] = "Post your job";
+$BIZBOOK['JOB-PROFILE-POST-H1'] = "Post your job";
 
-$Zitiziti['JOB-PROFILE-POST-P'] = "Post your job openings and hire more professional employee";
+$BIZBOOK['JOB-PROFILE-POST-P'] = "Post your job openings and hire more professional employee";
 
-$Zitiziti['JOB-PROFILE-POST-A'] = "Post job";
+$BIZBOOK['JOB-PROFILE-POST-A'] = "Post job";
 
-$Zitiziti['JOB-HOME-JOIN-COMP-TIT'] = "Post a Job & Hire best candidates ";
-$Zitiziti['JOB-HOME-JOIN-COMP-SUB-TIT'] = "Post your job openings and hire more professional candidates";
-$Zitiziti['JOB-HOME-JOIN-COMP-CTA'] = "Post a Job";
+$BIZBOOK['JOB-HOME-JOIN-COMP-TIT'] = "Post a Job & Hire best candidates ";
+$BIZBOOK['JOB-HOME-JOIN-COMP-SUB-TIT'] = "Post your job openings and hire more professional candidates";
+$BIZBOOK['JOB-HOME-JOIN-COMP-CTA'] = "Post a Job";
 
-$Zitiziti['JOB-HOME-JOIN-EMP-TIT'] = "Are you looking for a job?";
-$Zitiziti['JOB-HOME-JOIN-EMP-SUB-TIT'] = "Tell us what kind of a job you are looking for and stay updated with latest opportunities.";
-$Zitiziti['JOB-HOME-JOIN-EMP-CTA'] = "Register for free";
+$BIZBOOK['JOB-HOME-JOIN-EMP-TIT'] = "Are you looking for a job?";
+$BIZBOOK['JOB-HOME-JOIN-EMP-SUB-TIT'] = "Tell us what kind of a job you are looking for and stay updated with latest opportunities.";
+$BIZBOOK['JOB-HOME-JOIN-EMP-CTA'] = "Register for free";
 
 
 //************************* SERVICE EXPERT PAGE TEXT ***********
 
-$Zitiziti['SERVICE-EXPERTS'] = "Service Experts";
+$BIZBOOK['SERVICE-EXPERTS'] = "Service Experts";
 
-$Zitiziti['TOP-SERVICE-EXPERTS'] = "Top Service Experts";
+$BIZBOOK['TOP-SERVICE-EXPERTS'] = "Top Service Experts";
 
-$Zitiziti['SERVICE-EXPERTS-EXPERTS'] = "Experts";
+$BIZBOOK['SERVICE-EXPERTS-EXPERTS'] = "Experts";
 
-$Zitiziti['SERVICE-EXPERTS-ALL-HEADER-TEXT'] = "Are looking for Service Expert?";
+$BIZBOOK['SERVICE-EXPERTS-ALL-HEADER-TEXT'] = "Are looking for Service Expert?";
 
-$Zitiziti['SERVICE-EXPERTS-ALL-P-TEXT'] = "We will help you to arrage best Service Expert.";
+$BIZBOOK['SERVICE-EXPERTS-ALL-P-TEXT'] = "We will help you to arrage best Service Expert.";
 
-$Zitiziti['SERVICE-EXPERTS-ALL-A-TEXT'] = "Send your queries";
+$BIZBOOK['SERVICE-EXPERTS-ALL-A-TEXT'] = "Send your queries";
 
-$Zitiziti['SERVICE-EXPERTS-PROFILE-HEADER-TEXT'] = "Are you a Service Expert?";
+$BIZBOOK['SERVICE-EXPERTS-PROFILE-HEADER-TEXT'] = "Are you a Service Expert?";
 
-$Zitiziti['SERVICE-EXPERTS-PROFILE-P-TEXT'] = "Register now and generate your income multiple and move your business on next level.";
+$BIZBOOK['SERVICE-EXPERTS-PROFILE-P-TEXT'] = "Register now and generate your income multiple and move your business on next level.";
 
-$Zitiziti['SERVICE-EXPERTS-PROFILE-CUSTOMER-SUPPORT'] = "Customer support";
+$BIZBOOK['SERVICE-EXPERTS-PROFILE-CUSTOMER-SUPPORT'] = "Customer support";
 
-$Zitiziti['SERVICE-EXPERT-FIND-SERVICE-EXPERT-H1'] = "Find Service Experts";
+$BIZBOOK['SERVICE-EXPERT-FIND-SERVICE-EXPERT-H1'] = "Find Service Experts";
 
-$Zitiziti['SERVICE-EXPERT-FIND-SERVICE-EXPERT-P'] = "We make it easy to hire the right professional for your Home";
+$BIZBOOK['SERVICE-EXPERT-FIND-SERVICE-EXPERT-P'] = "We make it easy to hire the right professional for your Home";
 
-$Zitiziti['SERVICE-EXPERT-SECTION-2-H1'] = "All Services";
+$BIZBOOK['SERVICE-EXPERT-SECTION-2-H1'] = "All Services";
 
-$Zitiziti['SERVICE-EXPERT-SECTION-2-P'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
+$BIZBOOK['SERVICE-EXPERT-SECTION-2-P'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
 
-$Zitiziti['SERVICE-EXPERT-VIEW-ALL'] = "View all experts";
+$BIZBOOK['SERVICE-EXPERT-VIEW-ALL'] = "View all experts";
 
-$Zitiziti['SERVICE-EXPERT-OUR-USER-REVIEWS'] = "Our user reviews";
+$BIZBOOK['SERVICE-EXPERT-OUR-USER-REVIEWS'] = "Our user reviews";
 
-$Zitiziti['SERVICE-EXPERT-OUR-USER-REVIEWS-P'] = "We connect with targeted customers for greater business conversion";
+$BIZBOOK['SERVICE-EXPERT-OUR-USER-REVIEWS-P'] = "We connect with targeted customers for greater business conversion";
 
-$Zitiziti['SERVICE-EXPERT-SERVICE-AREAS'] = "Service Areas";
+$BIZBOOK['SERVICE-EXPERT-SERVICE-AREAS'] = "Service Areas";
 
-$Zitiziti['SERVICE-EXPERT-SERVICES-CAN-DO'] = "Services can do";
+$BIZBOOK['SERVICE-EXPERT-SERVICES-CAN-DO'] = "Services can do";
 
-$Zitiziti['SERVICE-EXPERT-EXPERIENCE'] = "Experience";
+$BIZBOOK['SERVICE-EXPERT-EXPERIENCE'] = "Experience";
 
-$Zitiziti['SERVICE-EXPERT-EXP'] = "Exp.";
+$BIZBOOK['SERVICE-EXPERT-EXP'] = "Exp.";
 
-$Zitiziti['SERVICE-EXPERT-EDUCATION'] = "Education";
+$BIZBOOK['SERVICE-EXPERT-EDUCATION'] = "Education";
 
-$Zitiziti['SERVICE-EXPERT-LOCATION'] = "Location";
+$BIZBOOK['SERVICE-EXPERT-LOCATION'] = "Location";
 
-$Zitiziti['SERVICE-EXPERT-ADDITIONAL-INFORMATION'] = "Additional information";
+$BIZBOOK['SERVICE-EXPERT-ADDITIONAL-INFORMATION'] = "Additional information";
 
-$Zitiziti['SERVICE-EXPERT-USER-REVIEWS'] = "User Reviews";
+$BIZBOOK['SERVICE-EXPERT-USER-REVIEWS'] = "User Reviews";
 
-$Zitiziti['SERVICE-EXPERT-EXPERT-DETAILS'] = "Expert details";
+$BIZBOOK['SERVICE-EXPERT-EXPERT-DETAILS'] = "Expert details";
 
-$Zitiziti['SERVICE-EXPERT-SERVICES-DONE'] = "Services Done";
+$BIZBOOK['SERVICE-EXPERT-SERVICES-DONE'] = "Services Done";
 
-$Zitiziti['SERVICE-EXPERT-TRENDING-SERVICES'] = "Trending Services";
+$BIZBOOK['SERVICE-EXPERT-TRENDING-SERVICES'] = "Trending Services";
 
-$Zitiziti['SERVICE-EXPERT-BASE-FARE'] = "Base fare";
+$BIZBOOK['SERVICE-EXPERT-BASE-FARE'] = "Base fare";
 
-$Zitiziti['SERVICE-EXPERT-VERIFIED'] = "Verified";
+$BIZBOOK['SERVICE-EXPERT-VERIFIED'] = "Verified";
 
-$Zitiziti['SERVICE-EXPERT-LOCATION'] = "Location";
+$BIZBOOK['SERVICE-EXPERT-LOCATION'] = "Location";
 
-$Zitiziti['SERVICE-EXPERT-JOIN-DATE'] = "Join date";
+$BIZBOOK['SERVICE-EXPERT-JOIN-DATE'] = "Join date";
 
-$Zitiziti['SERVICE-EXPERT-SERVICE-TIME'] = "Service time";
+$BIZBOOK['SERVICE-EXPERT-SERVICE-TIME'] = "Service time";
 
-$Zitiziti['SERVICE-EXPERT-TO-TEXT'] = "to";
+$BIZBOOK['SERVICE-EXPERT-TO-TEXT'] = "to";
 
-$Zitiziti['SERVICE-EXPERT-YEARS-TEXT'] = "years";
+$BIZBOOK['SERVICE-EXPERT-YEARS-TEXT'] = "years";
 
-$Zitiziti['SERVICE-EXPERT-YES-TEXT'] = "Yes";
+$BIZBOOK['SERVICE-EXPERT-YES-TEXT'] = "Yes";
 
-$Zitiziti['SERVICE-EXPERT-BOOK-THIS'] = "Book this";
+$BIZBOOK['SERVICE-EXPERT-BOOK-THIS'] = "Book this";
 
-$Zitiziti['SERVICE-EXPERT-BOOK-NOW'] = "Book now";
+$BIZBOOK['SERVICE-EXPERT-BOOK-NOW'] = "Book now";
 
-$Zitiziti['SERVICE-EXPERT-CHAT-NOW'] = "Chat now";
+$BIZBOOK['SERVICE-EXPERT-CHAT-NOW'] = "Chat now";
 
-$Zitiziti['SERVICE-EXPERT-STATUS'] = "Status";
+$BIZBOOK['SERVICE-EXPERT-STATUS'] = "Status";
 
-$Zitiziti['SERVICE-EXPERT-SERVICE-EXPERT-TEXT'] = "Service expert";
+$BIZBOOK['SERVICE-EXPERT-SERVICE-EXPERT-TEXT'] = "Service expert";
 
-$Zitiziti['SERVICE-EXPERT-PROFILE-LABEL'] = "Service Expert Profile";
+$BIZBOOK['SERVICE-EXPERT-PROFILE-LABEL'] = "Service Expert Profile";
 
-$Zitiziti['SERVICE-EXPERT-START-TIME-LABEL'] = "Service Start Time";
+$BIZBOOK['SERVICE-EXPERT-START-TIME-LABEL'] = "Service Start Time";
 
-$Zitiziti['SERVICE-EXPERT-CLOSE-TIME-LABEL'] = "Service Close Time";
+$BIZBOOK['SERVICE-EXPERT-CLOSE-TIME-LABEL'] = "Service Close Time";
 
-$Zitiziti['SERVICE-EXPERT-PROFILE-IMAGE-LABEL'] = "Profile image";
+$BIZBOOK['SERVICE-EXPERT-PROFILE-IMAGE-LABEL'] = "Profile image";
 
-$Zitiziti['SERVICE-EXPERT-WORK-PROFESSION-LABEL'] = "Work Profession";
+$BIZBOOK['SERVICE-EXPERT-WORK-PROFESSION-LABEL'] = "Work Profession";
 
-$Zitiziti['SERVICE-EXPERT-SELECT-CITY-LABEL'] = "Select City";
+$BIZBOOK['SERVICE-EXPERT-SELECT-CITY-LABEL'] = "Select City";
 
-$Zitiziti['SERVICE-EXPERT-SELECT-WORK-PROFESSION-LABEL'] = "Select Work Profession";
+$BIZBOOK['SERVICE-EXPERT-SELECT-WORK-PROFESSION-LABEL'] = "Select Work Profession";
 
-$Zitiziti['SERVICE-EXPERT-BASE-FARE-LABEL'] = "Base fare";
+$BIZBOOK['SERVICE-EXPERT-BASE-FARE-LABEL'] = "Base fare";
 
-$Zitiziti['SERVICE-EXPERT-SERVICES-CAN-DO-LABEL'] = "Services can do";
+$BIZBOOK['SERVICE-EXPERT-SERVICES-CAN-DO-LABEL'] = "Services can do";
 
-$Zitiziti['SERVICE-EXPERT-SERVICES-AREAS-LABEL'] = "Service Areas";
+$BIZBOOK['SERVICE-EXPERT-SERVICES-AREAS-LABEL'] = "Service Areas";
 
-$Zitiziti['SERVICE-EXPERT-PAYMENT-ACCEPT-LABEL'] = "Payment accept";
+$BIZBOOK['SERVICE-EXPERT-PAYMENT-ACCEPT-LABEL'] = "Payment accept";
 
-$Zitiziti['SERVICE-EXPERT-DATE-OF-BIRTH-LABEL'] = "Date of Birth";
+$BIZBOOK['SERVICE-EXPERT-DATE-OF-BIRTH-LABEL'] = "Date of Birth";
 
-$Zitiziti['SERVICE-EXPERT-ID-PROOF-LABEL'] = "ID proof";
+$BIZBOOK['SERVICE-EXPERT-ID-PROOF-LABEL'] = "ID proof";
 
-$Zitiziti['SERVICE-EXPERT-CONTACT-ME'] = "Contact me";
+$BIZBOOK['SERVICE-EXPERT-CONTACT-ME'] = "Contact me";
 
-$Zitiziti['SERVICE-EXPERT-MORE-DETAILS'] = "More details";
+$BIZBOOK['SERVICE-EXPERT-MORE-DETAILS'] = "More details";
 
-$Zitiziti['SERVICE-EXPERT-AVAILABILITY'] = "Availability";
+$BIZBOOK['SERVICE-EXPERT-AVAILABILITY'] = "Availability";
 
-$Zitiziti['SERVICE-EXPERT-ALL-LABEL'] = "All";
+$BIZBOOK['SERVICE-EXPERT-ALL-LABEL'] = "All";
 
-$Zitiziti['SERVICE-EXPERT-AVAILABLE-LABEL'] = "Available";
+$BIZBOOK['SERVICE-EXPERT-AVAILABLE-LABEL'] = "Available";
 
-$Zitiziti['SERVICE-EXPERT-BUSY-LABEL'] = "Busy";
+$BIZBOOK['SERVICE-EXPERT-BUSY-LABEL'] = "Busy";
 
-$Zitiziti['SERVICE-EXPERT-CLOSED-TODAY-LABEL'] = "Closed today";
+$BIZBOOK['SERVICE-EXPERT-CLOSED-TODAY-LABEL'] = "Closed today";
 
-$Zitiziti['SERVICE-EXPERT-VERIFIED-LABEL'] = "Verified";
+$BIZBOOK['SERVICE-EXPERT-VERIFIED-LABEL'] = "Verified";
 
-$Zitiziti['SERVICE-EXPERT-VERIFIED-EXPERTS-LABEL'] = "Verified experts";
+$BIZBOOK['SERVICE-EXPERT-VERIFIED-EXPERTS-LABEL'] = "Verified experts";
 
-$Zitiziti['SERVICE-EXPERT-RATING-LABEL'] = "Rating";
+$BIZBOOK['SERVICE-EXPERT-RATING-LABEL'] = "Rating";
 
-$Zitiziti['SERVICE-EXPERT-STAR-LABEL'] = "Star";
+$BIZBOOK['SERVICE-EXPERT-STAR-LABEL'] = "Star";
 
-$Zitiziti['SERVICE-EXPERT-HIGH-LOW-LABEL'] = "High - Low";
+$BIZBOOK['SERVICE-EXPERT-HIGH-LOW-LABEL'] = "High - Low";
 
-$Zitiziti['SERVICE-EXPERT-LOW-HIGH-LABEL'] = "Low - High";
+$BIZBOOK['SERVICE-EXPERT-LOW-HIGH-LABEL'] = "Low - High";
 
-$Zitiziti['SERVICE-EXPERT-WRITE-A-REVIEW-LABEL'] = "Write a Review";
+$BIZBOOK['SERVICE-EXPERT-WRITE-A-REVIEW-LABEL'] = "Write a Review";
 
-$Zitiziti['SERVICE-EXPERT-REVIEW-P-LABEL'] = "Rate the Service and Care here";
+$BIZBOOK['SERVICE-EXPERT-REVIEW-P-LABEL'] = "Rate the Service and Care here";
 
-$Zitiziti['SERVICE-EXPERT-REVIEW-WRITE-YOUR-COMMENTS-LABEL'] = "Write your comments..";
+$BIZBOOK['SERVICE-EXPERT-REVIEW-WRITE-YOUR-COMMENTS-LABEL'] = "Write your comments..";
 
-$Zitiziti['SERVICE-EXPERT-REVIEW-SUBMIT-REVIEW'] = "Submit Review";
+$BIZBOOK['SERVICE-EXPERT-REVIEW-SUBMIT-REVIEW'] = "Submit Review";
 
-$Zitiziti['SERVICE-EXPERT-CANT-REVIEW-OWN-SERVICE'] = "You Can't Review Your Own Service !!!";
+$BIZBOOK['SERVICE-EXPERT-CANT-REVIEW-OWN-SERVICE'] = "You Can't Review Your Own Service !!!";
 
-$Zitiziti['SERVICE-EXPERT-CANT-REVIEW-DONE-CANCEL'] = "You Can't Review Until its Done or Cancel !!!";
+$BIZBOOK['SERVICE-EXPERT-CANT-REVIEW-DONE-CANCEL'] = "You Can't Review Until its Done or Cancel !!!";
 
-$Zitiziti['SERVICE-EXPERT-WRITTEN-REVIEW-TO'] = "Written a review to";
+$BIZBOOK['SERVICE-EXPERT-WRITTEN-REVIEW-TO'] = "Written a review to";
 
-$Zitiziti['SERVICE-EXPERT-PREFERRED-TIME'] = "Preferred Time";
+$BIZBOOK['SERVICE-EXPERT-PREFERRED-TIME'] = "Preferred Time";
 
-$Zitiziti['SERVICE-EXPERT-PREFERRED-DATE'] = "Preferred Date";
+$BIZBOOK['SERVICE-EXPERT-PREFERRED-DATE'] = "Preferred Date";
 
-$Zitiziti['SERVICE-EXPERT-HEY-LABEL'] = "Hey";
+$BIZBOOK['SERVICE-EXPERT-HEY-LABEL'] = "Hey";
 
-$Zitiziti['SERVICE-EXPERT-CLOSED-LABEL'] = "Closed";
+$BIZBOOK['SERVICE-EXPERT-CLOSED-LABEL'] = "Closed";
 
-$Zitiziti['SERVICE-EXPERT-CANCEL-LABEL'] = "Cancel";
+$BIZBOOK['SERVICE-EXPERT-CANCEL-LABEL'] = "Cancel";
 
-$Zitiziti['SERVICE-EXPERT-NEW-LABEL'] = "New";
+$BIZBOOK['SERVICE-EXPERT-NEW-LABEL'] = "New";
 
-$Zitiziti['SERVICE-EXPERT-ON-THE-WAY-LABEL'] = "On the way";
+$BIZBOOK['SERVICE-EXPERT-ON-THE-WAY-LABEL'] = "On the way";
 
-$Zitiziti['SERVICE-EXPERT-PENDING-LABEL'] = "Pending";
+$BIZBOOK['SERVICE-EXPERT-PENDING-LABEL'] = "Pending";
 
-$Zitiziti['SERVICE-EXPERT-DONE-LABEL'] = "Done";
+$BIZBOOK['SERVICE-EXPERT-DONE-LABEL'] = "Done";
 
-$Zitiziti['SERVICE-EXPERT-CANCEL-SUCCESS-MESSAGE'] = "Your Service Cancel Request Is Successful!!";
+$BIZBOOK['SERVICE-EXPERT-CANCEL-SUCCESS-MESSAGE'] = "Your Service Cancel Request Is Successful!!";
 
-$Zitiziti['SERVICE-EXPERT-ENQUIRY-STATUS-SUCCESS-MESSAGE'] = "Enquiry status have been successfully updated!!";
+$BIZBOOK['SERVICE-EXPERT-ENQUIRY-STATUS-SUCCESS-MESSAGE'] = "Enquiry status have been successfully updated!!";
 
-$Zitiziti['SERVICE-EXPERT-ENQUIRY-DEFAULT-P-MESSAGE'] = "You can post your enquiry here. We will find best service providers for you!!!";
+$BIZBOOK['SERVICE-EXPERT-ENQUIRY-DEFAULT-P-MESSAGE'] = "You can post your enquiry here. We will find best service providers for you!!!";
 
-$Zitiziti['SERVICE-EXPERT-LOGIN-AND-CANCEL'] = "Login And Cancel this Service";
+$BIZBOOK['SERVICE-EXPERT-LOGIN-AND-CANCEL'] = "Login And Cancel this Service";
 
-$Zitiziti['SERVICE-EXPERT-CANT-CANCEL-OTHER-USER'] = "You Can't Cancel Other User Service";
+$BIZBOOK['SERVICE-EXPERT-CANT-CANCEL-OTHER-USER'] = "You Can't Cancel Other User Service";
 
-$Zitiziti['SERVICE-EXPERT-THANK-YOU-LABEL'] = "Thank you";
+$BIZBOOK['SERVICE-EXPERT-THANK-YOU-LABEL'] = "Thank you";
 
-$Zitiziti['SERVICE-EXPERT-THANK-YOU-P-1-LABEL'] = "After";
+$BIZBOOK['SERVICE-EXPERT-THANK-YOU-P-1-LABEL'] = "After";
 
-$Zitiziti['SERVICE-EXPERT-THANK-YOU-P-2-LABEL'] = "+ years of handover they addressed the issues and resolved in a given time with good reviews.";
+$BIZBOOK['SERVICE-EXPERT-THANK-YOU-P-2-LABEL'] = "+ years of handover they addressed the issues and resolved in a given time with good reviews.";
 
-$Zitiziti['SERVICE-EXPERT-APPROX-ARRIVE-TIME'] = "Expert approximate arrive time";
+$BIZBOOK['SERVICE-EXPERT-APPROX-ARRIVE-TIME'] = "Expert approximate arrive time";
 
-$Zitiziti['SERVICE-EXPERT-APPROX-ARRIVE-TIME-LABEL'] = "Approximate arrive time";
+$BIZBOOK['SERVICE-EXPERT-APPROX-ARRIVE-TIME-LABEL'] = "Approximate arrive time";
 
-$Zitiziti['SERVICE-EXPERT-SERVICE-STATUS'] = "Service status";
+$BIZBOOK['SERVICE-EXPERT-SERVICE-STATUS'] = "Service status";
 
-$Zitiziti['SERVICE-EXPERT-BOOKING-REFRENCE'] = "Booking reference";
+$BIZBOOK['SERVICE-EXPERT-BOOKING-REFRENCE'] = "Booking reference";
 
-$Zitiziti['SERVICE-EXPERT-PREFERRED-DATE-TIME'] = "Preferred date & time";
+$BIZBOOK['SERVICE-EXPERT-PREFERRED-DATE-TIME'] = "Preferred date & time";
 
-$Zitiziti['SERVICE-EXPERT-CANCEL-REQUEST'] = "Cancel request";
+$BIZBOOK['SERVICE-EXPERT-CANCEL-REQUEST'] = "Cancel request";
 
-$Zitiziti['SERVICE-EXPERT-CONFIRM-CANCEL'] = "Confirm cancel";
+$BIZBOOK['SERVICE-EXPERT-CONFIRM-CANCEL'] = "Confirm cancel";
 
-$Zitiziti['SERVICE-EXPERT-NOT-NOW'] = "Not now";
+$BIZBOOK['SERVICE-EXPERT-NOT-NOW'] = "Not now";
 
-$Zitiziti['SERVICE-EXPERT-ALL-SERVICE-EXPERT-LEADS'] = "All Service Experts Leads";
+$BIZBOOK['SERVICE-EXPERT-ALL-SERVICE-EXPERT-LEADS'] = "All Service Experts Leads";
 
-$Zitiziti['ADD_NEW_SERVICE_EXPERT'] = "Service Expert Profile";
+$BIZBOOK['ADD_NEW_SERVICE_EXPERT'] = "Service Expert Profile";
 
-$Zitiziti['ALL_SERVICE_EXPERT_LEADS'] = "Service Expert Leads";
+$BIZBOOK['ALL_SERVICE_EXPERT_LEADS'] = "Service Expert Leads";
 
-$Zitiziti['MY_SERVICE_BOOKINGS'] = "My Service Bookings";
+$BIZBOOK['MY_SERVICE_BOOKINGS'] = "My Service Bookings";
 
-$Zitiziti['SERVICE-EXPERT-UPDATE-MY-AVAILABILITY'] = "Update my Availability";
+$BIZBOOK['SERVICE-EXPERT-UPDATE-MY-AVAILABILITY'] = "Update my Availability";
 
-$Zitiziti['SERVICE-EXPERT-EXPERT-NAME'] = "Expert Name";
+$BIZBOOK['SERVICE-EXPERT-EXPERT-NAME'] = "Expert Name";
 
-$Zitiziti['SERVICE-EXPERT-LEAD-DETAILS'] = "Lead details";
+$BIZBOOK['SERVICE-EXPERT-LEAD-DETAILS'] = "Lead details";
 
-$Zitiziti['SERVICE-EXPERT-EXPERT-PROFILE'] = "Expert Profile";
+$BIZBOOK['SERVICE-EXPERT-EXPERT-PROFILE'] = "Expert Profile";
 
-$Zitiziti['SERVICE-EXPERT-MANAGE'] = "Manage";
+$BIZBOOK['SERVICE-EXPERT-MANAGE'] = "Manage";
 
-$Zitiziti['SERVICE-EXPERT-MANAGE-LEAD'] = "Manage Lead";
+$BIZBOOK['SERVICE-EXPERT-MANAGE-LEAD'] = "Manage Lead";
 
-$Zitiziti['SERVICE-EXPERT-AVAILABILITY-INFO-DIV'] = "This will help you your availability status to customers. Customers easy to know you are available or not.";
+$BIZBOOK['SERVICE-EXPERT-AVAILABILITY-INFO-DIV'] = "This will help you your availability status to customers. Customers easy to know you are available or not.";
 
-$Zitiziti['SERVICE-EXPERT-CHOOSE-AVAILABILITY'] = "Choose Availability";
+$BIZBOOK['SERVICE-EXPERT-CHOOSE-AVAILABILITY'] = "Choose Availability";
 
-$Zitiziti['SERVICE-EXPERT-AVAILABILITY-READY-TO-WORK-LABEL'] = "Available (Ready to work)";
+$BIZBOOK['SERVICE-EXPERT-AVAILABILITY-READY-TO-WORK-LABEL'] = "Available (Ready to work)";
 
-$Zitiziti['SERVICE-EXPERT-BUSY-ON-OTHER-CUSTOMER-LABEL'] = "Busy (Busy on other customer)";
+$BIZBOOK['SERVICE-EXPERT-BUSY-ON-OTHER-CUSTOMER-LABEL'] = "Busy (Busy on other customer)";
 
-$Zitiziti['SERVICE-EXPERT-END-TODAY-LABEL'] = "End today (Done today work)";
+$BIZBOOK['SERVICE-EXPERT-END-TODAY-LABEL'] = "End today (Done today work)";
 
-$Zitiziti['SERVICE-EXPERT-BE-FIRST-REVIEW'] = "Be the First One To Review This Expert!!!";
+$BIZBOOK['SERVICE-EXPERT-BE-FIRST-REVIEW'] = "Be the First One To Review This Expert!!!";
 
-$Zitiziti['SERVICE-EXPERT-ENQUIRER-NAME'] = "Enquirer Name";
+$BIZBOOK['SERVICE-EXPERT-ENQUIRER-NAME'] = "Enquirer Name";
 
-$Zitiziti['EXP-HOME-JOIN-COMP-TIT'] = "Are you a Service Expert?";
+$BIZBOOK['EXP-HOME-JOIN-COMP-TIT'] = "Are you a Service Expert?";
 
-$Zitiziti['EXP-HOME-JOIN-COMP-SUB-TIT'] = "Join us today and earn more money and move your business to next level";
+$BIZBOOK['EXP-HOME-JOIN-COMP-SUB-TIT'] = "Join us today and earn more money and move your business to next level";
 
-$Zitiziti['EXP-HOME-JOIN-COMP-CTA'] = "Join now";
+$BIZBOOK['EXP-HOME-JOIN-COMP-CTA'] = "Join now";
 
-$Zitiziti['EXP-HOME-JOIN-EMP-TIT'] = "Looking for a Service Expert?";
+$BIZBOOK['EXP-HOME-JOIN-EMP-TIT'] = "Looking for a Service Expert?";
 
-$Zitiziti['EXP-HOME-JOIN-EMP-SUB-TIT'] = "Tell us your service needs, we help you to send best Service Experts";
+$BIZBOOK['EXP-HOME-JOIN-EMP-SUB-TIT'] = "Tell us your service needs, we help you to send best Service Experts";
 
-$Zitiziti['EXP-HOME-JOIN-EMP-CTA'] = "Book Experts";
+$BIZBOOK['EXP-HOME-JOIN-EMP-CTA'] = "Book Experts";
 
-$Zitiziti['EXP-HOME-JOIN-EMP-CTA1'] = "Book this Expert";
+$BIZBOOK['EXP-HOME-JOIN-EMP-CTA1'] = "Book this Expert";
 
 
 //************************* NEWS PAGE TEXT ***********
 
-$Zitiziti['NEWS-SUBSCRIBE'] = "Subscribe";
+$BIZBOOK['NEWS-SUBSCRIBE'] = "Subscribe";
 
-$Zitiziti['NEWS-NEWSLETTER'] = "Newsletter";
+$BIZBOOK['NEWS-NEWSLETTER'] = "Newsletter";
 
-$Zitiziti['NEWS-NEWSLETTER-P-TAG'] = "It is a long established fact that a reader will be distracted.";
+$BIZBOOK['NEWS-NEWSLETTER-P-TAG'] = "It is a long established fact that a reader will be distracted.";
 
-$Zitiziti['NEWS-RELATED-POST'] = "Related Posts";
+$BIZBOOK['NEWS-RELATED-POST'] = "Related Posts";
 
-$Zitiziti['NEWS-LATEST-POST'] = "Latest Posts";
+$BIZBOOK['NEWS-LATEST-POST'] = "Latest Posts";
 
-$Zitiziti['NEWS-SHARE-NOW'] = "Share now";
+$BIZBOOK['NEWS-SHARE-NOW'] = "Share now";
 
-$Zitiziti['NEWS-COPY-TO-CLIPBOARD'] = "Copy to clipboard";
+$BIZBOOK['NEWS-COPY-TO-CLIPBOARD'] = "Copy to clipboard";
 
-$Zitiziti['NEWS-COPY-TEXT'] = "Copy text";
+$BIZBOOK['NEWS-COPY-TEXT'] = "Copy text";
 
-$Zitiziti['NEWS-COPIED'] = "Copied";
+$BIZBOOK['NEWS-COPIED'] = "Copied";
 
-$Zitiziti['NEWS-HOMEPAGE-BANNER-H1-TEXT-1'] = "Zitiziti";
+$BIZBOOK['NEWS-HOMEPAGE-BANNER-H1-TEXT-1'] = "Bizbook";
 
-$Zitiziti['NEWS-HOMEPAGE-BANNER-H1-TEXT-2'] = "News & Magazines";
+$BIZBOOK['NEWS-HOMEPAGE-BANNER-H1-TEXT-2'] = "News & Magazines";
 
-$Zitiziti['NEWS-HOMEPAGE-BANNER-P-TEXT'] = "All news updates in one place.";
+$BIZBOOK['NEWS-HOMEPAGE-BANNER-P-TEXT'] = "All news updates in one place.";
 
-$Zitiziti['NEWS-HOMEPAGE-BANNER-P-TEXT-1'] = "All";
+$BIZBOOK['NEWS-HOMEPAGE-BANNER-P-TEXT-1'] = "All";
 
-$Zitiziti['NEWS-HOMEPAGE-BANNER-P-TEXT-2'] = "news in one place.";
+$BIZBOOK['NEWS-HOMEPAGE-BANNER-P-TEXT-2'] = "news in one place.";
 
-$Zitiziti['NEWS-TRENDINGS'] = "Trendings";
+$BIZBOOK['NEWS-TRENDINGS'] = "Trendings";
 
-$Zitiziti['NEWS-LATEST-POPULAR'] = "Latest & Popular";
+$BIZBOOK['NEWS-LATEST-POPULAR'] = "Latest & Popular";
 
 
 //************************* PLACES PAGE TEXT ***********
 
-$Zitiziti['PLACE-MENU'] = "Explore Travel";
+$BIZBOOK['PLACE-MENU'] = "Explore Travel";
 
-$Zitiziti['PLACE-TRAVEL'] = "Travel";
+$BIZBOOK['PLACE-TRAVEL'] = "Travel";
 
-$Zitiziti['PLACE-HOME-H-1'] = "Explore your Travel";
+$BIZBOOK['PLACE-HOME-H-1'] = "Explore your Travel";
 
-$Zitiziti['PLACE-HOME-P-1-1'] = "Plan your travel with";
+$BIZBOOK['PLACE-HOME-P-1-1'] = "Plan your travel with";
 
-$Zitiziti['PLACE-HOME-B-1-1'] = "Zitiziti";
+$BIZBOOK['PLACE-HOME-B-1-1'] = "Bizbook";
 
-$Zitiziti['PLACE-HOME-SEARCH-OPTION-1'] = "Find your place now";
+$BIZBOOK['PLACE-HOME-SEARCH-OPTION-1'] = "Find your place now";
 
-$Zitiziti['PLACE-HOME-P-1-2'] = "Find your place and get the nearest Services & Activities.";
+$BIZBOOK['PLACE-HOME-P-1-2'] = "Find your place and get the nearest Services & Activities.";
 
-$Zitiziti['PLACE-HOME-H-2-1'] = "Travel places";
+$BIZBOOK['PLACE-HOME-H-2-1'] = "Travel places";
 
-$Zitiziti['PLACE-HOME-P-2-1'] = "Start planning your next trip with a little help from ";
+$BIZBOOK['PLACE-HOME-P-2-1'] = "Start planning your next trip with a little help from ";
 
-$Zitiziti['PLACE-HOME-B-2-1'] = "Zitiziti";
+$BIZBOOK['PLACE-HOME-B-2-1'] = "Bizbook";
 
-$Zitiziti['PLACE-MORE-DETAILS'] = "More details";
+$BIZBOOK['PLACE-MORE-DETAILS'] = "More details";
 
-$Zitiziti['PLACE-HOME-H-3-1'] = "Start adding a new place";
+$BIZBOOK['PLACE-HOME-H-3-1'] = "Start adding a new place";
 
-$Zitiziti['PLACE-HOME-P-3-1'] = "You can send the suggestion or request to the";
+$BIZBOOK['PLACE-HOME-P-3-1'] = "You can send the suggestion or request to the";
 
-$Zitiziti['PLACE-HOME-B-3-1'] = "Zitiziti Admin";
+$BIZBOOK['PLACE-HOME-B-3-1'] = "Bizbook Admin";
 
-$Zitiziti['PLACE-HOME-SPAN-3-1'] = "Submit a place";
+$BIZBOOK['PLACE-HOME-SPAN-3-1'] = "Submit a place";
 
-$Zitiziti['PLACE-HOME-P-4-1'] = "New place adding request";
+$BIZBOOK['PLACE-HOME-P-4-1'] = "New place adding request";
 
-$Zitiziti['PLACE-PLACE-DETAILS'] = "Place details";
+$BIZBOOK['PLACE-PLACE-DETAILS'] = "Place details";
 
-$Zitiziti['PLACE-PLACE-NAME-LABEL'] = "Place name*";
+$BIZBOOK['PLACE-PLACE-NAME-LABEL'] = "Place name*";
 
-$Zitiziti['PLACE-PLACE-ADDRESS-LABEL'] = "Address of the place*";
+$BIZBOOK['PLACE-PLACE-ADDRESS-LABEL'] = "Address of the place*";
 
-$Zitiziti['PLACE-PLACE-DESCRIPTION-LABEL'] = "Description";
+$BIZBOOK['PLACE-PLACE-DESCRIPTION-LABEL'] = "Description";
 
-$Zitiziti['PLACE-PLACE-IMAGE-LABEL'] = "Place image *";
+$BIZBOOK['PLACE-PLACE-IMAGE-LABEL'] = "Place image *";
 
-$Zitiziti['PLACE-PLACE-ENQUIRY-NAME-LABEL'] = "Enter your name*";
+$BIZBOOK['PLACE-PLACE-ENQUIRY-NAME-LABEL'] = "Enter your name*";
 
-$Zitiziti['PLACE-PLACE-ENQUIRY-EMAIL-LABEL'] = "Enter your email*";
+$BIZBOOK['PLACE-PLACE-ENQUIRY-EMAIL-LABEL'] = "Enter your email*";
 
-$Zitiziti['PLACE-PLACE-ENQUIRY-MOBILE-LABEL'] = "Enter your mobile number*";
+$BIZBOOK['PLACE-PLACE-ENQUIRY-MOBILE-LABEL'] = "Enter your mobile number*";
 
-$Zitiziti['PLACE-PLACE-ENQUIRY-INVALID-EMAIL-TITLE'] = "Invalid email address";
+$BIZBOOK['PLACE-PLACE-ENQUIRY-INVALID-EMAIL-TITLE'] = "Invalid email address";
 
-$Zitiziti['PLACE-PLACE-ENQUIRY-INVALID-MOBILE-TITLE'] = "Phone number starting with 7-9 and remaining 9 digit with 0-9";
+$BIZBOOK['PLACE-PLACE-ENQUIRY-INVALID-MOBILE-TITLE'] = "Phone number starting with 7-9 and remaining 9 digit with 0-9";
 
-$Zitiziti['PLACE-ALL-PLACES'] = "All Places";
+$BIZBOOK['PLACE-ALL-PLACES'] = "All Places";
 
-$Zitiziti['PLACE-STATUS'] = "Status";
+$BIZBOOK['PLACE-STATUS'] = "Status";
 
-$Zitiziti['PLACE-ACTIVE'] = "Active";
+$BIZBOOK['PLACE-ACTIVE'] = "Active";
 
-$Zitiziti['PLACE-OPEN'] = "Open";
+$BIZBOOK['PLACE-OPEN'] = "Open";
 
-$Zitiziti['PLACE-CLOSED'] = "Closed";
+$BIZBOOK['PLACE-CLOSED'] = "Closed";
 
-$Zitiziti['PLACE-TEMPORARILY-CLOSED'] = "Temporarily closed";
+$BIZBOOK['PLACE-TEMPORARILY-CLOSED'] = "Temporarily closed";
 
-$Zitiziti['PLACE-PERMANENTLY-CLOSED'] = "Permanently closed";
+$BIZBOOK['PLACE-PERMANENTLY-CLOSED'] = "Permanently closed";
 
-$Zitiziti['PLACE-OPEN-TIME'] = "Open time";
+$BIZBOOK['PLACE-OPEN-TIME'] = "Open time";
 
-$Zitiziti['PLACE-CLOSE-TIME'] = "Close time";
+$BIZBOOK['PLACE-CLOSE-TIME'] = "Close time";
 
-$Zitiziti['PLACE-TOURISM-FEE'] = "Tourism fee";
+$BIZBOOK['PLACE-TOURISM-FEE'] = "Tourism fee";
 
-$Zitiziti['PLACE-DIRECTION'] = "Direction";
+$BIZBOOK['PLACE-DIRECTION'] = "Direction";
 
-$Zitiziti['PLACE-NEAR-BY-SERVICES'] = "Near by Services";
+$BIZBOOK['PLACE-NEAR-BY-SERVICES'] = "Near by Services";
 
-$Zitiziti['PLACE-PHOTO-GALLERY'] = "Photo gallery";
+$BIZBOOK['PLACE-PHOTO-GALLERY'] = "Photo gallery";
 
-$Zitiziti['PLACE-DISCOVER'] = "Discover";
+$BIZBOOK['PLACE-DISCOVER'] = "Discover";
 
-$Zitiziti['PLACE-WHAT-PEOPLE-ASK'] = "What people ask";
+$BIZBOOK['PLACE-WHAT-PEOPLE-ASK'] = "What people ask";
 
-$Zitiziti['PLACE-RELATED-PLACES'] = "Related places";
+$BIZBOOK['PLACE-RELATED-PLACES'] = "Related places";
 
-$Zitiziti['PLACE-TOP-NEARBY-SERVICES'] = "Top Near by Services";
+$BIZBOOK['PLACE-TOP-NEARBY-SERVICES'] = "Top Near by Services";
 
-$Zitiziti['PLACE-TOP-NEARBY-SERVICES-P'] = "Start planning your next trip with a little help from";
+$BIZBOOK['PLACE-TOP-NEARBY-SERVICES-P'] = "Start planning your next trip with a little help from";
 
-$Zitiziti['PLACE-TOP-NEARBY-SERVICES-B'] = "Zitiziti";
+$BIZBOOK['PLACE-TOP-NEARBY-SERVICES-B'] = "Bizbook";
 
-$Zitiziti['PLACE-EVENTS-H2'] = "Events in";
+$BIZBOOK['PLACE-EVENTS-H2'] = "Events in";
 
-$Zitiziti['PLACE-EVENTS-P'] = "Start planning your next trip with a little help from";
+$BIZBOOK['PLACE-EVENTS-P'] = "Start planning your next trip with a little help from";
 
-$Zitiziti['PLACE-EVENTS-B'] = "Zitiziti";
+$BIZBOOK['PLACE-EVENTS-B'] = "Bizbook";
 
-$Zitiziti['PLACE-EXPERTS-H2'] = "Services Experts in";
+$BIZBOOK['PLACE-EXPERTS-H2'] = "Services Experts in";
 
-$Zitiziti['PLACE-EXPERTS-P'] = "Start planning your next trip with a little help from";
+$BIZBOOK['PLACE-EXPERTS-P'] = "Start planning your next trip with a little help from";
 
-$Zitiziti['PLACE-EXPERTS-B'] = "Zitiziti";
+$BIZBOOK['PLACE-EXPERTS-B'] = "Bizbook";
 
-$Zitiziti['PLACE-NEWS-H2'] = "News & Articles in";
+$BIZBOOK['PLACE-NEWS-H2'] = "News & Articles in";
 
-$Zitiziti['PLACE-NEWS-P'] = "Start planning your next trip with a little help from";
+$BIZBOOK['PLACE-NEWS-P'] = "Start planning your next trip with a little help from";
 
-$Zitiziti['PLACE-NEWS-B'] = "Zitiziti";
+$BIZBOOK['PLACE-NEWS-B'] = "Bizbook";
 
 //************************* COUPON PAGE TEXT ***********
 
-$Zitiziti['COUPON-NO-LOGIN-HEADING-LABEL'] = "Sign in to view your Coupon and deals";
+$BIZBOOK['COUPON-NO-LOGIN-HEADING-LABEL'] = "Sign in to view your Coupon and deals";
 
-$Zitiziti['COUPON-NO-LOGIN-P-LABEL'] = "Get the latest and up-to-date coupons & cash back offers on some of India's top online shopping sites. Login to check your personalised coupons now.";
+$BIZBOOK['COUPON-NO-LOGIN-P-LABEL'] = "Get the latest and up-to-date coupons & cash back offers on some of India's top online shopping sites. Login to check your personalised coupons now.";
 
-$Zitiziti['COUPON-NO-LOGIN-SIGN-IN-NOW'] = "Sign in now";
+$BIZBOOK['COUPON-NO-LOGIN-SIGN-IN-NOW'] = "Sign in now";
 
-$Zitiziti['COUPON-HEADING-LABEL'] = "Coupon and deals";
+$BIZBOOK['COUPON-HEADING-LABEL'] = "Coupon and deals";
 
-$Zitiziti['COUPON-HEADING-P-LABEL'] = "You can get best official brand coupons and deals here.";
+$BIZBOOK['COUPON-HEADING-P-LABEL'] = "You can get best official brand coupons and deals here.";
 
-$Zitiziti['COUPON-HEADING-PLACEHOLDER'] = "Search coupons";
+$BIZBOOK['COUPON-HEADING-PLACEHOLDER'] = "Search coupons";
 
-$Zitiziti['COUPON-EXPIRES'] = "Expires";
+$BIZBOOK['COUPON-EXPIRES'] = "Expires";
 
-$Zitiziti['COUPON-TERMS-CONDITION-APPLY'] = "Terms & Conditions Apply";
+$BIZBOOK['COUPON-TERMS-CONDITION-APPLY'] = "Terms & Conditions Apply";
 
-$Zitiziti['COUPON-GET-COUPON'] = "Get coupon";
+$BIZBOOK['COUPON-GET-COUPON'] = "Get coupon";
 
-$Zitiziti['COUPON-HERE-CODE-FOR'] = "Here the code for";
+$BIZBOOK['COUPON-HERE-CODE-FOR'] = "Here the code for";
 
-$Zitiziti['COUPON-MEMBER-ACCESS-THIS-COUPON'] = "Members access this coupon";
+$BIZBOOK['COUPON-MEMBER-ACCESS-THIS-COUPON'] = "Members access this coupon";
 
 //************************* DB ALL USERS PAGE TEXT ***********
 
-$Zitiziti['DB-USERS-ALL-USERS'] = "All users";
+$BIZBOOK['DB-USERS-ALL-USERS'] = "All users";
 
-$Zitiziti['DB-USERS-FOLLOW-PREFERED-USERS'] = "Follow your preferred users";
+$BIZBOOK['DB-USERS-FOLLOW-PREFERED-USERS'] = "Follow your preferred users";
 
 //************************* DB FOLLOWINGS PAGE TEXT ***********
 
-$Zitiziti['DB-FOLLOWINGS-FOLLOWING-USERS'] = "Following users";
+$BIZBOOK['DB-FOLLOWINGS-FOLLOWING-USERS'] = "Following users";
 
-$Zitiziti['DB-FOLLOWINGS-VIEW-ALL-USERS'] = "View all users";
+$BIZBOOK['DB-FOLLOWINGS-VIEW-ALL-USERS'] = "View all users";
 
 //************************* DB INVOICE PAGE TEXT ***********
 
-$Zitiziti['DB-INVOICE-YOUR-NEW-INVOICE'] = "Your New Invoice";
+$BIZBOOK['DB-INVOICE-YOUR-NEW-INVOICE'] = "Your New Invoice";
 
-$Zitiziti['DB-INVOICE-INVOICE'] = "Invoice";
+$BIZBOOK['DB-INVOICE-INVOICE'] = "Invoice";
 
-$Zitiziti['DB-INVOICE-INVOICES'] = "Invoices";
+$BIZBOOK['DB-INVOICE-INVOICES'] = "Invoices";
 
-$Zitiziti['DB-INVOICE-P-TAG'] = "Your are the golden member of the worlds No:1 business directory portal website.";
+$BIZBOOK['DB-INVOICE-P-TAG'] = "Your are the golden member of the worlds No:1 business directory portal website.";
 
-$Zitiziti['DB-INVOICE-PLAN-TYPE'] = "Plan type";
+$BIZBOOK['DB-INVOICE-PLAN-TYPE'] = "Plan type";
 
-$Zitiziti['DB-INVOICE-AMOUNT-PAID'] = "Amount paid";
+$BIZBOOK['DB-INVOICE-AMOUNT-PAID'] = "Amount paid";
 
-$Zitiziti['DB-INVOICE-PAYMENT-TYPE'] = "Payment type";
+$BIZBOOK['DB-INVOICE-PAYMENT-TYPE'] = "Payment type";
 
-$Zitiziti['DB-INVOICE-P-TAG-BOTTOM'] = "Your are the golden member of worlds No:1 business directory portal website.";
+$BIZBOOK['DB-INVOICE-P-TAG-BOTTOM'] = "Your are the golden member of worlds No:1 business directory portal website.";
 
-$Zitiziti['DB-INVOICE-FOOT-BOTTOM'] = "Thank you for a member of";
+$BIZBOOK['DB-INVOICE-FOOT-BOTTOM'] = "Thank you for a member of";
 
-$Zitiziti['DB-INVOICE-CLICK-TO-DOWNLOAD-PDF'] = "Click to Download PDF";
+$BIZBOOK['DB-INVOICE-CLICK-TO-DOWNLOAD-PDF'] = "Click to Download PDF";
 
-$Zitiziti['DB-INVOICE-PAYMENT-INVOICE'] = "Payment Invoices";
+$BIZBOOK['DB-INVOICE-PAYMENT-INVOICE'] = "Payment Invoices";
 
-$Zitiziti['DB-INVOICE-PAYMENT-DATE'] = "Payment date";
+$BIZBOOK['DB-INVOICE-PAYMENT-DATE'] = "Payment date";
 
-$Zitiziti['DB-INVOICE-DOWNLOAD-INVOICE'] = "Download Invoice";
+$BIZBOOK['DB-INVOICE-DOWNLOAD-INVOICE'] = "Download Invoice";
 
-$Zitiziti['DB-INVOICE-INVOICE-N_A'] = "Invoice N/A";
+$BIZBOOK['DB-INVOICE-INVOICE-N_A'] = "Invoice N/A";
 
 //************************* DB MESSAGES PAGE TEXT ***********
 
-$Zitiziti['DB-MESSAGES-ALL-MESSAGES'] = "All Messages";
+$BIZBOOK['DB-MESSAGES-ALL-MESSAGES'] = "All Messages";
 
-$Zitiziti['DB-MESSAGES-SEND-MESSAGES'] = "Send message";
+$BIZBOOK['DB-MESSAGES-SEND-MESSAGES'] = "Send message";
 
-$Zitiziti['DB-MESSAGES-PLACEHOLDER'] = "Type a message here..";
+$BIZBOOK['DB-MESSAGES-PLACEHOLDER'] = "Type a message here..";
 
 //************************* DB NOTIFICATIONS PAGE TEXT ***********
 
-$Zitiziti['DB-NOTIFICATION-NOTIFICATIONS'] = "Notifications";
+$BIZBOOK['DB-NOTIFICATION-NOTIFICATIONS'] = "Notifications";
 
-$Zitiziti['DB-NOTIFICATION-ALL-NOTIFICATIONS'] = "All Notifications";
+$BIZBOOK['DB-NOTIFICATION-ALL-NOTIFICATIONS'] = "All Notifications";
 
-$Zitiziti['DB-NOTIFICATION-SEND-LISTING-ENQUIRY'] = "Send you an enquiry from your listing";
+$BIZBOOK['DB-NOTIFICATION-SEND-LISTING-ENQUIRY'] = "Send you an enquiry from your listing";
 
-$Zitiziti['DB-NOTIFICATION-SEND-EVENT-ENQUIRY'] = "Send you an enquiry from your event";
+$BIZBOOK['DB-NOTIFICATION-SEND-EVENT-ENQUIRY'] = "Send you an enquiry from your event";
 
-$Zitiziti['DB-NOTIFICATION-SEND-BLOG-ENQUIRY'] = "Send you an enquiry from your blog";
+$BIZBOOK['DB-NOTIFICATION-SEND-BLOG-ENQUIRY'] = "Send you an enquiry from your blog";
 
-$Zitiziti['DB-NOTIFICATION-SEND-PRODUCT-ENQUIRY'] = "Send you an enquiry from your product";
+$BIZBOOK['DB-NOTIFICATION-SEND-PRODUCT-ENQUIRY'] = "Send you an enquiry from your product";
 
-$Zitiziti['DB-NOTIFICATION-SEND-EXPERT-ENQUIRY'] = "Send you an enquiry from your expert";
+$BIZBOOK['DB-NOTIFICATION-SEND-EXPERT-ENQUIRY'] = "Send you an enquiry from your expert";
 
-$Zitiziti['DB-NOTIFICATION-SEND-LISTING-REVIEW'] = "write you an review from your listing";
+$BIZBOOK['DB-NOTIFICATION-SEND-LISTING-REVIEW'] = "write you an review from your listing";
 
-$Zitiziti['DB-NOTIFICATION-SEND-LISTING-LIKES'] = "Liked your listing";
+$BIZBOOK['DB-NOTIFICATION-SEND-LISTING-LIKES'] = "Liked your listing";
 
-$Zitiziti['DB-NOTIFICATION-SEND-JOB-APPLIED'] = "applied from your job";
+$BIZBOOK['DB-NOTIFICATION-SEND-JOB-APPLIED'] = "applied from your job";
 
-$Zitiziti['DB-NOTIFICATION-ON'] = "on";
+$BIZBOOK['DB-NOTIFICATION-ON'] = "on";
 
-$Zitiziti['DB-NOTIFICATION-WRITE-REVIEW'] = "Write a review on your listing";
+$BIZBOOK['DB-NOTIFICATION-WRITE-REVIEW'] = "Write a review on your listing";
 
-$Zitiziti['DB-NOTIFICATION-LIKE-LISTING'] = "like your listing";
+$BIZBOOK['DB-NOTIFICATION-LIKE-LISTING'] = "like your listing";
 
-$Zitiziti['DB-NOTIFICATION-START-FOLLOWING'] = "start following you";
+$BIZBOOK['DB-NOTIFICATION-START-FOLLOWING'] = "start following you";
 
-$Zitiziti['DB-NOTIFICATION-THANK-YOU-MESSAGE'] = "Thank you for creating for an account in";
+$BIZBOOK['DB-NOTIFICATION-THANK-YOU-MESSAGE'] = "Thank you for creating for an account in";
 
-$Zitiziti['DB-NOTIFICATION-WELCOME-MESSAGE'] = "We heartily welcome to our global business";
+$BIZBOOK['DB-NOTIFICATION-WELCOME-MESSAGE'] = "We heartily welcome to our global business";
 
-$Zitiziti['DB-NOTIFICATION-PORTAL'] = "portal";
+$BIZBOOK['DB-NOTIFICATION-PORTAL'] = "portal";
 
 //************************* DB PAYMENTS PAGE TEXT ***********
 
-$Zitiziti['DB-PAYMENTS-HEADING'] = "Select your payment option";
+$BIZBOOK['DB-PAYMENTS-HEADING'] = "Select your payment option";
 
-$Zitiziti['DB-PAYMENTS-HEADING-P-1'] = "Pay with cash upon delivery.";
+$BIZBOOK['DB-PAYMENTS-HEADING-P-1'] = "Pay with cash upon delivery.";
 
-$Zitiziti['DB-PAYMENTS-HEADING-P-2'] = "Admin team will verify your listing and communication address";
+$BIZBOOK['DB-PAYMENTS-HEADING-P-2'] = "Admin team will verify your listing and communication address";
 
-$Zitiziti['DB-PAYMENTS-HEADING-P-3'] = "Our collection team will meet you";
+$BIZBOOK['DB-PAYMENTS-HEADING-P-3'] = "Our collection team will meet you";
 
-$Zitiziti['DB-PAYMENTS-BILLING-DETAILS'] = "Billing details";
+$BIZBOOK['DB-PAYMENTS-BILLING-DETAILS'] = "Billing details";
 
-$Zitiziti['DB-PAYMENTS-SUBMIT-COD'] = "Submit COD";
+$BIZBOOK['DB-PAYMENTS-SUBMIT-COD'] = "Submit COD";
 
-$Zitiziti['DB-PAYMENTS-START-PAYMENT'] = "Start Payment";
+$BIZBOOK['DB-PAYMENTS-START-PAYMENT'] = "Start Payment";
 
-$Zitiziti['DB-PAYMENTS-PAYPAL-PAYMENT-GATEWAY'] = "PayPal payment gateway";
+$BIZBOOK['DB-PAYMENTS-PAYPAL-PAYMENT-GATEWAY'] = "PayPal payment gateway";
 
-$Zitiziti['DB-PAYMENTS-PAYPAL-PAYMENT-GATEWAY-P-1'] = "You can pay with your credit card if you don’t have a PayPal account.";
+$BIZBOOK['DB-PAYMENTS-PAYPAL-PAYMENT-GATEWAY-P-1'] = "You can pay with your credit card if you don’t have a PayPal account.";
 
-$Zitiziti['DB-PAYMENTS-WHAT-IS-PAYPAL'] = "What is PayPal?";
+$BIZBOOK['DB-PAYMENTS-WHAT-IS-PAYPAL'] = "What is PayPal?";
 
-$Zitiziti['DB-PAYMENTS-STRIPE-PAYMENT-GATEWAY'] = "Stripe payment gateway";
+$BIZBOOK['DB-PAYMENTS-STRIPE-PAYMENT-GATEWAY'] = "Stripe payment gateway";
 
-$Zitiziti['DB-PAYMENTS-STRIPE-PAYMENT'] = "Stripe payment";
+$BIZBOOK['DB-PAYMENTS-STRIPE-PAYMENT'] = "Stripe payment";
 
-$Zitiziti['DB-PAYMENTS-STRIPE-PAYMENT-SIMPLE-WAY-MESSAGE'] = "Simple way to pay online. It's take less then a minutes";
+$BIZBOOK['DB-PAYMENTS-STRIPE-PAYMENT-SIMPLE-WAY-MESSAGE'] = "Simple way to pay online. It's take less then a minutes";
 
-$Zitiziti['DB-PAYMENTS-STRIPE-PAYMENT-YOUR-FINAL-AMOUNT'] = "Your Final Amount to be paid is";
+$BIZBOOK['DB-PAYMENTS-STRIPE-PAYMENT-YOUR-FINAL-AMOUNT'] = "Your Final Amount to be paid is";
 
-$Zitiziti['DB-PAYMENTS-STRIPE-PAYMENT-GATEWAY-P-1'] = "You can pay with your credit card if you don’t have a Stripe account.";
+$BIZBOOK['DB-PAYMENTS-STRIPE-PAYMENT-GATEWAY-P-1'] = "You can pay with your credit card if you don’t have a Stripe account.";
 
-$Zitiziti['DB-PAYMENTS-WHAT-IS-STRIPE'] = "What is Stripe?";
+$BIZBOOK['DB-PAYMENTS-WHAT-IS-STRIPE'] = "What is Stripe?";
 
-$Zitiziti['DB-PAYMENTS-RAZOR-PAYMENT-GATEWAY'] = "RazorPay payment gateway";
+$BIZBOOK['DB-PAYMENTS-RAZOR-PAYMENT-GATEWAY'] = "RazorPay payment gateway";
 
-$Zitiziti['DB-PAYMENTS-RAZOR-PAYMENT-GATEWAY-P-1'] = "You can pay with your credit card if you don’t have a RazorPay account.";
+$BIZBOOK['DB-PAYMENTS-RAZOR-PAYMENT-GATEWAY-P-1'] = "You can pay with your credit card if you don’t have a RazorPay account.";
 
-$Zitiziti['DB-PAYMENTS-WHAT-IS-RAZOR'] = "What is RazorPay?";
+$BIZBOOK['DB-PAYMENTS-WHAT-IS-RAZOR'] = "What is RazorPay?";
 
-$Zitiziti['DB-PAYMENTS-PAYTM-PAYMENT-GATEWAY'] = "PayTm payment gateway";
+$BIZBOOK['DB-PAYMENTS-PAYTM-PAYMENT-GATEWAY'] = "PayTm payment gateway";
 
-$Zitiziti['DB-PAYMENTS-PAYTM-PAYMENT-GATEWAY-P-1'] = "You can pay with your credit card if you don’t have a PayTm account.";
+$BIZBOOK['DB-PAYMENTS-PAYTM-PAYMENT-GATEWAY-P-1'] = "You can pay with your credit card if you don’t have a PayTm account.";
 
-$Zitiziti['DB-PAYMENTS-PAYTM-IS-RAZOR'] = "What is PayTm?";
+$BIZBOOK['DB-PAYMENTS-PAYTM-IS-RAZOR'] = "What is PayTm?";
 
-$Zitiziti['DB-PAYMENTS-FOOTER-NOTES'] = "Notes";
+$BIZBOOK['DB-PAYMENTS-FOOTER-NOTES'] = "Notes";
 
-$Zitiziti['DB-PAYMENTS-FOOTER-NOTES-MESSAGE'] = "Hi, Before start \"Ads Payment\" you must know the pricing details and positions and all.
+$BIZBOOK['DB-PAYMENTS-FOOTER-NOTES-MESSAGE'] = "Hi, Before start \"Ads Payment\" you must know the pricing details and positions and all.
                     You just click the \"Pricing and other details\" button in this same page and you know the all
                     details. If your payment done means your invoice automatically received your \"Payment invoice\" page
                     and you never stop your Ads till the end date.";
 
 //************************* E-BOOK PAGE TEXT ***********
 
-$Zitiziti['E-BOOK-DOWNLOAD-NOW'] = "Download now";
+$BIZBOOK['E-BOOK-DOWNLOAD-NOW'] = "Download now";
 
-$Zitiziti['E-BOOK-DOWNLOAD-REQUEST'] = "Download request";
+$BIZBOOK['E-BOOK-DOWNLOAD-REQUEST'] = "Download request";
 
 //************************* EVENT PAGE TEXT ***********
 
-$Zitiziti['EVENT-DETAILS-EVENT-INFORMATION'] = "Event information";
+$BIZBOOK['EVENT-DETAILS-EVENT-INFORMATION'] = "Event information";
 
-$Zitiziti['EVENT-DETAILS-SHARE-THIS-EVENT'] = "Share this event";
+$BIZBOOK['EVENT-DETAILS-SHARE-THIS-EVENT'] = "Share this event";
 
-$Zitiziti['EVENT-DETAILS-RELATED-EVENTS'] = "Related Events";
+$BIZBOOK['EVENT-DETAILS-RELATED-EVENTS'] = "Related Events";
 
 //************************* FEEDBACK PAGE TEXT ***********
 
-$Zitiziti['FEEDBACK-SEND-YOUR-FEEDBACK'] = "Send your feedbacks";
+$BIZBOOK['FEEDBACK-SEND-YOUR-FEEDBACK'] = "Send your feedbacks";
 
-$Zitiziti['FEEDBACK-YOUR-FEEDBACK'] = "Your feedback";
+$BIZBOOK['FEEDBACK-YOUR-FEEDBACK'] = "Your feedback";
 
-$Zitiziti['FEEDBACK-P-TAG-MESSAGE'] = "Your feedback is most important for us. There are many variations of passages of Lorem Ipsum available,but the majority have suffered alteration in some form, by injected humour";
+$BIZBOOK['FEEDBACK-P-TAG-MESSAGE'] = "Your feedback is most important for us. There are many variations of passages of Lorem Ipsum available,but the majority have suffered alteration in some form, by injected humour";
 
-$Zitiziti['FEEDBACK-WHY-SEND-FEEDBACK'] = "Why send feedback?";
+$BIZBOOK['FEEDBACK-WHY-SEND-FEEDBACK'] = "Why send feedback?";
 
-$Zitiziti['FEEDBACK-WHY-SEND-FEEDBACK-P-1'] = "Useful for feature update";
+$BIZBOOK['FEEDBACK-WHY-SEND-FEEDBACK-P-1'] = "Useful for feature update";
 
-$Zitiziti['FEEDBACK-WHY-SEND-FEEDBACK-P-2'] = "Helping for customer feedback";
+$BIZBOOK['FEEDBACK-WHY-SEND-FEEDBACK-P-2'] = "Helping for customer feedback";
 
 //************************* FOOTER PAGE TEXT ***********
 
-$Zitiziti['FOOTER-HELP-SUPPORT'] = "Help & Support";
+$BIZBOOK['FOOTER-HELP-SUPPORT'] = "Help & Support";
 
-$Zitiziti['FOOTER-FREE-SUPPORT'] = "Free support";
+$BIZBOOK['FOOTER-FREE-SUPPORT'] = "Free support";
 
-$Zitiziti['FOOTER-TOP-CATEGORY'] = "Top Category";
+$BIZBOOK['FOOTER-TOP-CATEGORY'] = "Top Category";
 
-$Zitiziti['FOOTER-TRENDING-CATEGORY'] = "Trending Category";
+$BIZBOOK['FOOTER-TRENDING-CATEGORY'] = "Trending Category";
 
-$Zitiziti['FOOTER-HELP'] = "HELP";
+$BIZBOOK['FOOTER-HELP'] = "HELP";
 
-$Zitiziti['FOOTER-SUPPORT'] = "SUPPORT";
+$BIZBOOK['FOOTER-SUPPORT'] = "SUPPORT";
 
-$Zitiziti['FOOTER-POPULAR-TAGS'] = "Popular Tags";
+$BIZBOOK['FOOTER-POPULAR-TAGS'] = "Popular Tags";
 
-$Zitiziti['FOOTER-GET-IN-TOUCH'] = "Get In Touch";
+$BIZBOOK['FOOTER-GET-IN-TOUCH'] = "Get In Touch";
 
-$Zitiziti['FOOTER-DOWNLOAD-FREE-MOBILE-APPS'] = "DOWNLOAD OUR FREE MOBILE APPS";
+$BIZBOOK['FOOTER-DOWNLOAD-FREE-MOBILE-APPS'] = "DOWNLOAD OUR FREE MOBILE APPS";
 
-$Zitiziti['FOOTER-SOCIAL-MEDIA'] = "SOCIAL MEDIA";
+$BIZBOOK['FOOTER-SOCIAL-MEDIA'] = "SOCIAL MEDIA";
 
-$Zitiziti['FOOTER-COPYRIGHT'] = "Copyright";
+$BIZBOOK['FOOTER-COPYRIGHT'] = "Copyright";
 
-$Zitiziti['FOOTER-PROUDLY-POWERED-BY'] = "Proudly powered by";
+$BIZBOOK['FOOTER-PROUDLY-POWERED-BY'] = "Proudly powered by";
 
 //************************* PROMOTE BUSINESS PAGE TEXT ***********
 
-$Zitiziti['PROMOTE-BUSINESS-START-PROMOTIONS'] = "Start promotions";
+$BIZBOOK['PROMOTE-BUSINESS-START-PROMOTIONS'] = "Start promotions";
 
-$Zitiziti['PROMOTE-BUSINESS-START-NEW-PROMOTIONS'] = "Start new promotions";
+$BIZBOOK['PROMOTE-BUSINESS-START-NEW-PROMOTIONS'] = "Start new promotions";
 
-$Zitiziti['PROMOTE-BUSINESS-CHOOSE-LISTING'] = "Choose Listing";
+$BIZBOOK['PROMOTE-BUSINESS-CHOOSE-LISTING'] = "Choose Listing";
 
-$Zitiziti['PROMOTE-BUSINESS-TOTAL-DAYS'] = "Total days";
+$BIZBOOK['PROMOTE-BUSINESS-TOTAL-DAYS'] = "Total days";
 
-$Zitiziti['PROMOTE-BUSINESS-COST-PER-DAY'] = "Cost Per Day";
+$BIZBOOK['PROMOTE-BUSINESS-COST-PER-DAY'] = "Cost Per Day";
 
-$Zitiziti['PROMOTE-BUSINESS-TOTAL-POINTS'] = "Total Points";
+$BIZBOOK['PROMOTE-BUSINESS-TOTAL-POINTS'] = "Total Points";
 
-$Zitiziti['PROMOTE-BUSINESS-TOTAL-COST'] = "Total Cost";
+$BIZBOOK['PROMOTE-BUSINESS-TOTAL-COST'] = "Total Cost";
 
-$Zitiziti['PROMOTE-LISTING-PROMOTIONS'] = "Listing promotions";
+$BIZBOOK['PROMOTE-LISTING-PROMOTIONS'] = "Listing promotions";
 
-$Zitiziti['PROMOTE-PROMOTIONS'] = "Promotions";
+$BIZBOOK['PROMOTE-PROMOTIONS'] = "Promotions";
 
 //************************* SEARCH RESULTS PAGE TEXT ***********
 
-$Zitiziti['SEARCH-RESULTS-SEARCH-RESULTS'] = "Search Results";
+$BIZBOOK['SEARCH-RESULTS-SEARCH-RESULTS'] = "Search Results";
 
-$Zitiziti['SEARCH-RESULTS-SEARCH-ANYTHING-PLACEHOLDER'] = "Search anything...";
+$BIZBOOK['SEARCH-RESULTS-SEARCH-ANYTHING-PLACEHOLDER'] = "Search anything...";
 
-$Zitiziti['SEARCH-RESULTS-OOPS-NO-RESULTS-FOUND'] = "Oops!!! No result(s) Found for";
+$BIZBOOK['SEARCH-RESULTS-OOPS-NO-RESULTS-FOUND'] = "Oops!!! No result(s) Found for";
 
-$Zitiziti['SEARCH-RESULTS-PLEASE-TRY-WITH-OTHER'] = "Please try with other!!!";
+$BIZBOOK['SEARCH-RESULTS-PLEASE-TRY-WITH-OTHER'] = "Please try with other!!!";
 
-$Zitiziti['SEARCH-RESULTS-HURRAY'] = "Hurray!!!";
+$BIZBOOK['SEARCH-RESULTS-HURRAY'] = "Hurray!!!";
 
-$Zitiziti['SEARCH-RESULTS-RESULTS-FOUND-FOR'] = "result(s) Found for";
+$BIZBOOK['SEARCH-RESULTS-RESULTS-FOUND-FOR'] = "result(s) Found for";
 
 //************************* ALL ALERT & ERROR MESSAGES ***********
 
-$Zitiziti['LISTINGS_LIMIT_EXCEED_MESSAGE'] = "Your Listings Limit Exceeded!! Upgrade your plan and enjoy our services";
+$BIZBOOK['LISTINGS_LIMIT_EXCEED_MESSAGE'] = "Your Listings Limit Exceeded!! Upgrade your plan and enjoy our services";
 
-$Zitiziti['PRODUCTS_LIMIT_EXCEED_MESSAGE'] = "Your Products Limit Exceeded!! Upgrade your plan and enjoy our services";
+$BIZBOOK['PRODUCTS_LIMIT_EXCEED_MESSAGE'] = "Your Products Limit Exceeded!! Upgrade your plan and enjoy our services";
 
-$Zitiziti['BLOGS_LIMIT_EXCEED_MESSAGE'] = "Your Blog post Limit Exceeded!! Upgrade your plan and enjoy our services";
+$BIZBOOK['BLOGS_LIMIT_EXCEED_MESSAGE'] = "Your Blog post Limit Exceeded!! Upgrade your plan and enjoy our services";
 
-$Zitiziti['EVENTS_LIMIT_EXCEED_MESSAGE'] = "Your Events Limit Exceeded!! Upgrade your plan and enjoy our services";
+$BIZBOOK['EVENTS_LIMIT_EXCEED_MESSAGE'] = "Your Events Limit Exceeded!! Upgrade your plan and enjoy our services";
 
-$Zitiziti['JOBS_LIMIT_EXCEED_MESSAGE'] = "Your Jobs Limit Exceeded!! Upgrade your plan and enjoy our services";
+$BIZBOOK['JOBS_LIMIT_EXCEED_MESSAGE'] = "Your Jobs Limit Exceeded!! Upgrade your plan and enjoy our services";
 
-$Zitiziti['USER_NOT_ACTIVATED_MESSAGE'] = "Important: Your Profile has not been activated yet. You can create your Listings, Products, Events, Blogs. But it will be posted after profile activation.";
+$BIZBOOK['USER_NOT_ACTIVATED_MESSAGE'] = "Important: Your Profile has not been activated yet. You can create your Listings, Products, Events, Blogs. But it will be posted after profile activation.";
 
-$Zitiziti['GENERAL_USER_NOT_ACTIVATED_MESSAGE'] = "Important: Your Profile has not been activated yet. Once we done your verification, we email you soon when your account is fully activated.";
+$BIZBOOK['GENERAL_USER_NOT_ACTIVATED_MESSAGE'] = "Important: Your Profile has not been activated yet. Once we done your verification, we email you soon when your account is fully activated.";
 
-$Zitiziti['OOPS_SOMETHING_WENT_WRONG'] = "Oops!! Something Went Wrong Try Later!!!";
+$BIZBOOK['OOPS_SOMETHING_WENT_WRONG'] = "Oops!! Something Went Wrong Try Later!!!";
 
-$Zitiziti['ENQUIRY_SUCCESSFUL_MESSAGE'] = "Your Enquiry Is Submitted Successfully!!!";
+$BIZBOOK['ENQUIRY_SUCCESSFUL_MESSAGE'] = "Your Enquiry Is Submitted Successfully!!!";
 
-$Zitiziti['PLACE_ADD_SUCCESSFUL_MESSAGE'] = "Your Place Add Request Is Submitted Successfully!!!";
+$BIZBOOK['PLACE_ADD_SUCCESSFUL_MESSAGE'] = "Your Place Add Request Is Submitted Successfully!!!";
 
-$Zitiziti['ENQUIRY_OWN_LISTING_MESSAGE'] = "You cannot make enquiry on your own listing!!";
+$BIZBOOK['ENQUIRY_OWN_LISTING_MESSAGE'] = "You cannot make enquiry on your own listing!!";
 
-$Zitiziti['JOB_ENQUIRY_SUCCESSFUL_MESSAGE'] = "You have successfully applied for this job.";
+$BIZBOOK['JOB_ENQUIRY_SUCCESSFUL_MESSAGE'] = "You have successfully applied for this job.";
 
-$Zitiziti['JOB_ENQUIRY_OWN_JOB_MESSAGE'] = "You cannot make enquiry on your own job!!";
+$BIZBOOK['JOB_ENQUIRY_OWN_JOB_MESSAGE'] = "You cannot make enquiry on your own job!!";
 
-$Zitiziti['JOB_ENQUIRY_ALREADY_APPLIED_JOB_MESSAGE'] = "Already Applied on this job!!";
+$BIZBOOK['JOB_ENQUIRY_ALREADY_APPLIED_JOB_MESSAGE'] = "Already Applied on this job!!";
 
-$Zitiziti['JOB_ENQUIRY_NO_PROFILE_MESSAGE'] = "You don't have job profile. Please <a href='$JOB_PROFILE_CREATION_URL_WITHOUT_SLASH'>click here</a> to create and apply.";
+$BIZBOOK['JOB_ENQUIRY_NO_PROFILE_MESSAGE'] = "You don't have job profile. Please <a href='$JOB_PROFILE_CREATION_URL_WITHOUT_SLASH'>click here</a> to create and apply.";
 
-$Zitiziti['SERVICE_EXPERT_ENQUIRY_SUCCESSFUL_MESSAGE'] = "Your Enquiry Is Submitted Successfully!!!";
+$BIZBOOK['SERVICE_EXPERT_ENQUIRY_SUCCESSFUL_MESSAGE'] = "Your Enquiry Is Submitted Successfully!!!";
 
-$Zitiziti['SERVICE_EXPERT_ENQUIRY_OWN_JOB_MESSAGE'] = "You cannot make enquiry on your own Service!!";
+$BIZBOOK['SERVICE_EXPERT_ENQUIRY_OWN_JOB_MESSAGE'] = "You cannot make enquiry on your own Service!!";
 
-$Zitiziti['ENQUIRY_OWN_PRODUCT_MESSAGE'] = "You cannot make enquiry on your own product!!";
+$BIZBOOK['ENQUIRY_OWN_PRODUCT_MESSAGE'] = "You cannot make enquiry on your own product!!";
 
-$Zitiziti['ENQUIRY_OWN_EVENT_MESSAGE'] = "You cannot make enquiry on your own event!!";
+$BIZBOOK['ENQUIRY_OWN_EVENT_MESSAGE'] = "You cannot make enquiry on your own event!!";
 
-$Zitiziti['ENQUIRY_OWN_BLOG_MESSAGE'] = "You cannot make enquiry on your own blog!!";
+$BIZBOOK['ENQUIRY_OWN_BLOG_MESSAGE'] = "You cannot make enquiry on your own blog!!";
 
-$Zitiziti['ACTIVATION_EMAIL_VERIFICATION_SUCCESS_MESSAGE'] = "Your Email Verification have been Sucessfully Completed!! Please Login and Enjoy our Services!!";
+$BIZBOOK['ACTIVATION_EMAIL_VERIFICATION_SUCCESS_MESSAGE'] = "Your Email Verification have been Sucessfully Completed!! Please Login and Enjoy our Services!!";
 
-$Zitiziti['ACTIVATION_EMAIL_VERIFICATION_FAILURE_MESSAGE'] = "Your Verification Code Is Wrong!!! Please try some other time!!!";
+$BIZBOOK['ACTIVATION_EMAIL_VERIFICATION_FAILURE_MESSAGE'] = "Your Verification Code Is Wrong!!! Please try some other time!!!";
 
-$Zitiziti['LISTINGS_NO_LISTINGS_MESSAGE'] = "!!! Oops No Listing with the Selected Category";
+$BIZBOOK['LISTINGS_NO_LISTINGS_MESSAGE'] = "!!! Oops No Listing with the Selected Category";
 
-$Zitiziti['PRODUCTS_NO_PRODUCTS_MESSAGE'] = "!!! Oops No Product with the Selected Category";
+$BIZBOOK['PRODUCTS_NO_PRODUCTS_MESSAGE'] = "!!! Oops No Product with the Selected Category";
 
-$Zitiziti['JOBS_NO_JOBS_MESSAGE'] = "!!! Oops No Job with the Selected Category";
+$BIZBOOK['JOBS_NO_JOBS_MESSAGE'] = "!!! Oops No Job with the Selected Category";
 
-$Zitiziti['SERVICE_EXPERTS_NO_SERVICE_EXPERTS_MESSAGE'] = "!!! Oops No Service Experts with the Selected Category";
+$BIZBOOK['SERVICE_EXPERTS_NO_SERVICE_EXPERTS_MESSAGE'] = "!!! Oops No Service Experts with the Selected Category";
 
-$Zitiziti['NEWS_NO_NEWS_MESSAGE'] = "!!! Oops No News with the Selected Category";
+$BIZBOOK['NEWS_NO_NEWS_MESSAGE'] = "!!! Oops No News with the Selected Category";
 
-$Zitiziti['EVENTS_NO_EVENTS_MESSAGE'] = "!!! Oops No Events with the Selected Category";
+$BIZBOOK['EVENTS_NO_EVENTS_MESSAGE'] = "!!! Oops No Events with the Selected Category";
 
-$Zitiziti['PLACES_NO_PLACES_MESSAGE'] = "!!! Oops No Places with the Selected Category";
+$BIZBOOK['PLACES_NO_PLACES_MESSAGE'] = "!!! Oops No Places with the Selected Category";
 
-$Zitiziti['BLOGS_NO_BLOGS_MESSAGE'] = "!!! Oops No Blogs with the Selected Category";
+$BIZBOOK['BLOGS_NO_BLOGS_MESSAGE'] = "!!! Oops No Blogs with the Selected Category";
 
-$Zitiziti['NEWS_NEWSLETTER_SUBSCRIPTION_SUCCESSFUL_MESSAGE'] = "Your Newsletter Subscription Is Submitted Successfully!!!";
+$BIZBOOK['NEWS_NEWSLETTER_SUBSCRIPTION_SUCCESSFUL_MESSAGE'] = "Your Newsletter Subscription Is Submitted Successfully!!!";
 
-$Zitiziti['BLOGS_DELETE_SUCCESSFUL_MESSAGE'] = "Blog has been Deleted Successfully!!!";
+$BIZBOOK['BLOGS_DELETE_SUCCESSFUL_MESSAGE'] = "Blog has been Deleted Successfully!!!";
 
-$Zitiziti['BLOGS_INSERT_SUCCESSFUL_MESSAGE'] = "New Blog has been created Successfully!!!";
+$BIZBOOK['BLOGS_INSERT_SUCCESSFUL_MESSAGE'] = "New Blog has been created Successfully!!!";
 
-$Zitiziti['BLOGS_UPDATE_SUCCESSFUL_MESSAGE'] = "Your Blog has been Updated Successfully!!!";
+$BIZBOOK['BLOGS_UPDATE_SUCCESSFUL_MESSAGE'] = "Your Blog has been Updated Successfully!!!";
 
-$Zitiziti['NO_CITY_FOUND_MESSAGE'] = "No City Found";
+$BIZBOOK['NO_CITY_FOUND_MESSAGE'] = "No City Found";
 
-$Zitiziti['NO_SUB_CATEGORY_FOUND_MESSAGE'] = "No Sub Category Found";
+$BIZBOOK['NO_SUB_CATEGORY_FOUND_MESSAGE'] = "No Sub Category Found";
 
-$Zitiziti['NO_AREA_FOUND_MESSAGE'] = "No Area Found";
+$BIZBOOK['NO_AREA_FOUND_MESSAGE'] = "No Area Found";
 
-$Zitiziti['COMPANY_PROFILE_SUCCESS_MESSAGE'] = "Company Profile Successfully Updated!!!";
+$BIZBOOK['COMPANY_PROFILE_SUCCESS_MESSAGE'] = "Company Profile Successfully Updated!!!";
 
-$Zitiziti['COUPON_INSERT_SUCCESS_MESSAGE'] = "New coupon has been created Successfully!!!";
+$BIZBOOK['COUPON_INSERT_SUCCESS_MESSAGE'] = "New coupon has been created Successfully!!!";
 
-$Zitiziti['COUPON_DELETE_SUCCESS_MESSAGE'] = "Coupon has been Deleted Successfully!!!";
+$BIZBOOK['COUPON_DELETE_SUCCESS_MESSAGE'] = "Coupon has been Deleted Successfully!!!";
 
-$Zitiziti['COUPON_UPDATE_SUCCESS_MESSAGE'] = "Your Coupon has been Updated Successfully!!!";
+$BIZBOOK['COUPON_UPDATE_SUCCESS_MESSAGE'] = "Your Coupon has been Updated Successfully!!!";
 
-$Zitiziti['USER_SETTING_UPDATE_SUCCESS_MESSAGE'] = "Your Settings has been Updated Successfully!!!";
+$BIZBOOK['USER_SETTING_UPDATE_SUCCESS_MESSAGE'] = "Your Settings has been Updated Successfully!!!";
 
-$Zitiziti['USER_SEO_UPDATE_SUCCESS_MESSAGE'] = "Your SEO Data's has been Updated Successfully!!!";
+$BIZBOOK['USER_SEO_UPDATE_SUCCESS_MESSAGE'] = "Your SEO Data's has been Updated Successfully!!!";
 
-$Zitiziti['USER_REVIEW_DELETE_SUCCESSFUL_MESSAGE'] = "Review has been Deleted Successfully!!!";
+$BIZBOOK['USER_REVIEW_DELETE_SUCCESSFUL_MESSAGE'] = "Review has been Deleted Successfully!!!";
 
-$Zitiziti['GIVEN_EMAIL_ID_ALREADY_EXISTS_MESSAGE'] = "The Given Email Id is Already Exist Try Other!!!";
+$BIZBOOK['GIVEN_EMAIL_ID_ALREADY_EXISTS_MESSAGE'] = "The Given Email Id is Already Exist Try Other!!!";
 
-$Zitiziti['GIVEN_MOBILE_NUMBER_ALREADY_EXISTS_MESSAGE'] = "The Given Mobile Number is Already Exist Try Other!!!";
+$BIZBOOK['GIVEN_MOBILE_NUMBER_ALREADY_EXISTS_MESSAGE'] = "The Given Mobile Number is Already Exist Try Other!!!";
 
-$Zitiziti['USER_INSERT_SUCCESS_MESSAGE'] = "Your account has been created successfully and we send you the confirmation mail to your registered email id. Please confirm and join with us";
+$BIZBOOK['USER_INSERT_SUCCESS_MESSAGE'] = "Your account has been created successfully and we send you the confirmation mail to your registered email id. Please confirm and join with us";
 
-$Zitiziti['USER_RESEND_VERIFICATION_SUCCESS_MESSAGE'] = "Your verification code have been successfully sent to your registered email id.";
+$BIZBOOK['USER_RESEND_VERIFICATION_SUCCESS_MESSAGE'] = "Your verification code have been successfully sent to your registered email id.";
 
-$Zitiziti['PAYMENT_SUCCESSFULL_USER_UPGRADE_SUCESS'] = "Payment Successful!! The User has been Upgraded Successfully!!!";
+$BIZBOOK['PAYMENT_SUCCESSFULL_USER_UPGRADE_SUCESS'] = "Payment Successful!! The User has been Upgraded Successfully!!!";
 
-$Zitiziti['RAZOR_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'] = "Razor Pay Payment Successful!! The User Point has been Updated Successfully!!!";
+$BIZBOOK['RAZOR_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'] = "Razor Pay Payment Successful!! The User Point has been Updated Successfully!!!";
 
-$Zitiziti['PAYTM_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'] = "PayTm Payment Successful!! The User Point has been Updated Successfully!!!";
+$BIZBOOK['PAYTM_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'] = "PayTm Payment Successful!! The User Point has been Updated Successfully!!!";
 
-$Zitiziti['STRIPE_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'] = "Stripe Payment Successful!! The User Point has been Updated Successfully!!!";
+$BIZBOOK['STRIPE_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'] = "Stripe Payment Successful!! The User Point has been Updated Successfully!!!";
 
-$Zitiziti['PAYPAL_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'] = "PayPal Payment Successful!! The User Point has been Updated Successfully!!!";
+$BIZBOOK['PAYPAL_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'] = "PayPal Payment Successful!! The User Point has been Updated Successfully!!!";
 
-$Zitiziti['RAZOR_POINT_PAYMENT_FAILURE_MESSAGE'] = "Razor Pay Payment Failed!! Try later !!!";
+$BIZBOOK['RAZOR_POINT_PAYMENT_FAILURE_MESSAGE'] = "Razor Pay Payment Failed!! Try later !!!";
 
-$Zitiziti['PAYTM_POINT_PAYMENT_FAILURE_MESSAGE'] = "PayTm Point Payment Failed!! Try later !!!";
+$BIZBOOK['PAYTM_POINT_PAYMENT_FAILURE_MESSAGE'] = "PayTm Point Payment Failed!! Try later !!!";
 
-$Zitiziti['STRIPE_POINT_PAYMENT_FAILURE_MESSAGE'] = "Stripe Point Payment Failed!! Try later !!!";
+$BIZBOOK['STRIPE_POINT_PAYMENT_FAILURE_MESSAGE'] = "Stripe Point Payment Failed!! Try later !!!";
 
-$Zitiziti['STRIPE_PAYMENT_FAILURE_MESSAGE'] = "Stripe Payment Failed!! Try later !!!";
+$BIZBOOK['STRIPE_PAYMENT_FAILURE_MESSAGE'] = "Stripe Payment Failed!! Try later !!!";
 
-$Zitiziti['PAYPAL_POINT_PAYMENT_FAILURE_MESSAGE'] = "PayPal Point Payment Failed!! Try later !!!";
+$BIZBOOK['PAYPAL_POINT_PAYMENT_FAILURE_MESSAGE'] = "PayPal Point Payment Failed!! Try later !!!";
 
-$Zitiziti['PAYPAL_PAYMENT_FAILURE_MESSAGE'] = "PayPal Payment Failed!! Try later !!!";
+$BIZBOOK['PAYPAL_PAYMENT_FAILURE_MESSAGE'] = "PayPal Payment Failed!! Try later !!!";
 
-$Zitiziti['COD_PAYMENT_SUCCESS_MESSAGE'] = "COD Payment has been initiated Successfully!! Our Team will contact you soon!!!";
+$BIZBOOK['COD_PAYMENT_SUCCESS_MESSAGE'] = "COD Payment has been initiated Successfully!! Our Team will contact you soon!!!";
 
-$Zitiziti['REDIRECTING_TO_RAZOR_PAY'] = "Please Wait!!! Redirecting You To Razorpay....";
+$BIZBOOK['REDIRECTING_TO_RAZOR_PAY'] = "Please Wait!!! Redirecting You To Razorpay....";
 
-$Zitiziti['REDIRECTING_TO_PAYPAL'] = "Please Wait!!! Redirecting You To PayPal....";
+$BIZBOOK['REDIRECTING_TO_PAYPAL'] = "Please Wait!!! Redirecting You To PayPal....";
 
-$Zitiziti['EXPIRED_PROMOTION_DELETE_SUCCESS_MESSAGE'] = "Expired Promotion has been Deleted Successfully!!!";
+$BIZBOOK['EXPIRED_PROMOTION_DELETE_SUCCESS_MESSAGE'] = "Expired Promotion has been Deleted Successfully!!!";
 
-$Zitiziti['OOPS_DONT_HAVE_ENOUGH_POINTS_BUY_SOME_POINTS'] = "Oops!! You don't have enough points to promote your listing!! Buy some points!!";
+$BIZBOOK['OOPS_DONT_HAVE_ENOUGH_POINTS_BUY_SOME_POINTS'] = "Oops!! You don't have enough points to promote your listing!! Buy some points!!";
 
-$Zitiziti['USER_PROFILE_UPDATE_SUCCESS_MESSAGE'] = "Your Profile has been Updated Successfully!!!";
+$BIZBOOK['USER_PROFILE_UPDATE_SUCCESS_MESSAGE'] = "Your Profile has been Updated Successfully!!!";
 
-$Zitiziti['NO_LISTINGS_TO_SHOW'] = "No Listings To Show";
+$BIZBOOK['NO_LISTINGS_TO_SHOW'] = "No Listings To Show";
 
-$Zitiziti['NO_BLOGS_TO_SHOW'] = "No Blogs To Show";
+$BIZBOOK['NO_BLOGS_TO_SHOW'] = "No Blogs To Show";
 
-$Zitiziti['NO_EVENTS_TO_SHOW'] = "No Events To Show";
+$BIZBOOK['NO_EVENTS_TO_SHOW'] = "No Events To Show";
 
-$Zitiziti['NO_FOLLOWERS_TO_SHOW'] = "No Followers To Show";
+$BIZBOOK['NO_FOLLOWERS_TO_SHOW'] = "No Followers To Show";
 
-$Zitiziti['PRODUCT_UPDATE_SUCCESS_MESSAGE'] = "Your Product has been Updated Successfully!!!";
+$BIZBOOK['PRODUCT_UPDATE_SUCCESS_MESSAGE'] = "Your Product has been Updated Successfully!!!";
 
-$Zitiziti['PRODUCT_DELETE_SUCCESS_MESSAGE'] = "Product has been Deleted Successfully!!!";
+$BIZBOOK['PRODUCT_DELETE_SUCCESS_MESSAGE'] = "Product has been Deleted Successfully!!!";
 
-$Zitiziti['PRODUCT_INSERT_SUCCESS_MESSAGE'] = "New Product has been created Successfully!!!";
+$BIZBOOK['PRODUCT_INSERT_SUCCESS_MESSAGE'] = "New Product has been created Successfully!!!";
 
-$Zitiziti['JOB_UPDATE_SUCCESS_MESSAGE'] = "Your Job has been Updated Successfully!!!";
+$BIZBOOK['JOB_UPDATE_SUCCESS_MESSAGE'] = "Your Job has been Updated Successfully!!!";
 
-$Zitiziti['JOB_DELETE_SUCCESS_MESSAGE'] = "Job has been Deleted Successfully!!!";
+$BIZBOOK['JOB_DELETE_SUCCESS_MESSAGE'] = "Job has been Deleted Successfully!!!";
 
-$Zitiziti['JOB_INSERT_SUCCESS_MESSAGE'] = "New Job has been created Successfully!!!";
+$BIZBOOK['JOB_INSERT_SUCCESS_MESSAGE'] = "New Job has been created Successfully!!!";
 
-$Zitiziti['JOB_PROFILE_SUCCESS_MESSAGE'] = "Job Profile Successfully Updated!!!";
+$BIZBOOK['JOB_PROFILE_SUCCESS_MESSAGE'] = "Job Profile Successfully Updated!!!";
 
-$Zitiziti['EXPERT_PROFILE_SUCCESS_MESSAGE'] = "Expert Profile Successfully Updated!!!";
+$BIZBOOK['EXPERT_PROFILE_SUCCESS_MESSAGE'] = "Expert Profile Successfully Updated!!!";
 
-$Zitiziti['EXPERT_PROFILE_AVAILABILITY_SUCCESS_MESSAGE'] = "Your Availability Successfully Updated!!!";
+$BIZBOOK['EXPERT_PROFILE_AVAILABILITY_SUCCESS_MESSAGE'] = "Your Availability Successfully Updated!!!";
 
-$Zitiziti['FEEDBACK_INSERT_SUCCESS_MESSAGE'] = "Thanks for your valuable feedback!!!";
+$BIZBOOK['FEEDBACK_INSERT_SUCCESS_MESSAGE'] = "Thanks for your valuable feedback!!!";
 
-$Zitiziti['POINTS_DELETE_SUCCESS_MESSAGE'] = "Points History has been Deleted Successfully!!!";
+$BIZBOOK['POINTS_DELETE_SUCCESS_MESSAGE'] = "Points History has been Deleted Successfully!!!";
 
-$Zitiziti['PLAN_CHANGE_REQUEST_SUCCESS_MESSAGE'] = "Your plan change request have been successfully submitted and we will send you the confirmation mail after approval to your registered email id.";
+$BIZBOOK['PLAN_CHANGE_REQUEST_SUCCESS_MESSAGE'] = "Your plan change request have been successfully submitted and we will send you the confirmation mail after approval to your registered email id.";
 
-$Zitiziti['PLAN_CHANGE_REQUEST_GREETINGS'] = "Greetings from";
+$BIZBOOK['PLAN_CHANGE_REQUEST_GREETINGS'] = "Greetings from";
 
-$Zitiziti['PLAN_CHANGE_REQUEST_RECEIVED'] = "Your Plan Change Request has been received.";
+$BIZBOOK['PLAN_CHANGE_REQUEST_RECEIVED'] = "Your Plan Change Request has been received.";
 
-$Zitiziti['PLAN_CHANGE_REQUEST_PLEASE_WAIT'] = "Please Wait until admin approve your request.";
+$BIZBOOK['PLAN_CHANGE_REQUEST_PLEASE_WAIT'] = "Please Wait until admin approve your request.";
 
-$Zitiziti['PLAN_CHANGE_REQUEST_THANKS'] = "Thanks";
+$BIZBOOK['PLAN_CHANGE_REQUEST_THANKS'] = "Thanks";
 
-$Zitiziti['OOPS_START_DATE_IS_GREATER'] = "Oops!! Your Start date is greater than End Date!! Try Other!!!";
+$BIZBOOK['OOPS_START_DATE_IS_GREATER'] = "Oops!! Your Start date is greater than End Date!! Try Other!!!";
 
-$Zitiziti['LISTING_PROMOTE_SUCCESS_MESSAGE'] = "Your Listing has been promoted successfully!!!";
+$BIZBOOK['LISTING_PROMOTE_SUCCESS_MESSAGE'] = "Your Listing has been promoted successfully!!!";
 
-$Zitiziti['PLEASE_ENTER_VALID_POINTS_TO_BUY'] = "Please Enter Valid Point to Buy!!!";
+$BIZBOOK['PLEASE_ENTER_VALID_POINTS_TO_BUY'] = "Please Enter Valid Point to Buy!!!";
 
-$Zitiziti['NEW_AD_REQUEST_SUCCESS_MESSAGE'] = "New Ad Request has been raised Successfully!!!";
+$BIZBOOK['NEW_AD_REQUEST_SUCCESS_MESSAGE'] = "New Ad Request has been raised Successfully!!!";
 
-$Zitiziti['YOUR_PASSWORD_IS_WRONG'] = "Your Password Is Wrong!!!";
+$BIZBOOK['YOUR_PASSWORD_IS_WRONG'] = "Your Password Is Wrong!!!";
 
-$Zitiziti['YOUR_EMAIL_ID_IS_WRONG'] = "Your Email Id Is Wrong!!!";
+$BIZBOOK['YOUR_EMAIL_ID_IS_WRONG'] = "Your Email Id Is Wrong!!!";
 
-$Zitiziti['LISTING_RESTORED_SUCCESS_MESSAGE'] = "Listing has been Restored Successfully!!!";
+$BIZBOOK['LISTING_RESTORED_SUCCESS_MESSAGE'] = "Listing has been Restored Successfully!!!";
 
-$Zitiziti['LISTING_DELETED_SUCCESS_MESSAGE'] = "Listing has been Deleted Successfully!!!";
+$BIZBOOK['LISTING_DELETED_SUCCESS_MESSAGE'] = "Listing has been Deleted Successfully!!!";
 
-$Zitiziti['LIKED_LISTING_DELETED_SUCCESS_MESSAGE'] = "Liked Listing has been Deleted Successfully!!!";
+$BIZBOOK['LIKED_LISTING_DELETED_SUCCESS_MESSAGE'] = "Liked Listing has been Deleted Successfully!!!";
 
-$Zitiziti['PASSWORD_SENT_SUCCESS_MESSAGE'] = "Your Password has been Sucessfully Sent your Mail Id!!!";
+$BIZBOOK['PASSWORD_SENT_SUCCESS_MESSAGE'] = "Your Password has been Sucessfully Sent your Mail Id!!!";
 
-$Zitiziti['PASSWORD_EMAIL_ID_NOT_WITH_US_MESSAGE'] = "The Given Mail Id is Not Registered with Us!!!";
+$BIZBOOK['PASSWORD_EMAIL_ID_NOT_WITH_US_MESSAGE'] = "The Given Mail Id is Not Registered with Us!!!";
 
-$Zitiziti['EVENT_UPDATE_SUCCESS_MESSAGE'] = "Your Event has been Updated Successfully!!!";
+$BIZBOOK['EVENT_UPDATE_SUCCESS_MESSAGE'] = "Your Event has been Updated Successfully!!!";
 
-$Zitiziti['EVENT_DELETE_SUCCESS_MESSAGE'] = "Event has been Deleted Successfully!!!";
+$BIZBOOK['EVENT_DELETE_SUCCESS_MESSAGE'] = "Event has been Deleted Successfully!!!";
 
-$Zitiziti['EVENT_INSERT_SUCCESS_MESSAGE'] = "New Event has been created Successfully!!!";
+$BIZBOOK['EVENT_INSERT_SUCCESS_MESSAGE'] = "New Event has been created Successfully!!!";
 
-$Zitiziti['LISTING_DUPLICATE_INSERT_SUCCESS_MESSAGE'] = "New Duplicate Listing has been created Successfully!!!";
+$BIZBOOK['LISTING_DUPLICATE_INSERT_SUCCESS_MESSAGE'] = "New Duplicate Listing has been created Successfully!!!";
 
-$Zitiziti['ENQUIRY_DELETE_SUCCESS_MESSAGE'] = "Listing Booking has been Deleted Successfully!!!";
+$BIZBOOK['ENQUIRY_DELETE_SUCCESS_MESSAGE'] = "Listing Booking has been Deleted Successfully!!!";
 
-$Zitiziti['SERVICE_EXPERT_ENQUIRY_DELETE_SUCCESS_MESSAGE'] = "Expert Enquiry has been Deleted Successfully!!!";
+$BIZBOOK['SERVICE_EXPERT_ENQUIRY_DELETE_SUCCESS_MESSAGE'] = "Expert Enquiry has been Deleted Successfully!!!";
 
-$Zitiziti['JOB_APPLIED_DELETE_SUCCESS_MESSAGE'] = "Applied Job has been Deleted Successfully!!!";
+$BIZBOOK['JOB_APPLIED_DELETE_SUCCESS_MESSAGE'] = "Applied Job has been Deleted Successfully!!!";
 
-$Zitiziti['JOB_PROFILE_DELETE_SUCCESS_MESSAGE'] = "Job Profile has been Deleted Successfully!!!";
+$BIZBOOK['JOB_PROFILE_DELETE_SUCCESS_MESSAGE'] = "Job Profile has been Deleted Successfully!!!";
 
 
 //************************* ALL MAIL SUBJECT MESSAGES ***********
 
-$Zitiziti['BLOG_INSERT_ADMIN_SUBJECT'] = "-New Blog has been created";
+$BIZBOOK['BLOG_INSERT_ADMIN_SUBJECT'] = "-New Blog has been created";
 
-$Zitiziti['BLOG_INSERT_CLIENT_SUBJECT'] = "-blog Creation Successful";
+$BIZBOOK['BLOG_INSERT_CLIENT_SUBJECT'] = "-blog Creation Successful";
 
-$Zitiziti['BLOG_UPDATE_ADMIN_SUBJECT'] = "- blog has been updated";
+$BIZBOOK['BLOG_UPDATE_ADMIN_SUBJECT'] = "- blog has been updated";
 
-$Zitiziti['BLOG_UPDATE_CLIENT_SUBJECT'] = "-blog Update Successful";
+$BIZBOOK['BLOG_UPDATE_CLIENT_SUBJECT'] = "-blog Update Successful";
 
-$Zitiziti['USER_INSERT_ADMIN_SUBJECT'] = "-New Registration";
+$BIZBOOK['USER_INSERT_ADMIN_SUBJECT'] = "-New Registration";
 
-$Zitiziti['USER_INSERT_CLIENT_SUBJECT'] = "Registration Successful";
+$BIZBOOK['USER_INSERT_CLIENT_SUBJECT'] = "Registration Successful";
 
-$Zitiziti['USER_VERIFICATION_RESENT_CLIENT_SUBJECT'] = "Your Verification Code";
+$BIZBOOK['USER_VERIFICATION_RESENT_CLIENT_SUBJECT'] = "Your Verification Code";
 
-$Zitiziti['PRODUCT_UPDATE_ADMIN_SUBJECT'] = "- Product has been updated";
+$BIZBOOK['PRODUCT_UPDATE_ADMIN_SUBJECT'] = "- Product has been updated";
 
-$Zitiziti['PRODUCT_UPDATE_CLIENT_SUBJECT'] = "- Product Update Successful";
+$BIZBOOK['PRODUCT_UPDATE_CLIENT_SUBJECT'] = "- Product Update Successful";
 
-$Zitiziti['PRODUCT_INSERT_ADMIN_SUBJECT'] = "-New Product has been created";
+$BIZBOOK['PRODUCT_INSERT_ADMIN_SUBJECT'] = "-New Product has been created";
 
-$Zitiziti['PRODUCT_INSERT_CLIENT_SUBJECT'] = "- Product Creation Successful";
+$BIZBOOK['PRODUCT_INSERT_CLIENT_SUBJECT'] = "- Product Creation Successful";
 
-$Zitiziti['JOB_UPDATE_ADMIN_SUBJECT'] = "- Job has been updated";
+$BIZBOOK['JOB_UPDATE_ADMIN_SUBJECT'] = "- Job has been updated";
 
-$Zitiziti['JOB_UPDATE_CLIENT_SUBJECT'] = "- Job Update Successful";
+$BIZBOOK['JOB_UPDATE_CLIENT_SUBJECT'] = "- Job Update Successful";
 
-$Zitiziti['JOB_INSERT_ADMIN_SUBJECT'] = "-New Job has been created";
+$BIZBOOK['JOB_INSERT_ADMIN_SUBJECT'] = "-New Job has been created";
 
-$Zitiziti['JOB_INSERT_CLIENT_SUBJECT'] = "- Job Creation Successful";
+$BIZBOOK['JOB_INSERT_CLIENT_SUBJECT'] = "- Job Creation Successful";
 
-$Zitiziti['PLAN_CHANGE_CLIENT_SUBJECT'] = "- Plan Change Request";
+$BIZBOOK['PLAN_CHANGE_CLIENT_SUBJECT'] = "- Plan Change Request";
 
-$Zitiziti['LISTING_UPDATE_ADMIN_SUBJECT'] = "- Listing has been updated";
+$BIZBOOK['LISTING_UPDATE_ADMIN_SUBJECT'] = "- Listing has been updated";
 
-$Zitiziti['LISTING_UPDATE_CLIENT_SUBJECT'] = "- Listing Update Successful";
+$BIZBOOK['LISTING_UPDATE_CLIENT_SUBJECT'] = "- Listing Update Successful";
 
-$Zitiziti['LISTING_INSERT_ADMIN_SUBJECT'] = "-New Listing has been created";
+$BIZBOOK['LISTING_INSERT_ADMIN_SUBJECT'] = "-New Listing has been created";
 
-$Zitiziti['LISTING_INSERT_CLIENT_SUBJECT'] = "- Listing Creation Successful";
+$BIZBOOK['LISTING_INSERT_CLIENT_SUBJECT'] = "- Listing Creation Successful";
 
-$Zitiziti['FORGET_PASSWORD_ADMIN_SUBJECT'] = "-Forget Password";
+$BIZBOOK['FORGET_PASSWORD_ADMIN_SUBJECT'] = "-Forget Password";
 
-$Zitiziti['FORGET_PASSWORD_CLIENT_SUBJECT'] = "- Listing Creation Successful";
+$BIZBOOK['FORGET_PASSWORD_CLIENT_SUBJECT'] = "- Listing Creation Successful";
 
-$Zitiziti['EVENT_UPDATE_ADMIN_SUBJECT'] = "- Event has been updated";
+$BIZBOOK['EVENT_UPDATE_ADMIN_SUBJECT'] = "- Event has been updated";
 
-$Zitiziti['EVENT_UPDATE_CLIENT_SUBJECT'] = "- Event Update Successful";
+$BIZBOOK['EVENT_UPDATE_CLIENT_SUBJECT'] = "- Event Update Successful";
 
-$Zitiziti['EVENT_INSERT_ADMIN_SUBJECT'] = "- New Event has been created";
+$BIZBOOK['EVENT_INSERT_ADMIN_SUBJECT'] = "- New Event has been created";
 
-$Zitiziti['EVENT_INSERT_CLIENT_SUBJECT'] = "- Event Creation Successful";
+$BIZBOOK['EVENT_INSERT_CLIENT_SUBJECT'] = "- Event Creation Successful";
 
 //************************* ABOUT US PAGE ***********
 
-$Zitiziti['pg_abo_ban_tit'] = "About us";
+$BIZBOOK['pg_abo_ban_tit'] = "About us";
 
-$Zitiziti['pg_abo_ban_sub_tit'] = "injected humourThere are many variations of passages of Lorem Ipsum available now";
+$BIZBOOK['pg_abo_ban_sub_tit'] = "injected humourThere are many variations of passages of Lorem Ipsum available now";
 
-$Zitiziti['pg_abo_sec1'] = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humourThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humourThere are many variations of passages of Lorem Ipsum available.";
+$BIZBOOK['pg_abo_sec1'] = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humourThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humourThere are many variations of passages of Lorem Ipsum available.";
 
-$Zitiziti['pg_abo_sec2'] = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humourThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humourThere are many variations of passages of Lorem Ipsum available.";
+$BIZBOOK['pg_abo_sec2'] = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humourThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humourThere are many variations of passages of Lorem Ipsum available.";
 
-$Zitiziti['pg_abo_why_tit'] = "Why Choose Us";
+$BIZBOOK['pg_abo_why_tit'] = "Why Choose Us";
 
-$Zitiziti['pg_abo_why_sub'] = "Explore some of the best tips from around the world from our
+$BIZBOOK['pg_abo_why_sub'] = "Explore some of the best tips from around the world from our
 partners and friends";
 
-$Zitiziti['pg_abo_why_s1_tit'] = "Google indexing";
+$BIZBOOK['pg_abo_why_s1_tit'] = "Google indexing";
 
-$Zitiziti['pg_abo_why_s1_sub'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
+$BIZBOOK['pg_abo_why_s1_sub'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
 
-$Zitiziti['pg_abo_why_s2_tit'] = "More popular";
+$BIZBOOK['pg_abo_why_s2_tit'] = "More popular";
 
-$Zitiziti['pg_abo_why_s2_sub'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
+$BIZBOOK['pg_abo_why_s2_sub'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
 
-$Zitiziti['pg_abo_why_s3_tit'] = "Get more leads";
+$BIZBOOK['pg_abo_why_s3_tit'] = "Get more leads";
 
-$Zitiziti['pg_abo_why_s3_sub'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
+$BIZBOOK['pg_abo_why_s3_sub'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
 
-$Zitiziti['pg_abo_why_s4_tit'] = "Archive goles";
+$BIZBOOK['pg_abo_why_s4_tit'] = "Archive goles";
 
-$Zitiziti['pg_abo_why_s4_sub'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
+$BIZBOOK['pg_abo_why_s4_sub'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
 
-$Zitiziti['pg_abo_team_tit'] = "Out Team";
+$BIZBOOK['pg_abo_team_tit'] = "Out Team";
 
-$Zitiziti['pg_abo_why_team_sub'] = "Explore some of the best tips from around the world from our
+$BIZBOOK['pg_abo_why_team_sub'] = "Explore some of the best tips from around the world from our
 partners and friends";
 
-$Zitiziti['pg_abo_tem_u1_nam'] = "John smith";
+$BIZBOOK['pg_abo_tem_u1_nam'] = "John smith";
 
-$Zitiziti['pg_abo_tem_u1_dec'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
+$BIZBOOK['pg_abo_tem_u1_dec'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
 
-$Zitiziti['pg_abo_tem_u2_nam'] = "Lusia Ann";
+$BIZBOOK['pg_abo_tem_u2_nam'] = "Lusia Ann";
 
-$Zitiziti['pg_abo_tem_u2_dec'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
+$BIZBOOK['pg_abo_tem_u2_dec'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
 
-$Zitiziti['pg_abo_tem_u3_nam'] = "Mark luberk";
+$BIZBOOK['pg_abo_tem_u3_nam'] = "Mark luberk";
 
-$Zitiziti['pg_abo_tem_u3_dec'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
+$BIZBOOK['pg_abo_tem_u3_dec'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
 
-$Zitiziti['pg_abo_tem_u4_nam'] = "Anjalena juley";
+$BIZBOOK['pg_abo_tem_u4_nam'] = "Anjalena juley";
 
-$Zitiziti['pg_abo_tem_u4_dec'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
+$BIZBOOK['pg_abo_tem_u4_dec'] = "Fusce imperdiet ullamcorper metus eu fringilla. from around the world from our partners and friends.";
 
 //************************* CONTACT US PAGE ***********
 
-$Zitiziti['pg_contus_tit'] = "Contact Us";
+$BIZBOOK['pg_contus_tit'] = "Contact Us";
 
-$Zitiziti['pg_contus_tit_sub'] = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration";
+$BIZBOOK['pg_contus_tit_sub'] = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration";
 
-$Zitiziti['pg_contus_addre'] = "Address:";
+$BIZBOOK['pg_contus_addre'] = "Address:";
 
-$Zitiziti['pg_contus_cont1'] = "United States:";
+$BIZBOOK['pg_contus_cont1'] = "United States:";
 
-$Zitiziti['pg_contus_cont1_addr'] = "28800 Orchard Lake Road, Suite 180 Farmington Hills, U.S.A.";
+$BIZBOOK['pg_contus_cont1_addr'] = "28800 Orchard Lake Road, Suite 180 Farmington Hills, U.S.A.";
 
-$Zitiziti['pg_contus_cont2'] = "India:";
+$BIZBOOK['pg_contus_cont2'] = "India:";
 
-$Zitiziti['pg_contus_cont2_addr'] = "28800 Orchard Lake Road, Suite 180 Farmington, Chennai, India";
+$BIZBOOK['pg_contus_cont2_addr'] = "28800 Orchard Lake Road, Suite 180 Farmington, Chennai, India";
 
-$Zitiziti['pg_contus_coninfo'] = "Contact info:";
+$BIZBOOK['pg_contus_coninfo'] = "Contact info:";
 
-$Zitiziti['pg_contus_sup_pho'] = "Support: +01 25414 6354";
+$BIZBOOK['pg_contus_sup_pho'] = "Support: +01 25414 6354";
 
-$Zitiziti['pg_contus_enqu'] = "Enquiry: +01 9867 4326";
+$BIZBOOK['pg_contus_enqu'] = "Enquiry: +01 9867 4326";
 
-$Zitiziti['pg_contus_email1'] = "Email: support@company.com";
+$BIZBOOK['pg_contus_email1'] = "Email: support@company.com";
 
-$Zitiziti['pg_contus_email2'] = "Email: support@company.com";
+$BIZBOOK['pg_contus_email2'] = "Email: support@company.com";
 
-$Zitiziti['pg_contus_web_tit'] = "Website & Social media:";
+$BIZBOOK['pg_contus_web_tit'] = "Website & Social media:";
 
-$Zitiziti['pg_contus_web'] = "www.rn53themes.net";
+$BIZBOOK['pg_contus_web'] = "www.rn53themes.net";
 
-$Zitiziti['pg_contus_fb'] = "Facebook";
+$BIZBOOK['pg_contus_fb'] = "Facebook";
 
-$Zitiziti['pg_contus_twi'] = "Twitter";
+$BIZBOOK['pg_contus_twi'] = "Twitter";
 
-$Zitiziti['pg_contus_web_link'] = "https://rn53themes.net/";
+$BIZBOOK['pg_contus_web_link'] = "https://rn53themes.net/";
 
-$Zitiziti['pg_contus_fb_link'] = "https://www.facebook.com/53themes";
+$BIZBOOK['pg_contus_fb_link'] = "https://www.facebook.com/53themes";
 
-$Zitiziti['pg_contus_twi_link'] = "https://twitter.com/53themes";
+$BIZBOOK['pg_contus_twi_link'] = "https://twitter.com/53themes";
 
 
 //************************* FAQ PAGE ***********
 
-$Zitiziti['pg_faq_head'] = "FAQ";
+$BIZBOOK['pg_faq_head'] = "FAQ";
 
-$Zitiziti['pg_faq_tit'] = "Frequently Asked Questions";
+$BIZBOOK['pg_faq_tit'] = "Frequently Asked Questions";
 
-$Zitiziti['pg_faq_sub_tit'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_faq_sub_tit'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
 
-$Zitiziti['pg_faq_q1'] = "How to create new listing?";
+$BIZBOOK['pg_faq_q1'] = "How to create new listing?";
 
-$Zitiziti['pg_faq_a1'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_faq_a1'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
 
-$Zitiziti['pg_faq_q2'] = "How to change free listing to premium listing?";
+$BIZBOOK['pg_faq_q2'] = "How to change free listing to premium listing?";
 
-$Zitiziti['pg_faq_a2'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_faq_a2'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
 
-$Zitiziti['pg_faq_q3'] = "How can i change my user type?";
+$BIZBOOK['pg_faq_q3'] = "How can i change my user type?";
 
-$Zitiziti['pg_faq_a3'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_faq_a3'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
 
-$Zitiziti['pg_faq_q4'] = "How to make Payment?";
+$BIZBOOK['pg_faq_q4'] = "How to make Payment?";
 
-$Zitiziti['pg_faq_a4'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_faq_a4'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
 
-$Zitiziti['pg_faq_q5'] = "How to create Ads?";
+$BIZBOOK['pg_faq_q5'] = "How to create Ads?";
 
-$Zitiziti['pg_faq_a5'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_faq_a5'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
 
-$Zitiziti['pg_faq_q6'] = "What is user type?";
+$BIZBOOK['pg_faq_q6'] = "What is user type?";
 
-$Zitiziti['pg_faq_a6'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_faq_a6'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
 
-$Zitiziti['pg_faq_q7'] = "How to contact support team?";
+$BIZBOOK['pg_faq_q7'] = "How to contact support team?";
 
-$Zitiziti['pg_faq_a7'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_faq_a7'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
 
-$Zitiziti['pg_faq_q8'] = "How to create new listing?";
+$BIZBOOK['pg_faq_q8'] = "How to create new listing?";
 
-$Zitiziti['pg_faq_a8'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_faq_a8'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
 
 //************************* HOW TO PAGE ***********
 
-$Zitiziti['pg_howto_head'] = "How tos";
+$BIZBOOK['pg_howto_head'] = "How tos";
 
-$Zitiziti['pg_howto_tit'] = "How tos";
+$BIZBOOK['pg_howto_tit'] = "How tos";
 
-$Zitiziti['pg_howto_sub_tit'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_howto_sub_tit'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
 
-$Zitiziti['pg_howto_q1'] = "How to create new listing?";
+$BIZBOOK['pg_howto_q1'] = "How to create new listing?";
 
-$Zitiziti['pg_howto_a1'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_howto_a1'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
 
-$Zitiziti['pg_howto_q2'] = "How to change free listing to premium listing?";
+$BIZBOOK['pg_howto_q2'] = "How to change free listing to premium listing?";
 
-$Zitiziti['pg_howto_a2'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_howto_a2'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
 
-$Zitiziti['pg_howto_q3'] = "How can i change my user type?";
+$BIZBOOK['pg_howto_q3'] = "How can i change my user type?";
 
-$Zitiziti['pg_howto_a3'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_howto_a3'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
 
-$Zitiziti['pg_howto_q4'] = "How to make Payment?";
+$BIZBOOK['pg_howto_q4'] = "How to make Payment?";
 
-$Zitiziti['pg_howto_a4'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_howto_a4'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
 
-$Zitiziti['pg_howto_q5'] = "How to create Ads?";
+$BIZBOOK['pg_howto_q5'] = "How to create Ads?";
 
-$Zitiziti['pg_howto_a5'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_howto_a5'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
 
-$Zitiziti['pg_howto_q6'] = "What is user type?";
+$BIZBOOK['pg_howto_q6'] = "What is user type?";
 
-$Zitiziti['pg_howto_a6'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_howto_a6'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
 
-$Zitiziti['pg_howto_q7'] = "How to contact support team?";
+$BIZBOOK['pg_howto_q7'] = "How to contact support team?";
 
-$Zitiziti['pg_howto_a7'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_howto_a7'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
 
-$Zitiziti['pg_howto_q8'] = "How to create new listing?";
+$BIZBOOK['pg_howto_q8'] = "How to create new listing?";
 
-$Zitiziti['pg_howto_a8'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+$BIZBOOK['pg_howto_a8'] = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
 
 //************************* USER TYPE PAGE ***********
 
-$Zitiziti['pg_utype_tit1'] = "SERVICE PROVIDER CAN";
+$BIZBOOK['pg_utype_tit1'] = "SERVICE PROVIDER CAN";
 
-$Zitiziti['pg_utype_tit2'] = "GENERAL USERS CAN";
+$BIZBOOK['pg_utype_tit2'] = "GENERAL USERS CAN";
 
-$Zitiziti['pg_utype_start'] = "Get Start";
+$BIZBOOK['pg_utype_start'] = "Get Start";
 
-$Zitiziti['pg_utype_sp1'] = "User dashboard";
+$BIZBOOK['pg_utype_sp1'] = "User dashboard";
 
-$Zitiziti['pg_utype_sp2'] = "Profile page";
+$BIZBOOK['pg_utype_sp2'] = "Profile page";
 
-$Zitiziti['pg_utype_sp3'] = "Reviews";
+$BIZBOOK['pg_utype_sp3'] = "Reviews";
 
-$Zitiziti['pg_utype_sp4'] = "Like listings";
+$BIZBOOK['pg_utype_sp4'] = "Like listings";
 
-$Zitiziti['pg_utype_sp5'] = "Get quote & send enquiry";
+$BIZBOOK['pg_utype_sp5'] = "Get quote & send enquiry";
 
-$Zitiziti['pg_utype_sp6'] = "Followings";
+$BIZBOOK['pg_utype_sp6'] = "Followings";
 
-$Zitiziti['pg_utype_sp7'] = "Notifications";
+$BIZBOOK['pg_utype_sp7'] = "Notifications";
 
-$Zitiziti['pg_utype_sp8'] = "Create new listing";
+$BIZBOOK['pg_utype_sp8'] = "Create new listing";
 
-$Zitiziti['pg_utype_gp1'] = "User dashboard";
+$BIZBOOK['pg_utype_gp1'] = "User dashboard";
 
-$Zitiziti['pg_utype_gp2'] = "Profile page";
+$BIZBOOK['pg_utype_gp2'] = "Profile page";
 
-$Zitiziti['pg_utype_gp3'] = "Reviews";
+$BIZBOOK['pg_utype_gp3'] = "Reviews";
 
-$Zitiziti['pg_utype_gp4'] = "Followings";
+$BIZBOOK['pg_utype_gp4'] = "Followings";
 
-$Zitiziti['pg_utype_gp5'] = "Post your Ads";
+$BIZBOOK['pg_utype_gp5'] = "Post your Ads";
 
-$Zitiziti['pg_utype_gp6'] = "Lead management";
+$BIZBOOK['pg_utype_gp6'] = "Lead management";
 
-$Zitiziti['pg_utype_gp7'] = "Payment invoices";
+$BIZBOOK['pg_utype_gp7'] = "Payment invoices";
 
-$Zitiziti['pg_utype_gp8'] = "Mange listing, event & blogs";
+$BIZBOOK['pg_utype_gp8'] = "Mange listing, event & blogs";
 
 //************************* POLICY & TERMS ***********
 
-$Zitiziti['pg_pri_tit'] = "Privacy Policy";
+$BIZBOOK['pg_pri_tit'] = "Privacy Policy";
 
-$Zitiziti['pg_terms_tit'] = "Terms of Use";
+$BIZBOOK['pg_terms_tit'] = "Terms of Use";
 
 
 //************************* NEWS & MAGAZINES ***********
 
-$Zitiziti['NEWS-MAGA'] = "News & Magazines";
+$BIZBOOK['NEWS-MAGA'] = "News & Magazines";
 
-$Zitiziti['NEWS'] = "News";
+$BIZBOOK['NEWS'] = "News";
 
-$Zitiziti['SEARCHBOX_LABEL_SER'] = "Select Services";
-$Zitiziti['EXPL-MORE-FEA'] = "Explore our more Services";
+$BIZBOOK['SEARCHBOX_LABEL_SER'] = "Select Services";
+$BIZBOOK['EXPL-MORE-FEA'] = "Explore our more Services";
 
 //****** HOME PAGE MODULES ***** */
-$Zitiziti['HOM-MODU-TIT-JOB'] = "Start finding your dream job now";
-$Zitiziti['HOM-MODU-TIT-PROD'] = "Start selling your products online";
-$Zitiziti['HOM-MODU-TIT-DEAL'] = "Coupon and deals for your shopping";
-$Zitiziti['HOM-MODU-TIT-TRAVEL'] = "Explore your travel destination";
-$Zitiziti['HOM-MODU-TIT-EXP'] = "Find your service experts for your needs";
-$Zitiziti['HOM-MODU-TIT-NEWS'] = "All news updates in one place";
-$Zitiziti['HOM-MODU-TIT-EVE'] = "Start finding your dream job now";
-$Zitiziti['HOM-MODU-TIT-BLOG'] = "Start finding your dream job now";
-$Zitiziti['HOM-MODU-TIT-COMM'] = "Start finding your dream job now";
-$Zitiziti['HOM-MODU-START-SELLING'] = "Start selling";
-$Zitiziti['HOM-MODU-BOOK-EXPERT-NOW'] = "Book Expert Now";
+$BIZBOOK['HOM-MODU-TIT-JOB'] = "Start finding your dream job now";
+$BIZBOOK['HOM-MODU-TIT-PROD'] = "Start selling your products online";
+$BIZBOOK['HOM-MODU-TIT-DEAL'] = "Coupon and deals for your shopping";
+$BIZBOOK['HOM-MODU-TIT-TRAVEL'] = "Explore your travel destination";
+$BIZBOOK['HOM-MODU-TIT-EXP'] = "Find your service experts for your needs";
+$BIZBOOK['HOM-MODU-TIT-NEWS'] = "All news updates in one place";
+$BIZBOOK['HOM-MODU-TIT-EVE'] = "Start finding your dream job now";
+$BIZBOOK['HOM-MODU-TIT-BLOG'] = "Start finding your dream job now";
+$BIZBOOK['HOM-MODU-TIT-COMM'] = "Start finding your dream job now";
+$BIZBOOK['HOM-MODU-START-SELLING'] = "Start selling";
+$BIZBOOK['HOM-MODU-BOOK-EXPERT-NOW'] = "Book Expert Now";
 
 //************************* QUESTIONS ***********
-$Zitiziti['QUE-HOM-TIT'] = "Answers available here";
-$Zitiziti['QUE-HOM-TIT-SUB'] = "Find the best answer to your technical question, help others answer theirs";
-$Zitiziti['QUE-HOME-SEARCH-OPTION-1'] = "Find your answers here..";
-$Zitiziti['QUE-HOME-H-2-1'] = "Latest";
-$Zitiziti['QUE-HOME-P-2-1'] = "A public platform building the definitive collection of coding questions & answers";
+$BIZBOOK['QUE-HOM-TIT'] = "Answers available here";
+$BIZBOOK['QUE-HOM-TIT-SUB'] = "Find the best answer to your technical question, help others answer theirs";
+$BIZBOOK['QUE-HOME-SEARCH-OPTION-1'] = "Find your answers here..";
+$BIZBOOK['QUE-HOME-H-2-1'] = "Latest";
+$BIZBOOK['QUE-HOME-P-2-1'] = "A public platform building the definitive collection of coding questions & answers";
 
 //***** DASHBOARD LEFT 8Apr23 ***** */
-$Zitiziti['DASH-LHS-ALL-MOD'] = "All Modules";
-$Zitiziti['DASH-LHS-LEAD'] = "LEADS & ENQUIRY";
-$Zitiziti['DASH-LHS-PAY'] = "Payment & Promotions";
-$Zitiziti['DASH-LHS-PAGES'] = "Profile pages";
-$Zitiziti['DASH-LHS-ACTI'] = "My activities";
-$Zitiziti['DASH-LHS-SETT'] = "Settings";
+$BIZBOOK['DASH-LHS-ALL-MOD'] = "All Modules";
+$BIZBOOK['DASH-LHS-LEAD'] = "LEADS & ENQUIRY";
+$BIZBOOK['DASH-LHS-PAY'] = "Payment & Promotions";
+$BIZBOOK['DASH-LHS-PAGES'] = "Profile pages";
+$BIZBOOK['DASH-LHS-ACTI'] = "My activities";
+$BIZBOOK['DASH-LHS-SETT'] = "Settings";
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////

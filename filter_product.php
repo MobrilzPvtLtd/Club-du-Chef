@@ -254,7 +254,7 @@ $query = mysqli_query($conn, "SELECT DISTINCT  t1 . * FROM  " . TBL . "products 
                                             data-target="#quote<?php echo $product_id ?>"
                                             <?php
                                         }
-                                        ?>><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></a>
+                                        ?>><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></a>
                                     <?php
                                 } else { ?>
                                     <?php
@@ -276,14 +276,14 @@ $query = mysqli_query($conn, "SELECT DISTINCT  t1 . * FROM  " . TBL . "products 
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="log-bor">&nbsp;</div>
-                                    <span class="udb-inst"><?php echo $Zitiziti['LEAD-SEND-ENQUIRY']; ?></span>
+                                    <span class="udb-inst"><?php echo $BIZBOOK['LEAD-SEND-ENQUIRY']; ?></span>
                                     <button type="button" class="close"
                                             data-dismiss="modal">&times;</button>
                                     <!-- Modal Header -->
                                     <div class="quote-pop">
-                                        <h4><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></h4>
-                                        <div id="enq_success" style="display: none;color: #000;"><?php echo $Zitiziti['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></div>
-                                        <div id="enq_fail" style="display: none;color: #000;"><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></div>
+                                        <h4><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></h4>
+                                        <div id="enq_success" style="display: none;color: #000;"><?php echo $BIZBOOK['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></div>
+                                        <div id="enq_fail" style="display: none;color: #000;"><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></div>
                                         <form method="post" name="all_product_enquiry_form" class="all_product_enquiry_form">
                                             <input type="hidden" class="form-control" name="product_id"
                                                    value="<?php echo $product_id ?>"
@@ -302,31 +302,31 @@ $query = mysqli_query($conn, "SELECT DISTINCT  t1 . * FROM  " . TBL . "products 
                                                 <input type="text"  name="enquiry_name"
                                                        value="<?php echo $user_details_row['first_name'] ?>"
                                                        required="required" class="form-control"
-                                                       placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>">
+                                                       placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>">
                                             </div>
                                             <div class="form-group">
                                                 <input type="email" class="form-control"
-                                                       placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>" 
+                                                       placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>" 
                                                        value="<?php echo $user_details_row['email_id'] ?>"
                                                        name="enquiry_email"
                                                        pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                                       title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
+                                                       title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" class="form-control"
                                                        value="<?php echo $user_details_row['mobile_number'] ?>"
                                                        name="enquiry_mobile"
-                                                       placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                                       placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
                                                        pattern="[7-9]{1}[0-9]{9}"
-                                                       title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>"
+                                                       title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>"
                                                        required>
                                             </div>
                                             <div class="form-group">
                                 <textarea class="form-control" rows="3" name="enquiry_message"
-                                          placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                          placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                                             </div>
                                             <input type="hidden" id="source">
-                                            <button type="submit" id="all_product_enquiry_submit" name="enquiry_submit" class="all_product_enquiry_submit btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?>
+                                            <button type="submit" id="all_product_enquiry_submit" name="enquiry_submit" class="all_product_enquiry_submit btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?>
                                             </button>
                                         </form>
                                     </div>
@@ -348,7 +348,7 @@ $query = mysqli_query($conn, "SELECT DISTINCT  t1 . * FROM  " . TBL . "products 
     /* background: #525252; */
     text-shadow: 0px 0px 2px #fff;
     text-transform: uppercase;
-    margin-top: 5%;"><?php echo $Zitiziti['PRODUCTS_NO_PRODUCTS_MESSAGE']; ?></span>
+    margin-top: 5%;"><?php echo $BIZBOOK['PRODUCTS_NO_PRODUCTS_MESSAGE']; ?></span>
             <?php
         }
         ?>

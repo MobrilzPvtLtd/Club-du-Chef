@@ -37,15 +37,15 @@ if (file_exists('config/places_page_authentication.php')) {
         <div class="container">
             <div class="row">
                 <div class="plac-hom-ban-inn">
-                    <h1><?php echo $Zitiziti['QUE-HOM-TIT']; ?></h1>
-                    <p><?php echo $Zitiziti['QUE-HOM-TIT-SUB']; ?></p>
+                    <h1><?php echo $BIZBOOK['QUE-HOM-TIT']; ?></h1>
+                    <p><?php echo $BIZBOOK['QUE-HOM-TIT-SUB']; ?></p>
                     <div class="plac-hom-search">
                         <div class="job-sear">
                     <form name="place_filter_form" id="place_filter_form" class="place_filter_form">
                         <ul>
                             <li class="sr-sea">
                                 <select class="chosen-select" id="place-select-search" name="place-select-search">
-                                    <option value="0"><?php echo $Zitiziti['QUE-HOME-SEARCH-OPTION-1']; ?></option>
+                                    <option value="0"><?php echo $BIZBOOK['QUE-HOME-SEARCH-OPTION-1']; ?></option>
                                     <?php
                                     foreach (getAllPlaces() as $placerow) {
 
@@ -79,7 +79,7 @@ if (file_exists('config/places_page_authentication.php')) {
                 <div class="que-hom-lhs que-hom-all">
                 <ul class="nav nav-tabs">
                     <li><a data-toggle="tab" class="active" href="#tab1"><i class="material-icons">lightbulb_outline</i> All questions</a></li>
-                    <li class="active"><a data-toggle="tab" href="#tab2"><i class="material-icons">layers</i> <?php echo $Zitiziti['QUE-HOME-H-2-1']; ?></a></li>
+                    <li class="active"><a data-toggle="tab" href="#tab2"><i class="material-icons">layers</i> <?php echo $BIZBOOK['QUE-HOME-H-2-1']; ?></a></li>
                     <li><a data-toggle="tab" href="#tab3"><i class="material-icons">lightbulb_outline</i> Trending</a></li>
                     <li><a data-toggle="tab" href="#tab4"><i class="material-icons">perm_identity</i> My questions</a></li>
                     <li><a data-toggle="modal" data-target="#addplacepop"><i class="material-icons">record_voice_over</i> Ask question</a></li>
@@ -376,23 +376,23 @@ if (file_exists('config/places_page_authentication.php')) {
                             <ul>
                                 <li>
                                         <div class="hot-page2-hom-pre-1">
-                                            <img src="http://localhost/Zitiziti/service-experts/images/services/63410andras-vas-bd7gnnwjbku-unsplash.jpg" alt="">
+                                            <img src="http://localhost/bizbook/service-experts/images/services/63410andras-vas-bd7gnnwjbku-unsplash.jpg" alt="">
                                         </div>
                                         <div class="hot-page2-hom-pre-2">
                                             <h5>How to update windows 10 to 11?</h5>
                                             <span>by <b>John smith</b>, on <b>Web development</b></span>
                                         </div>
-                                        <a href="http://localhost/Zitiziti/all-service-experts/laptop-service" class="fclick"></a>
+                                        <a href="http://localhost/bizbook/all-service-experts/laptop-service" class="fclick"></a>
                                     </li>
                                                                         <li>
                                         <div class="hot-page2-hom-pre-1">
-                                            <img src="http://localhost/Zitiziti/service-experts/images/services/53609pexels-blue-bird-7218013.jpg" alt="">
+                                            <img src="http://localhost/bizbook/service-experts/images/services/53609pexels-blue-bird-7218013.jpg" alt="">
                                         </div>
                                         <div class="hot-page2-hom-pre-2">
                                         <h5>How to update windows 10 to 11?</h5>
                                             <span>by <b>John smith</b>, on <b>Web development</b></span>
                                         </div>
-                                        <a href="http://localhost/Zitiziti/all-service-experts/house-decoration-services" class="fclick"></a>
+                                        <a href="http://localhost/bizbook/all-service-experts/house-decoration-services" class="fclick"></a>
                                     </li>
                                 </ul>
                         </div>
@@ -405,23 +405,23 @@ if (file_exists('config/places_page_authentication.php')) {
                             <ul>
                                 <li>
                                         <div class="hot-page2-hom-pre-1">
-                                            <img src="http://localhost/Zitiziti/service-experts/images/services/63410andras-vas-bd7gnnwjbku-unsplash.jpg" alt="">
+                                            <img src="http://localhost/bizbook/service-experts/images/services/63410andras-vas-bd7gnnwjbku-unsplash.jpg" alt="">
                                         </div>
                                         <div class="hot-page2-hom-pre-2">
                                             <h5>Richetson</h5>
                                             <span>Comment on <b>How to update windows 10 to 11?</b></span>
                                         </div>
-                                        <a href="http://localhost/Zitiziti/all-service-experts/laptop-service" class="fclick"></a>
+                                        <a href="http://localhost/bizbook/all-service-experts/laptop-service" class="fclick"></a>
                                     </li>
                                                                         <li>
                                         <div class="hot-page2-hom-pre-1">
-                                            <img src="http://localhost/Zitiziti/service-experts/images/services/53609pexels-blue-bird-7218013.jpg" alt="">
+                                            <img src="http://localhost/bizbook/service-experts/images/services/53609pexels-blue-bird-7218013.jpg" alt="">
                                         </div>
                                         <div class="hot-page2-hom-pre-2">
                                         <h5>Richetson</h5>
                                             <span>Comment on <b>How to update windows 10 to 11?</b></span>
                                         </div>
-                                        <a href="http://localhost/Zitiziti/all-service-experts/house-decoration-services" class="fclick"></a>
+                                        <a href="http://localhost/bizbook/all-service-experts/house-decoration-services" class="fclick"></a>
                                     </li>
                                                                 </ul>
                         </div>
@@ -433,23 +433,23 @@ if (file_exists('config/places_page_authentication.php')) {
                             <ul>
                                 <li>
                                         <div class="hot-page2-hom-pre-1">
-                                            <img src="http://localhost/Zitiziti/service-experts/images/services/63410andras-vas-bd7gnnwjbku-unsplash.jpg" alt="">
+                                            <img src="http://localhost/bizbook/service-experts/images/services/63410andras-vas-bd7gnnwjbku-unsplash.jpg" alt="">
                                         </div>
                                         <div class="hot-page2-hom-pre-2">
                                             <h5>How to update windows 10 to 11?</h5>
                                             <span>by <b>John smith</b>, on <b>Web development</b></span>
                                         </div>
-                                        <a href="http://localhost/Zitiziti/all-service-experts/laptop-service" class="fclick"></a>
+                                        <a href="http://localhost/bizbook/all-service-experts/laptop-service" class="fclick"></a>
                                     </li>
                                                                         <li>
                                         <div class="hot-page2-hom-pre-1">
-                                            <img src="http://localhost/Zitiziti/service-experts/images/services/53609pexels-blue-bird-7218013.jpg" alt="">
+                                            <img src="http://localhost/bizbook/service-experts/images/services/53609pexels-blue-bird-7218013.jpg" alt="">
                                         </div>
                                         <div class="hot-page2-hom-pre-2">
                                         <h5>How to update windows 10 to 11?</h5>
                                             <span>by <b>John smith</b>, on <b>Web development</b></span>
                                         </div>
-                                        <a href="http://localhost/Zitiziti/all-service-experts/house-decoration-services" class="fclick"></a>
+                                        <a href="http://localhost/bizbook/all-service-experts/house-decoration-services" class="fclick"></a>
                                     </li>
                                                                 </ul>
                         </div>
@@ -493,10 +493,10 @@ if (file_exists('config/places_page_authentication.php')) {
                     <div class="quote-pop">
                         <h4>Post your question</h4>
                         <div id="place_pop_enq_success" class="log" style="display: none;">
-                            <p><?php echo $Zitiziti['PLACE_ADD_SUCCESSFUL_MESSAGE']; ?></p>
+                            <p><?php echo $BIZBOOK['PLACE_ADD_SUCCESSFUL_MESSAGE']; ?></p>
                         </div>
                         <div id="place_pop_enq_fail" class="log" style="display: none;">
-                            <p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                            <p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                         </div>
                         <form method="post" name="place_add_request_form" id="place_add_request_form" class="place_add_request_form">
                             <input type="hidden" class="form-control"
@@ -528,7 +528,7 @@ if (file_exists('config/places_page_authentication.php')) {
                             <input type="hidden" id="source">
                             <button <?php if ($session_user_id == NULL || empty($session_user_id)) {
                                 ?> disabled="disabled" <?php } ?> type="submit" id="place_add_request_submit"  name="place_add_request_submit" class="cta_submit_green btn btn-primary"><?php if ($session_user_id == NULL || empty($session_user_id)) {
-                                    ?> <?php echo $Zitiziti['LOG_IN_TO_SUBMIT'];?> <?php }else{ ?><?php echo $Zitiziti['SUBMIT']; ?> <?php }?></button>
+                                    ?> <?php echo $BIZBOOK['LOG_IN_TO_SUBMIT'];?> <?php }else{ ?><?php echo $BIZBOOK['SUBMIT']; ?> <?php }?></button>
                         </form>
                     </div>
                 </div>
@@ -549,10 +549,10 @@ if (file_exists('config/places_page_authentication.php')) {
                     <div class="quote-pop">
                         <h4>Edit your question</h4>
                         <div id="place_pop_enq_success" class="log" style="display: none;">
-                            <p><?php echo $Zitiziti['PLACE_ADD_SUCCESSFUL_MESSAGE']; ?></p>
+                            <p><?php echo $BIZBOOK['PLACE_ADD_SUCCESSFUL_MESSAGE']; ?></p>
                         </div>
                         <div id="place_pop_enq_fail" class="log" style="display: none;">
-                            <p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                            <p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                         </div>
                         <form method="post" name="place_add_request_form" id="place_add_request_form" class="place_add_request_form">
                             <input type="hidden" class="form-control"
@@ -584,7 +584,7 @@ if (file_exists('config/places_page_authentication.php')) {
                             <input type="hidden" id="source">
                             <button <?php if ($session_user_id == NULL || empty($session_user_id)) {
                                 ?> disabled="disabled" <?php } ?> type="submit" id="place_add_request_submit"  name="place_add_request_submit" class="cta_submit_green btn btn-primary"><?php if ($session_user_id == NULL || empty($session_user_id)) {
-                                    ?> <?php echo $Zitiziti['LOG_IN_TO_SUBMIT'];?> <?php }else{ ?><?php echo $Zitiziti['SUBMIT']; ?> <?php }?></button>
+                                    ?> <?php echo $BIZBOOK['LOG_IN_TO_SUBMIT'];?> <?php }else{ ?><?php echo $BIZBOOK['SUBMIT']; ?> <?php }?></button>
                         </form>
                     </div>
                 </div>

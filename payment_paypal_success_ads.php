@@ -43,7 +43,7 @@ if ($traupres) {
 
     $lisupres23 = mysqli_query($conn, $lisupqry23);
 
-    $_SESSION['status_msg'] = $Zitiziti['PAYPAL_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'];
+    $_SESSION['status_msg'] = $BIZBOOK['PAYPAL_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'];
 
     header('Location: db-post-ads');
 

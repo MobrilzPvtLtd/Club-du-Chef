@@ -27,24 +27,24 @@ $job_id = $job_a_row['job_id'];
    <div class="ud-main-inn ud-no-rhs">
     <div class="ud-cen">
         <div class="log-bor">&nbsp;</div>
-        <span class="udb-inst"><?php echo $Zitiziti['JOB_ALL_APPLI_PROFILE']; ?></span>
+        <span class="udb-inst"><?php echo $BIZBOOK['JOB_ALL_APPLI_PROFILE']; ?></span>
         <?php include('../config/user_activation_checker.php'); ?>
         <div class="ud-cen-s2">
-            <h2><?php echo $Zitiziti['JOB_APPLI_DETAILS']; ?></h2>
+            <h2><?php echo $BIZBOOK['JOB_APPLI_DETAILS']; ?></h2>
             <?php include "../page_level_message.php"; ?>
-<!--            <a href="#" class="db-tit-btn">--><?php //echo $Zitiziti['JOB_APPLI_DOWNLOAD']; ?><!--</a>-->
-            <p><?php echo $Zitiziti['JOB']; ?> : <?php echo $job_a_row['job_title']; ?></p>
+<!--            <a href="#" class="db-tit-btn">--><?php //echo $BIZBOOK['JOB_APPLI_DOWNLOAD']; ?><!--</a>-->
+            <p><?php echo $BIZBOOK['JOB']; ?> : <?php echo $job_a_row['job_title']; ?></p>
             <table class="responsive-table bordered">
                 <thead>
                 <tr>
-                    <th><?php echo $Zitiziti['S_NO']; ?></th>
-                    <th><?php echo $Zitiziti['JOB_APPLI_NAME']; ?></th>
-                    <th><?php echo $Zitiziti['JOB_APPLI_PHONE']; ?></th>
-                    <th><?php echo $Zitiziti['JOB_APPLI_EMAIL']; ?></th>
-                    <th><?php echo $Zitiziti['JOB_APPLI_DATE']; ?></th>
-                    <th><?php echo $Zitiziti['JOB_APPLI_RESUME']; ?></th>
-                    <th><?php echo $Zitiziti['DELETE']; ?></th>
-                    <th><?php echo $Zitiziti['PREVIEW']; ?></th>
+                    <th><?php echo $BIZBOOK['S_NO']; ?></th>
+                    <th><?php echo $BIZBOOK['JOB_APPLI_NAME']; ?></th>
+                    <th><?php echo $BIZBOOK['JOB_APPLI_PHONE']; ?></th>
+                    <th><?php echo $BIZBOOK['JOB_APPLI_EMAIL']; ?></th>
+                    <th><?php echo $BIZBOOK['JOB_APPLI_DATE']; ?></th>
+                    <th><?php echo $BIZBOOK['JOB_APPLI_RESUME']; ?></th>
+                    <th><?php echo $BIZBOOK['DELETE']; ?></th>
+                    <th><?php echo $BIZBOOK['PREVIEW']; ?></th>
                 </tr>
                 </thead>
                 <tbody>

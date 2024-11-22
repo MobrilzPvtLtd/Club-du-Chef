@@ -22,7 +22,7 @@ if (file_exists('config/blog_page_authentication.php')) {
         <div class="row">
             <div class="login-main add-list">
                 <div class="log-bor">&nbsp;</div>
-                <span class="steps"><?php echo $Zitiziti['EDIT_BLOG_POST']; ?></span>
+                <span class="steps"><?php echo $BIZBOOK['EDIT_BLOG_POST']; ?></span>
                 <div class="log">
                     <div class="login add-list-off">
                         <?php
@@ -30,7 +30,7 @@ if (file_exists('config/blog_page_authentication.php')) {
                         $blogs_a_row = getBlog($blog_codea);
 
                         ?>
-                        <h4><?php echo $Zitiziti['EDIT_THIS_BLOG_POST']; ?></h4>
+                        <h4><?php echo $BIZBOOK['EDIT_THIS_BLOG_POST']; ?></h4>
                         <form action="blog_update.php" class="blog_edit_form" id="blog_edit_form" name="blog_edit_form"
                               method="post" enctype="multipart/form-data">
 
@@ -49,7 +49,7 @@ if (file_exists('config/blog_page_authentication.php')) {
                                                 <input type="text" name="blog_name"
                                                        value="<?php echo $blogs_a_row['blog_name']; ?>"
                                                        required="required" class="form-control"
-                                                       placeholder="<?php echo $Zitiziti['POST_NAME']; ?>*">
+                                                       placeholder="<?php echo $BIZBOOK['POST_NAME']; ?>*">
                                             </div>
                                         </div>
                                     </div>
@@ -60,7 +60,7 @@ if (file_exists('config/blog_page_authentication.php')) {
                                             <div class="form-group">
                                                 <select name="category_id"
                                                         id="category_id" class="chosen-select form-control">
-                                                    <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
+                                                    <option value=""><?php echo $BIZBOOK['SELECT_CATEGORY']; ?></option>
                                                     <?php
                                                     foreach (getAllBlogCategories() as $categories_row) {
                                                         ?>
@@ -83,7 +83,7 @@ if (file_exists('config/blog_page_authentication.php')) {
                                             <div class="form-group">
                                                 <textarea name="blog_description" id="blog_description"
                                                           required="required" class="form-control"
-                                                          placeholder="<?php echo $Zitiziti['POST_DETAILS']; ?>"><?php echo $blogs_a_row['blog_description'] ?></textarea>
+                                                          placeholder="<?php echo $BIZBOOK['POST_DETAILS']; ?>"><?php echo $blogs_a_row['blog_description'] ?></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -92,9 +92,9 @@ if (file_exists('config/blog_page_authentication.php')) {
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label><?php echo $Zitiziti['CHOOSE_BANNER_IMAGE']; ?></label>
+                                                <label><?php echo $BIZBOOK['CHOOSE_BANNER_IMAGE']; ?></label>
                                                 <div class="fil-img-uplo">
-                                                    <span class="dumfil"><?php echo $Zitiziti['UPLOAD_A_FILE'];  ?></span>
+                                                    <span class="dumfil"><?php echo $BIZBOOK['UPLOAD_A_FILE'];  ?></span>
                                                     <input type="file" name="blog_image" accept="image/*,.jpg,.jpeg,.png" class="form-control">
                                                 </div>
                                             </div>
@@ -109,7 +109,7 @@ if (file_exists('config/blog_page_authentication.php')) {
                                                     <input type="checkbox" name="isenquiry" id="evefmenab"
                                                            <?php if ($blogs_a_row['isenquiry'] == 1){ ?>checked="" <?php } ?>>
                                                     <label
-                                                        for="evefmenab"><?php echo $Zitiziti['ENQUIRY_BOX_ENABLE']; ?></label>
+                                                        for="evefmenab"><?php echo $BIZBOOK['ENQUIRY_BOX_ENABLE']; ?></label>
                                                 </div>
                                             </div>
                                         </div>
@@ -121,10 +121,10 @@ if (file_exists('config/blog_page_authentication.php')) {
                             <div class="row">
                                 <div class="col-md-12">
                                     <button type="submit" name="blog_submit"
-                                            class="btn btn-primary"><?php echo $Zitiziti['SAVE_CHANGES']; ?></button>
+                                            class="btn btn-primary"><?php echo $BIZBOOK['SAVE_CHANGES']; ?></button>
                                 </div>
                                 <div class="col-md-12">
-                                    <a href="dashboard" class="skip"><?php echo $Zitiziti['GO_TO_USER_DASHBOARD']; ?>
+                                    <a href="dashboard" class="skip"><?php echo $BIZBOOK['GO_TO_USER_DASHBOARD']; ?>
                                         >></a>
                                 </div>
                             </div>

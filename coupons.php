@@ -23,12 +23,12 @@ if($footer_row['admin_coupon_show'] != 1) {
         <div class="container mt-4">
             <div class="row">
                 <div class="plac-hom-ban-inn">
-                    <h1><?php echo $Zitiziti['COUPON-HEADING-LABEL']; ?></h1>
-                    <p><?php echo $Zitiziti['COUPON-HEADING-P-LABEL']; ?></p>
+                    <h1><?php echo $BIZBOOK['COUPON-HEADING-LABEL']; ?></h1>
+                    <p><?php echo $BIZBOOK['COUPON-HEADING-P-LABEL']; ?></p>
                     <div class="coup-sec-log">
-                    <h4><?php echo $Zitiziti['COUPON-NO-LOGIN-HEADING-LABEL']; ?></h4>
-                    <p><?php echo $Zitiziti['COUPON-NO-LOGIN-P-LABEL']; ?></p>
-                    <a href="<?php echo $LOGIN_URL; ?>"><?php echo $Zitiziti['COUPON-NO-LOGIN-SIGN-IN-NOW']; ?></a>
+                    <h4><?php echo $BIZBOOK['COUPON-NO-LOGIN-HEADING-LABEL']; ?></h4>
+                    <p><?php echo $BIZBOOK['COUPON-NO-LOGIN-P-LABEL']; ?></p>
+                    <a href="<?php echo $LOGIN_URL; ?>"><?php echo $BIZBOOK['COUPON-NO-LOGIN-SIGN-IN-NOW']; ?></a>
                 </div>
                 </div>
             </div>
@@ -44,10 +44,10 @@ if($footer_row['admin_coupon_show'] != 1) {
         <div class="container">
             <div class="row">
                 <div class="plac-hom-ban-inn coup-sec2">
-                    <h1><?php echo $Zitiziti['COUPON-HEADING-LABEL']; ?></h1>
-                    <p><?php echo $Zitiziti['COUPON-HEADING-P-LABEL']; ?></p>
+                    <h1><?php echo $BIZBOOK['COUPON-HEADING-LABEL']; ?></h1>
+                    <p><?php echo $BIZBOOK['COUPON-HEADING-P-LABEL']; ?></p>
                     <div class="plac-hom-search">
-                     <span><input type="text" id="tail-se" placeholder="<?php echo $Zitiziti['COUPON-HEADING-PLACEHOLDER']; ?>"></span>
+                     <span><input type="text" id="tail-se" placeholder="<?php echo $BIZBOOK['COUPON-HEADING-PLACEHOLDER']; ?>"></span>
                     </div>
                 </div>
             </div>
@@ -75,29 +75,29 @@ if($footer_row['admin_coupon_show'] != 1) {
                                         </div>
                                         <div class="s2">
                                             <div class="lhs">
-                                                <span><?php echo $Zitiziti['COUPON-EXPIRES']; ?></span>
+                                                <span><?php echo $BIZBOOK['COUPON-EXPIRES']; ?></span>
                                                 <h6><?php echo dateFormatconverter($couponrow['coupon_end_date']); ?></h6>
-                                                <a href="terms-of-use.php" target="_blank"><?php echo $Zitiziti['COUPON-TERMS-CONDITION-APPLY']; ?></a>
+                                                <a href="terms-of-use.php" target="_blank"><?php echo $BIZBOOK['COUPON-TERMS-CONDITION-APPLY']; ?></a>
                                             </div>
                                             <div class="rhs">
                                             <span data-id="<?php echo $couponrow['coupon_id']; ?>"
-                                                  class="get-coup-btn get-coup-act"><?php echo $Zitiziti['COUPON-GET-COUPON']; ?></span>
+                                                  class="get-coup-btn get-coup-act"><?php echo $BIZBOOK['COUPON-GET-COUPON']; ?></span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="coup-box-2">
-                                        <h4><?php echo $Zitiziti['CONGRATULATIONS']; ?>!</h4>
-                                        <p><?php echo $Zitiziti['COUPON-HERE-CODE-FOR']; ?> <b><?php echo $couponrow['coupon_name']; ?></b></p>
+                                        <h4><?php echo $BIZBOOK['CONGRATULATIONS']; ?>!</h4>
+                                        <p><?php echo $BIZBOOK['COUPON-HERE-CODE-FOR']; ?> <b><?php echo $couponrow['coupon_name']; ?></b></p>
                                         <i><?php echo $couponrow['coupon_code']; ?></i>
                                         <?php
                                         if ($couponrow['coupon_link'] != NULL) {
                                             ?>
                                             <a target="_blank"
-                                               href="<?php echo $couponrow['coupon_link']; ?>"><?php echo $Zitiziti['USER_WEBSITE']; ?></a>
+                                               href="<?php echo $couponrow['coupon_link']; ?>"><?php echo $BIZBOOK['USER_WEBSITE']; ?></a>
                                             <?php
                                         }
                                         ?>
-                                        <span class="coup-back"><?php echo $Zitiziti['BACK']; ?></span>
+                                        <span class="coup-back"><?php echo $BIZBOOK['BACK']; ?></span>
                                     </div>
                                 </div>
                             </li>

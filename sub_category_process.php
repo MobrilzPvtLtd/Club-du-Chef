@@ -12,7 +12,7 @@ $category_id = $_POST['category_id'];
 
 if(getCountSubCategoryCategory($category_id) <= 0){
     ?>
-    <option value=""><?php echo $Zitiziti['NO_SUB_CATEGORY_FOUND_MESSAGE']; ?></option>
+    <option value=""><?php echo $BIZBOOK['NO_SUB_CATEGORY_FOUND_MESSAGE']; ?></option>
     <?php
 }else {
 

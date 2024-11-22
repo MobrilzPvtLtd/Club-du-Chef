@@ -198,19 +198,19 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                     <!--- START --->
                     <div class="filt-com">
                         <div class="job-alert">
-                            <h5><?php echo $Zitiziti['SERVICE-EXPERTS-ALL-HEADER-TEXT']; ?></h5>
-                            <p><?php echo $Zitiziti['SERVICE-EXPERTS-ALL-P-TEXT']; ?></p>
+                            <h5><?php echo $BIZBOOK['SERVICE-EXPERTS-ALL-HEADER-TEXT']; ?></h5>
+                            <p><?php echo $BIZBOOK['SERVICE-EXPERTS-ALL-P-TEXT']; ?></p>
                             <a href="#" data-toggle="modal"
-                               data-target="#allexpfrm"><?php echo $Zitiziti['SERVICE-EXPERTS-ALL-A-TEXT']; ?></a>
+                               data-target="#allexpfrm"><?php echo $BIZBOOK['SERVICE-EXPERTS-ALL-A-TEXT']; ?></a>
                         </div>
                     </div>
                     <!--- END --->
                     <!--- START --->
                     <div class="filt-com lhs-cate">
-                        <h4><?php echo $Zitiziti['ALL-LISTING-CATEGORIES']; ?></h4>
+                        <h4><?php echo $BIZBOOK['ALL-LISTING-CATEGORIES']; ?></h4>
                         <div class="form-group">
                             <select name="cat_check" id="cat_check" class="cat_check chosen-select">
-                                <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
+                                <option value=""><?php echo $BIZBOOK['SELECT_CATEGORY']; ?></option>
                                 <?php
                                 foreach (getAllActiveExpertCategoriesPos() as $categories_row) {
                                     ?>
@@ -227,10 +227,10 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                     <!--- END --->
                     <!--- START --->
                     <div class="filt-com lhs-loc">
-                        <h4><?php echo $Zitiziti['SERVICE-EXPERT-LOCATION']; ?></h4>
+                        <h4><?php echo $BIZBOOK['SERVICE-EXPERT-LOCATION']; ?></h4>
                         <div class="form-group">
                             <select class="city_check chosen-select" name="city_check" id="city_check">
-                                <option value=""><?php echo $Zitiziti['SELECT_CITY']; ?></option>
+                                <option value=""><?php echo $BIZBOOK['SELECT_CITY']; ?></option>
                                 <?php
                                 $expert_location_qry = getAllExpertsGroupByCity();
 
@@ -257,7 +257,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
 
                     <!--- START --->
                     <div class="filt-com lhs-rati lhs-avail">
-                        <h4><?php echo $Zitiziti['SERVICE-EXPERT-AVAILABILITY']; ?></h4>
+                        <h4><?php echo $BIZBOOK['SERVICE-EXPERT-AVAILABILITY']; ?></h4>
                         <ul>
                             <li>
                                 <div class="rbbox">
@@ -266,7 +266,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                         <?php if ($get_availability == 'all' || $get_availability == '') {
                                             echo 'checked';
                                         } ?>/>
-                                    <label for="avail1"><?php echo $Zitiziti['SERVICE-EXPERT-ALL-LABEL']; ?></label>
+                                    <label for="avail1"><?php echo $BIZBOOK['SERVICE-EXPERT-ALL-LABEL']; ?></label>
                                 </div>
                             </li>
                             <li>
@@ -277,7 +277,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                             echo 'checked';
                                         } ?>/>
                                     <label
-                                            for="avail2"><?php echo $Zitiziti['SERVICE-EXPERT-AVAILABLE-LABEL']; ?></label>
+                                            for="avail2"><?php echo $BIZBOOK['SERVICE-EXPERT-AVAILABLE-LABEL']; ?></label>
                                 </div>
                             </li>
                             <li>
@@ -287,7 +287,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                         <?php if ($get_availability == 'busy') {
                                             echo 'checked';
                                         } ?>/>
-                                    <label for="avail3"><?php echo $Zitiziti['SERVICE-EXPERT-BUSY-LABEL']; ?></label>
+                                    <label for="avail3"><?php echo $BIZBOOK['SERVICE-EXPERT-BUSY-LABEL']; ?></label>
                                 </div>
                             </li>
                             <li>
@@ -299,7 +299,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                             echo 'checked';
                                         } ?>/>
                                     <label
-                                            for="avail4"><?php echo $Zitiziti['SERVICE-EXPERT-CLOSED-TODAY-LABEL']; ?></label>
+                                            for="avail4"><?php echo $BIZBOOK['SERVICE-EXPERT-CLOSED-TODAY-LABEL']; ?></label>
                                 </div>
                             </li>
                         </ul>
@@ -308,7 +308,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
 
                     <!--- START --->
                     <div class="filt-com lhs-rati lhs-ver">
-                        <h4><?php echo $Zitiziti['SERVICE-EXPERT-VERIFIED-LABEL']; ?></h4>
+                        <h4><?php echo $BIZBOOK['SERVICE-EXPERT-VERIFIED-LABEL']; ?></h4>
                         <ul>
                             <li>
                                 <div class="rbbox">
@@ -316,7 +316,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                         <?php if ($get_verified == 'no' || $get_verified == '') {
                                             echo 'checked';
                                         } ?>/>
-                                    <label for="exver1"><?php echo $Zitiziti['SERVICE-EXPERT-ALL-LABEL']; ?></label>
+                                    <label for="exver1"><?php echo $BIZBOOK['SERVICE-EXPERT-ALL-LABEL']; ?></label>
                                 </div>
                             </li>
                             <li>
@@ -326,7 +326,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                             echo 'checked';
                                         } ?>/>
                                     <label
-                                            for="exver2"><?php echo $Zitiziti['SERVICE-EXPERT-VERIFIED-EXPERTS-LABEL']; ?></label>
+                                            for="exver2"><?php echo $BIZBOOK['SERVICE-EXPERT-VERIFIED-EXPERTS-LABEL']; ?></label>
                                 </div>
                             </li>
                         </ul>
@@ -335,7 +335,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
 
                     <!--- START --->
                     <div class="filt-com lhs-rati">
-                        <h4><?php echo $Zitiziti['SERVICE-EXPERT-RATING-LABEL']; ?></h4>
+                        <h4><?php echo $BIZBOOK['SERVICE-EXPERT-RATING-LABEL']; ?></h4>
                         <ul>
                             <li>
                                 <div class="rbbox">
@@ -343,7 +343,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                         <?php if ($get_ratings == 0 || $get_ratings == '') {
                                             echo 'checked';
                                         } ?>/>
-                                    <label for="exrat6"><?php echo $Zitiziti['SERVICE-EXPERT-ALL-LABEL']; ?></label>
+                                    <label for="exrat6"><?php echo $BIZBOOK['SERVICE-EXPERT-ALL-LABEL']; ?></label>
                                 </div>
                             </li>
                             <li>
@@ -352,7 +352,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                         <?php if ($get_ratings == 5) {
                                             echo 'checked';
                                         } ?>/>
-                                    <label for="exrat1">5 <?php echo $Zitiziti['SERVICE-EXPERT-STAR-LABEL']; ?></label>
+                                    <label for="exrat1">5 <?php echo $BIZBOOK['SERVICE-EXPERT-STAR-LABEL']; ?></label>
                                 </div>
                             </li>
                             <li>
@@ -361,7 +361,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                         <?php if ($get_ratings == 4) {
                                             echo 'checked';
                                         } ?>/>
-                                    <label for="exrat2">4 <?php echo $Zitiziti['SERVICE-EXPERT-STAR-LABEL']; ?></label>
+                                    <label for="exrat2">4 <?php echo $BIZBOOK['SERVICE-EXPERT-STAR-LABEL']; ?></label>
                                 </div>
                             </li>
                             <li>
@@ -370,7 +370,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                         <?php if ($get_ratings == 3) {
                                             echo 'checked';
                                         } ?>/>
-                                    <label for="exrat3">3 <?php echo $Zitiziti['SERVICE-EXPERT-STAR-LABEL']; ?></label>
+                                    <label for="exrat3">3 <?php echo $BIZBOOK['SERVICE-EXPERT-STAR-LABEL']; ?></label>
                                 </div>
                             </li>
                             <li>
@@ -379,7 +379,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                         <?php if ($get_ratings == 2) {
                                             echo 'checked';
                                         } ?>/>
-                                    <label for="exrat4">2 <?php echo $Zitiziti['SERVICE-EXPERT-STAR-LABEL']; ?></label>
+                                    <label for="exrat4">2 <?php echo $BIZBOOK['SERVICE-EXPERT-STAR-LABEL']; ?></label>
                                 </div>
                             </li>
                             <li>
@@ -388,7 +388,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                         <?php if ($get_ratings == 1) {
                                             echo 'checked';
                                         } ?>/>
-                                    <label for="exrat5">1 <?php echo $Zitiziti['SERVICE-EXPERT-STAR-LABEL']; ?></label>
+                                    <label for="exrat5">1 <?php echo $BIZBOOK['SERVICE-EXPERT-STAR-LABEL']; ?></label>
                                 </div>
                             </li>
                         </ul>
@@ -396,7 +396,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                     <!--- END --->
                     <!--- START --->
                     <div class="filt-com lhs-rati lhs-ver">
-                        <h4><?php echo $Zitiziti['SERVICE-EXPERT-SERVICES-DONE']; ?></h4>
+                        <h4><?php echo $BIZBOOK['SERVICE-EXPERT-SERVICES-DONE']; ?></h4>
                         <ul>
                             <li>
                                 <div class="rbbox">
@@ -404,7 +404,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                            id="exsercou1" <?php if ($get_rating_order == 'default' || $get_rating_order == '') {
                                         echo 'checked';
                                     } ?>/>
-                                    <label for="exsercou1"><?php echo $Zitiziti['SERVICE-EXPERT-ALL-LABEL']; ?></label>
+                                    <label for="exsercou1"><?php echo $BIZBOOK['SERVICE-EXPERT-ALL-LABEL']; ?></label>
                                 </div>
                             </li>
                             <li>
@@ -414,7 +414,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                         echo 'checked';
                                     } ?>/>
                                     <label
-                                            for="exsercou2"><?php echo $Zitiziti['SERVICE-EXPERT-HIGH-LOW-LABEL']; ?></label>
+                                            for="exsercou2"><?php echo $BIZBOOK['SERVICE-EXPERT-HIGH-LOW-LABEL']; ?></label>
                                 </div>
                             </li>
                             <li>
@@ -424,7 +424,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                         echo 'checked';
                                     } ?>/>
                                     <label
-                                            for="exsercou3"><?php echo $Zitiziti['SERVICE-EXPERT-LOW-HIGH-LABEL']; ?></label>
+                                            for="exsercou3"><?php echo $BIZBOOK['SERVICE-EXPERT-LOW-HIGH-LABEL']; ?></label>
                                 </div>
                             </li>
                         </ul>
@@ -442,7 +442,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                     $ad_enquiry_photo = $get_ad_row['ad_enquiry_photo'];
                                     ?>
                                     <a href="<?php echo stripslashes($get_ad_row['ad_link']); ?>">
-                                        <span><?php echo $Zitiziti['AD']; ?></span>
+                                        <span><?php echo $BIZBOOK['AD']; ?></span>
 
                                         <img
                                                 src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
@@ -468,8 +468,8 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
 
                     <!--RESULTS SELECTED FILTER-->
                     <div class="listng-res">
-                        <div class="count_no"><?php echo $Zitiziti['JOB-SHOWING']; ?>
-                            <span><?php echo AddingZero_BeforeNumber($total_experts); ?></span> <?php echo $Zitiziti['SERVICE-EXPERTS']; ?>
+                        <div class="count_no"><?php echo $BIZBOOK['JOB-SHOWING']; ?>
+                            <span><?php echo AddingZero_BeforeNumber($total_experts); ?></span> <?php echo $BIZBOOK['SERVICE-EXPERTS']; ?>
                         </div>
                         <div class="list-res-selt">
 
@@ -500,11 +500,11 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                 <span class="service-expert-filters" id="<?php echo $get_availability; ?>" data-type="availability"><?php
 
                                     if ($get_availability == 'available') {
-                                        echo $Zitiziti['SERVICE-EXPERT-AVAILABLE-LABEL'];
+                                        echo $BIZBOOK['SERVICE-EXPERT-AVAILABLE-LABEL'];
                                     } elseif ($get_availability == 'busy') {
-                                        echo $Zitiziti['SERVICE-EXPERT-BUSY-LABEL'];
+                                        echo $BIZBOOK['SERVICE-EXPERT-BUSY-LABEL'];
                                     } elseif ($get_availability == 'closed-today') {
-                                        echo $Zitiziti['SERVICE-EXPERT-CLOSED-TODAY-LABEL'];
+                                        echo $BIZBOOK['SERVICE-EXPERT-CLOSED-TODAY-LABEL'];
                                     } ?></span>
                             <?php } ?>
 
@@ -512,7 +512,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                             <?php
                             if (isset($_REQUEST['verified']) && !empty($_REQUEST['verified']) && $_REQUEST['verified'] != 'no') { ?>
                                 <span class="service-expert-filters" id="<?php echo $get_verified; ?>"
-                                      data-type="verified"><?php echo $Zitiziti['SERVICE-EXPERT-VERIFIED-EXPERTS-LABEL']; ?></span>
+                                      data-type="verified"><?php echo $BIZBOOK['SERVICE-EXPERT-VERIFIED-EXPERTS-LABEL']; ?></span>
                             <?php } ?>
 
                             <!-- //Filter Rating   -->
@@ -522,15 +522,15 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                 <span class="service-expert-filters" id="<?php echo $get_ratings; ?>" data-type="ratings"><?php
 
                                     if ($get_ratings == 5) {
-                                        echo '5' . ' ' . $Zitiziti['SERVICE-EXPERT-STAR-LABEL'];
+                                        echo '5' . ' ' . $BIZBOOK['SERVICE-EXPERT-STAR-LABEL'];
                                     } elseif ($get_ratings == 4) {
-                                        echo '4' . ' ' . $Zitiziti['SERVICE-EXPERT-STAR-LABEL'];
+                                        echo '4' . ' ' . $BIZBOOK['SERVICE-EXPERT-STAR-LABEL'];
                                     } elseif ($get_ratings == 3) {
-                                        echo '3' . ' ' . $Zitiziti['SERVICE-EXPERT-STAR-LABEL'];
+                                        echo '3' . ' ' . $BIZBOOK['SERVICE-EXPERT-STAR-LABEL'];
                                     } elseif ($get_ratings == 2) {
-                                        echo '2' . ' ' . $Zitiziti['SERVICE-EXPERT-STAR-LABEL'];
+                                        echo '2' . ' ' . $BIZBOOK['SERVICE-EXPERT-STAR-LABEL'];
                                     } elseif ($get_ratings == 1) {
-                                        echo '1' . ' ' . $Zitiziti['SERVICE-EXPERT-STAR-LABEL'];
+                                        echo '1' . ' ' . $BIZBOOK['SERVICE-EXPERT-STAR-LABEL'];
                                     } ?></span>
                             <?php } ?>
 
@@ -541,9 +541,9 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                 <span class="service-expert-filters" id="<?php echo $get_rating_order; ?>" data-type="sort_by"><?php
 
                                     if ($get_rating_order == 'low-first') {
-                                        echo $Zitiziti['SERVICE-EXPERT-LOW-HIGH-LABEL'];
+                                        echo $BIZBOOK['SERVICE-EXPERT-LOW-HIGH-LABEL'];
                                     } elseif ($get_rating_order == 'high-first') {
-                                        echo $Zitiziti['SERVICE-EXPERT-HIGH-LOW-LABEL'];
+                                        echo $BIZBOOK['SERVICE-EXPERT-HIGH-LOW-LABEL'];
                                     } ?></span>
                             <?php } ?>
                         </div>
@@ -613,17 +613,17 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                                 </div>
                                                 <div class="job-box-con">
                                                     <h4><?php echo $expertrow['profile_name']; ?></h4>
-                                                    <span><?php echo getIdCountFinishedExpertEnquiries($expert_id); ?><?php echo $Zitiziti['SERVICE-EXPERT-SERVICES-DONE']; ?></span>
-                                                    <span><?php echo $expertrow['years_of_experience']; ?><?php echo $Zitiziti['SERVICE-EXPERT-YEARS-TEXT']; ?><?php echo $Zitiziti['SERVICE-EXPERT-EXP']; ?></span>
+                                                    <span><?php echo getIdCountFinishedExpertEnquiries($expert_id); ?><?php echo $BIZBOOK['SERVICE-EXPERT-SERVICES-DONE']; ?></span>
+                                                    <span><?php echo $expertrow['years_of_experience']; ?><?php echo $BIZBOOK['SERVICE-EXPERT-YEARS-TEXT']; ?><?php echo $BIZBOOK['SERVICE-EXPERT-EXP']; ?></span>
                                                 </div>
                                                 <a href="<?php echo $SERVICE_EXPERT_URL . urlModifier($expertrow['expert_slug']); ?>"
                                                    class="fclick"></a>
                                             </div>
                                             <div class="job-box-apl">
                                                 <span class="job-box-cta" data-toggle="modal"
-                                              data-target="#expfrm<?php echo $expert_id; ?>"><?php echo $Zitiziti['SERVICE-EXPERT-CONTACT-ME']; ?></span>
+                                              data-target="#expfrm<?php echo $expert_id; ?>"><?php echo $BIZBOOK['SERVICE-EXPERT-CONTACT-ME']; ?></span>
                                                 <a href="<?php echo $SERVICE_EXPERT_URL . urlModifier($expertrow['expert_slug']); ?>"
-                                                   class="serexp-cta-more"><?php echo $Zitiziti['SERVICE-EXPERT-MORE-DETAILS']; ?></a>
+                                                   class="serexp-cta-more"><?php echo $BIZBOOK['SERVICE-EXPERT-MORE-DETAILS']; ?></a>
                                             </div>
                                         </div>
                                     </li>
@@ -644,17 +644,17 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                                         <div class="quote-pop">
                                                             <div id="expert_pop_enq_success" class="log"
                                                                  style="display: none;">
-                                                                <p><?php echo $Zitiziti['SERVICE_EXPERT_ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
+                                                                <p><?php echo $BIZBOOK['SERVICE_EXPERT_ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
                                                             </div>
                                                             <div id="expert_pop_enq_same" class="log"
                                                                  style="display: none;">
-                                                                <p><?php echo $Zitiziti['SERVICE_EXPERT_ENQUIRY_OWN_JOB_MESSAGE']; ?></p>
+                                                                <p><?php echo $BIZBOOK['SERVICE_EXPERT_ENQUIRY_OWN_JOB_MESSAGE']; ?></p>
                                                             </div>
                                                             <div id="expert_pop_enq_fail" class="log"
                                                                  style="display: none;">
-                                                                <p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                                                                <p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                                                             </div>
-                                                            <div class="ser-exp-wel"><?php echo $Zitiziti['SERVICE-EXPERT-HEY-LABEL']; ?>
+                                                            <div class="ser-exp-wel"><?php echo $BIZBOOK['SERVICE-EXPERT-HEY-LABEL']; ?>
                                                                 <b><?php echo $expertrow['profile_name']; ?></b></div>
                                                             <form method="post" name="expert_all_enquiry_form"
                                                                   id="expert_all_enquiry_form">
@@ -691,30 +691,30 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                                                     <input type="text" name="enquiry_name"
                                                                            value="<?php echo $user_details_row['first_name'] ?>"
                                                                            required="required" class="form-control"
-                                                                           placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>">
+                                                                           placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>">
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <input type="email" class="form-control"
-                                                                           placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>"
+                                                                           placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>"
                                                                            required="required"
                                                                            value="<?php echo $user_details_row['email_id'] ?>"
                                                                            name="enquiry_email"
                                                                            pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                                                           title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>">
+                                                                           title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>">
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <input type="text" class="form-control"
                                                                            value="<?php echo $user_details_row['mobile_number'] ?>"
                                                                            name="enquiry_mobile"
-                                                                           placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                                                           placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
                                                                            pattern="[7-9]{1}[0-9]{9}"
-                                                                           title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>"
+                                                                           title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>"
                                                                            required>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <select class="chosen-select" disabled="disabled" required="required"
                                                                             name="enquiry_category_old">
-                                                                        <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
+                                                                        <option value=""><?php echo $BIZBOOK['SELECT_CATEGORY']; ?></option>
                                                                         <?php
                                                                         foreach (getAllActiveExpertCategoriesPos() as $lead_categories_row) {
                                                                             ?>
@@ -727,12 +727,12 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                                                 <div class="form-group col-md-6 serex-date">
                                                                     <input type="text" class="form-control datepicker"
                                                                            name="enquiry_date"
-                                                                           placeholder="<?php echo $Zitiziti['SERVICE-EXPERT-PREFERRED-DATE']; ?>"
+                                                                           placeholder="<?php echo $BIZBOOK['SERVICE-EXPERT-PREFERRED-DATE']; ?>"
                                                                            id="newdate">
                                                                 </div>
                                                                 <div class="form-group col-md-6 serex-time">
                                                                     <select class="chosen-select" name="enquiry_time">
-                                                                        <option value=""><?php echo $Zitiziti['SERVICE-EXPERT-PREFERRED-TIME']; ?></option>
+                                                                        <option value=""><?php echo $BIZBOOK['SERVICE-EXPERT-PREFERRED-TIME']; ?></option>
                                                                         <?php
                                                                         $start_time = $expertrow['available_time_start'];
                                                                         $new_start_time1 = strtotime('-60mins', strtotime($start_time));
@@ -760,13 +760,13 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                                                     <textarea class="form-control"
                                                                               name="enquiry_location"
                                                                               id="enquiry_location"
-                                                                              placeholder="<?php echo $Zitiziti['LEAD-LOCATION-PLACEHOLDER']; ?>"></textarea>
+                                                                              placeholder="<?php echo $BIZBOOK['LEAD-LOCATION-PLACEHOLDER']; ?>"></textarea>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <textarea class="form-control"
                                                                               name="enquiry_message"
                                                                               id="enquiry_message"
-                                                                              placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                                                              placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                                                                 </div>
                                                                 <input type="hidden" name="" id="source">
                                                                 <button <?php if ($session_user_id == NULL || empty($session_user_id)) {
@@ -774,7 +774,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                                                                                       id="expert_all_enquiry_submit"
                                                                                                       name="expert_all_enquiry_submit"
                                                                                                       class="btn btn-primary"><?php if ($session_user_id == NULL || empty($session_user_id)) {
-                                                                        ?><?php echo $Zitiziti['LOG_IN_TO_SUBMIT']; ?><?php } else { ?><?php echo $Zitiziti['SUBMIT']; ?><?php } ?>
+                                                                        ?><?php echo $BIZBOOK['LOG_IN_TO_SUBMIT']; ?><?php } else { ?><?php echo $BIZBOOK['SUBMIT']; ?><?php } ?>
                                                                 </button>
                                                             </form>
                                                         </div>
@@ -800,7 +800,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
     text-shadow: 0px 0px 2px #fff;
     text-transform: uppercase;
     text-align: center!important;
-    margin-top: 5%;"><?php echo $Zitiziti['SERVICE_EXPERTS_NO_SERVICE_EXPERTS_MESSAGE']; ?></span>
+    margin-top: 5%;"><?php echo $BIZBOOK['SERVICE_EXPERTS_NO_SERVICE_EXPERTS_MESSAGE']; ?></span>
                         <?php
                     }
                     ?>
@@ -822,13 +822,13 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <!-- Modal Header -->
                     <div class="quote-pop">
-                        <div id="expert_pop_enq_common_success" class="log" style="display: none;"><p><?php echo $Zitiziti['SERVICE_EXPERT_ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
+                        <div id="expert_pop_enq_common_success" class="log" style="display: none;"><p><?php echo $BIZBOOK['SERVICE_EXPERT_ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
                         </div>
-                        <div id="expert_pop_enq_common_same" class="log" style="display: none;"><p><?php echo $Zitiziti['SERVICE_EXPERT_ENQUIRY_OWN_JOB_MESSAGE']; ?></p>
+                        <div id="expert_pop_enq_common_same" class="log" style="display: none;"><p><?php echo $BIZBOOK['SERVICE_EXPERT_ENQUIRY_OWN_JOB_MESSAGE']; ?></p>
                         </div>
-                        <div id="expert_pop_enq_common_fail" class="log" style="display: none;"><p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                        <div id="expert_pop_enq_common_fail" class="log" style="display: none;"><p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                         </div>
-                        <div class="ser-exp-wel"><?php echo $Zitiziti['SERVICE-EXPERT-ENQUIRY-DEFAULT-P-MESSAGE']; ?></div>
+                        <div class="ser-exp-wel"><?php echo $BIZBOOK['SERVICE-EXPERT-ENQUIRY-DEFAULT-P-MESSAGE']; ?></div>
                         <form method="post" name="expert_all_enquiry_common_form"
                               id="expert_all_enquiry_common_form">
                             <input type="hidden" class="form-control"
@@ -853,28 +853,28 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                 <input type="text" name="enquiry_name"
                                        value="<?php echo $user_details_row['first_name'] ?>"
                                        required="required" class="form-control"
-                                       placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>">
+                                       placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>">
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control"
-                                       placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>" required="required"
+                                       placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>" required="required"
                                        value="<?php echo $user_details_row['email_id'] ?>"
                                        name="enquiry_email"
                                        pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                       title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>">
+                                       title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control"
                                        value="<?php echo $user_details_row['mobile_number'] ?>"
                                        name="enquiry_mobile"
-                                       placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                       placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
                                        pattern="[7-9]{1}[0-9]{9}"
-                                       title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>"
+                                       title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>"
                                        required>
                             </div>
                             <div class="form-group">
                                 <select class="chosen-select" required="required" name="enquiry_category">
-                                    <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
+                                    <option value=""><?php echo $BIZBOOK['SELECT_CATEGORY']; ?></option>
                                     <?php
                                     foreach (getAllActiveExpertCategoriesPos() as $lead_categories_row) {
                                         ?>
@@ -886,11 +886,11 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                             </div>
                             <div class="form-group col-md-6 serex-date">
                                 <input type="text" class="form-control datepicker" name="enquiry_date"
-                                       placeholder="<?php echo $Zitiziti['SERVICE-EXPERT-PREFERRED-DATE']; ?>">
+                                       placeholder="<?php echo $BIZBOOK['SERVICE-EXPERT-PREFERRED-DATE']; ?>">
                             </div>
                             <div class="form-group col-md-6 serex-time">
                                 <select class="chosen-select" name="enquiry_time">
-                                    <option value=""><?php echo $Zitiziti['SERVICE-EXPERT-PREFERRED-TIME']; ?></option>
+                                    <option value=""><?php echo $BIZBOOK['SERVICE-EXPERT-PREFERRED-TIME']; ?></option>
                                     <?php
                                     $start_time = "6:00 AM";
                                     $new_start_time1 = strtotime('-60mins', strtotime($start_time));
@@ -915,17 +915,17 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                 </select>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" name="enquiry_location" id="enquiry_location" placeholder="<?php echo $Zitiziti['LEAD-LOCATION-PLACEHOLDER']; ?>"></textarea>
+                                <textarea class="form-control" name="enquiry_location" id="enquiry_location" placeholder="<?php echo $BIZBOOK['LEAD-LOCATION-PLACEHOLDER']; ?>"></textarea>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" name="enquiry_message" id="enquiry_message" placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                <textarea class="form-control" name="enquiry_message" id="enquiry_message" placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                             </div>
                             <input type="hidden" name="" id="source">
                             <button <?php if ($session_user_id == NULL || empty($session_user_id)) {
                                 ?> disabled="disabled" <?php } ?> type="submit" id="expert_all_enquiry_common_submit"
                                                                   name="expert_all_enquiry_common_submit"
                                                                   class="btn btn-primary"><?php if ($session_user_id == NULL || empty($session_user_id)) {
-                                    ?> <?php echo $Zitiziti['LOG_IN_TO_SUBMIT']; ?> <?php } else { ?><?php echo $Zitiziti['SUBMIT']; ?> <?php } ?>
+                                    ?> <?php echo $BIZBOOK['LOG_IN_TO_SUBMIT']; ?> <?php } else { ?><?php echo $BIZBOOK['SUBMIT']; ?> <?php } ?>
                             </button>
                         </form>
                     </div>

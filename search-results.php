@@ -54,16 +54,16 @@ if($select_search != ''){
 } ?> ser-head">
     <div class="container">
         <div class="blog-head-inn">
-            <h1><?php echo $Zitiziti['SEARCH-RESULTS-SEARCH-RESULTS']; ?></h1>
+            <h1><?php echo $BIZBOOK['SEARCH-RESULTS-SEARCH-RESULTS']; ?></h1>
         </div>
         <div class="ban-search">
             <form>
                 <ul>
                     <li class="sr-sea">
-                        <input type="text" id="select-search" value="<?php echo $select_search; ?>" class="autocomplete" placeholder="<?php echo $Zitiziti['SEARCH-RESULTS-SEARCH-ANYTHING-PLACEHOLDER']; ?>">
+                        <input type="text" id="select-search" value="<?php echo $select_search; ?>" class="autocomplete" placeholder="<?php echo $BIZBOOK['SEARCH-RESULTS-SEARCH-ANYTHING-PLACEHOLDER']; ?>">
                     </li>
                     <li class="sr-btn">
-                        <input type="submit" id="search_result_page_filter_submit" name="filter_submit"  value="<?php echo $Zitiziti['SEARCH']; ?>" class="filter_submit">
+                        <input type="submit" id="search_result_page_filter_submit" name="filter_submit"  value="<?php echo $BIZBOOK['SEARCH']; ?>" class="filter_submit">
                     </li>
                 </ul>
             </form>
@@ -76,13 +76,13 @@ if($select_search != ''){
 //No results found section
 if (mysqli_num_rows($listings_query) <= 0 && mysqli_num_rows($event_query) <= 0 && mysqli_num_rows($blog_query) <= 0 && mysqli_num_rows($product_query) <= 0 && mysqli_num_rows($job_query) <= 0 && mysqli_num_rows($expert_query) <= 0 || $select_search == NULL || empty($select_search)) {
     ?>
-    <div class="container"><?php echo $Zitiziti['SEARCH-RESULTS-OOPS-NO-RESULTS-FOUND']; ?> <b><?php echo $select_search; ?></b>. <?php echo $Zitiziti['SEARCH-RESULTS-PLEASE-TRY-WITH-OTHER']; ?></div>
+    <div class="container"><?php echo $BIZBOOK['SEARCH-RESULTS-OOPS-NO-RESULTS-FOUND']; ?> <b><?php echo $select_search; ?></b>. <?php echo $BIZBOOK['SEARCH-RESULTS-PLEASE-TRY-WITH-OTHER']; ?></div>
     <?php
 }
 else {
     $count = mysqli_num_rows($listings_query) + mysqli_num_rows($event_query) +  mysqli_num_rows($blog_query) + mysqli_num_rows($product_query) + mysqli_num_rows($job_query)+ mysqli_num_rows($expert_query);
     ?>
-    <div class="container ser-re-hu"><?php echo $Zitiziti['SEARCH-RESULTS-HURRAY']; ?> <?php echo $count; ?> <?php echo $Zitiziti['SEARCH-RESULTS-RESULTS-FOUND-FOR']; ?> <b><?php echo $select_search; ?></b>.</div>
+    <div class="container ser-re-hu"><?php echo $BIZBOOK['SEARCH-RESULTS-HURRAY']; ?> <?php echo $count; ?> <?php echo $BIZBOOK['SEARCH-RESULTS-RESULTS-FOUND-FOR']; ?> <b><?php echo $select_search; ?></b>.</div>
     <?php
 }
 ?>
@@ -113,7 +113,7 @@ else {
                                 <div class="ser1">
                                     <a href="<?php echo $LISTING_URL.urlModifier($listings_row['listing_slug']); ?>"><?php echo $listings_row['listing_name']; ?></a>
                                 </div>
-                                <span class="ser2"><?php echo $Zitiziti['LISTING']; ?></span>
+                                <span class="ser2"><?php echo $BIZBOOK['LISTING']; ?></span>
                                 <div class="ser3">
                                     <?php
                                     if (strlen($listings_row['listing_description']) >= 50) {
@@ -150,7 +150,7 @@ else {
                                 <div class="ser1">
                                     <a href="<?php echo $EVENT_URL.urlModifier($events_row['event_slug']); ?>"><?php echo $events_row['event_name']; ?></a>
                                 </div>
-                                <span class="ser2 ser-ev"><?php echo $Zitiziti['EVENT']; ?></span>
+                                <span class="ser2 ser-ev"><?php echo $BIZBOOK['EVENT']; ?></span>
                                 <div class="ser3">
 
                                     <?php
@@ -185,7 +185,7 @@ else {
                                 <div class="ser1"><a
                                         href="<?php echo $BLOG_URL.urlModifier($blog_row['blog_slug']); ?>"><?php echo $blog_row['blog_name']; ?></a>
                                 </div>
-                                <span class="ser2 ser-bl"><?php echo $Zitiziti['BLOG']; ?></span>
+                                <span class="ser2 ser-bl"><?php echo $BIZBOOK['BLOG']; ?></span>
                                 <div class="ser3">
                                     <?php
                                     if (strlen($blog_row['blog_description']) >= 50) {
@@ -220,7 +220,7 @@ else {
                                 <div class="ser1"><a
                                         href="<?php echo $PRODUCT_URL.urlModifier($product_row['product_slug']); ?>"><?php echo $product_row['product_name']; ?></a>
                                 </div>
-                                <span class="ser2 ser-bl"><?php echo $Zitiziti['PRODUCT']; ?></span>
+                                <span class="ser2 ser-bl"><?php echo $BIZBOOK['PRODUCT']; ?></span>
                                 <div class="ser3">
                                     <?php
                                     if (strlen($product_row['product_description']) >= 50) {
@@ -255,7 +255,7 @@ else {
                                 <div class="ser1"><a
                                         href="<?php echo $JOB_URL.urlModifier($job_row['job_slug']); ?>"><?php echo $job_row['job_title']; ?></a>
                                 </div>
-                                <span class="ser2 ser-bl"><?php echo $Zitiziti['JOB']; ?></span>
+                                <span class="ser2 ser-bl"><?php echo $BIZBOOK['JOB']; ?></span>
                                 <div class="ser3">
                                     <?php
                                     if (strlen($job_row['job_description']) >= 50) {
@@ -290,7 +290,7 @@ else {
                                 <div class="ser1"><a
                                         href="<?php echo $SERVICE_EXPERT_URL . urlModifier($expert_row['expert_slug']); ?>"><?php echo $expert_row['profile_name']; ?></a>
                                 </div>
-                                <span class="ser2 ser-bl"><?php echo $Zitiziti['SERVICE-EXPERTS']; ?></span>
+                                <span class="ser2 ser-bl"><?php echo $BIZBOOK['SERVICE-EXPERTS']; ?></span>
                             <span class="ser4">
                                 <a href="<?php echo $SERVICE_EXPERT_URL . urlModifier($expert_row['expert_slug']); ?>"><?php echo $SERVICE_EXPERT_URL . urlModifier($expert_row['expert_slug']); ?></a>
                             </span>
@@ -318,26 +318,26 @@ else {
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <!-- Modal Header -->
                     <div class="quote-pop">
-                        <h4><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></h4>
+                        <h4><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></h4>
                         <form>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>" required>
+                                <input type="text" class="form-control" placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>"
+                                <input type="email" class="form-control" placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>"
                                        pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                       title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
+                                       title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                <input type="text" class="form-control" placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
                                        pattern="[7-9]{1}[0-9]{9}"
-                                       title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>" required>
+                                       title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>" required>
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control" rows="3"
-                                          placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                          placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?></button>
+                            <button type="submit" class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
                         </form>
                     </div>
                     <div class="log-bor">&nbsp;</div>

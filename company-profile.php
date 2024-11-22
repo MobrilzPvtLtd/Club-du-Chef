@@ -55,11 +55,11 @@ businesspageview($profile_user_id); //Function To Find Page View
                     else{ echo $slash; ?>images/user/<?php echo $company_row['company_header_photo'];
                     } ?>" alt="">
                     <ul>
-                        <li><a href="#about"><?php echo $Zitiziti['ABOUT_US']; ?></a></li>
-                        <li><a href="#prod"><?php echo $Zitiziti['PRODUCTS']; ?></a></li>
-                        <li><a href="#event"><?php echo $Zitiziti['EVENTS']; ?></a></li>
-                        <li><a href="#blog"><?php echo $Zitiziti['BLOGS']; ?></a></li>
-                        <li><a href="#home_enquiry_form" id="bus-pg-quot"><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></a></li>
+                        <li><a href="#about"><?php echo $BIZBOOK['ABOUT_US']; ?></a></li>
+                        <li><a href="#prod"><?php echo $BIZBOOK['PRODUCTS']; ?></a></li>
+                        <li><a href="#event"><?php echo $BIZBOOK['EVENTS']; ?></a></li>
+                        <li><a href="#blog"><?php echo $BIZBOOK['BLOGS']; ?></a></li>
+                        <li><a href="#home_enquiry_form" id="bus-pg-quot"><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></a></li>
                     </ul>
                 </div>
             </div>
@@ -93,7 +93,7 @@ businesspageview($profile_user_id); //Function To Find Page View
                             <li><span><img
                                         src="<?php echo $slash; ?>images/icon/line/map.png"><?php echo $company_row['company_address']; ?></span>
                             </li>
-                            <li><a href="<?php echo $Zitiziti['TEL']; ?>:<?php echo $company_row['company_mobile']; ?>"><img
+                            <li><a href="<?php echo $BIZBOOK['TEL']; ?>:<?php echo $company_row['company_mobile']; ?>"><img
                                         src="<?php echo $slash; ?>images/icon/line/phone.png"> <?php echo $company_row['company_mobile']; ?>
                                 </a></li>
                             <li><a href="mailto:<?php echo $company_row['company_email_id']; ?>"><img
@@ -158,13 +158,13 @@ businesspageview($profile_user_id); //Function To Find Page View
                         </ul>
                     </div>
                     <div class="pro-pg-cts">
-                        <a href="#home_enquiry_form" class="cta1"><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></a>
-                        <a href="<?php echo $Zitiziti['TEL']; ?>:<?php echo $company_row['company_mobile']; ?>" class="cta2"><?php echo $Zitiziti['CALL_NOW']; ?></a>
+                        <a href="#home_enquiry_form" class="cta1"><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></a>
+                        <a href="<?php echo $BIZBOOK['TEL']; ?>:<?php echo $company_row['company_mobile']; ?>" class="cta2"><?php echo $BIZBOOK['CALL_NOW']; ?></a>
                         <?php
                         if ($company_row['company_whatsapp'] != NULL) {
                             ?>
                             <a target="_blank" href="https://wa.me/<?php echo $company_row['company_whatsapp']; ?>"
-                               class="cta3"><?php echo $Zitiziti['WHATSAPP']; ?></a>
+                               class="cta3"><?php echo $BIZBOOK['WHATSAPP']; ?></a>
                             <?php
                         }
                         ?>
@@ -176,14 +176,14 @@ businesspageview($profile_user_id); //Function To Find Page View
                     <div class="lhs">
                         <!--START-->
                         <div class="comp-abo" id="about">
-                            <h2><?php echo $Zitiziti['COMPANY-PROFILE-HEADING-LABEL']; ?></h2>
+                            <h2><?php echo $BIZBOOK['COMPANY-PROFILE-HEADING-LABEL']; ?></h2>
                             <p><?php echo stripslashes($company_row['company_description']); ?></p>
                         </div>
                         <!--END-->
                         <?php if (!empty($company_row['company_products'])) { ?>
                             <!--START-->
                             <div class="comp-pro" id="prod">
-                                <h2><?php echo $Zitiziti['PRODUCTS']; ?></h2>
+                                <h2><?php echo $BIZBOOK['PRODUCTS']; ?></h2>
                                 <?php
                                 $company_products_array = explode(',', $company_row['company_products']);
                                 foreach ($company_products_array as $tuple) {
@@ -218,7 +218,7 @@ businesspageview($profile_user_id); //Function To Find Page View
                                                     href="<?php echo $product_row['product_payment_link'];
                                                     } else {
                                                         echo "#!";
-                                                    } ?>"><?php echo $Zitiziti['BUY_NOW']; ?></a></div>
+                                                    } ?>"><?php echo $BIZBOOK['BUY_NOW']; ?></a></div>
                                         </div>
                                         <a target="_blank"
                                            href="<?php echo $PRODUCT_URL.urlModifier($product_row['product_slug']); ?>"
@@ -233,7 +233,7 @@ businesspageview($profile_user_id); //Function To Find Page View
                         <?php if (!empty($company_row['company_events'])) { ?>
                             <!--START-->
                             <div class="comp-pro" id="event">
-                                <h2><?php echo $Zitiziti['EVENTS']; ?></h2>
+                                <h2><?php echo $BIZBOOK['EVENTS']; ?></h2>
                                 <?php
                                 $company_events_array = explode(',', $company_row['company_events']);
                                 foreach ($company_events_array as $tuple) {
@@ -262,7 +262,7 @@ businesspageview($profile_user_id); //Function To Find Page View
                         <?php if (!empty($company_row['company_blogs'])) { ?>
                             <!--START-->
                             <div class="comp-pro" id="blog">
-                                <h2><?php echo $Zitiziti['BLOGS']; ?></h2>
+                                <h2><?php echo $BIZBOOK['BLOGS']; ?></h2>
                                 <?php
                                 $company_blogs_array = explode(',', $company_row['company_blogs']);
                                 foreach ($company_blogs_array as $tuple) {
@@ -292,18 +292,18 @@ businesspageview($profile_user_id); //Function To Find Page View
                         <div class="cpro-form">
                             <div class="box templ-rhs-eve">
                                 <div class="hot-page2-hom-pre-head">
-                                    <h4><?php echo $Zitiziti['LEAD-SEND-ENQUIRY']; ?></h4>
+                                    <h4><?php echo $BIZBOOK['LEAD-SEND-ENQUIRY']; ?></h4>
                                 </div>
                                 <div class="templ-rhs-form">
                                     <div id="home_enq_success" class="log"
                                          style="display: none;">
-                                        <p><?php echo $Zitiziti['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
+                                        <p><?php echo $BIZBOOK['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
                                     </div>
                                     <div id="home_enq_fail" class="log" style="display: none;">
-                                        <p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                                        <p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                                     </div>
                                     <div id="home_enq_same" class="log" style="display: none;">
-                                        <p><?php echo $Zitiziti['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
+                                        <p><?php echo $BIZBOOK['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
                                     </div>
                                     <form name="home_enquiry_form" id="home_enquiry_form" method="post"
                                           enctype="multipart/form-data">
@@ -322,27 +322,27 @@ businesspageview($profile_user_id); //Function To Find Page View
                                                }; ?>" placeholder="" required>
                                         <div class="form-group ic-user">
                                             <input type="text" name="enquiry_name" value="" required="required"
-                                                   class="form-control" placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>" id="ic-user">
+                                                   class="form-control" placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>" id="ic-user">
                                         </div>
                                         <div class="form-group ic-eml">
-                                            <input type="email" class="form-control" placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>"
+                                            <input type="email" class="form-control" placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>"
                                                    required="required" value="" name="enquiry_email"
                                                    pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                                   title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>">
+                                                   title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>">
                                         </div>
                                         <div class="form-group ic-pho">
                                             <input type="text" class="form-control" value="" name="enquiry_mobile"
-                                                   placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>" pattern="[7-9]{1}[0-9]{9}"
-                                                   title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>"
+                                                   placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>" pattern="[7-9]{1}[0-9]{9}"
+                                                   title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>"
                                                    required="">
                                         </div>
                                         <div class="form-group">
                                             <textarea class="form-control" rows="3" name="enquiry_message"
-                                                      placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                                      placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                                         </div>
                                         <input type="hidden" id="source">
                                         <button type="submit" id="home_enquiry_submit" name="home_enquiry_submit"
-                                                class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?></button>
+                                                class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
                                     </form>
                                 </div>
                             </div>

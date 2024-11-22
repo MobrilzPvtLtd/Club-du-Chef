@@ -11,7 +11,7 @@ $country_id = $_POST['country_id'];
 
 if (getCountExpertAreaCity($country_id) <= 0) {
     ?>
-    <option value=""><?php echo $Zitiziti['NO_AREA_FOUND_MESSAGE']; ?></option>
+    <option value=""><?php echo $BIZBOOK['NO_AREA_FOUND_MESSAGE']; ?></option>
     <?php
 } else {
 

@@ -173,7 +173,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //****************************    Admin email starts    *************************
 
             $to = $admin_email;
-            $BLOG_UPDATE_ADMIN_SUBJECT = $Zitiziti['BLOG_UPDATE_ADMIN_SUBJECT'];
+            $BLOG_UPDATE_ADMIN_SUBJECT = $BIZBOOK['BLOG_UPDATE_ADMIN_SUBJECT'];
             $subject = "$admin_site_name $BLOG_UPDATE_ADMIN_SUBJECT";
 
             $admin_sql_fetch = mysqli_query($conn,"SELECT * FROM " . TBL . "mail  WHERE mail_id = 17 "); //admin mail template fetch
@@ -200,7 +200,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //****************************    Client email starts    *************************
 
             $to1 = $email_id;
-            $BLOG_UPDATE_CLIENT_SUBJECT = $Zitiziti['BLOG_UPDATE_CLIENT_SUBJECT'];
+            $BLOG_UPDATE_CLIENT_SUBJECT = $BIZBOOK['BLOG_UPDATE_CLIENT_SUBJECT'];
             $subject1 = "$admin_site_name $BLOG_UPDATE_CLIENT_SUBJECT";
 
             $client_sql_fetch = mysqli_query($conn,"SELECT * FROM " . TBL . "mail  WHERE mail_id = 16 "); //User mail template fetch
@@ -225,7 +225,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if ($blog_type_id == 1) {
 
-                $_SESSION['status_msg'] = $Zitiziti['BLOGS_UPDATE_SUCCESSFUL_MESSAGE'];
+                $_SESSION['status_msg'] = $BIZBOOK['BLOGS_UPDATE_SUCCESSFUL_MESSAGE'];
 
                 header('Location: db-blog-posts');
                 exit;
@@ -233,7 +233,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 header("Location: paypal_pay?map_id=$blog_id&type_id=$blog_type_id");
 
-                $_SESSION['status_msg'] = $Zitiziti['BLOGS_UPDATE_SUCCESSFUL_MESSAGE'];
+                $_SESSION['status_msg'] = $BIZBOOK['BLOGS_UPDATE_SUCCESSFUL_MESSAGE'];
 
                 //           header('Location: db-payment');
 
@@ -242,7 +242,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
         } else {
 
-            $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+            $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
             header("Location: edit-blog-post?code=$blog_id");
         }
@@ -252,7 +252,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } else {
 
-    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: dashboard');
 }

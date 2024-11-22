@@ -30,8 +30,8 @@ if (!isset($_SESSION['payment_user_id']) && empty($_SESSION['payment_user_id']))
                             unset($_SESSION['status_msg']);
                         }
                         ?>
-                        <h4><?php echo $Zitiziti['DB-PAYMENTS-STRIPE-PAYMENT']; ?></h4>
-                        <p><?php echo $Zitiziti['DB-PAYMENTS-STRIPE-PAYMENT-SIMPLE-WAY-MESSAGE']; ?></p>
+                        <h4><?php echo $BIZBOOK['DB-PAYMENTS-STRIPE-PAYMENT']; ?></h4>
+                        <p><?php echo $BIZBOOK['DB-PAYMENTS-STRIPE-PAYMENT-SIMPLE-WAY-MESSAGE']; ?></p>
                         <?php
                         $user_details_row = getUser($_SESSION['payment_user_id']);
 
@@ -49,7 +49,7 @@ if (!isset($_SESSION['payment_user_id']) && empty($_SESSION['payment_user_id']))
 
                         ?>
                         <span class="paymentErrors alert-danger"></span>
-                        <div><?php echo $Zitiziti['HI']; ?> <?php echo $user_details_row['first_name']; ?>,</br> <?php echo $Zitiziti['DB-PAYMENTS-STRIPE-PAYMENT-YOUR-FINAL-AMOUNT']; ?> :
+                        <div><?php echo $BIZBOOK['HI']; ?> <?php echo $user_details_row['first_name']; ?>,</br> <?php echo $BIZBOOK['DB-PAYMENTS-STRIPE-PAYMENT-YOUR-FINAL-AMOUNT']; ?> :
                             <b><?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } echo $_SESSION['point_total_cost']; if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?></b>
                         </div>
                         <form name="payment_stripe_form" id="payment_stripe_form" method="post"
@@ -64,30 +64,30 @@ if (!isset($_SESSION['payment_user_id']) && empty($_SESSION['payment_user_id']))
                             <div class="form-group">
                                 <input type="text" autocomplete="off" name="first_name" id="first_name"
                                        required="required"
-                                       class="form-control" placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>">
+                                       class="form-control" placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>">
                             </div>
                             <div class="form-group">
                                 <input type="email" autocomplete="off" name="email_id" id="email_id"
-                                       class="form-control" placeholder="<?php echo $Zitiziti['LEAD-EMAIL-PLACEHOLDER']; ?>" required>
+                                       class="form-control" placeholder="<?php echo $BIZBOOK['LEAD-EMAIL-PLACEHOLDER']; ?>" required>
                             </div>
                             <div class="form-group">
                                 <input type="text" onkeypress="return isNumber(event)" autocomplete="off"
                                        name="card_number" id="card_number"
-                                       class="form-control" placeholder="<?php echo $Zitiziti['LEAD-CARD-NUMBER-PLACEHOLDER'];?>" required>
+                                       class="form-control" placeholder="<?php echo $BIZBOOK['LEAD-CARD-NUMBER-PLACEHOLDER'];?>" required>
                             </div>
 
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input type="text" name="cardExpMonth" required
-                                               onkeypress="return isNumber(event)" maxlength="2" placeholder="<?php echo $Zitiziti['LEAD-CARD-NUMBER-MM-PLACEHOLDER']; ?>"
+                                               onkeypress="return isNumber(event)" maxlength="2" placeholder="<?php echo $BIZBOOK['LEAD-CARD-NUMBER-MM-PLACEHOLDER']; ?>"
                                                size="2" id="cardExpMonth" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input type="text" name="cardExpYear" required
-                                               onkeypress="return isNumber(event)" maxlength="4" placeholder="<?php echo $Zitiziti['LEAD-CARD-NUMBER-YYYY-PLACEHOLDER']; ?>"
+                                               onkeypress="return isNumber(event)" maxlength="4" placeholder="<?php echo $BIZBOOK['LEAD-CARD-NUMBER-YYYY-PLACEHOLDER']; ?>"
                                                size="4" id="cardExpYear" class="form-control">
                                     </div>
                                 </div>
@@ -95,13 +95,13 @@ if (!isset($_SESSION['payment_user_id']) && empty($_SESSION['payment_user_id']))
                             <div class="form-group">
                                 <input type="text" onkeypress="return isNumber(event)" required name="cardCVC" size="4"
                                        maxlength="4" autocomplete="off" id="cardCVC" class="form-control"
-                                       placeholder="<?php echo $Zitiziti['LEAD-CARD-NUMBER-CVC-PLACEHOLDER']; ?>">
+                                       placeholder="<?php echo $BIZBOOK['LEAD-CARD-NUMBER-CVC-PLACEHOLDER']; ?>">
                             </div>
 
                             <button type="submit" name="stripe_payment_submit" id="stripe_payment_submit"
                                     class="btn btn-primary">
-                                <?php echo $Zitiziti['PAY']; ?> <?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; }  echo $user_plan_type['plan_type_price'];  if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?>
-                                <?php echo $Zitiziti['NOW']; ?>
+                                <?php echo $BIZBOOK['PAY']; ?> <?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; }  echo $user_plan_type['plan_type_price'];  if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?>
+                                <?php echo $BIZBOOK['NOW']; ?>
                             </button>
                         </form>
                     </div>

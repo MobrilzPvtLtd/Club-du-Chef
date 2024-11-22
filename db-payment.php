@@ -11,12 +11,12 @@ include "dashboard_left_pane.php";
    <div class="ud-main-inn ud-no-rhs">
     <div class="ud-cen">
         <div class="log-bor">&nbsp;</div>
-        <span class="udb-inst"><?php echo $Zitiziti['PAYMENT']; ?></span>
+        <span class="udb-inst"><?php echo $BIZBOOK['PAYMENT']; ?></span>
         <?php include('config/user_activation_checker.php'); ?>
         <div class="ud-cen-s2">
-            <h2><?php echo $Zitiziti['DASH_RIGHT_PAYMENT_STATUS']; ?></h2>
+            <h2><?php echo $BIZBOOK['DASH_RIGHT_PAYMENT_STATUS']; ?></h2>
             <?php include "page_level_message.php"; ?>
-            <a href="db-plan-change" class="db-tit-btn"><?php echo $Zitiziti['DASH_RIGHT_CHANGE_MY_PLAN']; ?></a>
+            <a href="db-plan-change" class="db-tit-btn"><?php echo $BIZBOOK['DASH_RIGHT_CHANGE_MY_PLAN']; ?></a>
             <div class="ud-payment">
                 <div class="pay-lhs">
                     <img
@@ -28,9 +28,9 @@ include "dashboard_left_pane.php";
                 </div>
                 <div class="pay-rhs">
                     <ul>
-                        <li><b><?php echo $Zitiziti['NAME'];  ?> : </b> <?php echo $user_details_row['first_name']; ?></li>
-                        <li><b><?php echo $Zitiziti['DASH_RIGHT_PLAN_NAME'];  ?> : </b> <?php echo $user_plan_type['plan_type_name']; ?></li>
-                        <li><b><?php echo $Zitiziti['DASH_RIGHT_START_DATE'];  ?> : </b> <?php echo dateFormatconverter($user_details_row['user_cdt']) ?></li>
+                        <li><b><?php echo $BIZBOOK['NAME'];  ?> : </b> <?php echo $user_details_row['first_name']; ?></li>
+                        <li><b><?php echo $BIZBOOK['DASH_RIGHT_PLAN_NAME'];  ?> : </b> <?php echo $user_plan_type['plan_type_name']; ?></li>
+                        <li><b><?php echo $BIZBOOK['DASH_RIGHT_START_DATE'];  ?> : </b> <?php echo dateFormatconverter($user_details_row['user_cdt']) ?></li>
 
                         <?php
                         //To calculate the expiry date from user created date starts
@@ -45,8 +45,8 @@ include "dashboard_left_pane.php";
                         //To calculate the expiry date from user created date ends
                         ?>
 
-                        <li><b><?php echo $Zitiziti['DASH_RIGHT_EXPIRY_DATE'];  ?> : </b> <?php echo dateFormatconverter($expiry_date) ?></li>
-                        <li><b><?php echo $Zitiziti['DURATION'];  ?> : </b> <?php if ($plan_type_duration >= 7) {
+                        <li><b><?php echo $BIZBOOK['DASH_RIGHT_EXPIRY_DATE'];  ?> : </b> <?php echo dateFormatconverter($expiry_date) ?></li>
+                        <li><b><?php echo $BIZBOOK['DURATION'];  ?> : </b> <?php if ($plan_type_duration >= 7) {
                                 echo $plan_type_duration / 12 . ' ' . "year";
                             } else {
                                 echo $plan_type_duration . ' ' . "month(s)";
@@ -62,15 +62,15 @@ include "dashboard_left_pane.php";
                         //To calculate the remaining days from expiry date to current date ends
                         ?>
 
-                        <li><b><?php echo $Zitiziti['DASH_RIGHT_REMAINING_DAYS'];  ?> : </b> <?php echo $days_between; ?></li>
+                        <li><b><?php echo $BIZBOOK['DASH_RIGHT_REMAINING_DAYS'];  ?> : </b> <?php echo $days_between; ?></li>
                         <li><span
-                                class="ud-stat-pay-btn"><?php echo $Zitiziti['DASH_RIGHT_CHECKOUT_AMOUNT'];  ?>: <?php if ($user_plan_type['plan_type_price'] == 0) {
+                                class="ud-stat-pay-btn"><?php echo $BIZBOOK['DASH_RIGHT_CHECKOUT_AMOUNT'];  ?>: <?php if ($user_plan_type['plan_type_price'] == 0) {
                                     echo "FREE";
                                 } else {
                                     if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?><?php echo '' . $user_plan_type['plan_type_price']; if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; }
                                 } ?></span></li>
                         <li><span
-                                class="ud-stat-pay-btn"><?php echo $Zitiziti['DASH_RIGHT_PAYMENT_STATUS'];  ?>: <?php if ($user_details_row['payment_status'] == 'Paid') {
+                                class="ud-stat-pay-btn"><?php echo $BIZBOOK['DASH_RIGHT_PAYMENT_STATUS'];  ?>: <?php if ($user_details_row['payment_status'] == 'Paid') {
                                     echo "PAID";
                                 } elseif ($user_details_row['payment_status'] == 'COD') {
                                     echo "COD Initiated / Pending";
@@ -85,23 +85,23 @@ include "dashboard_left_pane.php";
             <?php if (empty($user_details_row['payment_status']) || ($user_details_row['payment_status'] == NULL)) { //To check the payment status  ?>
                 <?php if ($user_plan_type['plan_type_price'] != 0) {  //To check the plan payment amount ?>
                     <div class="ud-pay-op">
-                        <h4><?php echo $Zitiziti['DB-PAYMENTS-HEADING']; ?></h4>
+                        <h4><?php echo $BIZBOOK['DB-PAYMENTS-HEADING']; ?></h4>
                         <ul>
                             <?php if ($footer_row['admin_cod_status'] == "Active") { ?>
                                 <li>
                                     <div class="pay-full">
                                         <div class="rbbox">
                                             <input type="radio" id="paymentcash" name="payment" checked="">
-                                            <label for="paymentcash"><?php echo $Zitiziti['CASH_ON_DELIVERY'];  ?></label>
+                                            <label for="paymentcash"><?php echo $BIZBOOK['CASH_ON_DELIVERY'];  ?></label>
                                             <div class="pay-note">
                                                 <span><i
-                                                        class="material-icons">star</i><?php echo $Zitiziti['DB-PAYMENTS-HEADING-P-1'];  ?></span>
-                                                <span><i class="material-icons">star</i>  <?php echo $Zitiziti['DB-PAYMENTS-HEADING-P-2'];  ?></span>
+                                                        class="material-icons">star</i><?php echo $BIZBOOK['DB-PAYMENTS-HEADING-P-1'];  ?></span>
+                                                <span><i class="material-icons">star</i>  <?php echo $BIZBOOK['DB-PAYMENTS-HEADING-P-2'];  ?></span>
                                         <span><i
-                                                class="material-icons">star</i> <?php echo $Zitiziti['DB-PAYMENTS-HEADING-P-3'];  ?></span>
+                                                class="material-icons">star</i> <?php echo $BIZBOOK['DB-PAYMENTS-HEADING-P-3'];  ?></span>
                                                 <form name="cod_form" id="cod_form" method="post"
                                                       action="payment_cod_submit.php">
-                                                    <h4><?php echo $Zitiziti['DB-PAYMENTS-BILLING-DETAILS'];  ?></h4>
+                                                    <h4><?php echo $BIZBOOK['DB-PAYMENTS-BILLING-DETAILS'];  ?></h4>
                                                     <ul>
                                                         <li>
                                                             <!--FILED START-->
@@ -111,7 +111,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" class="form-control"
                                                                                readonly="readonly"
                                                                                value="<?php echo $user_details_row['first_name']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['FULL_NAME'];  ?> *" required>
+                                                                               placeholder="<?php echo $BIZBOOK['FULL_NAME'];  ?> *" required>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -119,7 +119,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" name="user_country"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_country']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['COUNTRY'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['COUNTRY'];  ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -131,7 +131,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" name="user_state"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_state']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['STATE'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['STATE'];  ?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -139,7 +139,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" name="user_city"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_city']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['CITY'];  ?> *"
+                                                                               placeholder="<?php echo $BIZBOOK['CITY'];  ?> *"
                                                                                required>
                                                                     </div>
                                                                 </div>
@@ -152,7 +152,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" name="user_address"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_address']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['VILLAGE_STREET_NAME'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['VILLAGE_STREET_NAME'];  ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -165,7 +165,7 @@ include "dashboard_left_pane.php";
                                                                                onkeypress="return isNumber(event)"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_zip_code']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['POSTCODE_ZIP'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['POSTCODE_ZIP'];  ?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -173,7 +173,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" class="form-control"
                                                                                name="user_contact_name"
                                                                                value="<?php echo $user_details_row['user_contact_name']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['CONTACT_PERSON'];  ?> *" required>
+                                                                               placeholder="<?php echo $BIZBOOK['CONTACT_PERSON'];  ?> *" required>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -186,7 +186,7 @@ include "dashboard_left_pane.php";
                                                                                name="user_contact_mobile"
                                                                                onkeypress="return isNumber(event)"
                                                                                value="<?php echo $user_details_row['user_contact_mobile']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['CONTACT_PHONE_NUMBER'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['CONTACT_PHONE_NUMBER'];  ?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -194,7 +194,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" class="form-control"
                                                                                name="user_contact_email"
                                                                                value="<?php echo $user_details_row['user_contact_email']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['CONTACT_EMAIL_ID'];  ?>" required>
+                                                                               placeholder="<?php echo $BIZBOOK['CONTACT_EMAIL_ID'];  ?>" required>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -202,7 +202,7 @@ include "dashboard_left_pane.php";
                                                         </li>
                                                     </ul>
                                                     <button type="submit" name="payment_submit" class="db-pro-bot-btn">
-                                                        <?php echo $Zitiziti['DB-PAYMENTS-SUBMIT-COD']; ?>
+                                                        <?php echo $BIZBOOK['DB-PAYMENTS-SUBMIT-COD']; ?>
                                                     </button>
                                                 </form>
 
@@ -220,13 +220,13 @@ include "dashboard_left_pane.php";
                                                    name="payment" <?php if ($footer_row['admin_cod_status'] != "Active") {
                                                 echo "checked='checked'";
                                             } ?>>
-                                            <label for="paymentpaypal"><?php echo $Zitiziti['DB-PAYMENTS-PAYPAL-PAYMENT-GATEWAY']; ?></label>
+                                            <label for="paymentpaypal"><?php echo $BIZBOOK['DB-PAYMENTS-PAYPAL-PAYMENT-GATEWAY']; ?></label>
                                             <div class="pay-note">
-                                                <span><i class="material-icons">star</i> <?php echo $Zitiziti['DB-PAYMENTS-PAYPAL-PAYMENT-GATEWAY-P-1']; ?></span>
-                                                <span><i class="material-icons">star</i><?php echo $Zitiziti['DB-PAYMENTS-WHAT-IS-PAYPAL'];?></span>
+                                                <span><i class="material-icons">star</i> <?php echo $BIZBOOK['DB-PAYMENTS-PAYPAL-PAYMENT-GATEWAY-P-1']; ?></span>
+                                                <span><i class="material-icons">star</i><?php echo $BIZBOOK['DB-PAYMENTS-WHAT-IS-PAYPAL'];?></span>
                                                 <form name="paypal_form" id="paypal_form" method="post"
                                                       action="payment_paypal_submit.php">
-                                                    <h4><?php echo $Zitiziti['DB-PAYMENTS-BILLING-DETAILS'];  ?></h4>
+                                                    <h4><?php echo $BIZBOOK['DB-PAYMENTS-BILLING-DETAILS'];  ?></h4>
                                                     <ul>
                                                         <li>
                                                             <!--FILED START-->
@@ -236,7 +236,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" readonly="readonly"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['first_name']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['FULL_NAME'];  ?> *" required>
+                                                                               placeholder="<?php echo $BIZBOOK['FULL_NAME'];  ?> *" required>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -244,7 +244,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" name="user_country"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_country']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['COUNTRY'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['COUNTRY'];  ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -256,7 +256,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" name="user_state"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_state']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['STATE'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['STATE'];  ?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -264,7 +264,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" name="user_city"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_city']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['CITY'];  ?> *"
+                                                                               placeholder="<?php echo $BIZBOOK['CITY'];  ?> *"
                                                                                required>
                                                                     </div>
                                                                 </div>
@@ -277,7 +277,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" name="user_address"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_address']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['VILLAGE_STREET_NAME'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['VILLAGE_STREET_NAME'];  ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -290,7 +290,7 @@ include "dashboard_left_pane.php";
                                                                                onkeypress="return isNumber(event)"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_zip_code']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['POSTCODE_ZIP'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['POSTCODE_ZIP'];  ?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -298,7 +298,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" class="form-control"
                                                                                name="user_contact_name"
                                                                                value="<?php echo $user_details_row['user_contact_name']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['CONTACT_PERSON'];  ?> *" required>
+                                                                               placeholder="<?php echo $BIZBOOK['CONTACT_PERSON'];  ?> *" required>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -311,7 +311,7 @@ include "dashboard_left_pane.php";
                                                                                name="user_contact_mobile"
                                                                                onkeypress="return isNumber(event)"
                                                                                value="<?php echo $user_details_row['user_contact_mobile']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['CONTACT_PHONE_NUMBER'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['CONTACT_PHONE_NUMBER'];  ?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -319,7 +319,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" class="form-control"
                                                                                name="user_contact_email"
                                                                                value="<?php echo $user_details_row['user_contact_email']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['CONTACT_EMAIL_ID'];  ?>" required>
+                                                                               placeholder="<?php echo $BIZBOOK['CONTACT_EMAIL_ID'];  ?>" required>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -327,7 +327,7 @@ include "dashboard_left_pane.php";
                                                         </li>
                                                     </ul>
                                                     <button type="submit" name="payment_submit" class="db-pro-bot-btn">
-                                                        <?php echo $Zitiziti['DB-PAYMENTS-START-PAYMENT']; ?>
+                                                        <?php echo $BIZBOOK['DB-PAYMENTS-START-PAYMENT']; ?>
                                                     </button>
                                                 </form>
                                             </div>
@@ -343,18 +343,18 @@ include "dashboard_left_pane.php";
                                                    name="payment" <?php if ($footer_row['admin_cod_status'] != "Active" && $footer_row['admin_paypal_status'] != "Active") {
                                                 echo "checked='checked'";
                                             } ?>>
-                                            <label for="paymentstripe"><?php echo $Zitiziti['DB-PAYMENTS-STRIPE-PAYMENT-GATEWAY']; ?></label>
+                                            <label for="paymentstripe"><?php echo $BIZBOOK['DB-PAYMENTS-STRIPE-PAYMENT-GATEWAY']; ?></label>
                                             <div class="pay-note">
-                                                <span><i class="material-icons">star</i> <?php echo $Zitiziti['DB-PAYMENTS-STRIPE-PAYMENT-GATEWAY-P-1']; ?></span>
-                                                <span><i class="material-icons">star</i><?php echo $Zitiziti['DB-PAYMENTS-WHAT-IS-STRIPE']; ?></span>
+                                                <span><i class="material-icons">star</i> <?php echo $BIZBOOK['DB-PAYMENTS-STRIPE-PAYMENT-GATEWAY-P-1']; ?></span>
+                                                <span><i class="material-icons">star</i><?php echo $BIZBOOK['DB-PAYMENTS-WHAT-IS-STRIPE']; ?></span>
                                                 <form name="stripe_dash_form" id="stripe_dash_form" method="post"
                                                       action="stripe_bypass_submit.php">
                                                     <input type="hidden" readonly="readonly"
                                                            class="form-control" name="stripe_dash_user_id"
                                                            value="<?php echo $_SESSION['user_id']; ?>"
-                                                           placeholder="<?php echo $Zitiziti['FULL_NAME'];  ?> *" required>
+                                                           placeholder="<?php echo $BIZBOOK['FULL_NAME'];  ?> *" required>
 
-                                                    <h4><?php echo $Zitiziti['DB-PAYMENTS-BILLING-DETAILS'];  ?></h4>
+                                                    <h4><?php echo $BIZBOOK['DB-PAYMENTS-BILLING-DETAILS'];  ?></h4>
                                                     <ul>
                                                         <li>
                                                             <!--                                                    FILED START-->
@@ -364,7 +364,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" readonly="readonly"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['first_name']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['FULL_NAME'];  ?> *" required>
+                                                                               placeholder="<?php echo $BIZBOOK['FULL_NAME'];  ?> *" required>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -372,7 +372,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" name="user_country"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_country']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['COUNTRY'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['COUNTRY'];  ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -384,7 +384,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" name="user_state"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_state']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['STATE'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['STATE'];  ?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -392,7 +392,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" name="user_city"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_city']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['CITY'];  ?> *"
+                                                                               placeholder="<?php echo $BIZBOOK['CITY'];  ?> *"
                                                                                required>
                                                                     </div>
                                                                 </div>
@@ -405,7 +405,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" name="user_address"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_address']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['VILLAGE_STREET_NAME'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['VILLAGE_STREET_NAME'];  ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -418,7 +418,7 @@ include "dashboard_left_pane.php";
                                                                                onkeypress="return isNumber(event)"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_zip_code']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['POSTCODE_ZIP'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['POSTCODE_ZIP'];  ?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -426,7 +426,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" class="form-control"
                                                                                name="user_contact_name"
                                                                                value="<?php echo $user_details_row['user_contact_name']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['CONTACT_PERSON'];  ?> *" required>
+                                                                               placeholder="<?php echo $BIZBOOK['CONTACT_PERSON'];  ?> *" required>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -439,7 +439,7 @@ include "dashboard_left_pane.php";
                                                                                name="user_contact_mobile"
                                                                                onkeypress="return isNumber(event)"
                                                                                value="<?php echo $user_details_row['user_contact_mobile']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['CONTACT_PHONE_NUMBER'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['CONTACT_PHONE_NUMBER'];  ?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -447,7 +447,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" class="form-control"
                                                                                name="user_contact_email"
                                                                                value="<?php echo $user_details_row['user_contact_email']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['CONTACT_EMAIL_ID'];  ?>" required>
+                                                                               placeholder="<?php echo $BIZBOOK['CONTACT_EMAIL_ID'];  ?>" required>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -456,7 +456,7 @@ include "dashboard_left_pane.php";
                                                     </ul>
                                                     <button type="submit" name="stripe_dash_form_submit"
                                                             class="db-pro-bot-btn">
-                                                        <?php echo $Zitiziti['DB-PAYMENTS-START-PAYMENT']; ?>
+                                                        <?php echo $BIZBOOK['DB-PAYMENTS-START-PAYMENT']; ?>
                                                     </button>
                                                 </form>
                                             </div>
@@ -472,18 +472,18 @@ include "dashboard_left_pane.php";
                                                    name="payment" <?php if ($footer_row['admin_cod_status'] != "Active" && $footer_row['admin_paypal_status'] != "Active" && $footer_row['admin_stripe_status'] != "Active") {
                                                 echo "checked='checked'";
                                             } ?>>
-                                            <label for="payment_razor_pay"><?php echo $Zitiziti['DB-PAYMENTS-RAZOR-PAYMENT-GATEWAY']; ?></label>
+                                            <label for="payment_razor_pay"><?php echo $BIZBOOK['DB-PAYMENTS-RAZOR-PAYMENT-GATEWAY']; ?></label>
                                             <div class="pay-note">
-                                                <span><i class="material-icons">star</i> <?php echo $Zitiziti['DB-PAYMENTS-RAZOR-PAYMENT-GATEWAY-P-1']; ?></span>
-                                                <span><i class="material-icons">star</i><?php echo $Zitiziti['DB-PAYMENTS-WHAT-IS-RAZOR']; ?></span>
+                                                <span><i class="material-icons">star</i> <?php echo $BIZBOOK['DB-PAYMENTS-RAZOR-PAYMENT-GATEWAY-P-1']; ?></span>
+                                                <span><i class="material-icons">star</i><?php echo $BIZBOOK['DB-PAYMENTS-WHAT-IS-RAZOR']; ?></span>
                                                 <form name="razor_pay_dash_form" id="razor_pay_dash_form" method="post"
                                                       action="razor_pay_bypass_submit.php">
                                                     <input type="hidden" readonly="readonly"
                                                            class="form-control" name="razor_pay_dash_user_id"
                                                            value="<?php echo $_SESSION['user_id']; ?>"
-                                                           placeholder="<?php echo $Zitiziti['FULL_NAME'];  ?> *" required>
+                                                           placeholder="<?php echo $BIZBOOK['FULL_NAME'];  ?> *" required>
 
-                                                    <h4><?php echo $Zitiziti['DB-PAYMENTS-BILLING-DETAILS'];  ?></h4>
+                                                    <h4><?php echo $BIZBOOK['DB-PAYMENTS-BILLING-DETAILS'];  ?></h4>
                                                     <ul>
                                                         <li>
                                                             <!--                                                    FILED START-->
@@ -493,7 +493,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" readonly="readonly"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['first_name']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['FULL_NAME'];  ?> *" required>
+                                                                               placeholder="<?php echo $BIZBOOK['FULL_NAME'];  ?> *" required>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -501,7 +501,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" name="user_country"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_country']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['COUNTRY'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['COUNTRY'];  ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -513,7 +513,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" name="user_state"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_state']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['STATE'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['STATE'];  ?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -521,7 +521,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" name="user_city"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_city']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['CITY'];  ?> *"
+                                                                               placeholder="<?php echo $BIZBOOK['CITY'];  ?> *"
                                                                                required>
                                                                     </div>
                                                                 </div>
@@ -534,7 +534,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" name="user_address"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_address']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['VILLAGE_STREET_NAME'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['VILLAGE_STREET_NAME'];  ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -547,7 +547,7 @@ include "dashboard_left_pane.php";
                                                                                onkeypress="return isNumber(event)"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_zip_code']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['POSTCODE_ZIP'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['POSTCODE_ZIP'];  ?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -555,7 +555,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" class="form-control"
                                                                                name="user_contact_name"
                                                                                value="<?php echo $user_details_row['user_contact_name']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['CONTACT_PERSON'];  ?> *" required>
+                                                                               placeholder="<?php echo $BIZBOOK['CONTACT_PERSON'];  ?> *" required>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -568,7 +568,7 @@ include "dashboard_left_pane.php";
                                                                                name="user_contact_mobile"
                                                                                onkeypress="return isNumber(event)"
                                                                                value="<?php echo $user_details_row['user_contact_mobile']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['CONTACT_PHONE_NUMBER'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['CONTACT_PHONE_NUMBER'];  ?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -576,7 +576,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" class="form-control"
                                                                                name="user_contact_email"
                                                                                value="<?php echo $user_details_row['user_contact_email']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['CONTACT_EMAIL_ID'];  ?>" required>
+                                                                               placeholder="<?php echo $BIZBOOK['CONTACT_EMAIL_ID'];  ?>" required>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -585,7 +585,7 @@ include "dashboard_left_pane.php";
                                                     </ul>
                                                     <button type="submit" name="razor_pay_dash_form_submit"
                                                             class="db-pro-bot-btn">
-                                                        <?php echo $Zitiziti['DB-PAYMENTS-START-PAYMENT']; ?>
+                                                        <?php echo $BIZBOOK['DB-PAYMENTS-START-PAYMENT']; ?>
                                                     </button>
                                                 </form>
                                             </div>
@@ -601,18 +601,18 @@ include "dashboard_left_pane.php";
                                                    name="payment" <?php if ($footer_row['admin_cod_status'] != "Active" && $footer_row['admin_paypal_status'] != "Active" && $footer_row['admin_stripe_status'] != "Active" && $footer_row['admin_razor_pay_status'] != "Active") {
                                                 echo "checked='checked'";
                                             } ?>>
-                                            <label for="payment_paytm"><?php echo $Zitiziti['DB-PAYMENTS-PAYTM-PAYMENT-GATEWAY']; ?></label>
+                                            <label for="payment_paytm"><?php echo $BIZBOOK['DB-PAYMENTS-PAYTM-PAYMENT-GATEWAY']; ?></label>
                                             <div class="pay-note">
-                                                <span><i class="material-icons">star</i> <?php echo $Zitiziti['DB-PAYMENTS-PAYTM-PAYMENT-GATEWAY-P-1']; ?></span>
-                                                <span><i class="material-icons">star</i><?php echo $Zitiziti['DB-PAYMENTS-PAYTM-IS-RAZOR']; ?></span>
+                                                <span><i class="material-icons">star</i> <?php echo $BIZBOOK['DB-PAYMENTS-PAYTM-PAYMENT-GATEWAY-P-1']; ?></span>
+                                                <span><i class="material-icons">star</i><?php echo $BIZBOOK['DB-PAYMENTS-PAYTM-IS-RAZOR']; ?></span>
                                                 <form name="paytm_dash_form" id="paytm_dash_form" method="post"
                                                       action="paytm_bypass_submit.php">
                                                     <input type="hidden" readonly="readonly"
                                                            class="form-control" name="paytm_dash_user_id"
                                                            value="<?php echo $_SESSION['user_id']; ?>"
-                                                           placeholder="<?php echo $Zitiziti['FULL_NAME'];  ?> *" required>
+                                                           placeholder="<?php echo $BIZBOOK['FULL_NAME'];  ?> *" required>
 
-                                                    <h4><?php echo $Zitiziti['DB-PAYMENTS-BILLING-DETAILS'];  ?></h4>
+                                                    <h4><?php echo $BIZBOOK['DB-PAYMENTS-BILLING-DETAILS'];  ?></h4>
                                                     <ul>
                                                         <li>
                                                             <!--                                                    FILED START-->
@@ -622,7 +622,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" readonly="readonly"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['first_name']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['FULL_NAME'];  ?> *" required>
+                                                                               placeholder="<?php echo $BIZBOOK['FULL_NAME'];  ?> *" required>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -630,7 +630,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" name="user_country"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_country']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['COUNTRY'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['COUNTRY'];  ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -642,7 +642,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" name="user_state"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_state']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['STATE'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['STATE'];  ?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -650,7 +650,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" name="user_city"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_city']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['CITY'];  ?> *"
+                                                                               placeholder="<?php echo $BIZBOOK['CITY'];  ?> *"
                                                                                required>
                                                                     </div>
                                                                 </div>
@@ -663,7 +663,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" name="user_address"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_address']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['VILLAGE_STREET_NAME'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['VILLAGE_STREET_NAME'];  ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -676,7 +676,7 @@ include "dashboard_left_pane.php";
                                                                                onkeypress="return isNumber(event)"
                                                                                class="form-control"
                                                                                value="<?php echo $user_details_row['user_zip_code']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['POSTCODE_ZIP'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['POSTCODE_ZIP'];  ?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -684,7 +684,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" class="form-control"
                                                                                name="user_contact_name"
                                                                                value="<?php echo $user_details_row['user_contact_name']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['CONTACT_PERSON'];  ?> *" required>
+                                                                               placeholder="<?php echo $BIZBOOK['CONTACT_PERSON'];  ?> *" required>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -697,7 +697,7 @@ include "dashboard_left_pane.php";
                                                                                name="user_contact_mobile"
                                                                                onkeypress="return isNumber(event)"
                                                                                value="<?php echo $user_details_row['user_contact_mobile']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['CONTACT_PHONE_NUMBER'];  ?>">
+                                                                               placeholder="<?php echo $BIZBOOK['CONTACT_PHONE_NUMBER'];  ?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -705,7 +705,7 @@ include "dashboard_left_pane.php";
                                                                         <input type="text" class="form-control"
                                                                                name="user_contact_email"
                                                                                value="<?php echo $user_details_row['user_contact_email']; ?>"
-                                                                               placeholder="<?php echo $Zitiziti['CONTACT_EMAIL_ID'];  ?>" required>
+                                                                               placeholder="<?php echo $BIZBOOK['CONTACT_EMAIL_ID'];  ?>" required>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -714,7 +714,7 @@ include "dashboard_left_pane.php";
                                                     </ul>
                                                     <button type="submit" name="paytm_dash_form_submit"
                                                             class="db-pro-bot-btn">
-                                                        <?php echo $Zitiziti['DB-PAYMENTS-START-PAYMENT']; ?>
+                                                        <?php echo $BIZBOOK['DB-PAYMENTS-START-PAYMENT']; ?>
                                                     </button>
                                                 </form>
                                             </div>
@@ -727,7 +727,7 @@ include "dashboard_left_pane.php";
                 <?php }
             } ?>
             <div class="ud-notes">
-                <p><b><?php echo $Zitiziti['DB-PAYMENTS-FOOTER-NOTES'];?>:</b> <?php echo $Zitiziti['DB-PAYMENTS-FOOTER-NOTES-MESSAGE'];?></p>
+                <p><b><?php echo $BIZBOOK['DB-PAYMENTS-FOOTER-NOTES'];?>:</b> <?php echo $BIZBOOK['DB-PAYMENTS-FOOTER-NOTES-MESSAGE'];?></p>
             </div>
         </div>
     </div>

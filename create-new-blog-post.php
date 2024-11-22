@@ -19,7 +19,7 @@ $blog_count_user = getCountUserBlog($_SESSION['user_id']);
 
 if ($blog_count_user >= $plan_type_blog_count) {
 
-    $_SESSION['status_msg'] = $Zitiziti['BLOGS_LIMIT_EXCEED_MESSAGE'];
+    $_SESSION['status_msg'] = $BIZBOOK['BLOGS_LIMIT_EXCEED_MESSAGE'];
 
     header('Location: db-blog-posts');
     exit();
@@ -36,11 +36,11 @@ if ($blog_count_user >= $plan_type_blog_count) {
         <div class="row">
             <div class="login-main add-list">
                 <div class="log-bor">&nbsp;</div>
-                <span class="steps"><?php echo $Zitiziti['ADD_NEW_BLOG_POST']; ?></span>
+                <span class="steps"><?php echo $BIZBOOK['ADD_NEW_BLOG_POST']; ?></span>
                 <div class="log">
                     <div class="login add-list-off">
 
-                        <h4><?php echo $Zitiziti['CREATE_BLOG_POST']; ?></h4>
+                        <h4><?php echo $BIZBOOK['CREATE_BLOG_POST']; ?></h4>
                         <form action="blog_insert.php" class="blog_form" id="blog_form" name="blog_form"
                               method="post" enctype="multipart/form-data">
                             <ul>
@@ -51,7 +51,7 @@ if ($blog_count_user >= $plan_type_blog_count) {
                                             <div class="form-group">
                                                 <input type="text" name="blog_name" required="required"
                                                        class="form-control"
-                                                       placeholder="<?php echo $Zitiziti['POST_NAME']; ?>*">
+                                                       placeholder="<?php echo $BIZBOOK['POST_NAME']; ?>*">
                                             </div>
                                         </div>
                                     </div>
@@ -80,7 +80,7 @@ if ($blog_count_user >= $plan_type_blog_count) {
                                             <div class="form-group">
                                                 <select name="category_id"
                                                         id="category_id" class="chosen-select form-control">
-                                                    <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
+                                                    <option value=""><?php echo $BIZBOOK['SELECT_CATEGORY']; ?></option>
                                                     <?php
                                                     foreach (getAllBlogCategories() as $categories_row) {
                                                         ?>
@@ -102,7 +102,7 @@ if ($blog_count_user >= $plan_type_blog_count) {
                                             <div class="form-group">
                                                 <textarea name="blog_description" id="blog_description"
                                                           required="required" class="form-control"
-                                                          placeholder="<?php echo $Zitiziti['POST_DETAILS']; ?>"></textarea>
+                                                          placeholder="<?php echo $BIZBOOK['POST_DETAILS']; ?>"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -111,9 +111,9 @@ if ($blog_count_user >= $plan_type_blog_count) {
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label><?php echo $Zitiziti['CHOOSE_BANNER_IMAGE']; ?></label>
+                                                <label><?php echo $BIZBOOK['CHOOSE_BANNER_IMAGE']; ?></label>
                                                 <div class="fil-img-uplo">
-                                                    <span class="dumfil"><?php echo $Zitiziti['UPLOAD_A_FILE'];  ?></span>
+                                                    <span class="dumfil"><?php echo $BIZBOOK['UPLOAD_A_FILE'];  ?></span>
                                                     <input type="file" name="blog_image" accept="image/*,.jpg,.jpeg,.png" class="form-control">
                                                 </div>       
                                             </div>
@@ -127,7 +127,7 @@ if ($blog_count_user >= $plan_type_blog_count) {
                                                 <div class="chbox">
                                                     <input type="checkbox" name="isenquiry" id="evefmenab" checked="">
                                                     <label
-                                                        for="evefmenab"><?php echo $Zitiziti['ENQUIRY_BOX_ENABLE']; ?></label>
+                                                        for="evefmenab"><?php echo $BIZBOOK['ENQUIRY_BOX_ENABLE']; ?></label>
                                                 </div>
                                             </div>
                                         </div>
@@ -139,10 +139,10 @@ if ($blog_count_user >= $plan_type_blog_count) {
                             <div class="row">
                                 <div class="col-md-12">
                                     <button type="submit" name="blog_submit"
-                                            class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?></button>
+                                            class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
                                 </div>
                                 <div class="col-md-12">
-                                    <a href="dashboard" class="skip"><?php echo $Zitiziti['GO_TO_USER_DASHBOARD']; ?>
+                                    <a href="dashboard" class="skip"><?php echo $BIZBOOK['GO_TO_USER_DASHBOARD']; ?>
                                         >></a>
                                 </div>
                             </div>

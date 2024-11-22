@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $webpage_full_link_with_login = $webpage_full_link. "login";  //URL Login Link
 
             $to = $rec_email_id;
-            $FORGET_PASSWORD_ADMIN_SUBJECT = $Zitiziti['FORGET_PASSWORD_ADMIN_SUBJECT'];
+            $FORGET_PASSWORD_ADMIN_SUBJECT = $BIZBOOK['FORGET_PASSWORD_ADMIN_SUBJECT'];
             $subject = "$admin_site_name $FORGET_PASSWORD_ADMIN_SUBJECT";
 
 
@@ -80,13 +80,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if (mail($to, $subject, $message, $headers)) {
 
-                $_SESSION['status_msg'] = $Zitiziti['PASSWORD_SENT_SUCCESS_MESSAGE'];
+                $_SESSION['status_msg'] = $BIZBOOK['PASSWORD_SENT_SUCCESS_MESSAGE'];
                 $_SESSION['forgot_status_msg'] = 1;
 
                 header('Location: login?login=forgot');
                 exit;
             } else {
-                $_SESSION['status_msg'] = $Zitiziti['PASSWORD_SENT_SUCCESS_MESSAGE'];
+                $_SESSION['status_msg'] = $BIZBOOK['PASSWORD_SENT_SUCCESS_MESSAGE'];
                 $_SESSION['forgot_status_msg'] = 1;
 
                 header('Location: login?login=forgot');
@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
 
         } else {
-            $_SESSION['status_msg'] = $Zitiziti['PASSWORD_EMAIL_ID_NOT_WITH_US_MESSAGE'];
+            $_SESSION['status_msg'] = $BIZBOOK['PASSWORD_EMAIL_ID_NOT_WITH_US_MESSAGE'];
             $_SESSION['forgot_status_msg'] = 1;
 
             header('Location: login?login=forgot');
@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     } else {
 
-        $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+        $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
         $_SESSION['forgot_status_msg'] = 1;
 
         header('Location: login?login=forgot');
@@ -111,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } else {
 
-    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
     $_SESSION['forgot_status_msg'] = 1;
 
     header('Location: login?login=forgot');

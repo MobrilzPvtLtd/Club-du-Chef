@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     $upres = mysqli_query($conn,$upqry);
 
-                    $_SESSION['status_msg'] = $Zitiziti['ACTIVATION_EMAIL_VERIFICATION_SUCCESS_MESSAGE'];
+                    $_SESSION['status_msg'] = $BIZBOOK['ACTIVATION_EMAIL_VERIFICATION_SUCCESS_MESSAGE'];
 
                     $_SESSION['login_status_msg'] = 1;
 
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 } else {
 
-                    $_SESSION['status_msg'] = $Zitiziti['ACTIVATION_EMAIL_VERIFICATION_FAILURE_MESSAGE'];
+                    $_SESSION['status_msg'] = $BIZBOOK['ACTIVATION_EMAIL_VERIFICATION_FAILURE_MESSAGE'];
 
                     header('Location: activate?q='.$verification_link);
                     exit();
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } else {
 
-    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
     $_SESSION['login_status_msg'] = 1;
 
     header('Location: login');

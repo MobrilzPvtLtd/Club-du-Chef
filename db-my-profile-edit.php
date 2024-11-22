@@ -13,10 +13,10 @@ include "dashboard_left_pane.php";
    <div class="ud-main-inn ud-no-rhs">
 			<div class="ud-cen">
 				<div class="log-bor">&nbsp;</div>
-				<span class="udb-inst"><?php echo $Zitiziti['EDIT_USER_PROFILE']; ?></span>
+				<span class="udb-inst"><?php echo $BIZBOOK['EDIT_USER_PROFILE']; ?></span>
                 <?php include('config/user_activation_checker.php'); ?>
                 <div class="ud-cen-s2 ud-pro-edit">
-                    <h2><?php echo $Zitiziti['PROFILE_DETAILS']; ?></h2>
+                    <h2><?php echo $BIZBOOK['PROFILE_DETAILS']; ?></h2>
                     <?php include "page_level_message.php"; ?>
                     <?php
                     $user_details_row = getUser($_SESSION['user_id']);
@@ -29,23 +29,23 @@ include "dashboard_left_pane.php";
                         <table class="responsive-table bordered">
 							<tbody>
 								<tr>
-                                    <td><?php echo $Zitiziti['NAME']; ?></td>
+                                    <td><?php echo $BIZBOOK['NAME']; ?></td>
 									<td><?php echo $user_details_row['first_name']; ?></td>
 								</tr>
                                 <tr>
-                                    <td><?php echo $Zitiziti['EMAIL_ID']; ?></td>
+                                    <td><?php echo $BIZBOOK['EMAIL_ID']; ?></td>
 									<td><?php echo $user_details_row['email_id']; ?></td>
 								</tr>
                                 <tr>
-                                    <td><?php echo $Zitiziti['PROFILE_PASSWORD']; ?></td>
+                                    <td><?php echo $BIZBOOK['PROFILE_PASSWORD']; ?></td>
 									<td>
                                         <div class="form-group">
-                                          <input type="text" class="form-control" name="password" placeholder="<?php echo $Zitiziti['CHANGE_PASSWORD'];?>">
+                                          <input type="text" class="form-control" name="password" placeholder="<?php echo $BIZBOOK['CHANGE_PASSWORD'];?>">
                                         </div>
                                     </td>
 								</tr>
                                 <tr>
-                                    <td><?php echo $Zitiziti['MOBILE_NUMBER']; ?></td>
+                                    <td><?php echo $BIZBOOK['MOBILE_NUMBER']; ?></td>
 									<td>
                                         <div class="form-group">
                                           <input type="text" name="mobile_number" class="form-control" value="<?php echo $user_details_row['mobile_number']; ?>">
@@ -53,11 +53,11 @@ include "dashboard_left_pane.php";
                                     </td>
 								</tr>
                                 <tr>
-                                    <td><?php echo $Zitiziti['PROFILE_PICTURE']; ?></td>
+                                    <td><?php echo $BIZBOOK['PROFILE_PICTURE']; ?></td>
 									<td>
                                         <div class="form-group">
                                           <div class="fil-img-uplo">
-                                                <span class="dumfil"><?php echo $Zitiziti['UPLOAD_A_FILE'];  ?></span>
+                                                <span class="dumfil"><?php echo $BIZBOOK['UPLOAD_A_FILE'];  ?></span>
                                                 <input type="file" name="profile_image" accept="image/*,.jpg,.jpeg,.png" class="form-control">
                                             </div>
                                         </div>
@@ -65,11 +65,11 @@ include "dashboard_left_pane.php";
                                     </td>
 								</tr>
                                <tr>
-                                    <td><?php echo $Zitiziti['PROFILE_PICTURE_COVER']; ?></td>
+                                    <td><?php echo $BIZBOOK['PROFILE_PICTURE_COVER']; ?></td>
 									<td>
                                         <div class="form-group">
                                           <div class="fil-img-uplo">
-                                                <span class="dumfil"><?php echo $Zitiziti['UPLOAD_A_FILE'];  ?></span>
+                                                <span class="dumfil"><?php echo $BIZBOOK['UPLOAD_A_FILE'];  ?></span>
                                                 <input type="file" name="cover_photo" accept="image/*,.jpg,.jpeg,.png" class="form-control">
                                             </div>
                                         </div>
@@ -77,11 +77,11 @@ include "dashboard_left_pane.php";
                                     </td>
 								</tr>
                                <tr>
-                                    <td><?php echo $Zitiziti['PROFILE_IDPROOF']; ?></td>
+                                    <td><?php echo $BIZBOOK['PROFILE_IDPROOF']; ?></td>
 									<td>
                                         <div class="form-group">
                                           <div class="fil-img-uplo">
-                                                <span class="dumfil"><?php echo $Zitiziti['UPLOAD_A_FILE'];  ?></span>
+                                                <span class="dumfil"><?php echo $BIZBOOK['UPLOAD_A_FILE'];  ?></span>
                                                 <input type="file" name="profile_id_proof" accept="image/*,.jpg,.jpeg,.png" class="form-control">
                                             </div>
                                         </div>
@@ -89,7 +89,7 @@ include "dashboard_left_pane.php";
                                     </td>
 								</tr>
                                 <tr>
-                                    <td><?php echo $Zitiziti['CITY']; ?></td>
+                                    <td><?php echo $BIZBOOK['CITY']; ?></td>
 									<td>
                                         <div class="form-group">
                                           <input type="text" id="select-city" class="autocomplete form-control"
@@ -98,19 +98,19 @@ include "dashboard_left_pane.php";
                                     </td>
 								</tr>
                                 <tr>
-                                    <td><?php echo $Zitiziti['JOIN_DATE']; ?></td>
+                                    <td><?php echo $BIZBOOK['JOIN_DATE']; ?></td>
 									<td><?php  echo dateFormatconverter($user_details_row['user_cdt']); ?></td>
 								</tr>
                                 <tr>
-                                    <td><?php echo $Zitiziti['VERIFIED']; ?></td>
+                                    <td><?php echo $BIZBOOK['VERIFIED']; ?></td>
 									<td><?php if($user_details_row['user_status']== "Active"){ echo "Yes";}else {echo "No";} ?></td>
 								</tr>
                                 <tr>
-                                    <td><?php echo $Zitiziti['PREMIUM_SERVICE_PROVIDER']; ?></td>
+                                    <td><?php echo $BIZBOOK['PREMIUM_SERVICE_PROVIDER']; ?></td>
 									<td><?php if($user_details_row['user_type']== "Service provider"){ echo "Yes";}else {echo "No";} ?></td>
 								</tr>
                                 <tr>
-                                    <td><?php echo $Zitiziti['FACEBOOK']; ?></td>
+                                    <td><?php echo $BIZBOOK['FACEBOOK']; ?></td>
 									<td>
                                         <div class="form-group">
                                           <input type="text" class="form-control" name="user_facebook" value="<?php echo $user_details_row['user_facebook']; ?>">
@@ -118,7 +118,7 @@ include "dashboard_left_pane.php";
                                     </td>
 								</tr>
                                 <tr>
-                                    <td><?php echo $Zitiziti['TWITTER']; ?></td>
+                                    <td><?php echo $BIZBOOK['TWITTER']; ?></td>
                                     <td>
                                         <div class="form-group">
                                           <input type="text" class="form-control" name="user_twitter" value="<?php echo $user_details_row['user_twitter']; ?>">
@@ -126,7 +126,7 @@ include "dashboard_left_pane.php";
                                     </td>
 								</tr>
                                 <tr>
-                                    <td><?php echo $Zitiziti['YOUTUBE']; ?></td>
+                                    <td><?php echo $BIZBOOK['YOUTUBE']; ?></td>
                                     <td>
                                         <div class="form-group">
                                           <input type="text" class="form-control" name="user_youtube" value="<?php echo $user_details_row['user_youtube']; ?>">
@@ -134,7 +134,7 @@ include "dashboard_left_pane.php";
                                     </td>
 								</tr>
                                 <tr>
-                                    <td><?php echo $Zitiziti['USER_WEBSITE']; ?></td>
+                                    <td><?php echo $BIZBOOK['USER_WEBSITE']; ?></td>
                                     <td>
                                         <div class="form-group">
                                           <input type="text" class="form-control" name="user_website" value="<?php echo $user_details_row['user_website']; ?>">
@@ -143,8 +143,8 @@ include "dashboard_left_pane.php";
 								</tr>
                                 <tr>
                                     <td>
-                                        <button type="submit" name="profile_update_submit" class="db-pro-bot-btn"><?php echo $Zitiziti['SAVE_CHANGES']; ?></button>
-                                        <a href="db-payment" class="db-pro-bot-btn"><?php echo $Zitiziti['UPGRADE']; ?></a>
+                                        <button type="submit" name="profile_update_submit" class="db-pro-bot-btn"><?php echo $BIZBOOK['SAVE_CHANGES']; ?></button>
+                                        <a href="db-payment" class="db-pro-bot-btn"><?php echo $BIZBOOK['UPGRADE']; ?></a>
                                     </td>
 									<td></td>
 								</tr>

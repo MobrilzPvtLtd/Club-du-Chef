@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Zitiziti Installation</title>
+    <title>Bizbook Installation</title>
     <!--== CSS FILES ==-->
     <link rel="stylesheet" href="css/style.php">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -22,8 +22,8 @@
 <!-- START -->
 <section class="pg-install">
     <div class="inn">
-        <div class="s1"><img loading="lazy" src="images/Zitiziti-black.png" alt="Zitiziti template installation"
-                             title="Zitiziti directory template by Rn53themes.net"></div>
+        <div class="s1"><img loading="lazy" src="images/bizbook-black.png" alt="Bizbook template installation"
+                             title="Bizbook directory template by Rn53themes.net"></div>
         <div class="s2">
             <h4>Below you should enter your <b>database connection</b> details.</h4>
             <p>Note: First you need to create a new database then follow below details. <a href="#">Tutorial video for

@@ -25,12 +25,12 @@ if(isset($_GET['messageenquirymessageenquirymessageenquirymessageenquiry'])){
 
     if ($listing_res) {
 
-        $_SESSION['status_msg'] = $Zitiziti['SERVICE_EXPERT_ENQUIRY_DELETE_SUCCESS_MESSAGE'];
+        $_SESSION['status_msg'] = $BIZBOOK['SERVICE_EXPERT_ENQUIRY_DELETE_SUCCESS_MESSAGE'];
 
         header('Location: '.$return_url);
     } else {
 
-        $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+        $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
         header('Location: '.$return_url);
     }

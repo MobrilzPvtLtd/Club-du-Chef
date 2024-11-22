@@ -20,7 +20,7 @@ $listing_count_user = getCountUserListing($_SESSION['user_id']);
 
 if($listing_count_user >= $plan_type_listing_count){
 
-    $_SESSION['status_msg'] = $Zitiziti['LISTINGS_LIMIT_EXCEED_MESSAGE'];
+    $_SESSION['status_msg'] = $BIZBOOK['LISTINGS_LIMIT_EXCEED_MESSAGE'];
 
     header('Location: db-all-listing');
 }
@@ -39,38 +39,38 @@ if($listing_count_user >= $plan_type_listing_count){
                     <ul>
                         <li>
                             <a href="add-listing-step-1" class="act">
-                                <span><?php echo $Zitiziti['STEP1']; ?></span>
-                                <b><?php echo $Zitiziti['BASIC_INFO']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP1']; ?></span>
+                                <b><?php echo $BIZBOOK['BASIC_INFO']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="#!">
-                                <span><?php echo $Zitiziti['STEP2']; ?></span>
-                                <b><?php echo $Zitiziti['SERVICES']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP2']; ?></span>
+                                <b><?php echo $BIZBOOK['SERVICES']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="#!">
-                                <span><?php echo $Zitiziti['STEP3']; ?></span>
-                                <b><?php echo $Zitiziti['OFFERS']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP3']; ?></span>
+                                <b><?php echo $BIZBOOK['OFFERS']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="#!">
-                                <span><?php echo $Zitiziti['STEP4']; ?></span>
-                                <b><?php echo $Zitiziti['MAP']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP4']; ?></span>
+                                <b><?php echo $BIZBOOK['MAP']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="#!">
-                                <span><?php echo $Zitiziti['STEP5']; ?></span>
-                                <b><?php echo $Zitiziti['OTHER']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP5']; ?></span>
+                                <b><?php echo $BIZBOOK['OTHER']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="#!">
-                                <span><?php echo $Zitiziti['STEP6']; ?></span>
-                                <b><?php echo $Zitiziti['DONE']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP6']; ?></span>
+                                <b><?php echo $BIZBOOK['DONE']; ?></b>
                             </a>
                         </li>
                     </ul>
@@ -80,10 +80,10 @@ if($listing_count_user >= $plan_type_listing_count){
         <div class="row">
             <div class="login-main add-list">
                 <div class="log-bor">&nbsp;</div>
-                <span class="steps"><?php echo $Zitiziti['STEP1']; ?></span>
+                <span class="steps"><?php echo $BIZBOOK['STEP1']; ?></span>
                 <div class="log">
                     <div class="login">
-                        <h4><?php echo $Zitiziti['LISTING_DETAILS']; ?></h4>
+                        <h4><?php echo $BIZBOOK['LISTING_DETAILS']; ?></h4>
                         <?php include "page_level_message.php"; ?>
                         <form action="add-listing-step-2.php" class="listing_form_1" id="listing_form_1"
                               name="listing_form_1" method="post" enctype="multipart/form-data">
@@ -97,7 +97,7 @@ if($listing_count_user >= $plan_type_listing_count){
                                     <div class="form-group">
                                         <input id="listing_name" name="listing_name" type="text" required="required"
                                                class="form-control" value="<?php echo $_SESSION['listing_name'] ?>"
-                                               placeholder="<?php echo $Zitiziti['LISTING_NAME_STAR']; ?>">
+                                               placeholder="<?php echo $BIZBOOK['LISTING_NAME_STAR']; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -108,14 +108,14 @@ if($listing_count_user >= $plan_type_listing_count){
                                     <div class="form-group">
                                         <input type="text" name="listing_mobile" class="form-control"
                                                value="<?php echo $_SESSION['listing_mobile'] ?>"
-                                               placeholder="<?php echo $Zitiziti['PHONE_NUMBER']; ?>">
+                                               placeholder="<?php echo $BIZBOOK['PHONE_NUMBER']; ?>">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input type="text" name="listing_email" class="form-control"
                                                value="<?php echo $_SESSION['listing_email'] ?>"
-                                               placeholder="<?php echo $Zitiziti['EMAIL_ID']; ?>">
+                                               placeholder="<?php echo $BIZBOOK['EMAIL_ID']; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -126,14 +126,14 @@ if($listing_count_user >= $plan_type_listing_count){
                                     <div class="form-group">
                                         <input type="text" name="listing_whatsapp" class="form-control"
                                                value="<?php echo $_SESSION['listing_whatsapp'] ?>"
-                                               placeholder="<?php echo $Zitiziti['WHATSAPP_PLACEHOLDER']; ?>">
+                                               placeholder="<?php echo $BIZBOOK['WHATSAPP_PLACEHOLDER']; ?>">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input type="text" name="listing_website" class="form-control"
                                                value="<?php echo $_SESSION['listing_website'] ?>"
-                                               placeholder="<?php echo $Zitiziti['WEBSITE']; ?>">
+                                               placeholder="<?php echo $BIZBOOK['WEBSITE']; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -143,7 +143,7 @@ if($listing_count_user >= $plan_type_listing_count){
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <input type="text" name="listing_address" class="form-control" id="listing_address" value="<?php echo $_SESSION['listing_address'] ?>"
-                                               placeholder="<?php echo $Zitiziti['SHOP_ADDRESS']; ?>">
+                                               placeholder="<?php echo $BIZBOOK['SHOP_ADDRESS']; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -155,13 +155,13 @@ if($listing_count_user >= $plan_type_listing_count){
                             <!--                                    <div class="form-group">-->
                             <!--                                        <input type="text" name="listing_lat" class="form-control"-->
                             <!--                                               value="--><?php //echo $_SESSION['listing_lat'] ?><!--"-->
-                            <!--                                               placeholder="--><?php //echo $Zitiziti['LATITUDE_PLACEHOLDER']; ?><!--">-->
+                            <!--                                               placeholder="--><?php //echo $BIZBOOK['LATITUDE_PLACEHOLDER']; ?><!--">-->
                             <!--                                    </div>-->
                             <!--                                </div>-->
                             <!--                                <div class="col-md-6">-->
                             <!--                                    <div class="form-group">-->
                             <!--                                        <input type="text" name="listing_lng" class="form-control"-->
-                            <!--                                               value="--><?php //echo $_SESSION['listing_lng'] ?><!--" placeholder="--><?php //echo $Zitiziti['LONGITUDE_PLACEHOLDER']; ?><!--">-->
+                            <!--                                               value="--><?php //echo $_SESSION['listing_lng'] ?><!--" placeholder="--><?php //echo $BIZBOOK['LONGITUDE_PLACEHOLDER']; ?><!--">-->
                             <!--                                    </div>-->
                             <!--                                </div>-->
                             <!--                            </div>-->
@@ -173,7 +173,7 @@ if($listing_count_user >= $plan_type_listing_count){
                                         <div class="form-group">
                                             <select onChange="getCities(this.value);" name="country_id" required="required" id="country_id"
                                                     class="chosen-select form-control">
-                                                <option value=""><?php echo $Zitiziti['SELECT_YOUR_COUNTRY']; ?></option>
+                                                <option value=""><?php echo $BIZBOOK['SELECT_YOUR_COUNTRY']; ?></option>
                                                 <?php
                                                 //Countries Query
                                                 $admin_countries = $footer_row['admin_countries'];
@@ -195,9 +195,9 @@ if($listing_count_user >= $plan_type_listing_count){
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <select data-placeholder="<?php echo $Zitiziti['SELECT_YOUR_CITY']; ?>" name="city_id[]" id="city_id" multiple required="required"
+                                            <select data-placeholder="<?php echo $BIZBOOK['SELECT_YOUR_CITY']; ?>" name="city_id[]" id="city_id" multiple required="required"
                                                     class="chosen-select form-control">
-                                                <option value=""><?php echo $Zitiziti['SELECT_YOUR_CITY']; ?></option>
+                                                <option value=""><?php echo $BIZBOOK['SELECT_YOUR_CITY']; ?></option>
 
                                             </select>
                                         </div>
@@ -212,7 +212,7 @@ if($listing_count_user >= $plan_type_listing_count){
                                     <div class="form-group">
                                         <select onChange="getSubCategory(this.value);" name="category_id"
                                                 id="category_id" class="chosen-select form-control">
-                                            <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
+                                            <option value=""><?php echo $BIZBOOK['SELECT_CATEGORY']; ?></option>
                                             <?php
                                             foreach (getAllCategories() as $categories_row) {
                                                 ?>
@@ -230,7 +230,7 @@ if($listing_count_user >= $plan_type_listing_count){
                                     <div class="form-group">
                                         <select data-placeholder="Select Sub Category" name="sub_category_id[]"
                                                 id="sub_category_id" multiple class="chosen-select form-control">
-                                            <option value=""><?php echo $Zitiziti['SELECT_SUB_CATEGORY']; ?></option>
+                                            <option value=""><?php echo $BIZBOOK['SELECT_SUB_CATEGORY']; ?></option>
                                         </select>
                                     </div>
                                 </div>
@@ -241,10 +241,10 @@ if($listing_count_user >= $plan_type_listing_count){
                             <div class="row bor-box">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for=""><?php echo $Zitiziti['DETAILS_ABOUT_LISTING']; ?></label>
+                                        <label for=""><?php echo $BIZBOOK['DETAILS_ABOUT_LISTING']; ?></label>
                                         <textarea class="form-control" id="listing_description"
                                                   name="listing_description"
-                                                  placeholder="<?php echo $Zitiziti['DETAILS_ABOUT_LISTING']; ?>"><?php echo $_SESSION['listing_description'] ?></textarea>
+                                                  placeholder="<?php echo $BIZBOOK['DETAILS_ABOUT_LISTING']; ?>"><?php echo $_SESSION['listing_description'] ?></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -254,18 +254,18 @@ if($listing_count_user >= $plan_type_listing_count){
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label><?php echo $Zitiziti['CHOOSE_PROFILE_IMAGE']; ?></label>
+                                        <label><?php echo $BIZBOOK['CHOOSE_PROFILE_IMAGE']; ?></label>
                                         <div class="fil-img-uplo">
-                                            <span class="dumfil"><?php echo $Zitiziti['UPLOAD_A_FILE'];  ?></span>
+                                            <span class="dumfil"><?php echo $BIZBOOK['UPLOAD_A_FILE'];  ?></span>
                                             <input type="file" name="profile_image" accept="image/*,.jpg,.jpeg,.png" class="form-control">
                                         </div>
                                     </div>
                                 </div>
 <!--                                <div class="col-md-6">-->
 <!--                                    <div class="form-group">-->
-<!--                                        <label>--><?php //echo $Zitiziti['CHOOSE_COVER_IMAGE']; ?><!--</label>-->
+<!--                                        <label>--><?php //echo $BIZBOOK['CHOOSE_COVER_IMAGE']; ?><!--</label>-->
 <!--                                        <div class="fil-img-uplo">-->
-<!--                                            <span class="dumfil">--><?php //echo $Zitiziti['UPLOAD_A_FILE'];  ?><!--</span>-->
+<!--                                            <span class="dumfil">--><?php //echo $BIZBOOK['UPLOAD_A_FILE'];  ?><!--</span>-->
 <!--                                            <input type="file" name="cover_image" accept="image/*,.jpg,.jpeg,.png" class="form-control">-->
 <!--                                        </div>-->
 <!--                                    </div>-->
@@ -277,10 +277,10 @@ if($listing_count_user >= $plan_type_listing_count){
                             <div class="row bor-box">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for=""><?php echo $Zitiziti['ENTER_SERVICE_LOCATION']; ?></label>
+                                        <label for=""><?php echo $BIZBOOK['ENTER_SERVICE_LOCATION']; ?></label>
                                         <textarea class="form-control" id="service_locations"
                                                   name="service_locations"
-                                                  placeholder="<?php echo $Zitiziti['ENTER_SERVICE_LOCATION']; ?>"><?php echo $_SESSION['service_locations']; ?></textarea>
+                                                  placeholder="<?php echo $BIZBOOK['ENTER_SERVICE_LOCATION']; ?>"><?php echo $_SESSION['service_locations']; ?></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -677,7 +677,7 @@ if($listing_count_user >= $plan_type_listing_count){
 
                             </div>
                             <!--FILED END-->
-                            <button type="submit" name="listing_submit" class="btn btn-primary"><?php echo $Zitiziti['NEXT']; ?></button>
+                            <button type="submit" name="listing_submit" class="btn btn-primary"><?php echo $BIZBOOK['NEXT']; ?></button>
 
                             <!--PROGRESSBAR START-->
                             <div class="progress biz-prog">

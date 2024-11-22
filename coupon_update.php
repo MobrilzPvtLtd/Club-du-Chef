@@ -63,14 +63,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($coupon_res) {
 
-            $_SESSION['status_msg'] = $Zitiziti['COUPON_UPDATE_SUCCESS_MESSAGE'];
+            $_SESSION['status_msg'] = $BIZBOOK['COUPON_UPDATE_SUCCESS_MESSAGE'];
 
             header('Location: db-coupons');
             exit();
 
         } else {
 
-            $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+            $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
             header("Location: db-coupons");
             exit();
@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } else {
 
-    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: db-coupons');
     exit();

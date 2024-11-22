@@ -71,7 +71,7 @@ $receiver_id = $_REQUEST['receiver_id'];
         }
     } else {
         ?>
-        <span><?php echo $Zitiziti['COMMUNITY-PAGE-START-A-NEW-CHAT']; ?></span>
+        <span><?php echo $BIZBOOK['COMMUNITY-PAGE-START-A-NEW-CHAT']; ?></span>
         <?php
     }
     ?>

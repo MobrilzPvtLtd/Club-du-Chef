@@ -19,7 +19,7 @@ $listing_count_user = getCountUserListing($_SESSION['user_id']);
 
 if ($listing_count_user >= $plan_type_listing_count) {
 
-    $_SESSION['status_msg'] = $Zitiziti['LISTINGS_LIMIT_EXCEED_MESSAGE'];
+    $_SESSION['status_msg'] = $BIZBOOK['LISTINGS_LIMIT_EXCEED_MESSAGE'];
 
     header('Location: db-all-listing');
 }
@@ -84,38 +84,38 @@ if (isset($_POST['listing_submit'])) {
                     <ul>
                         <li>
                             <a href="add-listing-step-1">
-                                <span><?php echo $Zitiziti['STEP1']; ?></span>
-                                <b><?php echo $Zitiziti['BASIC_INFO']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP1']; ?></span>
+                                <b><?php echo $BIZBOOK['BASIC_INFO']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="add-listing-step-2">
-                                <span><?php echo $Zitiziti['STEP2']; ?></span>
-                                <b><?php echo $Zitiziti['SERVICES']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP2']; ?></span>
+                                <b><?php echo $BIZBOOK['SERVICES']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="add-listing-step-3">
-                                <span><?php echo $Zitiziti['STEP3']; ?></span>
-                                <b><?php echo $Zitiziti['OFFERS']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP3']; ?></span>
+                                <b><?php echo $BIZBOOK['OFFERS']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="add-listing-step-4">
-                                <span><?php echo $Zitiziti['STEP4']; ?></span>
-                                <b><?php echo $Zitiziti['MAP']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP4']; ?></span>
+                                <b><?php echo $BIZBOOK['MAP']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="add-listing-step-5" class="act">
-                                <span><?php echo $Zitiziti['STEP5']; ?></span>
-                                <b><?php echo $Zitiziti['OTHER']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP5']; ?></span>
+                                <b><?php echo $BIZBOOK['OTHER']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="#!">
-                                <span><?php echo $Zitiziti['STEP6']; ?></span>
-                                <b><?php echo $Zitiziti['DONE']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP6']; ?></span>
+                                <b><?php echo $BIZBOOK['DONE']; ?></b>
                             </a>
                         </li>
                     </ul>
@@ -125,11 +125,11 @@ if (isset($_POST['listing_submit'])) {
         <div class="row">
             <div class="login-main add-list">
                 <div class="log-bor">&nbsp;</div>
-                <span class="steps"><?php echo $Zitiziti['STEP5']; ?></span>
+                <span class="steps"><?php echo $BIZBOOK['STEP5']; ?></span>
                 <div class="log">
                     <div class="login add-lis-oth">
 
-                        <h4><?php echo $Zitiziti['OTHER_INFORMATIONS']; ?></h4>
+                        <h4><?php echo $BIZBOOK['OTHER_INFORMATIONS']; ?></h4>
                         <span class="add-list-add-btn lis-add-oad" title="add new offer">+</span>
                         <span class="add-list-rem-btn lis-add-ore" title="remove offer">-</span>
                         <form action="listing_insert.php" class="listing_form" id="listing_form_5" name="listing_form_5"
@@ -157,7 +157,7 @@ if (isset($_POST['listing_submit'])) {
                                                     <div class="form-group">
                                                         <input type="text" name="listing_info_question[]"
                                                                value="<?php echo $tuple[0]; ?>" class="form-control"
-                                                               placeholder="<?php echo $Zitiziti['OTHER_INFORMATIONS_PLACEHOLDER_LEFT']; ?>">
+                                                               placeholder="<?php echo $BIZBOOK['OTHER_INFORMATIONS_PLACEHOLDER_LEFT']; ?>">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-2">
@@ -169,7 +169,7 @@ if (isset($_POST['listing_submit'])) {
                                                     <div class="form-group">
                                                         <input type="text" name="listing_info_answer[]"
                                                                value="<?php echo $tuple[1]; ?>" class="form-control"
-                                                               placeholder="<?php echo $Zitiziti['OTHER_INFORMATIONS_PLACEHOLDER_RIGHT']; ?>">
+                                                               placeholder="<?php echo $BIZBOOK['OTHER_INFORMATIONS_PLACEHOLDER_RIGHT']; ?>">
                                                     </div>
                                                 </div>
                                             </div>
@@ -186,7 +186,7 @@ if (isset($_POST['listing_submit'])) {
                                                 <div class="form-group">
                                                     <input type="text" name="listing_info_question[]"
                                                            class="form-control"
-                                                           placeholder="<?php echo $Zitiziti['OTHER_INFORMATIONS_PLACEHOLDER_LEFT']; ?>">
+                                                           placeholder="<?php echo $BIZBOOK['OTHER_INFORMATIONS_PLACEHOLDER_LEFT']; ?>">
                                                 </div>
                                             </div>
                                             <div class="col-md-2">
@@ -197,7 +197,7 @@ if (isset($_POST['listing_submit'])) {
                                             <div class="col-md-5">
                                                 <div class="form-group">
                                                     <input type="text" name="listing_info_answer[]" class="form-control"
-                                                           placeholder="<?php echo $Zitiziti['OTHER_INFORMATIONS_PLACEHOLDER_RIGHT']; ?>">
+                                                           placeholder="<?php echo $BIZBOOK['OTHER_INFORMATIONS_PLACEHOLDER_RIGHT']; ?>">
                                                 </div>
                                             </div>
                                         </div>
@@ -213,12 +213,12 @@ if (isset($_POST['listing_submit'])) {
                                 <div class="col-md-6">
                                     <a href="add-listing-step-4">
                                         <button type="button"
-                                                class="btn btn-primary"><?php echo $Zitiziti['PREVIOUS']; ?></button>
+                                                class="btn btn-primary"><?php echo $BIZBOOK['PREVIOUS']; ?></button>
                                     </a>
                                 </div>
                                 <div class="col-md-6">
                                     <button type="submit" name="listing_submit"
-                                            class="btn btn-primary"><?php echo $Zitiziti['FINISH']; ?></button>
+                                            class="btn btn-primary"><?php echo $BIZBOOK['FINISH']; ?></button>
                                 </div>
                             </div>
                             <!--FILED END-->

@@ -11,25 +11,25 @@ include "dashboard_left_pane.php";
    <div class="ud-main-inn ud-no-rhs">
     <div class="ud-cen">
         <div class="log-bor">&nbsp;</div>
-        <span class="udb-inst"><?php echo $Zitiziti['AD-DETAILS-PAID-ADS']; ?></span>
+        <span class="udb-inst"><?php echo $BIZBOOK['AD-DETAILS-PAID-ADS']; ?></span>
         <?php include('config/user_activation_checker.php'); ?>
         <div class="ud-cen-s2">
-            <h2><?php echo $Zitiziti['AD-DETAILS-BANNER-ADS']; ?></h2>
+            <h2><?php echo $BIZBOOK['AD-DETAILS-BANNER-ADS']; ?></h2>
             <?php include "page_level_message.php"; ?>
-            <a href="post-your-ads" class="db-tit-btn db-tit-btn-2-ads"><?php echo $Zitiziti['AD-DETAILS-POST-YOUR-ADS']; ?></a>
-            <a href="ad-details" class="db-tit-btn"><?php echo $Zitiziti['AD-DETAILS-PRICING-OTHER-DETAILS']; ?></a>
+            <a href="post-your-ads" class="db-tit-btn db-tit-btn-2-ads"><?php echo $BIZBOOK['AD-DETAILS-POST-YOUR-ADS']; ?></a>
+            <a href="ad-details" class="db-tit-btn"><?php echo $BIZBOOK['AD-DETAILS-PRICING-OTHER-DETAILS']; ?></a>
             <table class="responsive-table bordered">
                 <thead>
                 <tr>
-                    <th><?php echo $Zitiziti['S_NO']; ?></th>
-                    <th><?php echo $Zitiziti['AD-DETAILS-ADS-POSITION']; ?></th>
-                    <th><?php echo $Zitiziti['COUPON-START-DATE-PLACEHOLDER']; ?></th>
-                    <th><?php echo $Zitiziti['COUPON-END-DATE-PLACEHOLDER']; ?></th>
-                    <th><?php echo $Zitiziti['DURATION']; ?></th>
-                    <th><?php echo $Zitiziti['STATUS']; ?></th>
+                    <th><?php echo $BIZBOOK['S_NO']; ?></th>
+                    <th><?php echo $BIZBOOK['AD-DETAILS-ADS-POSITION']; ?></th>
+                    <th><?php echo $BIZBOOK['COUPON-START-DATE-PLACEHOLDER']; ?></th>
+                    <th><?php echo $BIZBOOK['COUPON-END-DATE-PLACEHOLDER']; ?></th>
+                    <th><?php echo $BIZBOOK['DURATION']; ?></th>
+                    <th><?php echo $BIZBOOK['STATUS']; ?></th>
                     <th><?php echo "Payment Status" ?></th>
-                    <th><?php echo $Zitiziti['VIEWS']; ?></th>
-                    <th><?php echo $Zitiziti['CLICKS']; ?></th>
+                    <th><?php echo $BIZBOOK['VIEWS']; ?></th>
+                    <th><?php echo $BIZBOOK['CLICKS']; ?></th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -53,7 +53,7 @@ include "dashboard_left_pane.php";
                         <td style='width:100%' class='text-center'><?php echo $ads_price_details_row['ad_price_name']; ?></td>
                         <td style='width:100%'><?php echo dateFormatconverter($row['ad_start_date']);?></td>
                         <td style='width:100%'><?php echo dateFormatconverter($row['ad_end_date']);?></td>
-                        <td style='width:100%'><?php echo $row['ad_total_days']; ?> <?php echo $Zitiziti['DAYS']; ?></td>
+                        <td style='width:100%'><?php echo $row['ad_total_days']; ?> <?php echo $BIZBOOK['DAYS']; ?></td>
                         <td style='width:100%'><span class="db-list-ststus"><?php echo $row['ad_enquiry_status']; ?></span></td>
                         <td style='width:100%'>
                             <span class="btn <?php echo $row['payment_status'] == "Paid" ? 'btn-success' : 'btn-danger'; ?>" 
@@ -72,7 +72,7 @@ include "dashboard_left_pane.php";
                 </tbody>
             </table>
             <div class="ud-notes">
-                <p><?php echo $Zitiziti['DB-PAYMENTS-FOOTER-NOTES'];?>: <?php echo $Zitiziti['DB-PAYMENTS-FOOTER-NOTES-MESSAGE'];?></p>
+                <p><?php echo $BIZBOOK['DB-PAYMENTS-FOOTER-NOTES'];?>: <?php echo $BIZBOOK['DB-PAYMENTS-FOOTER-NOTES-MESSAGE'];?></p>
             </div>
         </div>
     </div>

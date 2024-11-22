@@ -19,7 +19,7 @@ $listing_count_user = getCountUserListing($_SESSION['user_id']);
 
 if ($listing_count_user >= $plan_type_listing_count) {
 
-    $_SESSION['status_msg'] = $Zitiziti['LISTINGS_LIMIT_EXCEED_MESSAGE'];
+    $_SESSION['status_msg'] = $BIZBOOK['LISTINGS_LIMIT_EXCEED_MESSAGE'];
 
     header('Location: db-all-listing');
 }
@@ -163,38 +163,38 @@ if (isset($_POST['listing_submit'])) {
                     <ul>
                         <li>
                             <a href="add-listing-step-1">
-                                <span><?php echo $Zitiziti['STEP1']; ?></span>
-                                <b><?php echo $Zitiziti['BASIC_INFO']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP1']; ?></span>
+                                <b><?php echo $BIZBOOK['BASIC_INFO']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="add-listing-step-2" class="act">
-                                <span><?php echo $Zitiziti['STEP2']; ?></span>
-                                <b><?php echo $Zitiziti['SERVICES']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP2']; ?></span>
+                                <b><?php echo $BIZBOOK['SERVICES']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="#!">
-                                <span><?php echo $Zitiziti['STEP3']; ?></span>
-                                <b><?php echo $Zitiziti['OFFERS']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP3']; ?></span>
+                                <b><?php echo $BIZBOOK['OFFERS']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="#!">
-                                <span><?php echo $Zitiziti['STEP4']; ?></span>
-                                <b><?php echo $Zitiziti['MAP']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP4']; ?></span>
+                                <b><?php echo $BIZBOOK['MAP']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="#!">
-                                <span><?php echo $Zitiziti['STEP5']; ?></span>
-                                <b><?php echo $Zitiziti['OTHER']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP5']; ?></span>
+                                <b><?php echo $BIZBOOK['OTHER']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="#!">
-                                <span><?php echo $Zitiziti['STEP6']; ?></span>
-                                <b><?php echo $Zitiziti['DONE']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP6']; ?></span>
+                                <b><?php echo $BIZBOOK['DONE']; ?></b>
                             </a>
                         </li>
                     </ul>
@@ -204,10 +204,10 @@ if (isset($_POST['listing_submit'])) {
         <div class="row">
             <div class="login-main add-list add-list-ser">
                 <div class="log-bor">&nbsp;</div>
-                <span class="steps"><?php echo $Zitiziti['STEP2']; ?></span>
+                <span class="steps"><?php echo $BIZBOOK['STEP2']; ?></span>
                 <div class="log">
                     <div class="login">
-                        <h4><?php echo $Zitiziti['SERVICES_PROVIDE']; ?></h4>
+                        <h4><?php echo $BIZBOOK['SERVICES_PROVIDE']; ?></h4>
                         <?php include "page_level_message.php"; ?>
                         <span class="add-list-add-btn lis-ser-add-btn" title="add new offer">+</span>
                         <span class="add-list-rem-btn lis-ser-rem-btn" title="remove offer">-</span>
@@ -291,16 +291,16 @@ if (isset($_POST['listing_submit'])) {
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label><?php echo $Zitiziti['SERVICE_NAME']; ?>:</label>
+                                                        <label><?php echo $BIZBOOK['SERVICE_NAME']; ?>:</label>
                                                         <input type="text" name="service_id[]" class="form-control"
                                                                value="<?php echo $service_Array; ?>"
-                                                               placeholder="<?php echo $Zitiziti['SERVICE_NAME_PLACEHOLDER']; ?>">
+                                                               placeholder="<?php echo $BIZBOOK['SERVICE_NAME_PLACEHOLDER']; ?>">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <div class="fil-img-uplo">
-                                                            <span class="dumfil"><?php echo $Zitiziti['SERVICE_NAME']; ?></span>
+                                                            <span class="dumfil"><?php echo $BIZBOOK['SERVICE_NAME']; ?></span>
                                                             <input type="file" name="service_image[]" accept="image/*,.jpg,.jpeg,.png" class="form-control">
                                                         </div>
                                                     </div>
@@ -317,15 +317,15 @@ if (isset($_POST['listing_submit'])) {
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label><?php echo $Zitiziti['SERVICE_NAME']; ?>:</label>
+                                                    <label><?php echo $BIZBOOK['SERVICE_NAME']; ?>:</label>
                                                     <input type="text" name="service_id[]" class="form-control"
-                                                           placeholder="<?php echo $Zitiziti['SERVICE_NAME_PLACEHOLDER']; ?>">
+                                                           placeholder="<?php echo $BIZBOOK['SERVICE_NAME_PLACEHOLDER']; ?>">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <div class="fil-img-uplo">
-                                                        <span class="dumfil"><?php echo $Zitiziti['SERVICE_NAME']; ?></span>
+                                                        <span class="dumfil"><?php echo $BIZBOOK['SERVICE_NAME']; ?></span>
                                                         <input type="file" name="service_image[]" accept="image/*,.jpg,.jpeg,.png" class="form-control">
                                                     </div>
                                                 </div>
@@ -338,15 +338,15 @@ if (isset($_POST['listing_submit'])) {
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label><?php echo $Zitiziti['SERVICE_NAME']; ?></label>
+                                                    <label><?php echo $BIZBOOK['SERVICE_NAME']; ?></label>
                                                     <input type="text" name="service_id[]" class="form-control"
-                                                           placeholder="<?php echo $Zitiziti['SERVICE_NAME_PLACEHOLDER']; ?>">
+                                                           placeholder="<?php echo $BIZBOOK['SERVICE_NAME_PLACEHOLDER']; ?>">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <div class="fil-img-uplo">
-                                                        <span class="dumfil"><?php echo $Zitiziti['SERVICE_NAME_IMAGE']; ?></span>
+                                                        <span class="dumfil"><?php echo $BIZBOOK['SERVICE_NAME_IMAGE']; ?></span>
                                                         <input type="file" name="service_image[]" accept="image/*,.jpg,.jpeg,.png" class="form-control">
                                                     </div>
                                                 </div>
@@ -363,15 +363,15 @@ if (isset($_POST['listing_submit'])) {
                                 <div class="col-md-6">
                                     <a href="add-listing-step-1">
                                         <button type="button"
-                                                class="btn btn-primary"><?php echo $Zitiziti['PREVIOUS']; ?></button>
+                                                class="btn btn-primary"><?php echo $BIZBOOK['PREVIOUS']; ?></button>
                                     </a>
                                 </div>
                                 <div class="col-md-6">
                                     <button type="submit" name="listing_submit"
-                                            class="btn btn-primary"><?php echo $Zitiziti['NEXT']; ?></button>
+                                            class="btn btn-primary"><?php echo $BIZBOOK['NEXT']; ?></button>
                                 </div>
                                 <div class="col-md-12">
-                                    <a href="add-listing-step-3" class="skip"><?php echo $Zitiziti['SKIP_THIS']; ?>
+                                    <a href="add-listing-step-3" class="skip"><?php echo $BIZBOOK['SKIP_THIS']; ?>
                                         >></a>
                                 </div>
                             </div>

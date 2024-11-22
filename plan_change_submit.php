@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //****************************    Client email starts    *************************
 
             $to1 = $user_email_id;
-            $PLAN_CHANGE_CLIENT_SUBJECT = $Zitiziti['PLAN_CHANGE_CLIENT_SUBJECT'];
+            $PLAN_CHANGE_CLIENT_SUBJECT = $BIZBOOK['PLAN_CHANGE_CLIENT_SUBJECT'];
             $subject1 = "'.$admin_site_name $PLAN_CHANGE_CLIENT_SUBJECT";
             
 
@@ -69,28 +69,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <table style="background: #fff;width:500px;padding: 20px;margin: 0 auto;box-shadow: 0px 1px 10px 13px #2d313703;border-radius: 8px;font-weight: 500;">
                         <tbody>
                         <tr>
-                            <td style="font-size: 24px;color:#000;font-weight: bold;line-height: 30px;">'.$Zitiziti['PLAN_CHANGE_REQUEST_GREETINGS'].' <span contenteditable="false">'.$admin_site_name.'</span></td>
+                            <td style="font-size: 24px;color:#000;font-weight: bold;line-height: 30px;">'.$BIZBOOK['PLAN_CHANGE_REQUEST_GREETINGS'].' <span contenteditable="false">'.$admin_site_name.'</span></td>
                         </tr>
                         <tr>
-                            <td>' .$Zitiziti['HI']. ', <b>' .$first_name. '</b></td>
+                            <td>' .$BIZBOOK['HI']. ', <b>' .$first_name. '</b></td>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
                         </tr>
                         <tr>
-                            <td style="font-size: 18px;color:#000;font-weight: bold;line-height: 26px;">'.$Zitiziti['PLAN_CHANGE_REQUEST_RECEIVED'].'</td>
+                            <td style="font-size: 18px;color:#000;font-weight: bold;line-height: 26px;">'.$BIZBOOK['PLAN_CHANGE_REQUEST_RECEIVED'].'</td>
                         </tr>
                         <tr>
                             <td style="height: 5px;line-height: 2px;">&nbsp;</td>
                         </tr>
                         <tr>
-                            <td>'.$Zitiziti['PLAN_CHANGE_REQUEST_PLEASE_WAIT'].'</td>
+                            <td>'.$BIZBOOK['PLAN_CHANGE_REQUEST_PLEASE_WAIT'].'</td>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
                         </tr>
                         <tr>
-                            <td>'.$Zitiziti['PLAN_CHANGE_REQUEST_THANKS'].', <br><span contenteditable="false">'.$admin_site_name.'</span></td>
+                            <td>'.$BIZBOOK['PLAN_CHANGE_REQUEST_THANKS'].', <br><span contenteditable="false">'.$admin_site_name.'</span></td>
                         </tr>
                     </tbody></table>
                 </td>
@@ -112,25 +112,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             mail($to1, $subject1, $message1, $headers1); //Client email
 
 
-            $_SESSION['status_msg'] = $Zitiziti['PLAN_CHANGE_REQUEST_SUCCESS_MESSAGE'];  // Success Message in session
+            $_SESSION['status_msg'] = $BIZBOOK['PLAN_CHANGE_REQUEST_SUCCESS_MESSAGE'];  // Success Message in session
 
             header('Location: db-payment');
             exit;
         }else{
-            $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+            $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
             header('Location: db-plan-change');
             exit;
         }
 
     }else{
-        $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+        $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
         header('Location: db-plan-change');
         exit;
     }
 }else{
-    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: db-plan-change');
     exit;

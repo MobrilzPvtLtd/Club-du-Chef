@@ -101,7 +101,7 @@ include "header.php";
                                                         <div class="form-group">
                                                             <select disabled="disabled" onChange="geteventCities(this.value);" name="country_id" required="required"
                                                                     class=" form-control">
-                                                                <option value=""><?php echo $Zitiziti['SELECT_YOUR_COUNTRY']; ?></option>
+                                                                <option value=""><?php echo $BIZBOOK['SELECT_YOUR_COUNTRY']; ?></option>
                                                                 <?php
                                                                 //Countries Query
                                                                 $admin_countries = $footer_row['admin_countries'];
@@ -127,7 +127,7 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <select disabled="disabled" data-placeholder="<?php echo $Zitiziti['SELECT_YOUR_CITY']; ?>"
+                                                            <select disabled="disabled" data-placeholder="<?php echo $BIZBOOK['SELECT_YOUR_CITY']; ?>"
                                                                     name="city_id[]" id="city_id"
                                                                     multiple required="required"
                                                                     class="form-control">

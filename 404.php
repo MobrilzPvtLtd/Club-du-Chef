@@ -6,11 +6,11 @@ include "header.php";
         <div class="container">
             <div class="row">
                 <div class="inn1">
-                    <b><?php echo $Zitiziti['404_TEXT']; ?></b>
-                    <h1><?php echo $Zitiziti['404_PAGE_NOT_FOUND']; ?></h1>
-                    <p><?php echo $Zitiziti['404_PAGE_NOT_FOUND_MESSAGE']; ?></p>
-                    <a href="<?php echo $webpage_full_link?>" class="btn1"><?php echo $Zitiziti['404_GO_HOME']; ?></a>
-                    <a href="<?php echo $webpage_full_link?>contact-us" class="btn2"><?php echo $Zitiziti['404_CONTACT_US']; ?></a>
+                    <b><?php echo $BIZBOOK['404_TEXT']; ?></b>
+                    <h1><?php echo $BIZBOOK['404_PAGE_NOT_FOUND']; ?></h1>
+                    <p><?php echo $BIZBOOK['404_PAGE_NOT_FOUND_MESSAGE']; ?></p>
+                    <a href="<?php echo $webpage_full_link?>" class="btn1"><?php echo $BIZBOOK['404_GO_HOME']; ?></a>
+                    <a href="<?php echo $webpage_full_link?>contact-us" class="btn2"><?php echo $BIZBOOK['404_CONTACT_US']; ?></a>
                 </div>
                 <div class="inn2">
                     

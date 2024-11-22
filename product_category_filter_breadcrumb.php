@@ -13,11 +13,11 @@ $category_id = $_POST['category_id'];
 if (getCountCategoryProductCategory($category_id) <= 0) {
     ?>
     <div class="row">
-        <h1><?php echo $Zitiziti['ALL_CATEGORIES']; ?></h1>
+        <h1><?php echo $BIZBOOK['ALL_CATEGORIES']; ?></h1>
 
         <ul>
-            <li><a href="index"><?php echo $Zitiziti['HOME']; ?></a></li>
-            <li><a href="all-products"><?php echo $Zitiziti['ALL_CATEGORY']; ?></a></li>
+            <li><a href="index"><?php echo $BIZBOOK['HOME']; ?></a></li>
+            <li><a href="all-products"><?php echo $BIZBOOK['ALL_CATEGORY']; ?></a></li>
 
         </ul>
     </div>
@@ -34,8 +34,8 @@ if (getCountCategoryProductCategory($category_id) <= 0) {
         <h1><?php echo $category_name; ?></h1>
 
         <ul>
-            <li><a href="index"><?php echo $Zitiziti['HOME']; ?></a></li>
-            <li><a href="all-products"><?php echo $Zitiziti['ALL_CATEGORY']; ?></a></li>
+            <li><a href="index"><?php echo $BIZBOOK['HOME']; ?></a></li>
+            <li><a href="all-products"><?php echo $BIZBOOK['ALL_CATEGORY']; ?></a></li>
             <li>
                 <a href="<?php echo $ALL_PRODUCTS_URL . urlModifier($category_slug); ?>"><?php echo $category_name; ?></a>
             </li>

@@ -19,7 +19,7 @@ $listing_count_user = getCountUserListing($_SESSION['user_id']);
 
 if($listing_count_user >= $plan_type_listing_count){
 
-    $_SESSION['status_msg'] = $Zitiziti['LISTINGS_LIMIT_EXCEED_MESSAGE'];
+    $_SESSION['status_msg'] = $BIZBOOK['LISTINGS_LIMIT_EXCEED_MESSAGE'];
 
     header('Location: db-all-listing');
 }
@@ -92,38 +92,38 @@ if (isset($_POST['listing_submit'])) {
                     <ul>
                         <li>
                             <a href="add-listing-step-1">
-                                <span><?php echo $Zitiziti['STEP1']; ?></span>
-                                <b><?php echo $Zitiziti['BASIC_INFO']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP1']; ?></span>
+                                <b><?php echo $BIZBOOK['BASIC_INFO']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="add-listing-step-2">
-                                <span><?php echo $Zitiziti['STEP2']; ?></span>
-                                <b><?php echo $Zitiziti['SERVICES']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP2']; ?></span>
+                                <b><?php echo $BIZBOOK['SERVICES']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="add-listing-step-3">
-                                <span><?php echo $Zitiziti['STEP3']; ?></span>
-                                <b><?php echo $Zitiziti['OFFERS']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP3']; ?></span>
+                                <b><?php echo $BIZBOOK['OFFERS']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="add-listing-step-4" class="act">
-                                <span><?php echo $Zitiziti['STEP4']; ?></span>
-                                <b><?php echo $Zitiziti['MAP']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP4']; ?></span>
+                                <b><?php echo $BIZBOOK['MAP']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="#!">
-                                <span><?php echo $Zitiziti['STEP5']; ?></span>
-                                <b><?php echo $Zitiziti['OTHER']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP5']; ?></span>
+                                <b><?php echo $BIZBOOK['OTHER']; ?></b>
                             </a>
                         </li>
                         <li>
                             <a href="#!">
-                                <span><?php echo $Zitiziti['STEP6']; ?></span>
-                                <b><?php echo $Zitiziti['DONE']; ?></b>
+                                <span><?php echo $BIZBOOK['STEP6']; ?></span>
+                                <b><?php echo $BIZBOOK['DONE']; ?></b>
                             </a>
                         </li>
                     </ul>
@@ -133,24 +133,24 @@ if (isset($_POST['listing_submit'])) {
         <div class="row">
             <div class="login-main add-list">
                 <div class="log-bor">&nbsp;</div>
-                <span class="steps"><?php echo $Zitiziti['STEP4']; ?></span>
+                <span class="steps"><?php echo $BIZBOOK['STEP4']; ?></span>
                 <div class="log add-list-map">
                     <div class="login add-list-map">
                         <form action="add-listing-step-5.php" class="listing_form_4" id="listing_form_4"
                               name="listing_form_4" method="post" enctype="multipart/form-data">
 
                             <!--FILED START-->
-                            <h4><?php echo $Zitiziti['PHOTO_GALLERY']; ?></h4>
+                            <h4><?php echo $BIZBOOK['PHOTO_GALLERY']; ?></h4>
                             <div>
                                 <input type="file" name="gallery_image[]" accept="image/*,.jpg,.jpeg,.png" multiple>
                             </div>
                             <!--FILED END-->
                             <p></p>
-                            <h4><?php echo $Zitiziti['VIDEO_GALLERY']; ?></h4>
+                            <h4><?php echo $BIZBOOK['VIDEO_GALLERY']; ?></h4>
                             <!-- TOOL TIP -->
                             <!--<div class="ttip-com">
                                 <i class="material-icons">priority_high</i>
-                                <div><?php echo $Zitiziti['VIDEO_GALLERY_INFO']; ?></div>
+                                <div><?php echo $BIZBOOK['VIDEO_GALLERY_INFO']; ?></div>
                             </div>-->
                             <!-- END -->
                             <ul>
@@ -171,7 +171,7 @@ if (isset($_POST['listing_submit'])) {
                                                     <div class="form-group">
                                                         <textarea id="listing_video" name="listing_video[]"
                                                                   class="form-control"
-                                                                  placeholder="<?php echo $Zitiziti['PASTE_IFRAME_CODE']; ?>"><?php echo $tuple; ?></textarea>
+                                                                  placeholder="<?php echo $BIZBOOK['PASTE_IFRAME_CODE']; ?>"><?php echo $tuple; ?></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -186,7 +186,7 @@ if (isset($_POST['listing_submit'])) {
                                                 <div class="form-group">
                                                  <textarea id="listing_video" name="listing_video[]"
                                                            class="form-control"
-                                                           placeholder="<?php echo $Zitiziti['PASTE_IFRAME_CODE']; ?>"></textarea>
+                                                           placeholder="<?php echo $BIZBOOK['PASTE_IFRAME_CODE']; ?>"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -195,14 +195,14 @@ if (isset($_POST['listing_submit'])) {
                                 }
                                 ?>
                             </ul>
-                            <h4><?php echo $Zitiziti['MAP']; ?></h4>
+                            <h4><?php echo $BIZBOOK['MAP']; ?></h4>
 
                             <!--FILED START-->
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <textarea id="google_map" name="google_map" class="form-control"
-                                                  placeholder="<?php echo $Zitiziti['SHOP_LOCATION']; ?>"><?php echo $_SESSION['google_map'] ?></textarea>
+                                                  placeholder="<?php echo $BIZBOOK['SHOP_LOCATION']; ?>"><?php echo $_SESSION['google_map'] ?></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -212,13 +212,13 @@ if (isset($_POST['listing_submit'])) {
 <!--                                <div class="col-md-12">-->
 <!--                                    <div class="form-group">-->
 <!--                                        <textarea id="360_view" name="360_view" class="form-control"-->
-<!--                                                  placeholder="--><?php //echo $Zitiziti['360_VIEW']; ?><!--">--><?php //echo $_SESSION['360_view'] ?><!--</textarea>-->
+<!--                                                  placeholder="--><?php //echo $BIZBOOK['360_VIEW']; ?><!--">--><?php //echo $_SESSION['360_view'] ?><!--</textarea>-->
 <!--                                    </div>-->
 <!--                                </div>-->
 <!--                            </div>-->
                             <!--FILED END-->
 
-                            <!--                            <h4 class="pt30">--><?php //echo $Zitiziti['PHOTO_GALLERY']; ?><!--</h4>-->
+                            <!--                            <h4 class="pt30">--><?php //echo $BIZBOOK['PHOTO_GALLERY']; ?><!--</h4>-->
                             <!--                            --><?php
                             //                            //To check the photos count with current plan starts
                             //
@@ -246,14 +246,14 @@ if (isset($_POST['listing_submit'])) {
                             <div class="row">
                                 <div class="col-md-6">
                                     <a href="add-listing-step-3">
-                                        <button type="button" class="btn btn-primary"><?php echo $Zitiziti['PREVIOUS']; ?></button>
+                                        <button type="button" class="btn btn-primary"><?php echo $BIZBOOK['PREVIOUS']; ?></button>
                                     </a>
                                 </div>
                                 <div class="col-md-6">
-                                    <button type="submit" name="listing_submit" class="btn btn-primary"><?php echo $Zitiziti['NEXT']; ?></button>
+                                    <button type="submit" name="listing_submit" class="btn btn-primary"><?php echo $BIZBOOK['NEXT']; ?></button>
                                 </div>
                                 <div class="col-md-12">
-                                    <a href="add-listing-step-5" class="skip"><?php echo $Zitiziti['SKIP_THIS']; ?> >></a>
+                                    <a href="add-listing-step-5" class="skip"><?php echo $BIZBOOK['SKIP_THIS']; ?> >></a>
                                 </div>
                             </div>
                             <!--FILED END-->

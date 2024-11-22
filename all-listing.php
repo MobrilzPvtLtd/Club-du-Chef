@@ -238,7 +238,7 @@ foreach (getAllCities() as $city) {
     <div class="all-listing all-listing-pg">
         <!--FILTER ON MOBILE VIEW-->
         <div class="fil-mob fil-mob-act">
-            <h4><?php echo $Zitiziti['ALL-LISTING-LISTING-FILTERS']; ?> <i class="material-icons">filter_list</i></h4>
+            <h4><?php echo $BIZBOOK['ALL-LISTING-LISTING-FILTERS']; ?> <i class="material-icons">filter_list</i></h4>
         </div>
         <div class="container">
             <div class="row">
@@ -257,16 +257,16 @@ foreach (getAllCities() as $city) {
                                     <?php
                                     } else {
                                     ?>
-                                        <h1><?php echo $Zitiziti['ALL_CATEGORIES']; ?></h1>
+                                        <h1><?php echo $BIZBOOK['ALL_CATEGORIES']; ?></h1>
                                     <?php
                                     }
                                     ?>
                                     <ul>
                                         <li>
-                                            <a href="<?php echo $webpage_full_link; ?>"><?php echo $Zitiziti['HOME']; ?></a>
+                                            <a href="<?php echo $webpage_full_link; ?>"><?php echo $BIZBOOK['HOME']; ?></a>
                                         </li>
                                         <li>
-                                            <a href="<?php echo $webpage_full_link . 'all-listing'; ?>"><?php echo $Zitiziti['ALL_CATEGORY']; ?></a>
+                                            <a href="<?php echo $webpage_full_link . 'all-listing'; ?>"><?php echo $BIZBOOK['ALL_CATEGORY']; ?></a>
                                         </li>
                                         <?php
                                         if (isset($_GET['category'])) {
@@ -286,7 +286,7 @@ foreach (getAllCities() as $city) {
                                 <!--START-->
                                 <!-- <div class="filt-alist-near">
                                     <div class="tit">
-                                        <h4><?php echo $Zitiziti['ALL-LISTING-TOP-SERVICE-PROVIDERS']; ?></h4></div>
+                                        <h4><?php echo $BIZBOOK['ALL-LISTING-TOP-SERVICE-PROVIDERS']; ?></h4></div>
                                     <div class="near-ser-list top-ser-secti-prov">
                                         <ul>
                                             <?php
@@ -313,7 +313,7 @@ foreach (getAllCities() as $city) {
                                                         </div>
                                                         <div class="ne-2">
                                                             <h5><?php echo $nearby_listrow['listing_name']; ?></h5>
-                                                            <p><?php echo $Zitiziti['CITY'] . ':'; ?><?php echo $nearby_listrow['listing_address']; ?></p>
+                                                            <p><?php echo $BIZBOOK['CITY'] . ':'; ?><?php echo $nearby_listrow['listing_address']; ?></p>
                                                         </div>
                                                         <div class="ne-3">
                                                             <span>5.0</span>
@@ -332,11 +332,11 @@ foreach (getAllCities() as $city) {
 
                                 <!--START-->
                                 <!-- <div class="filt-com lhs-cate">
-                                    <h4><?php echo $Zitiziti['CITIES']; ?></h4>
+                                    <h4><?php echo $BIZBOOK['CITIES']; ?></h4>
                                     <div class="dropdown">
 
                                         <select id="city_check" name="city_check" class="chosen-select">
-                                            <option value=""><?php echo $Zitiziti['ALL_CITIES']; ?></option>
+                                            <option value=""><?php echo $BIZBOOK['ALL_CITIES']; ?></option>
                                             <?php
                                             $all_city_array = array();
                                             foreach (getAllListingPageCities() as $city_listrow) {
@@ -371,7 +371,7 @@ foreach (getAllCities() as $city) {
                                         <ul>
                                             <li>
                                                 <input type="text" id="search"
-                                                    placeholder="<?php echo $Zitiziti['ALL-LISTING-SEARCH-SERVICE']; ?>">
+                                                    placeholder="<?php echo $BIZBOOK['ALL-LISTING-SEARCH-SERVICE']; ?>">
                                             </li>
                                             <li>
                                                 <input type="submit" value="">
@@ -386,12 +386,12 @@ foreach (getAllCities() as $city) {
                             ?>
                                 <!--START-->
                                 <div class="filt-com lhs-cate">
-                                    <h4><?php echo $Zitiziti['ALL-LISTING-CATEGORIES']; ?></h4>
+                                    <h4><?php echo $BIZBOOK['ALL-LISTING-CATEGORIES']; ?></h4>
                                     <div class="dropdown">
                                         <select onChange="SubcategoryFilter(this.value);"
                                             class="cat_check chosen-select"
                                             name="cat_check" id="cat_check">
-                                            <option value=""><?php echo $Zitiziti['ALL_CATEGORIES']; ?></option>
+                                            <option value=""><?php echo $BIZBOOK['ALL_CATEGORIES']; ?></option>
                                             <?php
                                             foreach (getAllActiveCategoriesPos() as $categories_row) {
                                             ?>
@@ -409,7 +409,7 @@ foreach (getAllCities() as $city) {
 
                                 <!--START-->
                                 <div class="sub_cat_section filt-com lhs-sub">
-                                    <h4><?php echo $Zitiziti['ALL-LISTING-SUB-CATEGORY']; ?></h4>
+                                    <h4><?php echo $BIZBOOK['ALL-LISTING-SUB-CATEGORY']; ?></h4>
                                     <ul>
                                         <?php
                                         if (isset($_GET['category'])) {
@@ -448,7 +448,7 @@ foreach (getAllCities() as $city) {
                             ?>
                                 <!--START-->
                                 <div class="filt-com lhs-featu">
-                                    <h4><?php echo $Zitiziti['ALL-LISTING-FEATURES']; ?></h4>
+                                    <h4><?php echo $BIZBOOK['ALL-LISTING-FEATURES']; ?></h4>
                                     <ul>
                                         <?php
                                         foreach (getAllActiveFeaturedFilter() as $featuredfilterrow) {
@@ -487,7 +487,7 @@ foreach (getAllCities() as $city) {
                             ?>
                                 <!--START-->
                                 <div class="filt-com lhs-rati">
-                                    <h4><?php echo $Zitiziti['RATINGS']; ?></h4>
+                                    <h4><?php echo $BIZBOOK['RATINGS']; ?></h4>
                                     <ul>
                                         <li>
                                             <div class="rbbox">
@@ -586,7 +586,7 @@ foreach (getAllCities() as $city) {
                                             $ad_enquiry_photo = $get_ad_row['ad_enquiry_photo'];
                                             ?>
                                             <a href="<?php echo stripslashes($get_ad_row['ad_link']); ?>">
-                                                <span><?php echo $Zitiziti['AD']; ?></span>
+                                                <span><?php echo $BIZBOOK['AD']; ?></span>
 
                                                 <img
                                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
@@ -604,20 +604,20 @@ foreach (getAllCities() as $city) {
 
                             <div class="all-list-filt-form">
                                 <div class="tit">
-                                    <h3><?php echo $Zitiziti['HOM-WHAT-SER']; ?>
-                                        <span><?php echo $Zitiziti['HOM-WHAT-BIZ-BOOK-HELP-YOU']; ?></span>
+                                    <h3><?php echo $BIZBOOK['HOM-WHAT-SER']; ?>
+                                        <span><?php echo $BIZBOOK['HOM-WHAT-BIZ-BOOK-HELP-YOU']; ?></span>
                                     </h3>
                                 </div>
                                 <div class="hom-col-req">
                                     <div id="home_slide_enq_success" class="log"
                                         style="display: none;">
-                                        <p><?php echo $Zitiziti['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
+                                        <p><?php echo $BIZBOOK['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
                                     </div>
                                     <div id="home_slide_enq_fail" class="log" style="display: none;">
-                                        <p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                                        <p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                                     </div>
                                     <div id="home_slide_enq_same" class="log" style="display: none;">
-                                        <p><?php echo $Zitiziti['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
+                                        <p><?php echo $BIZBOOK['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
                                     </div>
                                     <form name="home_slide_enquiry_form" id="home_slide_enquiry_form" method="post"
                                         enctype="multipart/form-data">
@@ -648,31 +648,31 @@ foreach (getAllCities() as $city) {
                                         <div class="form-group">
                                             <input type="text" name="enquiry_name" value="" required="required"
                                                 class="form-control"
-                                                placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>">
+                                                placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>">
                                         </div>
                                         <div class="form-group">
                                             <input type="email" class="form-control"
-                                                placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>"
+                                                placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>"
                                                 required="required" value=""
                                                 name="enquiry_email"
                                                 pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                                title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>">
+                                                title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>">
                                         </div>
                                         <div class="form-group">
                                             <input type="text" class="form-control" value="" name="enquiry_mobile"
-                                                placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                                placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
                                                 pattern="[7-9]{1}[0-9]{9}"
-                                                title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>"
+                                                title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>"
                                                 required="">
                                         </div>
                                         <div class="form-group">
                                             <textarea class="form-control" rows="3" name="enquiry_message"
-                                                placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                                placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                                         </div>
                                         <input type="hidden" id="source">
                                         <button type="submit" id="home_slide_enquiry_submit"
                                             name="home_slide_enquiry_submit"
-                                            class="btn btn-primary"><?php echo $Zitiziti['SUBMIT_REQUIREMENTS']; ?>
+                                            class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT_REQUIREMENTS']; ?>
                                         </button>
                                     </form>
                                 </div>
@@ -724,42 +724,42 @@ foreach (getAllCities() as $city) {
                                     <div class="chbox">
                                         <input type="checkbox" name="lfv2-all" class="lfv2-all" value="1" id="lfv2-all"
                                             checked="checked"/>
-                                        <label for="lfv2-all"><?php //echo $Zitiziti['ALL-LISTING-FILTER-ALL']; 
+                                        <label for="lfv2-all"><?php //echo $BIZBOOK['ALL-LISTING-FILTER-ALL']; 
                                                                 ?></label>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="chbox">
                                         <input type="checkbox" name="lfv2-pop" class="lfv2-pop" id="lfv2-pop"/>
-                                        <label for="lfv2-pop"><?php //echo $Zitiziti['ALL-LISTING-FILTER-POPULAR']; 
+                                        <label for="lfv2-pop"><?php //echo $BIZBOOK['ALL-LISTING-FILTER-POPULAR']; 
                                                                 ?></label>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="chbox">
                                         <input type="checkbox" name="lfv2-op" class="lfv2-op" id="lfv2-op"/>
-                                        <label for="lfv2-op"><?php //echo $Zitiziti['ALL-LISTING-FILTER-OPEN']; 
+                                        <label for="lfv2-op"><?php //echo $BIZBOOK['ALL-LISTING-FILTER-OPEN']; 
                                                                 ?></label>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="chbox">
                                         <input type="checkbox" name="lfv2-tru" class="lfv2-tru" id="lfv2-tru"/>
-                                        <label for="lfv2-tru"><?php //echo $Zitiziti['ALL-LISTING-FILTER-VERIFIED']; 
+                                        <label for="lfv2-tru"><?php //echo $BIZBOOK['ALL-LISTING-FILTER-VERIFIED']; 
                                                                 ?></label>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="chbox">
                                         <input type="checkbox" name="lfv2-near" class="lfv2-near" id="lfv2-near"/>
-                                        <label for="lfv2-near"><?php //echo $Zitiziti['ALL-LISTING-FILTER-NEARBY']; 
+                                        <label for="lfv2-near"><?php //echo $BIZBOOK['ALL-LISTING-FILTER-NEARBY']; 
                                                                 ?></label>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="chbox">
                                         <input type="checkbox" name="lfv2-off" class="lfv2-off" id="lfv2-off"/>
-                                        <label for="lfv2-off"><?php //echo $Zitiziti['ALL-LISTING-FILTER-OFFERS']; 
+                                        <label for="lfv2-off"><?php //echo $BIZBOOK['ALL-LISTING-FILTER-OFFERS']; 
                                                                 ?></label>
                                     </div>
                                 </li>
@@ -773,7 +773,7 @@ foreach (getAllCities() as $city) {
                             $get_ad_row = getAds($ad_position_id);
                             $ad_enquiry_photo = $get_ad_row['ad_enquiry_photo'];
                             ?>
-                            <a href="<?php echo stripslashes($get_ad_row['ad_link']); ?>"><span><?php echo $Zitiziti['AD']; ?></span><img
+                            <a href="<?php echo stripslashes($get_ad_row['ad_link']); ?>"><span><?php echo $BIZBOOK['AD']; ?></span><img
                                         src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
                                                                                     echo $ad_enquiry_photo;
                                                                                 } else {
@@ -954,15 +954,15 @@ foreach (getAllCities() as $city) {
                                         data-type="ratings"><?php
 
                                                             if ($get_ratings == 5) {
-                                                                echo '5' . ' ' . $Zitiziti['SERVICE-EXPERT-STAR-LABEL'];
+                                                                echo '5' . ' ' . $BIZBOOK['SERVICE-EXPERT-STAR-LABEL'];
                                                             } elseif ($get_ratings == 4) {
-                                                                echo '4' . ' ' . $Zitiziti['SERVICE-EXPERT-STAR-LABEL'];
+                                                                echo '4' . ' ' . $BIZBOOK['SERVICE-EXPERT-STAR-LABEL'];
                                                             } elseif ($get_ratings == 3) {
-                                                                echo '3' . ' ' . $Zitiziti['SERVICE-EXPERT-STAR-LABEL'];
+                                                                echo '3' . ' ' . $BIZBOOK['SERVICE-EXPERT-STAR-LABEL'];
                                                             } elseif ($get_ratings == 2) {
-                                                                echo '2' . ' ' . $Zitiziti['SERVICE-EXPERT-STAR-LABEL'];
+                                                                echo '2' . ' ' . $BIZBOOK['SERVICE-EXPERT-STAR-LABEL'];
                                                             } elseif ($get_ratings == 1) {
-                                                                echo '1' . ' ' . $Zitiziti['SERVICE-EXPERT-STAR-LABEL'];
+                                                                echo '1' . ' ' . $BIZBOOK['SERVICE-EXPERT-STAR-LABEL'];
                                                             } ?></span>
                                 <?php } ?>
 
@@ -1030,7 +1030,7 @@ foreach (getAllCities() as $city) {
                                                         <?php
                                                         if ($listrow['listing_open'] == 1) {
                                                         ?>
-                                                            <span class="open-stat"><?php echo $Zitiziti['OPEN']; ?></span>
+                                                            <span class="open-stat"><?php echo $BIZBOOK['OPEN']; ?></span>
                                                         <?php
                                                         }
                                                         ?>
@@ -1117,18 +1117,18 @@ foreach (getAllCities() as $city) {
                                                             <?php
                                                             }
                                                             ?>
-                                                            class="quo"><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></span>
+                                                            class="quo"><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></span>
                                                     <?php
                                                     } else { ?>
                                                         <a class="quo"
-                                                            href="<?php echo $LOGIN_URL; ?>"><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></a>
+                                                            href="<?php echo $LOGIN_URL; ?>"><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></a>
                                                     <?php
                                                     }
                                                     ?>
-                                                    <a class="cta-buy-now" href="<?php echo $Zitiziti['TEL']; ?>:<?php
+                                                    <a class="cta-buy-now" href="<?php echo $BIZBOOK['TEL']; ?>:<?php
                                                                                                                 if ($listrow['listing_mobile'] != NULL || $usersqlrow['mobile_number'] != NULL) {
                                                                                                                     echo $listrow['listing_mobile'];
-                                                                                                                } ?>"><?php echo $Zitiziti['CALL_NOW']; ?></a>
+                                                                                                                } ?>"><?php echo $BIZBOOK['CALL_NOW']; ?></a>
                                                     <a class="cta-add-cart" href="https://wa.me/<?php
                                                                                                 if ($listrow['listing_whatsapp'] != NULL) {
                                                                                                     echo $listrow['listing_whatsapp'];
@@ -1139,7 +1139,7 @@ foreach (getAllCities() as $city) {
                                                                                                     }
                                                                                                 }
                                                                                                 ?>" class="what"
-                                                        target="_blank"><?php echo $Zitiziti['WHATSAPP']; ?></a>
+                                                        target="_blank"><?php echo $BIZBOOK['WHATSAPP']; ?></a>
                                                 </div>
                                                 <!---END LISTING NAME--->
                                             </div>
@@ -1155,22 +1155,22 @@ foreach (getAllCities() as $city) {
                                                         <div class="modal-content">
                                                             <div class="log-bor">&nbsp;</div>
                                                             <span
-                                                                class="udb-inst"><?php echo $Zitiziti['LEAD-SEND-ENQUIRY']; ?></span>
+                                                                class="udb-inst"><?php echo $BIZBOOK['LEAD-SEND-ENQUIRY']; ?></span>
                                                             <button type="button" class="close"
                                                                 data-dismiss="modal">&times;
                                                             </button>
                                                             <!-- Modal Header -->
                                                             <div class="quote-pop">
-                                                                <h4><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></h4>
+                                                                <h4><?php echo $BIZBOOK['LEAD-GET-QUOTE']; ?></h4>
                                                                 <div id="enq_success" class="log"
                                                                     style="display: none;">
-                                                                    <p><?php echo $Zitiziti['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
+                                                                    <p><?php echo $BIZBOOK['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
                                                                 </div>
                                                                 <div id="enq_fail" class="log" style="display: none;">
-                                                                    <p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                                                                    <p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                                                                 </div>
                                                                 <div id="enq_same" class="log" style="display: none;">
-                                                                    <p><?php echo $Zitiziti['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
+                                                                    <p><?php echo $BIZBOOK['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
                                                                 </div>
                                                                 <form method="post" name="all_enquiry_form"
                                                                     id="all_enquiry_form">
@@ -1202,16 +1202,16 @@ foreach (getAllCities() as $city) {
                                                                         <input type="text" readonly name="enquiry_name"
                                                                             value="<?php echo $user_details_row['first_name'] ?>"
                                                                             required="required" class="form-control"
-                                                                            placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>">
+                                                                            placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>">
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <input type="email" class="form-control"
-                                                                            placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>"
+                                                                            placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>"
                                                                             readonly="readonly"
                                                                             value="<?php echo $user_details_row['email_id'] ?>"
                                                                             name="enquiry_email"
                                                                             pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                                                            title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>"
+                                                                            title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>"
                                                                             required>
                                                                     </div>
                                                                     <div class="form-group">
@@ -1219,20 +1219,20 @@ foreach (getAllCities() as $city) {
                                                                             readonly="readonly"
                                                                             value="<?php echo $user_details_row['mobile_number'] ?>"
                                                                             name="enquiry_mobile"
-                                                                            placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                                                            placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>"
                                                                             pattern="[7-9]{1}[0-9]{9}"
-                                                                            title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>"
+                                                                            title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>"
                                                                             required>
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <textarea class="form-control" rows="3"
                                                                             name="enquiry_message"
-                                                                            placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                                                            placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                                                                     </div>
                                                                     <input type="hidden" id="source">
                                                                     <button type="submit" id="all_enquiry_submit"
                                                                         name="enquiry_submit"
-                                                                        class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?></button>
+                                                                        class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
                                                                 </form>
                                                             </div>
                                                         </div>
@@ -1256,7 +1256,7 @@ foreach (getAllCities() as $city) {
                                 /* background: #525252; */
                                 text-shadow: 0px 0px 2px #fff;
                                 text-transform: uppercase;
-                                margin-top: 5%;"><?php echo $Zitiziti['LISTINGS_NO_LISTINGS_MESSAGE']; ?></span>
+                                margin-top: 5%;"><?php echo $BIZBOOK['LISTINGS_NO_LISTINGS_MESSAGE']; ?></span>
                                 <?php
                                 }
                                 ?>
@@ -1270,7 +1270,7 @@ foreach (getAllCities() as $city) {
                                 $get_ad_row = getAds($ad_position_id);
                                 $ad_enquiry_photo = $get_ad_row['ad_enquiry_photo'];
                                 ?>
-                                <a href="<?php echo stripslashes($get_ad_row['ad_link']); ?>"><span><?php echo $Zitiziti['AD']; ?></span><img
+                                <a href="<?php echo stripslashes($get_ad_row['ad_link']); ?>"><span><?php echo $BIZBOOK['AD']; ?></span><img
                                         src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
                                                                                     echo $ad_enquiry_photo;
                                                                                 } else {
@@ -1346,11 +1346,11 @@ foreach (getAllCities() as $city) {
                     ?>
                     <div class="list-rat-all">
                         <div class="pg-list-revi-lhs">
-                            <h4><?php echo $Zitiziti['ALL-LISTING-OVERALL-RATING']; ?></h4>
+                            <h4><?php echo $BIZBOOK['ALL-LISTING-OVERALL-RATING']; ?></h4>
                             <b><?php if ($new_star_rate != 0) {
                                     echo $new_star_rate;
                                 } else {
-                                    echo $Zitiziti['ALL-LISTING-0-RATINGS'];
+                                    echo $BIZBOOK['ALL-LISTING-0-RATINGS'];
                                 } ?></b>
 
                             <?php
@@ -1376,7 +1376,7 @@ foreach (getAllCities() as $city) {
                             }
                             ?>
                             <?php if ($new_review_count > 0) { ?>
-                                <span><?php echo $new_review_count; ?><?php echo $Zitiziti['REVIEWS']; ?></span>
+                                <span><?php echo $new_review_count; ?><?php echo $BIZBOOK['REVIEWS']; ?></span>
                             <?php
                             }
                             ?>
@@ -1423,7 +1423,7 @@ foreach (getAllCities() as $city) {
                 ) {
                 ?>
                     <div class="list-foot-faq">
-                        <h3><?php echo $Zitiziti['FAQ']; ?></h3>
+                        <h3><?php echo $BIZBOOK['FAQ']; ?></h3>
                         <div class="how-to-coll">
                             <ul>
                                 <?php if ($cat_search_row['category_faq_1_ques'] != NULL) { ?>

@@ -28,20 +28,20 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 
 
     if ($enquiry_res) {
-        $_SESSION['status_msg'] = $Zitiziti['FEEDBACK_INSERT_SUCCESS_MESSAGE'];
+        $_SESSION['status_msg'] = $BIZBOOK['FEEDBACK_INSERT_SUCCESS_MESSAGE'];
 
         header('Location: feedback');
         exit();
 
     } else {
-        $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+        $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
         header('Location: feedback');
         exit();
     }
 }else {
 
-    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: feedback');
     exit();

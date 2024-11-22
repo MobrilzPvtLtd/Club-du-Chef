@@ -50,7 +50,7 @@ if ($page_row['page_css'] != NULL) {
                         ?>
                         <div class="box templ-rhs-eve">
                             <div class="hot-page2-hom-pre-head">
-                                <h4><?php echo $Zitiziti['LISTING']; ?></h4>
+                                <h4><?php echo $BIZBOOK['LISTING']; ?></h4>
                             </div>
                             <div class="hot-page2-hom-pre">
                                 <ul>
@@ -84,7 +84,7 @@ if ($page_row['page_css'] != NULL) {
                     ?>
                     <div class="box templ-rhs-eve">
                          <div class="hot-page2-hom-pre-head">
-                            <h4><?php echo $Zitiziti['PRODUCTS']; ?></h4>
+                            <h4><?php echo $BIZBOOK['PRODUCTS']; ?></h4>
                         </div>
                         <div class="hot-page2-hom-pre">
                             <ul>
@@ -118,7 +118,7 @@ if ($page_row['page_css'] != NULL) {
                     ?>
                     <div class="box templ-rhs-eve">
                          <div class="hot-page2-hom-pre-head">
-                            <h4><?php echo $Zitiziti['BLOG_POSTS']; ?></h4>
+                            <h4><?php echo $BIZBOOK['BLOG_POSTS']; ?></h4>
                         </div>
                         <div class="hot-page2-hom-pre">
                             <ul>
@@ -148,7 +148,7 @@ if ($page_row['page_css'] != NULL) {
                         ?>
                         <div class="box templ-rhs-eve">
                             <div class="hot-page2-hom-pre-head">
-                                <h4><?php echo $Zitiziti['EVENTS']; ?></h4>
+                                <h4><?php echo $BIZBOOK['EVENTS']; ?></h4>
                             </div>
                             <div class="hot-page2-hom-pre">
                                 <ul>
@@ -178,18 +178,18 @@ if ($page_row['page_css'] != NULL) {
                     ?>
                     <div class="box templ-rhs-eve">
                          <div class="hot-page2-hom-pre-head">
-                            <h4><?php echo $Zitiziti['LEAD-SEND-ENQUIRY']; ?></h4>
+                            <h4><?php echo $BIZBOOK['LEAD-SEND-ENQUIRY']; ?></h4>
                         </div>
                         <div class="templ-rhs-form">
                             <div id="home_enq_success" class="log"
                              style="display: none;">
-                            <p><?php echo $Zitiziti['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
+                            <p><?php echo $BIZBOOK['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
                         </div>
                         <div id="home_enq_fail" class="log" style="display: none;">
-                            <p><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                            <p><?php echo $BIZBOOK['OOPS_SOMETHING_WENT_WRONG']; ?></p>
                         </div>
                         <div id="home_enq_same" class="log" style="display: none;">
-                            <p><?php echo $Zitiziti['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
+                            <p><?php echo $BIZBOOK['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
                         </div>
                         <form name="home_enquiry_form" id="home_enquiry_form" method="post"
                               enctype="multipart/form-data">
@@ -204,19 +204,19 @@ if ($page_row['page_css'] != NULL) {
                                        echo "Website";
                                    }; ?>" placeholder="" required>
                             <div class="form-group">
-                                <input type="text" name="enquiry_name" value="" required="required" class="form-control" placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>">
+                                <input type="text" name="enquiry_name" value="" required="required" class="form-control" placeholder="<?php echo $BIZBOOK['LEAD-NAME-PLACEHOLDER']; ?>">
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>" required="required" value="" name="enquiry_email" pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$" title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>">
+                                <input type="email" class="form-control" placeholder="<?php echo $BIZBOOK['ENTER_EMAIL_STAR']; ?>" required="required" value="" name="enquiry_email" pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$" title="<?php echo $BIZBOOK['LEAD-INVALID-EMAIL-TITLE']; ?>">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" value="" name="enquiry_mobile"
-                                       placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>" pattern="[7-9]{1}[0-9]{9}"
-                                       title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>" required="">
+                                       placeholder="<?php echo $BIZBOOK['LEAD-MOBILE-PLACEHOLDER']; ?>" pattern="[7-9]{1}[0-9]{9}"
+                                       title="<?php echo $BIZBOOK['LEAD-INVALID-MOBILE-TITLE']; ?>" required="">
                             </div>
                             <div class="form-group">
                                 <select name="enquiry_category" id="enquiry_category" class="form-control">
-                                    <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
+                                    <option value=""><?php echo $BIZBOOK['SELECT_CATEGORY']; ?></option>
                                     <?php
                                     foreach (getAllCategories() as $categories_row) {
                                         ?>
@@ -229,11 +229,11 @@ if ($page_row['page_css'] != NULL) {
                             </div>
                             <div class="form-group">
                         <textarea class="form-control" rows="3" name="enquiry_message"
-                                  placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                  placeholder="<?php echo $BIZBOOK['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                             </div>
                             <input type="hidden" id="source">
                             <button type="submit" id="home_enquiry_submit" name="home_enquiry_submit"
-                                    class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?></button>
+                                    class="btn btn-primary"><?php echo $BIZBOOK['SUBMIT']; ?></button>
                         </form>
                         </div>
                     </div>

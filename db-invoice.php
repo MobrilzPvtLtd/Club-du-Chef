@@ -28,50 +28,50 @@ $user_details_row = getUser($_SESSION['user_id']);
                 $transaction_user_plan_type = getPlanType($transaction_plan_type_id);  //Get Plan Type details
 
                 ?>
-                <span class="steps"><?php echo $Zitiziti['DB-INVOICE-YOUR-NEW-INVOICE']; ?></span>
+                <span class="steps"><?php echo $BIZBOOK['DB-INVOICE-YOUR-NEW-INVOICE']; ?></span>
                 <div class="ud-cen-s2 add-list">
                     <div id="content2">
                         <div class="pdf-main">
                             <div class="inn">
                                 <div class="head">
-                                    <h2><?php echo $transaction_user_plan_type['plan_type_name'] . ' ' . 'Plan'; ?> - <?php echo $Zitiziti['DB-INVOICE-INVOICE']; ?></h2>
+                                    <h2><?php echo $transaction_user_plan_type['plan_type_name'] . ' ' . 'Plan'; ?> - <?php echo $BIZBOOK['DB-INVOICE-INVOICE']; ?></h2>
                                 </div>
                                 <div class="con">
-                                    <p><?php echo $Zitiziti['DB-INVOICE-P-TAG']; ?></p>
+                                    <p><?php echo $BIZBOOK['DB-INVOICE-P-TAG']; ?></p>
                                     <table class="table table-hover">
                                         <tbody>
                                         <tr>
-                                            <td><?php echo $Zitiziti['USER']; ?></td>
+                                            <td><?php echo $BIZBOOK['USER']; ?></td>
                                             <td>:</td>
                                             <td><?php echo $user_details_row['user_contact_name']; ?></td>
                                         </tr>
                                         <tr>
-                                            <td><?php echo $Zitiziti['DB-INVOICE-PLAN-TYPE']; ?></td>
+                                            <td><?php echo $BIZBOOK['DB-INVOICE-PLAN-TYPE']; ?></td>
                                             <td>:</td>
                                             <td><?php echo $transaction_user_plan_type['plan_type_name'] . ' ' . 'Plan'; ?></td>
                                         </tr>
                                         <tr>
-                                            <td><?php echo $Zitiziti['DB-INVOICE-AMOUNT-PAID'];?></td>
+                                            <td><?php echo $BIZBOOK['DB-INVOICE-AMOUNT-PAID'];?></td>
                                             <td>:</td>
                                             <td><?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?><?php echo '' . $transaction_details_row['transaction_amount']; ?><?php if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?></td>
                                         </tr>
                                         <tr>
-                                            <td><?php echo $Zitiziti['EMAIL_ID']; ?></td>
+                                            <td><?php echo $BIZBOOK['EMAIL_ID']; ?></td>
                                             <td>:</td>
                                             <td><?php echo $user_details_row['user_contact_email']; ?></td>
                                         </tr>
                                         <tr>
-                                            <td><?php echo $Zitiziti['DB-INVOICE-PAYMENT-TYPE']; ?></td>
+                                            <td><?php echo $BIZBOOK['DB-INVOICE-PAYMENT-TYPE']; ?></td>
                                             <td>:</td>
-                                            <td><?php echo $Zitiziti['CASH_ON_DELIVERY'];?></td>
+                                            <td><?php echo $BIZBOOK['CASH_ON_DELIVERY'];?></td>
                                         </tr>
                                         <tr>
-                                            <td><?php echo $Zitiziti['PROFILE'];?></td>
+                                            <td><?php echo $BIZBOOK['PROFILE'];?></td>
                                             <td>:</td>
                                             <td><?php echo $PROFILE_URL . urlModifier($user_details_row['user_slug']); ?></td>
                                         </tr>
                                         <tr>
-                                            <td><?php echo $Zitiziti['ADDRESS'];?></td>
+                                            <td><?php echo $BIZBOOK['ADDRESS'];?></td>
                                             <td>:</td>
                                             <td><?php echo $user_details_row['user_address']; ?></td>
                                         </tr>
@@ -79,15 +79,15 @@ $user_details_row = getUser($_SESSION['user_id']);
                                     </table>
                                 </div>
                                 <div class="but">
-                                    <p><?php echo $Zitiziti['DB-INVOICE-P-TAG-BOTTOM']; ?></p>
+                                    <p><?php echo $BIZBOOK['DB-INVOICE-P-TAG-BOTTOM']; ?></p>
                                 </div>
                                 <div class="foot">
-                                    <p><?php echo $Zitiziti['DB-INVOICE-FOOT-BOTTOM']; ?> <?php echo $footer_row['website_address']; ?></p>
+                                    <p><?php echo $BIZBOOK['DB-INVOICE-FOOT-BOTTOM']; ?> <?php echo $footer_row['website_address']; ?></p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button class="btn-mpdf" id="downloadPDF"><?php echo $Zitiziti['DB-INVOICE-CLICK-TO-DOWNLOAD-PDF']; ?></button>
+                    <button class="btn-mpdf" id="downloadPDF"><?php echo $BIZBOOK['DB-INVOICE-CLICK-TO-DOWNLOAD-PDF']; ?></button>
 
                 </div>
             </div>

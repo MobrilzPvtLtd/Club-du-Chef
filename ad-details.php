@@ -15,17 +15,17 @@ if (file_exists('config/user_authentication.php')) {
         <div class="row">
             <div class="login-main add-list ad-table">
                 <div class="log-bor">&nbsp;</div>
-                <span class="steps"><?php echo $Zitiziti['AD-DETAILS']; ?></span>
+                <span class="steps"><?php echo $BIZBOOK['AD-DETAILS']; ?></span>
                 <div class="ad-table-inn ud-cen-s2">
                     <table class="responsive-table bordered">
                         <thead>
                         <tr>
-                            <th><?php echo $Zitiziti['S_NO']; ?></th>
-                            <th><?php echo $Zitiziti['AD-DETAILS-ADS-NAME']; ?></th>
-                            <th><?php echo $Zitiziti['AD-DETAILS-ADS-PREVIEW']; ?></th>
-                            <th><?php echo $Zitiziti['AD-DETAILS-ADS-SIZE']; ?></th>
-                            <th><?php echo $Zitiziti['AD-DETAILS-COST-DAY']; ?></th>
-                            <th><?php echo $Zitiziti['AD-DETAILS-START-ADS']; ?></th>
+                            <th><?php echo $BIZBOOK['S_NO']; ?></th>
+                            <th><?php echo $BIZBOOK['AD-DETAILS-ADS-NAME']; ?></th>
+                            <th><?php echo $BIZBOOK['AD-DETAILS-ADS-PREVIEW']; ?></th>
+                            <th><?php echo $BIZBOOK['AD-DETAILS-ADS-SIZE']; ?></th>
+                            <th><?php echo $BIZBOOK['AD-DETAILS-COST-DAY']; ?></th>
+                            <th><?php echo $BIZBOOK['AD-DETAILS-START-ADS']; ?></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -44,7 +44,7 @@ if (file_exists('config/user_authentication.php')) {
                                 </td>
                                 <td><?php echo $row['ad_price_size']; ?></td>
                                 <td><?php echo $row['ad_price_cost']; ?><?php echo $footer_row['currency_symbol']; ?></td>
-                                <td><a href="post-your-ads" class="db-list-rat"><?php echo $Zitiziti['AD-DETAILS-POST-YOUR-ADS']; ?></a></td>
+                                <td><a href="post-your-ads" class="db-list-rat"><?php echo $BIZBOOK['AD-DETAILS-POST-YOUR-ADS']; ?></a></td>
                             </tr>
                             <?php
                             $si++;

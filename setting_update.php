@@ -125,7 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 header('Location: logout');
                 exit;
             }else{
-                $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+                $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
                 header('Location: db-setting');
                 exit;
@@ -144,7 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if ($sql) {
 
-                $_SESSION['status_msg'] = $Zitiziti['USER_SETTING_UPDATE_SUCCESS_MESSAGE'];
+                $_SESSION['status_msg'] = $BIZBOOK['USER_SETTING_UPDATE_SUCCESS_MESSAGE'];
 
 
                 header('Location: db-setting');
@@ -152,7 +152,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             } else {
 
-                $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+                $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
                 header('Location: db-setting');
                 exit;
@@ -162,7 +162,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } else {
 
-    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+    $_SESSION['status_msg'] = $BIZBOOK['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: db-setting');
     exit;

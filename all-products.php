@@ -204,7 +204,7 @@ if (!empty($w)) {
     <div class="all-listing all-jobs">
         <!--FILTER ON MOBILE VIEW-->
         <div class="fil-mob fil-mob-act mt-2">
-            <h4><?php echo $Zitiziti['ALL-PRODUCTS-PRODUCT-FILTERS']; ?> <i class="material-icons">filter_list</i></h4>
+            <h4><?php echo $BIZBOOK['ALL-PRODUCTS-PRODUCT-FILTERS']; ?> <i class="material-icons">filter_list</i></h4>
         </div>
         <div class="container">
             <div class="row">
@@ -221,14 +221,14 @@ if (!empty($w)) {
                                         <?php
                                     } else {
                                         ?>
-                                        <h1><?php echo $Zitiziti['ALL_CATEGORIES']; ?></h1>
+                                        <h1><?php echo $BIZBOOK['ALL_CATEGORIES']; ?></h1>
                                         <?php
                                     }
                                     ?>
                                     <ul>
-                                        <li><a href="/"><?php echo $Zitiziti['HOME']; ?></a></li>
+                                        <li><a href="/"><?php echo $BIZBOOK['HOME']; ?></a></li>
                                         <li>
-                                            <a href="/all-products"><?php echo $Zitiziti['ALL_CATEGORY']; ?></a>
+                                            <a href="/all-products"><?php echo $BIZBOOK['ALL_CATEGORY']; ?></a>
                                         </li>
                                         <?php
                                         if (isset($_GET['category']) && !empty($_REQUEST['category'])) {
@@ -244,11 +244,11 @@ if (!empty($w)) {
                     </div>
                         <!--START-->
                         <div class="filt-com lhs-cate">
-                            <h4><?php echo $Zitiziti['ALL-LISTING-CATEGORIES']; ?></h4>
+                            <h4><?php echo $BIZBOOK['ALL-LISTING-CATEGORIES']; ?></h4>
                             <div class="dropdown">
                                 <select onChange="ProductSubcategoryFilter(this.value);" class="cat_check chosen-select"
                                         name="cat_check" id="cat_check">
-                                    <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
+                                    <option value=""><?php echo $BIZBOOK['SELECT_CATEGORY']; ?></option>
                                     <?php
                                     foreach (getAllActiveProductCategoriesPos() as $categories_row) {
                                         ?>
@@ -267,7 +267,7 @@ if (!empty($w)) {
 
                         <!--START-->
                         <div class="filt-com sub_cat_section pro-fil-sub">
-                            <h4><?php echo $Zitiziti['ALL-LISTING-SUB-CATEGORY']; ?></h4>
+                            <h4><?php echo $BIZBOOK['ALL-LISTING-SUB-CATEGORY']; ?></h4>
                             <ul>
                                 <?php
                                 if (isset($_GET['category']) && !empty($_REQUEST['category'])) {
@@ -303,7 +303,7 @@ if (!empty($w)) {
 
                         <!--START-->
                         <div class="filt-com pro-fil-pri">
-                            <h4><?php echo $Zitiziti['PRICE']; ?></h4>
+                            <h4><?php echo $BIZBOOK['PRICE']; ?></h4>
                             <ul>
                                 <li>
                                     <div class="chbox">
@@ -317,7 +317,7 @@ if (!empty($w)) {
                                                class="price_check"
                                                id="price_check5"/>
                                         <label
-                                                for="price_check5"><?php echo $Zitiziti['ABOVE']; ?> <?php if ($footer_row['currency_symbol_pos'] == 1) {
+                                                for="price_check5"><?php echo $BIZBOOK['ABOVE']; ?> <?php if ($footer_row['currency_symbol_pos'] == 1) {
                                                 echo $footer_row['currency_symbol'];
                                             } ?>1000 <?php if ($footer_row['currency_symbol_pos'] == 2) {
                                                 echo $footer_row['currency_symbol'];
@@ -405,7 +405,7 @@ if (!empty($w)) {
                                                class="price_check"
                                                id="price_check1"/>
                                         <label
-                                                for="price_check1"><?php echo $Zitiziti['BELOW']; ?> <?php if ($footer_row['currency_symbol_pos'] == 1) {
+                                                for="price_check1"><?php echo $BIZBOOK['BELOW']; ?> <?php if ($footer_row['currency_symbol_pos'] == 1) {
                                                 echo $footer_row['currency_symbol'];
                                             } ?>100<?php if ($footer_row['currency_symbol_pos'] == 2) {
                                                 echo $footer_row['currency_symbol'];
@@ -433,7 +433,7 @@ if (!empty($w)) {
                                                class="discount_check"
                                                id="discount_check5"/>
                                         <label
-                                                for="discount_check5"><?php echo $Zitiziti['ABOVE']; ?> 70%</label>
+                                                for="discount_check5"><?php echo $BIZBOOK['ABOVE']; ?> 70%</label>
                                     </div>
                                 </li>
                                 <li>
@@ -493,7 +493,7 @@ if (!empty($w)) {
                                                class="discount_check"
                                                id="discount_check1"/>
                                         <label
-                                                for="discount_check1"><?php echo $Zitiziti['BELOW']; ?> 10%</label>
+                                                for="discount_check1"><?php echo $BIZBOOK['BELOW']; ?> 10%</label>
                                     </div>
                                 </li>
                             </ul>
@@ -510,7 +510,7 @@ if (!empty($w)) {
                                         $ad_enquiry_photo = $get_ad_row['ad_enquiry_photo'];
                                         ?>
                                         <a href="<?php echo stripslashes($get_ad_row['ad_link']); ?>">
-                                            <span><?php echo $Zitiziti['AD']; ?></span>
+                                            <span><?php echo $BIZBOOK['AD']; ?></span>
 
                                             <img
                                                     src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
@@ -587,7 +587,7 @@ if (!empty($w)) {
                             if (in_array(10000, $price_new1)) { ?>
                                 <span class="product-filters-span" id="10000"
                                       data-type="price"><?php
-                                    echo $Zitiziti['ABOVE'];
+                                    echo $BIZBOOK['ABOVE'];
                                     if ($footer_row['currency_symbol_pos'] == 1) {
                                         echo $footer_row['currency_symbol'];
                                     } ?>1000 <?php if ($footer_row['currency_symbol_pos'] == 2) {
@@ -647,7 +647,7 @@ if (!empty($w)) {
 
                                 <span class="product-filters-span" id="below-100"
                                 data-type="price"><?php
-                                echo $Zitiziti['BELOW']; ?> <?php if ($footer_row['currency_symbol_pos'] == 1) {
+                                echo $BIZBOOK['BELOW']; ?> <?php if ($footer_row['currency_symbol_pos'] == 1) {
                                     echo $footer_row['currency_symbol'];
                                 } ?>100<?php if ($footer_row['currency_symbol_pos'] == 2) {
                                     echo $footer_row['currency_symbol'];
@@ -663,7 +663,7 @@ if (!empty($w)) {
 
                             if (in_array(130, $discount_new1)) { ?>
                                 <span class="product-filters-span" id="130"
-                                      data-type="discount"><?php echo $Zitiziti['ABOVE']; ?> 70%</span>
+                                      data-type="discount"><?php echo $BIZBOOK['ABOVE']; ?> 70%</span>
                             <?php }
 
                             $discount_new1 = explode(',', $discount_check);
@@ -687,7 +687,7 @@ if (!empty($w)) {
                             $discount_new1 = explode(',', $discount_check);
                             if (in_array(10, $discount_new1)) { ?>
                                 <span class="product-filters-span" id="10"
-                                data-type="discount"><?php echo $Zitiziti['BELOW']; ?> 10%</span>
+                                data-type="discount"><?php echo $BIZBOOK['BELOW']; ?> 10%</span>
                         <?php }
                         } ?>
 
@@ -748,7 +748,7 @@ if (!empty($w)) {
     /* background: #525252; */
     text-shadow: 0px 0px 2px #fff;
     text-transform: uppercase;
-    margin-top: 5%;"><?php echo $Zitiziti['PRODUCTS_NO_PRODUCTS_MESSAGE']; ?></span>
+    margin-top: 5%;"><?php echo $BIZBOOK['PRODUCTS_NO_PRODUCTS_MESSAGE']; ?></span>
                                 <?php
                             }
                             ?>

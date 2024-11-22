@@ -17,23 +17,23 @@ include "dashboard_left_pane.php";
    <div class="ud-main-inn ud-no-rhs">
     <div class="ud-cen">
         <div class="log-bor">&nbsp;</div>
-        <span class="udb-inst"><?php echo $Zitiziti['LEADS']; ?></span>
+        <span class="udb-inst"><?php echo $BIZBOOK['LEADS']; ?></span>
         <?php include('config/user_activation_checker.php'); ?>
         <div class="ud-cen-s2">
-            <h2><?php echo $Zitiziti['ENQUIRY_DETAILS']; ?></h2>
+            <h2><?php echo $BIZBOOK['ENQUIRY_DETAILS']; ?></h2>
             <?php include "page_level_message.php"; ?>
             <table class="responsive-table bordered">
                 <thead>
                 <tr>
-                    <th><?php echo $Zitiziti['S_NO']; ?></th>
-                    <th><?php echo $Zitiziti['NAME']; ?></th>
-                    <th><?php echo $Zitiziti['EMAIL']; ?></th>
-                    <th><?php echo $Zitiziti['PHONE']; ?></th>
-                    <th><?php echo $Zitiziti['MESSAGE']; ?></th>
-                    <th><?php echo $Zitiziti['PAGE_NAME']; ?></th>
-                    <th><?php echo $Zitiziti['TRACKING_ID']; ?></th>
-                    <th><?php echo $Zitiziti['URL']; ?></th>
-                    <th><?php echo $Zitiziti['DELETE']; ?></th>
+                    <th><?php echo $BIZBOOK['S_NO']; ?></th>
+                    <th><?php echo $BIZBOOK['NAME']; ?></th>
+                    <th><?php echo $BIZBOOK['EMAIL']; ?></th>
+                    <th><?php echo $BIZBOOK['PHONE']; ?></th>
+                    <th><?php echo $BIZBOOK['MESSAGE']; ?></th>
+                    <th><?php echo $BIZBOOK['PAGE_NAME']; ?></th>
+                    <th><?php echo $BIZBOOK['TRACKING_ID']; ?></th>
+                    <th><?php echo $BIZBOOK['URL']; ?></th>
+                    <th><?php echo $BIZBOOK['DELETE']; ?></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -77,7 +77,7 @@ include "dashboard_left_pane.php";
                             ?></td>
                         <td><?php echo $enquiries_row['enquiry_source']; ?></td>
                         <td><?php echo $LISTING_URL . urlModifier($listing_enquiry_row['listing_slug'])."?src=".$enquiries_row['enquiry_source']; ?></td>
-                        <td><a href="enquiry_trash.php?messageenquirymessageenquirymessageenquirymessageenquiry=<?php echo $enquiries_row['enquiry_id']; ?>" class="db-list-edit"><?php echo $Zitiziti['DELETE']; ?></a></td>
+                        <td><a href="enquiry_trash.php?messageenquirymessageenquirymessageenquirymessageenquiry=<?php echo $enquiries_row['enquiry_id']; ?>" class="db-list-edit"><?php echo $BIZBOOK['DELETE']; ?></a></td>
                     </tr>
                     <?php
                     $si++;

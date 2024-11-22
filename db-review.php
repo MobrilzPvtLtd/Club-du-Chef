@@ -16,26 +16,26 @@ include "dashboard_left_pane.php";
    <div class="ud-main-inn ud-no-rhs">
     <div class="ud-cen">
         <div class="log-bor">&nbsp;</div>
-        <span class="udb-inst"><?php echo $Zitiziti['REVIEWS']; ?></span>
+        <span class="udb-inst"><?php echo $BIZBOOK['REVIEWS']; ?></span>
         <?php include('config/user_activation_checker.php'); ?>
         <div class="ud-cen-s2">
-            <h2><?php echo $Zitiziti['ALL_LISTING']; ?> - <?php if ($user_details_row['user_type'] == "General") {
-                    echo $Zitiziti['SENT'];
+            <h2><?php echo $BIZBOOK['ALL_LISTING']; ?> - <?php if ($user_details_row['user_type'] == "General") {
+                    echo $BIZBOOK['SENT'];
                 } else {
-                    echo $Zitiziti['RECEIVED'];
-                } ?> <?php echo $Zitiziti['REVIEW_DETAILS']; ?></h2>
+                    echo $BIZBOOK['RECEIVED'];
+                } ?> <?php echo $BIZBOOK['REVIEW_DETAILS']; ?></h2>
             <?php include "page_level_message.php"; ?>
             <ul class="nav nav-tabs">
                 <?php if ($user_details_row['user_type'] == "Service provider") { ?>
                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab"
-                           href="#received"><?php echo $Zitiziti['ALL_RECEIVED_REVIEWS']; ?></a>
+                           href="#received"><?php echo $BIZBOOK['ALL_RECEIVED_REVIEWS']; ?></a>
                     </li>
                 <?php } ?>
                 <li class="nav-item">
                     <a class="nav-link <?php if ($user_details_row['user_type'] == "General") {
                         echo "active";
-                    } ?>" data-toggle="tab" href="#sent"><?php echo $Zitiziti['ALL_SENT_REVIEWS']; ?></a>
+                    } ?>" data-toggle="tab" href="#sent"><?php echo $BIZBOOK['ALL_SENT_REVIEWS']; ?></a>
                 </li>
 
             </ul>
@@ -47,15 +47,15 @@ include "dashboard_left_pane.php";
                         <table class="responsive-table bordered">
                             <thead>
                             <tr>
-                                <th><?php echo $Zitiziti['S_NO']; ?></th>
-                                <th><?php echo $Zitiziti['LISTING_NAME']; ?></th>
-                                <th><?php echo $Zitiziti['USER']; ?></th>
-                                <th><?php echo $Zitiziti['EMAIL']; ?></th>
-                                <th><?php echo $Zitiziti['PHONE']; ?></th>
-                                <th><?php echo $Zitiziti['CITY']; ?></th>
-                                <th><?php echo $Zitiziti['RATINGS']; ?></th>
-                                <th><?php echo $Zitiziti['MESSAGE']; ?></th>
-                                <th><?php echo $Zitiziti['DELETE']; ?></th>
+                                <th><?php echo $BIZBOOK['S_NO']; ?></th>
+                                <th><?php echo $BIZBOOK['LISTING_NAME']; ?></th>
+                                <th><?php echo $BIZBOOK['USER']; ?></th>
+                                <th><?php echo $BIZBOOK['EMAIL']; ?></th>
+                                <th><?php echo $BIZBOOK['PHONE']; ?></th>
+                                <th><?php echo $BIZBOOK['CITY']; ?></th>
+                                <th><?php echo $BIZBOOK['RATINGS']; ?></th>
+                                <th><?php echo $BIZBOOK['MESSAGE']; ?></th>
+                                <th><?php echo $BIZBOOK['DELETE']; ?></th>
                             </tr>
                             </thead>
                             <tbody>
@@ -96,7 +96,7 @@ include "dashboard_left_pane.php";
 
                                     <td>
                                         <a href="review_trash?way=1&&reviewreviewreviewreviewreviewreview=<?php echo $rreviewsqlrow['review_id']; ?>"><span
-                                                class="db-list-edit"><?php echo $Zitiziti['DELETE']; ?></span> </a></td>
+                                                class="db-list-edit"><?php echo $BIZBOOK['DELETE']; ?></span> </a></td>
 
                                 </tr>
                                 <?php
@@ -114,15 +114,15 @@ include "dashboard_left_pane.php";
                     <table class="responsive-table bordered">
                         <thead>
                         <tr>
-                            <th><?php echo $Zitiziti['S_NO']; ?></th>
-                            <th><?php echo $Zitiziti['LISTING_NAME']; ?></th>
-                            <th><?php echo $Zitiziti['USER']; ?></th>
-                            <th><?php echo $Zitiziti['EMAIL']; ?></th>
-                            <th><?php echo $Zitiziti['PHONE']; ?></th>
-                            <th><?php echo $Zitiziti['CITY']; ?></th>
-                            <th><?php echo $Zitiziti['RATINGS']; ?></th>
-                            <th><?php echo $Zitiziti['MESSAGE']; ?></th>
-                            <th><?php echo $Zitiziti['DELETE']; ?></th>
+                            <th><?php echo $BIZBOOK['S_NO']; ?></th>
+                            <th><?php echo $BIZBOOK['LISTING_NAME']; ?></th>
+                            <th><?php echo $BIZBOOK['USER']; ?></th>
+                            <th><?php echo $BIZBOOK['EMAIL']; ?></th>
+                            <th><?php echo $BIZBOOK['PHONE']; ?></th>
+                            <th><?php echo $BIZBOOK['CITY']; ?></th>
+                            <th><?php echo $BIZBOOK['RATINGS']; ?></th>
+                            <th><?php echo $BIZBOOK['MESSAGE']; ?></th>
+                            <th><?php echo $BIZBOOK['DELETE']; ?></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -163,7 +163,7 @@ include "dashboard_left_pane.php";
 
                                 <td>
                                     <a href="review_trash?way=1&&reviewreviewreviewreviewreviewreview=<?php echo $rreviewsqlrow['review_id']; ?>"><span
-                                            class="db-list-edit"><?php echo $Zitiziti['DELETE']; ?></span> </a></td>
+                                            class="db-list-edit"><?php echo $BIZBOOK['DELETE']; ?></span> </a></td>
 
                             </tr>
                             <?php

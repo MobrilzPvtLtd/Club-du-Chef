@@ -97,7 +97,7 @@ if ($check == '0' || empty($check)) { // if new user . Insert a new record
 //****************************    Admin email starts    *************************
 
         $to = $admin_email;
-        $USER_INSERT_ADMIN_SUBJECT = $Zitiziti['USER_INSERT_ADMIN_SUBJECT'];
+        $USER_INSERT_ADMIN_SUBJECT = $BIZBOOK['USER_INSERT_ADMIN_SUBJECT'];
         $subject = "$admin_site_name $USER_INSERT_ADMIN_SUBJECT";
 
         $admin_sql_fetch = mysqli_query($conn,"SELECT * FROM " . TBL . "mail  WHERE mail_id = 2 "); //Admin mail template fetch
@@ -123,7 +123,7 @@ if ($check == '0' || empty($check)) { // if new user . Insert a new record
 //****************************    Client email starts    *************************
 
         $to1 = $fbemail;
-        $USER_INSERT_CLIENT_SUBJECT = $Zitiziti['USER_INSERT_CLIENT_SUBJECT'];
+        $USER_INSERT_CLIENT_SUBJECT = $BIZBOOK['USER_INSERT_CLIENT_SUBJECT'];
         $subject1 = "$admin_site_name $USER_INSERT_CLIENT_SUBJECT";
 
         $client_sql_fetch = mysqli_query($conn,"SELECT * FROM " . TBL . "mail  WHERE mail_id = 1 "); //User mail template fetch

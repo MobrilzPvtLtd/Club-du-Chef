@@ -125,7 +125,7 @@ if($isValidChecksum == "TRUE") {
 
                 $lisupres23 = mysqli_query($conn, $lisupqry23);
 
-                $_SESSION['status_msg'] = $Zitiziti['PAYTM_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'];
+                $_SESSION['status_msg'] = $BIZBOOK['PAYTM_PAY_SUCCESSFULL_USER_POINT_UPGRADE_SUCESS'];
 
                 header('Location: db-point-history');
 
@@ -138,7 +138,7 @@ if($isValidChecksum == "TRUE") {
     }
     else {
 
-        $_SESSION['status_msg'] = $Zitiziti['PAYTM_POINT_PAYMENT_FAILURE_MESSAGE'];
+        $_SESSION['status_msg'] = $BIZBOOK['PAYTM_POINT_PAYMENT_FAILURE_MESSAGE'];
 
         header('Location: buy-points');
         exit;
@@ -156,7 +156,7 @@ if($isValidChecksum == "TRUE") {
 }
 else {
 
-    $_SESSION['status_msg'] = $Zitiziti['PAYTM_POINT_PAYMENT_FAILURE_MESSAGE'];
+    $_SESSION['status_msg'] = $BIZBOOK['PAYTM_POINT_PAYMENT_FAILURE_MESSAGE'];
 
     header('Location: buy-points');
     exit;

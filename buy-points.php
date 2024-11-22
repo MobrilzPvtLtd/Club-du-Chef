@@ -18,7 +18,7 @@ delBuyPoints();
         <div class="row">
             <div class="login-main add-list  buy-poin">
                 <div class="log-bor">&nbsp;</div>
-                <span class="steps"><?php echo $Zitiziti['BUY_POINTS']; ?></span>
+                <span class="steps"><?php echo $BIZBOOK['BUY_POINTS']; ?></span>
                 <div class="log">
                     <div class="login">
                         <h4>Hi, <?php echo $user_details_row['first_name']; ?>!!!</h4>
@@ -32,7 +32,7 @@ delBuyPoints();
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <p class="notes"><?php echo $Zitiziti['BUY-POINTS-EXISTING-POINTS-LABEL']; ?> <?php echo $user_details_row['user_points']; ?> | <?php echo $Zitiziti['BUY-POINTS-COST-1-POINT']; ?> <?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?><?php echo $footer_row['cost_per_point']; ?><?php if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?></p>
+                                        <p class="notes"><?php echo $BIZBOOK['BUY-POINTS-EXISTING-POINTS-LABEL']; ?> <?php echo $user_details_row['user_points']; ?> | <?php echo $BIZBOOK['BUY-POINTS-COST-1-POINT']; ?> <?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?><?php echo $footer_row['cost_per_point']; ?><?php if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -42,7 +42,7 @@ delBuyPoints();
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label><?php echo $Zitiziti['BUY-POINTS-PLEASE-ENTER-POINT']; ?></label>
+                                        <label><?php echo $BIZBOOK['BUY-POINTS-PLEASE-ENTER-POINT']; ?></label>
                                         <input id="new_points" name="new_points" autocomplete="off" required="required" min="1" type="text" onkeypress="return isNumber(event)" class="form-control">
                                     </div>
                                 </div>
@@ -52,14 +52,14 @@ delBuyPoints();
                                 <div class="col-md-12">
 
                                     <div class="form-group">
-                                        <h5><?php echo $Zitiziti['BUY-POINTS-PAYMENT-MODE']; ?></h5>
+                                        <h5><?php echo $BIZBOOK['BUY-POINTS-PAYMENT-MODE']; ?></h5>
                                         <?php
                                         if ($footer_row['admin_paypal_status'] == "Active") {
                                             ?>
                                             <div class="radi-v4">
                                                 <input type="radio" id="paymentpaypal" value="1"
                                                        name="payment" checked='checked'>
-                                                <label for="paymentpaypal"><?php echo $Zitiziti['PAYPAL']; ?></label>
+                                                <label for="paymentpaypal"><?php echo $BIZBOOK['PAYPAL']; ?></label>
                                             </div>
                                             <?php
                                         }
@@ -70,7 +70,7 @@ delBuyPoints();
                                             <div class="radi-v4">
                                                 <input type="radio" id="paymentstripe" value="2"
                                                        name="payment" >
-                                                <label for="paymentstripe"><?php echo $Zitiziti['STRIPE']; ?></label>
+                                                <label for="paymentstripe"><?php echo $BIZBOOK['STRIPE']; ?></label>
                                             </div>
                                             <?php
                                         }
@@ -81,7 +81,7 @@ delBuyPoints();
                                             <div class="radi-v4">
                                                 <input type="radio" id="payment_razor_pay" value="3"
                                                        name="payment" >
-                                                <label for="payment_razor_pay"><?php echo $Zitiziti['RAZOR_PAY']; ?></label>
+                                                <label for="payment_razor_pay"><?php echo $BIZBOOK['RAZOR_PAY']; ?></label>
                                             </div>
                                             <?php
                                         }
@@ -92,7 +92,7 @@ delBuyPoints();
                                             <div class="radi-v4">
                                                 <input type="radio" id="payment_paytm" value="4"
                                                        name="payment" >
-                                                <label for="payment_paytm"><?php echo $Zitiziti['PAYTM']; ?></label>
+                                                <label for="payment_paytm"><?php echo $BIZBOOK['PAYTM']; ?></label>
                                             </div>
                                             <?php
                                         }
@@ -103,7 +103,7 @@ delBuyPoints();
 
                             </div>
 
-                            <button type="submit" id="buy_points_submit" name="buy_points_submit" class="btn btn-primary"><?php echo $Zitiziti['PAY_NOW']; ?></button>
+                            <button type="submit" id="buy_points_submit" name="buy_points_submit" class="btn btn-primary"><?php echo $BIZBOOK['PAY_NOW']; ?></button>
                         </form>
                     </div>
                 </div>

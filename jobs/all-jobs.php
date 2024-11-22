@@ -243,19 +243,19 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                     <!--- START --->
                     <div class="filt-com">
                         <div class="job-alert">
-                            <h5><?php echo $Zitiziti['JOB-PROFILE-H1']; ?></h5>
-                            <p><?php echo $Zitiziti['JOB-PROFILE-P']; ?></p>
-                            <a href="<?php echo $slash; ?>login"><?php echo $Zitiziti['JOB-PROFILE-A']; ?></a>
+                            <h5><?php echo $BIZBOOK['JOB-PROFILE-H1']; ?></h5>
+                            <p><?php echo $BIZBOOK['JOB-PROFILE-P']; ?></p>
+                            <a href="<?php echo $slash; ?>login"><?php echo $BIZBOOK['JOB-PROFILE-A']; ?></a>
                         </div>
                     </div>
                     <!--- END --->
                     <!--- START --->
                     <div class="filt-com lhs-cate">
-                        <h4><?php echo $Zitiziti['ALL-LISTING-CATEGORIES']; ?></h4>
+                        <h4><?php echo $BIZBOOK['ALL-LISTING-CATEGORIES']; ?></h4>
                         <div class="form-group">
                             <select onChange="jobSubcategoryFilter(this.value);"
                                     name="cat_check" id="cat_check" class="cat_check chosen-select ">
-                                <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
+                                <option value=""><?php echo $BIZBOOK['SELECT_CATEGORY']; ?></option>
                                 <?php
                                 foreach (getAllActiveJobCategoriesPos() as $categories_row) {
                                     ?>
@@ -272,7 +272,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                     <!--- END --->
                     <!--- START --->
                     <div class="sub_cat_section filt-com lhs-sub">
-                        <h4><?php echo $Zitiziti['ALL-LISTING-SUB-CATEGORY']; ?></h4>
+                        <h4><?php echo $BIZBOOK['ALL-LISTING-SUB-CATEGORY']; ?></h4>
                         <ul>
                             <?php
                             if (isset($_GET['category'])) {
@@ -308,7 +308,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
 
                     <!--- START --->
                     <div class="filt-com lhs-sub">
-                        <h4><?php echo $Zitiziti['JOB-TYPE-LABEL']; ?></h4>
+                        <h4><?php echo $BIZBOOK['JOB-TYPE-LABEL']; ?></h4>
                         <ul>
                             <li>
                                 <div class="chbox">
@@ -317,7 +317,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                     if (in_array('permanent', $get_job_type_check_new)) {
                                         echo 'checked';
                                     } ?> value="permanent" class="job_type" id="j1">
-                                    <label for="j1"><?php echo $Zitiziti['JOB-PERMANENT']; ?></label>
+                                    <label for="j1"><?php echo $BIZBOOK['JOB-PERMANENT']; ?></label>
                                 </div>
                             </li>
                             <li>
@@ -327,7 +327,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                     if (in_array('contract', $get_job_type_check_new)) {
                                         echo 'checked';
                                     } ?> value="contract" class="job_type" id="j2">
-                                    <label for="j2"><?php echo $Zitiziti['JOB-CONTRACT']; ?></label>
+                                    <label for="j2"><?php echo $BIZBOOK['JOB-CONTRACT']; ?></label>
                                 </div>
                             </li>
                             <li>
@@ -337,7 +337,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                     if (in_array('part-time', $get_job_type_check_new)) {
                                         echo 'checked';
                                     } ?> value="part-time" class="job_type" id="j3">
-                                    <label for="j3"><?php echo $Zitiziti['JOB-PART-TIME']; ?></label>
+                                    <label for="j3"><?php echo $BIZBOOK['JOB-PART-TIME']; ?></label>
                                 </div>
                             </li>
                             <li>
@@ -347,7 +347,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                     if (in_array('freelance', $get_job_type_check_new)) {
                                         echo 'checked';
                                     } ?> value="freelance" class="job_type" id="j4">
-                                    <label for="j4"><?php echo $Zitiziti['JOB-FREELANCE']; ?></label>
+                                    <label for="j4"><?php echo $BIZBOOK['JOB-FREELANCE']; ?></label>
                                 </div>
                             </li>
                         </ul>
@@ -355,7 +355,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                     <!--- END --->
                     <!--- START --->
                     <div class="filt-com lhs-sub">
-                        <h4><?php echo $Zitiziti['JOB-LOCATION-LABEL']; ?></h4>
+                        <h4><?php echo $BIZBOOK['JOB-LOCATION-LABEL']; ?></h4>
                         <ul>
                             <?php
                             $job_location_qry = getAllJobGroupByCity();
@@ -390,7 +390,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                     <!--- END --->
                     <!--- START --->
                     <div class="filt-com lhs-sub">
-                        <h4><?php echo $Zitiziti['JOB-SALARY-LABEL']; ?></h4>
+                        <h4><?php echo $BIZBOOK['JOB-SALARY-LABEL']; ?></h4>
                         <ul>
                             <li>
                                 <div class="chbox">
@@ -447,7 +447,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                     $ad_enquiry_photo = $get_ad_row['ad_enquiry_photo'];
                                     ?>
                                     <a href="<?php echo stripslashes($get_ad_row['ad_link']); ?>">
-                                        <span><?php echo $Zitiziti['AD']; ?></span>
+                                        <span><?php echo $BIZBOOK['AD']; ?></span>
 
                                         <img
                                                 src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
@@ -473,8 +473,8 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
 
                     <!--RESULTS SELECTED FILTER-->
                     <div class="listng-res">
-                        <div class="count_no"><?php echo $Zitiziti['JOB-SHOWING']; ?>
-                            <span><?php echo AddingZero_BeforeNumber($total_jobs); ?></span> <?php echo $Zitiziti['JOBS_BRACKET']; ?>
+                        <div class="count_no"><?php echo $BIZBOOK['JOB-SHOWING']; ?>
+                            <span><?php echo AddingZero_BeforeNumber($total_jobs); ?></span> <?php echo $BIZBOOK['JOBS_BRACKET']; ?>
                         </div>
                         <div class="list-res-selt">
                             <!-- //Filter Category name   -->
@@ -514,25 +514,25 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                 $get_job_type_check_new = explode(',', $get_job_type);
                                 if (in_array('permanent', $get_job_type_check_new)) { ?>
                                     <span class="job-filters" id="<?php echo 'permanent'; ?>" data-type="job_type"><?php
-                                        echo $Zitiziti['JOB-PERMANENT']; ?></span>
+                                        echo $BIZBOOK['JOB-PERMANENT']; ?></span>
                                 <?php } ?>
                                 <?php
                                 $get_job_type_check_new = explode(',', $get_job_type);
                                 if (in_array('contract', $get_job_type_check_new)) { ?>
                                     <span class="job-filters" id="<?php echo 'contract'; ?>" data-type="job_type"><?php
-                                        echo $Zitiziti['JOB-CONTRACT']; ?></span>
+                                        echo $BIZBOOK['JOB-CONTRACT']; ?></span>
                                 <?php } ?>
                                 <?php
                                 $get_job_type_check_new = explode(',', $get_job_type);
                                 if (in_array('part-time', $get_job_type_check_new)) { ?>
                                     <span class="job-filters" id="<?php echo 'part-time'; ?>" data-type="job_type"><?php
-                                        echo $Zitiziti['JOB-PART-TIME']; ?></span>
+                                        echo $BIZBOOK['JOB-PART-TIME']; ?></span>
                                 <?php } ?>
                                 <?php
                                 $get_job_type_check_new = explode(',', $get_job_type);
                                 if (in_array('freelance', $get_job_type_check_new)) { ?>
                                     <span class="job-filters" id="<?php echo 'freelance'; ?>" data-type="job_type"><?php
-                                        echo $Zitiziti['JOB-FREELANCE']; ?></span>
+                                        echo $BIZBOOK['JOB-FREELANCE']; ?></span>
                                 <?php }
                             } ?>
 
@@ -616,7 +616,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                                 <span
                                                         class="day"><?php echo time_elapsed_string($jobrow['job_cdt']); ?></span>
                                                 <span
-                                                        class="apl"><?php echo $total_count_jobs_applied; ?><?php echo $Zitiziti['APPLICANTS']; ?></span>
+                                                        class="apl"><?php echo $total_count_jobs_applied; ?><?php echo $BIZBOOK['APPLICANTS']; ?></span>
                                             </div>
                                             <div class="job-box-con">
                                                 <h4><?php echo $jobrow['job_title']; ?></h4>
@@ -624,20 +624,20 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                                 <span><?php
                                                     $job_type = $jobrow['job_type'];
                                                     if ($job_type == 1) {
-                                                        echo $Zitiziti['JOB-PERMANENT'];
+                                                        echo $BIZBOOK['JOB-PERMANENT'];
                                                     } elseif ($job_type == 2) {
-                                                        echo $Zitiziti['JOB-CONTRACT'];
+                                                        echo $BIZBOOK['JOB-CONTRACT'];
                                                     } elseif ($job_type == 3) {
-                                                        echo $Zitiziti['JOB-PART-TIME'];
+                                                        echo $BIZBOOK['JOB-PART-TIME'];
                                                     } elseif ($job_type == 4) {
-                                                        echo $Zitiziti['JOB-FREELANCE'];
+                                                        echo $BIZBOOK['JOB-FREELANCE'];
                                                     }
                                                     ?></span>
-                                                <span><?php echo AddingZero_BeforeNumber($jobrow['no_of_openings']); ?><?php echo $Zitiziti['JOB_OPENINGS']; ?></span>
+                                                <span><?php echo AddingZero_BeforeNumber($jobrow['no_of_openings']); ?><?php echo $BIZBOOK['JOB_OPENINGS']; ?></span>
                                             </div>
                                             <div class="job-box-apl">
-                                                <span class="job-box-cta"><?php echo $Zitiziti['JOB_APPLY_NOW']; ?></span>
-                                                <span><?php echo $Zitiziti['JOB_MORE_DETAILS']; ?></span>
+                                                <span class="job-box-cta"><?php echo $BIZBOOK['JOB_APPLY_NOW']; ?></span>
+                                                <span><?php echo $BIZBOOK['JOB_MORE_DETAILS']; ?></span>
                                             </div>
                                             <a href="<?php echo $JOB_URL . urlModifier($jobrow['job_slug']); ?>"
                                                class="job-full-cta"></a>
@@ -658,7 +658,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
     text-shadow: 0px 0px 2px #fff;
     text-transform: uppercase;
     text-align: center!important;
-    margin-top: 5%;"><?php echo $Zitiziti['JOBS_NO_JOBS_MESSAGE']; ?></span>
+    margin-top: 5%;"><?php echo $BIZBOOK['JOBS_NO_JOBS_MESSAGE']; ?></span>
                         <?php
                     }
                     ?>
