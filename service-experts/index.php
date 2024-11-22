@@ -84,7 +84,6 @@ if($footer_row['admin_expert_show'] != 1) {
     }
 </style>
 
-
 <!-- START -->
 <section>
     <div class="all-jobs-ban exp-hom-ban">
@@ -95,67 +94,64 @@ if($footer_row['admin_expert_show'] != 1) {
                     <p><?php echo $Zitiziti['SERVICE-EXPERT-FIND-SERVICE-EXPERT-P']; ?></p>
                 </div>
                 <br>
-                
             </div>
             <div class="job-sear">
-                    <form name="expert_filter_form" id="expert_filter_form" class="expert_filter_form">
-                        <ul class="">
-                            <li class="sr-sea">
-                                <select class="chosen-select py-1 rounded-start" id="expert-select-search1" name="expert-select-search">
-                                    <?php
-                                    foreach (getAllActiveExpertCategoriesPos() as $expert_search_categories_row) {
+                <form name="expert_filter_form" id="expert_filter_form" class="expert_filter_form">
+                    <ul class="">
+                        <li class="sr-sea">
+                            <select class="chosen-select py-1 rounded-start" id="expert-select-search1" name="expert-select-search">
+                                <?php
+                                foreach (getAllActiveExpertCategoriesPos() as $expert_search_categories_row) {
 
-                                        $search_category_name = $expert_search_categories_row['category_name'];
+                                    $search_category_name = $expert_search_categories_row['category_name'];
 
-                                        $search_category_slug = $expert_search_categories_row['category_slug'];
-                                        ?>
-                                        <option
-                                            value="<?php echo $search_category_slug; ?>"><?php echo $search_category_name; ?></option>
-                                        <?php
-                                    }
+                                    $search_category_slug = $expert_search_categories_row['category_slug'];
                                     ?>
-                                </select>
-                            </li>
-                            <!-- <li class="sr-loc">
-                                <select class="chosen-select py-1" id="job-select-city" name="serjobsloc">
+                                    <option
+                                        value="<?php echo $search_category_slug; ?>"><?php echo $search_category_name; ?></option>
                                     <?php
-                                    $expert_location_qry = getAllExpertsGroupByCity();
+                                }
+                                ?>
+                            </select>
+                        </li>
+                        <!-- <li class="sr-loc">
+                            <select class="chosen-select py-1" id="job-select-city" name="serjobsloc">
+                                <?php
+                                $expert_location_qry = getAllExpertsGroupByCity();
 
-                                    foreach ($expert_location_qry as $expert_location_row) {
+                                foreach ($expert_location_qry as $expert_location_row) {
 
-                                        $expert_location = $expert_location_row['city_id'];
+                                    $expert_location = $expert_location_row['city_id'];
 
-                                        $expert_city_row = getExpertCity($expert_location);
+                                    $expert_city_row = getExpertCity($expert_location);
 
-                                        ?>
-                                        <option value="<?php echo $expert_city_row['country_id']; ?>"><?php echo $expert_city_row['country_name']; ?></option>
-                                        <?php
-                                    }
                                     ?>
-                                </select>
-                            </li> -->
-                            <li class="sr-btn">
-                                <button id="expert_filter_submit"><i class="material-icons">search</i></button>
-                            </li>
-                        </ul>
-                    </form>
-                </div>
+                                    <option value="<?php echo $expert_city_row['country_id']; ?>"><?php echo $expert_city_row['country_name']; ?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
+                        </li> -->
+                        <li class="sr-btn">
+                            <button id="expert_filter_submit"><i class="material-icons">search</i></button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
 
+            <div class="job-pop-tag">
+                <?php
+                foreach (getAllExpertCategoriesOrderByExpertsTableLimit(5) as $expert_trend_categories_row) {
 
+                    $trend_category_name = $expert_trend_categories_row['category_name'];
 
-                <div class="job-pop-tag">
-                    <?php
-                    foreach (getAllExpertCategoriesOrderByExpertsTableLimit(5) as $expert_trend_categories_row) {
-
-                        $trend_category_name = $expert_trend_categories_row['category_name'];
-
-                        $trend_category_id = $expert_trend_categories_row['category_id'];
-                        ?>
-                        <a href="<?php echo $ALL_EXPERTS_URL . urlModifier($expert_trend_categories_row['category_slug']); ?>"><?php echo $trend_category_name; ?></a>
-                        <?php
-                    }
+                    $trend_category_id = $expert_trend_categories_row['category_id'];
                     ?>
-                </div>
+                    <a href="<?php echo $ALL_EXPERTS_URL . urlModifier($expert_trend_categories_row['category_slug']); ?>"><?php echo $trend_category_name; ?></a>
+                    <?php
+                }
+                ?>
+            </div>
         </div>
     </div>
 </section>
