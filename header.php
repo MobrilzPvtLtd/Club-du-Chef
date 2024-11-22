@@ -424,10 +424,10 @@ foreach (getAllCities() as $city) {
                                         </script>
                                         <select name="city" onchange="ChangeCity(this.value)">
                                             <?php
-                                                if (isset($CityList['All Cities'])) {
-                                                    $allCitiesValue = htmlspecialchars($CityList['All Cities'], ENT_QUOTES, 'UTF-8');
+                                                if (isset($CityList['Ciudades'])) {
+                                                    $allCitiesValue = htmlspecialchars($CityList['Ciudades'], ENT_QUOTES, 'UTF-8');
                                                     $selected = ($DomainPrefix == $allCitiesValue) ? ' selected' : '';
-                                                    echo '<option value="' . $allCitiesValue . '"' . $selected . '>All Cities</option>';
+                                                    echo '<option value="' . $allCitiesValue . '"' . $selected . '>Ciudades</option>';
                                                 }
 
                                                 foreach ($CityList as $City => $CitySlug) {
@@ -741,7 +741,7 @@ foreach (getAllCities() as $city) {
                                         if (!isset($_SESSION['user_name']) && empty($_SESSION['user_name'])) {
                                             ?>
                                              <div class="mv-cate">
-                                            <h4>All Cities</h4>
+                                            <h4>Ciudades</h4>
                                             <ul>
                                                 <li>
                                                     <script>
@@ -762,10 +762,10 @@ foreach (getAllCities() as $city) {
                                                     </script>
                                                     <select name="city" onchange="ChangeCity(this.value)">
                                                         <?php
-                                                if (isset($CityList['All Cities'])) {
-                                                    $allCitiesValue = htmlspecialchars($CityList['All Cities'], ENT_QUOTES, 'UTF-8');
+                                                if (isset($CityList['Ciudades'])) {
+                                                    $allCitiesValue = htmlspecialchars($CityList['Ciudades'], ENT_QUOTES, 'UTF-8');
                                                     $selected = ($DomainPrefix == $allCitiesValue) ? ' selected' : '';
-                                                    echo '<option value="' . $allCitiesValue . '"' . $selected . '>All Cities</option>';
+                                                    echo '<option value="' . $allCitiesValue . '"' . $selected . '>Ciudades</option>';
                                                 }
 
                                                 foreach ($CityList as $City => $CitySlug) {

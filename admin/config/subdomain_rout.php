@@ -30,7 +30,7 @@ if (!$citys) {
   die('Error: ' . mysqli_error($conn));
 }
 
-$CityList['All Cities'] = 'www';
+$CityList['Ciudades'] = 'www';
 foreach ($citys as $city) {
   $CityList[$city['city_name']] = $city['city_slug'];
 }
