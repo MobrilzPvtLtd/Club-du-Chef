@@ -27,10 +27,32 @@ include "header.php";
                                         ?>
                                         <form name="category_form" id="category_form" method="post" action="update_expert_category.php" enctype="multipart/form-data" class="cre-dup-form cre-dup-form-show">
                                             <input type="hidden" class="validate" id="category_id" name="category_id" value="<?php echo $row['category_id']; ?>" required="required">
-                                                <input type="hidden" class="validate" id="category_image_old" name="category_image_old" value="<?php echo $row['category_image']; ?>" required="required">
-
+                                            <input type="hidden" class="validate" id="category_image_old" name="category_image_old" value="<?php echo $row['category_image']; ?>" required="required">
+        
                                             <ul>
                                                 <li>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" multiple required="required" class="chosen-select form-control">
+                                                                <?php
+                                                                foreach (getAllCities() as $city) {
+                                                                    if (strtolower($city['city_name']) == 'www') {
+                                                                        continue;
+                                                                    }
+                                                                    ?>
+                                                                   <option <?php echo in_array($city['city_slug'], (array)json_decode($row['city_slug'], true)) ? 'selected' : '' ?>
+                                                                        value="<?php echo $city['city_slug']; ?>">
+                                                                        <?php echo $city['city_name']; ?>
+                                                                    </option>
+                                                                <?php
+                                                                }
+                                                                ?>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="form-group">
