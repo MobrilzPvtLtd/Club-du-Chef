@@ -354,7 +354,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                     </div>
                     <!--- END --->
                     <!--- START --->
-                    <div class="filt-com lhs-sub">
+                    <!-- <div class="filt-com lhs-sub">
                         <h4><?php echo $Zitiziti['JOB-LOCATION-LABEL']; ?></h4>
                         <ul>
                             <?php
@@ -386,7 +386,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                             }
                             ?>
                         </ul>
-                    </div>
+                    </div> -->
                     <!--- END --->
                     <!--- START --->
                     <div class="filt-com lhs-sub">
@@ -604,6 +604,9 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
 
                                     $usersqlrow = getUser($job_user_id); // To Fetch particular User Data
                                     $total_count_jobs_applied = getCountJobAppliedJob($job_id);
+
+                                    $decoded_city_slugs = (array)json_decode($jobrow['city_slug'], true);
+                                    if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                                     ?>
                                     <li>
                                         <div class="job-box">
@@ -644,6 +647,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                         </div>
                                     </li>
                                     <?php
+                                    }
                                 }
                                 ?>
                             </ul>
@@ -652,13 +656,13 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                     } else {
                         ?>
                         <span style="    font-size: 21px;
-    color: #bfbfbf;
-    letter-spacing: 1px;
-    padding-left: 30px;
-    text-shadow: 0px 0px 2px #fff;
-    text-transform: uppercase;
-    text-align: center!important;
-    margin-top: 5%;"><?php echo $Zitiziti['JOBS_NO_JOBS_MESSAGE']; ?></span>
+                        color: #bfbfbf;
+                        letter-spacing: 1px;
+                        padding-left: 30px;
+                        text-shadow: 0px 0px 2px #fff;
+                        text-transform: uppercase;
+                        text-align: center!important;
+                        margin-top: 5%;"><?php echo $Zitiziti['JOBS_NO_JOBS_MESSAGE']; ?></span>
                         <?php
                     }
                     ?>

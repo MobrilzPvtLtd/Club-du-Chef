@@ -250,7 +250,8 @@ $all_texts_row = getAllTexts(); //Fetch All Text Data
                             <a href="#"
                                 class="<?php if ($current_page == 'admin-new-user-requests.php' || $current_page == 'admin-all-users.php' || $current_page == 'admin-new-cod-requests.php' || $current_page == 'admin-non-paid-users.php' || $current_page == 'admin-paid-users.php' || $current_page == 'admin-all-users-general.php' || $current_page == 'admin-all-users-service-provider.php' || $current_page == 'admin-free-users.php' || $current_page == 'admin-standard-users.php' || $current_page == 'admin-premium-users.php' || $current_page == 'admin-premium-plus-users.php' || $current_page == 'admin-add-new-user.function.php') {
                                             echo 'mact';
-                                        } ?>">Users</a>
+                                        } ?>">Users
+                            </a>
                             <div>
                                 <ol>
                                     <li>
