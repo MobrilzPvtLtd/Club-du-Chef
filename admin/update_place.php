@@ -12,6 +12,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $place_id = $_POST["place_id"];
 
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
+
         $place_banner_image_old = $_POST["place_banner_image_old"];
         $place_gallery_image_old = $_POST["place_gallery_image_old"];
 
@@ -156,6 +166,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $place_qry =
             "UPDATE  " . TBL . "places  SET category_id='" . $category_id . "'
             , place_name='" . $place_name . "'
+            , city_slug='" . $city_slug_json . "'
             , place_tags='" . $place_tags . "', place_fee='" . $place_fee . "'
             , seo_title='" . $seo_title . "', seo_description='" . $seo_description . "'
             , seo_keywords='" . $seo_keywords . "', places_news='" . $places_news . "'

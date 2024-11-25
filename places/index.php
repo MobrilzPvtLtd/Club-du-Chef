@@ -120,6 +120,8 @@ if (isset($_GET['category'])) {
 
                             $category_row = getPlaceCategory($category_id);
 
+                            $decoded_city_slugs = (array)json_decode($placerow['city_slug'], true);
+                            if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                             ?>
                             <li>
                                 <div class="plac-hom-box">
@@ -135,16 +137,17 @@ if (isset($_GET['category'])) {
                                 </div>
                             </li>
                             <?php
+                            }
                         }
                         } else {
                             ?>
                             <span style="    font-size: 21px;
-    color: #bfbfbf;
-    letter-spacing: 1px;
-    /* background: #525252; */
-    text-shadow: 0px 0px 2px #fff;
-    text-transform: uppercase;
-    margin-top: 5%;"><?php echo $Zitiziti['PLACES_NO_PLACES_MESSAGE']; ?></span>
+                            color: #bfbfbf;
+                            letter-spacing: 1px;
+                            /* background: #525252; */
+                            text-shadow: 0px 0px 2px #fff;
+                            text-transform: uppercase;
+                            margin-top: 5%;"><?php echo $Zitiziti['PLACES_NO_PLACES_MESSAGE']; ?></span>
                             <?php
                         }
                         ?>

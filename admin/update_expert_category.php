@@ -13,18 +13,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['category_submit'])) {
 
         $category_id = $_POST['category_id'];
-        $city_id = $_POST['city_slug'];
         $category_name = $_POST['category_name'];
         $category_image_old = $_POST['category_image_old'];
         $category_status = "Active";
-
-        if (is_array($city_id)) {
-            $city_id = array_map(function($city) use ($conn) {
+        
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
                 return mysqli_real_escape_string($conn, $city);
-            }, $city_id);
-            $city_id_json = json_encode($city_id);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
         } else {
-            $city_id_json = json_encode([]);
+            $city_slug_json = json_encode([]);
         }
 
 
@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sql = mysqli_query( $conn, "UPDATE  " . TBL . 
             "expert_categories SET category_name='" . $category_name . "', 
             category_status='" . $category_status . "', 
-            city_id='" . $city_id_json . "',
+            city_slug='" . $city_slug_json . "',
             category_image='" . $category_image . "',
             category_slug='" . $category_slug . "'
             where category_id='" . $category_id . "'"
