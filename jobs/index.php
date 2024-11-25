@@ -183,6 +183,9 @@ if($footer_row['admin_job_show'] != 1) {
                             $category_id = $job_categories_row['category_id'];
 
                             $total_jobs_category = getCountCategoryJob($category_id);
+
+                            $decoded_city_slugs = (array)json_decode($job_categories_row['city_slug'], true);
+                            if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                             ?>
                             <li>
                                 <div>
@@ -192,6 +195,7 @@ if($footer_row['admin_job_show'] != 1) {
                                 </div>
                             </li>
                             <?php
+                            }
                         }
                         ?>
                     </ul>
@@ -220,6 +224,9 @@ if($footer_row['admin_job_show'] != 1) {
                             $job_id = $job_profile_row['job_id'];
 
                             $total_count_jobs_applied = getCountJobAppliedJob($job_id);
+
+                            $decoded_city_slugs = (array)json_decode($job_profile_row['city_slug'], true);
+                            if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                             ?>
                             <li>
                                 <div class="inn">
@@ -266,6 +273,7 @@ if($footer_row['admin_job_show'] != 1) {
                                 </div>
                             </li>
                             <?php
+                            }
                         }
                         ?>
                     </ul>
@@ -421,7 +429,6 @@ if($footer_row['admin_job_show'] != 1) {
                         </ul>
                     </div>
                 </div>
-
 
                 <div class="mob-app">
                     <div class="lhs">

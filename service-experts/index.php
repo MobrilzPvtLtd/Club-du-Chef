@@ -121,7 +121,7 @@ if($footer_row['admin_expert_show'] != 1) {
 
                                 foreach ($expert_location_qry as $expert_location_row) {
 
-                                    $expert_location = $expert_location_row['city_id'];
+                                    $expert_location = $expert_location_row['city_slug'];
 
                                     $expert_city_row = getExpertCity($expert_location);
 
@@ -170,30 +170,32 @@ if($footer_row['admin_expert_show'] != 1) {
                     <ul>
                         <?php
                         foreach (getAllActiveExpertCategoriesPos() as $expert_categories_row) {
+                            $decoded_city_slugs = (array)json_decode($expert_categories_row['city_slug'], true);
+                            if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
+                                $category_name = $expert_categories_row['category_name'];
 
-                            $category_name = $expert_categories_row['category_name'];
+                                $category_id = $expert_categories_row['category_id'];
 
-                            $category_id = $expert_categories_row['category_id'];
-
-                            $total_experts_category = getCountCategoryExperts($category_id);
-                            ?>
-                            <li>
-                                <div class="land-pack-grid">
-                                    <div class="land-pack-grid-img">
-                                        <img
-                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>service-experts/images/services/<?php echo $expert_categories_row['category_image']; ?>"
-                                            alt="">
+                                $total_experts_category = getCountCategoryExperts($category_id);
+                                ?>
+                                <li>
+                                    <div class="land-pack-grid">
+                                        <div class="land-pack-grid-img">
+                                            <img
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>service-experts/images/services/<?php echo $expert_categories_row['category_image']; ?>"
+                                                alt="">
+                                        </div>
+                                        <div class="land-pack-grid-text">
+                                            <h4><?php echo $category_name; ?><span
+                                                    class="dir-ho-cat"><?php echo $Zitiziti['SERVICE-EXPERTS-EXPERTS']; ?> <?php echo $total_experts_category; ?></span>
+                                            </h4>
+                                        </div>
+                                        <a href="<?php echo $ALL_EXPERTS_URL . urlModifier($expert_categories_row['category_slug']); ?>"
+                                        class="land-pack-grid-btn"><?php echo $Zitiziti['SERVICE-EXPERT-VIEW-ALL']; ?></a>
                                     </div>
-                                    <div class="land-pack-grid-text">
-                                        <h4><?php echo $category_name; ?><span
-                                                class="dir-ho-cat"><?php echo $Zitiziti['SERVICE-EXPERTS-EXPERTS']; ?> <?php echo $total_experts_category; ?></span>
-                                        </h4>
-                                    </div>
-                                    <a href="<?php echo $ALL_EXPERTS_URL . urlModifier($expert_categories_row['category_slug']); ?>"
-                                       class="land-pack-grid-btn"><?php echo $Zitiziti['SERVICE-EXPERT-VIEW-ALL']; ?></a>
-                                </div>
-                            </li>
-                            <?php
+                                </li>
+                        <?php
+                            }
                         }
                         ?>
                     </ul>

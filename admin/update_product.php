@@ -18,17 +18,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $gallery_image_old = $_POST["gallery_image_old"];
 
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
 
-// Basic Personal Details
+
+        // Basic Personal Details
         $first_name = $_POST["first_name"];
         $last_name = $_POST["last_name"];
         $mobile_number = $_POST["mobile_number"];
         $email_id = $_POST["email_id"];
 
         $register_mode = "Direct";
-//        $user_status = "Inactive";
+        // $user_status = "Inactive";
 
-// Common product Details
+        // Common product Details
         $product_name = $_POST["product_name"];
         $product_price = $_POST["product_price"];
         $product_price_offer = $_POST["product_price_offer"];
@@ -48,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
 
-//product highlights
+        //product highlights
 
         $product_highlights123 = $_POST["product_highlights"];
         $prefix1 = $fruitList = '';
@@ -57,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $prefix1 = '|';
         }
 
-//product Specifications
+        //product Specifications
         $product_info_question123 = $_POST["product_info_question"];
         $prefix1 = $fruitList = '';
         foreach ($product_info_question123 as $fruit1) {
@@ -78,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $product_type_id = 1;
 
 
-//    Condition to get User Id starts
+        //  Condition to get User Id starts
 
         if (isset($_POST['user_code']) && !empty($_POST['user_code'])) {
             $user_code = $_POST['user_code'];
@@ -128,14 +138,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $upres = mysqli_query($conn, $upqry);
 
             $user_id = $lastID; //User Id
-// product Status
+        // product Status
             $product_status = "Inactive";
 
         }
-//    Condition to get User Id Ends
+        // Condition to get User Id Ends
 
 
-// ************************  Gallery Image Upload starts  **************************
+        // ************************  Gallery Image Upload starts  **************************
 
         $all_gallery_image = $_FILES['gallery_image'];
 
@@ -198,7 +208,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $product_qry =
             "UPDATE  " . TBL . "products  SET user_id='" . $user_id . "', product_name='" . $product_name . "'
             ,product_description='" . $product_description . "', product_price='" . $product_price . "'
-            ,category_id='" . $category_id . "', sub_category_id='" . $sub_category_id . "'
+            ,category_id='" . $category_id . "', sub_category_id='" . $sub_category_id . "',city_slug='" . $city_slug_json . "'
             , product_price_offer='" . $product_price_offer . "',product_payment_link='" . $product_payment_link . "'
             , product_tags='" . $product_tags . "'
             ,product_highlights='" . $product_highlights . "' ,product_info_question ='" . $product_info_question . "' 
@@ -225,7 +235,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $webpage_full_link_with_login = $webpage_full_link . "login";  //URL Login Link
 
-//****************************    Admin email starts    *************************
+        //****************************    Admin email starts    *************************
 
             $to = $admin_email;
             $subject = "$admin_site_name - product has been updated";
@@ -248,9 +258,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             mail($to, $subject, $message1, $headers); //admin email
 
 
-//****************************    Admin email ends    *************************
+        //****************************    Admin email ends    *************************
 
-//****************************    Client email starts    *************************
+        //****************************    Client email starts    *************************
 
             $to1 = $email_id;
             $subject1 = "$admin_site_name Product Update Successful";
@@ -273,7 +283,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             mail($to1, $subject1, $message2, $headers1); //admin email
 
-//****************************    client email ends    *************************
+        //****************************    client email ends    *************************
 
             if ($product_type_id == 1) {
 

@@ -529,12 +529,10 @@ if (!empty($w)) {
 
                 <div class="col-md-9">
                     <?php
-                    //                            $productsql = "SELECT *
-                    //										FROM " . TBL . "products  WHERE product_status= 'Active'
-                    //
-                    //										$category_search_query $city_search_query ORDER BY product_id DESC";
+                    //  $productsql = "SELECT *
+                    //  FROM " . TBL . "products  WHERE product_status= 'Active'
+                    // $category_search_query $city_search_query ORDER BY product_id DESC";
                     $productsql = "SELECT DISTINCT  t1 . * FROM  " . TBL . "products  AS t1 $inner $w $q  product_status= 'Active' ORDER BY product_id DESC ";
-
 
                     $productrs = mysqli_query($conn, $productsql);
                     $total_products = mysqli_num_rows($productrs);
@@ -706,6 +704,8 @@ if (!empty($w)) {
                                     $list_user_id = $productrow['user_id'];
 
                                     $usersqlrow = getUser($list_user_id); // To Fetch particular User Data
+                                    $decoded_city_slugs = (array)json_decode($productrow['city_slug'], true);
+                                    if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                                     ?>
 
                                     <li class="products-item">
@@ -739,16 +739,17 @@ if (!empty($w)) {
                                         </div>
                                     </li>
                                     <?php
+                                    }
                                 }
                             } else {
                                 ?>
                                 <span style="    font-size: 21px;
-    color: #bfbfbf;
-    letter-spacing: 1px;
-    /* background: #525252; */
-    text-shadow: 0px 0px 2px #fff;
-    text-transform: uppercase;
-    margin-top: 5%;"><?php echo $Zitiziti['PRODUCTS_NO_PRODUCTS_MESSAGE']; ?></span>
+                                color: #bfbfbf;
+                                letter-spacing: 1px;
+                                /* background: #525252; */
+                                text-shadow: 0px 0px 2px #fff;
+                                text-transform: uppercase;
+                                margin-top: 5%;"><?php echo $Zitiziti['PRODUCTS_NO_PRODUCTS_MESSAGE']; ?></span>
                                 <?php
                             }
                             ?>

@@ -16,8 +16,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $company_logo_old = $_POST["company_logo_old"];
 
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
 
-// Basic Personal Details
+        // Basic Personal Details
         $first_name = $_SESSION["first_name"];
         $last_name = $_SESSION["last_name"];
         $mobile_number = $_SESSION["mobile_number"];
@@ -26,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $register_mode = "Direct";
 
 
-// Common job Details
+        // Common job Details
         $job_title = $_POST["job_title"];
         $job_salary = $_POST["job_salary"];
         $no_of_openings = $_POST["no_of_openings"];
@@ -62,11 +71,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $prefix = ',';
         }
 
-//job Specifications
+        //job Specifications
 
         // $job_status = "Active";
 
-//    Condition to get User Id starts
+        //    Condition to get User Id starts
 
         if (isset($_POST['user_code']) && !empty($_POST['user_code'])) {
             $user_code = $_POST['user_code'];
@@ -116,13 +125,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $upres = mysqli_query($conn, $upqry);
 
             $user_id = $lastID; //User Id
-// job Status
+        // job Status
             $job_status = "Inactive";
 
         }
-//    Condition to get User Id Ends
+        //    Condition to get User Id Ends
 
-// ************************  Gallery Image Upload starts  **************************   
+        // ************************  Gallery Image Upload starts  **************************   
 
         $all_company_logo = $_FILES['company_logo'];
 
@@ -148,7 +157,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
 
-// ************************  Gallery Image Upload ends  **************************
+        // ************************  Gallery Image Upload ends  **************************
 
         function checkJobSlug($link, $job_id, $counter = 1)
         {
@@ -173,7 +182,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $job_qry =
             "UPDATE  " . TBL . "jobs SET user_id='" . $user_id . "', job_title='" . $job_title . "'
-            , category_id='" . $category_id . "', sub_category_id='" . $sub_category_id . "'
+            , category_id='" . $category_id . "', sub_category_id='" . $sub_category_id . "',city_slug='" . $city_slug_json . "'
             , job_description='" . $job_description . "',job_salary ='" . $job_salary . "'
             , no_of_openings='" . $no_of_openings . "',job_type ='" . $job_type . "'
             , job_interview_date='" . $job_interview_date . "' ,years_of_experience ='" . $years_of_experience . "' 
@@ -209,7 +218,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $JOB_UPDATE_ADMIN_SUBJECT = "- Job has been updated";
 
-//****************************    Admin email starts    *************************
+        //****************************    Admin email starts    *************************
 
             $to = $admin_email;
             $subject = "$admin_site_name $JOB_UPDATE_ADMIN_SUBJECT";
@@ -232,9 +241,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             mail($to, $subject, $message1, $headers); //admin email
 
 
-//****************************    Admin email ends    *************************
+            //****************************    Admin email ends    *************************
 
-//****************************    Client email starts    *************************
+            //****************************    Client email starts    *************************
 
             $to1 = $email_id;
             $JOB_UPDATE_CLIENT_SUBJECT = "- Job Update Successful";
@@ -259,7 +268,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             mail($to1, $subject1, $message2, $headers1); //admin email
 
-//****************************    client email ends    *************************
+            //****************************    client email ends    *************************
 
 
             $_SESSION['status_msg'] = "Your Job has been Updated Successfully!!!";

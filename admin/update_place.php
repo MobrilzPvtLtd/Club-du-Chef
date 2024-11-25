@@ -79,12 +79,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $category_id = $_POST["category_id"];
 
 
-// Place Timing Details
+        // Place Timing Details
         $opening_time = $_POST["opening_time"];
         $closing_time = $_POST["closing_time"];
         $google_map = $_POST["google_map"];
 
-// Place Other Information
+        // Place Other Information
         $place_info_question123 = $_POST["place_info_question"];
         $prefix1 = $fruitList = '';
         foreach ($place_info_question123 as $fruit1) {

@@ -12,7 +12,17 @@ if (file_exists('config/info.php')) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['service_expert_submit'])) {
 
-// Common Service Expert Profile Details
+        // Common Service Expert Profile Details
+
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
 
         //$profile_name = addslashes($_POST["profile_name"]);
         $city_id = $_POST["city_id"];
@@ -180,7 +190,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
             $expert_profile_res = mysqli_query($conn, "UPDATE  " . TBL . "experts SET profile_name='" . $profile_name . "'
-     , city_id='" . $city_id . "', years_of_experience='" . $years_of_experience . "', base_fare='" . $base_fare . "'
+     , city_id='" . $city_id . "',city_slug='" . $city_slug_json . "', years_of_experience='" . $years_of_experience . "', base_fare='" . $base_fare . "'
      , available_time_start='" . $available_time_start . "', available_time_end='" . $available_time_end . "'
      , profile_image='" . $profile_image . "', cover_image='" . $cover_image . "'
      , id_proof ='" . $id_proof . "', area_id='" . $area_id . "'

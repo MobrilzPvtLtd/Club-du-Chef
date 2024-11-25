@@ -10,8 +10,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (isset($_POST['job_submit'])) {
 
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
 
-// Basic Personal Details
+        // Basic Personal Details
         $first_name = $_SESSION["first_name"];
         $last_name = $_SESSION["last_name"];
         $mobile_number = $_SESSION["mobile_number"];
@@ -20,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $register_mode = "Direct";
 
 
-// Common product Details
+        // Common product Details
         $job_title = $_POST["job_title"];
         $job_salary = $_POST["job_salary"];
         $no_of_openings = $_POST["no_of_openings"];
@@ -167,7 +176,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //    Job Insert Part Starts
 
         $job_qry = "INSERT INTO " . TBL . "jobs 
-					(user_id, category_id, sub_category_id, job_title, job_description
+					(user_id, category_id, sub_category_id, city_slug, job_title, job_description
 					, job_salary, no_of_openings, job_type, job_interview_date
 					, years_of_experience, job_interview_time, job_role, educational_qualification
 					, job_small_description, job_location, company_logo, contact_person
@@ -175,7 +184,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					, skill_set ,job_status, job_company_name
 					, job_udt, job_slug, job_cdt) 
 					VALUES 
-					('$user_id', '$category_id', '$sub_category_id','$job_title','$job_description'
+					('$user_id', '$category_id', '$sub_category_id','$city_slug_json','$job_title','$job_description'
 					, '$job_salary','$no_of_openings','$job_type','$job_interview_date'
 					, '$years_of_experience','$job_interview_time','$job_role','$educational_qualification'
 					, '$job_small_description','$job_location','$company_logo','$contact_person'

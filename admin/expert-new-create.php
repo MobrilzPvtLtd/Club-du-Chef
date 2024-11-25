@@ -36,7 +36,7 @@ include "header.php";
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label class="tit">City</label>
                                 <select onChange="getExpertArea(this.value);" class="chosen-select" name="city_id">
                                     <option value=""><?php echo "Select City"; ?></option>
@@ -49,7 +49,7 @@ include "header.php";
                                     }
                                     ?>
                                 </select>
-                            </div>
+                            </div> -->
                             <div class="form-group">
                                 <label class="tit">Service start time</label>
                                 <select class="chosen-select" name="available_time_start">
@@ -135,8 +135,22 @@ include "header.php";
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label class="tit">Service Areas</label>
-                                <select class="chosen-select" multiple name="area_id[]" id="area_id">
+                                <label class="tit">Cities</label>
+                                <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" multiple required="required" class="chosen-select form-control">
+                                <?php
+                                    foreach (getAllCities() as $city) {
+                                        if (strtolower($city['city_name']) == 'www') {
+                                            continue;
+                                        }
+                                        ?>
+                                        <option value="<?php echo $city['city_slug']; ?>">
+                                            <?php echo $city['city_name']; ?>
+                                        </option>
+                                    <?php
+                                    }
+                                    ?>
+                                </select>
+                                <!-- <select class="chosen-select" multiple name="area_id[]" id="area_id">
                                     <?php
                                     foreach (getAllExpertAreas() as $areas_row) {
                                         ?>
@@ -145,7 +159,7 @@ include "header.php";
                                         <?php
                                     }
                                     ?>
-                                </select>
+                                </select> -->
                             </div>
                         </div>
                         <div class="col-md-12">
