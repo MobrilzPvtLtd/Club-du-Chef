@@ -20,6 +20,16 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
         $register_mode = "Direct";
         $user_status = "Active";
 
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
+
 // Common blog Details
         $blog_name = $_POST["blog_name"];
         $category_id = $_POST["category_id"];
@@ -83,9 +93,9 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 
 
         $blog_qry = "INSERT INTO " . TBL . "blogs 
-					(user_id, blog_name, category_id, blog_description, blog_image, blog_status,  isenquiry, blog_slug, blog_cdt)
+					(user_id, city_slug, blog_name, category_id, blog_description, blog_image, blog_status,  isenquiry, blog_slug, blog_cdt)
 					VALUES 
-					('$user_id', '$blog_name', '$category_id', '$blog_description', '$blog_image', '$blog_status', '$isenquiry', '$blog_slug', '$curDate')";
+					('$user_id','$city_slug_json', '$blog_name', '$category_id', '$blog_description', '$blog_image', '$blog_status', '$isenquiry', '$blog_slug', '$curDate')";
 
         $blog_res = mysqli_query($conn,$blog_qry);
 

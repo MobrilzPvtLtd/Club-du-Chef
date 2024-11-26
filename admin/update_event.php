@@ -55,13 +55,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $event_type = "All";
 
-        $country_id = $_POST["country_id"];
-        $city_id1 = $_POST["city_id"];
+        // $country_id = $_POST["country_id"];
+        // $city_id1 = $_POST["city_slug"];
 
-        $prefix = $fruitList = '';
-        foreach ($city_id1 as $fruit) {
-            $city_id .= $prefix . $fruit;
-            $prefix = ',';
+        // $prefix = $fruitList = '';
+        // foreach ($city_id1 as $fruit) {
+        //     $city_id .= $prefix . $fruit;
+        //     $prefix = ',';
+        // }
+
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
         }
 
         $user_sql = "SELECT * FROM  " . TBL . "users where user_id='" . $user_id . "'";
@@ -77,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
 
-// Event Status
+        // Event Status
         $payment_status = "Pending";
 
         $event_type_id = 1;
@@ -123,15 +133,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $event_slug = checkEventSlug($event_name1,$event_id);
 
 
-        $event_qry =
-            "UPDATE  " . TBL . "events  SET user_id='" . $user_id . "', event_name='" . $event_name . "',event_description='" . $event_description . "', event_email='" . $event_email . "'
-            , event_mobile='" . $event_mobile . "',event_website='" . $event_website . "', event_address='" . $event_address . "'
-            ,event_contact_name='" . $event_contact_name . "' ,event_map='" . $event_map . "' , category_id='" . $category_id . "'
-        ,event_start_date='" . $event_start_date . "' , event_time='" . $event_time . "' 
-        ,city_id='" . $city_id . "' , country_id='" . $country_id . "' 
-    ,event_image='" . $event_image . "', event_status='" . $event_status . "', event_type='" . $event_type . "', isenquiry='" . $isenquiry . "'
-    ,event_slug='" . $event_slug . "' where event_id='" . $event_id . "'";
-
+        $event_qry = "UPDATE  " . TBL . "events  SET 
+        user_id='" . $user_id . "', 
+        event_name='" . $event_name . "',
+        event_description='" . $event_description . "', 
+        event_email='" . $event_email . "', 
+        event_mobile='" . $event_mobile . "',
+        event_website='" . $event_website . "', 
+        event_address='" . $event_address . "',
+        event_contact_name='" . $event_contact_name . "',
+        event_map='" . $event_map . "', 
+        category_id='" . $category_id . "',
+        event_start_date='" . $event_start_date . "', 
+        event_time='" . $event_time . "',
+        city_slug='" . $city_slug_json . "',
+        event_image='" . $event_image . "', 
+        event_status='" . $event_status . "', 
+        event_type='" . $event_type . "', 
+        isenquiry='" . $isenquiry . "',
+        event_slug='" . $event_slug . "' 
+        where event_id='" . $event_id . "'";
+        // print_r($event_qry);
+        // die();
 
         $event_res = mysqli_query($conn,$event_qry);
 

@@ -11,119 +11,138 @@ include "header.php";
         <div class="ad-com">
             <div class="ad-dash leftpadd">
                  <section class="login-reg">
-		<div class="container">
-			<div class="row">
-                <div class="login-main add-list posr">
-                     <div class="log-bor">&nbsp;</div>
-                    <span class="udb-inst">new post</span>
-                    <div class="log log-1">
-                        <div class="login">
-                            <h4>Create post</h4>
-                            <?php include "../page_level_message.php"; ?>
-                            <form name="blog_form" id="blog_form" method="post" action="insert_blog.php" enctype="multipart/form-data">
-                                <ul>
-										<li>
-                                    <!--FILED START-->
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <select name="user_id" required="required" class="form-control chosen-select" id="user_id">
-                                                    <option value="">Choose a user</option>
-                                                    <?php
-                                                    foreach (getAllUser() as $row) {
-                                                        ?>
-                                                        <option value="<?php echo $row['user_id']; ?>"><?php echo $row['first_name']; ?></option>
-                                                        <?php
-                                                    }
-                                                    ?>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--FILED END-->
-                                     <!--FILED START-->
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <input type="text" name="blog_name" required="required" class="form-control" placeholder="Post name *">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--FILED END-->
+                    <div class="container">
+                        <div class="row">
+                            <div class="login-main add-list posr">
+                                <div class="log-bor">&nbsp;</div>
+                                <span class="udb-inst">new post</span>
+                                <div class="log log-1">
+                                    <div class="login">
+                                        <h4>Create post</h4>
+                                        <?php include "../page_level_message.php"; ?>
+                                        <form name="blog_form" id="blog_form" method="post" action="insert_blog.php" enctype="multipart/form-data">
+                                            <ul>
+                                                <li>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" multiple required="required" class="chosen-select form-control">
+                                                                    <?php
+                                                                    foreach (getAllCities() as $city) {
+                                                                        if (strtolower($city['city_name']) == 'www') {
+                                                                            continue;
+                                                                        }
+                                                                        ?>
+                                                                        <option value="<?php echo $city['city_slug']; ?>">
+                                                                            <?php echo $city['city_name']; ?>
+                                                                        </option>
+                                                                    <?php
+                                                                    }
+                                                                    ?>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--FILED START-->
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <select name="user_id" required="required" class="form-control chosen-select" id="user_id">
+                                                                    <option value="">Choose a user</option>
+                                                                    <?php
+                                                                    foreach (getAllUser() as $row) {
+                                                                        ?>
+                                                                        <option value="<?php echo $row['user_id']; ?>"><?php echo $row['first_name']; ?></option>
+                                                                        <?php
+                                                                    }
+                                                                    ?>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--FILED END-->
+                                                    <!--FILED START-->
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <input type="text" name="blog_name" required="required" class="form-control" placeholder="Post name *">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--FILED END-->
+                                                    <!--FILED START-->
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <select name="category_id"
+                                                                        id="category_id" class="chosen-select form-control">
+                                                                    <option value="">Select Category</option>
+                                                                    <?php
+                                                                    foreach (getAllBlogCategories() as $categories_row) {
+                                                                        ?>
+                                                                        <option <?php if ($_SESSION['category_id'] == $categories_row['category_id']) {
+                                                                            echo "selected";
+                                                                        } ?>
+                                                                            value="<?php echo $categories_row['category_id']; ?>"><?php echo $categories_row['category_name']; ?></option>
+                                                                        <?php
+                                                                    }
+                                                                    ?>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--FILED END-->
+                                                    <!--FILED START-->
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <textarea name="blog_description" id="blog_description" required="required" class="form-control" placeholder="Post details"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--FILED END-->
+                                                    <!--FILED START-->
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label>Choose banner image</label>
+                                                                <input type="file" name="blog_image" required="required" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--FILED END-->
+                                                    <!--FILED START-->
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div>
+                                                                <div class="chbox">
+                                                                    <input type="checkbox" name="isenquiry"  id="evefmenab" checked="">
+                                                                    <label for="evefmenab">Enquiry or Get quote form enable</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--FILED END-->    
+            
+                                                </li>
+                                            </ul>
                                             <!--FILED START-->
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <select name="category_id"
-                                                                id="category_id" class="chosen-select form-control">
-                                                            <option value="">Select Category</option>
-                                                            <?php
-                                                            foreach (getAllBlogCategories() as $categories_row) {
-                                                                ?>
-                                                                <option <?php if ($_SESSION['category_id'] == $categories_row['category_id']) {
-                                                                    echo "selected";
-                                                                } ?>
-                                                                    value="<?php echo $categories_row['category_id']; ?>"><?php echo $categories_row['category_name']; ?></option>
-                                                                <?php
-                                                            }
-                                                            ?>
-                                                        </select>
-                                                    </div>
+                                                    <button type="submit" name="blog_submit" class="btn btn-primary">Submit</button>
                                                 </div>
                                             </div>
                                             <!--FILED END-->
-                                  <!--FILED START-->
-                                    <div class="row">
+                                        </form>
                                         <div class="col-md-12">
-                                            <div class="form-group">
-                                                <textarea name="blog_description" id="blog_description" required="required" class="form-control" placeholder="Post details"></textarea>
-                                            </div>
+                                            <a href="profile.php" class="skip">Go to user dashboard >></a>
                                         </div>
                                     </div>
-                                    <!--FILED END-->
-									<!--FILED START-->
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Choose banner image</label>
-                                                <input type="file" name="blog_image" required="required" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--FILED END-->
-                                    <!--FILED START-->
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div>
-                                                <div class="chbox">
-                                                    <input type="checkbox" name="isenquiry"  id="evefmenab" checked="">
-                                                    <label for="evefmenab">Enquiry or Get quote form enable</label>
-                                                  </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--FILED END-->    
-  
-									</li>
-									</ul>
-									<!--FILED START-->
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <button type="submit" name="blog_submit" class="btn btn-primary">Submit</button>
-                                        </div>
-                                    </div>
-                                    <!--FILED END-->
-                            </form>
-                            <div class="col-md-12">
-                                <a href="profile.php" class="skip">Go to user dashboard >></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-			</div>
-		</div>
-	</section>
-
+                </section>
             </div>
         </div>
     </section>

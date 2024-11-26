@@ -14,14 +14,14 @@ if (isset($_POST['category_submit'])) {
         $cnt2 = count($_POST['category_image']);
         }
 
-// *********** if Count of category name is zero means redirect starts ********
+        // *********** if Count of category name is zero means redirect starts ********
 
     if ($cnt == 0) {
         header('Location: admin-add-new-product-category.php');
         exit;
     }
 
-// *********** if Count of category name is zero means redirect ends ********
+    // *********** if Count of category name is zero means redirect ends ********
 
     for ($i = 0; $i < $cnt; $i++) {
 
@@ -29,10 +29,20 @@ if (isset($_POST['category_submit'])) {
 
         $category_status = "Active";
 
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
+
         $category_filter_pos_id = 1;
 
 
-//************ Category Name Already Exist Check Starts ***************
+        //************ Category Name Already Exist Check Starts ***************
 
 
         $category_name_exist_check = mysqli_query($conn, "SELECT * FROM " . TBL . "product_categories  WHERE category_name='" . $category_name . "' ");
@@ -48,7 +58,7 @@ if (isset($_POST['category_submit'])) {
 
         }
 
-//************ Category Name Already Exist Check Ends ***************
+        //************ Category Name Already Exist Check Ends ***************
 
 
         $_FILES['category_image']['name'][$i];
@@ -100,8 +110,8 @@ if (isset($_POST['category_submit'])) {
             $category_slug = $category_name1;
         }
 
-        $sql = mysqli_query($conn, "INSERT INTO  " . TBL . "product_categories (category_name,category_status,category_image,category_filter_pos_id,category_slug,category_cdt)
-VALUES ('$category_name','$category_status','$category_image','$category_filter_pos_id', '$category_slug', '$curDate')");
+        $sql = mysqli_query($conn, "INSERT INTO  " . TBL . "product_categories (category_name,city_slug,category_status,category_image,category_filter_pos_id,category_slug,category_cdt)
+VALUES ('$category_name','$city_slug_json','$category_status','$category_image','$category_filter_pos_id', '$category_slug', '$curDate')");
 
         $LID = mysqli_insert_id($conn);
         $lastID = $LID;

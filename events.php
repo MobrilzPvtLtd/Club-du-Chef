@@ -99,30 +99,57 @@ if (isset($_REQUEST['calendar-date']) && !empty($_REQUEST['calendar-date'])  && 
         <ul class="multiple-items1">
             <?php
             $si = 1;
-            foreach (getAllTopViewsPremiumActiveEvents() as $top_event_row) {
 
-                $top_user_id = $top_event_row['user_id'];
-
-                $top_user_details_row = getUser($top_user_id);
-
-                ?>
-                <li>
-                    <div class="news-hban-box">
-                        <div class="im">
-                            <img loading="lazy" src="/images/events/<?php echo $top_event_row['event_image']; ?>" alt="">
+            $currentCityData = getCityName($CurrentCity);
+            if ($CurrentCity == 'www') {
+                foreach (getAllTopViewsPremiumActiveEvents() as $top_event_row) {
+                    $top_user_id = $top_event_row['user_id'];
+                    $top_user_details_row = getUser($top_user_id);
+                    ?>
+                    <li>
+                        <div class="news-hban-box">
+                            <div class="im">
+                                <img loading="lazy" src="/images/events/<?php echo htmlspecialchars($top_event_row['event_image']); ?>" alt="">
+                            </div>
+                            <div class="txt">
+                                <span class="news-cate"><?php echo htmlspecialchars($Zitiziti['EVENT_TOP_EVENTS']); ?></span><br>
+                                <span class="eve-date-sli"><?php echo dateDayFormatconverter($top_event_row['event_start_date']); ?>
+                                    <b><?php echo dateMonthFormatconverter($top_event_row['event_start_date']); ?></b></span>
+                                <h2><?php echo htmlspecialchars($top_event_row['event_name']); ?></h2>
+                            </div>
+                            <a href="<?php echo $EVENT_URL . urlModifier($top_event_row['event_slug']); ?>" class="fclick"></a>
                         </div>
-                        <div class="txt">
-                            <span class="news-cate"><?php echo $Zitiziti['EVENT_TOP_EVENTS']; ?></span><br>
-                            <span class="eve-date-sli"><?php echo dateDayFormatconverter($top_event_row['event_start_date']); ?>
-                                <b><?php echo dateMonthFormatconverter($top_event_row['event_start_date']); ?></b></span>
-                            <h2><?php echo $top_event_row['event_name']; ?></h2>
-                        </div>
-                        <a href="<?php echo $EVENT_URL . urlModifier($top_event_row['event_slug']); ?>"
-                           class="fclick"></a>
-                    </div>
-                </li>
-                <?php
+                    </li>
+                    <?php
+                }
+            } else {
+                $currentCityIds = explode(',', $currentCityData['city_id']);
+                foreach (getAllTopViewsPremiumActiveEvents() as $top_event_row) {
+                    // print_r($top_event_row['city_id']);
+                    // die();
+                    if (in_array($top_event_row['city_id'], $currentCityIds)) {
+                        $top_user_id = $top_event_row['user_id'];
+                        $top_user_details_row = getUser($top_user_id);
+                        ?>
+                        <li>
+                            <div class="news-hban-box">
+                                <div class="im">
+                                    <img loading="lazy" src="/images/events/<?php echo htmlspecialchars($top_event_row['event_image']); ?>" alt="">
+                                </div>
+                                <div class="txt">
+                                    <span class="news-cate"><?php echo htmlspecialchars($Zitiziti['EVENT_TOP_EVENTS']); ?></span><br>
+                                    <span class="eve-date-sli"><?php echo dateDayFormatconverter($top_event_row['event_start_date']); ?>
+                                        <b><?php echo dateMonthFormatconverter($top_event_row['event_start_date']); ?></b></span>
+                                    <h2><?php echo htmlspecialchars($top_event_row['event_name']); ?></h2>
+                                </div>
+                                <a href="<?php echo $EVENT_URL . urlModifier($top_event_row['event_slug']); ?>" class="fclick"></a>
+                            </div>
+                        </li>
+                        <?php
+                    }
+                }
             }
+
             ?>
         </ul>
     </div>
@@ -149,7 +176,6 @@ if (isset($_REQUEST['calendar-date']) && !empty($_REQUEST['calendar-date'])  && 
                                 <option value=""><?php echo 'All City'; ?></option>
                                 <?php
                                 foreach (getAllEventsCities() as $city_listrow) {
-
                                     if (strpos($city_listrow['city_id'], ',') !== false) {
                                         $city_id_array = array_unique(explode(',', $city_listrow['city_id']));
                                         foreach ($city_id_array as $places) {
@@ -310,20 +336,14 @@ if (isset($_REQUEST['calendar-date']) && !empty($_REQUEST['calendar-date'])  && 
                                     echo "Finished Events";
                                 } ?></span>
                         <?php }
-//                        else{
                             ?>
-<!--                            <span class="event-filters-span" id="--><?php //echo $get_sort_by; ?><!--" data-type="sort_by">--><?php //echo "Upcoming Events"; ?><!--</span>-->
                             <?php
-                        } //}?>
-
-                        <!-- //Filter most views   -->
-<!--                        <span class="event-filters-span" id="" data-type="most_views">--><?php //echo "Most Views"; ?><!--</span>-->
+                        }?>
                     </div>
                 </div>
                 <?php
 
                 if ($total_events > 0) {
-
                     while ($eventrow = mysqli_fetch_array($eventrs)) {
 
                         $user_id = $eventrow['user_id'];
@@ -355,12 +375,12 @@ if (isset($_REQUEST['calendar-date']) && !empty($_REQUEST['calendar-date'])  && 
                 } else {
                     ?>
                     <span style="    font-size: 21px;
-    color: #bfbfbf;
-    letter-spacing: 1px;
-    /* background: #525252; */
-    text-shadow: 0px 0px 2px #fff;
-    text-transform: uppercase;
-    margin-top: 5%;"><?php echo $Zitiziti['EVENTS_NO_EVENTS_MESSAGE']; ?></span>
+                    color: #bfbfbf;
+                    letter-spacing: 1px;
+                    /* background: #525252; */
+                    text-shadow: 0px 0px 2px #fff;
+                    text-transform: uppercase;
+                    margin-top: 5%;"><?php echo $Zitiziti['EVENTS_NO_EVENTS_MESSAGE']; ?></span>
                     <?php
                 }
                 ?>

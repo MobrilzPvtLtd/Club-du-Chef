@@ -17,8 +17,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $category_image_old = $_POST['category_image_old'];
         $category_status = "Active";
 
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
 
-//************ Category Name Already Exist Check Starts ***************
+        //************ Category Name Already Exist Check Starts ***************
 
 
         $category_name_exist_check = mysqli_query($conn, "SELECT * FROM " . TBL . "product_categories  WHERE category_name='" . $category_name . "' AND category_id != $category_id ");
@@ -80,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $category_name1 = trim(preg_replace('/[^A-Za-z0-9]/', ' ', $category_name));
         $category_slug = checkProductttCategorySlug($category_name1, $category_id);
 
-        $sql = mysqli_query($conn, "UPDATE  " . TBL . "product_categories SET category_name='" . $category_name . "', category_status='" . $category_status . "'
+        $sql = mysqli_query($conn, "UPDATE  " . TBL . "product_categories SET category_name='" . $category_name . "',city_slug='" . $city_slug_json . "', category_status='" . $category_status . "'
      , category_image='" . $category_image . "', category_slug='" . $category_slug . "'
      where category_id='" . $category_id . "'");
 

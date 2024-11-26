@@ -12,8 +12,17 @@ if (file_exists('config/info.php')) {
 if ($_SERVER['REQUEST_METHOD']=='POST') {
     if (isset($_POST['product_submit'])) {
 
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
 
-// Basic Personal Details
+        // Basic Personal Details
         $first_name = $_SESSION["first_name"];
         $last_name = $_SESSION["last_name"];
         $mobile_number = $_SESSION["mobile_number"];
@@ -22,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
         $register_mode = "Direct";
 
 
-// Common product Details
+        // Common product Details
         $product_name = $_POST["product_name"];
         $product_price = $_POST["product_price"];
         $product_price_offer = $_POST["product_price_offer"];
@@ -187,11 +196,11 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 
         $product_qry = "INSERT INTO " . TBL . "products 
 					(user_id, category_id, sub_category_id, product_name, product_description
-					, gallery_image, product_price, product_price_offer, product_payment_link, product_tags, product_highlights, product_status
+					, gallery_image, product_price, product_price_offer, product_payment_link, product_tags, product_highlights, product_status, city_slug
 					, product_info_question , product_info_answer, payment_status, product_slug, product_cdt) 
 					VALUES 
 					('$user_id', '$category_id', '$sub_category_id','$product_name','$product_description'
-					,'$gallery_image', '$product_price', '$product_price_offer', '$product_payment_link', '$product_tags', '$product_highlights', '$product_status'
+					,'$gallery_image', '$product_price', '$product_price_offer', '$product_payment_link', '$product_tags', '$product_highlights', '$product_status', '$city_slug_json'
 					, '$product_info_question', '$product_info_answer', '$payment_status', '$product_slug', '$curDate')";
 
 

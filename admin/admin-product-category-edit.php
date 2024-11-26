@@ -34,6 +34,26 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
+                                                            <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" multiple required="required" class="chosen-select form-control">
+                                                            <?php
+                                                                foreach (getAllCities() as $city) {
+                                                                    if (strtolower($city['city_name']) == 'www') {
+                                                                        continue;
+                                                                    }
+                                                                    ?>
+                                                                    <option <?php echo in_array($city['city_slug'], (array)json_decode($row['city_slug'], true)) ? 'selected' : '' ?> value="<?php echo $city['city_slug']; ?>">
+                                                                        <?php echo $city['city_name']; ?>
+                                                                    </option>
+                                                                <?php
+                                                                }
+                                                                ?>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
                                                             <input type="text" class="form-control"  id="category_name" name="category_name" value="<?php echo $row['category_name']; ?>"  placeholder="Category name *" required>
                                                         </div>
                                                     </div>
@@ -77,7 +97,8 @@ include "header.php";
 <script src="../js/popper.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/jquery-ui.js"></script>
-<script src="js/admin-custom.js"></script> <script src="../js/select-opt.js"></script>
+<script src="../js/select-opt.js"></script>
+<script src="js/admin-custom.js"></script>
 </body>
 
 </html>

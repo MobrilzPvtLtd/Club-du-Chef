@@ -32,35 +32,55 @@ include "header.php";
                                        value="<?php echo $blogs_a_row['blog_image']; ?>" name="blog_image_old"
                                        class="validate">
 									<ul>
-										<li>
-                                    <!--FILED START-->
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <select name="user_id" required="required" class="form-control" id="user_id">
-                                                    <option value="">Choose a user</option>
-                                                    <?php
-                                                    foreach (getAllUser() as $row) {
-                                                        ?>
-                                                        <option <?php if($blogs_a_row['user_id']== $row['user_id']){ echo "selected"; } ?>
-                                                            value="<?php echo $row['user_id']; ?>"><?php echo $row['first_name']; ?></option>
+									<li>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" multiple required="required" class="chosen-select form-control">
                                                         <?php
-                                                    }
-                                                    ?>
-                                                </select>
+                                                        foreach (getAllCities() as $city) {
+                                                            if (strtolower($city['city_name']) == 'www') {
+                                                                continue;
+                                                            }
+                                                            ?>
+                                                            <option <?php echo in_array($city['city_slug'], (array)json_decode($blogs_a_row['city_slug'], true)) ? 'selected' : '' ?> value="<?php echo $city['city_slug']; ?>">
+                                                                <?php echo $city['city_name']; ?>
+                                                            </option>
+                                                        <?php
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--FILED END-->
-                                     <!--FILED START-->
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <input type="text" name="blog_name"
-                                                       value="<?php echo $blogs_a_row['blog_name']; ?>" required="required" class="form-control" placeholder="Post name *">                                            </div>
+                                        <!--FILED START-->
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <select name="user_id" required="required" class="form-control" id="user_id">
+                                                        <option value="">Choose a user</option>
+                                                        <?php
+                                                        foreach (getAllUser() as $row) {
+                                                            ?>
+                                                            <option <?php if($blogs_a_row['user_id']== $row['user_id']){ echo "selected"; } ?>
+                                                                value="<?php echo $row['user_id']; ?>"><?php echo $row['first_name']; ?></option>
+                                                            <?php
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <!--FILED END-->
+                                        <!--FILED END-->
+                                        <!--FILED START-->
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="text" name="blog_name"
+                                                        value="<?php echo $blogs_a_row['blog_name']; ?>" required="required" class="form-control" placeholder="Post name *">                                            </div>
+                                            </div>
+                                        </div>
+                                        <!--FILED END-->
                                             <!--FILED START-->
                                             <div class="row">
                                                 <div class="col-md-12">
