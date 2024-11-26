@@ -211,8 +211,9 @@ if (isset($_REQUEST['sort_by']) && !empty($_REQUEST['sort_by'])) {
                         $user_id = $blogrow['user_id'];
 
                         $user_details_row = getUser($user_id);
-
-                        ?>
+                        $decoded_city_slugs = (array)json_decode($blogrow['city_slug'], true);
+                        if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
+                    ?>
                         <li class="blog-item">
                             <div class="pro-eve-box">
                                 <div>
@@ -229,7 +230,8 @@ if (isset($_REQUEST['sort_by']) && !empty($_REQUEST['sort_by'])) {
                                     &nbsp;</a>
                             </div>
                         </li>
-                        <?php
+                    <?php
+                        }
                     }
                 } else {
                     ?>

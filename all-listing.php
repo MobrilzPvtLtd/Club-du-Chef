@@ -204,7 +204,7 @@ if (isset($query['city']) && !empty($query['city'])) {
     $city_search_query = "AND FIND_IN_SET($city_id, city_id)";
 }
 
-$imageShow = false; 
+$imageShow = false;
 $detailsImages = [];
 $detailsImageLinks = [];
 
@@ -213,14 +213,14 @@ foreach (getAllCities() as $city) {
         for ($j = 1; $j <= 8; $j++) {
             $imageKey = 'details_image_' . $j;
             $imageLinkKey = 'details_image_' . $j . '_link';
-            
+
             if (isset($city[$imageKey]) && !empty($city[$imageKey])) {
                 $imageUrl = htmlspecialchars($webpage_full_link . 'images/cityimage/' . $city[$imageKey]);
                 $detailsImages[] = $imageUrl;
 
                 if (isset($city[$imageLinkKey]) && !empty($city[$imageLinkKey])) {
                     $detailsImageLinks[] = htmlspecialchars($city[$imageLinkKey]);
-                } 
+                }
 
                 $imageShow = true;
             }
@@ -243,7 +243,7 @@ foreach (getAllCities() as $city) {
         <div class="container">
             <div class="row">
                 <?php
-                    foreach (getAllListingFilter() as $all_listing_filter_row) {
+                foreach (getAllListingFilter() as $all_listing_filter_row) {
                 ?>
                     <div class="col-md-3 fil-mob-view">
                         <div class="all-filt">
@@ -849,7 +849,7 @@ foreach (getAllCities() as $city) {
                                 <span class="sr-only">Next</span>
                             </a>
                         </div> -->
-                        
+
 
                         <!--RESULTS SELECTED FILTER-->
                         <div class="listng-res">
@@ -1018,9 +1018,10 @@ foreach (getAllCities() as $city) {
                                             $active_listing_likes = '';
                                         }
 
+                                        $decoded_city_slugs = (array)json_decode($listrow['city_slug'], true);
+                                        if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                                         //Likes Query Ends
                                 ?>
-
                                         <li class="all-list-item">
                                             <div class="listing-box">
                                                 <!---LISTING IMAGE--->
@@ -1126,9 +1127,9 @@ foreach (getAllCities() as $city) {
                                                     }
                                                     ?>
                                                     <a class="cta-buy-now" href="<?php echo $Zitiziti['TEL']; ?>:<?php
-                                                                                                                if ($listrow['listing_mobile'] != NULL || $usersqlrow['mobile_number'] != NULL) {
-                                                                                                                    echo $listrow['listing_mobile'];
-                                                                                                                } ?>"><?php echo $Zitiziti['CALL_NOW']; ?></a>
+                                                                                                                    if ($listrow['listing_mobile'] != NULL || $usersqlrow['mobile_number'] != NULL) {
+                                                                                                                        echo $listrow['listing_mobile'];
+                                                                                                                    } ?>"><?php echo $Zitiziti['CALL_NOW']; ?></a>
                                                     <a class="cta-add-cart" href="https://wa.me/<?php
                                                                                                 if ($listrow['listing_whatsapp'] != NULL) {
                                                                                                     echo $listrow['listing_whatsapp'];
@@ -1144,7 +1145,6 @@ foreach (getAllCities() as $city) {
                                                 <!---END LISTING NAME--->
                                             </div>
                                         </li>
-
 
                                         <!--  Get Quote Pop up box starts  -->
                                         <section>
@@ -1242,25 +1242,23 @@ foreach (getAllCities() as $city) {
 
                                         </section>
                                         <!--  Get Quote Pop up box ends  -->
-
-
                                     <?php
+                                        }
                                     }
                                     ?>
                                 <?php
                                 } else {
                                 ?>
-                                    <span style="    font-size: 21px;
-                                color: #bfbfbf;
-                                letter-spacing: 1px;
-                                /* background: #525252; */
-                                text-shadow: 0px 0px 2px #fff;
-                                text-transform: uppercase;
-                                margin-top: 5%;"><?php echo $Zitiziti['LISTINGS_NO_LISTINGS_MESSAGE']; ?></span>
+                                    <span style="font-size: 21px;
+                                    color: #bfbfbf;
+                                    letter-spacing: 1px;
+                                    /* background: #525252; */
+                                    text-shadow: 0px 0px 2px #fff;
+                                    text-transform: uppercase;
+                                    margin-top: 5%;"><?php echo $Zitiziti['LISTINGS_NO_LISTINGS_MESSAGE']; ?></span>
                                 <?php
                                 }
                                 ?>
-
                             </ul>
 
                             <!--ADS-->
@@ -1282,9 +1280,6 @@ foreach (getAllCities() as $city) {
                         </div>
                     </div>
                 </div>
-               
-
-
             </div>
         </div>
     </div>

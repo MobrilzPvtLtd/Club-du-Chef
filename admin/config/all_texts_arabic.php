@@ -382,7 +382,7 @@ $Zitiziti['HOM-POP-TIT1'] = "near you";
 
 $Zitiziti['HOM-POP-SUB-TIT'] = "lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla.";
 
-$Zitiziti['HOM-VI-ALL-SER'] = "View all services";
+$Zitiziti['HOM-VI-ALL-SER'] = "View all categories";
 
 $Zitiziti['HOM-VI-ALL-SER-EXPERTS'] = "View all service experts";
 

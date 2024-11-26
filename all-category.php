@@ -1,7 +1,7 @@
 <?php
 include "header.php";
 
-$imageShow = false; 
+$imageShow = false;
 $catImages = [];
 $catImageLinks = [];
 
@@ -10,14 +10,14 @@ foreach (getAllCities() as $city) {
         for ($j = 1; $j <= 8; $j++) {
             $imageKey = 'cat_image_' . $j;
             $imageLinkKey = 'cat_image_' . $j . '_link';
-            
+
             if (isset($city[$imageKey]) && !empty($city[$imageKey])) {
                 $imageUrl = htmlspecialchars($webpage_full_link . 'images/cityimage/' . $city[$imageKey]);
                 $catImages[] = $imageUrl;
 
                 if (isset($city[$imageLinkKey]) && !empty($city[$imageLinkKey])) {
                     $catImageLinks[] = htmlspecialchars($city[$imageLinkKey]);
-                } 
+                }
 
                 $imageShow = true;
             }
@@ -30,26 +30,26 @@ foreach (getAllCities() as $city) {
 }
 ?>
 <style>
-.hom-head {
-    padding: 0;
-    margin: 0;
-}
+    .hom-head {
+        padding: 0;
+        margin: 0;
+    }
 
-.hom-head:before {
-    display: none
-}
+    .hom-head:before {
+        display: none
+    }
 
-.hom-head .hom-top~.container {
-    display: none
-}
+    .hom-head .hom-top~.container {
+        display: none
+    }
 
-.carousel-item:before {
-    background: none
-}
+    .carousel-item:before {
+        background: none
+    }
 
-.home-tit {
-    padding-top: 0
-}
+    .home-tit {
+        padding-top: 0
+    }
 </style>
 
 <section class="abou-pg commun-pg-main">
@@ -69,39 +69,42 @@ foreach (getAllCities() as $city) {
                     <div class="sh-all-scat">
                         <?php
                         foreach (getAllCategoriesPos() as $category_sql_row) {
-                            ?>
-                        <ul id="tail-re">
-                            <li>
-                                <div class="sh-all-scat-box">
-                                    <div class="lhs">
-                                        <img loading="lazy"
-                                            src="images/services/<?php echo $category_sql_row['category_image']; ?>"
-                                            alt="">
-                                    </div>
-                                    <div class="rhs">
-                                        <h4>
-                                            <a
-                                                href="<?php echo $ALL_LISTING_URL . urlModifier($category_sql_row['category_slug']); ?>"><?php echo $category_sql_row['category_name']; ?>
-                                            </a><span><?php echo AddingZero_BeforeNumber(getCountCategoryListing($category_sql_row['category_id'])); ?></span>
-                                        </h4>
-                                        <ol>
-                                            <?php
-                                                foreach (getCategorySubCategories($category_sql_row['category_id']) as $sub_category_sql_row) {
-                                                    ?>
-                                            <li>
+                            $decoded_city_slugs = (array)json_decode($category_sql_row['city_slug'], true);
+                            if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
+                        ?>
+                            <ul id="tail-re">
+                                <li>
+                                    <div class="sh-all-scat-box">
+                                        <div class="lhs">
+                                            <img loading="lazy"
+                                                src="images/services/<?php echo $category_sql_row['category_image']; ?>"
+                                                alt="">
+                                        </div>
+                                        <div class="rhs">
+                                            <h4>
                                                 <a
-                                                    href="<?php echo $ALL_LISTING_URL . urlModifier($category_sql_row['category_slug']); ?>/<?php echo urlModifier($sub_category_sql_row['sub_category_slug']); ?>"><?php echo $sub_category_sql_row['sub_category_name']; ?>
-                                                    <span><?php echo AddingZero_BeforeNumber(getCountSubCategoryListing($sub_category_sql_row['sub_category_id'])); ?></span></a>
-                                            </li>
-                                            <?php
+                                                    href="<?php echo $ALL_LISTING_URL . urlModifier($category_sql_row['category_slug']); ?>"><?php echo $category_sql_row['category_name']; ?>
+                                                </a><span><?php echo AddingZero_BeforeNumber(getCountCategoryListing($category_sql_row['category_id'])); ?></span>
+                                            </h4>
+                                            <ol>
+                                                <?php
+                                                foreach (getCategorySubCategories($category_sql_row['category_id']) as $sub_category_sql_row) {
+                                                ?>
+                                                    <li>
+                                                        <a
+                                                            href="<?php echo $ALL_LISTING_URL . urlModifier($category_sql_row['category_slug']); ?>/<?php echo urlModifier($sub_category_sql_row['sub_category_slug']); ?>"><?php echo $sub_category_sql_row['sub_category_name']; ?>
+                                                            <span><?php echo AddingZero_BeforeNumber(getCountSubCategoryListing($sub_category_sql_row['sub_category_id'])); ?></span></a>
+                                                    </li>
+                                                <?php
                                                 }
                                                 ?>
-                                        </ol>
+                                            </ol>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                        </ul>
+                                </li>
+                            </ul>
                         <?php
+                            }
                         }
                         ?>
                     </div>
@@ -113,18 +116,18 @@ foreach (getAllCities() as $city) {
                         foreach ($catImages as $index => $imageUrl) {
                             $link = isset($catImageLinks[$index]) ? $catImageLinks[$index] : '#';
                         ?>
-                        <a href="<?php echo $link; ?>" target="_blank">
-                            <ul id="tail-re">
-                                <li>
-                                    <div class="sh-all-scat-box">
+                            <a href="<?php echo $link; ?>" target="_blank">
+                                <ul id="tail-re">
+                                    <li>
+                                        <div class="sh-all-scat-box">
 
-                                        <div class="lhs w-100">
-                                            <img class="img-fluid" src="<?php echo $imageUrl; ?>" alt="">
+                                            <div class="lhs w-100">
+                                                <img class="img-fluid" src="<?php echo $imageUrl; ?>" alt="">
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </a>
+                                    </li>
+                                </ul>
+                            </a>
                         <?php
                         }
                         ?>
@@ -143,11 +146,11 @@ foreach (getAllCities() as $city) {
                             $link = isset($catImageLinks[$index]) ? $catImageLinks[$index] : '#';
                         ?>
                             <a href="<?php echo $link; ?>" target="_blank">
-                            <li>
-                                <div class="p-0 h-40 mb-2">
-                                    <img src="<?php echo $imageUrl; ?>" alt="">
-                                </div>
-                            </li>
+                                <li>
+                                    <div class="p-0 h-40 mb-2">
+                                        <img src="<?php echo $imageUrl; ?>" alt="">
+                                    </div>
+                                </li>
                             </a>
                         <?php
                         }
@@ -191,21 +194,21 @@ include "footer.php";
 <script src="<?php echo $slash; ?>js/blazy.min.js"></script>
 <!-- <script src="<?php echo $slash; ?>js/slick.js"></script> -->
 <script type="text/javascript">
-var webpage_full_link = '<?php echo $webpage_full_link;?>';
+    var webpage_full_link = '<?php echo $webpage_full_link; ?>';
 </script>
 <script type="text/javascript">
-var login_url = '<?php echo $LOGIN_URL;?>';
+    var login_url = '<?php echo $LOGIN_URL; ?>';
 </script>
 <script src="js/custom.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/custom_validation.js"></script>
 <script>
-$("#tail-se").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $(".sh-all-scat ul").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    $("#tail-se").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".sh-all-scat ul").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
     });
-});
 </script>
 <!-- <script>
     $(document).ready(function() {
@@ -229,8 +232,8 @@ $("#tail-se").on("keyup", function() {
 </script> -->
 <?php
 if (isset($_GET["page"])) {
-    ?>
-<?php
+?>
+    <?php
     if (isset($_POST['SubmitButton'])) { // Check if form was submitted
 
         if (!empty($_FILES['inputText']['name'])) {
@@ -248,10 +251,10 @@ if (isset($_GET["page"])) {
         }
     }
     ?>
-<form action="#" enctype="multipart/form-data" method="post">
-    <input type="file" name="inputText" />
-    <input type="submit" name="SubmitButton" />
-</form>
+    <form action="#" enctype="multipart/form-data" method="post">
+        <input type="file" name="inputText" />
+        <input type="submit" name="SubmitButton" />
+    </form>
 <?php
 }
 ?>

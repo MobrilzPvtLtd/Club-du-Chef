@@ -8,8 +8,6 @@ if ($footer_row['admin_event_show'] != 1) {
 ?>
 <?php
 if (isset($_GET['category']) && !empty($_REQUEST['category'])) {
-
-
     $category_search_slug = str_replace('-', ' ', $_GET['category']);
 
     $cat_search_row = getSlugEventCategory($category_search_slug);  //Fetch Category Id using category name
@@ -99,57 +97,31 @@ if (isset($_REQUEST['calendar-date']) && !empty($_REQUEST['calendar-date'])  && 
         <ul class="multiple-items1">
             <?php
             $si = 1;
+            foreach (getAllTopViewsPremiumActiveEvents() as $top_event_row) {
+                $top_user_id = $top_event_row['user_id'];
 
-            $currentCityData = getCityName($CurrentCity);
-            if ($CurrentCity == 'www') {
-                foreach (getAllTopViewsPremiumActiveEvents() as $top_event_row) {
-                    $top_user_id = $top_event_row['user_id'];
-                    $top_user_details_row = getUser($top_user_id);
-                    ?>
-                    <li>
-                        <div class="news-hban-box">
-                            <div class="im">
-                                <img loading="lazy" src="/images/events/<?php echo htmlspecialchars($top_event_row['event_image']); ?>" alt="">
-                            </div>
-                            <div class="txt">
-                                <span class="news-cate"><?php echo htmlspecialchars($Zitiziti['EVENT_TOP_EVENTS']); ?></span><br>
-                                <span class="eve-date-sli"><?php echo dateDayFormatconverter($top_event_row['event_start_date']); ?>
-                                    <b><?php echo dateMonthFormatconverter($top_event_row['event_start_date']); ?></b></span>
-                                <h2><?php echo htmlspecialchars($top_event_row['event_name']); ?></h2>
-                            </div>
-                            <a href="<?php echo $EVENT_URL . urlModifier($top_event_row['event_slug']); ?>" class="fclick"></a>
+                $top_user_details_row = getUser($top_user_id);
+                $decoded_city_slugs = (array)json_decode($top_event_row['city_slug'], true);
+                if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
+            ?>
+                <li>
+                    <div class="news-hban-box">
+                        <div class="im">
+                            <img loading="lazy" src="/images/events/<?php echo $top_event_row['event_image']; ?>" alt="">
                         </div>
-                    </li>
-                    <?php
-                }
-            } else {
-                $currentCityIds = explode(',', $currentCityData['city_id']);
-                foreach (getAllTopViewsPremiumActiveEvents() as $top_event_row) {
-                    // print_r($top_event_row['city_id']);
-                    // die();
-                    if (in_array($top_event_row['city_id'], $currentCityIds)) {
-                        $top_user_id = $top_event_row['user_id'];
-                        $top_user_details_row = getUser($top_user_id);
-                        ?>
-                        <li>
-                            <div class="news-hban-box">
-                                <div class="im">
-                                    <img loading="lazy" src="/images/events/<?php echo htmlspecialchars($top_event_row['event_image']); ?>" alt="">
-                                </div>
-                                <div class="txt">
-                                    <span class="news-cate"><?php echo htmlspecialchars($Zitiziti['EVENT_TOP_EVENTS']); ?></span><br>
-                                    <span class="eve-date-sli"><?php echo dateDayFormatconverter($top_event_row['event_start_date']); ?>
-                                        <b><?php echo dateMonthFormatconverter($top_event_row['event_start_date']); ?></b></span>
-                                    <h2><?php echo htmlspecialchars($top_event_row['event_name']); ?></h2>
-                                </div>
-                                <a href="<?php echo $EVENT_URL . urlModifier($top_event_row['event_slug']); ?>" class="fclick"></a>
-                            </div>
-                        </li>
-                        <?php
-                    }
+                        <div class="txt">
+                            <span class="news-cate"><?php echo $Zitiziti['EVENT_TOP_EVENTS']; ?></span><br>
+                            <span class="eve-date-sli"><?php echo dateDayFormatconverter($top_event_row['event_start_date']); ?>
+                                <b><?php echo dateMonthFormatconverter($top_event_row['event_start_date']); ?></b></span>
+                            <h2><?php echo $top_event_row['event_name']; ?></h2>
+                        </div>
+                        <a href="<?php echo $EVENT_URL . urlModifier($top_event_row['event_slug']); ?>"
+                           class="fclick"></a>
+                    </div>
+                </li>
+                <?php
                 }
             }
-
             ?>
         </ul>
     </div>
@@ -170,30 +142,6 @@ if (isset($_REQUEST['calendar-date']) && !empty($_REQUEST['calendar-date'])  && 
                         <li class="sr-sea">
                             <input type="text" id="event-search" class="autocomplete"
                                    placeholder="<?php echo $Zitiziti['EVENT_SEARCH_EVENT_PLACEHOLDER']; ?>">
-                        </li>
-                        <li class="sr-cit">
-                            <select id="city" name="city" class="city chosen-select">
-                                <option value=""><?php echo 'All City'; ?></option>
-                                <?php
-                                foreach (getAllEventsCities() as $city_listrow) {
-                                    if (strpos($city_listrow['city_id'], ',') !== false) {
-                                        $city_id_array = array_unique(explode(',', $city_listrow['city_id']));
-                                        foreach ($city_id_array as $places) {
-                                            $cityrow = getCity($places);
-
-                                            $hyphend_city_name = urlModifier($cityrow['city_name']);
-
-                                            ?>
-                                            <option <?php if ($get_city === $hyphend_city_name) {
-                                                echo 'selected';
-                                            } ?>
-                                                    value="<?php echo $hyphend_city_name; ?>"><?php echo $cityrow['city_name']; ?></option>
-                                            <?php
-                                        }
-                                    }
-                                }
-                                ?>
-                            </select>
                         </li>
                         <li class="sr-cate">
                             <select name="cat_check" id="cat_check" class="cat_check chosen-select form-control">
@@ -336,9 +284,14 @@ if (isset($_REQUEST['calendar-date']) && !empty($_REQUEST['calendar-date'])  && 
                                     echo "Finished Events";
                                 } ?></span>
                         <?php }
+                        //  else{
                             ?>
+                            <!-- <span class="event-filters-span" id="--><?php //echo $get_sort_by; ?><!--" data-type="sort_by">--><?php //echo "Upcoming Events"; ?><!--</span>-->
                             <?php
-                        }?>
+                        } //}?>
+
+                        <!-- //Filter most views   -->
+                        <!-- <span class="event-filters-span" id="" data-type="most_views">--><?php //echo "Most Views"; ?><!--</span>-->
                     </div>
                 </div>
                 <?php
@@ -349,8 +302,9 @@ if (isset($_REQUEST['calendar-date']) && !empty($_REQUEST['calendar-date'])  && 
                         $user_id = $eventrow['user_id'];
 
                         $user_details_row = getUser($user_id);
-
-                        ?>
+                        $decoded_city_slugs = (array)json_decode($eventrow['city_slug'], true);
+                        if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
+                    ?>
                         <li class="events-item">
                             <div class="eve-box">
                                 <div>
@@ -371,6 +325,7 @@ if (isset($_REQUEST['calendar-date']) && !empty($_REQUEST['calendar-date'])  && 
                             </div>
                         </li>
                         <?php
+                        }
                     }
                 } else {
                     ?>

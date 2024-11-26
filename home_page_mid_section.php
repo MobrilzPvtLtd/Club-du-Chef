@@ -1,118 +1,133 @@
 <?php
 if ($current_home_page == '1') {
-    ?>
-
-
+?>
     <!-- START -->
     <!-- <section>
         <div class="hom-mpop-ser">
             <div class="container">
                 <div class="hom-mpop-main">
                     <div class="home-tit">
-                        <h2><span><?php //echo $Zitiziti['HOM-BEST-TIT']; ?></span>
+                        <h2><span><?php //echo $Zitiziti['HOM-BEST-TIT']; 
+                                    ?></span>
                         </h2>
-                        <p><?php //echo $Zitiziti['HOM-BEST-SUB-TIT']; ?></p>
+                        <p><?php //echo $Zitiziti['HOM-BEST-SUB-TIT']; 
+                            ?></p>
                     </div>
 
                     <div class="hom2-cus-sli">
                         <ul class="multiple-items1">
                             <?php
-    // $pop_bus = 1;
-    //foreach (getAllFeaturedListing() as $row) {
+                            // $pop_bus = 1;
+                            //foreach (getAllFeaturedListing() as $row) {
 
-    //    $listing_id = $row['listing_id'];
+                            //    $listing_id = $row['listing_id'];
 
-    //  $listing_sql_row = getIdListing($listing_id);
-    //  $featured_category_id = $listing_sql_row['category_id'];
+                            //  $listing_sql_row = getIdListing($listing_id);
+                            //  $featured_category_id = $listing_sql_row['category_id'];
 
-    //  $popular_business_category_sql_row = getCategory($featured_category_id);
+                            //  $popular_business_category_sql_row = getCategory($featured_category_id);
 
-    // List Rating. for Rating of Star
-    // foreach (getListingReview($listing_id) as $star_rating_row) {
-    //     if ($star_rating_row["rate_cnt"] > 0) {
-    //         $star_rate_times = $star_rating_row["rate_cnt"];
-    //     $star_sum_rates = $star_rating_row["total_rate"];
-    //     $star_rate_one = $star_sum_rates / $star_rate_times;
-    //$star_rate_one = (($Star_rate_value)/5)*100;
-    //    $star_rate_two = number_format($star_rate_one, 1);
-    //     $star_rate = $star_rate_two;
+                            // List Rating. for Rating of Star
+                            // foreach (getListingReview($listing_id) as $star_rating_row) {
+                            //     if ($star_rating_row["rate_cnt"] > 0) {
+                            //         $star_rate_times = $star_rating_row["rate_cnt"];
+                            //     $star_sum_rates = $star_rating_row["total_rate"];
+                            //     $star_rate_one = $star_sum_rates / $star_rate_times;
+                            //$star_rate_one = (($Star_rate_value)/5)*100;
+                            //    $star_rate_two = number_format($star_rate_one, 1);
+                            //     $star_rate = $star_rate_two;
 
-    // } else {
-    //  $rate_times = 0;
-    //    $rate_value = 0;
-    //    $star_rate = 0;
-    //  }
-    //  }
+                            // } else {
+                            //  $rate_times = 0;
+                            //    $rate_value = 0;
+                            //    $star_rate = 0;
+                            //  }
+                            //  }
 
-    ?>
+                            ?>
                                 <li>
                                     <div class="testmo hom4-prop-box">
                                         <img
                                             src="<?php //if ($listing_sql_row['profile_image'] != NULL || !empty($listing_sql_row['profile_image'])) {
-    //   echo "images/listings/" . $listing_sql_row['profile_image'];
-    // } else {
-    //     echo "images/listings/hot4.jpg";
-    //  } ?>" alt="">
+                                                    //   echo "images/listings/" . $listing_sql_row['profile_image'];
+                                                    // } else {
+                                                    //     echo "images/listings/hot4.jpg";
+                                                    //  } 
+                                                    ?>" alt="">
                                         <div>
                                             <h4>
-                                                <a href="<?php // echo $LISTING_URL . urlModifier($listing_sql_row['listing_slug']); ?>"><?php echo $listing_sql_row['listing_name']; ?></a>
+                                                <a href="<?php // echo $LISTING_URL . urlModifier($listing_sql_row['listing_slug']); 
+                                                            ?>"><?php echo $listing_sql_row['listing_name']; ?></a>
                                             </h4>
-                                            <?php //if ($star_rate != 0) { ?>
+                                            <?php //if ($star_rate != 0) { 
+                                            ?>
                                                 <label class="rat">
                                                     <?php
-    //   for ($i = 1; $i <= ceil($star_rate_two); $i++) {
-    ?>
+                                                    //   for ($i = 1; $i <= ceil($star_rate_two); $i++) {
+                                                    ?>
                                                         <i class="material-icons">star</i>
                                                         <?php
-    //  }
-    //  $bal_star_rate = abs(ceil($star_rate_two) - 5);
+                                                        //  }
+                                                        //  $bal_star_rate = abs(ceil($star_rate_two) - 5);
 
-    //   for ($i = 1; $i <= $bal_star_rate; $i++) {
-    ?>
+                                                        //   for ($i = 1; $i <= $bal_star_rate; $i++) {
+                                                        ?>
                                                         <i class="material-icons">star_border</i>
                                                         <?php
-    // }
-    ?>
+                                                        // }
+                                                        ?>
                                                 </label>
-                                            <?php //} ?>
+                                            <?php //} 
+                                            ?>
                                             <span><a
-                                                    href="#"><?php //echo $popular_business_category_sql_row['category_name']; ?></a></span>
+                                                    href="#"><?php //echo $popular_business_category_sql_row['category_name']; 
+                                                                ?></a></span>
                                         </div>
-                                        <a href="<?php //echo $LISTING_URL . urlModifier($listing_sql_row['listing_slug']); ?>"
+                                        <a href="<?php //echo $LISTING_URL . urlModifier($listing_sql_row['listing_slug']); 
+                                                    ?>"
                                            class="fclick"></a>
                                     </div>
                                 </li>
                                 <?php
-    // $pop_bus++;
-    // }
-    ?>
+                                // $pop_bus++;
+                                // }
+                                ?>
                         </ul>
                     </div>
                 </div>
                 <div class="hlead-coll">
                     <div class="col-md-6">
                         <div class="hom-cre-acc-left">
-                            <h3><?php // echo $Zitiziti['HOM-WHAT-SER']; ?>
-                                <span><?php //echo $Zitiziti['HOM-WHAT-BIZ']; ?></span>
+                            <h3><?php // echo $Zitiziti['HOM-WHAT-SER']; 
+                                ?>
+                                <span><?php //echo $Zitiziti['HOM-WHAT-BIZ']; 
+                                        ?></span>
                             </h3>
-                            <p><?php //echo $Zitiziti['HOM-WHAT-SUB-HEAD']; ?></p>
+                            <p><?php //echo $Zitiziti['HOM-WHAT-SUB-HEAD']; 
+                                ?></p>
                             <ul>
                                 <li><img src="images/icon/blog.png" alt="">
                                     <div>
-                                        <h5><?php // echo $Zitiziti['HOM-WHAT-SER-PO1']; ?></h5>
-                                        <p><?php // echo $Zitiziti['HOM-WHAT-SER-PO1-SUB']; ?></p>
+                                        <h5><?php // echo $Zitiziti['HOM-WHAT-SER-PO1']; 
+                                            ?></h5>
+                                        <p><?php // echo $Zitiziti['HOM-WHAT-SER-PO1-SUB']; 
+                                            ?></p>
                                     </div>
                                 </li>
                                 <li><img src="images/icon/shield.png" alt="">
                                     <div>
-                                        <h5><?php //echo $Zitiziti['HOM-WHAT-SER-PO2']; ?></h5>
-                                        <p><?php //echo $Zitiziti['HOM-WHAT-SER-PO2-SUB']; ?></p>
+                                        <h5><?php //echo $Zitiziti['HOM-WHAT-SER-PO2']; 
+                                            ?></h5>
+                                        <p><?php //echo $Zitiziti['HOM-WHAT-SER-PO2-SUB']; 
+                                            ?></p>
                                     </div>
                                 </li>
                                 <li><img src="images/icon/general.png" alt="">
                                     <div>
-                                        <h5><?php // echo $Zitiziti['HOM-WHAT-SER-PO3']; ?></h5>
-                                        <p><?php // echo $Zitiziti['HOM-WHAT-SER-PO3-SUB']; ?></p>
+                                        <h5><?php // echo $Zitiziti['HOM-WHAT-SER-PO3']; 
+                                            ?></h5>
+                                        <p><?php // echo $Zitiziti['HOM-WHAT-SER-PO3-SUB']; 
+                                            ?></p>
                                     </div>
                                 </li>
                             </ul>
@@ -121,17 +136,22 @@ if ($current_home_page == '1') {
                     <div class="col-md-6">
                         <div class="hom-col-req">
                             <div class="log-bor">&nbsp;</div>
-                            <span class="udb-inst"><?php //echo $Zitiziti['LEAD-FILL-THE-FORM']; ?></span>
-                            <h4><?php //echo $Zitiziti['HOM-WHT-LOOK-TIT']; ?></h4>
+                            <span class="udb-inst"><?php //echo $Zitiziti['LEAD-FILL-THE-FORM']; 
+                                                    ?></span>
+                            <h4><?php //echo $Zitiziti['HOM-WHT-LOOK-TIT']; 
+                                ?></h4>
                             <div id="home_enq_success" class="log"
                                  style="display: none;">
-                                <p><?php //echo $Zitiziti['ENQUIRY_SUCCESSFUL_MESSAGE']; ?></p>
+                                <p><?php //echo $Zitiziti['ENQUIRY_SUCCESSFUL_MESSAGE']; 
+                                    ?></p>
                             </div>
                             <div id="home_enq_fail" class="log" style="display: none;">
-                                <p><?php // echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></p>
+                                <p><?php // echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; 
+                                    ?></p>
                             </div>
                             <div id="home_enq_same" class="log" style="display: none;">
-                                <p><?php //echo $Zitiziti['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
+                                <p><?php //echo $Zitiziti['ENQUIRY_OWN_LISTING_MESSAGE']; 
+                                    ?></p>
                             </div>
                             <form name="home_enquiry_form" id="home_enquiry_form" method="post"
                                   enctype="multipart/form-data">
@@ -146,51 +166,62 @@ if ($current_home_page == '1') {
                                 <input type="hidden" class="form-control"
                                        name="enquiry_source"
                                        value="<?php //if (isset($_GET["src"])) {
-    //  echo $_GET["src"];
-    // } else {
-    // echo "Website";
-    // }; ?>" placeholder="" required>
+                                                //  echo $_GET["src"];
+                                                // } else {
+                                                // echo "Website";
+                                                // }; 
+                                                ?>" placeholder="" required>
                                 <div class="form-group">
                                     <input type="text" name="enquiry_name" value="" required="required"
                                            class="form-control"
-                                           placeholder="<?php //echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>">
+                                           placeholder="<?php //echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; 
+                                                        ?>">
                                 </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control"
-                                           placeholder="<?php //echo $Zitiziti['ENTER_EMAIL_STAR']; ?>"
+                                           placeholder="<?php //echo $Zitiziti['ENTER_EMAIL_STAR']; 
+                                                        ?>"
                                            required="required"
                                            value="" name="enquiry_email"
                                            pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                           title="<?php //echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>">
+                                           title="<?php //echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; 
+                                                    ?>">
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control" value="" name="enquiry_mobile"
-                                           placeholder="<?php // echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                           placeholder="<?php // echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; 
+                                                        ?>"
                                            pattern="[7-9]{1}[0-9]{9}"
-                                           title="<?php //echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>"
+                                           title="<?php //echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; 
+                                                    ?>"
                                            required="">
                                 </div>
                                 <div class="form-group">
                                     <select name="enquiry_category" id="enquiry_category" class="form-control">
-                                        <option value=""><?php // echo $Zitiziti['SELECT_CATEGORY']; ?></option>
+                                        <option value=""><?php // echo $Zitiziti['SELECT_CATEGORY']; 
+                                                            ?></option>
                                         <?php
-    //foreach (getAllCategories() as $categories_row) {
-    ?>
+                                        //foreach (getAllCategories() as $categories_row) {
+                                        ?>
                                             <option
-                                                value="<?php //echo $categories_row['category_id']; ?>"><?php //echo $categories_row['category_name']; ?></option>
+                                                value="<?php //echo $categories_row['category_id']; 
+                                                        ?>"><?php //echo $categories_row['category_name']; 
+                                                                                                        ?></option>
                                             <?php
-    //}
-    ?>
+                                            //}
+                                            ?>
                                     </select>
                                 </div>
                                 <div class="form-group">
                         <textarea class="form-control" rows="3" name="enquiry_message"
-                                  placeholder="<?php //echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                  placeholder="<?php //echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; 
+                                                ?>"></textarea>
                                 </div>
                                 <input type="hidden" id="source">
                                 <button type="submit" id="home_enquiry_submit" name="home_enquiry_submit"
                                         class="btn btn-primary">
-                                    <?php // echo $Zitiziti['SUBMIT_REQUIREMENTS']; ?>
+                                    <?php // echo $Zitiziti['SUBMIT_REQUIREMENTS']; 
+                                    ?>
                                 </button>
                             </form>
                         </div>
@@ -208,79 +239,91 @@ if ($current_home_page == '1') {
                 <div class="row">
                     <div class="home-tit">
                         <h2>
-                            <span><?php //echo $Zitiziti['HOM-TOPSER-TIT']; ?></span> <?php //echo $Zitiziti['HOM-TOPSER-TIT1']; ?>
+                            <span><?php //echo $Zitiziti['HOM-TOPSER-TIT']; 
+                                    ?></span> <?php //echo $Zitiziti['HOM-TOPSER-TIT1']; 
+                                                                                        ?>
                         </h2>
-                        <p><?php //echo $Zitiziti['HOM-TOPSER-SUB-TIT']; ?></p>
+                        <p><?php //echo $Zitiziti['HOM-TOPSER-SUB-TIT']; 
+                            ?></p>
                     </div>
                     <div class="ho-popu-bod">
                         <?php
-    //$si = 1;
-    //foreach (getAllTopServiceProviders() as $row) {
+                        //$si = 1;
+                        //foreach (getAllTopServiceProviders() as $row) {
 
-    //$top_service_category_id = $row['top_service_provider_category_id'];
+                        //$top_service_category_id = $row['top_service_provider_category_id'];
 
-    //$top_service_listing_id = $row['top_service_provider_listings'];
+                        //$top_service_listing_id = $row['top_service_provider_listings'];
 
-    //$top_service_category_sql_row = getCategory($top_service_category_id);
+                        //$top_service_category_sql_row = getCategory($top_service_category_id);
 
-    ?>
+                        ?>
                             <div class="col-md-4">
                                 <div class="hot-page2-hom-pre-head">
-                                    <h4><?php //echo $all_texts_row['branding_title']; ?>
-                                        <span><?php //echo $top_service_category_sql_row['category_name']; ?></span></h4>
+                                    <h4><?php //echo $all_texts_row['branding_title']; 
+                                        ?>
+                                        <span><?php //echo $top_service_category_sql_row['category_name']; 
+                                                ?></span></h4>
                                 </div>
                                 <div class="hot-page2-hom-pre">
                                     <ul>
                                         <?php
-    //$top_list_array = explode(',', $top_service_listing_id);
-    //$vi = 1;
-    // foreach ($top_list_array as $top_all_listing_array) {
-    // $top_listing_row = getIdListing($top_all_listing_array);
-    // List Rating. for Rating of Star
-    //foreach (getListingReview($top_listing_row['listing_id']) as $star_rating_row) {
-    //  if ($star_rating_row["rate_cnt"] > 0) {
-    //   $star_rate_times = $star_rating_row["rate_cnt"];
-    //  $star_sum_rates = $star_rating_row["total_rate"];
-    //  $star_rate_one = $star_sum_rates / $star_rate_times;
-    //  $star_rate = number_format($star_rate_one, 1);
+                                        //$top_list_array = explode(',', $top_service_listing_id);
+                                        //$vi = 1;
+                                        // foreach ($top_list_array as $top_all_listing_array) {
+                                        // $top_listing_row = getIdListing($top_all_listing_array);
+                                        // List Rating. for Rating of Star
+                                        //foreach (getListingReview($top_listing_row['listing_id']) as $star_rating_row) {
+                                        //  if ($star_rating_row["rate_cnt"] > 0) {
+                                        //   $star_rate_times = $star_rating_row["rate_cnt"];
+                                        //  $star_sum_rates = $star_rating_row["total_rate"];
+                                        //  $star_rate_one = $star_sum_rates / $star_rate_times;
+                                        //  $star_rate = number_format($star_rate_one, 1);
 
-    // } else {
-    //  $rate_times = 0;
-    // $rate_value = 0;
-    // $star_rate = 0;
-    //}
-    //  }
-    ?>
+                                        // } else {
+                                        //  $rate_times = 0;
+                                        // $rate_value = 0;
+                                        // $star_rate = 0;
+                                        //}
+                                        //  }
+                                        ?>
                                             <li>
                                                 <div class="hot-page2-hom-pre-1"><img
                                                         src="<?php //if ($top_listing_row['profile_image'] != NULL || !empty($top_listing_row['profile_image'])) {
-    //  echo "images/listings/" . $top_listing_row['profile_image'];
-    //  } else {
-    //   echo "images/listings/hot4.jpg";
-    //} ?>" alt="">
+                                                                //  echo "images/listings/" . $top_listing_row['profile_image'];
+                                                                //  } else {
+                                                                //   echo "images/listings/hot4.jpg";
+                                                                //} 
+                                                                ?>" alt="">
                                                 </div>
                                                 <div class="hot-page2-hom-pre-2">
-                                                    <h5><?php // echo $top_listing_row['listing_name']; ?></h5>
-                                                    <span><?php //echo $top_listing_row['listing_address']; ?></span>
+                                                    <h5><?php // echo $top_listing_row['listing_name']; 
+                                                        ?></h5>
+                                                    <span><?php //echo $top_listing_row['listing_address']; 
+                                                            ?></span>
                                                 </div>
-                                                <?php //if ($star_rate != 0) { ?>
+                                                <?php //if ($star_rate != 0) { 
+                                                ?>
                                                     <div class="hot-page2-hom-pre-3">
-                                                        <span><?php //echo $star_rate; ?></span>
+                                                        <span><?php //echo $star_rate; 
+                                                                ?></span>
                                                     </div>
-                                                <?php //} ?>
-                                                <a href="<?php // echo $LISTING_URL . urlModifier($top_listing_row['listing_slug']); ?>"
+                                                <?php //} 
+                                                ?>
+                                                <a href="<?php // echo $LISTING_URL . urlModifier($top_listing_row['listing_slug']); 
+                                                            ?>"
                                                    class="fclick"></a>
                                             </li>
                                             <?php
-    //}
-    ?>
+                                            //}
+                                            ?>
 
                                     </ul>
                                 </div>
                             </div>
                             <?php
-    //}
-    ?>
+                            //}
+                            ?>
                     </div>
                 </div>
             </div>
@@ -298,14 +341,14 @@ if ($current_home_page == '1') {
                             $si = 1;
                             foreach (getAllSlider() as $slider_row) {
 
-                                ?>
+                            ?>
                                 <div class="carousel-item <?php if ($si == 1) { ?>active<?php } ?>">
                                     <img src="images/slider/<?php echo $slider_row['slider_photo']; ?>"
-                                         alt="Los Angeles"
-                                         width="1100" height="500" loading="lazy">
+                                        alt="Los Angeles"
+                                        width="1100" height="500" loading="lazy">
                                     <a href="<?php echo $slider_row['slider_link']; ?>" target="_blank"></a>
                                 </div>
-                                <?php
+                            <?php
                                 $si++;
                             }
                             ?>
@@ -335,11 +378,11 @@ if ($current_home_page == '1') {
                             <?php
                             if (isset($_SESSION['user_id'])) {
 
-                               $setting_job_show = $user_details_row['setting_job_show'];
-                               $setting_product_show = $user_details_row['setting_product_show'];
-                               $setting_coupon_show = $user_details_row['setting_coupon_show'];
-                               $setting_expert_show = $user_details_row['setting_expert_show'];
-                            }else{
+                                $setting_job_show = $user_details_row['setting_job_show'];
+                                $setting_product_show = $user_details_row['setting_product_show'];
+                                $setting_coupon_show = $user_details_row['setting_coupon_show'];
+                                $setting_expert_show = $user_details_row['setting_expert_show'];
+                            } else {
                                 $setting_job_show = 1;
                                 $setting_product_show = 1;
                                 $setting_coupon_show = 1;
@@ -405,7 +448,7 @@ if ($current_home_page == '1') {
                                 <li>
                                     <div class="plac-hom-box">
                                         <div class="plac-hom-box-im">
-                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/user/<?php echo $footer_row['expert_default_image']; ?>" class="b-lazy" alt="">
+                                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/user/<?php echo $footer_row['expert_default_image']; ?>" class="b-lazy" alt="">
                                             <div class="inn-text">
                                                 <h4><?php echo $Zitiziti['HOM-MODU-TIT-EXP']; ?></h4>
                                                 <a href="service-experts/"><?php echo $Zitiziti['HOM-MODU-BOOK-EXPERT-NOW']; ?> <i class="material-icons">arrow_forward</i></a>
@@ -436,45 +479,47 @@ if ($current_home_page == '1') {
     </section>
     <!--END-->
 
-<section class="news-hom-ban-sli pg-eve-ban" style="margin-top:35px">
-    <div class="news-hom-ban-sli-inn" style="padding:0 14%">
-        <ul class="multiple-items1">
-            <?php
-            $si = 1;
-            foreach (getAllTopViewsPremiumActiveEvents() as $top_event_row) {
-
-                $top_user_id = $top_event_row['user_id'];
-
-                $top_user_details_row = getUser($top_user_id);
-
-                ?>
-                <li>
-                    <div class="news-hban-box" >
-                        <div class="im">
-                            <img loading="lazy" src="/images/events/<?php echo $top_event_row['event_image']; ?>" alt="">
-                        </div>
-                        <div class="txt">
-                            <span class="news-cate"><?php echo $Zitiziti['EVENT_TOP_EVENTS']; ?></span><br>
-                            <span class="eve-date-sli"><?php echo dateDayFormatconverter($top_event_row['event_start_date']); ?>
-                                <b><?php echo dateMonthFormatconverter($top_event_row['event_start_date']); ?></b></span>
-                            <h2><?php echo $top_event_row['event_name']; ?></h2>
-                        </div>
-                        <a href="<?php echo $EVENT_URL . urlModifier($top_event_row['event_slug']); ?>"
-                           class="fclick"></a>
-                    </div>
-                </li>
+    <section class="news-hom-ban-sli pg-eve-ban" style="margin-top:35px">
+        <div class="news-hom-ban-sli-inn" style="padding:0 14%">
+            <ul class="multiple-items1">
                 <?php
-            }
-            ?>
-        </ul>
-    </div>
-</section>
-    
+                $si = 1;
+                foreach (getAllTopViewsPremiumActiveEvents() as $top_event_row) {
+                    $top_user_id = $top_event_row['user_id'];
+
+                    $top_user_details_row = getUser($top_user_id);
+
+                    // $decoded_city_slugs = (array)json_decode($top_event_row['city_slug'], true);
+                    // if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
+                ?>
+                    <li>
+                        <div class="news-hban-box">
+                            <div class="im">
+                                <img loading="lazy" src="/images/events/<?php echo $top_event_row['event_image']; ?>" alt="">
+                            </div>
+                            <div class="txt">
+                                <span class="news-cate"><?php echo $Zitiziti['EVENT_TOP_EVENTS']; ?></span><br>
+                                <span class="eve-date-sli"><?php echo dateDayFormatconverter($top_event_row['event_start_date']); ?>
+                                    <b><?php echo dateMonthFormatconverter($top_event_row['event_start_date']); ?></b></span>
+                                <h2><?php echo $top_event_row['event_name']; ?></h2>
+                            </div>
+                            <a href="<?php echo $EVENT_URL . urlModifier($top_event_row['event_slug']); ?>"
+                                class="fclick"></a>
+                        </div>
+                    </li>
+                <?php
+                    // }
+                }
+                ?>
+            </ul>
+        </div>
+    </section>
+
 
     <!--PRICING DETAILS-->
     <section class="<?php if ($footer_row['admin_language'] == 2) {
-        echo "lg-arb";
-    } ?> pri">
+                        echo "lg-arb";
+                    } ?> pri">
         <div class="container">
             <div class="row">
                 <div class="plac-det-tit-inn">
@@ -485,7 +530,7 @@ if ($current_home_page == '1') {
                         <?php
                         $si = 1;
                         foreach (getAllPlanType() as $plan_type_row) {
-                            ?>
+                        ?>
                             <li>
                                 <div class="pri-box">
                                     <div class="c2">
@@ -499,16 +544,22 @@ if ($current_home_page == '1') {
                                             <p><?php echo $Zitiziti['PRICING_BEST_VALUE_LARGE']; ?></p>
                                         <?php } else { ?>
                                             <p><?php echo $Zitiziti['PRICING_MADE_ENTERPRISES']; ?></p>
-                                            <?php
+                                        <?php
                                         } ?>
 
                                     </div>
                                     <div class="c3">
                                         <h2><span></span><?php if ($plan_type_row['plan_type_price'] == 0) {
-                                                echo $Zitiziti['FREE'];
-                                            } else {
-                                            if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } echo '' . $plan_type_row['plan_type_price']; if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; }
-                                            } ?></h2>
+                                                                echo $Zitiziti['FREE'];
+                                                            } else {
+                                                                if ($footer_row['currency_symbol_pos'] == 1) {
+                                                                    echo $footer_row['currency_symbol'];
+                                                                }
+                                                                echo '' . $plan_type_row['plan_type_price'];
+                                                                if ($footer_row['currency_symbol_pos'] == 2) {
+                                                                    echo $footer_row['currency_symbol'];
+                                                                }
+                                                            } ?></h2>
                                         <?php if ($plan_type_row['plan_type_id'] == 1) { ?>
                                             <p><?php echo $Zitiziti['PRICING_SINGLE_USER']; ?></p>
                                         <?php } elseif ($plan_type_row['plan_type_id'] == 2) { ?>
@@ -517,23 +568,23 @@ if ($current_home_page == '1') {
                                             <p><?php echo $Zitiziti['PRICING_MEDIUM_BUSINESS']; ?></p>
                                         <?php } else { ?>
                                             <p><?php echo $Zitiziti['PRICING_MADE_ENTERPRISES']; ?></p>
-                                            <?php
+                                        <?php
                                         } ?>
 
                                     </div>
                                     <div class="c5">
                                         <a href="<?php
-                                        if (isset($_SESSION['user_id'])) {
-                                            echo "db-plan-change";
-                                        } else {
-                                            echo "login";
-                                        } ?>" class="cta1"><?php echo $Zitiziti['PRICING_GET_START']; ?></a>
+                                                    if (isset($_SESSION['user_id'])) {
+                                                        echo "db-plan-change";
+                                                    } else {
+                                                        echo "login";
+                                                    } ?>" class="cta1"><?php echo $Zitiziti['PRICING_GET_START']; ?></a>
                                         <a href="pricing-details" class="cta2"
-                                           target="_blank"><?php echo $Zitiziti['HOM-VI-KNOW-MORE']; ?></a>
+                                            target="_blank"><?php echo $Zitiziti['HOM-VI-KNOW-MORE']; ?></a>
                                     </div>
                                 </div>
                             </li>
-                            <?php
+                        <?php
                             $si++;
                         }
                         ?>
@@ -558,17 +609,17 @@ if ($current_home_page == '1') {
                         <div class="hom-eve-com hom-eve-lhs">
                             <?php
 
-                    foreach (getAllTopEventsLimit(1, 2) as $topeventrow_1) { //To Fetch Top Events First Two Rows using position Id
+                            foreach (getAllTopEventsLimit(1, 2) as $topeventrow_1) { //To Fetch Top Events First Two Rows using position Id
 
-                        $event_name = $topeventrow_1['event_name'];
+                                $event_name = $topeventrow_1['event_name'];
 
-                        $event_sql_row = getEvent($event_name);
+                                $event_sql_row = getEvent($event_name);
 
-                        $user_id = $event_sql_row['user_id'];
+                                $user_id = $event_sql_row['user_id'];
 
-                        $user_details_row = getUser($user_id);
+                                $user_details_row = getUser($user_id);
 
-                        ?>
+                            ?>
                                 <div class="hom-eve-lhs-1 col-md-4">
                                     <div class="eve-box">
                                         <div>
@@ -591,10 +642,10 @@ if ($current_home_page == '1') {
                                             <div class="auth">
                                                 <img
                                                     src="images/user/<?php if (($user_details_row['profile_image'] == NULL) || empty($user_details_row['profile_image'])) {
-                            echo "1.jpg";
-                        } else {
-                            echo $user_details_row['profile_image'];
-                        } ?>" alt="">
+                                                                            echo "1.jpg";
+                                                                        } else {
+                                                                            echo $user_details_row['profile_image'];
+                                                                        } ?>" alt="">
                                                 <b><?php echo $Zitiziti['EVENT_HOSTED_BY']; ?></b><br>
                                                 <h4><?php echo $user_details_row['first_name']; ?></h4>
                                                 <a target="_blank"
@@ -605,23 +656,23 @@ if ($current_home_page == '1') {
                                     </div>
                                 </div>
                                 <?php
-                    }
-                    ?>
+                            }
+                                ?>
                             <div class="hom-eve-lhs-2 col-md-4">
                                 <ul>
                                     <?php
 
-                    foreach (getAllTopEventsLimit(3, 6) as $topeventrow_2) { //To Fetch Top Events First Two Rows using position Id
+                                    foreach (getAllTopEventsLimit(3, 6) as $topeventrow_2) { //To Fetch Top Events First Two Rows using position Id
 
-                        $event_name = $topeventrow_2['event_name'];
+                                        $event_name = $topeventrow_2['event_name'];
 
-                        $event_sql_row = getEvent($event_name);
+                                        $event_sql_row = getEvent($event_name);
 
-                        $user_id = $event_sql_row['user_id'];
+                                        $user_id = $event_sql_row['user_id'];
 
-                        $user_details_row = getUser($user_id);
+                                        $user_details_row = getUser($user_id);
 
-                        ?>
+                                    ?>
                                         <li>
                                             <div class="eve-box-list">
                                                 <img src="images/events/<?php echo $event_sql_row['event_image']; ?>"
@@ -635,8 +686,8 @@ if ($current_home_page == '1') {
                                             </div>
                                         </li>
                                         <?php
-                    }
-                    ?>
+                                    }
+                                        ?>
                                 </ul>
                             </div>
 
@@ -692,7 +743,8 @@ if ($current_home_page == '1') {
                             </div>
                             <div class="rhs">
                                 <h2><?php echo $Zitiziti['HOM-APP-TIT']; ?>
-                                    <span><?php echo $Zitiziti['HOM-APP-TIT-SUB']; ?></span></h2>
+                                    <span><?php echo $Zitiziti['HOM-APP-TIT-SUB']; ?></span>
+                                </h2>
                                 <ul>
                                     <li><?php echo $Zitiziti['HOM-APP-PO-1']; ?></li>
                                     <li><?php echo $Zitiziti['HOM-APP-PO-2']; ?></li>
@@ -710,9 +762,9 @@ if ($current_home_page == '1') {
         </div>
     </section>
     <!-- END -->
-    <?php
+<?php
 } elseif ($current_home_page == '2') {
-    ?>
+?>
 
     <!--START-->
     <section>
@@ -727,12 +779,12 @@ if ($current_home_page == '1') {
                         <ul class="travel-sliser">
                             <?php
                             foreach (getAllCategories() as $category_sql_row) {
-                                ?>
+                            ?>
                                 <li>
                                     <div class="plac-hom-box">
                                         <div class="plac-hom-box-im">
                                             <img
-                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="images/services/<?php echo $category_sql_row['category_image']; ?>"
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="images/services/<?php echo $category_sql_row['category_image']; ?>"
                                                 alt="">
                                             <h4><?php echo $category_sql_row['category_name']; ?></h4>
                                         </div>
@@ -741,10 +793,10 @@ if ($current_home_page == '1') {
                                             <span>More details</span>
                                         </div>
                                         <a href="<?php echo $ALL_LISTING_URL . urlModifier($category_sql_row['category_slug']); ?>"
-                                           class="fclick"></a>
+                                            class="fclick"></a>
                                     </div>
                                 </li>
-                                <?php
+                            <?php
                             }
                             ?>
                         </ul>
@@ -772,7 +824,7 @@ if ($current_home_page == '1') {
                                 $category_id = $expert_categories_row['category_id'];
 
                                 $total_experts_category = getCountCategoryExperts($category_id);
-                                ?>
+                            ?>
                                 <li>
                                     <div class="plac-hom-box">
                                         <div class="plac-hom-box-im">
@@ -786,10 +838,10 @@ if ($current_home_page == '1') {
                                             <span>More details</span>
                                         </div>
                                         <a href="<?php echo $ALL_EXPERTS_URL . urlModifier($expert_categories_row['category_slug']); ?>"
-                                           class="fclick"></a>
+                                            class="fclick"></a>
                                     </div>
                                 </li>
-                                <?php
+                            <?php
                             }
                             ?>
                         </ul>
@@ -888,7 +940,6 @@ if ($current_home_page == '1') {
                                         //$star_rate_one = (($Star_rate_value)/5)*100;
                                         $star_rate_two = number_format($star_rate_one, 1);
                                         $star_rate = $star_rate_two;
-
                                     } else {
                                         $rate_times = 0;
                                         $rate_value = 0;
@@ -896,16 +947,16 @@ if ($current_home_page == '1') {
                                     }
                                 }
 
-                                ?>
+                            ?>
                                 <li>
                                     <div class="plac-hom-box">
                                         <div class="plac-hom-box-im">
                                             <img
                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php if ($listing_sql_row['profile_image'] != NULL || !empty($listing_sql_row['profile_image'])) {
-                                                    echo "images/listings/" . $listing_sql_row['profile_image'];
-                                                } else {
-                                                    echo "images/listings/" . $footer_row['listing_default_image'];
-                                                } ?>" alt="">
+                                                                                                                                                                echo "images/listings/" . $listing_sql_row['profile_image'];
+                                                                                                                                                            } else {
+                                                                                                                                                                echo "images/listings/" . $footer_row['listing_default_image'];
+                                                                                                                                                            } ?>" alt="">
                                             <h4><?php echo $listing_sql_row['listing_name']; ?></h4>
                                             <span
                                                 class="plac-det-cate"><?php echo $popular_business_category_sql_row['category_name']; ?></span>
@@ -917,16 +968,16 @@ if ($current_home_page == '1') {
                                                     <label class="rat">
                                                         <?php
                                                         for ($i = 1; $i <= ceil($star_rate_two); $i++) {
-                                                            ?>
+                                                        ?>
                                                             <i class="material-icons">star</i>
-                                                            <?php
+                                                        <?php
                                                         }
                                                         $bal_star_rate = abs(ceil($star_rate_two) - 5);
 
                                                         for ($i = 1; $i <= $bal_star_rate; $i++) {
-                                                            ?>
+                                                        ?>
                                                             <i class="material-icons">star_border</i>
-                                                            <?php
+                                                        <?php
                                                         }
                                                         ?>
                                                     </label>
@@ -936,10 +987,10 @@ if ($current_home_page == '1') {
                                             <span>More details</span>
                                         </div>
                                         <a href="<?php echo $LISTING_URL . urlModifier($listing_sql_row['listing_slug']); ?>"
-                                           class="fclick"></a>
+                                            class="fclick"></a>
                                     </div>
                                 </li>
-                                <?php
+                            <?php
                                 $pop_bus++;
                             }
                             ?>
@@ -976,21 +1027,21 @@ if ($current_home_page == '1') {
 
                                 $user_details_row = getUser($user_id);
 
-                                ?>
+                            ?>
                                 <li>
                                     <div class="plac-hom-box">
                                         <div class="plac-hom-box-im">
                                             <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="images/events/<?php echo $event_sql_row['event_image']; ?>"
-                                                 alt="">
+                                                alt="">
                                             <h4><?php echo $event_sql_row['event_name']; ?></h4>
                                             <span
                                                 class="plac-det-cate"><?php echo dateMonthFormatconverter($event_sql_row['event_start_date']); ?><?php echo dateDayFormatconverter($event_sql_row['event_start_date']); ?></span>
                                         </div>
                                         <a href="<?php echo $EVENT_URL . urlModifier($event_sql_row['event_slug']); ?>"
-                                           class="fclick"></a>
+                                            class="fclick"></a>
                                     </div>
                                 </li>
-                                <?php
+                            <?php
                             }
                             ?>
                         </ul>
@@ -1009,9 +1060,11 @@ if ($current_home_page == '1') {
                 <div class="row">
                     <div class="plac-hom-tit plac-hom-tit-ic-nws">
                         <h2><?php echo $Zitiziti['NEWS-HOMEPAGE-BANNER-H1-TEXT-2']; ?>
-                            <b><?php echo $place_row['place_name']; ?></b></h2>
+                            <b><?php echo $place_row['place_name']; ?></b>
+                        </h2>
                         <p><?php echo $Zitiziti['NEWS-HOMEPAGE-BANNER-P-TEXT']; ?>
-                            <b><?php echo $Zitiziti['PLACE-NEWS-B']; ?></b></p>
+                            <b><?php echo $Zitiziti['PLACE-NEWS-B']; ?></b>
+                        </p>
                     </div>
                     <div class="plac-hom-all-pla plac-det-eve">
                         <ul class="travel-sliser">
@@ -1030,7 +1083,7 @@ if ($current_home_page == '1') {
 
                                 $home_page_slider_category_name = $home_page_slider_category_row['category_name'];
 
-                                ?>
+                            ?>
                                 <li>
                                     <div class="plac-hom-box">
                                         <div class="plac-hom-box-im">
@@ -1043,7 +1096,7 @@ if ($current_home_page == '1') {
                                                 class="plac-det-cate"><?php echo $home_page_slider_category_name; ?></span>
                                         </div>
                                         <a href="<?php echo $NEWS_DETAIL_URL . urlModifier($home_page_slider_news_sql_row['news_slug']); ?>"
-                                           class="fclick"></a>
+                                            class="fclick"></a>
                                     </div>
                                 </li>
                             <?php } ?>
@@ -1074,7 +1127,7 @@ if ($current_home_page == '1') {
 
                                 $category_row = getPlaceCategory($category_id);
 
-                                ?>
+                            ?>
                                 <li>
                                     <div class="plac-hom-box">
                                         <div class="plac-hom-box-im">
@@ -1088,10 +1141,10 @@ if ($current_home_page == '1') {
                                             <span><?php echo $Zitiziti['PLACE-MORE-DETAILS']; ?></span>
                                         </div>
                                         <a href="<?php echo $PLACE_DETAIL_URL . urlModifier($placerow['place_slug']); ?>"
-                                           class="fclick"></a>
+                                            class="fclick"></a>
                                     </div>
                                 </li>
-                                <?php
+                            <?php
                             }
                             ?>
                         </ul>
@@ -1101,9 +1154,9 @@ if ($current_home_page == '1') {
         </div>
     </section>
     <!--END-->
-    <?php
+<?php
 } elseif ($current_home_page == '3') {
-    ?>
+?>
 
     <!-- START -->
     <section>
@@ -1122,7 +1175,7 @@ if ($current_home_page == '1') {
                         <ul>
                             <?php
                             foreach (getAllCategories() as $category_sql_row) {
-                                ?>
+                            ?>
                                 <li>
                                     <div class="land-pack-grid">
                                         <div class="land-pack-grid-img">
@@ -1137,10 +1190,10 @@ if ($current_home_page == '1') {
                                             </h4>
                                         </div>
                                         <a href="<?php echo $ALL_LISTING_URL . urlModifier($category_sql_row['category_slug']); ?>"
-                                           class="land-pack-grid-btn"><?php echo $Zitiziti['VIEW_ALL_LISTINGS']; ?></a>
+                                            class="land-pack-grid-btn"><?php echo $Zitiziti['VIEW_ALL_LISTINGS']; ?></a>
                                     </div>
                                 </li>
-                                <?php
+                            <?php
                             }
                             ?>
                         </ul>
@@ -1185,7 +1238,6 @@ if ($current_home_page == '1') {
                                         //$star_rate_one = (($Star_rate_value)/5)*100;
                                         $star_rate_two = number_format($star_rate_one, 1);
                                         $star_rate = $star_rate_two;
-
                                     } else {
                                         $rate_times = 0;
                                         $rate_value = 0;
@@ -1193,15 +1245,15 @@ if ($current_home_page == '1') {
                                     }
                                 }
 
-                                ?>
+                            ?>
                                 <li>
                                     <div class="testmo hom4-prop-box">
                                         <img
                                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?><?php if ($listing_sql_row['profile_image'] != NULL || !empty($listing_sql_row['profile_image'])) {
-                                                echo "images/listings/" . $listing_sql_row['profile_image'];
-                                            } else {
-                                                echo "images/listings/" . $footer_row['listing_default_image'];
-                                            } ?>" alt="">
+                                                                                                                                                                                            echo "images/listings/" . $listing_sql_row['profile_image'];
+                                                                                                                                                                                        } else {
+                                                                                                                                                                                            echo "images/listings/" . $footer_row['listing_default_image'];
+                                                                                                                                                                                        } ?>" alt="">
                                         <div>
                                             <h4>
                                                 <a href="<?php echo $LISTING_URL . urlModifier($listing_sql_row['listing_slug']); ?>"><?php echo $listing_sql_row['listing_name']; ?></a>
@@ -1210,16 +1262,16 @@ if ($current_home_page == '1') {
                                                 <label class="rat">
                                                     <?php
                                                     for ($i = 1; $i <= ceil($star_rate_two); $i++) {
-                                                        ?>
+                                                    ?>
                                                         <i class="material-icons">star</i>
-                                                        <?php
+                                                    <?php
                                                     }
                                                     $bal_star_rate = abs(ceil($star_rate_two) - 5);
 
                                                     for ($i = 1; $i <= $bal_star_rate; $i++) {
-                                                        ?>
+                                                    ?>
                                                         <i class="material-icons">star_border</i>
-                                                        <?php
+                                                    <?php
                                                     }
                                                     ?>
                                                 </label>
@@ -1228,10 +1280,10 @@ if ($current_home_page == '1') {
                                                     href="#"><?php echo $popular_business_category_sql_row['category_name']; ?></a></span>
                                         </div>
                                         <a href="<?php echo $LISTING_URL . urlModifier($listing_sql_row['listing_slug']); ?>"
-                                           class="fclick"></a>
+                                            class="fclick"></a>
                                     </div>
                                 </li>
-                                <?php
+                            <?php
                                 $pop_bus++;
                             }
                             ?>
@@ -1246,20 +1298,21 @@ if ($current_home_page == '1') {
 
     <!--PRICING DETAILS-->
     <section class="<?php if ($footer_row['admin_language'] == 2) {
-        echo "lg-arb";
-    } ?> pri">
+                        echo "lg-arb";
+                    } ?> pri">
         <div class="container">
             <div class="row">
                 <div class="tit">
                     <h2>
-                        <span><?php echo $Zitiziti['CHOOSE_YOUR_PLAN']; ?></span></h2>
+                        <span><?php echo $Zitiziti['CHOOSE_YOUR_PLAN']; ?></span>
+                    </h2>
                 </div>
                 <div>
                     <ul>
                         <?php
                         $si = 1;
                         foreach (getAllPlanType() as $plan_type_row) {
-                            ?>
+                        ?>
                             <li>
                                 <div class="pri-box">
                                     <div class="c2">
@@ -1273,16 +1326,21 @@ if ($current_home_page == '1') {
                                             <p><?php echo $Zitiziti['PRICING_BEST_VALUE_LARGE']; ?></p>
                                         <?php } else { ?>
                                             <p><?php echo $Zitiziti['PRICING_MADE_ENTERPRISES']; ?></p>
-                                            <?php
+                                        <?php
                                         } ?>
 
                                     </div>
                                     <div class="c3">
                                         <h2><span></span><?php if ($plan_type_row['plan_type_price'] == 0) {
-                                                echo $Zitiziti['FREE'];
-                                            } else {
-                                            if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?><?php echo '' . $plan_type_row['plan_type_price']; if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; }
-                                            } ?></h2>
+                                                                echo $Zitiziti['FREE'];
+                                                            } else {
+                                                                if ($footer_row['currency_symbol_pos'] == 1) {
+                                                                    echo $footer_row['currency_symbol'];
+                                                                } ?><?php echo '' . $plan_type_row['plan_type_price'];
+                                                                                                                                    if ($footer_row['currency_symbol_pos'] == 2) {
+                                                                                                                                        echo $footer_row['currency_symbol'];
+                                                                                                                                    }
+                                                                                                                                } ?></h2>
                                         <?php if ($plan_type_row['plan_type_id'] == 1) { ?>
                                             <p><?php echo $Zitiziti['PRICING_SINGLE_USER']; ?></p>
                                         <?php } elseif ($plan_type_row['plan_type_id'] == 2) { ?>
@@ -1291,23 +1349,23 @@ if ($current_home_page == '1') {
                                             <p><?php echo $Zitiziti['PRICING_MEDIUM_BUSINESS']; ?></p>
                                         <?php } else { ?>
                                             <p><?php echo $Zitiziti['PRICING_MADE_ENTERPRISES']; ?></p>
-                                            <?php
+                                        <?php
                                         } ?>
 
                                     </div>
                                     <div class="c5">
                                         <a href="<?php
-                                        if (isset($_SESSION['user_id'])) {
-                                            echo "db-plan-change";
-                                        } else {
-                                            echo "login";
-                                        } ?>" class="cta1"><?php echo $Zitiziti['PRICING_GET_START']; ?></a>
+                                                    if (isset($_SESSION['user_id'])) {
+                                                        echo "db-plan-change";
+                                                    } else {
+                                                        echo "login";
+                                                    } ?>" class="cta1"><?php echo $Zitiziti['PRICING_GET_START']; ?></a>
                                         <a href="pricing-details" class="cta2"
-                                           target="_blank"><?php echo $Zitiziti['HOM-VI-KNOW-MORE']; ?></a>
+                                            target="_blank"><?php echo $Zitiziti['HOM-VI-KNOW-MORE']; ?></a>
                                     </div>
                                 </div>
                             </li>
-                            <?php
+                        <?php
                             $si++;
                         }
                         ?>
@@ -1339,13 +1397,13 @@ if ($current_home_page == '1') {
 
                     $user_details_row = getUser($user_id);
 
-                    ?>
+                ?>
                     <li>
                         <div class="news-hban-box">
                             <div class="im">
                                 <img loading="lazy"
-                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/events/<?php echo $event_sql_row['event_image']; ?>"
-                                     alt="">
+                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/events/<?php echo $event_sql_row['event_image']; ?>"
+                                    alt="">
                             </div>
                             <div class="txt">
                                 <span
@@ -1355,10 +1413,10 @@ if ($current_home_page == '1') {
                                     : <?php echo dateFormatconverter($event_sql_row['event_cdt']); ?></span>
                             </div>
                             <a href="<?php echo $EVENT_URL . urlModifier($event_sql_row['event_slug']); ?>"
-                               class="fclick"></a>
+                                class="fclick"></a>
                         </div>
                     </li>
-                    <?php
+                <?php
                 }
                 ?>
             </ul>
@@ -1397,49 +1455,48 @@ if ($current_home_page == '1') {
                                 if ($reviewss_row['price_rating'] > 0) {
 
                                     $star_rate = $reviewss_row['price_rating'];
-
                                 } else {
                                     $star_rate = 0;
                                 }
 
-                                ?>
+                            ?>
                                 <li>
                                     <div class="testmo">
                                         <img
                                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/user/<?php if (($user_details_row['profile_image'] == NULL) || empty($user_details_row['profile_image'])) {
-                                                echo "1.jpg";
-                                            } else {
-                                                echo $user_details_row['profile_image'];
-                                            } ?>" alt="">
+                                                                                                                                                                                                        echo "1.jpg";
+                                                                                                                                                                                                    } else {
+                                                                                                                                                                                                        echo $user_details_row['profile_image'];
+                                                                                                                                                                                                    } ?>" alt="">
                                         <h4><?php echo $user_details_row['first_name']; ?></h4>
-                                    <span><?php echo $Zitiziti['SERVICE-EXPERT-WRITTEN-REVIEW-TO']; ?> <a
-                                            href="<?php echo $LISTING_URL . urlModifier($listing_sql_row['listing_slug']); ?>"><?php echo $listing_sql_row['listing_name']; ?></a></span>
+                                        <span><?php echo $Zitiziti['SERVICE-EXPERT-WRITTEN-REVIEW-TO']; ?> <a
+                                                href="<?php echo $LISTING_URL . urlModifier($listing_sql_row['listing_slug']); ?>"><?php echo $listing_sql_row['listing_name']; ?></a></span>
 
                                         <?php
                                         if ($star_rate != 0) {
-                                            ?>
+                                        ?>
                                             <label class="rat">
                                                 <?php
                                                 for ($i = 1; $i <= ceil($star_rate); $i++) {
-                                                    ?>
+                                                ?>
                                                     <i class="material-icons">star</i>
-                                                    <?php
+                                                <?php
                                                 }
                                                 $bal_star_rate = abs(ceil($star_rate) - 5);
 
                                                 for ($i = 1; $i <= $bal_star_rate; $i++) {
-                                                    ?>
+                                                ?>
                                                     <i class="material-icons">star_border</i>
-                                                    <?php
+                                                <?php
                                                 }
                                                 ?>
                                             </label>
-                                            <?php
+                                        <?php
                                         } ?>
                                         <p><?php echo $reviewss_row['review_message']; ?></p>
                                     </div>
                                 </li>
-                                <?php
+                            <?php
                             } ?>
                         </ul>
                     </div>
@@ -1465,7 +1522,7 @@ if ($current_home_page == '1') {
                                     <div>
                                         <span>1</span>
                                         <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/icon/how1.png"
-                                             alt="">
+                                            alt="">
                                         <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-1']; ?></h4>
                                         <p><?php echo $Zitiziti['HOM-HOW-P-SUB-1']; ?></p>
                                     </div>
@@ -1474,7 +1531,7 @@ if ($current_home_page == '1') {
                                     <div>
                                         <span>2</span>
                                         <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/icon/how2.png"
-                                             alt="">
+                                            alt="">
                                         <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-2']; ?></h4>
                                         <p><?php echo $Zitiziti['HOM-HOW-P-SUB-2']; ?></p>
                                     </div>
@@ -1483,7 +1540,7 @@ if ($current_home_page == '1') {
                                     <div>
                                         <span>3</span>
                                         <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/icon/how3.png"
-                                             alt="">
+                                            alt="">
                                         <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-3']; ?></h4>
                                         <p><?php echo $Zitiziti['HOM-HOW-P-SUB-3']; ?></p>
                                     </div>
@@ -1492,7 +1549,7 @@ if ($current_home_page == '1') {
                                     <div>
                                         <span>4</span>
                                         <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/icon/how4.png"
-                                             alt="">
+                                            alt="">
                                         <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-4']; ?></h4>
                                         <p><?php echo $Zitiziti['HOM-HOW-P-SUB-4']; ?></p>
                                     </div>
@@ -1507,7 +1564,8 @@ if ($current_home_page == '1') {
                             </div>
                             <div class="rhs">
                                 <h2><?php echo $Zitiziti['HOM-APP-TIT']; ?>
-                                    <span><?php echo $Zitiziti['HOM-APP-TIT-SUB']; ?></span></h2>
+                                    <span><?php echo $Zitiziti['HOM-APP-TIT-SUB']; ?></span>
+                                </h2>
                                 <ul>
                                     <li><?php echo $Zitiziti['HOM-APP-PO-1']; ?></li>
                                     <li><?php echo $Zitiziti['HOM-APP-PO-2']; ?></li>
@@ -1518,15 +1576,17 @@ if ($current_home_page == '1') {
                                 <form>
                                     <ul>
                                         <li>
-                                            <input type="email" placeholder="Enter email id" required></li>
+                                            <input type="email" placeholder="Enter email id" required>
+                                        </li>
                                         <li>
-                                            <input type="submit" value="Get App Link"></li>
+                                            <input type="submit" value="Get App Link">
+                                        </li>
                                     </ul>
                                 </form>
                                 <a href="#"><img loading="lazy"
-                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/android.png" alt=""> </a>
+                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/android.png" alt=""> </a>
                                 <a href="#"><img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/apple.png"
-                                                 alt=""> </a>
+                                        alt=""> </a>
                             </div>
                         </div>
                     <?php } ?>
@@ -1537,9 +1597,9 @@ if ($current_home_page == '1') {
     <!-- END -->
 
 
-    <?php
+<?php
 } elseif ($current_home_page == '4' || $current_home_page == '5' || $current_home_page == '6' || $current_home_page == '7' || $current_home_page == '8' || $current_home_page == '9') {
-    ?>
+?>
 
 
     <!-- START -->
@@ -1577,7 +1637,6 @@ if ($current_home_page == '1') {
                                         //$star_rate_one = (($Star_rate_value)/5)*100;
                                         $star_rate_two = number_format($star_rate_one, 1);
                                         $star_rate = $star_rate_two;
-
                                     } else {
                                         $rate_times = 0;
                                         $rate_value = 0;
@@ -1585,15 +1644,15 @@ if ($current_home_page == '1') {
                                     }
                                 }
 
-                                ?>
+                            ?>
                                 <li>
                                     <div class="testmo hom4-prop-box">
                                         <img
                                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?><?php if ($listing_sql_row['profile_image'] != NULL || !empty($listing_sql_row['profile_image'])) {
-                                                echo "images/listings/" . $listing_sql_row['profile_image'];
-                                            } else {
-                                                echo "images/listings/" . $footer_row['listing_default_image'];
-                                            } ?>" alt="">
+                                                                                                                                                                                            echo "images/listings/" . $listing_sql_row['profile_image'];
+                                                                                                                                                                                        } else {
+                                                                                                                                                                                            echo "images/listings/" . $footer_row['listing_default_image'];
+                                                                                                                                                                                        } ?>" alt="">
                                         <div>
                                             <h4>
                                                 <a href="<?php echo $LISTING_URL . urlModifier($listing_sql_row['listing_slug']); ?>"><?php echo $listing_sql_row['listing_name']; ?></a>
@@ -1602,16 +1661,16 @@ if ($current_home_page == '1') {
                                                 <label class="rat">
                                                     <?php
                                                     for ($i = 1; $i <= ceil($star_rate_two); $i++) {
-                                                        ?>
+                                                    ?>
                                                         <i class="material-icons">star</i>
-                                                        <?php
+                                                    <?php
                                                     }
                                                     $bal_star_rate = abs(ceil($star_rate_two) - 5);
 
                                                     for ($i = 1; $i <= $bal_star_rate; $i++) {
-                                                        ?>
+                                                    ?>
                                                         <i class="material-icons">star_border</i>
-                                                        <?php
+                                                    <?php
                                                     }
                                                     ?>
                                                 </label>
@@ -1620,10 +1679,10 @@ if ($current_home_page == '1') {
                                                     href="#"><?php echo $popular_business_category_sql_row['category_name']; ?></a></span>
                                         </div>
                                         <a href="<?php echo $LISTING_URL . urlModifier($listing_sql_row['listing_slug']); ?>"
-                                           class="fclick"></a>
+                                            class="fclick"></a>
                                     </div>
                                 </li>
-                                <?php
+                            <?php
                                 $pop_bus++;
                             }
                             ?>
@@ -1695,49 +1754,48 @@ if ($current_home_page == '1') {
                                 if ($reviewss_row['price_rating'] > 0) {
 
                                     $star_rate = $reviewss_row['price_rating'];
-
                                 } else {
                                     $star_rate = 0;
                                 }
 
-                                ?>
+                            ?>
                                 <li>
                                     <div class="testmo">
                                         <img
                                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/user/<?php if (($user_details_row['profile_image'] == NULL) || empty($user_details_row['profile_image'])) {
-                                                echo "1.jpg";
-                                            } else {
-                                                echo $user_details_row['profile_image'];
-                                            } ?>" alt="">
+                                                                                                                                                                                                        echo "1.jpg";
+                                                                                                                                                                                                    } else {
+                                                                                                                                                                                                        echo $user_details_row['profile_image'];
+                                                                                                                                                                                                    } ?>" alt="">
                                         <h4><?php echo $user_details_row['first_name']; ?></h4>
-                                    <span><?php echo $Zitiziti['SERVICE-EXPERT-WRITTEN-REVIEW-TO']; ?> <a
-                                            href="<?php echo $LISTING_URL . urlModifier($listing_sql_row['listing_slug']); ?>"><?php echo $listing_sql_row['listing_name']; ?></a></span>
+                                        <span><?php echo $Zitiziti['SERVICE-EXPERT-WRITTEN-REVIEW-TO']; ?> <a
+                                                href="<?php echo $LISTING_URL . urlModifier($listing_sql_row['listing_slug']); ?>"><?php echo $listing_sql_row['listing_name']; ?></a></span>
 
                                         <?php
                                         if ($star_rate != 0) {
-                                            ?>
+                                        ?>
                                             <label class="rat">
                                                 <?php
                                                 for ($i = 1; $i <= ceil($star_rate); $i++) {
-                                                    ?>
+                                                ?>
                                                     <i class="material-icons">star</i>
-                                                    <?php
+                                                <?php
                                                 }
                                                 $bal_star_rate = abs(ceil($star_rate) - 5);
 
                                                 for ($i = 1; $i <= $bal_star_rate; $i++) {
-                                                    ?>
+                                                ?>
                                                     <i class="material-icons">star_border</i>
-                                                    <?php
+                                                <?php
                                                 }
                                                 ?>
                                             </label>
-                                            <?php
+                                        <?php
                                         } ?>
                                         <p><?php echo $reviewss_row['review_message']; ?></p>
                                     </div>
                                 </li>
-                                <?php
+                            <?php
                             } ?>
                         </ul>
                     </div>
@@ -1765,7 +1823,7 @@ if ($current_home_page == '1') {
                                     <div>
                                         <span>1</span>
                                         <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/icon/how1.png"
-                                             alt="">
+                                            alt="">
                                         <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-1']; ?></h4>
                                         <p><?php echo $Zitiziti['HOM-HOW-P-SUB-1']; ?></p>
                                     </div>
@@ -1774,7 +1832,7 @@ if ($current_home_page == '1') {
                                     <div>
                                         <span>2</span>
                                         <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/icon/how2.png"
-                                             alt="">
+                                            alt="">
                                         <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-2']; ?></h4>
                                         <p><?php echo $Zitiziti['HOM-HOW-P-SUB-2']; ?></p>
                                     </div>
@@ -1783,7 +1841,7 @@ if ($current_home_page == '1') {
                                     <div>
                                         <span>3</span>
                                         <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/icon/how3.png"
-                                             alt="">
+                                            alt="">
                                         <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-3']; ?></h4>
                                         <p><?php echo $Zitiziti['HOM-HOW-P-SUB-3']; ?></p>
                                     </div>
@@ -1792,7 +1850,7 @@ if ($current_home_page == '1') {
                                     <div>
                                         <span>4</span>
                                         <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/icon/how4.png"
-                                             alt="">
+                                            alt="">
                                         <h4><?php echo $Zitiziti['HOM-HOW-P-TIT-4']; ?></h4>
                                         <p><?php echo $Zitiziti['HOM-HOW-P-SUB-4']; ?></p>
                                     </div>
@@ -1808,7 +1866,8 @@ if ($current_home_page == '1') {
                             </div>
                             <div class="rhs">
                                 <h2><?php echo $Zitiziti['HOM-APP-TIT']; ?>
-                                    <span><?php echo $Zitiziti['HOM-APP-TIT-SUB']; ?></span></h2>
+                                    <span><?php echo $Zitiziti['HOM-APP-TIT-SUB']; ?></span>
+                                </h2>
                                 <ul>
                                     <li><?php echo $Zitiziti['HOM-APP-PO-1']; ?></li>
                                     <li><?php echo $Zitiziti['HOM-APP-PO-2']; ?></li>
@@ -1819,15 +1878,17 @@ if ($current_home_page == '1') {
                                 <form>
                                     <ul>
                                         <li>
-                                            <input type="email" placeholder="Enter email id" required></li>
+                                            <input type="email" placeholder="Enter email id" required>
+                                        </li>
                                         <li>
-                                            <input type="submit" value="Get App Link"></li>
+                                            <input type="submit" value="Get App Link">
+                                        </li>
                                     </ul>
                                 </form>
                                 <a href="#"><img loading="lazy"
-                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/android.png" alt=""> </a>
+                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/android.png" alt=""> </a>
                                 <a href="#"><img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/apple.png"
-                                                 alt=""> </a>
+                                        alt=""> </a>
                             </div>
                         </div>
                     <?php } ?>
@@ -1837,6 +1898,6 @@ if ($current_home_page == '1') {
     </section>
     <!-- END -->
 
-    <?php
+<?php
 }
 ?>

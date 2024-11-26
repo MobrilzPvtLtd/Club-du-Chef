@@ -75,11 +75,9 @@ if (file_exists('../config/news_page_authentication.php')) {
                     $get_ad_row = getAds($ad_position_id);
                     $ad_enquiry_photo = $get_ad_row['ad_enquiry_photo'];
                     ?>
-                    <a href="<?php echo stripslashes($get_ad_row['ad_link']); ?>"><img loading="lazy" src="<?php echo $slash; ?>/images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
-                            echo $ad_enquiry_photo;
-                        } else {
-                            echo "ads1.png";
-                        } ?>" alt=""></a>
+                    <a href="<?php echo htmlspecialchars(stripslashes($get_ad_row['ad_link'])); ?>">
+                        <img loading="lazy" src="<?php echo htmlspecialchars($slash); ?>/images/ads/<?php echo $ad_enquiry_photo ? htmlspecialchars($ad_enquiry_photo) : 'ads1.png'; ?>" alt="Advertisement">
+                    </a>
                 </div>
                 <div class="news-com-tit">
                     <h2><?php echo $Zitiziti['NEWS-TRENDINGS']; ?></h2>
@@ -87,61 +85,45 @@ if (file_exists('../config/news_page_authentication.php')) {
                 <?php
                 $news_si = 1;
                 foreach (getAllNewsTrending() as $home_page_trending_row) {
+                    $home_page_trending_news_id = $home_page_trending_row['news_id'];
+                    $home_page_trending_news_trending_id = $home_page_trending_row['trending_news_id'];
 
-                $home_page_trending_news_id = $home_page_trending_row['news_id'];
+                    $home_page_trending_news_sql_row = getIdNews($home_page_trending_news_id);
+                    $home_page_trending_category_id = $home_page_trending_news_sql_row['category_id'];
+                    $home_page_trending_category_row = getNewsCategory($home_page_trending_category_id);
+                    $home_page_trending_category_name = $home_page_trending_category_row['category_name'];
 
-                $home_page_trending_news_trending_id = $home_page_trending_row['trending_news_id'];
-
-                $home_page_trending_news_sql_row = getIdNews($home_page_trending_news_id);
-
-                $home_page_trending_category_id = $home_page_trending_news_sql_row['category_id'];
-
-                $home_page_trending_category_row = getNewsCategory($home_page_trending_category_id);
-
-                $home_page_trending_category_name = $home_page_trending_category_row['category_name'];
-
+                    // $decoded_city_slugs = (array)json_decode($home_page_trending_row['city_slug'], true); 
+                    // if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
+                    if ($news_si == 1 || $news_si == 4) {
+                        echo '<div class="col-md-3">';
+                    } elseif ($news_si == 3) {
+                        echo '<div class="col-md-6">';
+                    }
                 ?>
-                <?php
-                if ($news_si == 1 || $news_si == 4){
-                ?>
-                <div class="col-md-3">
-                    <?php
-                    }if ($news_si == 3){
-                    ?>
-                    <div class="col-md-6">
-                        <?php
-                        }
-                        ?>
-
-                        <div class="news-home-box <?php if ($news_si == 3) {
-                            echo "news-home-box-big";
-                        } ?>">
-                            <div class="im">
-                                <img loading="lazy" src="<?php echo $slash; ?>/news/images/news/<?php echo $home_page_trending_news_sql_row['news_image']; ?>"
-                                     alt="">
-                            </div>
-                            <div class="txt">
-                                <span class="news-cate"><?php echo $home_page_trending_category_name; ?></span>
-                                <h2><?php echo stripslashes($home_page_trending_news_sql_row['news_title']); ?></h2>
-                            <span
-                                class="news-date"><?php echo dateFormatconverter($home_page_trending_news_sql_row['news_cdt']); ?></span>
-                            </div>
-                            <a href="<?php echo $NEWS_DETAIL_URL . urlModifier($home_page_trending_news_sql_row['news_slug']); ?>" class="fclick"></a>
+                    <div class="news-home-box <?php echo ($news_si == 3) ? 'news-home-box-big' : ''; ?>">
+                        <div class="im">
+                            <img loading="lazy" src="<?php echo htmlspecialchars($slash); ?>/news/images/news/<?php echo htmlspecialchars($home_page_trending_news_sql_row['news_image']); ?>" alt="News Image">
                         </div>
-                        <?php
-                        if ($news_si == 2 || $news_si == 3 || $news_si == 6){
-                        ?>
+                        <div class="txt">
+                            <span class="news-cate"><?php echo htmlspecialchars($home_page_trending_category_name); ?></span>
+                            <h2><?php echo htmlspecialchars(stripslashes($home_page_trending_news_sql_row['news_title'])); ?></h2>
+                            <span class="news-date"><?php echo dateFormatconverter($home_page_trending_news_sql_row['news_cdt']); ?></span>
+                        </div>
+                        <a href="<?php echo $NEWS_DETAIL_URL . urlModifier($home_page_trending_news_sql_row['news_slug']); ?>" class="fclick"></a>
                     </div>
                 <?php
+                        if ($news_si == 2 || $news_si == 3 || $news_si == 6) {
+                            echo '</div>';
+                        }
+                    // }
+                $news_si++;
                 }
                 ?>
-                    <?php
-                    $news_si++;
-                    }
-                    ?>
                 </div>
             </div>
         </div>
+    </div>
 </section>
 <!--END-->
 
@@ -164,6 +146,8 @@ if (file_exists('../config/news_page_authentication.php')) {
 
                 $home_page_slider_category_name = $home_page_slider_category_row['category_name'];
 
+                $decoded_city_slugs = (array)json_decode($home_page_slider_news_sql_row['city_slug'], true);
+                if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                 ?>
                 <li>
                     <div class="news-hban-box">
@@ -183,6 +167,7 @@ if (file_exists('../config/news_page_authentication.php')) {
                     </div>
                 </li>
                 <?php
+                }
             }
             ?>
         </ul>
@@ -194,7 +179,6 @@ if (file_exists('../config/news_page_authentication.php')) {
 <section class="news-hom-big">
     <div class="container">
         <div class="row">
-
             <div class="col-md-8">
                 <div class="news-com-tit">
                     <h2><?php echo $Zitiziti['NEWS-LATEST-POPULAR']; ?></h2>
@@ -269,11 +253,13 @@ if (file_exists('../config/news_page_authentication.php')) {
                         <ul>
                             <?php
                             foreach (getAllNewsCategoriesPos() as $news_right_side_category_row) {
-
                                 $count_news_per_category = getCountCategoryNews($news_right_side_category_row['category_id']);
-                                ?>
+                                $decoded_city_slugs = (array)json_decode($news_right_side_category_row['city_slug'], true);
+                                if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
+                            ?>
                                 <li><a href="<?php echo $ALL_NEWS_URL . urlModifier($news_right_side_category_row['category_slug']); ?>"><span><?php echo $count_news_per_category; ?></span><b><?php echo $news_right_side_category_row['category_name']; ?></b></a></li>
-                                <?php
+                            <?php
+                                }
                             }
                             ?>
                         </ul>
@@ -390,6 +376,8 @@ if (file_exists('../config/news_page_authentication.php')) {
 
                     $latest_news_category_name = $latest_news_category_row['category_name'];
 
+                    $decoded_city_slugs = (array)json_decode($latest_news_row['city_slug'], true);
+                    if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                     ?>
                     <div class="col-md-4">
                         <div class="news-home-box">
@@ -408,6 +396,7 @@ if (file_exists('../config/news_page_authentication.php')) {
                         </div>
                     </div>
                     <?php
+                    }
                 }
                 ?>
             </div>

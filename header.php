@@ -1198,7 +1198,7 @@ foreach (getAllCities() as $city) {
                                 <li>
                                     <div>
                                         <img src="<?php echo $slash; ?>/images/icon/shop.png" alt="">
-                                        <h4><?php echo $Zitiziti['ALL_SERVICES']; ?></h4>
+                                        <h4><?php echo $Zitiziti['ALL_CATEGORY']; ?></h4>
                                         <a href="/all-category" class="fclick"></a>
                                     </div>
                                 </li>

@@ -1638,6 +1638,8 @@ for ($j = 1; $j <= 4; $j++) {
                                     $star_rate_except = 0;
                                 }
                             }
+                            // $decoded_city_slugs = (array)json_decode($except_list_row['city_slug'], true);
+                            // if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
 
                             ?>
                             <li>
@@ -1666,6 +1668,7 @@ for ($j = 1; $j <= 4; $j++) {
                                 </div>
                             </li>
                             <?php
+                            // }
                         }
                         ?>
                     </ul>
