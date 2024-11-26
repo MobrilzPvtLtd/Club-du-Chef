@@ -174,7 +174,7 @@ include "header.php";
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="tit">Cities</label>
-                                <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" multiple required="required" class="chosen-select form-control">
+                                <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" required="required" class="chosen-select form-control">
                                 <?php
                                     foreach (getAllCities() as $city) {
                                         if (strtolower($city['city_name']) == 'www') {

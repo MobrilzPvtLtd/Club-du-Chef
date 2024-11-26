@@ -103,9 +103,9 @@ $listing_codea = $_GET['row'];
                             <input type="hidden" id="profile_image_old"
                                    value="<?php echo $listings_a_row['profile_image']; ?>" name="profile_image_old"
                                    class="validate">
-<!--                            <input type="hidden" id="cover_image_old"-->
-<!--                                   value="--><?php //echo $listings_a_row['cover_image']; ?><!--" name="cover_image_old"-->
-<!--                                   class="validate">-->
+                                <!-- <input type="hidden" id="cover_image_old"-->
+                                <!-- value="--><?php //echo $listings_a_row['cover_image']; ?><!--" name="cover_image_old"-->
+                                <!-- class="validate">-->
 
                                    <?php if ($footer_row['admin_google_paid_geo_location'] == 1) { ?>
                                 <input id="geo_country" value="" name="geo_country" type="hidden" class="form-control">
@@ -200,7 +200,7 @@ $listing_codea = $_GET['row'];
                             <!--FILED END-->
                             <?php if ($footer_row['admin_google_paid_geo_location'] == 0) { ?>
                             <!--FILED START-->
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <select onChange="getCities(this.value);" name="country_id" required="required"
@@ -225,10 +225,10 @@ $listing_codea = $_GET['row'];
                                         </select>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!--FILED END-->
                             
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <select data-placeholder="<?php echo $Zitiziti['SELECT_YOUR_CITY']; ?>"
@@ -253,8 +253,29 @@ $listing_codea = $_GET['row'];
                                         </select>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <?php } ?>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" required="required" class="chosen-select form-control">
+                                            <?php
+                                            foreach (getAllCities() as $city) {
+                                                if (strtolower($city['city_name']) == 'www') {
+                                                    continue;
+                                                }
+                                            ?>
+                                                <option <?php echo in_array($city['city_slug'], (array)json_decode($listings_a_row['city_slug'], true)) ? 'selected' : '' ?>
+                                                    value="<?php echo $city['city_slug']; ?>">
+                                                    <?php echo $city['city_name']; ?>
+                                                </option>
+                                            <?php
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
                             <!--FILED START-->
                             <div class="row">
                                 <div class="col-md-12">

@@ -14,7 +14,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $listing_code = $_POST["listing_code"];
 
-//    Condition to get User Id starts
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
+
+        //    Condition to get User Id starts
 
         if (isset($_SESSION['user_code']) && !empty($_SESSION['user_code'])) {
             $user_code = $_SESSION['user_code'];
@@ -273,7 +283,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //************************  Cover Image Upload ends  **************************
 
             $listing_qry =
-                "UPDATE  " . TBL . "listings  SET user_id='" . $user_id . "', category_id='" . $category_id . "', sub_category_id='" . $sub_category_id . "',
+                "UPDATE  " . TBL . "listings  SET user_id='" . $user_id . "', category_id='" . $category_id . "', sub_category_id='" . $sub_category_id . "',city_slug='" . $city_slug_json . "',
                  listing_type_id='" . $listing_type_id . "', listing_mobile='" . $listing_mobile . "', listing_email='" . $listing_email . "', service_locations='" . $service_locations . "' 
     , listing_website='" . $listing_website . "', listing_whatsapp='" . $listing_whatsapp . "', listing_name='" . $listing_name . "',listing_description='" . $listing_description . "', listing_address='" . $listing_address . "'
     , listing_lat='" . $listing_lat . "', listing_lng='" . $listing_lng . "', listing_slug ='" . $listing_slug . "'

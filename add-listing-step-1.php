@@ -168,7 +168,7 @@ if($listing_count_user >= $plan_type_listing_count){
                             <!--FILED END-->
                             <?php if ($footer_row['admin_google_paid_geo_location'] == 0) { ?>
                                 <!--FILED START-->
-                                <div class="row">
+                                <!-- <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <select onChange="getCities(this.value);" name="country_id" required="required" id="country_id"
@@ -202,10 +202,30 @@ if($listing_count_user >= $plan_type_listing_count){
                                             </select>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!--FILED END-->
-
                             <?php } ?>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" required="required" class="chosen-select form-control">
+                                            <?php
+                                            foreach (getAllCities() as $city) {
+                                                if (strtolower($city['city_name']) == 'www') {
+                                                    continue;
+                                                }
+                                            ?>
+                                                <option <?php echo in_array($city['city_slug'], (array)json_decode($listings_a_row['city_slug'], true)) ? 'selected' : '' ?>
+                                                    value="<?php echo $city['city_slug']; ?>">
+                                                    <?php echo $city['city_name']; ?>
+                                                </option>
+                                            <?php
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
                             <!--FILED START-->
                             <div class="row">
                                 <div class="col-md-6">
