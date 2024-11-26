@@ -19,8 +19,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $category_seo_keywords = $_POST['category_seo_keywords'];
         $category_status = "Active";
 
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
 
-//************ Category Name Already Exist Check Starts ***************
+        //************ Category Name Already Exist Check Starts ***************
 
 
         $category_name_exist_check = mysqli_query($conn, "SELECT * FROM " . TBL . "news_categories  WHERE category_name='" . $category_name . "' AND category_id != $category_id ");
@@ -61,11 +70,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $category_slug = checkNewsCategorySlug($category_name1, $category_id);
 
 
-        $sql = mysqli_query($conn, "UPDATE  " . TBL . "news_categories SET category_name='" . $category_name . "', category_status='" . $category_status . "'
-     , category_image='" . $category_image . "', category_slug='" . $category_slug . "'
-     , category_seo_title='" . $category_seo_title . "', category_seo_description='" . $category_seo_description . "'
-     , category_seo_keywords='" . $category_seo_keywords . "'
-     where category_id='" . $category_id . "'");
+        $sql = mysqli_query($conn, "UPDATE  " . TBL . "news_categories SET 
+        category_name='" . $category_name . "', 
+        city_slug='" . $city_slug_json . "', 
+        category_status='" . $category_status . "',
+        category_slug='" . $category_slug . "', 
+        category_seo_title='" . $category_seo_title . "', 
+        category_seo_description='" . $category_seo_description . "', 
+        category_seo_keywords='" . $category_seo_keywords . "'
+        where category_id='" . $category_id . "'");
 
         if ($sql) {
 

@@ -17,14 +17,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $news_title = addslashes($_POST["news_title"]);
         $news_description = addslashes($_POST["news_description"]);
         $category_id = $_POST["category_id"];
-        $city_id = $_POST["city_id"];
+        // $city_id = $_POST["city_id"];
 
         $seo_title = $_POST["seo_title"];
         $seo_description = $_POST["seo_description"];
         $seo_keywords = $_POST["seo_keywords"];
 
-// News Status
+        // News Status
         $news_status = "Active";
+
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
 
         $news_image_old = $_POST["news_image_old"];
         $news_id = $_POST["news_id"];
@@ -82,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $news_res = mysqli_query($conn, "UPDATE  " . TBL . "news SET news_title='" . $news_title . "'
      , news_description='" . $news_description . "', news_image='" . $news_image . "', category_id='" . $category_id . "'
-     , news_slug='" . $news_slug . "', seo_title='" . $seo_title . "', city_id='" . $city_id . "'
+     , news_slug='" . $news_slug . "', seo_title='" . $seo_title . "', city_slug='" . $city_slug_json . "'
      , seo_description='" . $seo_description . "', seo_keywords='" . $seo_keywords . "'
        where news_id ='" . $news_id . "'");
 

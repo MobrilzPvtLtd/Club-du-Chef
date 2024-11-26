@@ -16,6 +16,16 @@ if (isset($_POST['news_category_submit'])) {
 
         $category_status = "Active";
 
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
+
         $category_filter_pos_id = 1;
 
 
@@ -46,10 +56,7 @@ if (isset($_POST['news_category_submit'])) {
         }
 
 
-        $sql = mysqli_query($conn, "INSERT INTO  " . TBL . "news_categories (category_name,category_status,category_image
-        ,category_seo_title,category_seo_description,category_seo_keywords,category_filter_pos_id,category_slug,category_cdt)
-VALUES ('$category_name','$category_status','$category_image'
-        ,'$category_seo_title', '$category_seo_description', '$category_seo_keywords','$category_filter_pos_id', '$category_slug', '$curDate')");
+        $sql = mysqli_query($conn, "INSERT INTO  " . TBL . "news_categories (category_name,category_status,city_slug,category_seo_title,category_seo_description,category_seo_keywords,category_filter_pos_id,category_slug,category_cdt) VALUES ('$category_name','$category_status','$city_slug_json','$category_seo_title', '$category_seo_description', '$category_seo_keywords','$category_filter_pos_id', '$category_slug', '$curDate')");
 
         $LID = mysqli_insert_id($conn);
         $lastID = $LID;

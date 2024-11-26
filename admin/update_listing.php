@@ -13,6 +13,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $listing_id = $_POST["listing_id"];
         $listing_code = $_POST["listing_code"];
 
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
+
         $profile_image_old = $_POST["profile_image_old"];
         $cover_image_old = $_POST["cover_image_old"];
         $gallery_image_old = $_POST["gallery_image_old"];
@@ -28,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $register_mode = "Direct";
 
-// Common Listing Details
+        // Common Listing Details
         $listing_name = $_POST["listing_name"];
         $listing_mobile = $_POST["listing_mobile"];
         $listing_email = $_POST["listing_email"];
@@ -496,31 +506,87 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //    Listing Update Part Starts
 
 
-        $listing_qry =
-            "UPDATE  " . TBL . "listings  SET user_id='" . $user_id . "', category_id='" . $category_id . "', sub_category_id='" . $sub_category_id . "', service_id='" . $service_id . "'
-            , service_image='" . $service_image . "', listing_type_id='" . $listing_type_id . "', listing_mobile='" . $listing_mobile . "', listing_email='" . $listing_email . "'
-            , service_locations='" . $service_locations . "', listing_lat='" . $listing_lat . "', listing_lng='" . $listing_lng . "'
-    , listing_website='" . $listing_website . "', listing_whatsapp='" . $listing_whatsapp . "', listing_name='" . $listing_name . "',listing_description='" . $listing_description . "', listing_address='" . $listing_address . "'
-    ,country_id='" . $country_id . "',state_id='" . $state_id . "',city_id='" . $city_id . "',profile_image='" . $profile_image . "', cover_image='" . $cover_image . "'
-    ,gallery_image='" . $gallery_image . "',opening_days='" . $opening_days . "', opening_time='" . $opening_time . "'
-    , closing_time='" . $closing_time . "',fb_link='" . $fb_link . "',twitter_link='" . $twitter_link . "'
-    ,gplus_link='" . $gplus_link . "', google_map='" . $google_map . "',360_view='" . $threesixty_view . "', listing_video ='" . $listing_video . "'
-    ,mon_is_open='" . $mon_is_open . "',mon_open_time='" . $mon_open_time . "',mon_close_time='" . $mon_close_time . "'
-    ,tue_is_open='" . $tue_is_open . "',tue_open_time='" . $tue_open_time . "',tue_close_time='" . $tue_close_time . "'
-    ,wed_is_open='" . $wed_is_open . "',wed_open_time='" . $wed_open_time . "',wed_close_time='" . $wed_close_time . "'
-    ,thu_is_open='" . $thu_is_open . "',thu_open_time='" . $thu_open_time . "',thu_close_time='" . $thu_close_time . "'
-    ,fri_is_open='" . $fri_is_open . "',fri_open_time='" . $fri_open_time . "',fri_close_time='" . $fri_close_time . "'
-    ,sat_is_open='" . $sat_is_open . "',sat_open_time='" . $sat_open_time . "',sat_close_time='" . $sat_close_time . "'
-    ,sun_is_open='" . $sun_is_open . "',sun_open_time='" . $sun_open_time . "',sun_close_time='" . $sun_close_time . "'
-    ,service_1_name='" . $service_1_name . "',service_1_price='" . $service_1_price . "', service_1_detail='" . $service_1_detail . "'
-    ,service_1_image='" . $service_1_image . "', service_1_view_more='" . $service_1_view_more . "', service_2_name='" . $service_2_name . "' ,service_2_price='" . $service_2_price . "' 
-    ,service_2_image='" . $service_2_image . "',service_3_name='" . $service_3_name . "'  ,service_3_price='" . $service_3_price . "'
-    ,service_3_image='" . $service_3_image . "', service_4_name='" . $service_4_name . "' ,service_4_price='" . $service_4_price . "'
-    ,service_4_image='" . $service_4_image . "',service_5_name='" . $service_5_name . "'  ,service_5_price='" . $service_5_price . "'
-    ,service_5_image='" . $service_5_image . "', service_6_name='" . $service_6_name . "' ,service_6_price='" . $service_6_price . "' 
-    ,service_6_image='" . $service_6_image . "', listing_products='" . $listing_products . "', listing_events='" . $listing_events . "'
-    , payment_status='" . $payment_status . "', listing_info_question ='" . $listing_info_question . "'
-    , listing_info_answer ='" . $listing_info_answer . "', listing_slug ='" . $listing_slug . "' where listing_id='" . $listing_id . "'";
+        $listing_qry ="UPDATE  " . TBL . "listings  SET 
+        user_id='" . $user_id . "', 
+        category_id='" . $category_id . "', 
+        sub_category_id='" . $sub_category_id . "', 
+        city_slug='" . $city_slug_json . "', 
+        service_id='" . $service_id . "', 
+        service_image='" . $service_image . "', 
+        listing_type_id='" . $listing_type_id . "', 
+        listing_mobile='" . $listing_mobile . "', 
+        listing_email='" . $listing_email . "', 
+        service_locations='" . $service_locations . "', 
+        listing_lat='" . $listing_lat . "', 
+        listing_lng='" . $listing_lng . "', 
+        listing_website='" . $listing_website . "', 
+        listing_whatsapp='" . $listing_whatsapp . "', 
+        listing_name='" . $listing_name . "',
+        listing_description='" . $listing_description . "', 
+        listing_address='" . $listing_address . "',
+        country_id='" . $country_id . "',
+        state_id='" . $state_id . "',
+        city_id='" . $city_id . "',
+        profile_image='" . $profile_image . "', 
+        cover_image='" . $cover_image . "',
+        gallery_image='" . $gallery_image . "',
+        opening_days='" . $opening_days . "', 
+        opening_time='" . $opening_time . "', 
+        closing_time='" . $closing_time . "',
+        fb_link='" . $fb_link . "',
+        twitter_link='" . $twitter_link . "',
+        gplus_link='" . $gplus_link . "', 
+        google_map='" . $google_map . "',
+        360_view='" . $threesixty_view . "', 
+        listing_video ='" . $listing_video . "',
+        mon_is_open='" . $mon_is_open . "',
+        mon_open_time='" . $mon_open_time . "',
+        mon_close_time='" . $mon_close_time . "',
+        tue_is_open='" . $tue_is_open . "',
+        tue_open_time='" . $tue_open_time . "',
+        tue_close_time='" . $tue_close_time . "',
+        wed_is_open='" . $wed_is_open . "',
+        wed_open_time='" . $wed_open_time . "',
+        wed_close_time='" . $wed_close_time . "',
+        thu_is_open='" . $thu_is_open . "',
+        thu_open_time='" . $thu_open_time . "',
+        thu_close_time='" . $thu_close_time . "',
+        fri_is_open='" . $fri_is_open . "',
+        fri_open_time='" . $fri_open_time . "',
+        fri_close_time='" . $fri_close_time . "',
+        sat_is_open='" . $sat_is_open . "',
+        sat_open_time='" . $sat_open_time . "',
+        sat_close_time='" . $sat_close_time . "',
+        sun_is_open='" . $sun_is_open . "',
+        sun_open_time='" . $sun_open_time . "',
+        sun_close_time='" . $sun_close_time . "',
+        service_1_name='" . $service_1_name . "',
+        service_1_price='" . $service_1_price . "', 
+        service_1_detail='" . $service_1_detail . "',
+        service_1_image='" . $service_1_image . "', 
+        service_1_view_more='" . $service_1_view_more . "', 
+        service_2_name='" . $service_2_name . "' ,
+        service_2_price='" . $service_2_price . "',
+        service_2_image='" . $service_2_image . "',
+        service_3_name='" . $service_3_name . "'  ,
+        service_3_price='" . $service_3_price . "',
+        service_3_image='" . $service_3_image . "', 
+        service_4_name='" . $service_4_name . "' ,
+        service_4_price='" . $service_4_price . "',
+        service_4_image='" . $service_4_image . "',
+        service_5_name='" . $service_5_name . "'  ,
+        service_5_price='" . $service_5_price . "',
+        service_5_image='" . $service_5_image . "', 
+        service_6_name='" . $service_6_name . "' ,
+        service_6_price='" . $service_6_price . "',
+        service_6_image='" . $service_6_image . "', 
+        listing_products='" . $listing_products . "', 
+        listing_events='" . $listing_events . "', 
+        payment_status='" . $payment_status . "', 
+        listing_info_question ='" . $listing_info_question . "', 
+        listing_info_answer ='" . $listing_info_answer . "', 
+        listing_slug ='" . $listing_slug . "' 
+        where listing_id='" . $listing_id . "'";
 
         $listing_res = mysqli_query($conn, $listing_qry);
 

@@ -10,7 +10,7 @@ if (file_exists('config/info.php')) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['listing_submit'])) {
 
-// Basic Personal Details
+        // Basic Personal Details
         $first_name = $_POST["first_name"];
         $last_name = $_POST["last_name"];
         $mobile_number = $_POST["mobile_number"];
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $register_mode = "Direct";
 
-// Common Listing Details
+        // Common Listing Details
         $listing_name = $_POST["listing_name"];
         $listing_mobile = $_POST["listing_mobile"];
         $listing_email = $_POST["listing_email"];
@@ -61,6 +61,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sun_close_time = $_POST['sun_close_time'];
 
         $state_id = "1";
+
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
 
         if ($footer_row['admin_google_paid_geo_location'] == 1) { 
 
@@ -471,7 +481,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //    Listing Insert Part Starts
 
         $listing_qry = "INSERT INTO " . TBL . "listings
-					(user_id, category_id, sub_category_id, service_id, service_image, listing_type_id, listing_name, listing_mobile, listing_email
+					(user_id, category_id, sub_category_id,city_slug, service_id, service_image, listing_type_id, listing_name, listing_mobile, listing_email
 					, listing_website, listing_whatsapp, listing_description, listing_address, listing_lat, listing_lng, service_locations, country_id, state_id, city_id, profile_image, cover_image
 					, gallery_image, opening_days, opening_time, closing_time, fb_link, twitter_link, gplus_link, google_map
 					, 360_view, listing_video, service_1_name, service_1_price, service_1_detail, service_1_image, service_1_view_more, service_2_name,service_2_price, service_2_image, service_3_name,service_3_price, service_3_image
@@ -481,7 +491,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					, sun_is_open,sun_open_time, sun_close_time
 					, listing_info_question , listing_info_answer, payment_status, listing_slug, listing_cdt) 
 					VALUES 
-					('$user_id', '$category_id', '$sub_category_id', '$service_id', '$service_image', '$listing_type_id', '$listing_name', '$listing_mobile', '$listing_email', '$listing_website', '$listing_whatsapp', '$listing_description'
+					('$user_id', '$category_id', '$sub_category_id','$city_slug_json', '$service_id', '$service_image', '$listing_type_id', '$listing_name', '$listing_mobile', '$listing_email', '$listing_website', '$listing_whatsapp', '$listing_description'
 					, '$listing_address', '$listing_lat', '$listing_lng', '$service_locations', '$country_id'
 					, '$state_id', '$city_id', '$profile_image', '$cover_image'
 					,'$gallery_image', '$opening_days', '$opening_time', '$closing_time', '$fb_link', '$twitter_link', '$gplus_link', '$google_map'

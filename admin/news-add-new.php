@@ -80,15 +80,18 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <label class="tit">Location</label>
-                                                            <select class="form-control chosen-select" name="city_id">
-                                                                <option value="">Select News location</option>
+                                                            <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" multiple required="required" class="chosen-select form-control">
                                                                 <?php
-                                                                foreach (getAllNewsCities() as $cities_row) {
+                                                                foreach (getAllCities() as $city) {
+                                                                    if (strtolower($city['city_name']) == 'www') {
+                                                                        continue;
+                                                                    }
                                                                     ?>
-                                                                    <option
-                                                                        value="<?php echo $cities_row['city_id']; ?>"><?php echo $cities_row['city_name']; ?></option>
-                                                                    <?php
+                                                                   <option <?php echo in_array($city['city_slug'], (array)json_decode($news_row['city_slug'], true)) ? 'selected' : '' ?>
+                                                                        value="<?php echo $city['city_slug']; ?>">
+                                                                        <?php echo $city['city_name']; ?>
+                                                                    </option>
+                                                                <?php
                                                                 }
                                                                 ?>
                                                             </select>
