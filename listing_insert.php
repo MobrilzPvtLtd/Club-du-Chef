@@ -10,7 +10,6 @@ if (file_exists('config/info.php')) {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['listing_submit'])) {
-
         $_SESSION['listing_info_question'] = $_POST["listing_info_question"];
         $_SESSION['listing_info_answer'] = $_POST["listing_info_answer"];
 
@@ -21,16 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $email_id = $_SESSION["email_id"];
 
         $register_mode = "Direct";
-
-        $city_slug = $_POST['city_slug'];
-        if (is_array($city_slug)) {
-            $city_slug = array_map(function($city) use ($conn) {
-                return mysqli_real_escape_string($conn, $city);
-            }, $city_slug);
-            $city_slug_json = json_encode($city_slug);
-        } else {
-            $city_slug_json = json_encode([]);
-        }
 
 // Common Listing Details
         $listing_name = $_SESSION["listing_name"];
@@ -145,6 +134,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         $category_id = $_SESSION["category_id"];
+
+        $city_slug = $_SESSION['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
 
         $sub_category_id123 = $_SESSION["sub_category_id"];
 
@@ -386,6 +385,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					, '$sun_is_open', '$sun_open_time', '$sun_close_time'
 					, '$listing_info_question', '$listing_info_answer', '$payment_status', '$listing_slug', '$curDate')";
 
+        // print_r($listing_qry);
+        // die();
         $listing_res = mysqli_query($conn, $listing_qry);
         $ListingID = mysqli_insert_id($conn);
         $listlastID = $ListingID;

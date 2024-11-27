@@ -38,6 +38,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $educational_qualification = $_POST["educational_qualification"];
         $job_small_description = addslashes($_POST["job_small_description"]);
         $job_location = $_POST["job_location"];
+
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
+
         $job_company_name = $_POST["job_company_name"];
 
         $contact_person = $_POST["contact_person"];
@@ -175,7 +186,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					(user_id, category_id, sub_category_id, job_title, job_description
 					, job_salary, no_of_openings, job_type, job_interview_date
 					, years_of_experience, job_interview_time, job_role, educational_qualification
-					, job_small_description, job_location, company_logo, contact_person
+					, job_small_description, job_location,city_slug, company_logo, contact_person
 					, contact_email_id, contact_number, contact_website, interview_location
 					, skill_set ,job_status, job_company_name
 					, job_udt, job_slug, job_cdt) 
@@ -183,9 +194,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					('$user_id', '$category_id', '$sub_category_id','$job_title','$job_description'
 					, '$job_salary','$no_of_openings','$job_type','$job_interview_date'
 					, '$years_of_experience','$job_interview_time','$job_role','$educational_qualification'
-					, '$job_small_description','$job_location','$company_logo','$contact_person'
-					, '$contact_email_id','$contact_number','$contact_website','$interview_location'
-					, '$skill_set', '$job_status', '$job_company_name'
+					, '$job_small_description','$job_location','$city_slug_json','$company_logo','$contact_person', '$contact_email_id','$contact_number','$contact_website','$interview_location', '$skill_set', '$job_status', '$job_company_name'
 					, '$curDate', '$job_slug', '$curDate')";
 
 

@@ -55,6 +55,27 @@ if($product_count_user >= $plan_type_product_count){
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" required="required" class="chosen-select form-control">
+                                                    <?php
+                                                    foreach (getAllCities() as $city) {
+                                                        if (strtolower($city['city_name']) == 'www') {
+                                                            continue;
+                                                        }
+                                                    ?>
+                                                        <option
+                                                            value="<?php echo $city['city_slug']; ?>">
+                                                            <?php echo $city['city_name']; ?>
+                                                        </option>
+                                                    <?php
+                                                    }
+                                                    ?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <!--FILED END-->
                                     <!--FILED START-->
                                     <div class="row">

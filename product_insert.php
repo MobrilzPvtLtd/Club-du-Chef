@@ -12,17 +12,16 @@ if (file_exists('config/info.php')) {
 if ($_SERVER['REQUEST_METHOD']=='POST') {
     if (isset($_POST['product_submit'])) {
 
-
-// Basic Personal Details
+        // Basic Personal Details
         $first_name = $_SESSION["first_name"];
         $last_name = $_SESSION["last_name"];
         $mobile_number = $_SESSION["mobile_number"];
         $email_id = $_SESSION["email_id"];
-
+        
         $register_mode = "Direct";
-
-
-// Common product Details
+        
+        
+        // Common product Details
         $product_name = $_POST["product_name"];
         $product_price = $_POST["product_price"];
         $product_price_offer = $_POST["product_price_offer"];
@@ -30,50 +29,74 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
         $product_tags = $_POST["product_tags"];
         $product_description = addslashes($_POST["product_description"]);
 
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
 
         $category_id = $_POST["category_id"];
 
+        $sub_category_id = '';
         $sub_category_id123 = $_POST["sub_category_id"];
 
-        $prefix = $fruitList = '';
-        foreach ($sub_category_id123 as $fruit)
-        {
-            $sub_category_id .= $prefix .  $fruit ;
-            $prefix = ',';
+        if (isset($sub_category_id123) && is_array($sub_category_id123)) {
+            $prefix = '';
+            foreach ($sub_category_id123 as $fruit) {
+                $sub_category_id .= $prefix . $fruit;
+                $prefix = ',';
+            }
         }
+        // $prefix = $fruitList = '';
+        // foreach ($sub_category_id123 as $fruit)
+        // {
+        //     $sub_category_id .= $prefix .  $fruit ;
+        //     $prefix = ',';
+        // }
 
-//product highlights
-
+        //product highlights
+        $product_highlights = '';
         $product_highlights123 = $_POST["product_highlights"];
-        $prefix1 = $fruitList = '';
-        foreach ($product_highlights123 as $fruit1)
-        {
-            $product_highlights .= $prefix1 .  $fruit1 ;
-            $prefix1 = '|';
+
+        if (isset($product_highlights123) && is_array($product_highlights123)) {
+            $prefix1 = '';
+            foreach ($product_highlights123 as $fruit1) {
+                $product_highlights .= $prefix1 . $fruit1;
+                $prefix1 = '|';
+            }
         }
 
-//product Specifications
+        //product Specifications
+        $product_info_question = '';
         $product_info_question123 = $_POST["product_info_question"];
-        $prefix1 = $fruitList = '';
-        foreach ($product_info_question123 as $fruit1)
-        {
-            $product_info_question .= $prefix1 .  $fruit1 ;
-            $prefix1 = ',';
+
+        if (isset($product_info_question123) && is_array($product_info_question123)) {
+            $prefix1 = '';
+            foreach ($product_info_question123 as $fruit1) {
+                $product_info_question .= $prefix1 . $fruit1;
+                $prefix1 = ',';
+            }
         }
 
+        $product_info_answer = '';
         $product_info_answer123 = $_POST["product_info_answer"];
-        $prefix1 = $fruitList = '';
-        foreach ($product_info_answer123 as $fruit1)
-        {
-            $product_info_answer .= $prefix1 .  $fruit1 ;
-            $prefix1 = ',';
+
+        if (isset($product_info_answer123) && is_array($product_info_answer123)) {
+            $prefix1 = '';
+            foreach ($product_info_answer123 as $fruit1) {
+                $product_info_answer .= $prefix1 . $fruit1;
+                $prefix1 = ',';
+            }
         }
 
         // $product_status = "Pending";
         $payment_status = "Pending";
 
-//    Condition to get User Id starts
-
+        // Condition to get User Id starts
         if (isset($_SESSION['user_code']) && !empty($_SESSION['user_code'])) {
             $user_code = $_SESSION['user_code'];
             $user_details = mysqli_query($conn,"SELECT * FROM  " . TBL . "users where user_code='" . $user_code . "'");
@@ -128,40 +151,41 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
             $product_status = "Inactive";
 
         }
-//    Condition to get User Id Ends
+        // Condition to get User Id Ends
 
-
-
-// ************************  Gallery Image Upload starts  **************************   
+        // ************************  Gallery Image Upload starts  **************************   
 
         $all_gallery_image = $_FILES['gallery_image'];
 
-        for ($k = 0; $k < count($all_gallery_image); $k++) {
+        $gallery_image1 = [];
 
+        for ($k = 0; $k < count($all_gallery_image['name']); $k++) {
 
             if (!empty($all_gallery_image['name'][$k])) {
                 $file1 = rand(1000, 100000) . $all_gallery_image['name'][$k];
                 $file_loc1 = $all_gallery_image['tmp_name'][$k];
                 $file_size1 = $all_gallery_image['size'][$k];
                 $file_type1 = $all_gallery_image['type'][$k];
+
                 $allowed = array("image/jpeg", "image/pjpeg", "image/png", "image/gif", "image/webp", "image/svg", "application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.wordprocessingml.template");
-                if(in_array($file_type1, $allowed)) {
-                $folder1 = "images/products/";
-                $new_size = $file_size1 / 1024;
-                $new_file_name1 = strtolower($file1);
-                $event_image1 = str_replace(' ', '-', $new_file_name1);
-                //move_uploaded_file($file_loc1, $folder1 . $event_image1);
-                $gallery_image1[] = compressImage($event_image1,$file_loc1,$folder1,$new_size);
+
+                if (in_array($file_type1, $allowed)) {
+                    $folder1 = "images/products/";
+                    $new_size = $file_size1 / 1024;
+                    $new_file_name1 = strtolower($file1);
+                    $event_image1 = str_replace(' ', '-', $new_file_name1);
+                    
+                    $gallery_image1[] = compressImage($event_image1, $file_loc1, $folder1, $new_size);
                 } else {
                     $gallery_image1[] = '';
                 }
             }
-            $gallery_image = implode(",", $gallery_image1);
         }
 
+        $gallery_image = implode(",", $gallery_image1);
 
 
-// ************************  Gallery Image Upload ends  **************************   
+        // ************************  Gallery Image Upload ends  **************************   
 
         function checkProductSlug($link, $counter=1){
             global $conn;
@@ -185,11 +209,11 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 //    Product Insert Part Starts
 
         $product_qry = "INSERT INTO " . TBL . "products 
-					(user_id, category_id, sub_category_id, product_name, product_description
+					(user_id, category_id, sub_category_id, city_slug,product_name, product_description
 					, gallery_image, product_price, product_price_offer, product_payment_link, product_tags, product_highlights, product_status
 					, product_info_question , product_info_answer, payment_status, product_slug, product_cdt) 
 					VALUES 
-					('$user_id', '$category_id', '$sub_category_id','$product_name','$product_description'
+					('$user_id', '$category_id', '$sub_category_id','$city_slug_json','$product_name','$product_description'
 					,'$gallery_image', '$product_price', '$product_price_offer', '$product_payment_link', '$product_tags', '$product_highlights', '$product_status'
 					, '$product_info_question', '$product_info_answer', '$payment_status', '$product_slug', '$curDate')";
 

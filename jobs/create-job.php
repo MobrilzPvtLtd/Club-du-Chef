@@ -75,14 +75,17 @@ if ($job_count_user >= $plan_type_job_count) {
                                     <input type="text" name="educational_qualification" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label class="tit"><?php echo $Zitiziti['LOCATION']; ?></label>
-                                    <select class="chosen-select" name="job_location">
-                                        <option value=""><?php echo $Zitiziti['JOB-SELECT-JOB-LOCATION-LABEL']; ?></option>
+                                    <label class="tit"><?php echo $Zitiziti['CITY']; ?></label>
+                                    <select class="chosen-select" name="city_slug[]">
+                                        <option value=""><?php echo $Zitiziti['JOB-SELECT-JOB-CITY-LABEL']; ?></option>
                                         <?php
-                                        foreach (getAllJobCities() as $cities_row) {
+                                        foreach (getAllCities() as $city) {
+                                            if (strtolower($city['city_name']) == 'www') {
+                                                continue;
+                                            }
                                             ?>
                                             <option
-                                                value="<?php echo $cities_row['city_id']; ?>"><?php echo $cities_row['city_name']; ?></option>
+                                                value="<?php echo $city['city_slug']; ?>"><?php echo $city['city_name']; ?></option>
                                             <?php
                                         }
                                         ?>

@@ -93,6 +93,8 @@ if (isset($_POST['listing_submit'])) {
             $_SESSION['city_id'] = $_POST["city_id"];
          }
 
+         $_SESSION['city_slug'] = $_POST["city_slug"];
+
 
     //************************  Profile Image Upload starts  **************************
 
@@ -262,6 +264,10 @@ if (isset($_POST['listing_submit'])) {
                                    required="required" type="hidden" class="validate">
 
                             <input id="city_id" name="city_id" value="<?php echo $_SESSION['city_id']; ?>"
+                                   required="required"
+                                   type="hidden" class="validate">
+
+                            <input id="city_slug" name="city_slug" value="<?php echo $_SESSION['city_slug']; ?>"
                                    required="required"
                                    type="hidden" class="validate">
 

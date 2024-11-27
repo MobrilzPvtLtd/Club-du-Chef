@@ -76,20 +76,23 @@ if (file_exists('../config/job_page_authentication.php')) {
                                     <label class="tit"><?php echo $Zitiziti['JOB-INTERVIEW-EDUCATIONAL-LABEL']; ?></label>
                                     <input type="text" value="<?php echo $job_a_row['educational_qualification']; ?>" name="educational_qualification" class="form-control">
                                 </div>
+
                                 <div class="form-group">
-                                    <label class="tit"><?php echo $Zitiziti['LOCATION']; ?></label>
-                                    <select class="chosen-select" name="job_location">
-                                        <option value=""><?php echo $Zitiziti['JOB-SELECT-JOB-LOCATION-LABEL']; ?></option>
+                                    <label class="tit"><?php echo $Zitiziti['CITY']; ?></label>
+                                    <select class="chosen-select" name="city_slug[]">
+                                        <option value=""><?php echo $Zitiziti['JOB-SELECT-JOB-CITY-LABEL']; ?></option>
                                         <?php
-                                        foreach (getAllJobCities() as $cities_row) {
-                                            ?>
-                                            <option
-                                                <?php if ($job_a_row['job_location'] == $cities_row['city_id']) {
-                                                    echo "selected";
-                                                } ?>
-                                                value="<?php echo $cities_row['city_id']; ?>"><?php echo $cities_row['city_name']; ?></option>
-                                            <?php
-                                        }
+                                        foreach (getAllCities() as $city) {
+                                            if (strtolower($city['city_name']) == 'www') {
+                                                continue;
+                                            }
+                                        ?>
+                                            <option <?php echo in_array($city['city_slug'], (array)json_decode($job_a_row['city_slug'], true)) ? 'selected' : '' ?>
+                                                value="<?php echo $city['city_slug']; ?>">
+                                                <?php echo $city['city_name']; ?>
+                                            </option>
+                                        <?php
+                                            }
                                         ?>
                                     </select>
                                 </div>
