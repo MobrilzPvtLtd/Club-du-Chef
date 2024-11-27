@@ -89,7 +89,7 @@ if ($event_count_user >= $plan_type_event_count) {
                                         </div>
                                     </div>
                                     <!--FILED END-->
-                                    <div class="row">
+                                    <!-- <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <select onChange="geteventCities(this.value);" name="country_id"
@@ -112,8 +112,8 @@ if ($event_count_user >= $plan_type_event_count) {
                                                 </select>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
+                                    </div> -->
+                                    <!-- <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <select data-placeholder="<?php echo $Zitiziti['SELECT_YOUR_CITY']; ?>"
@@ -121,6 +121,27 @@ if ($event_count_user >= $plan_type_event_count) {
                                                         class="chosen-select form-control">
                                                     <option value=""><?php echo $Zitiziti['SELECT_YOUR_CITY']; ?></option>
 
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" required="required" class="chosen-select form-control">
+                                                    <?php
+                                                    foreach (getAllCities() as $city) {
+                                                        if (strtolower($city['city_name']) == 'www') {
+                                                            continue;
+                                                        }
+                                                    ?>
+                                                        <option
+                                                            value="<?php echo $city['city_slug']; ?>">
+                                                            <?php echo $city['city_name']; ?>
+                                                        </option>
+                                                    <?php
+                                                    }
+                                                    ?>
                                                 </select>
                                             </div>
                                         </div>

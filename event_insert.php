@@ -58,13 +58,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $prefix = ',';
         }
 
-// Event Status
-//        $event_status = "Active";
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
+
+        // Event Status
+        // $event_status = "Active";
         // $event_status = "Pending";
         $payment_status = "Pending";
         $event_type_id = 1;
 
-//    Condition to get User Id starts
+        // Condition to get User Id starts
 
 
         if (isset($_SESSION['user_code']) && !empty($_SESSION['user_code'])) {
@@ -166,10 +176,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
         $event_qry = "INSERT INTO " . TBL . "events
-					(user_id, city_id, country_id, event_name, event_description,event_email,event_mobile,event_website, event_address, category_id
+					(user_id, city_id, country_id,city_slug, event_name, event_description,event_email,event_mobile,event_website, event_address, category_id
 					,event_contact_name, event_map, event_start_date, event_time, event_image, event_status, event_type, isenquiry, event_slug, event_cdt)
 					VALUES
-					('$user_id', '$city_id', '$country_id', '$event_name', '$event_description', '$event_email', '$event_mobile', '$event_website'
+					('$user_id', '$city_id', '$country_id','$city_slug_json', '$event_name', '$event_description', '$event_email', '$event_mobile', '$event_website'
 					, '$event_address', '$category_id', '$event_contact_name', '$event_map', '$event_start_date',  '$event_time', '$event_image', '$event_status', '$event_type', '$isenquiry', '$event_slug', '$curDate')";
 
         $event_res = mysqli_query($conn, $event_qry);

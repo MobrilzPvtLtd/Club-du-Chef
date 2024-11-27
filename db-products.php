@@ -17,17 +17,17 @@ if (file_exists('config/product_page_authentication.php')) {
 ?>
 <!--CENTER SECTION-->
 <div class="ud-main">
-    <div class="ud-main-inn ud-no-rhs">
+    <div class="ud-main-inn ud-no-rhs mt-5 w-100 d-flex justify-content-center">
         <div class="ud-cen">
             <div class="log-bor">&nbsp;</div>
             <span class="udb-inst"><?php echo $Zitiziti['ALL_PRODUCTS']; ?></span>
             <?php include('config/user_activation_checker.php'); ?>
-            <div class="ud-cen-s2 px-2">
-                <ul class="nav nav-tabs">
-                    <li class="nav-item">
+            <div class="ud-cen-s2">
+                <!-- <ul class="nav nav-tabs"> -->
+                    <!-- <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab"
                            href="#myproducts"><?php echo $Zitiziti['PRODUCT_DETAILS']; ?></a>
-                    </li>
+                    </li> -->
                     <!--                <li class="nav-item">-->
                     <!--                    <a class="nav-link" data-toggle="tab" href="#mycart">Cart</a>-->
                     <!--                </li>-->
@@ -40,63 +40,65 @@ if (file_exists('config/product_page_authentication.php')) {
                     <!--                <li class="nav-item">-->
                     <!--                    <a class="nav-link" data-toggle="tab" href="#paygate">Payment gateway</a>-->
                     <!--                </li>-->
-                </ul>
-                <div class="tab-content">
-                    <div id="myproducts" class="container mx-auto px-0 tab-pane active">
+                <!-- </ul> -->
+                <!-- <div class="tab-content"> -->
+                    <!-- <div id="myproducts" class="container mx-auto px-0 tab-pane active"> -->
                         <h2><?php echo $Zitiziti['PRODUCT_DETAILS']; ?></h2>
                         <?php include "page_level_message.php"; ?>
                         <a href="add-new-product" class="db-tit-btn"><?php echo $Zitiziti['ADD_NEW_PRODUCT']; ?></a>
-                        <table class="responsive-table bordered">
-                            <thead>
-                            <tr>
-                                <th><?php echo $Zitiziti['S_NO']; ?></th>
-                                <th><?php echo $Zitiziti['PRODUCT_NAME']; ?></th>
-                                <th><?php echo $Zitiziti['VIEWS']; ?></th>
-                                <th><?php echo $Zitiziti['STATUS']; ?></th>
-                                <th><?php echo $Zitiziti['EDIT']; ?></th>
-                                <th><?php echo $Zitiziti['DELETE']; ?></th>
-                                <th><?php echo $Zitiziti['PREVIEW']; ?></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <?php
-
-                            $si = 1;
-                            foreach (getAllProductUser($_SESSION['user_id']) as $productrow) {
-
-                                $reviewproduct_id = $productrow['product_id'];
-
-                                ?>
+                        <div class="table-responsive">
+                            <table class="table bordered">
+                                <thead>
                                 <tr>
-                                    <td><?php echo $si; ?></td>
-                                    <td><img
-                                                src="<?php if ($productrow['gallery_image'] != NULL || !empty($productrow['gallery_image'])) {
-                                                    echo "images/products/" . array_shift(explode(',', $productrow['gallery_image']));
-                                                } else {
-                                                    echo "images/listings/" . $footer_row['listing_default_image'];
-                                                } ?>"><?php echo $productrow['product_name']; ?>
-                                        <span><?php echo dateFormatconverter($productrow['product_cdt']); ?></span></td>
-                                    <td>
-                                        <span class="db-list-rat"><?php echo product_pageview_count($productrow['product_id']); ?></span>
-                                    </td>
-                                    <td><span class="db-list-ststus"><?php echo $productrow['product_status']; ?></span>
-                                    </td>
-                                    <td><a href="edit-product?code=<?php echo $productrow['product_code']; ?>"
-                                           class="db-list-edit"><?php echo $Zitiziti['EDIT']; ?></a></td>
-                                    <td><a href="delete-product?code=<?php echo $productrow['product_code']; ?>"
-                                           class="db-list-edit"><?php echo $Zitiziti['DELETE']; ?></a></td>
-                                    <td><a href="<?php echo $PRODUCT_URL . urlModifier($productrow['product_slug']); ?>"
-                                           class="db-list-edit" target="_blank"><?php echo $Zitiziti['PREVIEW']; ?></a>
-                                    </td>
+                                    <th><?php echo $Zitiziti['S_NO']; ?></th>
+                                    <th><?php echo $Zitiziti['PRODUCT_NAME']; ?></th>
+                                    <th><?php echo $Zitiziti['VIEWS']; ?></th>
+                                    <th><?php echo $Zitiziti['STATUS']; ?></th>
+                                    <th><?php echo $Zitiziti['EDIT']; ?></th>
+                                    <th><?php echo $Zitiziti['DELETE']; ?></th>
+                                    <th><?php echo $Zitiziti['PREVIEW']; ?></th>
                                 </tr>
-
+                                </thead>
+                                <tbody>
                                 <?php
-                                $si++;
-                            }
-                            ?>
 
-                            </tbody>
-                        </table>
+                                $si = 1;
+                                foreach (getAllProductUser($_SESSION['user_id']) as $productrow) {
+
+                                    $reviewproduct_id = $productrow['product_id'];
+
+                                    ?>
+                                    <tr>
+                                        <td><?php echo $si; ?></td>
+                                        <td><img
+                                                    src="<?php if ($productrow['gallery_image'] != NULL || !empty($productrow['gallery_image'])) {
+                                                        echo "images/products/" . array_shift(explode(',', $productrow['gallery_image']));
+                                                    } else {
+                                                        echo "images/listings/" . $footer_row['listing_default_image'];
+                                                    } ?>"><?php echo $productrow['product_name']; ?>
+                                            <span><?php echo dateFormatconverter($productrow['product_cdt']); ?></span></td>
+                                        <td>
+                                            <span class="db-list-rat"><?php echo product_pageview_count($productrow['product_id']); ?></span>
+                                        </td>
+                                        <td><span class="db-list-ststus"><?php echo $productrow['product_status']; ?></span>
+                                        </td>
+                                        <td><a href="edit-product?code=<?php echo $productrow['product_code']; ?>"
+                                            class="db-list-edit"><?php echo $Zitiziti['EDIT']; ?></a></td>
+                                        <td><a href="delete-product?code=<?php echo $productrow['product_code']; ?>"
+                                            class="db-list-edit"><?php echo $Zitiziti['DELETE']; ?></a></td>
+                                        <td><a href="<?php echo $PRODUCT_URL . urlModifier($productrow['product_slug']); ?>"
+                                            class="db-list-edit" target="_blank"><?php echo $Zitiziti['PREVIEW']; ?></a>
+                                        </td>
+                                    </tr>
+
+                                    <?php
+                                    $si++;
+                                }
+                                ?>
+
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 <!--                    <div id="mycart" class="container tab-pane">-->
 <!--                        <h2>Your cart</h2>-->

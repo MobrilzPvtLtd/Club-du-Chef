@@ -39,7 +39,7 @@ if ($blog_count_user >= $plan_type_blog_count) {
                 <span class="steps"><?php echo $Zitiziti['ADD_NEW_BLOG_POST']; ?></span>
                 <div class="log">
                     <div class="login add-list-off">
-
+                        <?php include "page_level_message.php"; ?>
                         <h4><?php echo $Zitiziti['CREATE_BLOG_POST']; ?></h4>
                         <form action="blog_insert.php" class="blog_form" id="blog_form" name="blog_form"
                               method="post" enctype="multipart/form-data">
@@ -74,6 +74,27 @@ if ($blog_count_user >= $plan_type_blog_count) {
                                         </div>
                                     </div>-->
                                     <!--FILED END-->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" required="required" class="chosen-select form-control">
+                                                    <?php
+                                                    foreach (getAllCities() as $city) {
+                                                        if (strtolower($city['city_name']) == 'www') {
+                                                            continue;
+                                                        }
+                                                    ?>
+                                                        <option
+                                                            value="<?php echo $city['city_slug']; ?>">
+                                                            <?php echo $city['city_name']; ?>
+                                                        </option>
+                                                    <?php
+                                                    }
+                                                    ?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <!--FILED START-->
                                     <div class="row">
                                         <div class="col-md-12">

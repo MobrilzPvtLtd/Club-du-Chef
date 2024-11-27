@@ -23,6 +23,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $mobile_number = $_POST["mobile_number"];
         $email_id = $_POST["email_id"];
 
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
+
         $register_mode = "Direct";
 //        $user_status = "Inactive";
 
@@ -145,10 +155,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $blog_slug = checkBlogSlug($blog_name1,$blog_id);
 
 
- $blog_qry = "UPDATE  " . TBL . "blogs  SET user_id='" . $user_id . "', blog_name='" . $blog_name . "'
-      ,blog_description='" . $blog_description . "', category_id='" . $category_id . "',
-      blog_image='" . $blog_image . "', blog_status='" . $blog_status . "',  isenquiry='" . $isenquiry . "'
-     , blog_slug='" . $blog_slug . "' where blog_id='" . $blog_id . "'";
+        $blog_qry = "UPDATE  " . TBL . "blogs  SET user_id='" . $user_id . "', blog_name='" . $blog_name . "',blog_description='" . $blog_description . "',city_slug='" . $city_slug_json . "', category_id='" . $category_id . "', blog_image='" . $blog_image . "', blog_status='" . $blog_status . "',  isenquiry='" . $isenquiry . "', blog_slug='" . $blog_slug . "' where blog_id='" . $blog_id . "'";
 
         
         $blog_res = mysqli_query($conn,$blog_qry);

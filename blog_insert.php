@@ -9,18 +9,28 @@ if (file_exists('config/info.php')) {
 }
 if ($_SERVER['REQUEST_METHOD']=='POST') {
 
-    if (isset($_POST['blog_submit'])) {
+    // if (isset($_POST['blog_submit'])) {
 
-// Basic Personal Details
+        // Basic Personal Details
         $first_name = $_POST["first_name"];
         $last_name = $_POST["last_name"];
         $mobile_number = $_POST["mobile_number"];
         $email_id = $_POST["email_id"];
 
-        $register_mode = "Direct";
-//        $user_status = "Inactive";
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
 
-// Common blog Details
+        $register_mode = "Direct";
+        //  $user_status = "Inactive";
+
+        // Common blog Details
         $blog_name = $_POST["blog_name"];
         $category_id = $_POST["category_id"];
         $blog_description = addslashes($_POST["blog_description"]);
@@ -34,12 +44,12 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 
 
 
-// blog Status
+        // blog Status
 
         $payment_status = "Pending";
         $blog_type_id = 1;
 
-//    Condition to get User Id starts
+        //    Condition to get User Id starts
 
 
 
@@ -92,11 +102,11 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
             $upres = mysqli_query($conn,$upqry);
 
             $user_id = $lastID; //User Id
-// Blog Status
+        // Blog Status
             $blog_status = "Inactive";
 
         }
-//    Condition to get User Id Ends
+        //    Condition to get User Id Ends
         
 
         if (!empty($_FILES['blog_image']['name'])) {
@@ -138,13 +148,13 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
         $blog_name1 = trim(preg_replace('/[^A-Za-z0-9]/', ' ', $blog_name));
         $blog_slug = checkBlogSlug($blog_name1);
 
-//    blog Insert Part Starts
+        //    blog Insert Part Starts
 
 
         $blog_qry = "INSERT INTO " . TBL . "blogs 
-					(user_id, blog_name, category_id, blog_description, blog_image, blog_status,  isenquiry, blog_slug, blog_cdt)
+					(user_id, blog_name, category_id,city_slug, blog_description, blog_image, blog_status,  isenquiry, blog_slug, blog_cdt)
 					VALUES 
-					('$user_id', '$blog_name', '$category_id', '$blog_description', '$blog_image', '$blog_status', '$isenquiry', '$blog_slug', '$curDate')";
+					('$user_id', '$blog_name', '$category_id','$city_slug_json', '$blog_description', '$blog_image', '$blog_status', '$isenquiry', '$blog_slug', '$curDate')";
 
         $blog_res = mysqli_query($conn,$blog_qry);
 
@@ -169,7 +179,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 
             $BLOG_INSERT_ADMIN_SUBJECT = $Zitiziti['BLOG_INSERT_ADMIN_SUBJECT'];
 
-//****************************    Admin email starts    *************************
+        //****************************    Admin email starts    *************************
 
             $to = $admin_email;
             $subject = "$admin_site_name $BLOG_INSERT_ADMIN_SUBJECT";
@@ -193,9 +203,9 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
             mail($to, $subject, $message1, $headers); //admin email
 
 
-//****************************    Admin email ends    *************************
+        //****************************    Admin email ends    *************************
 
-//****************************    Client email starts    *************************
+        //****************************    Client email starts    *************************
 
             $to1 = $email_id;
             
@@ -221,7 +231,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 
             mail($to1, $subject1, $message2, $headers1); //admin email
 
-//****************************    client email ends    *************************
+        //****************************    client email ends    *************************
 
             if ($blog_type_id == 1) {
 
@@ -249,9 +259,11 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 
         //    blog Insert Part Ends
 
-    }
+    // }else{
+    //     print_r(12);
+    //     die();
+    // }
 }else {
-
     $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
     header('Location: dashboard');
