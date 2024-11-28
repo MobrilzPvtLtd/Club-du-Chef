@@ -100,7 +100,10 @@ else {
                 //                <!--                //Listing search print starts-->
                 if (mysqli_num_rows($listings_query) > 0) {
                     while ($listings_row = mysqli_fetch_array($listings_query)) {
-                        ?>
+
+                        $decoded_city_slugs = (array)json_decode($listings_row['city_slug'], true);
+                        if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
+                ?>
                         <li>
                             <div class="smbox">
                                 <div class="ser0"><img
@@ -131,7 +134,8 @@ else {
                             </span>
                             </div>
                         </li>
-                        <?php
+                <?php
+                        }
                     }
                 }
                 //                <!--                //Listing search print ends-->
@@ -141,7 +145,10 @@ else {
 
                 if (mysqli_num_rows($event_query) > 0) {
                     while ($events_row = mysqli_fetch_array($event_query)) {
-                        ?>
+
+                        $decoded_city_slugs = (array)json_decode($events_row['city_slug'], true);
+                        if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
+                    ?>
                         <li>
                             <div class="smbox">
                                 <div class="ser0">
@@ -167,7 +174,8 @@ else {
                             </span>
                             </div>
                         </li>
-                        <?php
+                <?php
+                        }
                     }
                 }
                 //                <!--                //Event search print ends-->
@@ -176,6 +184,8 @@ else {
 
                 if (mysqli_num_rows($blog_query) > 0) {
                     while ($blog_row = mysqli_fetch_array($blog_query)) {
+                        $decoded_city_slugs = (array)json_decode($blog_row['city_slug'], true);
+                        if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                         ?>
                         <li>
                             <div class="smbox">
@@ -203,6 +213,7 @@ else {
                             </div>
                         </li>
                         <?php
+                        }
                     }
                 }
                 //                <!--                //Blog search print ends-->
@@ -211,6 +222,8 @@ else {
 
                 if (mysqli_num_rows($product_query) > 0) {
                     while ($product_row = mysqli_fetch_array($product_query)) {
+                        $decoded_city_slugs = (array)json_decode($product_row['city_slug'], true);
+                        if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                         ?>
                         <li>
                             <div class="smbox">
@@ -238,6 +251,7 @@ else {
                             </div>
                         </li>
                         <?php
+                        }
                     }
                 }
                 //                <!--                //Product search print ends-->
@@ -246,6 +260,8 @@ else {
 
                 if (mysqli_num_rows($job_query) > 0) {
                     while ($job_row = mysqli_fetch_array($job_query)) {
+                        $decoded_city_slugs = (array)json_decode($job_row['city_slug'], true);
+                        if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                         ?>
                         <li>
                             <div class="smbox">
@@ -273,6 +289,7 @@ else {
                             </div>
                         </li>
                         <?php
+                        }
                     }
                 }
                 //                <!--                //Job search print ends-->
@@ -281,6 +298,8 @@ else {
 
                 if (mysqli_num_rows($expert_query) > 0) {
                     while ($expert_row = mysqli_fetch_array($expert_query)) {
+                        $decoded_city_slugs = (array)json_decode($expert_row['city_slug'], true);
+                        if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                         ?>
                         <li>
                             <div class="smbox">
@@ -297,6 +316,7 @@ else {
                             </div>
                         </li>
                         <?php
+                        }
                     }
                 }
                 //                <!--                //Expert search print ends-->
