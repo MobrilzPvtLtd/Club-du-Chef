@@ -2313,7 +2313,7 @@ div#review_success {
 }
 
 .ban-search {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     display: table;
     width: 55%;
     position: relative;
@@ -12324,7 +12324,7 @@ textarea {
     position: relative;
     float: left;
     width: 100%;
-    padding-top: 60px
+    /* padding-top: 60px */
 }
 
 .blog-head-inn .ban-search {
@@ -12334,14 +12334,15 @@ textarea {
 
 .blog-head-inn {
     width: 25%;
-    padding-top: 60px;
-    padding-right: 42px;
+    /* padding-top: 60px;
+    padding-right: 42px; */
     text-align: left
 }
 
 .blog-head-inn h1 {
-    font-size: 38px;
-    font-weight: 700
+    font-size: 35px;
+    font-weight: 700;
+    padding-left:25px;
 }
 
 .blog-head-inn p {
