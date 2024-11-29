@@ -51,8 +51,8 @@ if ($lang == 'es') {
             include('admin/config/all_texts_spanish.php');
         }
     }else {
-        if (file_exists('admin/config/all_texts_english.php')) {
-            include('admin/config/all_texts_english.php');
+        if (file_exists('admin/config/all_texts_spanish.php')) {
+            include('admin/config/all_texts_spanish.php');
         }
     }
 }
