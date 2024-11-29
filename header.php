@@ -1070,128 +1070,131 @@ foreach (getAllCities() as $city) {
                                 <?php } ?>
                             </h1>
                         </div>
-                        <div class="ban-search ban-sear-all d-flex justify-content-center">
-                            <form name="filter_form" id="filter_form" class="filter_form w-100">
-                                <ul>
-                                    <!-- <li class="sr-cate">
-                                        <select onChange="getSearchCategories(this.value);" name="explor_select"
-                                            id="explor_select" class="chosen-select rounded">
-                                            <option value=""><?php echo $Zitiziti['SEARCHBOX_LABEL_SER']; ?></option>
-                                            <?php if ($footer_row['admin_listing_show'] == 1) { ?>
-                                            <option value="1"><?php echo $Zitiziti['ALL_SERVICES']; ?></option>
-                                            <?php }
-                                                if ($footer_row['admin_expert_show'] == 1) { ?>
-                                            <option value="2"><?php echo $Zitiziti['SERVICE-EXPERTS']; ?></option>
-                                            <?php }
-                                                if ($footer_row['admin_job_show'] == 1) { ?>
-                                            <option value="3"><?php echo $Zitiziti['JOBS']; ?></option>
-                                            <?php }
-                                                if ($footer_row['admin_place_show'] == 1) { ?>
-                                            <option value="4"><?php echo $Zitiziti['PLACE-MENU']; ?></option>
-                                            <?php }
-                                                if ($footer_row['admin_news_show'] == 1) { ?>
-                                            <option value="5"><?php echo $Zitiziti['NEWS-MAGA']; ?></option>
-                                            <?php }
-                                                if ($footer_row['admin_event_show'] == 1) { ?>
-                                            <option value="6"><?php echo $Zitiziti['EVENTS']; ?></option>
-                                            <?php }
-                                                if ($footer_row['admin_product_show'] == 1) { ?>
-                                            <option value="7"><?php echo $Zitiziti['PRODUCTS']; ?></option>
-                                            <?php }
-                                                if ($footer_row['admin_coupon_show'] == 1) { ?>
-                                            <option value="8"><?php echo $Zitiziti['COUPONS_AND_DEALS']; ?></option>
-                                            <?php }
-                                                if ($footer_row['admin_blog_show'] == 1) { ?>
-                                            <option value="9"><?php echo $Zitiziti['BLOGS']; ?></option>
-                                            <?php } ?>
-                                        </select>
-                                    </li> -->
-                                    <!-- <li class="sr-cit">
-                                            <select id="city_check" name="city_check" class="chosen-select">
-                                                <option value=""><?php echo $Zitiziti['SELECT_CITY']; ?></option>
-                                                <?php if (isset($_SESSION['google_city_name']) && ($_SESSION['google_city_name']) != NULL) { ?>
-                                                    <option <?php
-                                                    echo 'selected';
-                                                    ?>
-                                                        value="<?php echo $_SESSION['google_city_name']; ?>">
-                                                        <?php echo $_SESSION['google_city_name']; ?>
-                                                    </option>
+                        <div class="container d-flex justify-content-center">
+                            <div class="ban-search">
+                                <form name="filter_form" id="filter_form">
+                                    <ul>
+                                        <!-- <li class="sr-cate">
+                                            <select onChange="getSearchCategories(this.value);" name="explor_select"
+                                                id="explor_select" class="chosen-select rounded">
+                                                <option value=""><?php echo $Zitiziti['SEARCHBOX_LABEL_SER']; ?></option>
+                                                <?php if ($footer_row['admin_listing_show'] == 1) { ?>
+                                                <option value="1"><?php echo $Zitiziti['ALL_SERVICES']; ?></option>
+                                                <?php }
+                                                    if ($footer_row['admin_expert_show'] == 1) { ?>
+                                                <option value="2"><?php echo $Zitiziti['SERVICE-EXPERTS']; ?></option>
+                                                <?php }
+                                                    if ($footer_row['admin_job_show'] == 1) { ?>
+                                                <option value="3"><?php echo $Zitiziti['JOBS']; ?></option>
+                                                <?php }
+                                                    if ($footer_row['admin_place_show'] == 1) { ?>
+                                                <option value="4"><?php echo $Zitiziti['PLACE-MENU']; ?></option>
+                                                <?php }
+                                                    if ($footer_row['admin_news_show'] == 1) { ?>
+                                                <option value="5"><?php echo $Zitiziti['NEWS-MAGA']; ?></option>
+                                                <?php }
+                                                    if ($footer_row['admin_event_show'] == 1) { ?>
+                                                <option value="6"><?php echo $Zitiziti['EVENTS']; ?></option>
+                                                <?php }
+                                                    if ($footer_row['admin_product_show'] == 1) { ?>
+                                                <option value="7"><?php echo $Zitiziti['PRODUCTS']; ?></option>
+                                                <?php }
+                                                    if ($footer_row['admin_coupon_show'] == 1) { ?>
+                                                <option value="8"><?php echo $Zitiziti['COUPONS_AND_DEALS']; ?></option>
+                                                <?php }
+                                                    if ($footer_row['admin_blog_show'] == 1) { ?>
+                                                <option value="9"><?php echo $Zitiziti['BLOGS']; ?></option>
                                                 <?php } ?>
-                                                <?php
-                                                $all_city_array = array();
-                                                foreach (getAllListingPageCities() as $city_listrow) {
-                                                    $arr34 = explode(',', $city_listrow['city_id']);
-                                                    foreach ($arr34 as $row) {
-                                                        if (trim($row) != '') {
-                                                            $all_city_array[] = trim($row);
+                                            </select>
+                                        </li> -->
+                                        <!-- <li class="sr-cit">
+                                                <select id="city_check" name="city_check" class="chosen-select">
+                                                    <option value=""><?php echo $Zitiziti['SELECT_CITY']; ?></option>
+                                                    <?php if (isset($_SESSION['google_city_name']) && ($_SESSION['google_city_name']) != NULL) { ?>
+                                                        <option <?php
+                                                        echo 'selected';
+                                                        ?>
+                                                            value="<?php echo $_SESSION['google_city_name']; ?>">
+                                                            <?php echo $_SESSION['google_city_name']; ?>
+                                                        </option>
+                                                    <?php } ?>
+                                                    <?php
+                                                    $all_city_array = array();
+                                                    foreach (getAllListingPageCities() as $city_listrow) {
+                                                        $arr34 = explode(',', $city_listrow['city_id']);
+                                                        foreach ($arr34 as $row) {
+                                                            if (trim($row) != '') {
+                                                                $all_city_array[] = trim($row);
+                                                            }
                                                         }
                                                     }
-                                                }
-                                                $city_input = array();
-                                                $city_input = array_unique($all_city_array);
+                                                    $city_input = array();
+                                                    $city_input = array_unique($all_city_array);
 
-                                                foreach ($city_input as $places) {
-                                                    $cityrow = getCity($places);
-                                                    $hyphend_city_name = urlModifier($cityrow['city_name']);
-                                                    ?>
-                                                    <option <?php if ($_SESSION['city_check'] == $hyphend_city_name) {
-                                                        echo 'selected';
-                                                    } ?> value="<?php echo urlModifier($hyphend_city_name); ?>">
-                                                        <?php echo $cityrow['city_name']; ?>
-                                                    </option>
-                                                    <?php
-                                                }
-                                                ?>
-                                            </select>
-                                        </li>
-                                        <li class="sr-nor">
-                                            <select class="chosen-select" id="expert-select-search"
-                                                name="expert-select-search">
-                                                <option value=""><?php echo $Zitiziti['SEARCHBOX_LABEL']; ?></option>
-                                                <?php
-                                                foreach (getAllCategoriesPos() as $expert_search_categories_row) {
-
-                                                    $search_category_name = $expert_search_categories_row['category_name'];
-
-                                                    $search_category_id = $expert_search_categories_row['category_id'];
-                                                    ?>
-                                                    <option value="<?php echo $search_category_name; ?>">
-                                                        <?php echo $search_category_name; ?>
-                                                    </option>
-                                                    <?php
-                                                }
-                                                ?>
-                                            </select>
-                                    </li> -->
-                                    <li class="sr-cate">
-                                        <input type="text" autocomplete="off" id="select-search"
-                                            placeholder="<?php echo $Zitiziti['SEARCHBOX_LABEL']; ?>"
-                                            class="search-field rounded" required>
-
-                                            <ul id="results" class="tser-res tser-res1">
-                                                <!-- <?php
-                                                    $si = 1;
-                                                    foreach (getAllSearch() as $search_header_row) {
-                                                    ?>
-                                                        <li>
-                                                            <div>
-                                                                <h4><?php echo $search_header_row['search_title']; ?></h4>
-                                                                <span><?php echo $search_header_row['search_tag_line']; ?></span>
-                                                                <a href="<?php echo $search_header_row['search_list_link']; ?>"></a>
-                                                            </div>
-                                                        </li>
-                                                    <?php
+                                                    foreach ($city_input as $places) {
+                                                        $cityrow = getCity($places);
+                                                        $hyphend_city_name = urlModifier($cityrow['city_name']);
+                                                        ?>
+                                                        <option <?php if ($_SESSION['city_check'] == $hyphend_city_name) {
+                                                            echo 'selected';
+                                                        } ?> value="<?php echo urlModifier($hyphend_city_name); ?>">
+                                                            <?php echo $cityrow['city_name']; ?>
+                                                        </option>
+                                                        <?php
                                                     }
-                                                ?> -->
-                                            </ul>
-                                    </li>
-                                    <li class="sr-btn">
-                                        <input type="submit" id="filter_submit" name="filter_submit"
-                                            value="<?php echo $Zitiziti['SEARCH']; ?>" class="filter_submit rounded">
-                                    </li>
-                                </ul>
-                            </form>
+                                                    ?>
+                                                </select>
+                                            </li>
+                                            <li class="sr-nor">
+                                                <select class="chosen-select" id="expert-select-search"
+                                                    name="expert-select-search">
+                                                    <option value=""><?php echo $Zitiziti['SEARCHBOX_LABEL']; ?></option>
+                                                    <?php
+                                                    foreach (getAllCategoriesPos() as $expert_search_categories_row) {
+
+                                                        $search_category_name = $expert_search_categories_row['category_name'];
+
+                                                        $search_category_id = $expert_search_categories_row['category_id'];
+                                                        ?>
+                                                        <option value="<?php echo $search_category_name; ?>">
+                                                            <?php echo $search_category_name; ?>
+                                                        </option>
+                                                        <?php
+                                                    }
+                                                    ?>
+                                                </select>
+                                        </li> -->
+                                        <li class="sr-sea">
+                                            <input type="text" autocomplete="off" id="select-search"
+                                                placeholder="<?php echo $Zitiziti['SEARCHBOX_LABEL']; ?>"
+                                                class="search-field rounded" required>
+
+                                                <ul id="results" class="tser-res tser-res1">
+                                                    <!-- <?php
+                                                        $si = 1;
+                                                        foreach (getAllSearch() as $search_header_row) {
+                                                        ?>
+                                                            <li>
+                                                                <div>
+                                                                    <h4><?php echo $search_header_row['search_title']; ?></h4>
+                                                                    <span><?php echo $search_header_row['search_tag_line']; ?></span>
+                                                                    <a href="<?php echo $search_header_row['search_list_link']; ?>"></a>
+                                                                </div>
+                                                            </li>
+                                                        <?php
+                                                        }
+                                                    ?> -->
+                                                </ul>
+                                        </li>
+                                        <li class="sr-btn">
+                                            <input type="submit" id="filter_submit" name="filter_submit"
+                                                value="<?php echo $Zitiziti['SEARCH']; ?>" class="filter_submit rounded">
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
                         </div>
+
                         <div class="ban-short-links">
                             <ul>
                                 <?php if ($footer_row['admin_listing_show'] == 1) { ?>
