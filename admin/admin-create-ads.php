@@ -174,7 +174,7 @@ include "header.php";
                                                 </div> -->
                                                 <!--FILED END-->
                                                 <!--FILED START-->
-                                                <div class="row">
+                                                <!-- <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="ad-pri-cal">
                                                             <ul>
@@ -205,7 +205,7 @@ include "header.php";
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <!--FILED END-->
                                                 </li>
                                                 </ul>

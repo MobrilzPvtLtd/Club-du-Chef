@@ -156,17 +156,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($res) {
 
-            $_SESSION['ads_enquiry_id'] = $promote_id;
+            // $_SESSION['ads_enquiry_id'] = $promote_id;
 
-            $_SESSION['ad_total_cost'] = $ad_total_cost;
+            // $_SESSION['ad_total_cost'] = $ad_total_cost;
             
-            header('Location: payment_paypal_ads.php');
-            exit;
-
-            // $_SESSION['status_msg'] = $Zitiziti['NEW_AD_REQUEST_SUCCESS_MESSAGE'];
-
-            // header('Location: db-post-ads');
+            // header('Location: payment_paypal_ads.php');
             // exit;
+
+            $_SESSION['status_msg'] = $Zitiziti['NEW_AD_REQUEST_SUCCESS_MESSAGE'];
+
+            header('Location: db-post-ads');
+            exit;
 
         } else {
 
