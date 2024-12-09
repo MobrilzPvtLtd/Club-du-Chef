@@ -5,10 +5,10 @@ function getAllCities()
 {
     global $conn;
 
-    $sql = "SELECT * FROM " . TBL . "cities GROUP BY city_name ORDER BY city_id  DESC";
+    // $sql = "SELECT * FROM " . TBL . "cities GROUP BY city_name ORDER BY city_id  DESC";
+    $sql = "SELECT * FROM " . TBL . "cities ORDER BY city_id DESC";
     $rs = mysqli_query($conn, $sql);
     return $rs;
-
 }
 
 //Get All city with given city Id
