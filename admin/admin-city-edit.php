@@ -34,6 +34,10 @@ include "header.php";
                                                     <div class="col-md-12">
                                                         <div class="form-group">
                                                             <label>City Name</label>
+                                                            <?php 
+                                                                if ($row['city_name'] == 'www') { ?> 
+                                                                <input type="hidden" name="city_name" value="www">
+                                                            <?php } ?>
                                                             <input type="text" name="city_name"
                                                                 value="<?php echo $row['city_name']; ?>"
                                                                 class="form-control" placeholder="city name *" required <?php if ($row['city_name'] == 'www') { ?> disabled <?php } ?>
