@@ -176,12 +176,13 @@ include "header.php";
                                     ?>
                                     <tr style="">
                                         <td><?php echo $si; ?></td>
-                                        <td><img
-                                                src="../images/user/<?php if (($expert_user_row['profile_image'] == NULL) || empty($expert_user_row['profile_image'])) {
-                                                    echo $footer_row['user_default_image'];
-                                                } else {
-                                                    echo $expert_user_row['profile_image'];
-                                                } ?>"><?php echo $expert_profile_row['profile_name']; ?>
+                                        <td>
+                                        <img src="<?php if ($expert_profile_row['profile_image'] != NULL || !empty($expert_profile_row['profile_image'])) {
+                                            echo "../service-experts/images/services/" . $expert_profile_row['profile_image'];
+                                        } else {
+                                            echo "../service-experts/images/services/" . $footer_row['listing_default_image'];
+                                        } ?>">
+                                                <?php echo $expert_profile_row['profile_name']; ?>
                                             <span>Date: <?php echo dateFormatconverter($expert_profile_row['expert_cdt']); ?></span>
                                         </td>
                                         <td><span

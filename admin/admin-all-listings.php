@@ -77,7 +77,8 @@ include "header.php";
                                             echo "../images/listings/" . $listrow['profile_image'];
                                         } else {
                                             echo "../images/listings/" . $footer_row['listing_default_image'];
-                                        } ?>"><?php echo $listrow['listing_name']; ?>
+                                        } ?>">
+                                        <?php echo $listrow['listing_name']; ?>
                                     <span><?php echo dateFormatconverter($listrow['listing_cdt']); ?></span></td>
                                 <td><span class="db-list-rat"><?php echo $star_rate; ?></span></td>
                                 <td><span

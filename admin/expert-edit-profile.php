@@ -174,7 +174,7 @@ include "header.php";
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="tit">Cities</label>
-                                <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" required="required" class="chosen-select form-control">
+                                <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" class="chosen-select form-control">
                                 <?php
                                     foreach (getAllCities() as $city) {
                                         if (strtolower($city['city_name']) == 'www') {
@@ -309,7 +309,7 @@ include "header.php";
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <button name="service_expert_submit" class="btn btn-primary"><?php echo "Submit Now"; ?></button>
+                                <button type="submit" name="service_expert_submit" class="btn btn-primary"><?php echo "Submit Now"; ?></button>
                             </div>
                         </div>
                     </div>
