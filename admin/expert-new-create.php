@@ -20,7 +20,7 @@ include "header.php";
                     <div class="ud-cen-s2 job-form">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label class="tit">Choose user *</label>
+                                <label class="tit">Choose user <span style="color: red;">*</span></label>
                                 <select class="chosen-select" required="required" name="user_id">
                                     <option
                                         value="">Select User</option>
@@ -89,7 +89,7 @@ include "header.php";
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="tit">Work profession</label>
+                                <label class="tit">Work profession <span style="color: red;">*</span></label>
                                 <select onChange="getExpertSubCategory(this.value);" class="chosen-select"
                                         name="category_id">
                                     <option value=""><?php echo "Select Work Profession"; ?></option>
@@ -119,7 +119,7 @@ include "header.php";
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label class="tit">Services can do</label>
+                                <label class="tit">Services can do <span style="color: red;">*</span></label>
                                 <select class="chosen-select" required="required" multiple="multiple" id="sub_category_id"
                                         name="sub_category_id[]">
                                     <?php
@@ -135,8 +135,8 @@ include "header.php";
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label class="tit">Cities</label>
-                                <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" class="chosen-select form-control">
+                                <label class="tit">Cities <span style="color: red;">*</span></label>
+                                <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" required="required" class="chosen-select form-control">
                                 <?php
                                     foreach (getAllCities() as $city) {
                                         if (strtolower($city['city_name']) == 'www') {
@@ -236,9 +236,8 @@ include "header.php";
                             </div>
                         </div>
                         <div class="form-group col-md-6 serex-date">
-                            <label class="tit"><?php echo "Date of Birth"; ?></label>
-                            <input type="text" name="date_of_birth" class="form-control"
-                                   id="dobfield">
+                            <label class="tit"><?php echo "Date of Birth"; ?> <span style="color: red;">*</span></label>
+                            <input type="text" name="date_of_birth" class="form-control" id="dobfield" required>
                         </div>
 
                         <div class="form-group col-md-6 serex-time">
