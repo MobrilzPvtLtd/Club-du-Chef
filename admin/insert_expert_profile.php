@@ -185,16 +185,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
         $expert_profile_profile_qry = "INSERT INTO " . TBL . "experts
-					(user_id, profile_name, city_id, city_slug, years_of_experience, base_fare, available_time_start
-					, available_time_end, profile_image, cover_image, id_proof, area_id
+					(user_id, profile_name, city_slug, years_of_experience, base_fare, available_time_start
+					, available_time_end, profile_image, cover_image, id_proof
 					, experience_1, experience_2, experience_3, experience_4
 					, education_1, education_2, education_3, education_4
 					, additional_info_1, additional_info_2, additional_info_3, additional_info_4
 					, category_id, sub_category_id, date_of_birth, payment_id
 					, expert_udt, expert_status, expert_slug, expert_cdt)
 					VALUES
-					('$user_id', '$profile_name', '$city_id', '$city_slug_json', '$years_of_experience', '$base_fare', '$available_time_start'
-					, '$available_time_end', '$profile_image', '$cover_image', '$id_proof', '$area_id'
+					('$user_id', '$profile_name', '$city_slug_json', '$years_of_experience', '$base_fare', '$available_time_start'
+					, '$available_time_end', '$profile_image', '$cover_image', '$id_proof'
 					, '$experience_1', '$experience_2', '$experience_3', '$experience_4'
 					, '$education_1', '$education_2', '$education_3', '$education_4'
 					, '$additional_info_1', '$additional_info_2', '$additional_info_3', '$additional_info_4'
