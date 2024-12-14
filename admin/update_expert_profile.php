@@ -190,10 +190,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
             $expert_profile_res = mysqli_query($conn, "UPDATE  " . TBL . "experts SET profile_name='" . $profile_name . "'
-     , city_id='" . $city_id . "',city_slug='" . $city_slug_json . "', years_of_experience='" . $years_of_experience . "', base_fare='" . $base_fare . "'
+     , city_slug='" . $city_slug_json . "', years_of_experience='" . $years_of_experience . "', base_fare='" . $base_fare . "'
      , available_time_start='" . $available_time_start . "', available_time_end='" . $available_time_end . "'
      , profile_image='" . $profile_image . "', cover_image='" . $cover_image . "'
-     , id_proof ='" . $id_proof . "', area_id='" . $area_id . "'
+     , id_proof ='" . $id_proof . "'
      , user_id ='" . $user_id . "'
      , experience_1='" . $experience_1 . "', experience_2 ='" . $experience_2 . "'
      , experience_3='" . $experience_3 . "', experience_4 ='" . $experience_4 . "'
