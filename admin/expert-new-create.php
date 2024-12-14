@@ -104,7 +104,7 @@ include "header.php";
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label class="tit">Year of experience</label>
+                                <label class="tit">Year of experience <span style="color: red;">*</span></label>
                                 <input type="text" onkeypress="return isNumber(event)" name="years_of_experience"
                                        class="form-control">
                             </div>
