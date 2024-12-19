@@ -474,9 +474,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                         <div class="count_no"><?php echo $Zitiziti['JOB-SHOWING']; ?>
                             <span><?php echo AddingZero_BeforeNumber($total_experts); ?></span> <?php echo $Zitiziti['SERVICE-EXPERTS']; ?>
                         </div>
-                        <?php
-                            }
-                        ?>
+                        
                         <div class="list-res-selt">
 
                             <!-- //Filter Category name   -->
@@ -553,6 +551,9 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                     } ?></span>
                             <?php } ?>
                         </div>
+                        <?php
+                            }
+                        ?>
                     </div>
                     <!--RESULTS SELECTED FILTER-->
                     <?php
