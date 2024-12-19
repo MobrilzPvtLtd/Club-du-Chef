@@ -141,14 +141,24 @@ if($footer_row['admin_expert_show'] != 1) {
 
             <div class="job-pop-tag">
                 <?php
-                foreach (getAllExpertCategoriesOrderByExpertsTableLimit(5) as $expert_trend_categories_row) {
+                if($CurrentCity == 'www'){
+                    $categories = getAllExpertCategoriesOrderByExpertsTableLimit(5);
+                }else{
+                    $categories = getAllExpertCategoriesOrderByExpertsTableLimit(12);
+                }
+
+                foreach ($categories as $expert_trend_categories_row) {
 
                     $trend_category_name = $expert_trend_categories_row['category_name'];
 
                     $trend_category_id = $expert_trend_categories_row['category_id'];
+
+                    $decoded_city_slugs = (array)json_decode($expert_trend_categories_row['city_slug'], true);
+                    if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                     ?>
                     <a href="<?php echo $ALL_EXPERTS_URL . urlModifier($expert_trend_categories_row['category_slug']); ?>"><?php echo $trend_category_name; ?></a>
                     <?php
+                    }
                 }
                 ?>
             </div>
@@ -186,8 +196,10 @@ if($footer_row['admin_expert_show'] != 1) {
                                                 alt="">
                                         </div>
                                         <div class="land-pack-grid-text">
-                                            <h4><?php echo $category_name; ?><span
-                                                    class="dir-ho-cat"><?php echo $Zitiziti['SERVICE-EXPERTS-EXPERTS']; ?> <?php echo $total_experts_category; ?></span>
+                                            <h4><?php echo $category_name; ?>
+                                            <span class="dir-ho-cat">
+                                                <?php echo $Zitiziti['SERVICE-EXPERTS-EXPERTS']; ?> <?php echo $total_experts_category; ?>
+                                            </span>
                                             </h4>
                                         </div>
                                         <a href="<?php echo $ALL_EXPERTS_URL . urlModifier($expert_categories_row['category_slug']); ?>"

@@ -177,9 +177,14 @@ function getCountUserExperts($arg)
 //Experts Count using Category Id
 function getCountCategoryExperts($arg)
 {
+    $CurrentCity = isset($_SESSION['city']) ? $_SESSION['city'] : 'www';
+
     global $conn;
 
-    $sql = "SELECT * FROM " . TBL . "experts WHERE category_id = '$arg'";
+    $sql = "SELECT * FROM " . TBL . "experts 
+            WHERE (JSON_CONTAINS(city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www') 
+            AND category_id = '$arg'";
+            
     $rs = mysqli_query($conn, $sql);
     $row = mysqli_num_rows($rs);
     return $row;
