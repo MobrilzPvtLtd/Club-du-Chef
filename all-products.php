@@ -532,16 +532,22 @@ if (!empty($w)) {
                     //  $productsql = "SELECT *
                     //  FROM " . TBL . "products  WHERE product_status= 'Active'
                     // $category_search_query $city_search_query ORDER BY product_id DESC";
-                    $productsql = "SELECT DISTINCT  t1 . * FROM  " . TBL . "products  AS t1 $inner $w $q  product_status= 'Active' ORDER BY product_id DESC ";
+                    $productsql = "SELECT DISTINCT  t1 . * FROM  " . TBL . "products  AS t1 $inner $w $q  product_status= 'Active' AND (JSON_CONTAINS(t1.city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www') ORDER BY product_id DESC ";
 
                     $productrs = mysqli_query($conn, $productsql);
                     $total_products = mysqli_num_rows($productrs);
                     ?>
                     <div class="listng-res">
+                        <?php
+                        if ($total_products > 0) {
+                        ?>
                         <div class="count_no">Total of
                             <span><?php echo AddingZero_BeforeNumber($total_products); ?></span> product result(s)
                             Found.
                         </div>
+                        <?php
+                        }
+                        ?>
                         <div class="list-res-selt">
 
                         <!-- //Filter Category name   -->

@@ -853,25 +853,26 @@ foreach (getAllCities() as $city) {
 
                         <!--RESULTS SELECTED FILTER-->
                         <div class="listng-res">
-
                             <?php
-                            $listsql = "SELECT DISTINCT  t1 . * , t4.user_plan FROM " . TBL . "listings AS t1 LEFT JOIN " . TBL . "users AS t4 ON t1.user_id = t4.user_id $inner $w $q t1.listing_status= 'Active' AND t1.listing_is_delete != '2' $order t1.display_position DESC, t4.user_plan DESC,t1.listing_id DESC ";
-                            //                        "SELECT " . TBL . "listings.*, " . TBL . "users.user_plan FROM " . TBL . "listings as t1
-                            //
-                            // LEFT JOIN " . TBL . "users ON " . TBL . "listings.user_id = " . TBL . "users.user_id  WHERE " . TBL . "listings.listing_status= 'Active'
-                            //
-                            // AND " . TBL . "listings.listing_is_delete != '2' $category_search_query $sub_category_search_query $city_search_query
-                            //
-                            // ORDER BY " . TBL . "listings.display_position DESC," . TBL . "users.user_plan DESC," . TBL . "listings.listing_id DESC";
+                                $listsql = "SELECT DISTINCT  t1 . * , t4.user_plan FROM " . TBL . "listings AS t1 LEFT JOIN " . TBL . "users AS t4 ON t1.user_id = t4.user_id $inner $w $q t1.listing_status= 'Active' AND t1.listing_is_delete != '2' 
+                                AND (JSON_CONTAINS(t1.city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www') $order t1.display_position DESC, t4.user_plan DESC,t1.listing_id DESC ";
 
-                            $listrs = mysqli_query($conn, $listsql);
-                            $total_listings = mysqli_num_rows($listrs);
+                                $listrs = mysqli_query($conn, $listsql);
+                                $total_listings = mysqli_num_rows($listrs);
+                            
+                            if ($total_listings > 0) {
                             ?>
-
-                            <div class="count_no">Total of
-                                <span><?php echo AddingZero_BeforeNumber($total_listings); ?></span> business result(s)
-                                Found.
-                            </div>
+                                <div class="count_no">Total of
+                                    <span>
+                                    <?php
+                                        echo AddingZero_BeforeNumber($total_listings); 
+                                    ?>
+                                    </span> business result(s)
+                                    Found.
+                                </div>
+                            <?php
+                            }
+                            ?>
                             <div class="list-res-selt">
 
                                 <!-- //Filter Category name   -->
