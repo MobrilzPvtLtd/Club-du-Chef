@@ -169,7 +169,7 @@ if (isset($_REQUEST['sort_by']) && !empty($_REQUEST['sort_by'])) {
                 <?php
                 $si = 1;
 
-                $blogsql = "SELECT  T1.* $blog_start_search_query FROM " . TBL . "blogs AS T1 $blog_end_search_query WHERE T1.blog_status = 'Active' AND (JSON_CONTAINS(t1.city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www') $category_search_query $blog_sort_by_search_query $blog_sort_by_search_order_query";
+                $blogsql = "SELECT  T1.* $blog_start_search_query FROM " . TBL . "blogs AS T1 $blog_end_search_query WHERE T1.blog_status = 'Active' AND (JSON_CONTAINS(T1.city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www') $category_search_query $blog_sort_by_search_query $blog_sort_by_search_order_query";
 
                 $blogrs = mysqli_query($conn, $blogsql);
                 $total_blogs = mysqli_num_rows($blogrs);
