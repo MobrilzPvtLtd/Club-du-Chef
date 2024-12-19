@@ -458,7 +458,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                     <!--END-->
                 </div>
                 <?php
-                $expertssql = "SELECT T1.* $service_start_search_query $service_rating_start_query FROM " . TBL . "experts AS T1 $service_end_search_query $service_rating_end_query WHERE T1.expert_status= 'Active' $category_search_query $service_availability_search_query $expert_location_search_query $service_verified_search_query $service_rating_search_query $service_sort_by_search_query $service_sort_by_search_order_query";
+                $expertssql = "SELECT T1.* $service_start_search_query $service_rating_start_query FROM " . TBL . "experts AS T1 $service_end_search_query $service_rating_end_query WHERE T1.expert_status= 'Active' AND (JSON_CONTAINS(t1.city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www') $category_search_query $service_availability_search_query $expert_location_search_query $service_verified_search_query $service_rating_search_query $service_sort_by_search_query $service_sort_by_search_order_query";
 
                 $expertrs = mysqli_query($conn, $expertssql);
                 $total_experts = mysqli_num_rows($expertrs);
@@ -468,9 +468,15 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
 
                     <!--RESULTS SELECTED FILTER-->
                     <div class="listng-res">
+                        <?php
+                            if ($total_experts > 0) {
+                        ?>
                         <div class="count_no"><?php echo $Zitiziti['JOB-SHOWING']; ?>
                             <span><?php echo AddingZero_BeforeNumber($total_experts); ?></span> <?php echo $Zitiziti['SERVICE-EXPERTS']; ?>
                         </div>
+                        <?php
+                            }
+                        ?>
                         <div class="list-res-selt">
 
                             <!-- //Filter Category name   -->
