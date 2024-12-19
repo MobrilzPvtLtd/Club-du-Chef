@@ -220,16 +220,22 @@ if (isset($_REQUEST['calendar-date']) && !empty($_REQUEST['calendar-date'])  && 
                 <?php
                 $si = 1;
 
-                $eventsql = "SELECT * FROM " . TBL . "events as T1 $event_end_search_query WHERE T1.event_status= 'Active' $category_search_query $events_location_search_query $event_sort_by_query $event_sort_by_search_query $event_sort_by_search_order_query";
+                $eventsql = "SELECT * FROM " . TBL . "events as T1 $event_end_search_query WHERE T1.event_status= 'Active' AND (JSON_CONTAINS(t1.city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www') $category_search_query $events_location_search_query $event_sort_by_query $event_sort_by_search_query $event_sort_by_search_order_query";
 
                 $eventrs = mysqli_query($conn, $eventsql);
                 $total_events = mysqli_num_rows($eventrs);
 
                 ?>
                 <div class="listng-res">
+                    <?php
+                        if ($total_events > 0) {
+                    ?>
                     <div class="count_no">Total of <span><?php echo AddingZero_BeforeNumber($total_events); ?></span>
                         events found.
                     </div>
+                    <?php
+                        }
+                    ?>
                     <div class="list-res-selt">
                         <!-- //Filter Category name   -->
                         <?php
