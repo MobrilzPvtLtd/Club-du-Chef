@@ -140,9 +140,11 @@ function getAllJobJob($arg)
 //Get All Job Count
 function getCountJob()
 {
+    $CurrentCity = isset($_SESSION['city']) ? $_SESSION['city'] : 'www';
+    
     global $conn;
 
-    $sql = "SELECT * FROM " . TBL . "jobs WHERE job_status= 'Active' ORDER BY job_id DESC";
+    $sql = "SELECT * FROM " . TBL . "jobs WHERE job_status= 'Active' AND (JSON_CONTAINS(city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www') ORDER BY job_id DESC";
     $rs = mysqli_query($conn, $sql);
     $row = mysqli_num_rows($rs);
     return $row;
@@ -152,9 +154,15 @@ function getCountJob()
 //Get All Job Count
 function getCountJobCompanyName()
 {
+    $CurrentCity = isset($_SESSION['city']) ? $_SESSION['city'] : 'www';
     global $conn;
 
-    $sql = "SELECT * FROM " . TBL . "jobs GROUP BY job_company_name AND job_status= 'Active'";
+    $sql = "SELECT * 
+            FROM " . TBL . "jobs 
+            WHERE job_status = 'Active' 
+            AND (JSON_CONTAINS(city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www')
+            GROUP BY job_company_name";
+
     $rs = mysqli_query($conn, $sql);
     $row = mysqli_num_rows($rs);
     return $row;

@@ -132,14 +132,22 @@ if($footer_row['admin_job_show'] != 1) {
                 </div>
                 <div class="job-pop-tag">
                     <?php
-                    foreach (getAllJobCategoriesOrderByJobsTableLimit(5) as $job_trend_categories_row) {
+                    if($CurrentCity == 'www'){
+                        $categories = getAllJobCategoriesOrderByJobsTableLimit(5);
+                    }else{
+                        $categories = getAllJobCategoriesOrderByJobsTableLimit(12);
+                    }
+                    foreach ($categories as $job_trend_categories_row) {
 
                         $trend_category_name = $job_trend_categories_row['category_name'];
 
                         $trend_category_id = $job_trend_categories_row['category_id'];
+                        $decoded_city_slugs = (array)json_decode($job_trend_categories_row['city_slug'], true);
+                        if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                         ?>
                         <a href="<?php echo $ALL_JOBS_URL . urlModifier($job_trend_categories_row['category_slug']); ?>"><?php echo $trend_category_name; ?></a>
                         <?php
+                        }
                     }
                     ?>
                 </div>
@@ -153,10 +161,10 @@ if($footer_row['admin_job_show'] != 1) {
                             <span class="count1"><?php echo AddingZero_BeforeNumber(getCountJobCompanyName()); ?></span>
                             <h4><?php echo $Zitiziti['JOB-COMPANIES']; ?></h4>
                         </li>
-                        <li>
+                        <!-- <li>
                             <span class="count1"><?php echo AddingZero_BeforeNumber(getCountJobProfile()); ?></span>
                             <h4><?php echo $Zitiziti['JOB-EMPLOYEES']; ?></h4>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
         </div>

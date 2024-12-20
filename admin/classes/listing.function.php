@@ -153,9 +153,11 @@ function getCountUserListing($arg)
 //Listing Count using Category Id
 function getCountCategoryListing($arg)
 {
+    $CurrentCity = isset($_SESSION['city']) ? $_SESSION['city'] : 'www';
+
     global $conn;
 
-    $sql = "SELECT * FROM " . TBL . "listings WHERE listing_is_delete != '2' AND category_id = '$arg' AND listing_status= 'Active'";
+    $sql = "SELECT * FROM " . TBL . "listings WHERE (JSON_CONTAINS(city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www') AND listing_is_delete != '2' AND category_id = '$arg' AND listing_status= 'Active'";
     $rs = mysqli_query($conn, $sql);
     $row = mysqli_num_rows($rs);
     return $row;

@@ -463,7 +463,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                     <!--END-->
                 </div>
                 <?php
-                $jobsql = "SELECT *  FROM " . TBL . "jobs WHERE job_status= 'Active' $category_search_query $sub_category_search_query $salary_search_query $job_type_search_query $job_location_search_query ORDER BY job_id DESC";
+                $jobsql = "SELECT *  FROM " . TBL . "jobs WHERE job_status= 'Active' AND (JSON_CONTAINS(city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www') $category_search_query $sub_category_search_query $salary_search_query $job_type_search_query $job_location_search_query ORDER BY job_id DESC";
 
                 $jobrs = mysqli_query($conn, $jobsql);
                 $total_jobs = mysqli_num_rows($jobrs);
@@ -473,120 +473,126 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
 
                     <!--RESULTS SELECTED FILTER-->
                     <div class="listng-res">
-                        <div class="count_no"><?php echo $Zitiziti['JOB-SHOWING']; ?>
-                            <span><?php echo AddingZero_BeforeNumber($total_jobs); ?></span> <?php echo $Zitiziti['JOBS_BRACKET']; ?>
-                        </div>
-                        <div class="list-res-selt">
-                            <!-- //Filter Category name   -->
-                            <?php
-                            if (isset($_GET['category']) && $_GET['category'] != '.php') { ?>
-                                <span class="job-filters" id="<?php echo strtolower($category_search_slug1); ?>"
-                                      data-type="category"><?php echo $category_search_name; ?></span>
-                            <?php } ?>
-
-                            <!-- //Filter Sub category name   -->
-                            <?php
-                            if (isset($_REQUEST['sub_cat']) && !empty($_REQUEST['sub_cat'])) {
-
-                                $get_subcategory_new = explode(',', $get_subcategory);
-
-                                foreach ($get_subcategory_new as $c) {
-                                    $get_subcategory1 = str_replace('-', ' ', $c);
-
-                                    if ($get_subcategory1 != NULL) {
-
-                                        $job_sub_category_row = getSlugJobSubCategory($get_subcategory1);
-
-                                        $hyphend_sub_category_name = urlModifier($job_sub_category_row['sub_category_slug']);
-                                        ?>
-                                        <span class="job-filters" id="<?php echo $hyphend_sub_category_name; ?>"
-                                              data-type="sub_cat"><?php echo $job_sub_category_row['sub_category_name']; ?></span>
+                        <?php
+                            if($total_jobs){
+                            ?>
+                            <div class="count_no"><?php echo $Zitiziti['JOB-SHOWING']; ?>
+                                <span><?php echo AddingZero_BeforeNumber($total_jobs); ?></span> <?php echo $Zitiziti['JOBS_BRACKET']; ?>
+                            </div>
+                            <div class="list-res-selt">
+                                <!-- //Filter Category name   -->
+                                <?php
+                                if (isset($_GET['category']) && $_GET['category'] != '.php') { ?>
+                                    <span class="job-filters" id="<?php echo strtolower($category_search_slug1); ?>"
+                                          data-type="category"><?php echo $category_search_name; ?></span>
+                                <?php } ?>
+    
+                                <!-- //Filter Sub category name   -->
+                                <?php
+                                if (isset($_REQUEST['sub_cat']) && !empty($_REQUEST['sub_cat'])) {
+    
+                                    $get_subcategory_new = explode(',', $get_subcategory);
+    
+                                    foreach ($get_subcategory_new as $c) {
+                                        $get_subcategory1 = str_replace('-', ' ', $c);
+    
+                                        if ($get_subcategory1 != NULL) {
+    
+                                            $job_sub_category_row = getSlugJobSubCategory($get_subcategory1);
+    
+                                            $hyphend_sub_category_name = urlModifier($job_sub_category_row['sub_category_slug']);
+                                            ?>
+                                            <span class="job-filters" id="<?php echo $hyphend_sub_category_name; ?>"
+                                                  data-type="sub_cat"><?php echo $job_sub_category_row['sub_category_name']; ?></span>
+                                        <?php }
+                                    }
+                                } ?>
+    
+    
+                                <!-- //Filter Job Type   -->
+                                <?php
+                                if (isset($_REQUEST['job_type']) && !empty($_REQUEST['job_type'])) {
+                                    ?>
+                                    <?php
+                                    $get_job_type_check_new = explode(',', $get_job_type);
+                                    if (in_array('permanent', $get_job_type_check_new)) { ?>
+                                        <span class="job-filters" id="<?php echo 'permanent'; ?>" data-type="job_type"><?php
+                                            echo $Zitiziti['JOB-PERMANENT']; ?></span>
+                                    <?php } ?>
+                                    <?php
+                                    $get_job_type_check_new = explode(',', $get_job_type);
+                                    if (in_array('contract', $get_job_type_check_new)) { ?>
+                                        <span class="job-filters" id="<?php echo 'contract'; ?>" data-type="job_type"><?php
+                                            echo $Zitiziti['JOB-CONTRACT']; ?></span>
+                                    <?php } ?>
+                                    <?php
+                                    $get_job_type_check_new = explode(',', $get_job_type);
+                                    if (in_array('part-time', $get_job_type_check_new)) { ?>
+                                        <span class="job-filters" id="<?php echo 'part-time'; ?>" data-type="job_type"><?php
+                                            echo $Zitiziti['JOB-PART-TIME']; ?></span>
+                                    <?php } ?>
+                                    <?php
+                                    $get_job_type_check_new = explode(',', $get_job_type);
+                                    if (in_array('freelance', $get_job_type_check_new)) { ?>
+                                        <span class="job-filters" id="<?php echo 'freelance'; ?>" data-type="job_type"><?php
+                                            echo $Zitiziti['JOB-FREELANCE']; ?></span>
                                     <?php }
-                                }
-                            } ?>
-
-
-                            <!-- //Filter Job Type   -->
-                            <?php
-                            if (isset($_REQUEST['job_type']) && !empty($_REQUEST['job_type'])) {
-                                ?>
+                                } ?>
+    
+                                <!-- //Filter City name   -->
                                 <?php
-                                $get_job_type_check_new = explode(',', $get_job_type);
-                                if (in_array('permanent', $get_job_type_check_new)) { ?>
-                                    <span class="job-filters" id="<?php echo 'permanent'; ?>" data-type="job_type"><?php
-                                        echo $Zitiziti['JOB-PERMANENT']; ?></span>
-                                <?php } ?>
+                                if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
+    
+                                    $get_city_new = explode(',', $get_city);
+    
+                                    foreach ($get_city_new as $c) {
+                                        $city1 = str_replace('-', ' ', $c);
+                                        if ($city1 != NULL) {
+                                            $job_city_row = getJobCityName($city1);
+    
+                                            $hyphend_city_name = urlModifier($job_city_row['city_name']);
+                                            ?>
+                                            <span class="job-filters" id="<?php echo $hyphend_city_name; ?>"
+                                                  data-type="city"><?php echo $job_city_row['city_name']; ?></span>
+                                        <?php }
+                                    }
+                                } ?>
+    
+                                <!-- //Filter Job Salary   -->
                                 <?php
-                                $get_job_type_check_new = explode(',', $get_job_type);
-                                if (in_array('contract', $get_job_type_check_new)) { ?>
-                                    <span class="job-filters" id="<?php echo 'contract'; ?>" data-type="job_type"><?php
-                                        echo $Zitiziti['JOB-CONTRACT']; ?></span>
-                                <?php } ?>
-                                <?php
-                                $get_job_type_check_new = explode(',', $get_job_type);
-                                if (in_array('part-time', $get_job_type_check_new)) { ?>
-                                    <span class="job-filters" id="<?php echo 'part-time'; ?>" data-type="job_type"><?php
-                                        echo $Zitiziti['JOB-PART-TIME']; ?></span>
-                                <?php } ?>
-                                <?php
-                                $get_job_type_check_new = explode(',', $get_job_type);
-                                if (in_array('freelance', $get_job_type_check_new)) { ?>
-                                    <span class="job-filters" id="<?php echo 'freelance'; ?>" data-type="job_type"><?php
-                                        echo $Zitiziti['JOB-FREELANCE']; ?></span>
-                                <?php }
-                            } ?>
-
-                            <!-- //Filter City name   -->
-                            <?php
-                            if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
-
-                                $get_city_new = explode(',', $get_city);
-
-                                foreach ($get_city_new as $c) {
-                                    $city1 = str_replace('-', ' ', $c);
-                                    if ($city1 != NULL) {
-                                        $job_city_row = getJobCityName($city1);
-
-                                        $hyphend_city_name = urlModifier($job_city_row['city_name']);
-                                        ?>
-                                        <span class="job-filters" id="<?php echo $hyphend_city_name; ?>"
-                                              data-type="city"><?php echo $job_city_row['city_name']; ?></span>
+                                if (isset($_REQUEST['job_salary']) && !empty($_REQUEST['job_salary'])) {
+                                    ?>
+                                    <?php
+                                    $get_job_salary_check_new = explode(',', $get_job_salary);
+                                    if (in_array(1000, $get_job_salary_check_new)) { ?>
+                                        <span class="job-filters" id="<?php echo 1000; ?>"
+                                              data-type="job_salary"><?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?>
+                                            0 - 1000 <?php if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?></span>
+                                    <?php } ?>
+                                    <?php
+                                    $get_job_salary_check_new = explode(',', $get_job_salary);
+                                    if (in_array(5000, $get_job_salary_check_new)) { ?>
+                                        <span class="job-filters" id="<?php echo 5000; ?>"
+                                              data-type="job_salary"><?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?> 1000 - 5000 <?php if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?></span>
+                                    <?php } ?>
+                                    <?php
+                                    $get_job_salary_check_new = explode(',', $get_job_salary);
+                                    if (in_array(15000, $get_job_salary_check_new)) { ?>
+                                        <span class="job-filters" id="<?php echo 15000; ?>"
+                                              data-type="job_salary"><?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?> 5000 - 15000 <?php if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?></span>
+                                    <?php } ?>
+                                    <?php
+                                    $get_job_salary_check_new = explode(',', $get_job_salary);
+                                    if (in_array(15001, $get_job_salary_check_new)) { ?>
+                                        <span class="job-filters" id="<?php echo 15001; ?>"
+                                              data-type="job_salary"><?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?> 15000 - above <?php if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?></span>
                                     <?php }
-                                }
-                            } ?>
-
-                            <!-- //Filter Job Salary   -->
-                            <?php
-                            if (isset($_REQUEST['job_salary']) && !empty($_REQUEST['job_salary'])) {
-                                ?>
-                                <?php
-                                $get_job_salary_check_new = explode(',', $get_job_salary);
-                                if (in_array(1000, $get_job_salary_check_new)) { ?>
-                                    <span class="job-filters" id="<?php echo 1000; ?>"
-                                          data-type="job_salary"><?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?>
-                                        0 - 1000 <?php if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?></span>
-                                <?php } ?>
-                                <?php
-                                $get_job_salary_check_new = explode(',', $get_job_salary);
-                                if (in_array(5000, $get_job_salary_check_new)) { ?>
-                                    <span class="job-filters" id="<?php echo 5000; ?>"
-                                          data-type="job_salary"><?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?> 1000 - 5000 <?php if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?></span>
-                                <?php } ?>
-                                <?php
-                                $get_job_salary_check_new = explode(',', $get_job_salary);
-                                if (in_array(15000, $get_job_salary_check_new)) { ?>
-                                    <span class="job-filters" id="<?php echo 15000; ?>"
-                                          data-type="job_salary"><?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?> 5000 - 15000 <?php if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?></span>
-                                <?php } ?>
-                                <?php
-                                $get_job_salary_check_new = explode(',', $get_job_salary);
-                                if (in_array(15001, $get_job_salary_check_new)) { ?>
-                                    <span class="job-filters" id="<?php echo 15001; ?>"
-                                          data-type="job_salary"><?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?> 15000 - above <?php if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?></span>
-                                <?php }
-                            } ?>
-
-                        </div>
+                                } ?>
+    
+                            </div>
+                        <?php
+                        }
+                        ?>
                     </div>
                     <!--RESULTS SELECTED FILTER-->
 

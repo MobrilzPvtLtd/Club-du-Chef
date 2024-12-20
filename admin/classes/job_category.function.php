@@ -25,9 +25,11 @@ function getAllJobCategoriesOrderByJobsTable()
 //Get All Categories
 function getAllJobCategoriesOrderByJobsTableLimit($arg)
 {
+    $CurrentCity = isset($_SESSION['city']) ? $_SESSION['city'] : 'www';
+
     global $conn;
 
-    $sql = "SELECT T1.*, COUNT(T2.category_id) AS views FROM " . TBL . "job_categories AS T1 LEFT JOIN " . TBL . "jobs AS T2 ON T1.category_id = T2.category_id GROUP BY T1.category_id ORDER BY views DESC LIMIT $arg";
+    $sql = "SELECT T1.*, COUNT(T2.category_id) AS views FROM " . TBL . "job_categories AS T1 LEFT JOIN " . TBL . "jobs AS T2 ON T1.category_id = T2.category_id AND (JSON_CONTAINS(T1.city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www') GROUP BY T1.category_id ORDER BY views DESC LIMIT $arg";
     $rs = mysqli_query($conn, $sql);
     return $rs;
 
