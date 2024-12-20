@@ -142,9 +142,10 @@ function getCountUserNews($arg)
 //News Count using Category Id
 function getCountCategoryNews($arg)
 {
+    $CurrentCity = isset($_SESSION['city']) ? $_SESSION['city'] : 'www';
     global $conn;
 
-    $sql = "SELECT * FROM " . TBL . "news WHERE category_id = '$arg'";
+    $sql = "SELECT * FROM " . TBL . "news WHERE category_id = '$arg' AND (JSON_CONTAINS(city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www')";
     $rs = mysqli_query($conn, $sql);
     $row = mysqli_num_rows($rs);
     return $row;

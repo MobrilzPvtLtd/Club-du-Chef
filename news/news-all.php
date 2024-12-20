@@ -113,6 +113,8 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
 
                         $news_category_name = $news_category_row['category_name'];
 
+                        $decoded_city_slugs = (array)json_decode($newsrow['city_slug'], true);
+                        if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                         ?>
                         <!--BIG POST START-->
                         <div class="news-home-box news-home-box1">
@@ -142,6 +144,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                         </div>
                         <!--END BIG POST START-->
                         <?php
+                        }
                     }
                 } else {
                     ?>
@@ -187,9 +190,12 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                             foreach (getAllNewsCategoriesPos() as $news_right_side_category_row) {
 
                                 $count_news_per_category = getCountCategoryNews($news_right_side_category_row['category_id']);
-                                ?>
+                                $decoded_city_slugs = (array)json_decode($news_right_side_category_row['city_slug'], true);
+                                if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
+                            ?>
                                 <li><a href="<?php echo $ALL_NEWS_URL . urlModifier($news_right_side_category_row['category_slug']); ?>"><span><?php echo $count_news_per_category; ?></span><b><?php echo $news_right_side_category_row['category_name']; ?></b></a></li>
                                 <?php
+                                }
                             }
                             ?>
                         </ul>
@@ -231,7 +237,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                     $get_ad_row_1 = getAds($ad_position_id_1);
                     $ad_enquiry_photo_1 = $get_ad_row_1['ad_enquiry_photo'];
                     ?>
-                    <div class="news-rhs-ads-ban">
+                    <!-- <div class="news-rhs-ads-ban">
                         <div class="ban-ati-com">
                             <a href="<?php echo stripslashes($get_ad_row_1['ad_link']); ?>"><span><?php echo $Zitiziti['AD']; ?></span><img
                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo_1 != NULL || !empty($ad_enquiry_photo_1)) {
@@ -240,7 +246,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                         echo "ads2.jpg";
                                     } ?>"></a>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- ADS END-->
                     <?php
                     $ad_position_id_2 = 9;   //Ad position on News Detail Page -2
@@ -248,7 +254,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                     $ad_enquiry_photo_2 = $get_ad_row_2['ad_enquiry_photo'];
                     ?>
                     <!-- ADS START-->
-                    <div class="news-rhs-ads-ban">
+                    <!-- <div class="news-rhs-ads-ban">
                         <div class="ban-ati-com">
                             <a href="<?php echo stripslashes($get_ad_row_2['ad_link']); ?>"><span><?php echo $Zitiziti['AD']; ?></span><img
                                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>images/ads/<?php if ($ad_enquiry_photo_2 != NULL || !empty($ad_enquiry_photo_2)) {
@@ -257,7 +263,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                         echo "ads1.jpg";
                                     } ?>"></a>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- ADS END-->
 
                     <!-- SUBSCRIBE START-->
