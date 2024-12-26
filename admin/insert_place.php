@@ -11,7 +11,16 @@ if (file_exists('config/info.php')) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['place_submit'])) {
 
-
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
+        
 // Common Place Details
         $place_name = addslashes($_POST["place_name"]);
         $place_tags = $_POST["place_tags"];
@@ -65,13 +74,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         $category_id = $_POST["category_id"];
-
+        
 
 // Listing Timing Details
         $opening_time = $_POST["opening_time"];
         $closing_time = $_POST["closing_time"];
         $google_map = $_POST["google_map"];
-
+        
 //Place Other Information
         $place_info_question123 = $_POST["place_info_question"];
         $prefix1 = $fruitList = '';
@@ -86,15 +95,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $place_info_answer .= $prefix1 . $fruit1;
             $prefix1 = '|';
         }
-
+       
 // Place Status
 
         function checkPlaceSlug($link, $counter = 1)
         {
             global $conn;
             $newLink = $link;
+            
             do {
                 $checkLink = mysqli_query($conn, "SELECT place_id FROM " . TBL . "places WHERE place_slug = '$newLink'");
+                
                 if (mysqli_num_rows($checkLink) > 0) {
                     $newLink = $link . '' . $counter;
                     $counter++;
@@ -106,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             return $newLink;
         }
 
-
+        
         $place_name1 = trim(preg_replace('/[^A-Za-z0-9]/', ' ', $place_name));
         $place_slug = checkPlaceSlug($place_name1);
 
@@ -118,8 +129,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $all_place_gallery_image23 = $_FILES['place_gallery_image']['name'];
 
         for ($k = 0; $k < count($all_place_gallery_image23); $k++) {
-
-
             if (!empty($all_place_gallery_image['name'][$k])) {
                 $file1 = rand(1000, 100000) . $all_place_gallery_image['name'][$k];
                 $file_loc1 = $all_place_gallery_image['tmp_name'][$k];
@@ -140,13 +149,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         }
         $place_gallery_image = implode(",", $place_gallery_image1);
-
+        
 // ************************  Gallery Image Upload ends  **************************
 
 //    Place Insert Part Starts
 
         $place_qry = "INSERT INTO " . TBL . "places
-					(category_id, place_name, place_tags, place_fee
+					(category_id, place_name, city_slug, place_tags, place_fee
 					, seo_title, seo_description
 					, seo_keywords, places_news, place_experts
 					, place_events, place_listings, place_related, place_discover
@@ -154,14 +163,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					, opening_time, closing_time, google_map, place_status
 					, place_info_question , place_info_answer, place_slug, place_cdt)
 					VALUES
-					('$category_id', '$place_name', '$place_tags', '$place_fee'
+					('$category_id', '$place_name', '$city_slug_json', '$place_tags', '$place_fee'
 					, '$seo_title', '$seo_description'
 					, '$seo_keywords', '$places_news', '$place_experts'
 					, '$place_events', '$place_listings', '$place_related', '$place_discover'
 					, '$place_banner_image', '$place_gallery_image'
 					, '$opening_time', '$closing_time', '$google_map', '$place_status'
 					, '$place_info_question', '$place_info_answer', '$place_slug', '$curDate')";
-
+                    
         $place_res = mysqli_query($conn, $place_qry);
         $PlaceID = mysqli_insert_id($conn);
         $placelastID = $PlaceID;
