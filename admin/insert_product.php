@@ -12,6 +12,9 @@ if (file_exists('config/info.php')) {
 if ($_SERVER['REQUEST_METHOD']=='POST') {
     if (isset($_POST['product_submit'])) {
 
+        $is_booking = $_POST["is_booking"];
+        $booking_url = $_POST["booking_url"];
+
         $city_slug = $_POST['city_slug'];
         if (is_array($city_slug)) {
             $city_slug = array_map(function($city) use ($conn) {
@@ -197,11 +200,11 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
         $product_qry = "INSERT INTO " . TBL . "products 
 					(user_id, category_id, sub_category_id, product_name, product_description
 					, gallery_image, product_price, product_price_offer, product_payment_link, product_tags, product_highlights, product_status, city_slug
-					, product_info_question , product_info_answer, payment_status, product_slug, product_cdt) 
+					, product_info_question , product_info_answer, payment_status, product_slug,is_booking, booking_url, product_cdt) 
 					VALUES 
 					('$user_id', '$category_id', '$sub_category_id','$product_name','$product_description'
 					,'$gallery_image', '$product_price', '$product_price_offer', '$product_payment_link', '$product_tags', '$product_highlights', '$product_status', '$city_slug_json'
-					, '$product_info_question', '$product_info_answer', '$payment_status', '$product_slug', '$curDate')";
+					, '$product_info_question', '$product_info_answer', '$payment_status', '$product_slug', '$is_booking', '$booking_url', '$curDate')";
 
 
         $product_res = mysqli_query($conn,$product_qry);

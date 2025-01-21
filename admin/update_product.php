@@ -9,8 +9,10 @@ if (file_exists('config/info.php')) {
 }
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-
     if (isset($_POST['product_submit'])) {
+
+        $is_booking = $_POST["is_booking"];
+        $booking_url = $_POST["booking_url"];
 
         $product_id = $_POST["product_id"];
 
@@ -213,7 +215,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             , product_tags='" . $product_tags . "'
             ,product_highlights='" . $product_highlights . "' ,product_info_question ='" . $product_info_question . "' 
         ,product_info_answer='" . $product_info_answer . "' ,gallery_image='" . $gallery_image . "'
-        , product_status='" . $product_status . "', product_slug='" . $product_slug . "' where product_id='" . $product_id . "'";
+        , product_status='" . $product_status . "', product_slug='" . $product_slug . "', is_booking='" . $is_booking . "', booking_url='" . $booking_url . "' where product_id='" . $product_id . "'";
 
 
         $product_res = mysqli_query($conn, $product_qry);
