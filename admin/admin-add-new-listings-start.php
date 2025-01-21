@@ -68,7 +68,9 @@ include "header.php";
                                                 </div>
                                             </div>
                                         </div>
+                                        <!--FILED END-->
 
+                                        <!-- BOOKING SYSTEM START -->
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="chbox">
@@ -92,7 +94,8 @@ include "header.php";
                                                 <input type="text" name="booking_url" id="booking_url" class="form-control" value="" placeholder="Enter your booking system url...">
                                             </div>
                                         </div>
-                                        <!--FILED END-->
+                                        <!-- BOOKING SYSTEM END -->
+
                                         <!--FILED START-->
                                         <div class="row mt-2">
                                             <div class="col-md-12">

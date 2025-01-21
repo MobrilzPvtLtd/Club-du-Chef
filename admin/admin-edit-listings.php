@@ -102,6 +102,8 @@ include "header.php";
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- BOOKING SYSTEM START -->
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="chbox">
@@ -125,7 +127,7 @@ include "header.php";
                                                 <input type="text" name="booking_url" id="booking_url" class="form-control" value="<?php echo $listings_a_row['booking_url']; ?>" placeholder="Enter your booking system url...">
                                             </div>
                                         </div>
-
+                                        <!-- BOOKING SYSTEM END -->
 
                                         <!--FILED END-->
                                         <!--FILED START-->

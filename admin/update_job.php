@@ -10,6 +10,9 @@ if (file_exists('config/info.php')) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['job_submit'])) {
 
+        $is_booking = $_POST["is_booking"];
+        $booking_url = $_POST["booking_url"];
+
         $job_id = $_POST["job_id"];
 
         $job_code = $_POST["job_code"];
@@ -192,7 +195,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             , contact_person='" . $contact_person . "' , contact_email_id='" . $contact_email_id . "'
             , contact_number='" . $contact_number . "' , contact_website='" . $contact_website . "'
             , interview_location='" . $interview_location . "' , skill_set='" . $skill_set . "'
-            , job_status='" . $job_status . "', job_slug='" . $job_slug . "' 
+            , job_status='" . $job_status . "', job_slug='" . $job_slug . "', is_booking='" . $is_booking . "' , booking_url='" . $booking_url . "'
             , job_company_name='" . $job_company_name . "'
             , job_udt ='" . $curDate . "' where job_id='" . $job_id . "'";
 
