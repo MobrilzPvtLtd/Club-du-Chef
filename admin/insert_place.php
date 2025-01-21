@@ -11,6 +11,9 @@ if (file_exists('config/info.php')) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['place_submit'])) {
 
+        $is_booking = $_POST["is_booking"];
+        $booking_url = $_POST["booking_url"];
+        
         $city_slug = $_POST['city_slug'];
         if (is_array($city_slug)) {
             $city_slug = array_map(function($city) use ($conn) {
@@ -37,67 +40,65 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $place_discover .= $prefix . $fruit;
             $prefix = ',';
         }
-
+        
         $place_related1 = $_POST["place_related"];
         $prefix = $fruitList = '';
         foreach ($place_related1 as $fruit) {
             $place_related .= $prefix . $fruit;
             $prefix = ',';
         }
-
+        
         $place_listings1 = $_POST["place_listings"];
         $prefix = $fruitList = '';
         foreach ($place_listings1 as $fruit) {
             $place_listings .= $prefix . $fruit;
             $prefix = ',';
         }
-
+        
         $place_events1 = $_POST["place_events"];
         $prefix = $fruitList = '';
         foreach ($place_events1 as $fruit) {
             $place_events .= $prefix . $fruit;
             $prefix = ',';
         }
-
+        
         $place_experts1 = $_POST["place_experts"];
         $prefix = $fruitList = '';
         foreach ($place_experts1 as $fruit) {
             $place_experts .= $prefix . $fruit;
             $prefix = ',';
         }
-
+        
         $places_news1 = $_POST["places_news"];
         $prefix = $fruitList = '';
         foreach ($places_news1 as $fruit) {
             $places_news .= $prefix . $fruit;
             $prefix = ',';
         }
-
+        
         $category_id = $_POST["category_id"];
         
-
-// Listing Timing Details
+        // Listing Timing Details
         $opening_time = $_POST["opening_time"];
         $closing_time = $_POST["closing_time"];
         $google_map = $_POST["google_map"];
         
-//Place Other Information
+        //Place Other Information
         $place_info_question123 = $_POST["place_info_question"];
         $prefix1 = $fruitList = '';
         foreach ($place_info_question123 as $fruit1) {
             $place_info_question .= $prefix1 . $fruit1;
             $prefix1 = '|';
         }
-
+        
         $place_info_answer123 = $_POST["place_info_answer"];
         $prefix1 = $fruitList = '';
         foreach ($place_info_answer123 as $fruit1) {
             $place_info_answer .= $prefix1 . $fruit1;
             $prefix1 = '|';
         }
-       
-// Place Status
-
+        
+        // Place Status
         function checkPlaceSlug($link, $counter = 1)
         {
             global $conn;
@@ -120,11 +121,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         $place_name1 = trim(preg_replace('/[^A-Za-z0-9]/', ' ', $place_name));
         $place_slug = checkPlaceSlug($place_name1);
-
+        
         $place_banner_image = '';
 
 // ************************  Gallery Image Upload starts  **************************
-
+        $place_gallery_image = [];
         $all_place_gallery_image = $_FILES['place_gallery_image'];
         $all_place_gallery_image23 = $_FILES['place_gallery_image']['name'];
 
@@ -149,7 +150,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         }
         $place_gallery_image = implode(",", $place_gallery_image1);
-        
+
 // ************************  Gallery Image Upload ends  **************************
 
 //    Place Insert Part Starts
@@ -161,7 +162,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					, place_events, place_listings, place_related, place_discover
 					, place_banner_image, place_gallery_image
 					, opening_time, closing_time, google_map, place_status
-					, place_info_question , place_info_answer, place_slug, place_cdt)
+					, place_info_question , place_info_answer, place_slug, is_booking, booking_url, place_cdt)
 					VALUES
 					('$category_id', '$place_name', '$city_slug_json', '$place_tags', '$place_fee'
 					, '$seo_title', '$seo_description'
@@ -169,8 +170,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					, '$place_events', '$place_listings', '$place_related', '$place_discover'
 					, '$place_banner_image', '$place_gallery_image'
 					, '$opening_time', '$closing_time', '$google_map', '$place_status'
-					, '$place_info_question', '$place_info_answer', '$place_slug', '$curDate')";
-                    
+					, '$place_info_question', '$place_info_answer', '$place_slug', '$is_booking', '$booking_url', '$curDate')";
+      
         $place_res = mysqli_query($conn, $place_qry);
         $PlaceID = mysqli_insert_id($conn);
         $placelastID = $PlaceID;

@@ -44,8 +44,35 @@ include "header.php";
                                                         </div>
                                                     </div>
                                                 </div>
+                                                
+                                                <!-- BOOKING SYSTEM START -->
+                                                <div class="row mt-2">
+                                                    <div class="col-md-12">
+                                                        <div class="chbox">
+                                                            <input type="checkbox" name="booking" id="booking" style="height: 0;">
+                                                            <label for="booking">Booking System</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-12" id="booking-details" style="display:none;">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" value="1" name="is_booking" id="is_booking" style="height: 30px;">
+                                                        <label class="form-check-label" style="margin-top: 10px;" for="is_booking">Use inbuilt booking system</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" value="0" name="is_booking" id="is_booking_url" style="height: 30px;">
+                                                        <label class="form-check-label" style="margin-top: 10px;"  for="is_booking_url">Use your own booking system</label>
+                                                    </div>
+
+                                                    <div class="form-group mt-2" id="booking_url_group" style="display:none;">
+                                                        <input type="text" name="booking_url" id="booking_url" class="form-control" value="" placeholder="Enter your booking system url...">
+                                                    </div>
+                                                </div>
+                                                <!-- BOOKING SYSTEM END -->
+
                                                 <!--FILED START-->
-                                                <div class="row">
+                                                <div class="row mt-2">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
                                                             <h6>Place details & Info</h6>
@@ -417,6 +444,47 @@ include "header.php";
 <script src="../js/select-opt.js"></script>
 <script type="text/javascript" src="../js/imageuploadify.min.js"></script>
 <script src="js/admin-custom.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Show or hide the booking details when the checkbox is toggled
+        $("#booking").change(function() {
+            if ($(this).is(':checked')) {
+                $("#booking-details").show();
+            } else {
+                $("#booking-details").hide();
+                // Ensure the booking URL input is hidden and cleared when the checkbox is unchecked
+                $("#booking_url_group").hide();
+                $("#booking_url").val('');
+            }
+        });
+
+        // Clear the booking URL when the inbuilt booking system is selected
+        $("#is_booking").change(function() {
+            if ($(this).is(':checked')) {
+                $("#booking_url").val('');
+                $("#booking_url_group").hide();
+            }
+        });
+
+        if ($("#is_booking_url").is(':checked')) {
+            $("#booking_url_group").show();
+            $("#booking_url").val();
+        } else {
+            $("#booking_url_group").hide();
+        }
+
+        // Show/hide the booking URL input based on the radio button selection
+        $("#is_booking_url").change(function() {
+            if ($(this).is(':checked')) {
+                $("#booking_url_group").show();
+            } else {
+                $("#booking_url_group").hide();
+                $("#booking_url").val('');
+            }
+        });
+    });
+</script>
 <!-- <script type="text/javascript">
     $(document).ready(function () {
         $('input[id="place_gallery_image"]').imageuploadify();

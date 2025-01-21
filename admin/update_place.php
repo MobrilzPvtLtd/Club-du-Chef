@@ -10,6 +10,9 @@ if (file_exists('config/info.php')) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['place_submit'])) {
 
+        $is_booking = $_POST["is_booking"];
+        $booking_url = $_POST["booking_url"];
+
         $place_id = $_POST["place_id"];
 
         $city_slug = $_POST['city_slug'];
@@ -176,7 +179,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             , place_gallery_image='" . $place_gallery_image . "', opening_time='" . $opening_time . "'
             , closing_time ='" . $closing_time . "', google_map ='" . $google_map . "', place_status ='" . $place_status . "'
             , place_info_question ='" . $place_info_question . "', place_info_answer ='" . $place_info_answer . "'
-            , place_slug ='" . $place_slug . "' where place_id ='" . $place_id . "'";
+            , place_slug ='" . $place_slug . "', is_booking ='" . $is_booking . "', booking_url ='" . $booking_url . "' where place_id ='" . $place_id . "'";
 
         $place_res = mysqli_query($conn, $place_qry);
 
