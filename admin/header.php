@@ -64,8 +64,6 @@ $all_texts_row = getAllTexts(); //Fetch All Text Data
 </head>
 
 <body>
-
-
     <!-- START -->
     <section>
         <div class="ad-head">

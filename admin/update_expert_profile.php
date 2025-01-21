@@ -12,6 +12,9 @@ if (file_exists('config/info.php')) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['service_expert_submit'])) {
 
+        $is_booking = $_POST["is_booking"];
+        $booking_url = $_POST["booking_url"];
+        
         // Common Service Expert Profile Details
 
         $city_slug = $_POST['city_slug'];
@@ -203,7 +206,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      , additional_info_3='" . $additional_info_3 . "', additional_info_4 ='" . $additional_info_4 . "'
      , category_id='" . $category_id . "', sub_category_id='" . $sub_category_id . "'
      , date_of_birth='" . $date_of_birth . "', payment_id='" . $payment_id . "'
-     , expert_udt ='" . $curDate . "', expert_status='" . $expert_status . "', expert_slug='" . $expert_slug . "'
+     , expert_udt ='" . $curDate . "', expert_status='" . $expert_status . "', expert_slug='" . $expert_slug . "', is_booking='" . $is_booking . "', booking_url='" . $booking_url . "'
        where expert_id ='" . $expert_id . "'");
 
 
