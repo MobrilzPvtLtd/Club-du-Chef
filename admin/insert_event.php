@@ -10,6 +10,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (isset($_POST['event_submit'])) {
 
+        $is_booking = $_POST["is_booking"];
+        $booking_url = $_POST["booking_url"];
+
 // Basic Personal Details
         $first_name = $_POST["first_name"];
         $last_name = $_POST["last_name"];
@@ -120,10 +123,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $event_qry = "INSERT INTO " . TBL . "events 
 					(user_id, city_slug, event_name, event_description,event_email,event_mobile,event_website, event_address, category_id
-					,event_contact_name, event_map, event_start_date, event_time, event_image, event_status, event_type, isenquiry, event_slug, event_cdt) 
+					,event_contact_name, event_map, event_start_date, event_time, event_image, event_status, event_type, isenquiry, event_slug, is_booking, booking_url, event_cdt) 
 					VALUES 
 					('$user_id', '$city_slug_json', '$event_name', '$event_description', '$event_email', '$event_mobile', '$event_website'
-					, '$event_address', '$category_id', '$event_contact_name', '$event_map', '$event_start_date',  '$event_time', '$event_image', '$event_status', '$event_type', '$isenquiry', '$event_slug', '$curDate')";
+					, '$event_address', '$category_id', '$event_contact_name', '$event_map', '$event_start_date',  '$event_time', '$event_image', '$event_status', '$event_type', '$isenquiry', '$event_slug', '$is_booking', '$booking_url', '$curDate')";
 
         $event_res = mysqli_query($conn, $event_qry);
 
