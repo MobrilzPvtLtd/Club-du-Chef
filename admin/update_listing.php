@@ -10,6 +10,9 @@ if (file_exists('config/info.php')) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['listing_submit'])) {
 
+        $is_booking = $_POST["is_booking"];
+        $booking_url = $_POST["booking_url"];
+
         $listing_id = $_POST["listing_id"];
         $listing_code = $_POST["listing_code"];
 
@@ -585,7 +588,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         payment_status='" . $payment_status . "', 
         listing_info_question ='" . $listing_info_question . "', 
         listing_info_answer ='" . $listing_info_answer . "', 
-        listing_slug ='" . $listing_slug . "' 
+        listing_slug ='" . $listing_slug . "',
+        is_booking ='" . $is_booking . "', 
+        booking_url ='" . $booking_url . "'
         where listing_id='" . $listing_id . "'";
 
         $listing_res = mysqli_query($conn, $listing_qry);

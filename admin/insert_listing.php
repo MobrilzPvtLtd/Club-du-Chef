@@ -11,6 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['listing_submit'])) {
 
         // Basic Personal Details
+        $is_booking = $_POST["is_booking"];
+        $booking_url = $_POST["booking_url"];
         $first_name = $_POST["first_name"];
         $last_name = $_POST["last_name"];
         $mobile_number = $_POST["mobile_number"];
@@ -489,7 +491,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					, mon_is_open, mon_open_time, mon_close_time, tue_is_open, tue_open_time, tue_close_time, wed_is_open, wed_open_time, wed_close_time
 					, thu_is_open, thu_open_time, thu_close_time, fri_is_open, fri_open_time, fri_close_time, sat_is_open, sat_open_time, sat_close_time
 					, sun_is_open,sun_open_time, sun_close_time
-					, listing_info_question , listing_info_answer, payment_status, listing_slug, listing_cdt) 
+					, listing_info_question , listing_info_answer, payment_status, listing_slug, is_booking,booking_url, listing_cdt) 
 					VALUES 
 					('$user_id', '$category_id', '$sub_category_id','$city_slug_json', '$service_id', '$service_image', '$listing_type_id', '$listing_name', '$listing_mobile', '$listing_email', '$listing_website', '$listing_whatsapp', '$listing_description'
 					, '$listing_address', '$listing_lat', '$listing_lng', '$service_locations', '$country_id'
@@ -500,7 +502,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					, '$mon_is_open', '$mon_open_time', '$mon_close_time', '$tue_is_open', '$tue_open_time', '$tue_close_time', '$wed_is_open', '$wed_open_time', '$wed_close_time'
 					, '$thu_is_open', '$thu_open_time', '$thu_close_time', '$fri_is_open', '$fri_open_time', '$fri_close_time', '$sat_is_open', '$sat_open_time', '$sat_close_time'
 					, '$sun_is_open', '$sun_open_time', '$sun_close_time'
-					, '$listing_info_question', '$listing_info_answer', '$payment_status', '$listing_slug', '$curDate')";
+					, '$listing_info_question', '$listing_info_answer', '$payment_status', '$listing_slug','$is_booking','$booking_url', '$curDate')";
 
         $listing_res = mysqli_query($conn, $listing_qry);
         $ListingID = mysqli_insert_id($conn);

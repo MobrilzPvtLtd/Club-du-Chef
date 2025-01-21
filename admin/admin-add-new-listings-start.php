@@ -68,9 +68,29 @@ include "header.php";
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="chbox">
+                                                    <input type="checkbox" name="booking" id="booking">
+                                                    <label for="booking">Booking System</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" id="booking-details" style="display:none;">
+                                            <div class="col-md-12">
+                                                <div class="chbox">
+                                                    <input type="checkbox" name="is_booking"  id="is_booking" value="1">
+                                                    <label for="is_booking">Use inbuilt booking system</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" name="booking_url" id="booking_url"  class="form-control" placeholder="Enter your booking system url...">
+                                                </div>
+                                            </div>
+                                        </div>
                                         <!--FILED END-->
                                         <!--FILED START-->
-                                        <div class="row">
+                                        <div class="row mt-2">
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <input type="text" name="listing_whatsapp" class="form-control"
@@ -1052,6 +1072,28 @@ include "header.php";
 <script src="../js/select-opt.js"></script>
 <script src="js/admin-custom.js"></script>
 <script>
+    $("#booking").change(function() {
+        if ($(this).is(':checked')) {
+            $("#booking-details").show();
+        } else {
+            $("#booking-details").hide();
+        }
+    });
+
+    $("#is_booking").change(function() {
+        if ($(this).is(':checked')) {
+            $("#booking_url").val('');
+        }
+    });
+
+    $("#booking_url").on("input", function() {
+        if ($(this).val().trim() !== "") {
+            $("#is_booking").prop('checked', false);
+        }else {
+            $("#is_booking").prop('checked', true);
+        }
+    });
+
     $("document").ready(function() {
         $(".add-work-hrs .chosen-select").chosen().change(function() {
             var _tt = $(this).trigger("chosen:updated").val();
