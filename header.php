@@ -214,6 +214,18 @@ foreach (getAllCities() as $city) {
     #results div:hover {
         background-color: #f0f0f0;
     }
+
+    .booking-btn {
+        background-color: rgb(243, 147, 22);
+        padding: 15px;
+        width: 100%;
+        border-radius: 50px;
+        border: none;
+        margin-bottom: 20px;
+        font-size: 16px;
+        font-weight: 600;
+        color: white;
+    }
     </style>
 </head>
 
