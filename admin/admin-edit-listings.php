@@ -107,13 +107,13 @@ include "header.php";
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="chbox">
-                                                    <input type="checkbox" name="booking" id="booking">
+                                                    <input type="checkbox" name="booking" id="booking" <?php echo ($listings_a_row['is_booking'] == 1 || $listings_a_row['booking_url'] != '') ? 'checked' : ''; ?>>
                                                     <label for="booking">Booking System</label>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="col-md-12" id="booking-details" style="display:none;">
+                                        <div class="col-md-12" id="booking-details" style="display: <?php echo ($listings_a_row['is_booking'] == 1 || $listings_a_row['booking_url'] != '') ? 'block' : 'none'; ?>;">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" value="1" name="is_booking" id="is_booking" <?php echo $listings_a_row['is_booking'] == 1 ? 'checked' : ''; ?>>
                                                 <label class="form-check-label" for="is_booking">Use inbuilt booking system</label>
@@ -1231,6 +1231,7 @@ include "header.php";
 <script>
     $(document).ready(function() {
         // Show or hide the booking details when the checkbox is toggled
+
         $("#booking").change(function() {
             if ($(this).is(':checked')) {
                 $("#booking-details").show();

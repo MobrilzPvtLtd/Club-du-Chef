@@ -63,13 +63,13 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="chbox">
-                                                            <input type="checkbox" name="booking" id="booking" style="height: 0;">
+                                                            <input type="checkbox" name="booking" id="booking" style="height: 0;" <?php echo ($place_row['is_booking'] == 1 || $place_row['booking_url'] != '') ? 'checked' : ''; ?>>
                                                             <label for="booking">Booking System</label>
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="col-md-12" id="booking-details" style="display:none;">
+                                                <div class="col-md-12" id="booking-details" style="display: <?php echo ($place_row['is_booking'] == 1 || $place_row['booking_url'] != '') ? 'block' : 'none'; ?>;">
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="radio" value="1" name="is_booking" id="is_booking" <?php echo $place_row['is_booking'] == 1 ? 'checked' : ''; ?> style="height: 30px;">
                                                         <label class="form-check-label" style="margin-top: 10px;"  for="is_booking">Use inbuilt booking system</label>
