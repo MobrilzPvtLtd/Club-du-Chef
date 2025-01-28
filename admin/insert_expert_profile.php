@@ -12,6 +12,9 @@ if (file_exists('config/info.php')) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['service_expert_submit'])) {
 
+        $is_booking = $_POST["is_booking"];
+        $booking_url = $_POST["booking_url"];
+
         // Common Service Expert Profile Details
 
         $city_slug = $_POST['city_slug'];
@@ -191,7 +194,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					, education_1, education_2, education_3, education_4
 					, additional_info_1, additional_info_2, additional_info_3, additional_info_4
 					, category_id, sub_category_id, date_of_birth, payment_id
-					, expert_udt, expert_status, expert_slug, expert_cdt)
+					, expert_udt, expert_status, expert_slug, is_booking, booking_url, expert_cdt)
 					VALUES
 					('$user_id', '$profile_name', '$city_slug_json', '$years_of_experience', '$base_fare', '$available_time_start'
 					, '$available_time_end', '$profile_image', '$cover_image', '$id_proof'
@@ -199,7 +202,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					, '$education_1', '$education_2', '$education_3', '$education_4'
 					, '$additional_info_1', '$additional_info_2', '$additional_info_3', '$additional_info_4'
 					, '$category_id', '$sub_category_id', '$date_of_birth', '$payment_id'
-					, '$curDate', '$expert_status', '$expert_slug','$curDate')";
+					, '$curDate', '$expert_status', '$expert_slug', '$is_booking', '$booking_url','$curDate')";
 
         $expert_profile_res = mysqli_query($conn, $expert_profile_profile_qry);
 
