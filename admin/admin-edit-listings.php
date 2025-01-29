@@ -15,7 +15,15 @@ include "header.php";
                     <?php
                     $listing_codea = $_GET['code'];
                     $listings_a_row = getListing($listing_codea);
+                    
+                    // Fixing the query with correct variable usage
+                    $check_query = "SELECT * FROM " . TBL . "booking_availability WHERE listing_id = '{$listings_a_row['listing_id']}' AND is_available = 1";
+                    $availability_day_result = mysqli_query($conn, $check_query);
 
+                    $availability_days = [];
+                    while ($availability = mysqli_fetch_assoc($availability_day_result)) {
+                        $availability_days[$availability['day']] = $availability;
+                    }
                     ?>
                     <form action="update_listing.php" class="listing_form" id="listing_form"
                         name="listing_form" method="post" enctype="multipart/form-data">
@@ -118,6 +126,37 @@ include "header.php";
                                                 <input class="form-check-input" type="radio" value="1" name="is_booking" id="is_booking" <?php echo $listings_a_row['is_booking'] == 1 ? 'checked' : ''; ?>>
                                                 <label class="form-check-label" for="is_booking">Use inbuilt booking system</label>
                                             </div>
+
+                                            <!-- Days fieilds  -->
+                                            <div class="form-group mt-2" id="booking_days" style="display: <?php echo ($listings_a_row['is_booking'] == 1 || $listings_a_row['booking_url'] != '') ? 'block' : 'none'; ?>;">
+                                                
+                                            <?php
+                                                $days_of_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+                                                
+                                                foreach ($days_of_week as $day) {
+                                                    // Check if there's availability for this day
+                                                    $is_checked = isset($availability_days[$day]) ? 'checked' : '';
+                                                    $start_time = isset($availability_days[$day]) ? $availability_days[$day]['start_time'] : '';
+                                                    $end_time = isset($availability_days[$day]) ? $availability_days[$day]['end_time'] : '';
+                                                ?>
+                                                
+                                                <div class="chbox">
+                                                    <input type="checkbox" name="<?php echo strtolower($day); ?>" id="booking_<?php echo strtolower($day); ?>" value="<?php echo $day; ?>" <?php echo $is_checked; ?>>
+                                                    <label for="booking_<?php echo strtolower($day); ?>"><?php echo $day; ?></label>
+
+                                                    <div class="row <?php echo strtolower($day); ?>_time" style="display: <?php echo $is_checked ? 'block' : 'none'; ?>;">
+                                                        <div class="form-group col-md-4 serex-date">
+                                                            <input type="time" class="form-control" name="start_time_<?php echo strtolower($day); ?>" value="<?php echo $start_time; ?>">
+                                                        </div>
+                                                        <div class="form-group col-md-4 serex-date">
+                                                            <input type="time" class="form-control" name="end_time_<?php echo strtolower($day); ?>" value="<?php echo $end_time; ?>">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <?php } ?>
+                                            </div>
+
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" value="0" name="is_booking" id="is_booking_url" <?php echo $listings_a_row['is_booking'] == 0 ? 'checked' : ''; ?>>
                                                 <label class="form-check-label" for="is_booking_url">Use your own booking system</label>
@@ -1237,7 +1276,6 @@ include "header.php";
                 $("#booking-details").show();
             } else {
                 $("#booking-details").hide();
-                // Ensure the booking URL input is hidden and cleared when the checkbox is unchecked
                 $("#booking_url_group").hide();
                 $("#booking_url").val('');
             }
@@ -1246,25 +1284,90 @@ include "header.php";
         // Clear the booking URL when the inbuilt booking system is selected
         $("#is_booking").change(function() {
             if ($(this).is(':checked')) {
+                $("#booking_days").show();
                 $("#booking_url").val('');
                 $("#booking_url_group").hide();
             }
         });
 
-        if ($("#is_booking_url").is(':checked')) {
-            $("#booking_url_group").show();
-            $("#booking_url").val();
-        } else {
-            $("#booking_url_group").hide();
-        }
+        // Monday checkbox event handler
+        $('#booking_monday').change(function() {
+            if ($(this).is(':checked')) {
+                $(".monday_time").show();
+            } else {
+                $(".monday_time").hide();
+            }
+        });
+
+        // Tuesday checkbox event handler
+        $('#booking_tuesday').change(function() {
+            if ($(this).is(':checked')) {
+                $(".tuesday_time").show();
+            } else {
+                $(".tuesday_time").hide();
+            }
+        });
+
+        // Wednesday checkbox event handler
+        $('#booking_wednesday').change(function() {
+            if ($(this).is(':checked')) {
+                $(".wednesday_time").show();
+            } else {
+                $(".wednesday_time").hide();
+            }
+        });
+
+        // Thursday checkbox event handler
+        $('#booking_thursday').change(function() {
+            if ($(this).is(':checked')) {
+                $(".thursday_time").show();
+            } else {
+                $(".thursday_time").hide();
+            }
+        });
+
+        // Friday checkbox event handler
+        $('#booking_friday').change(function() {
+            if ($(this).is(':checked')) {
+                $(".friday_time").show();
+            } else {
+                $(".friday_time").hide();
+            }
+        });
+
+        // Saturday checkbox event handler
+        $('#booking_saturday').change(function() {
+            if ($(this).is(':checked')) {
+                $(".saturday_time").show();
+            } else {
+                $(".saturday_time").hide();
+            }
+        });
+
+        // Sunday checkbox event handler
+        $('#booking_sunday').change(function() {
+            if ($(this).is(':checked')) {
+                $(".sunday_time").show();
+            } else {
+                $(".sunday_time").hide();
+            }
+        });
 
         // Show/hide the booking URL input based on the radio button selection
         $("#is_booking_url").change(function() {
             if ($(this).is(':checked')) {
+                // Show the booking URL group and hide the day-specific booking options
                 $("#booking_url_group").show();
+                $("#booking_days").hide();  // Hides the entire booking days section
+
+                // Hide each day's checkbox and clear their checked state
+                $(".monday_time, .tuesday_time, .wednesday_time, .thursday_time, .friday_time, .saturday_time, .sunday_time").hide();
+                
+                $("#booking_monday, #booking_tuesday, #booking_wednesday, #booking_thursday, #booking_friday, #booking_saturday, #booking_sunday").prop("checked", false);
             } else {
+                // Hide the booking URL group when unchecked
                 $("#booking_url_group").hide();
-                $("#booking_url").val('');
+                $("#booking_url").val('');  // Clear the booking URL input value
             }
         });
     });

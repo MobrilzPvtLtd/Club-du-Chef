@@ -9,10 +9,11 @@ if (file_exists('config/info.php')) {
 }
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['listing_submit'])) {
-
+        
         // Basic Personal Details
         $is_booking = $_POST["is_booking"];
         $booking_url = $_POST["booking_url"];
+
         $first_name = $_POST["first_name"];
         $last_name = $_POST["last_name"];
         $mobile_number = $_POST["mobile_number"];
@@ -507,6 +508,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $listing_res = mysqli_query($conn, $listing_qry);
         $ListingID = mysqli_insert_id($conn);
         $listlastID = $ListingID;
+        
+        // Create a value set for each day
+        $days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+        $is_available = 1;
+        foreach ($days as $day) {
+            if (isset($_POST[$day]) && !empty($_POST[$day])) {
+                $start_time = $_POST['start_time_' . $day];  
+                $end_time = $_POST['end_time_' . $day];  
+        
+                $values[] = "('$listlastID', '$day', '$is_available', '$start_time', '$end_time', '$curDate')";
+            }
+        }
+
+        if (!empty($values)) {
+            $values_str = implode(', ', $values);
+        
+            $booking_availability_qry = "INSERT INTO " . TBL . "booking_availability 
+            (listing_id, day, is_available, start_time, end_time, created_at) 
+            VALUES $values_str";
+        
+            $listing_res = mysqli_query($conn, $booking_availability_qry);
+        }
 
         switch (strlen($ListingID)) {
             case 1:

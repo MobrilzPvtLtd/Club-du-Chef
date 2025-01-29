@@ -595,6 +595,41 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $listing_res = mysqli_query($conn, $listing_qry);
 
+        // Create a value set for each day
+        $update_queries = [];
+        $insert_queries = [];
+        $days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+        $is_available = 1;
+
+        foreach ($days as $day) {
+            if (isset($_POST[$day]) && !empty($_POST[$day])) {
+                $start_time = $_POST['start_time_' . $day];  
+                $end_time = $_POST['end_time_' . $day];  
+
+                // Check if the record for the day already exists
+                $check_query = "SELECT * FROM " . TBL . "booking_availability WHERE listing_id = '$listing_id' AND day = '$day' AND is_available = 1";
+                $result = mysqli_query($conn, $check_query);
+
+                if (mysqli_num_rows($result) > 0) {
+                    // If the day already exists, update the availability
+                    $update_queries[] = "UPDATE " . TBL . "booking_availability SET start_time = '$start_time', end_time = '$end_time', created_at = '$curDate' WHERE listing_id = '$listing_id' AND day = '$day' AND is_available = 1";
+                } else {
+                    // If the day does not exist, insert a new record
+                    $insert_queries[] = "INSERT INTO " . TBL . "booking_availability (listing_id, day, start_time, end_time, is_available, created_at) VALUES ('$listing_id', '$day', '$start_time', '$end_time', 1, '$curDate')";
+                }
+            }
+        }
+
+        // Execute all update queries
+        foreach ($update_queries as $query) {
+            mysqli_query($conn, $query);
+        }
+
+        // Execute all insert queries
+        foreach ($insert_queries as $query) {
+            mysqli_query($conn, $query);
+        }
+
 
         //****************************    Admin Primary email fetch starts    *************************
 
