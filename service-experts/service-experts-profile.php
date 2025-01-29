@@ -379,11 +379,11 @@ expertprofilepageview($expert_id); //Function To Find Page View
                                 <input type="hidden" name="user_id" value="<?php echo $session_user_id; ?>">
                                     <div class="form-group col-md-6 serex-date">
                                         <input type="text" class="form-control" name="booking_date"
-                                            placeholder="DATE" id="newdate">
+                                            placeholder="DATE" id="newdate" required>
                                     </div>
                                     <div class="form-group col-md-6 serex-date">
                                         <input type="time" class="form-control" name="booking_time"
-                                            placeholder="TIME">
+                                            placeholder="TIME" required>
                                     </div>
                                     <button type="submit" class="btn btn-primary float-end">Submit</button>
                                 </form>
@@ -406,7 +406,7 @@ expertprofilepageview($expert_id); //Function To Find Page View
                     }
                     if($expert_profile_row['is_booking'] == 0 || $expert_profile_row['booking_url'] != ''){
                     ?>
-                        <a href="<?php echo $expert_profile_row['booking_url']; ?>"><button class="booking-btn" data-toggle="modal" data-target="#booking">Book Now</button></a>
+                        <a href="<?php echo $expert_profile_row['booking_url']; ?>"><button  class="booking-btn"><?php echo $Zitiziti['SERVICE-EXPERT-BOOK-NOW']; ?></button></a>
                     <?php
                     }else{
                     ?>
