@@ -94,7 +94,7 @@ include "header.php";
                                                     </div>
                                                     <!--FILED END-->
 
-                                                     <!-- BOOKING SYSTEM START -->
+                                                    <!-- BOOKING SYSTEM START -->
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="chbox">
@@ -501,7 +501,7 @@ include "header.php";
     CKEDITOR.replace('job_description');
 </script>
 <script>
-     $(document).ready(function() {
+    $(document).ready(function() {
         // Show or hide the booking details when the checkbox is toggled
 
         $("#booking").change(function() {
