@@ -162,6 +162,45 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $event_res = mysqli_query($conn,$event_qry);
 
+        // Create a value set for each day
+        $update_queries = [];
+        $insert_queries = [];
+        $days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+
+        foreach ($days as $day) {
+            $is_available = isset($_POST[$day]) && !empty($_POST[$day]) ? 1 : 0; 
+
+            if ($is_available == 1) {
+                $start_time = $_POST['start_time_' . $day];  
+                $end_time = $_POST['end_time_' . $day];  
+        
+                // Check if the record for the day already exists
+                $check_query = "SELECT * FROM " . TBL . "booking_availability WHERE event_id = '$event_id' AND day = '$day'";
+                $result = mysqli_query($conn, $check_query);
+        
+                if (mysqli_num_rows($result) > 0) {
+                    // If the day already exists, update the availability
+                    $update_queries[] = "UPDATE " . TBL . "booking_availability SET start_time = '$start_time', end_time = '$end_time', is_available = 1, created_at = '$curDate' WHERE event_id = '$event_id' AND day = '$day'";
+                } else {
+                    // If the day does not exist, insert a new record
+                    $insert_queries[] = "INSERT INTO " . TBL . "booking_availability (event_id, day, start_time, end_time, is_available, created_at) VALUES ('$event_id', '$day', '$start_time', '$end_time', 1, '$curDate')";
+                }
+            } else {
+                // If the checkbox is not checked, set is_available to 0
+                $update_queries[] = "UPDATE " . TBL . "booking_availability SET is_available = 0 WHERE event_id = '$event_id' AND day = '$day'";
+            }
+        }
+
+        // Execute all update queries
+        foreach ($update_queries as $query) {
+            mysqli_query($conn, $query);
+        }
+
+        // Execute all insert queries
+        foreach ($insert_queries as $query) {
+            mysqli_query($conn, $query);
+        }
+
         //****************************    Admin Primary email fetch starts    *************************
 
         $admin_primary_email_fetch = mysqli_query($conn,"SELECT * FROM " . TBL . "footer  WHERE footer_id = '1' ");
