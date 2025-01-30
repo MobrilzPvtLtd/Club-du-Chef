@@ -84,7 +84,7 @@ include "header.php";
                                                     </div>
 
                                                     <!-- Days fieilds  -->
-                                                    <div class="form-group mt-2" id="booking_days" style="display: <?php echo ($place_row['is_booking'] == 1 || $place_row['booking_url'] != '') ? 'block' : 'none'; ?>;">
+                                                    <div class="form-group mt-2" id="booking_days" style="display: <?php echo ($place_row['is_booking'] == 1) ? 'block' : 'none'; ?>;">
                                                         
                                                     <?php
                                                         $days_of_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];

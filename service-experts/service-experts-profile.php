@@ -106,7 +106,6 @@ echo "<script>
         var availableSlots = " . $available_slots . ";
     </script>";
 
-
 // Fetch existing booking dates from the database
 $bookings = "SELECT date_time FROM " . TBL . "bookings WHERE booking_type = 'service_expert'";
 $exist_day_result = mysqli_query($conn, $bookings);
