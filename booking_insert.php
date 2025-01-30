@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $user_id = $_POST["user_id"];
     } else {
         header('Location: login.php');
+        exit;
     }
 
     $booking_date = $_POST["booking_date"];
