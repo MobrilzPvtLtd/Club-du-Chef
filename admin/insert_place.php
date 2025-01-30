@@ -176,6 +176,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $PlaceID = mysqli_insert_id($conn);
         $placelastID = $PlaceID;
 
+        // Create a value set for each day
+        $days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+        $is_available = 1;
+        foreach ($days as $day) {
+            if (isset($_POST[$day]) && !empty($_POST[$day])) {
+                $start_time = $_POST['start_time_' . $day];  
+                $end_time = $_POST['end_time_' . $day];  
+        
+                $values[] = "('$placelastID', '$day', '$is_available', '$start_time', '$end_time', '$curDate')";
+            }
+        }
+
+        if (!empty($values)) {
+            $values_str = implode(', ', $values);
+        
+            $booking_availability_qry = "INSERT INTO " . TBL . "booking_availability 
+            (place_id, day, is_available, start_time, end_time, created_at) 
+            VALUES $values_str";
+        
+            mysqli_query($conn, $booking_availability_qry);
+        }
+
         switch (strlen($PlaceID)) {
             case 1:
                 $PlaceID = '00' . $PlaceID;
