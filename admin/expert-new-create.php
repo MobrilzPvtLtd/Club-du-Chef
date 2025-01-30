@@ -321,7 +321,7 @@ include "header.php";
 <script src="../js/select-opt.js"></script>
 <script src="../js/select-opt.js"></script>
 <script>
-   $(document).ready(function() {
+    $(document).ready(function() {
         // Show or hide the booking details when the checkbox is toggled
         $("#booking").change(function() {
             if ($(this).is(':checked')) {
