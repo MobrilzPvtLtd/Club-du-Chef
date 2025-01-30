@@ -16,7 +16,7 @@ include "header.php";
                     $listing_codea = $_GET['code'];
                     $listings_a_row = getListing($listing_codea);
                     
-                    // Fixing the query with correct variable usage
+                    // Fetch query of booking_availability
                     $check_query = "SELECT * FROM " . TBL . "booking_availability WHERE listing_id = '{$listings_a_row['listing_id']}' AND is_available = 1";
                     $availability_day_result = mysqli_query($conn, $check_query);
 
