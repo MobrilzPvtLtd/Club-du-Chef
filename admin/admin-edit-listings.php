@@ -134,11 +134,10 @@ include "header.php";
                                                 $days_of_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
                                                 
                                                 foreach ($days_of_week as $day) {
-                                                    // Check if there's availability for this day
                                                     $is_checked = isset($availability_days[$day]) ? 'checked' : '';
                                                     $start_time = isset($availability_days[$day]) ? $availability_days[$day]['start_time'] : '';
                                                     $end_time = isset($availability_days[$day]) ? $availability_days[$day]['end_time'] : '';
-                                                ?>
+                                            ?>
                                                 
                                                 <div class="chbox">
                                                     <input type="checkbox" name="<?php echo strtolower($day); ?>" id="booking_<?php echo strtolower($day); ?>" value="<?php echo $day; ?>" <?php echo $is_checked; ?>>
@@ -154,7 +153,7 @@ include "header.php";
                                                     </div>
                                                 </div>
 
-                                                <?php } ?>
+                                            <?php } ?>
                                             </div>
 
                                             <div class="form-check">
