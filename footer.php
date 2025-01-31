@@ -1,48 +1,51 @@
 <!-- START -->
 <?php
 // Fetch query of booking_availability
-$availability_days = [];
-$day_map = [
-    'Sunday' => 0,
-    'Monday' => 1,
-    'Tuesday' => 2,
-    'Wednesday' => 3,
-    'Thursday' => 4,
-    'Friday' => 5,
-    'Saturday' => 6
-];
+if (isset($availability_day_result)) {
+    $availability_days = [];
+    $day_map = [
+        'Sunday' => 0,
+        'Monday' => 1,
+        'Tuesday' => 2,
+        'Wednesday' => 3,
+        'Thursday' => 4,
+        'Friday' => 5,
+        'Saturday' => 6
+    ];
 
-while ($availability = mysqli_fetch_assoc($availability_day_result)) {
-    $day_name = $availability['day'];
-    if (isset($day_map[$day_name])) {
-        $day_index = $day_map[$day_name];
-        
-        $availability_days[] = [
-            'day' => $day_index,
-            'start_time' => $availability['start_time'],
-            'end_time' => $availability['end_time']
-        ];
+    while ($availability = mysqli_fetch_assoc($availability_day_result)) {
+        $day_name = $availability['day'];
+        if (isset($day_map[$day_name])) {
+            $day_index = $day_map[$day_name];
+            
+            $availability_days[] = [
+                'day' => $day_index,
+                'start_time' => $availability['start_time'],
+                'end_time' => $availability['end_time']
+            ];
+        }
     }
-}
 
-$available_days = array_map(function($slot) { return $slot['day']; }, $availability_days);
-$available_slots = json_encode($availability_days);
+    $available_days = array_map(function($slot) { return $slot['day']; }, $availability_days);
+    $available_slots = json_encode($availability_days);
 
-echo "<script>
-        var availableDays = " . json_encode($available_days) . ";
-        var availableSlots = " . $available_slots . ";
+    echo "<script>
+            var availableDays = " . json_encode($available_days) . ";
+            var availableSlots = " . $available_slots . ";
+        </script>";
+
+    // Fetch existing booking dates from the database
+    $date_times = [];
+
+    while ($exist_day = mysqli_fetch_assoc($exist_day_result)) {
+        $date_times[] = $exist_day['date_time'];
+    }
+
+    echo "<script>
+        var existDays = " . json_encode($date_times) . ";
     </script>";
-
-// Fetch existing booking dates from the database
-$date_times = [];
-
-while ($exist_day = mysqli_fetch_assoc($exist_day_result)) {
-    $date_times[] = $exist_day['date_time'];
 }
 
-echo "<script>
-    var existDays = " . json_encode($date_times) . ";
-</script>";
 ?>
 <!-- booking system form start  -->
 <div class="modal fade" id="booking">

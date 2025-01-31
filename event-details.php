@@ -34,6 +34,14 @@ if ($event_id == NULL && empty($event_id)) {
     header("Location: $redirect_url");  //Redirect When No Event Found in Table
 }
 
+// Fetch query of booking_availability
+$check_query = "SELECT day, start_time, end_time FROM " . TBL . "booking_availability WHERE event_id = '{$events_a_row['event_id']}' AND is_available = 1";
+$availability_day_result = mysqli_query($conn, $check_query);
+
+// Fetch existing booking dates from the database
+$bookings = "SELECT date_time FROM " . TBL . "bookings WHERE booking_type = 'event'";
+$exist_day_result = mysqli_query($conn, $bookings);
+
 ?>
 <!-- START -->
 <section class="<?php if ($footer_row['admin_language'] == 2) {
@@ -164,43 +172,20 @@ if ($event_id == NULL && empty($event_id)) {
                         <span class="share-new" data-toggle="modal" data-target="#sharepop"><i class="material-icons">share</i> Share now</span>
                     </div>
             </div>
-            <!-- booking system form start  -->
-            <div class="modal fade" id="booking">
-                <div class="modal-dialog">
-                    <div class="modal-content" style="margin-top: 30%;">
-                        <div class="log-bor">&nbsp;</div>
-                        <span class="udb-inst">Booking</span>
-                        <button type="button" class="close" data-dismiss="modal" style="margin-left: 92%;">&times;</button>
-                        <div class="quote-pop">
-                        <form method="post" action="/booking_insert.php" enctype="multipart/form-data">
-                            <input type="hidden" name="booking_type" value="event">
-                            <input type="hidden" name="user_id" value="<?php echo $session_user_id; ?>">
-                                <div class="form-group col-md-6 serex-date">
-                                    <input type="text" class="form-control" name="booking_date"
-                                        placeholder="DATE" id="newdate" required>
-                                </div>
-                                <div class="form-group col-md-6 serex-date">
-                                    <input type="time" class="form-control" name="booking_time"
-                                        placeholder="TIME" required>
-                                </div>
-                                <button type="submit" class="btn btn-primary float-end">Submit</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- booking system form end  -->
             <div class="rhs">
+                <!-- booking system form start  -->
                 <?php
+                    $booking_type = isset($_GET['booking_type']) ? $_GET['booking_type'] : 'event';
+
                     if (isset($_SESSION['status_msg'])) {
                         include "page_level_message.php";
                         unset($_SESSION['status_msg']);
                     }
-                    if($events_a_row['is_booking'] == 0 || $events_a_row['booking_url'] != ''){
+                    if($events_a_row['is_booking'] == 0 && $events_a_row['booking_url'] != ''){
                     ?>
                         <a href="<?php echo $events_a_row['booking_url']; ?>"><button  class="booking-btn"><?php echo $Zitiziti['SERVICE-EXPERT-BOOK-NOW']; ?></button></a>
                     <?php
-                    }else{
+                    }elseif($events_a_row['is_booking'] == 1) {
                     ?>
                         <button class="booking-btn" data-toggle="modal" data-target="#booking"><?php echo $Zitiziti['SERVICE-EXPERT-BOOK-NOW']; ?></button>
 

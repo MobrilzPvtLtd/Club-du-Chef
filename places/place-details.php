@@ -40,7 +40,13 @@ $place_category_name = $place_category_row['category_name'];
 
 placedetailpageview($place_id); //Function To Find Page View
 
+// Fetch query of booking_availability
+$check_query = "SELECT day, start_time, end_time FROM " . TBL . "booking_availability WHERE place_id = '{$place_row['place_id']}' AND is_available = 1";
+$availability_day_result = mysqli_query($conn, $check_query);
 
+// Fetch existing booking dates from the database
+$bookings = "SELECT date_time FROM " . TBL . "bookings WHERE booking_type = 'place'";
+$exist_day_result = mysqli_query($conn, $bookings);
 ?>
 
 <!-- START -->
@@ -90,41 +96,18 @@ placedetailpageview($place_id); //Function To Find Page View
                         </ul>
                     </div>
                     <!-- booking system form start  -->
-                    <div class="modal fade" id="booking">
-                        <div class="modal-dialog">
-                            <div class="modal-content" style="margin-top: 30%;">
-                                <div class="log-bor">&nbsp;</div>
-                                <span class="udb-inst">Booking</span>
-                                <button type="button" class="close" data-dismiss="modal" style="margin-left: 92%;">&times;</button>
-                                <div class="quote-pop">
-                                <form method="post" action="/booking_insert.php" enctype="multipart/form-data">
-                                    <input type="hidden" name="booking_type" value="place">
-                                    <input type="hidden" name="user_id" value="<?php echo $session_user_id; ?>">
-                                        <div class="form-group col-md-6 serex-date">
-                                            <input type="text" class="form-control" name="booking_date"
-                                                placeholder="DATE" id="newdate" required>
-                                        </div>
-                                        <div class="form-group col-md-6 serex-date">
-                                            <input type="time" class="form-control" name="booking_time"
-                                                placeholder="TIME" required>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary float-end">Submit</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- booking system form end  -->
                     <?php
+                    $booking_type = isset($_GET['booking_type']) ? $_GET['booking_type'] : 'place';
+
                     if (isset($_SESSION['status_msg'])) {
                         include "../page_level_message.php";
                         unset($_SESSION['status_msg']);
                     }
-                    if($place_row['is_booking'] == 0 || $place_row['booking_url'] != ''){
+                    if($place_row['is_booking'] == 0 && $place_row['booking_url'] != ''){
                     ?>
                         <a href="<?php echo $place_row['booking_url']; ?>"><button  class="booking-btn"><?php echo $Zitiziti['SERVICE-EXPERT-BOOK-NOW']; ?></button></a>
                     <?php
-                    }else{
+                    }elseif($place_row['is_booking'] == 1) {
                     ?>
                         <button class="booking-btn" data-toggle="modal" data-target="#booking"><?php echo $Zitiziti['SERVICE-EXPERT-BOOK-NOW']; ?></button>
 
