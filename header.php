@@ -226,6 +226,10 @@ foreach (getAllCities() as $city) {
         font-weight: 600;
         color: white;
     }
+    #booking_time option:disabled {
+        color: red;
+        background-color: #f2d2d2; /* Light red background */
+    }
     </style>
 </head>
 
