@@ -106,20 +106,6 @@ echo "<script>
         var availableSlots = " . $available_slots . ";
     </script>";
 
-// Fetch existing booking dates from the database
-$bookings = "SELECT date_time FROM " . TBL . "bookings WHERE booking_type = 'service_expert'";
-$exist_day_result = mysqli_query($conn, $bookings);
-
-$date_times = [];
-
-while ($exist_day = mysqli_fetch_assoc($exist_day_result)) {
-    $date_times[] = $exist_day['date_time'];
-}
-
-echo "<script>
-    var existDays = " . json_encode($date_times) . ";
-</script>";
-
 ?>
 
 <!-- START -->
@@ -595,6 +581,19 @@ echo "<script>
 
 <?php
 include "../footer.php";
+// Fetch existing booking dates from the database
+$bookings = "SELECT date_time FROM " . TBL . "bookings WHERE booking_type = 'service_expert'";
+$exist_day_result = mysqli_query($conn, $bookings);
+
+$date_times = [];
+
+while ($exist_day = mysqli_fetch_assoc($exist_day_result)) {
+    $date_times[] = $exist_day['date_time'];
+}
+
+echo "<script>
+    var existDays = " . json_encode($date_times) . ";
+</script>";
 ?>
 
 <!-- START -->
@@ -865,19 +864,8 @@ include "../footer.php";
         $("#booking_date").datepicker({
             minDate: 0, 
             beforeShowDay: function(date) {
-                var day = date.getDay(); 
-                var dateString = $.datepicker.formatDate('yy-mm-dd', date);
-
-                var isDisabled = existDays.some(function(existingDate) {
-                    // Extract date (ignoring time part) from the existing booking date
-                    var existingDateString = existingDate.split(' ')[0];
-                    return existingDateString === dateString;
-                });
-
-                return [
-                    availableDays.indexOf(day) !== -1 && !isDisabled,
-                    !isDisabled, "", ""
-                ];
+                var day = date.getDay(); // Get the day of the week (0=Sunday, 1=Monday, etc.)
+                return [availableDays.indexOf(day) !== -1, "", ""];
             },
             onSelect: function(selectedDate) {
                 updateTimeSlots(selectedDate);
@@ -894,34 +882,59 @@ include "../footer.php";
 
         // Function to update time slots based on selected date
         function updateTimeSlots(selectedDate) {
-            var dayOfWeek = new Date(selectedDate).getDay(); // Get the day of the week (0 = Sunday, 1 = Monday, etc.)
+            console.log(existDays);  // Log existDays to check the format
 
-            // console.log("Selected day of the week: " + dayOfWeek);
+            // Format the selected date as 'yyyy-mm-dd'
+            var dateString = $.datepicker.formatDate('yy-mm-dd', new Date(selectedDate));
+            var dayOfWeek = new Date(selectedDate).getDay();
 
-            // If the day is available, enable the time picker and set available times
-            if (availableDays.indexOf(dayOfWeek) !== -1) {
-                // Find the available slots for the selected day
-                var daySlots = availableSlots.find(function(slot) {
-                    return slot.day === dayOfWeek; // Match the selected day
-                });
+            // Find the available slots for the selected day
+            var daySlots = availableSlots.find(function(slot) {
+                return slot.day === dayOfWeek;  // Match the selected day
+            });
 
-                // Check if daySlots are found and contain valid start_time and end_time
-                if (daySlots && daySlots.start_time && daySlots.end_time) {
-                    var startTime = daySlots.start_time;
-                    var endTime = daySlots.end_time;
+            // Check if daySlots are found and contain valid start_time and end_time
+            if (daySlots && daySlots.start_time && daySlots.end_time) {
+                var startTime = daySlots.start_time;
+                var endTime = daySlots.end_time;
 
-                    // Generate time slots between start and end times
-                    var timeSlots = generateTimeSlots(startTime, endTime, 30); // 30-minute intervals
+                // Generate time slots between start and end times (30-minute intervals)
+                var timeSlots = generateTimeSlots(startTime, endTime, 30); // 30-minute intervals
 
-                    $('#booking_time').empty();
-                    
-                    timeSlots.forEach(function(timeSlot) {
-                        console.log(timeSlot); // Logging the time slot to make sure the array is correct
-                        $('#booking_time').append('<option value="' + timeSlot + '">' + timeSlot + '</option>');
+                $('#booking_time').empty();  
+
+                timeSlots.forEach(function(timeSlot) {
+                    var isDisabled = existDays.some(function(existingDate) {
+
+                        if (existingDate && typeof existingDate === 'string') {
+                            var dateParts = existingDate.split(' ');
+
+                            var existingDateString = dateParts[0];  
+                            var existingTime = dateParts[1] || '00:00';  
+
+                            existingTime = existingTime.split(':').slice(0, 2).join(':'); 
+
+                                if (existingDateString === dateString) {
+                                    if (existingTime === timeSlot) {
+                                        console.log('Disabling exact time slot:', timeSlot);
+                                        return true; 
+                                    }
+                                }
+                        } else {
+                            console.log('Invalid or undefined existingDate:', existingDate); 
+                        }
+
+                        return false;
                     });
-                } 
+
+                    // Append the time slot to the dropdown, and disable it if already booked
+                    $('#booking_time').append(
+                        '<option value="' + timeSlot + '" ' + (isDisabled ? 'disabled' : '') + '>' + timeSlot + '</option>'
+                    );
+                });
             }
         }
+
 
         // Function to generate time slots between start time and end time
         function generateTimeSlots(startTime, endTime, interval) {
@@ -935,21 +948,46 @@ include "../footer.php";
             return slots;
         }
 
-        // Convert time in 'HH:mm' format to total minutes
+        // Convert time in 'HH:mm' format (24-hour) to total minutes
+        // function convertToMinutes(time) {
+        //     var timeParts = time.split(':');
+        //     var hours = parseInt(timeParts[0]);
+        //     var minutes = parseInt(timeParts[1]);
+
+        //     // Convert 12-hour format to 24-hour format for correct minute calculation
+        //     if (hours < 12) {
+        //         return hours * 60 + minutes;
+        //     } else {
+        //         return (hours === 12 ? 0 : hours - 12 + 12) * 60 + minutes; // Convert 12 PM correctly
+        //     }
+        // }
         function convertToMinutes(time) {
             var timeParts = time.split(':');
             return parseInt(timeParts[0]) * 60 + parseInt(timeParts[1]);
         }
 
-        // Convert minutes back to 'HH:mm' format
+        // Convert minutes back to 'hh:mm AM/PM' format (12-hour)
         function convertToTimeFormat(minutes) {
             var hours = Math.floor(minutes / 60);
             var mins = minutes % 60;
+
+            // Convert back to 12-hour format
+            // var period = hours < 12 ? 'AM' : 'PM'; // Determine AM/PM
+
+            // if (hours === 0) {
+            //     hours = 12; // Midnight (12:00 AM)
+            // } else if (hours > 12) {
+            //     hours -= 12; // Convert PM hours (13:00 to 1:00 PM)
+            // }
+
             if (mins < 10) {
                 mins = '0' + mins;
             }
             return hours + ':' + mins;
+
+            // return hours + ':' + mins + ' ' + period;
         }
+
     });
 
     $(document).ready(function () {

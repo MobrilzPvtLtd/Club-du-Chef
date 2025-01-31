@@ -102,11 +102,11 @@ $usersqlrow = getUser($job_user_id); // To Fetch particular User Data
                         include "../page_level_message.php";
                         unset($_SESSION['status_msg']);
                     }
-                    if($job_row['is_booking'] == 0 || $job_row['booking_url'] != ''){
+                    if($job_row['is_booking'] == 0 && $job_row['booking_url'] != ''){
                     ?>
                         <a href="<?php echo $job_row['booking_url']; ?>"><button  class="booking-btn"><?php echo $Zitiziti['SERVICE-EXPERT-BOOK-NOW']; ?></button></a>
                     <?php
-                    }else{
+                     }elseif($job_row['is_booking'] == 1) {
                     ?>
                         <button class="booking-btn" data-toggle="modal" data-target="#booking"><?php echo $Zitiziti['SERVICE-EXPERT-BOOK-NOW']; ?></button>
 

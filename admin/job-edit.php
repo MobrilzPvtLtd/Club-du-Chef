@@ -144,7 +144,7 @@ include "header.php";
                                                             <label class="form-check-label" for="is_booking_url">Use your own booking system</label>
                                                         </div>
 
-                                                        <div class="form-group mt-2" id="booking_url_group" style="display:none;">
+                                                        <div class="form-group mt-2" id="booking_url_group" style="display: <?php echo ($job_a_row['booking_url']) ? 'block' : 'none'; ?>;">
                                                             <input type="text" name="booking_url" id="booking_url" class="form-control" value="<?php echo $job_a_row['booking_url']; ?>" placeholder="Enter your booking system url...">
                                                         </div>
                                                     </div>
