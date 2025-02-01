@@ -12,6 +12,8 @@ if (file_exists('job-config-info.php')) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['job_submit'])) {
 
+        $is_booking = $_POST["is_booking"];
+        $booking_url = $_POST["booking_url"];
 
 // Basic Personal Details
         $first_name = $_SESSION["first_name"];
@@ -189,18 +191,40 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					, job_small_description, job_location,city_slug, company_logo, contact_person
 					, contact_email_id, contact_number, contact_website, interview_location
 					, skill_set ,job_status, job_company_name
-					, job_udt, job_slug, job_cdt) 
+					, job_udt, job_slug, is_booking, booking_url, job_cdt) 
 					VALUES 
 					('$user_id', '$category_id', '$sub_category_id','$job_title','$job_description'
 					, '$job_salary','$no_of_openings','$job_type','$job_interview_date'
 					, '$years_of_experience','$job_interview_time','$job_role','$educational_qualification'
 					, '$job_small_description','$job_location','$city_slug_json','$company_logo','$contact_person', '$contact_email_id','$contact_number','$contact_website','$interview_location', '$skill_set', '$job_status', '$job_company_name'
-					, '$curDate', '$job_slug', '$curDate')";
+					, '$curDate', '$job_slug', '$is_booking','$booking_url', '$curDate')";
 
 
         $job_res = mysqli_query($conn, $job_qry);
         $jobID = mysqli_insert_id($conn);
         $listlastID = $jobID;
+
+        // Create a value set for each day
+        $days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+        $is_available = 1;
+        foreach ($days as $day) {
+            if (isset($_POST[$day]) && !empty($_POST[$day])) {
+                $start_time = $_POST['start_time_' . $day];  
+                $end_time = $_POST['end_time_' . $day];  
+        
+                $values[] = "('$listlastID', '$day', '$is_available', '$start_time', '$end_time', '$curDate')";
+            }
+        }
+
+        if (!empty($values)) {
+            $values_str = implode(', ', $values);
+        
+            $booking_availability_qry = "INSERT INTO " . TBL . "booking_availability 
+            (job_id, day, is_available, start_time, end_time, created_at) 
+            VALUES $values_str";
+        
+            $listing_res = mysqli_query($conn, $booking_availability_qry);
+        }
 
         switch (strlen($jobID)) {
             case 1:

@@ -49,11 +49,13 @@ if ($job_count_user >= $plan_type_job_count) {
                                     <label class="tit"><?php echo $Zitiziti['JOB-TITLE-LABEL']; ?>*</label>
                                     <input type="text" name="job_title" id="job_title" class="form-control" required>
                                 </div>
+                                
                                 <div class="form-group prfix-inp">
                                     <label class="tit"><?php echo $Zitiziti['JOB-SALARY-LABEL']; ?>*</label>
                                     <i class="prfix"><?php echo $footer_row['currency_symbol']; ?></i>
                                     <input type="text" required="required" onkeypress="return isNumber(event)" id="textInput" class="form-control"  name="job_salary" value="">
                                 </div>
+                                
                                 <div class="form-group">
                                     <label class="tit"><?php echo $Zitiziti['JOB-NO-OF-OPENINGS-LABEL']; ?>*</label>
                                     <input type="text" onkeypress="return isNumber(event)" name="no_of_openings" class="form-control" required>
@@ -159,7 +161,14 @@ if ($job_count_user >= $plan_type_job_count) {
                                     <!-- END INPUT TOOL TIP -->
                                 </div>
                             </div>
+
                             <div class="col-md-12">
+                            <?php
+                            include "../booking_system.php";
+                            ?>
+                            </div>
+                            
+                            <div class="col-md-12 mt-3">
                                 <div class="form-group">
                                     <label class="tit"><?php echo $Zitiziti['JOB-COMPANY-NAME-LABEL']; ?></label>
                                     <input type="text" name="job_company_name" class="form-control">
@@ -252,6 +261,10 @@ include "../footer.php";
 <script>
     CKEDITOR.replace('job_description');
 </script>
+
+<?php
+include "../script.php";
+?>
 </body>
 
 </html>
