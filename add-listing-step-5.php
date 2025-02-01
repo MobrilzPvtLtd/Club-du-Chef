@@ -208,6 +208,11 @@ if (isset($_POST['listing_submit'])) {
                                 ?>
 
                             </ul>
+
+                            <?php
+                            include "booking_system.php";
+                            ?>
+
                             <!--FILED START-->
                             <div class="row">
                                 <div class="col-md-6">
@@ -249,6 +254,10 @@ include "footer.php";
 <script type="text/javascript">var webpage_full_link = '<?php echo $webpage_full_link;?>';</script>
 <script type="text/javascript">var login_url = '<?php echo $LOGIN_URL;?>';</script>
 <script src="js/custom.js"></script>
+
+<?php
+include "script.php";
+?>
 </body>
 
 </html>
