@@ -30,6 +30,18 @@ if (file_exists('../config/job_page_authentication.php')) {
                     $job_codea = $_GET['row'];
                     $job_a_row = getJob($job_codea);
 
+                    // Fetch query of booking_availability
+                    $check_query = "SELECT * FROM " . TBL . "booking_availability WHERE booking_type_id = '{$job_a_row['job_id']}' AND is_available = 1 AND booking_type = 'job'";
+                    $availability_day_result = mysqli_query($conn, $check_query);
+
+                    $availability_days = [];
+                    while ($availability = mysqli_fetch_assoc($availability_day_result)) {
+                        $availability_days[$availability['day']] = $availability;
+                    }
+                    global $job_a_row;
+
+                    $edit_a_row = $job_a_row; 
+
                     ?>
                     <form action="job_update.php" class="job_form" id="job_form" name="job_form"
                           method="post" enctype="multipart/form-data">
@@ -184,7 +196,14 @@ if (file_exists('../config/job_page_authentication.php')) {
                                     <!-- END INPUT TOOL TIP -->
                                 </div>
                             </div>
+
                             <div class="col-md-12">
+                            <?php
+                                include "../booking_system_edit.php";
+                            ?>
+                            </div>
+
+                            <div class="col-md-12 mt-3">
                                 <div class="form-group">
                                     <label class="tit"><?php echo $Zitiziti['JOB-COMPANY-NAME-LABEL']; ?></label>
                                     <input type="text" value="<?php echo $job_a_row['job_company_name']; ?>" name="job_company_name" class="form-control">
@@ -282,6 +301,10 @@ include "../footer.php";
 <script>
     CKEDITOR.replace('job_description');
 </script>
+
+<?php
+include "../script.php";
+?>
 </body>
 
 </html>

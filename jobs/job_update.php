@@ -9,8 +9,10 @@ if (file_exists('job-config-info.php')) {
 }
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-
     if (isset($_POST['job_submit'])) {
+
+        $is_booking = $_POST["is_booking"];
+        $booking_url = $_POST["booking_url"];
 
         $job_id = $_POST["job_id"];
 
@@ -199,10 +201,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             , interview_location='" . $interview_location . "' , skill_set='" . $skill_set . "'
             , job_status='" . $job_status . "', job_slug='" . $job_slug . "' 
             , job_company_name='" . $job_company_name . "'
+            ,is_booking ='" . $is_booking . "',booking_url ='" . $booking_url . "'
             , job_udt ='" . $curDate . "' where job_id='" . $job_id . "'";
 
 
         $job_res = mysqli_query($conn, $job_qry);
+
+        $booking_type_id = $job_id;
+        $booking_type = "job";
+
+        include "../booking_syatem_update.php";
 
         //****************************    Admin Primary email fetch starts    *************************
 

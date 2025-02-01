@@ -26,9 +26,20 @@ if (file_exists('config/product_page_authentication.php')) {
                 <div class="log">
                     <div class="login add-list-off">
                         <?php
-                        $product_codea = $_GET['code'];
-                        $products_a_row = getProduct($product_codea);
+                            $product_codea = $_GET['code'];
+                            $products_a_row = getProduct($product_codea);
+                        
+                            // Fetch query of booking_availability
+                            $check_query = "SELECT * FROM " . TBL . "booking_availability WHERE booking_type_id = '{$products_a_row['product_id']}' AND is_available = 1 AND booking_type = 'product'";
+                            $availability_day_result = mysqli_query($conn, $check_query);
 
+                            $availability_days = [];
+                            while ($availability = mysqli_fetch_assoc($availability_day_result)) {
+                                $availability_days[$availability['day']] = $availability;
+                            }
+                            global $products_a_row;
+
+                            $edit_a_row = $products_a_row; 
                         ?>
 
                         <h4><?php echo $Zitiziti['EDIT_THIS_PRODUCT']; ?></h4>
@@ -57,7 +68,12 @@ if (file_exists('config/product_page_authentication.php')) {
                                         </div>
                                     </div>
                                     <!--FILED END-->
-                                    <div class="row">
+
+                                    <?php
+                                        include "booking_system_edit.php";
+                                    ?>
+
+                                    <div class="row mt-2">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" required="required" class="chosen-select form-control">
@@ -363,6 +379,11 @@ if (file_exists('config/product_page_authentication.php')) {
         });
     }
 </script>
+
+<?php
+include "script.php";
+?>
+
 </body>
 
 </html>

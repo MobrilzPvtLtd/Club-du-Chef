@@ -570,7 +570,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $prefix1 = ',';
             }
 
-            $listing_qry = "UPDATE  " . TBL . "listings  SET user_id='" . $user_id . "', listing_info_question ='" . $listing_info_question . "' , listing_info_answer ='" . $listing_info_answer . "' ,is_booking ='" . $is_booking . "',booking_url ='" . $booking_url . "'  where listing_id='" . $listing_id . "'";
+            $listing_qry = "UPDATE  " . TBL . "listings  SET user_id='" . $user_id . "', listing_info_question ='" . $listing_info_question . "' , listing_info_answer ='" . $listing_info_answer . "' ,is_booking ='" . $is_booking . "',booking_url ='" . $booking_url . "' where listing_id='" . $listing_id . "'";
+
+            $booking_type_id = $listing_id;
+            $booking_type = "listing";
 
             include "booking_syatem_update.php";
         }

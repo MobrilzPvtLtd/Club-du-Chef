@@ -9,8 +9,10 @@ if (file_exists('config/info.php')) {
 }
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-
     if (isset($_POST['event_submit'])) {
+
+        $is_booking = $_POST["is_booking"];
+        $booking_url = $_POST["booking_url"];
 
         $event_id = $_POST["event_id"];
 
@@ -186,10 +188,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         ,event_start_date='" . $event_start_date . "' , event_time='" . $event_time . "' 
         ,city_id='" . $city_id . "' , country_id='" . $country_id . "' ,city_slug='" . $city_slug_json . "' 
     ,event_image='" . $event_image . "', event_status='" . $event_status . "', event_type='" . $event_type . "', isenquiry='" . $isenquiry . "'
-    ,event_slug='" . $event_slug . "' where event_id='" . $event_id . "'";
+    ,event_slug='" . $event_slug . "', is_booking ='" . $is_booking . "',booking_url ='" . $booking_url . "' where event_id='" . $event_id . "'";
 
 
         $event_res = mysqli_query($conn, $event_qry);
+
+        $booking_type_id = $event_id;
+        $booking_type = "event";
+        include "booking_syatem_update.php";
 
         //****************************    Admin Primary email fetch starts    *************************
 

@@ -14,6 +14,18 @@ $user_id = $_SESSION['user_id'];
 
 $service_expert_row = getExpertUser($user_id);
 
+// Fetch query of booking_availability
+$check_query = "SELECT * FROM " . TBL . "booking_availability WHERE booking_type_id = '{$service_expert_row['expert_id']}' AND is_available = 1 AND booking_type = 'expert'";
+$availability_day_result = mysqli_query($conn, $check_query);
+
+$availability_days = [];
+while ($availability = mysqli_fetch_assoc($availability_day_result)) {
+    $availability_days[$availability['day']] = $availability;
+}
+global $service_expert_row;
+
+$edit_a_row = $service_expert_row; 
+
 ?>
 
 <section class=" login-reg job-form pb-3">
@@ -54,7 +66,11 @@ $service_expert_row = getExpertUser($user_id);
 
                             <div class="col-md-12">
                             <?php
-                            include "../booking_system.php";
+                            if($service_expert_row){
+                                include "../booking_system_edit.php";
+                            }else{
+                                include "../booking_system.php";
+                            }
                             ?>
                             </div>
 

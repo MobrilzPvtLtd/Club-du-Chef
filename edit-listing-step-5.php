@@ -89,13 +89,14 @@ $listing_codea = $_GET['row'];
                         $listings_a_row = getListing($listing_codea);
 
                         // Fetch query of booking_availability
-                        $check_query = "SELECT * FROM " . TBL . "booking_availability WHERE listing_id = '{$listings_a_row['listing_id']}' AND is_available = 1";
+                        $check_query = "SELECT * FROM " . TBL . "booking_availability WHERE booking_type_id = '{$listings_a_row['listing_id']}' AND is_available = 1 AND booking_type = 'listing'";
                         $availability_day_result = mysqli_query($conn, $check_query);
 
                         $availability_days = [];
                         while ($availability = mysqli_fetch_assoc($availability_day_result)) {
                             $availability_days[$availability['day']] = $availability;
                         }
+                        
                         global $listings_a_row;
 
                         $edit_a_row = $listings_a_row; 

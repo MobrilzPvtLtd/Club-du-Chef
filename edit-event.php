@@ -29,6 +29,18 @@ if (file_exists('config/event_page_authentication.php')) {
                         $event_codea = $_GET['code'];
                         $events_a_row = getEvent($event_codea);
 
+                        // Fetch query of booking_availability
+                        $check_query = "SELECT * FROM " . TBL . "booking_availability WHERE booking_type_id = '{$events_a_row['event_id']}' AND is_available = 1 AND booking_type = 'event'";
+                        $availability_day_result = mysqli_query($conn, $check_query);
+
+                        $availability_days = [];
+                        while ($availability = mysqli_fetch_assoc($availability_day_result)) {
+                            $availability_days[$availability['day']] = $availability;
+                        }
+                        global $events_a_row;
+
+                        $edit_a_row = $events_a_row; 
+
                         ?>
                         <h4><?php echo $Zitiziti['EDIT_THIS_EVENT']; ?></h4>
                         <?php include "page_level_message.php"; ?>
@@ -55,8 +67,13 @@ if (file_exists('config/event_page_authentication.php')) {
                                         </div>
                                     </div>
                                     <!--FILED END-->
+
+                                    <?php
+                                    include "booking_system_edit.php";
+                                    ?>
+
                                     <!--FILED START-->
-                                    <div class="row">
+                                    <div class="row mt-3">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <input type="text" name="event_address" required="required"
@@ -331,13 +348,13 @@ if (file_exists('config/event_page_authentication.php')) {
     }
 </script>
 <?php if ($footer_row['admin_google_paid_geo_location'] == 1) { ?>
-<script
-      src="https://maps.googleapis.com/maps/api/js?key=<?php echo $footer_row['admin_geo_map_api']; ?>&callback=initAutocomplete&libraries=places&v=weekly"
-      defer
-    ></script>
-    <script src="js/google-geo-location-event-add.js">
-     </script>
-     <?php } ?>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $footer_row['admin_geo_map_api']; ?>&callback=initAutocomplete&libraries=places&v=weekly" defer ></script>
+<script src="js/google-geo-location-event-add.js"></script>
+<?php } ?>
+
+<?php
+include "script.php";
+?>
 </body>
 
 </html>
