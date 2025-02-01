@@ -174,29 +174,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       
         $place_res = mysqli_query($conn, $place_qry);
         $PlaceID = mysqli_insert_id($conn);
-        $placelastID = $PlaceID;
+        $listlastID = $PlaceID;
 
-        // Create a value set for each day
-        $days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
-        $is_available = 1;
-        foreach ($days as $day) {
-            if (isset($_POST[$day]) && !empty($_POST[$day])) {
-                $start_time = $_POST['start_time_' . $day];  
-                $end_time = $_POST['end_time_' . $day];  
-        
-                $values[] = "('$placelastID', '$day', '$is_available', '$start_time', '$end_time', '$curDate')";
-            }
-        }
-
-        if (!empty($values)) {
-            $values_str = implode(', ', $values);
-        
-            $booking_availability_qry = "INSERT INTO " . TBL . "booking_availability 
-            (place_id, day, is_available, start_time, end_time, created_at) 
-            VALUES $values_str";
-        
-            mysqli_query($conn, $booking_availability_qry);
-        }
+        $booking_type = "place";
+        include "../booking_syatem_insert.php";
 
         switch (strlen($PlaceID)) {
             case 1:
@@ -214,7 +195,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $placeupqry = "UPDATE " . TBL . "places
 					  SET place_code = '$PlaceCode'
-					  WHERE place_id = $placelastID";
+					  WHERE place_id = $listlastID";
 
         $placeupres = mysqli_query($conn, $placeupqry);
 

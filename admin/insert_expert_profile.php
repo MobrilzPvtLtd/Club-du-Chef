@@ -207,29 +207,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $expert_profile_res = mysqli_query($conn, $expert_profile_profile_qry);
 
         $LID = mysqli_insert_id($conn);
-        $lastID = $LID;
+        $listlastID = $LID;
 
-        // Create a value set for each day
-        $days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
-        $is_available = 1;
-        foreach ($days as $day) {
-            if (isset($_POST[$day]) && !empty($_POST[$day])) {
-                $start_time = $_POST['start_time_' . $day];  
-                $end_time = $_POST['end_time_' . $day];  
-        
-                $values[] = "('$lastID', '$day', '$is_available', '$start_time', '$end_time', '$curDate')";
-            }
-        }
-
-        if (!empty($values)) {
-            $values_str = implode(', ', $values);
-        
-            $booking_availability_qry = "INSERT INTO " . TBL . "booking_availability 
-            (expert_id, day, is_available, start_time, end_time, created_at) 
-            VALUES $values_str";
-        
-            $expert_profile_res = mysqli_query($conn, $booking_availability_qry);
-        }
+        $booking_type = "expert";
+        include "../booking_syatem_insert.php";
 
         switch (strlen($LID)) {
             case 1:
@@ -247,7 +228,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $upqry = "UPDATE " . TBL . "experts
 					  SET expert_code = '$profileID'
-					  WHERE expert_id = $lastID";
+					  WHERE expert_id = $listlastID";
 
         $upres = mysqli_query($conn, $upqry);
 
