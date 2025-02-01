@@ -55,7 +55,10 @@ if($product_count_user >= $plan_type_product_count){
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    <?php
+                                    include "booking_system.php";
+                                    ?>
+                                    <div class="row mt-2">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" required="required" class="chosen-select form-control">
@@ -274,14 +277,11 @@ if($product_count_user >= $plan_type_product_count){
                         </form>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
 </section>
 <!--END PRICING DETAILS-->
-
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -312,6 +312,11 @@ if($product_count_user >= $plan_type_product_count){
         });
     }
 </script>
+
+<?php
+include "script.php";
+?>
+
 </body>
 
 </html>

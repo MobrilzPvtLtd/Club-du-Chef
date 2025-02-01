@@ -8,9 +8,11 @@ if (file_exists('config/info.php')) {
     include('config/info.php');
 }
 
-
 if ($_SERVER['REQUEST_METHOD']=='POST') {
-    if (isset($_POST['product_submit'])) {
+    // if (isset($_POST['product_submit'])) {
+
+        $is_booking = $_POST["is_booking"];
+        $booking_url = $_POST["booking_url"];
 
         // Basic Personal Details
         $first_name = $_SESSION["first_name"];
@@ -211,16 +213,38 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
         $product_qry = "INSERT INTO " . TBL . "products 
 					(user_id, category_id, sub_category_id, city_slug,product_name, product_description
 					, gallery_image, product_price, product_price_offer, product_payment_link, product_tags, product_highlights, product_status
-					, product_info_question , product_info_answer, payment_status, product_slug, product_cdt) 
+					, product_info_question , product_info_answer, payment_status, product_slug, is_booking, booking_url, product_cdt) 
 					VALUES 
 					('$user_id', '$category_id', '$sub_category_id','$city_slug_json','$product_name','$product_description'
 					,'$gallery_image', '$product_price', '$product_price_offer', '$product_payment_link', '$product_tags', '$product_highlights', '$product_status'
-					, '$product_info_question', '$product_info_answer', '$payment_status', '$product_slug', '$curDate')";
+					, '$product_info_question', '$product_info_answer', '$payment_status', '$product_slug','$is_booking', '$booking_url', '$curDate')";
 
 
         $product_res = mysqli_query($conn,$product_qry);
         $productID = mysqli_insert_id($conn);
         $listlastID = $productID;
+
+        // Create a value set for each day
+        $days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+        $is_available = 1;
+        foreach ($days as $day) {
+            if (isset($_POST[$day]) && !empty($_POST[$day])) {
+                $start_time = $_POST['start_time_' . $day];  
+                $end_time = $_POST['end_time_' . $day];  
+        
+                $values[] = "('$listlastID', '$day', '$is_available', '$start_time', '$end_time', '$curDate')";
+            }
+        }
+
+        if (!empty($values)) {
+            $values_str = implode(', ', $values);
+        
+            $booking_availability_qry = "INSERT INTO " . TBL . "booking_availability 
+            (product_id, day, is_available, start_time, end_time, created_at) 
+            VALUES $values_str";
+        
+            mysqli_query($conn, $booking_availability_qry);
+        }
 
         switch (strlen($productID)) {
             case 1:
@@ -369,9 +393,9 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
         //    Listing Insert Part Ends
 
     }
-}else {
+// }else {
 
-    $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
+//     $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
-    header('Location: add-new-product');
-}
+//     header('Location: add-new-product');
+// }
