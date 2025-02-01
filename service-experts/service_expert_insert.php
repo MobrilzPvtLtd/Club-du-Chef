@@ -12,6 +12,9 @@ if (file_exists('expert-config-info.php')) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['service_expert_submit'])) {
 
+        $is_booking = $_POST["is_booking"];
+        $booking_url = $_POST["booking_url"];
+
 // Common Job Profile Details
 
         $profile_name = addslashes($_POST["profile_name"]);
@@ -237,7 +240,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					, education_1, education_2, education_3, education_4
 					, additional_info_1, additional_info_2, additional_info_3, additional_info_4
 					, category_id, sub_category_id, date_of_birth, payment_id
-					, expert_udt, expert_status, expert_slug, expert_cdt)
+					, expert_udt, expert_status, expert_slug, is_booking, booking_url, expert_cdt)
 					VALUES
 					('$user_id', '$profile_name', '$city_id', '$years_of_experience', '$base_fare', '$available_time_start'
 					, '$available_time_end', '$profile_image', '$cover_image', '$id_proof', '$area_id', '$user_plan'
@@ -245,12 +248,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					, '$education_1', '$education_2', '$education_3', '$education_4'
 					, '$additional_info_1', '$additional_info_2', '$additional_info_3', '$additional_info_4'
 					, '$category_id', '$sub_category_id', '$date_of_birth', '$payment_id'
-					, '$curDate', '$expert_status', '$expert_slug', '$curDate')";
+					, '$curDate', '$expert_status', '$expert_slug', '$is_booking', '$booking_url', '$curDate')";
 
             $expert_profile_res = mysqli_query($conn, $expert_profile_profile_qry);
 
             $LID = mysqli_insert_id($conn);
             $lastID = $LID;
+
+            // Create a value set for each day
+            $days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+            $is_available = 1;
+            foreach ($days as $day) {
+                if (isset($_POST[$day]) && !empty($_POST[$day])) {
+                    $start_time = $_POST['start_time_' . $day];  
+                    $end_time = $_POST['end_time_' . $day];  
+            
+                    $values[] = "('$lastID', '$day', '$is_available', '$start_time', '$end_time', '$curDate')";
+                }
+            }
+
+            if (!empty($values)) {
+                $values_str = implode(', ', $values);
+            
+                $booking_availability_qry = "INSERT INTO " . TBL . "booking_availability 
+                (expert_id, day, is_available, start_time, end_time, created_at) 
+                VALUES $values_str";
+            
+                mysqli_query($conn, $booking_availability_qry);
+            }
 
             switch (strlen($LID)) {
                 case 1:
