@@ -87,6 +87,18 @@ $listing_codea = $_GET['row'];
                         <span class="add-list-rem-btn lis-add-ore" title="remove offer">-</span>
                         <?php
                         $listings_a_row = getListing($listing_codea);
+
+                        // Fetch query of booking_availability
+                        $check_query = "SELECT * FROM " . TBL . "booking_availability WHERE listing_id = '{$listings_a_row['listing_id']}' AND is_available = 1";
+                        $availability_day_result = mysqli_query($conn, $check_query);
+
+                        $availability_days = [];
+                        while ($availability = mysqli_fetch_assoc($availability_day_result)) {
+                            $availability_days[$availability['day']] = $availability;
+                        }
+                        global $listings_a_row;
+
+                        $edit_a_row = $listings_a_row; 
                         ?>
                         <form action="listing_update.php" class="listing_form_5" id="listing_form_5"
                               name="listing_form_5" method="post" enctype="multipart/form-data">
@@ -143,9 +155,12 @@ $listing_codea = $_GET['row'];
                                     <?php
                                 }
                                 ?>
-
-
                             </ul>
+
+                            <?php
+                            include "booking_system_edit.php";
+                            ?>
+
                             <!--FILED START-->
                             <div class="row">
                                 <div class="col-md-6">
@@ -176,7 +191,6 @@ $listing_codea = $_GET['row'];
 include "footer.php";
 ?>
 
-
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="js/jquery.min.js"></script>
@@ -186,6 +200,10 @@ include "footer.php";
 <script type="text/javascript">var webpage_full_link = '<?php echo $webpage_full_link;?>';</script>
 <script type="text/javascript">var login_url = '<?php echo $LOGIN_URL;?>';</script>
 <script src="js/custom.js"></script>
+
+<?php
+include "script.php";
+?>
 </body>
 
 </html>

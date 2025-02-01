@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by Vignesh.
  * User: Vignesh
@@ -10,13 +11,16 @@ if (file_exists('config/info.php')) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['listing_submit'])) {
 
+        $is_booking = $_POST["is_booking"];
+        $booking_url = $_POST["booking_url"];
+
         $src_path = $_POST["src_path"];
 
         $listing_code = $_POST["listing_code"];
 
         $city_slug = $_POST['city_slug'];
         if (is_array($city_slug)) {
-            $city_slug = array_map(function($city) use ($conn) {
+            $city_slug = array_map(function ($city) use ($conn) {
                 return mysqli_real_escape_string($conn, $city);
             }, $city_slug);
             $city_slug_json = json_encode($city_slug);
@@ -40,7 +44,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 // Listing Status
                 $listing_status = "Inactive";
             }
-
         } else {
             $user_status = "Inactive";
 
@@ -76,9 +79,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             // Listing Status
             $listing_status = "Inactive";
-
         }
-//    Condition to get User Id Ends
+        //    Condition to get User Id Ends
 
         //On Update data from edit listing step -1 starts
         if ($src_path == "edit-1") {
@@ -95,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $register_mode = "Direct";
 
-// Common Listing Details
+            // Common Listing Details
             $listing_name = $_POST["listing_name"];
             $listing_mobile = $_POST["listing_mobile"];
             $listing_email = $_POST["listing_email"];
@@ -200,7 +202,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $city_id .= $prefix . $fruit;
                     $prefix = ',';
                 }
-
             }
 
             $category_id = $_POST["category_id"];
@@ -234,7 +235,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $listing_slug = checkListingSlug($listing_name1, $listing_id);
 
 
-//************************  Profile Image Upload starts  **************************
+            //************************  Profile Image Upload starts  **************************
 
             if (!empty($_FILES['profile_image']['name'])) {
                 $file = rand(1000, 100000) . $_FILES['profile_image']['name'];
@@ -256,9 +257,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             } else {
                 $profile_image = $profile_image_old;
             }
-//************************  Profile Image Upload Ends  **************************
+            //************************  Profile Image Upload Ends  **************************
 
-//************************  Cover Image Upload starts  **************************
+            //************************  Cover Image Upload starts  **************************
 
             if (!empty($_FILES['cover_image']['name'])) {
                 $file = rand(1000, 100000) . $_FILES['cover_image']['name'];
@@ -280,28 +281,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             } else {
                 $cover_image = $cover_image_old;
             }
-//************************  Cover Image Upload ends  **************************
+            //************************  Cover Image Upload ends  **************************
 
             $listing_qry =
                 "UPDATE  " . TBL . "listings  SET user_id='" . $user_id . "', category_id='" . $category_id . "', sub_category_id='" . $sub_category_id . "',city_slug='" . $city_slug_json . "',
                  listing_type_id='" . $listing_type_id . "', listing_mobile='" . $listing_mobile . "', listing_email='" . $listing_email . "', service_locations='" . $service_locations . "' 
-    , listing_website='" . $listing_website . "', listing_whatsapp='" . $listing_whatsapp . "', listing_name='" . $listing_name . "',listing_description='" . $listing_description . "', listing_address='" . $listing_address . "'
-    , listing_lat='" . $listing_lat . "', listing_lng='" . $listing_lng . "', listing_slug ='" . $listing_slug . "'
-    ,country_id='" . $country_id . "',state_id='" . $state_id . "',city_id='" . $city_id . "',profile_image='" . $profile_image . "', cover_image='" . $cover_image . "' 
-    ,mon_is_open='" . $mon_is_open . "',mon_open_time='" . $mon_open_time . "',mon_close_time='" . $mon_close_time . "'
-    ,tue_is_open='" . $tue_is_open . "',tue_open_time='" . $tue_open_time . "',tue_close_time='" . $tue_close_time . "'
-    ,wed_is_open='" . $wed_is_open . "',wed_open_time='" . $wed_open_time . "',wed_close_time='" . $wed_close_time . "'
-    ,thu_is_open='" . $thu_is_open . "',thu_open_time='" . $thu_open_time . "',thu_close_time='" . $thu_close_time . "'
-    ,fri_is_open='" . $fri_is_open . "',fri_open_time='" . $fri_open_time . "',fri_close_time='" . $fri_close_time . "'
-    ,sat_is_open='" . $sat_is_open . "',sat_open_time='" . $sat_open_time . "',sat_close_time='" . $sat_close_time . "'
-    ,sun_is_open='" . $sun_is_open . "',sun_open_time='" . $sun_open_time . "',sun_close_time='" . $sun_close_time . "'
-    where listing_id='" . $listing_id . "'";
-
+                , listing_website='" . $listing_website . "', listing_whatsapp='" . $listing_whatsapp . "', listing_name='" . $listing_name . "',listing_description='" . $listing_description . "', listing_address='" . $listing_address . "'
+                , listing_lat='" . $listing_lat . "', listing_lng='" . $listing_lng . "', listing_slug ='" . $listing_slug . "'
+                ,country_id='" . $country_id . "',state_id='" . $state_id . "',city_id='" . $city_id . "',profile_image='" . $profile_image . "', cover_image='" . $cover_image . "' 
+                ,mon_is_open='" . $mon_is_open . "',mon_open_time='" . $mon_open_time . "',mon_close_time='" . $mon_close_time . "'
+                ,tue_is_open='" . $tue_is_open . "',tue_open_time='" . $tue_open_time . "',tue_close_time='" . $tue_close_time . "'
+                ,wed_is_open='" . $wed_is_open . "',wed_open_time='" . $wed_open_time . "',wed_close_time='" . $wed_close_time . "'
+                ,thu_is_open='" . $thu_is_open . "',thu_open_time='" . $thu_open_time . "',thu_close_time='" . $thu_close_time . "'
+                ,fri_is_open='" . $fri_is_open . "',fri_open_time='" . $fri_open_time . "',fri_close_time='" . $fri_close_time . "'
+                ,sat_is_open='" . $sat_is_open . "',sat_open_time='" . $sat_open_time . "',sat_close_time='" . $sat_close_time . "'
+                ,sun_is_open='" . $sun_is_open . "',sun_open_time='" . $sun_open_time . "',sun_close_time='" . $sun_close_time . "'
+                where listing_id='" . $listing_id . "'";
         }
+
 
         //On Update data from edit listing step -1 ends
 
-//===========================================================================================
+        //===========================================================================================
 
         //On Update data from edit listing step -2 starts
         if ($src_path == "edit-2") {
@@ -319,7 +320,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $service_image_old = $_POST["service_image_old"];
 
 
-// ************************  Service Image Upload starts  **************************
+            // ************************  Service Image Upload starts  **************************
 
             $all_service_image = $_FILES['service_image'];
             $all_service_image23 = $_FILES['service_image']['name'];
@@ -347,7 +348,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             $service_image1 = '';
                         }
                     }
-
                 }
                 if ($service_image1 != NULL) {
                     $service_image = implode(",", $service_image1);
@@ -356,17 +356,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 }
             }
 
-// ************************  Service Image Upload ends  **************************
+            // ************************  Service Image Upload ends  **************************
 
             $listing_qry =
                 "UPDATE  " . TBL . "listings  SET user_id='" . $user_id . "', service_id='" . $service_id . "'
             , service_image='" . $service_image . "' where listing_id='" . $listing_id . "'";
-
         }
 
         //On Update data from edit listing step -2 ends
 
-//===========================================================================================
+        //===========================================================================================
 
         //On Update data from edit listing step -3 starts
         if ($src_path == "edit-3") {
@@ -375,14 +374,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $service_1_image_old = $_POST["service_1_image_old"];
 
-// Listing Service Names Details
+            // Listing Service Names Details
 
             $service_1_name123 = $_POST["service_1_name"];
 
             $service_1_name = implode("|", $service_1_name123);
 
 
-// Listing Offer Prices Details
+            // Listing Offer Prices Details
             $service_1_price123 = $_POST["service_1_price"];
 
             $prefix1 = $fruitList = '';
@@ -392,12 +391,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
 
 
-// Listing Offer Details
+            // Listing Offer Details
             $service_1_detail123 = $_POST["service_1_detail"];
             $service_1_detail1 = implode("|", $service_1_detail123);
             $service_1_detail = addslashes($service_1_detail1);
 
-// Listing Offer View More
+            // Listing Offer View More
             $service_1_view_more123 = $_POST["service_1_view_more"];
             $prefix1 = $fruitList = '';
             foreach ($service_1_view_more123 as $fruit1) {
@@ -405,7 +404,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $prefix1 = ',';
             }
 
-// Listing Products View More
+            // Listing Products View More
             $listing_products1 = $_POST["listing_products"];
             $prefix = $fruitList = '';
             foreach ($listing_products1 as $fruit) {
@@ -413,7 +412,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $prefix = ',';
             }
 
-// Listing Events View More
+            // Listing Events View More
             $listing_events1 = $_POST["listing_events"];
             $prefix = $fruitList = '';
             foreach ($listing_events1 as $fruit) {
@@ -422,7 +421,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
 
 
-// ************************  Offer Image Upload Starts  **************************
+            // ************************  Offer Image Upload Starts  **************************
 
             $all_service_1_image = $_FILES['service_1_image'];
             $all_service_1_image2 = $_FILES['service_1_image']['name'];
@@ -449,7 +448,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             $service_1_image1 = '';
                         }
                     }
-
                 }
                 if ($service_1_image1 != NULL) {
                     $service_1_image = implode(",", $service_1_image1);
@@ -457,7 +455,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $service_1_image = '';
                 }
             }
-// ************************  Offer Image Upload ends  **************************
+            // ************************  Offer Image Upload ends  **************************
 
             $listing_qry =
                 "UPDATE  " . TBL . "listings  SET user_id='" . $user_id . "'
@@ -465,12 +463,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     , service_1_detail='" . $service_1_detail . "'
     , listing_products='" . $listing_products . "', listing_events='" . $listing_events . "'
     , service_1_image='" . $service_1_image . "' , service_1_view_more='" . $service_1_view_more . "' where listing_id='" . $listing_id . "'";
-
         }
 
         //On Update data from edit listing step -3 ends
 
-//===========================================================================================
+        //===========================================================================================
 
         //On Update data from edit listing step -4 starts
         if ($src_path == "edit-4") {
@@ -527,10 +524,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             } else {
                                 $gallery_image1[] = '';
                             }
-
                         }
-
-
                     }
                     if ($gallery_image1 != NULL) {
                         $gallery_image = implode(",", $gallery_image1);
@@ -547,13 +541,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     ,gallery_image='" . $gallery_image . "', google_map='" . $google_map . "',360_view ='" . $threesixty_view . "'
     ,listing_video ='" . $listing_video . "'
      where listing_id='" . $listing_id . "'";
-
         }
 
         //On Update data from edit listing step -4 ends
 
 
-//===========================================================================================
+        //===========================================================================================
 
         //On Update data from edit listing step -5 starts
 
@@ -562,7 +555,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $listing_id = $_POST["listing_id"];
 
 
-//Listing Other Informations
+            //Listing Other Informations
             $listing_info_question123 = $_POST["listing_info_question"];
             $prefix1 = $fruitList = '';
             foreach ($listing_info_question123 as $fruit1) {
@@ -577,10 +570,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $prefix1 = ',';
             }
 
-            $listing_qry = "UPDATE  " . TBL . "listings  SET user_id='" . $user_id . "', listing_info_question ='" . $listing_info_question . "'
-    , listing_info_answer ='" . $listing_info_answer . "'  where listing_id='" . $listing_id . "'";
+            $listing_qry = "UPDATE  " . TBL . "listings  SET user_id='" . $user_id . "', listing_info_question ='" . $listing_info_question . "' , listing_info_answer ='" . $listing_info_answer . "' ,is_booking ='" . $is_booking . "',booking_url ='" . $booking_url . "'  where listing_id='" . $listing_id . "'";
 
-
+            include "booking_syatem_update.php";
         }
 
         //On Update data from edit listing step -5 ends
@@ -588,7 +580,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         //===========================================================================================
 
 
-//   ***************************** Listing Update Part Starts *****************************
+        //   ***************************** Listing Update Part Starts *****************************
 
         $listing_res = mysqli_query($conn, $listing_qry);
 
@@ -610,7 +602,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $webpage_full_link_with_login = $webpage_full_link . "login";  //URL Login Link
 
-//****************************    Admin email starts    *************************
+            //****************************    Admin email starts    *************************
 
             $to = $admin_email;
             $LISTING_UPDATE_ADMIN_SUBJECT = $Zitiziti['LISTING_UPDATE_ADMIN_SUBJECT'];
@@ -621,9 +613,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $mail_template_admin = $admin_sql_fetch_row['mail_template'];
 
-            $message1 = stripslashes(str_replace(array('\'.$admin_site_name.\'', '\' . $first_name . \'', '\' . $email_id . \''
-            , '\' . $mobile_number . \'', '\' . $listing_name . \'', '\' . $listing_email . \'', '\' . $listing_mobile . \'', '\'.$admin_footer_copyright.\'', '\'.$admin_address.\'', '\'.$webpage_full_link.\'', '\'.$webpage_full_link_with_login.\'', '\'.$admin_primary_email.\''),
-                array('' . $admin_site_name . '', '' . $first_name . '', '' . $email_id . '', '' . $mobile_number . '', '' . $listing_name . '', '' . $listing_email . '', '' . $listing_mobile . '', '' . $admin_footer_copyright . '', '' . $admin_address . '', '' . $webpage_full_link . '', '' . $webpage_full_link_with_login . '', '' . $admin_primary_email . ''), $mail_template_admin));
+            $message1 = stripslashes(str_replace(
+                array(
+                    '\'.$admin_site_name.\'',
+                    '\' . $first_name . \'',
+                    '\' . $email_id . \'',
+                    '\' . $mobile_number . \'',
+                    '\' . $listing_name . \'',
+                    '\' . $listing_email . \'',
+                    '\' . $listing_mobile . \'',
+                    '\'.$admin_footer_copyright.\'',
+                    '\'.$admin_address.\'',
+                    '\'.$webpage_full_link.\'',
+                    '\'.$webpage_full_link_with_login.\'',
+                    '\'.$admin_primary_email.\''
+                ),
+                array('' . $admin_site_name . '', '' . $first_name . '', '' . $email_id . '', '' . $mobile_number . '', '' . $listing_name . '', '' . $listing_email . '', '' . $listing_mobile . '', '' . $admin_footer_copyright . '', '' . $admin_address . '', '' . $webpage_full_link . '', '' . $webpage_full_link_with_login . '', '' . $admin_primary_email . ''),
+                $mail_template_admin
+            ));
 
 
             $headers = "From: " . "$email_id" . "\r\n";
@@ -635,9 +642,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             mail($to, $subject, $message1, $headers); //admin email
 
 
-//****************************    Admin email ends    *************************
+            //****************************    Admin email ends    *************************
 
-//****************************    Client email starts    *************************
+            //****************************    Client email starts    *************************
 
             $to1 = $email_id;
             $LISTING_UPDATE_CLIENT_SUBJECT = $Zitiziti['LISTING_UPDATE_CLIENT_SUBJECT'];
@@ -648,9 +655,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $mail_template_client = $client_sql_fetch_row['mail_template'];
 
-            $message2 = stripslashes(str_replace(array('\'.$admin_site_name.\'', '\' . $first_name . \'', '\' . $email_id . \''
-            , '\' . $mobile_number . \'', '\' . $listing_name . \'', '\' . $listing_email . \'', '\' . $listing_mobile . \'', '\'.$admin_footer_copyright.\'', '\'.$admin_address.\'', '\'.$webpage_full_link.\'', '\'.$webpage_full_link_with_login.\'', '\'.$admin_primary_email.\''),
-                array('' . $admin_site_name . '', '' . $first_name . '', '' . $email_id . '', '' . $mobile_number . '', '' . $listing_name . '', '' . $listing_email . '', '' . $listing_mobile . '', '' . $admin_footer_copyright . '', '' . $admin_address . '', '' . $webpage_full_link . '', '' . $webpage_full_link_with_login . '', '' . $admin_primary_email . ''), $mail_template_client));
+            $message2 = stripslashes(str_replace(
+                array(
+                    '\'.$admin_site_name.\'',
+                    '\' . $first_name . \'',
+                    '\' . $email_id . \'',
+                    '\' . $mobile_number . \'',
+                    '\' . $listing_name . \'',
+                    '\' . $listing_email . \'',
+                    '\' . $listing_mobile . \'',
+                    '\'.$admin_footer_copyright.\'',
+                    '\'.$admin_address.\'',
+                    '\'.$webpage_full_link.\'',
+                    '\'.$webpage_full_link_with_login.\'',
+                    '\'.$admin_primary_email.\''
+                ),
+                array('' . $admin_site_name . '', '' . $first_name . '', '' . $email_id . '', '' . $mobile_number . '', '' . $listing_name . '', '' . $listing_email . '', '' . $listing_mobile . '', '' . $admin_footer_copyright . '', '' . $admin_address . '', '' . $webpage_full_link . '', '' . $webpage_full_link_with_login . '', '' . $admin_primary_email . ''),
+                $mail_template_client
+            ));
 
 
             $headers1 = "From: " . "$admin_email" . "\r\n";
@@ -661,12 +683,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             mail($to1, $subject1, $message2, $headers1); //admin email
 
-//****************************    client email ends    *************************
+            //****************************    client email ends    *************************
 
             if ($listing_type_id == 1) {
 
 
-// Basic Personal Details
+                // Basic Personal Details
                 unset($_SESSION['first_name']);
                 unset($_SESSION['last_name']);
                 unset($_SESSION['mobile_number']);
@@ -675,7 +697,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 unset($_SESSION['register_mode']);
                 unset($_SESSION['user_status']);
 
-// Common Listing Details
+                // Common Listing Details
                 unset($_SESSION['listing_name']);
                 unset($_SESSION['listing_mobile']);
                 unset($_SESSION['listing_email']);
@@ -740,7 +762,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             } else {
 
 
-// Basic Personal Details
+                // Basic Personal Details
                 unset($_SESSION['first_name']);
                 unset($_SESSION['last_name']);
                 unset($_SESSION['mobile_number']);
@@ -749,7 +771,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 unset($_SESSION['register_mode']);
                 unset($_SESSION['user_status']);
 
-// Common Listing Details
+                // Common Listing Details
                 unset($_SESSION['listing_name']);
                 unset($_SESSION['listing_mobile']);
                 unset($_SESSION['listing_email']);
@@ -810,7 +832,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 header('Location: edit-listing-step-6?code=' . $listing_code);
                 exit;
             }
-
         } else {
 
             $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
