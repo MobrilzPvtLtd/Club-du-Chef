@@ -56,8 +56,13 @@ if ($event_count_user >= $plan_type_event_count) {
                                         </div>
                                     </div>
                                     <!--FILED END-->
+
+                                    <?php
+                                    include "booking_system.php";
+                                    ?>
+
                                     <!--FILED START-->
-                                    <div class="row">
+                                    <div class="row mt-3">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <input type="text" name="event_address" required="required"
@@ -277,7 +282,6 @@ if ($event_count_user >= $plan_type_event_count) {
 </section>
 <!--END PRICING DETAILS-->
 
-
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="js/jquery.min.js"></script>
@@ -315,6 +319,10 @@ if ($event_count_user >= $plan_type_event_count) {
     <script src="js/google-geo-location-event-add.js">
     </script>
 <?php } ?>
+
+<?php
+include "script.php";
+?>
 </body>
 
 </html>
