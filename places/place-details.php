@@ -41,7 +41,7 @@ $place_category_name = $place_category_row['category_name'];
 placedetailpageview($place_id); //Function To Find Page View
 
 // Fetch query of booking_availability
-$check_query = "SELECT day, start_time, end_time FROM " . TBL . "booking_availability WHERE place_id = '{$place_row['place_id']}' AND is_available = 1";
+$check_query = "SELECT day, start_time, end_time FROM " . TBL . "booking_availability WHERE booking_type_id = '{$place_row['place_id']}' AND is_available = 1 AND booking_type = 'place'";
 $availability_day_result = mysqli_query($conn, $check_query);
 
 // Fetch existing booking dates from the database
@@ -735,6 +735,7 @@ include "../footer.php";
 <script src="<?php echo $slash; ?>js/custom.js"></script>
 <script src="<?php echo $slash; ?>js/jquery.validate.min.js"></script>
 <script src="<?php echo $slash; ?>js/custom_validation.js"></script>
+
 <script>
     $('.multiple-items1').slick({
         infinite: true,
@@ -826,6 +827,11 @@ include "../footer.php";
         }, 500);
     });
 </script>
+
+<?php
+include "../booking_popup_form.php";
+?>
+
 </body>
 
 </html>

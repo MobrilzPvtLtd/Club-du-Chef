@@ -137,7 +137,7 @@ for ($j = 1; $j <= 4; $j++) {
 }
 
 // Fetch query of booking_availability
-$check_query = "SELECT day, start_time, end_time FROM " . TBL . "booking_availability WHERE listing_id = '{$listrow['listing_id']}' AND is_available = 1";
+$check_query = "SELECT day, start_time, end_time FROM " . TBL . "booking_availability WHERE booking_type_id = '{$listrow['listing_id']}' AND is_available = 1 AND booking_type = 'listing'";
 $availability_day_result = mysqli_query($conn, $check_query);
 
 // Fetch existing booking dates from the database
@@ -1955,6 +1955,11 @@ include "footer.php";
 <script src="<?php echo $slash; ?>js/custom.js"></script>
 <script src="<?php echo $slash; ?>js/jquery.validate.min.js"></script>
 <script src="<?php echo $slash; ?>js/custom_validation.js"></script>
+
+<?php
+include "booking_popup_form.php";
+?>
+
 <script>
      $(document).ready(function() {
         $('.logos-slider1').slick({

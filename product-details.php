@@ -46,7 +46,7 @@ $user_plan = $usersqlrow['user_plan'];
 $plan_type_row = getPlanType($user_plan); //User Plan Type Database Fetch
 
 // Fetch query of booking_availability
-$check_query = "SELECT day, start_time, end_time FROM " . TBL . "booking_availability WHERE product_id = '{$productrow['product_id']}' AND is_available = 1";
+$check_query = "SELECT day, start_time, end_time FROM " . TBL . "booking_availability WHERE booking_type_id = '{$productrow['product_id']}' AND is_available = 1 AND booking_type = 'product'";
 $availability_day_result = mysqli_query($conn, $check_query);
 
 // Fetch existing booking dates from the database
@@ -422,6 +422,11 @@ include "footer.php";
 <script src="/js/custom.js"></script>
 <script src="/js/jquery.validate.min.js"></script>
 <script src="/js/custom_validation.js"></script>
+
+<?php
+include "booking_popup_form.php";
+?>
+
 <script>
 $('.multiple-items1').slick({
         dots: true,

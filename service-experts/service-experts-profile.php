@@ -71,7 +71,7 @@ foreach (getExpertReview($expert_id) as $star_rating_row) {
 expertprofilepageview($expert_id); //Function To Find Page View
 
 // Fetch query of booking_availability
-$check_query = "SELECT day, start_time, end_time FROM " . TBL . "booking_availability WHERE expert_id = '{$expert_profile_row['expert_id']}' AND is_available = 1";
+$check_query = "SELECT day, start_time, end_time FROM " . TBL . "booking_availability WHERE booking_type_id = '{$expert_profile_row['expert_id']}' AND is_available = 1 AND booking_type = 'expert'";
 $availability_day_result = mysqli_query($conn, $check_query);
 
 // Fetch existing booking dates from the database
@@ -789,6 +789,10 @@ include "../footer.php";
 <script src="<?php echo $slash; ?>js/custom.js"></script>
 <script src="<?php echo $slash; ?>js/jquery.validate.min.js"></script>
 <script src="<?php echo $slash; ?>js/custom_validation.js"></script>
+
+<?php
+include "../booking_popup_form.php";
+?>
 
 <script>
     $(document).ready(function () {

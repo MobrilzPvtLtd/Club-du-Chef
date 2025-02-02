@@ -40,7 +40,7 @@ jobpageview($job_id); //Function To Find Page View
 $usersqlrow = getUser($job_user_id); // To Fetch particular User Data
 
 // Fetch query of booking_availability
-$check_query = "SELECT day, start_time, end_time FROM " . TBL . "booking_availability WHERE job_id = '{$job_row['job_id']}' AND is_available = 1";
+$check_query = "SELECT day, start_time, end_time FROM " . TBL . "booking_availability WHERE booking_type_id = '{$job_row['job_id']}' AND is_available = 1 AND booking_type = 'job'";
 $availability_day_result = mysqli_query($conn, $check_query);
 
 // Fetch existing booking dates from the database
@@ -410,5 +410,10 @@ include "../footer.php";
 <script src="<?php echo $slash; ?>js/custom.js"></script>
 <script src="<?php echo $slash; ?>js/jquery.validate.min.js"></script>
 <script src="<?php echo $slash; ?>js/custom_validation.js"></script>
+
+<?php
+include "../booking_popup_form.php";
+?>
+
 </body>
 </html>
