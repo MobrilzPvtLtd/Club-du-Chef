@@ -57,6 +57,8 @@ if (isset($availability_day_result)) {
             <div class="quote-pop">
                 <form method="post" action="/booking_insert.php" enctype="multipart/form-data">
                     <input type="hidden" name="booking_type" value="<?php echo $booking_type; ?>">
+                    <input type="hidden" name="booking_type_id" value="<?php echo $booking_type_id ?? '0'; ?>">
+                    <input type="hidden" name="seller_id" value="<?php echo $seller_id; ?>">
                     <input type="hidden" name="user_id" value="<?php echo $session_user_id; ?>">
                     <div class="form-group col-md-6 serex-date">
                         <input type="text" class="form-control" name="booking_date" placeholder="DATE" id="booking_date" required>

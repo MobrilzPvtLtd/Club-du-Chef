@@ -383,6 +383,8 @@ $exist_day_result = mysqli_query($conn, $bookings);
                     <!-- booking system start  -->
                     <?php
                     $booking_type = isset($_GET['booking_type']) ? $_GET['booking_type'] : 'service_expert'; 
+                    $booking_type_id = $expert_id;
+                    $seller_id = $expert_profile_row['user_id'];
 
                     //  booking msg
                     if (isset($_SESSION['status_msg'])) {

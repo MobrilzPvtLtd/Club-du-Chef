@@ -445,6 +445,8 @@ $exist_day_result = mysqli_query($conn, $bookings);
                     <!-- booking system form start  -->
                     <?php
                         $booking_type = isset($_GET['booking_type']) ? $_GET['booking_type'] : 'listing';
+                        $booking_type_id = $listing_id;
+                        $seller_id = $listrow['user_id'];
 
                         if (isset($_SESSION['status_msg'])) {
                             include "page_level_message.php";

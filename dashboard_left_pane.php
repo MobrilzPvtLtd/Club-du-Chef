@@ -117,8 +117,8 @@
                         <?php } ?>
 
                         <li>
-                            <a href="admin-all-bookings.php" class="<?php 
-                                if ($current_page == "admin-all-bookings.php") {
+                            <a href="<?php echo $slash; ?>business-all-bookings.php" class="<?php 
+                                if ($current_page == "business-all-bookings.php") {
                                    echo "db-lact";
                                } ?>">
                                <img src="<?php echo $slash; ?>images/icon/booking.png" alt=""/><?php echo $Zitiziti['BOOKING_ENQUIRY']; ?>

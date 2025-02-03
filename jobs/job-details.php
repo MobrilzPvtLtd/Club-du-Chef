@@ -81,6 +81,8 @@ $exist_day_result = mysqli_query($conn, $bookings);
                     <!-- // booking system start -->
                     <?php
                     $booking_type = isset($_GET['booking_type']) ? $_GET['booking_type'] : 'job';
+                    $booking_type_id = $job_id;
+                    $seller_id = $job_row['user_id'];
 
                     if (isset($_SESSION['status_msg'])) {
                         include "../page_level_message.php";

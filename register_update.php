@@ -10,8 +10,7 @@ if (file_exists('config/info.php')) {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    if (isset($_POST['register_submit'])) {
-
+    // if (isset($_POST['register_submit'])) {
 
         $trap_box = $_POST["trap_box"];
 
@@ -147,7 +146,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $verification_status = 1; //**** If 0 means Activated 1 Means Not activated **//
 
 
-//************ Email Already Exist Check Starts ***************
+        //************ Email Already Exist Check Starts ***************
 
 
         $email_exist_check = mysqli_query($conn, "SELECT * FROM " . TBL . "users WHERE email_id = '$email_id' ");
@@ -173,9 +172,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         }
 
-//************ Email Already Exist Check Ends ***************
+        //************ Email Already Exist Check Ends ***************
 
-//************ Mobile Number Already Exist Check Starts ***************
+        //************ Mobile Number Already Exist Check Starts ***************
 
 
         $mobile_exist_check = mysqli_query($conn, "SELECT * FROM " . TBL . "users  WHERE mobile_number = '$mobile_number' ");
@@ -200,7 +199,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         }
 
-//************ Mobile Number Already Exist Check Ends ***************
+        //************ Mobile Number Already Exist Check Ends ***************
 
         $qry = "INSERT INTO " . TBL . "users 
 					(first_name, last_name, email_id, mobile_number, password, user_type, user_plan, register_mode, user_address, profile_image
@@ -253,7 +252,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $USER_INSERT_ADMIN_SUBJECT = $Zitiziti['USER_INSERT_ADMIN_SUBJECT'];
 
-//****************************    Admin email starts    *************************
+            //****************************    Admin email starts    *************************
 
             $to = $admin_email;
             $subject = "$admin_site_name $USER_INSERT_ADMIN_SUBJECT";
@@ -275,9 +274,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             mail($to, $subject, $message1, $headers); //admin email
 
 
-//****************************    Admin email ends    *************************
+            //****************************    Admin email ends    *************************
 
-//****************************    Client email starts    *************************
+            //****************************    Client email starts    *************************
 
             $to1 = $email_id;
             $USER_INSERT_CLIENT_SUBJECT = $Zitiziti['USER_INSERT_CLIENT_SUBJECT'];
@@ -299,7 +298,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             mail($to1, $subject1, $message2, $headers1); //admin email
 
-//****************************    client email ends    *************************
+            //****************************    client email ends    *************************
 
 
             if ($mode_path == "XeBaCk_MoDeX_PATHXHU") {
@@ -333,7 +332,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         }
 
-    }
+    // }
 } else {
 
 
