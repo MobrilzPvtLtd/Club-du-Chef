@@ -503,6 +503,16 @@ $all_texts_row = getAllTexts(); //Fetch All Text Data
                             </ol>
                         </div>
                     </li>
+
+                    <li>
+                        <h4>Booking</h4>
+                    </li>
+                    <li class="ic-db">
+                        <a href="admin-all-bookings.php" class="<?php if ($current_page == 'admin-all-bookings.php') {
+                                                            echo 'mact';
+                                                        } ?>">Booking Enquiry</a>
+                    </li>
+
                     <?php
                     if ($footer_row['admin_listing_show'] == 1) {
                         if ($admin_row['admin_listing_options'] == 1) { ?>

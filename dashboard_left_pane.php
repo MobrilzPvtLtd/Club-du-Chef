@@ -115,6 +115,16 @@
                                         alt=""/><?php echo $Zitiziti['ALL_SERVICE_EXPERT_LEADS']; ?></a>
                             </li>
                         <?php } ?>
+
+                        <li>
+                            <a href="admin-all-bookings.php" class="<?php 
+                                if ($current_page == "admin-all-bookings.php") {
+                                   echo "db-lact";
+                               } ?>">
+                               <img src="<?php echo $slash; ?>images/icon/booking.png" alt=""/><?php echo $Zitiziti['BOOKING_ENQUIRY']; ?>
+                            </a>
+                        </li>
+
                         <li>
                             <h4><?php echo $Zitiziti['DASH-LHS-PAY']; ?></h4>
                             <a href="<?php echo $slash; ?>db-payment"
