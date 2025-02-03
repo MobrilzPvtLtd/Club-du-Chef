@@ -17,12 +17,9 @@ function getAllbooking()
         <div class="ad-dash leftpadd">
             <div class="ud-cen">
                 <div class="log-bor">&nbsp;</div>
-                <span class="udb-inst">All Jobs</span>
+                <span class="udb-inst">All Booking Enquiry</span>
                 <div class="ud-cen-s2">
-                    <h2>All Job Posts</h2>
-                    <?php include "../page_level_message.php"; ?>
-                    <div style="display: none" class="static-success-message log-suc"><p>Job(s) has been Permanently Deleted!!! Please wait for automatic page refresh!! </p></div>
-                    <a href="job-create.php" class="db-tit-btn">Add new Job opening</a>
+                    <h2>All Booking Enquiry</h2>
                     <table class="responsive-table bordered" id="pg-resu">
                         <thead>
                             <tr>
