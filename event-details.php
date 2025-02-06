@@ -179,10 +179,10 @@ $exist_day_result = mysqli_query($conn, $bookings);
                     $booking_type_id = $event_id;
                     $seller_id = $events_a_row['user_id'];
 
-                    if (isset($_SESSION['status_msg'])) {
-                        include "page_level_message.php";
-                        unset($_SESSION['status_msg']);
-                    }
+                    // if (isset($_SESSION['status_msg'])) {
+                    //     include "page_level_message.php";
+                    //     unset($_SESSION['status_msg']);
+                    // }
                     if($events_a_row['is_booking'] == 0 && $events_a_row['booking_url'] != ''){
                     ?>
                         <a href="<?php echo $events_a_row['booking_url']; ?>"><button  class="booking-btn"><?php echo $Zitiziti['SERVICE-EXPERT-BOOK-NOW']; ?></button></a>

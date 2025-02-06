@@ -387,10 +387,10 @@ $exist_day_result = mysqli_query($conn, $bookings);
                     $seller_id = $expert_profile_row['user_id'];
 
                     //  booking msg
-                    if (isset($_SESSION['status_msg'])) {
-                        include "../page_level_message.php";
-                        unset($_SESSION['status_msg']);
-                    }
+                    // if (isset($_SESSION['status_msg'])) {
+                    //     include "../page_level_message.php";
+                    //     unset($_SESSION['status_msg']);
+                    // }
 
                     if($expert_profile_row['is_booking'] == 0 && $expert_profile_row['booking_url'] != ''){
                     ?>

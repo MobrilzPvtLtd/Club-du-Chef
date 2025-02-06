@@ -84,10 +84,10 @@ $exist_day_result = mysqli_query($conn, $bookings);
                     $booking_type_id = $job_id;
                     $seller_id = $job_row['user_id'];
 
-                    if (isset($_SESSION['status_msg'])) {
-                        include "../page_level_message.php";
-                        unset($_SESSION['status_msg']);
-                    }
+                    // if (isset($_SESSION['status_msg'])) {
+                    //     include "../page_level_message.php";
+                    //     unset($_SESSION['status_msg']);
+                    // }
 
                     if($job_row['is_booking'] == 0 && $job_row['booking_url'] != ''){
                     ?>

@@ -448,10 +448,10 @@ $exist_day_result = mysqli_query($conn, $bookings);
                         $booking_type_id = $listing_id;
                         $seller_id = $listrow['user_id'];
 
-                        if (isset($_SESSION['status_msg'])) {
-                            include "page_level_message.php";
-                            unset($_SESSION['status_msg']);
-                        }
+                        // if (isset($_SESSION['status_msg'])) {
+                        //     include "page_level_message.php";
+                        //     unset($_SESSION['status_msg']);
+                        // }
                         if($listrow['is_booking'] == 0 && $listrow['booking_url'] != ''){
                     ?>
                         <a href="<?php echo $listrow['booking_url']; ?>"><button  class="booking-btn"><?php echo $Zitiziti['SERVICE-EXPERT-BOOK-NOW']; ?></button></a>

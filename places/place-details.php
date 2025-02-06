@@ -100,10 +100,10 @@ $exist_day_result = mysqli_query($conn, $bookings);
                     $booking_type = isset($_GET['booking_type']) ? $_GET['booking_type'] : 'place';
                     $booking_type_id = $place_id;
 
-                    if (isset($_SESSION['status_msg'])) {
-                        include "../page_level_message.php";
-                        unset($_SESSION['status_msg']);
-                    }
+                    // if (isset($_SESSION['status_msg'])) {
+                    //     include "../page_level_message.php";
+                    //     unset($_SESSION['status_msg']);
+                    // }
                     if($place_row['is_booking'] == 0 && $place_row['booking_url'] != ''){
                     ?>
                         <a href="<?php echo $place_row['booking_url']; ?>"><button  class="booking-btn"><?php echo $Zitiziti['SERVICE-EXPERT-BOOK-NOW']; ?></button></a>

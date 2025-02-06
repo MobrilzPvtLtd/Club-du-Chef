@@ -226,10 +226,10 @@ $exist_day_result = mysqli_query($conn, $bookings);
                         $booking_type_id = $product_id;
                         $seller_id = $productrow['user_id'];
 
-                        if (isset($_SESSION['status_msg'])) {
-                            include "page_level_message.php";
-                            unset($_SESSION['status_msg']);
-                        }
+                        // if (isset($_SESSION['status_msg'])) {
+                        //     include "page_level_message.php";
+                        //     unset($_SESSION['status_msg']);
+                        // }
                         ?>
                         <span class="share-new" data-toggle="modal" data-target="#sharepop"><i class="material-icons">share</i> Share now</span>
                         <?php

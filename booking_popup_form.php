@@ -70,6 +70,11 @@ if (isset($availability_day_result)) {
                         </select>
                     </div>
 
+                    <div class="form-group col-md-12">
+                        <label for="comment">Comment</label>
+                        <textarea name="comment" class="form-control" required></textarea>
+                    </div>
+
                     <button type="submit" class="btn btn-primary float-end">Submit</button>
                 </form>
             </div>
