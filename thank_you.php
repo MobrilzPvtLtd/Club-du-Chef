@@ -42,21 +42,23 @@
             border: 1px solid #ccc;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            width: 400px;
+            width: 450px;
             text-align: center;
             border-radius: 10px;
         }
 
         .thank-you-container h1 {
             color: rgb(243, 147, 22);
+            font-size: 60px;
         }
         .thank-you-container p {
             color: #555;
+            font-size: 18px;
         }
         .btn {
             background-color: rgb(243, 147, 22); 
             color:white;
-            padding: 8px;
+            padding: 12px;
             width: 60%;
             border-radius: 50px;
             border: none;

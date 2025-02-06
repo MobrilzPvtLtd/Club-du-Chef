@@ -11,6 +11,19 @@ function getAllbooking()
 
 }
 ?>
+<style>
+    .form-select {
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .form-select option {
+        background-color: white;
+        color: #000;
+    }
+
+</style>
 <!-- START -->
 <section>
     <div class="ad-com">
@@ -26,12 +39,13 @@ function getAllbooking()
                                 <th>No</th>
                                 <th>User Name</th>
                                 <th>User Email</th>
-                                <th>User Mobile</th>
+                                <!-- <th>User Mobile</th> -->
                                 <th>Date</th>
                                 <th>Time</th>
                                 <th>Booking Type</th>
                                 <th>Booking Type Name</th>
-                                <th></th>
+                                <th>Status</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -69,42 +83,65 @@ function getAllbooking()
                                 <td><?php echo $si; ?></td>
                                 <td><?php echo $user_row['first_name']; ?></td>
                                 <td><?php echo $user_row['email_id']; ?></td>
-                                <td><?php echo $user_row['mobile_number']; ?></td>
+                                <!-- <td><?php echo $user_row['mobile_number']; ?></td> -->
                                 <td><span><?php echo dateFormatconverter($date); ?></span></td>
                                 <td><?php echo $time; ?></td>
                                 <td><?php echo $bookingrow['booking_type']; ?></td>
                     
                                 <?php
-                                if ($event_row) {
-                                    ?>
-                                    <td><?php echo $event_row['event_name']; ?></td>
-                                    <?php
-                                } elseif ($job_row) {
-                                    ?>
-                                    <td><?php echo $job_row['job_title']; ?></td>
-                                    <?php
-                                } elseif ($expert_row) {
-                                    ?>
-                                    <td><?php echo $expert_row['profile_name']; ?></td>
-                                    <?php
-                                } elseif ($product_row) {
-                                    ?>
-                                    <td><?php echo $product_row['product_name']; ?></td>
-                                    <?php
-                                } elseif ($listing_row) {
-                                    ?>
-                                    <td><?php echo $listing_row['listing_name']; ?></td>
-                                    <?php
-                                } elseif ($place_row) {
-                                    ?>
-                                    <td><?php echo $place_row['place_name']; ?></td>
-                                    <?php
-                                } else {
-                                    ?>
-                                    <td><?php echo 'Unknown'; ?></td>
-                                    <?php
-                                }
+                                    if ($event_row) {
+                                        ?>
+                                        <td><?php echo $event_row['event_name']; ?></td>
+                                        <?php
+                                    } elseif ($job_row) {
+                                        ?>
+                                        <td><?php echo $job_row['job_title']; ?></td>
+                                        <?php
+                                    } elseif ($expert_row) {
+                                        ?>
+                                        <td><?php echo $expert_row['profile_name']; ?></td>
+                                        <?php
+                                    } elseif ($product_row) {
+                                        ?>
+                                        <td><?php echo $product_row['product_name']; ?></td>
+                                        <?php
+                                    } elseif ($listing_row) {
+                                        ?>
+                                        <td><?php echo $listing_row['listing_name']; ?></td>
+                                        <?php
+                                    } elseif ($place_row) {
+                                        ?>
+                                        <td><?php echo $place_row['place_name']; ?></td>
+                                        <?php
+                                    } else {
+                                        ?>
+                                        <td><?php echo 'Unknown'; ?></td>
+                                        <?php
+                                    }
                                 ?>
+
+                                <td>
+                                    <form action="/status_update.php" method="POST">
+                                        <input type="hidden" value="<?php echo $booking_id ?>" name="booking_id">
+                                        <select name="status" class="form-select text-white 
+                                            <?php echo ($bookingrow['status'] == 'disapproved') ? 'bg-danger' : 'bg-success'; ?>" onchange="this.form.submit()">
+                                            <option value="disapproved" 
+                                                <?php echo ($bookingrow['status'] == 'disapproved') ? 'selected' : ''; ?>>
+                                                Disapproved
+                                            </option>
+                                            <option value="approved" 
+                                                <?php echo ($bookingrow['status'] == 'approved') ? 'selected' : ''; ?>>
+                                                Approved
+                                            </option>
+                                        </select>
+                                    </form>
+                                </td>
+
+                                <td>
+                                    <a class="db-list-edit" href="">View</a>
+                                </td>
+                                <!-- <td><button class="db-list-ststus">Approve</button></td> -->
+                                <!-- <td><button class="db-list-edit">View</button></td> -->
                             </tr>
                             <?php
                         
