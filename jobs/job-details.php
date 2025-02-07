@@ -11,7 +11,6 @@ if (isset($_SESSION['user_id'])) {
 }
 $user_details_row = getUser($session_user_id);
 
-
 if ($_GET['code'] == NULL && empty($_GET['code'])) {
 
     header("Location: all-jobs");
@@ -27,6 +26,12 @@ $job_row = getSlugJob($jobcodea); //To Fetch the job
 $job_id = $job_row['job_id'];
 $job_user_id = $job_row['user_id'];
 $job_category_id = $job_row['category_id'];
+
+// city_slug fetch //
+$decoded_city_slugs = json_decode($job_row['city_slug'], true);
+if (is_array($decoded_city_slugs) && count($decoded_city_slugs) > 0) {
+    $city_slug = $decoded_city_slugs[0];
+}
 
 $redirect_url = $webpage_full_link . 'dashboard';  //Redirect Url
 
@@ -83,6 +88,7 @@ $exist_day_result = mysqli_query($conn, $bookings);
                     $booking_type = isset($_GET['booking_type']) ? $_GET['booking_type'] : 'job';
                     $booking_type_id = $job_id;
                     $seller_id = $job_row['user_id'];
+                    $city = $city_slug;
 
                     // if (isset($_SESSION['status_msg'])) {
                     //     include "../page_level_message.php";
@@ -171,8 +177,15 @@ $exist_day_result = mysqli_query($conn, $bookings);
                                     ?></li>
                                 <li><span><?php echo $Zitiziti['OTHER_INFORMATIONS_PLACEHOLDER_LEFT']; ?>
                                         :</span> <?php echo $job_row['years_of_experience']; ?></li>
-                                <li><span><?php echo $Zitiziti['JOB-LOCATION-LABEL']; ?>
-                                        :</span> <?php $job_location_row = getJobCity($job_row['job_location']); echo $job_location_row['city_name']; ?></li>
+                                <?php if($job_row['city_slug']){ ?>
+                                    <li>
+                                        <span><?php echo $Zitiziti['JOB-LOCATION-LABEL']; ?></span> 
+                                        <?php 
+                                        // $job_location_row = getJobCity($job_row['job_location']); 
+                                        echo $city_slug; 
+                                        ?>
+                                    </li>
+                                <?php } ?>
                                 <li><span><?php echo $Zitiziti['JOB-SALARY-LABEL']; ?>
                                         :</span> <?php if($footer_row['currency_symbol_pos']== 1){ echo $footer_row['currency_symbol']; } ?><?php echo $job_row['job_salary']; ?><?php if($footer_row['currency_symbol_pos']== 2){ echo $footer_row['currency_symbol']; } ?>
                                 </li>
@@ -238,7 +251,7 @@ $exist_day_result = mysqli_query($conn, $bookings);
                                     </div>
                                     <div class="jbtre-img2">
                                         <h4><?php echo $job_profile_row['job_title']; ?></h4>
-                                        <span><?php $job_location_row = getJobCity($job_profile_row['job_location']); echo $job_location_row['city_name']; ?></span>
+                                        <span><?php $job_location_row = getJobCity($job_profile_row['job_location']); echo $city_slug; ?></span>
                                         <div class="jbtre-days">
                                             <span><?php echo time_elapsed_string($job_profile_row['job_cdt']); ?></span>
                                             <span><?php echo $total_count_jobs_applied; ?> <?php echo $Zitiziti['APPLICANTS']; ?></span>

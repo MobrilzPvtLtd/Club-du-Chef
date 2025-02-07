@@ -18,7 +18,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 // Common Job Profile Details
 
         $profile_name = addslashes($_POST["profile_name"]);
-        $city_id = $_POST["city_id"];
+        // $city_id = $_POST["city_id"];
+
+        $city_slug = $_POST['city_slug'];
+        if (is_array($city_slug)) {
+            $city_slug = array_map(function($city) use ($conn) {
+                return mysqli_real_escape_string($conn, $city);
+            }, $city_slug);
+            $city_slug_json = json_encode($city_slug);
+        } else {
+            $city_slug_json = json_encode([]);
+        }
+
         $base_fare = $_POST["base_fare"];
         $date_of_birth = $_POST["date_of_birth"];
         $category_id = $_POST["category_id"];
@@ -192,7 +203,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
             $expert_profile_res = mysqli_query($conn, "UPDATE  " . TBL . "experts SET profile_name='" . $profile_name . "'
-     , city_id='" . $city_id . "', years_of_experience='" . $years_of_experience . "', base_fare='" . $base_fare . "'
+     , city_slug='" . $city_slug_json . "', years_of_experience='" . $years_of_experience . "', base_fare='" . $base_fare . "'
      , available_time_start='" . $available_time_start . "', available_time_end='" . $available_time_end . "'
      , profile_image='" . $profile_image . "', cover_image='" . $cover_image . "'
      , id_proof ='" . $id_proof . "', area_id='" . $area_id . "', user_plan='" . $user_plan . "'
@@ -234,7 +245,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $expert_slug = checkUserServiceExpertSlug($profile_name1);
 
             $expert_profile_profile_qry = "INSERT INTO " . TBL . "experts
-					(user_id, profile_name, city_id, years_of_experience, base_fare, available_time_start
+					(user_id, profile_name, city_slug, years_of_experience, base_fare, available_time_start
 					, available_time_end, profile_image, cover_image, id_proof, area_id, user_plan
 					, experience_1, experience_2, experience_3, experience_4
 					, education_1, education_2, education_3, education_4
@@ -242,7 +253,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					, category_id, sub_category_id, date_of_birth, payment_id
 					, expert_udt, expert_status, expert_slug, is_booking, booking_url, expert_cdt)
 					VALUES
-					('$user_id', '$profile_name', '$city_id', '$years_of_experience', '$base_fare', '$available_time_start'
+					('$user_id', '$profile_name', '$city_slug_json', '$years_of_experience', '$base_fare', '$available_time_start'
 					, '$available_time_end', '$profile_image', '$cover_image', '$id_proof', '$area_id', '$user_plan'
 					, '$experience_1', '$experience_2', '$experience_3', '$experience_4'
 					, '$education_1', '$education_2', '$education_3', '$education_4'

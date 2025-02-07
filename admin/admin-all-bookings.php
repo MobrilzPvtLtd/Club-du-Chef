@@ -5,7 +5,7 @@ function getAllbooking()
 {
     global $conn;
 
-    $sql = "SELECT * FROM " . TBL . "bookings ORDER BY booking_id DESC";
+    $sql = "SELECT * FROM " . TBL . "bookings ORDER BY date_time ASC";
     $rs = mysqli_query($conn, $sql);
     return $rs;
 
@@ -138,10 +138,8 @@ function getAllbooking()
                                 </td>
 
                                 <td>
-                                    <a class="db-list-edit" href="">View</a>
+                                    <a class="db-list-edit" href="admin-all-bookings-details.php?row=<?php echo $booking_id; ?>">View</a>
                                 </td>
-                                <!-- <td><button class="db-list-ststus">Approve</button></td> -->
-                                <!-- <td><button class="db-list-edit">View</button></td> -->
                             </tr>
                             <?php
                         

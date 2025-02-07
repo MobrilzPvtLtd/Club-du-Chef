@@ -22,6 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $booking_date = $_POST["booking_date"];
     $booking_time = $_POST["booking_time"];
     $comment = $_POST["comment"];
+    $city = $_POST["city"];
 
     $booking_datetime = $booking_date . ' ' . $booking_time;
     $timestamp = strtotime($booking_datetime);
@@ -32,8 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $seller_id = $_POST["seller_id"];
             
     $booking_qry = "INSERT INTO " . TBL . "bookings
-					(user_id,date_time,booking_type,booking_type_id,seller_id, comment, booking_cdt)
-					VALUES ('$user_id', '$formatted_datetime', '$booking_type', '$booking_type_id','$seller_id','$comment', '$curDate')";
+					(user_id,date_time,booking_type,booking_type_id,seller_id, comment,city, booking_cdt)
+					VALUES ('$user_id', '$formatted_datetime', '$booking_type', '$booking_type_id','$seller_id','$comment', '$city', '$curDate')";
 
     $res = mysqli_query($conn,$booking_qry);
     $LID = mysqli_insert_id($conn);

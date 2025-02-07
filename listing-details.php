@@ -136,6 +136,12 @@ for ($j = 1; $j <= 4; $j++) {
     }
 }
 
+// city_slug fetch //
+$decoded_city_slugs = json_decode($listrow['city_slug'], true);
+if (is_array($decoded_city_slugs) && count($decoded_city_slugs) > 0) {
+    $city_slug = $decoded_city_slugs[0];
+}
+
 // Fetch query of booking_availability
 $check_query = "SELECT day, start_time, end_time FROM " . TBL . "booking_availability WHERE booking_type_id = '{$listrow['listing_id']}' AND is_available = 1 AND booking_type = 'listing'";
 $availability_day_result = mysqli_query($conn, $check_query);
@@ -447,6 +453,7 @@ $exist_day_result = mysqli_query($conn, $bookings);
                         $booking_type = isset($_GET['booking_type']) ? $_GET['booking_type'] : 'listing';
                         $booking_type_id = $listing_id;
                         $seller_id = $listrow['user_id'];
+                        $city = $city_slug;
 
                         // if (isset($_SESSION['status_msg'])) {
                         //     include "page_level_message.php";

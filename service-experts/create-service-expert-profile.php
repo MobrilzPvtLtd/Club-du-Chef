@@ -77,20 +77,20 @@ $edit_a_row = $service_expert_row;
                             <div class="col-md-6 mt-3">
                                 <div class="form-group">
                                     <label class="tit"><?php echo $Zitiziti['CITY']; ?></label>
-                                    <select onChange="getExpertArea(this.value);" class="chosen-select" name="city_id">
+                                    <select class="chosen-select" name="city_slug[]">
                                         <option value=""><?php echo $Zitiziti['SERVICE-EXPERT-SELECT-CITY-LABEL']; ?></option>
                                         <?php
-                                        foreach (getAllExpertCities() as $city_row) {
+                                        foreach (getAllCities() as $city) {
+                                            if (strtolower($city['city_name']) == 'www') {
+                                                continue;
+                                            }
                                         ?>
-                                            <option <?php $catArray = explode(',', $service_expert_row['city_id']);
-                                                    foreach ($catArray as $cat_Array) {
-                                                        if ($city_row['country_id'] == $cat_Array) {
-                                                            echo "selected";
-                                                        }
-                                                    } ?>
-                                                value="<?php echo $city_row['country_id']; ?>"><?php echo $city_row['country_name']; ?></option>
+                                            <option <?php echo in_array($city['city_slug'], (array)json_decode($service_expert_row['city_slug'], true)) ? 'selected' : '' ?>
+                                                value="<?php echo $city['city_slug']; ?>">
+                                                <?php echo $city['city_name']; ?>
+                                            </option>
                                         <?php
-                                        }
+                                            }
                                         ?>
                                     </select>
                                 </div>

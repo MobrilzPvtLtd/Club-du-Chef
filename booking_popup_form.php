@@ -60,6 +60,7 @@ if (isset($availability_day_result)) {
                     <input type="hidden" name="booking_type_id" value="<?php echo $booking_type_id ?? '0'; ?>">
                     <input type="hidden" name="seller_id" value="<?php echo $seller_id; ?>">
                     <input type="hidden" name="user_id" value="<?php echo $session_user_id; ?>">
+                    <input type="hidden" name="city" value="<?php echo $city; ?>">
                     <div class="form-group col-md-6 serex-date">
                         <input type="text" class="form-control" name="booking_date" placeholder="DATE" id="booking_date" required>
                     </div>

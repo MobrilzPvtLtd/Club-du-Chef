@@ -34,6 +34,12 @@ if ($event_id == NULL && empty($event_id)) {
     header("Location: $redirect_url");  //Redirect When No Event Found in Table
 }
 
+// city_slug fetch //
+$decoded_city_slugs = json_decode($events_a_row['city_slug'], true);
+if (is_array($decoded_city_slugs) && count($decoded_city_slugs) > 0) {
+    $city_slug = $decoded_city_slugs[0];
+}
+
 // Fetch query of booking_availability
 $check_query = "SELECT day, start_time, end_time FROM " . TBL . "booking_availability WHERE booking_type_id = '{$events_a_row['event_id']}' AND is_available = 1 AND booking_type = 'event'";
 $availability_day_result = mysqli_query($conn, $check_query);
@@ -178,6 +184,7 @@ $exist_day_result = mysqli_query($conn, $bookings);
                     $booking_type = isset($_GET['booking_type']) ? $_GET['booking_type'] : 'event';
                     $booking_type_id = $event_id;
                     $seller_id = $events_a_row['user_id'];
+                    $city = $city_slug;
 
                     // if (isset($_SESSION['status_msg'])) {
                     //     include "page_level_message.php";

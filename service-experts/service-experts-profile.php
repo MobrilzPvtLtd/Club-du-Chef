@@ -47,6 +47,12 @@ $expert_profile_city_row = getExpertCity($expert_profile_city_id);
 
 $expert_city_name = $expert_profile_city_row['country_name'];
 
+// city_slug fetch //
+$decoded_city_slugs = json_decode($expert_profile_row['city_slug'], true);
+if (is_array($decoded_city_slugs) && count($decoded_city_slugs) > 0) {
+    $city_slug = $decoded_city_slugs[0];
+}
+
 $expert_user_details_row = getUser($expert_profile_user_id);
 
 // Service Expert Rating. for Rating of Star Starts
@@ -123,7 +129,7 @@ $exist_day_result = mysqli_query($conn, $bookings);
                             </div>
                             <div class="s2">
                                 <h1><?php echo $expert_profile_row['profile_name']; ?></h1>
-                                <span class="loc"><?php echo $expert_city_name; ?></span>
+                                <span class="loc"><?php echo $city_slug; ?></span>
                                 <p><?php echo $expert_category_name; ?></p>
                             </div>
                             <div class="s3">
@@ -157,7 +163,7 @@ $exist_day_result = mysqli_query($conn, $bookings);
                             </li>
                             <li>
                                 <?php echo $Zitiziti['SERVICE-EXPERT-LOCATION']; ?>
-                                <span><?php echo $expert_city_name; ?></span>
+                                <span><?php echo $city_slug; ?></span>
                             </li>
                             <li>
                                 <?php echo $Zitiziti['SERVICE-EXPERT-JOIN-DATE']; ?>
@@ -172,17 +178,17 @@ $exist_day_result = mysqli_query($conn, $bookings);
                     <!--END-->
                     <!--START-->
                     <div class="jpro-bd">
-                        <?php if ($expert_profile_row['area_id'] != NULL) { ?>
+                        <?php if ($expert_profile_row['city_slug'] != NULL) { ?>
                             <div class="jpro-bd-com">
                                 <h4><?php echo $Zitiziti['SERVICE-EXPERT-SERVICE-AREAS']; ?></h4>
                                 <?php
-                                $area_set = explode(',', $expert_profile_row['area_id']);
-                                foreach ($area_set as $area_set_id) {
-                                    $area_name = getExpertArea($area_set_id);
+                                // $area_set = explode(',', $expert_profile_row['city_slug']);
+                                // foreach ($area_set as $area_set_id) {
+                                    // $area_name = getExpertArea($area_set_id);
                                     ?>
-                                    <span><?php echo $area_name['city_name']; ?></span>
+                                    <span><?php echo $city_slug; ?></span>
                                     <?php
-                                }
+                                // }
                                 ?>
                             </div>
                         <?php } ?>
@@ -385,6 +391,7 @@ $exist_day_result = mysqli_query($conn, $bookings);
                     $booking_type = isset($_GET['booking_type']) ? $_GET['booking_type'] : 'service_expert'; 
                     $booking_type_id = $expert_id;
                     $seller_id = $expert_profile_row['user_id'];
+                    $city = $city_slug;
 
                     //  booking msg
                     // if (isset($_SESSION['status_msg'])) {

@@ -40,6 +40,12 @@ $place_category_name = $place_category_row['category_name'];
 
 placedetailpageview($place_id); //Function To Find Page View
 
+// city_slug fetch //
+$decoded_city_slugs = json_decode($place_row['city_slug'], true);
+if (is_array($decoded_city_slugs) && count($decoded_city_slugs) > 0) {
+    $city_slug = $decoded_city_slugs[0];
+}
+
 // Fetch query of booking_availability
 $check_query = "SELECT day, start_time, end_time FROM " . TBL . "booking_availability WHERE booking_type_id = '{$place_row['place_id']}' AND is_available = 1 AND booking_type = 'place'";
 $availability_day_result = mysqli_query($conn, $check_query);
@@ -99,6 +105,7 @@ $exist_day_result = mysqli_query($conn, $bookings);
                     <?php
                     $booking_type = isset($_GET['booking_type']) ? $_GET['booking_type'] : 'place';
                     $booking_type_id = $place_id;
+                    $city = $city_slug;
 
                     // if (isset($_SESSION['status_msg'])) {
                     //     include "../page_level_message.php";
