@@ -24,21 +24,40 @@
         ?>
         <div class="col-md-12" style="margin-left: 15px;">
             <div class="chbox">
-                <input type="checkbox" name="<?php echo strtolower($day); ?>" id="booking_<?php echo strtolower($day); ?>" value="<?php echo $day; ?>" style="height: 0px;" >
+                <input type="checkbox" name="<?php echo strtolower($day); ?>" id="booking_<?php echo strtolower($day); ?>" value="<?php echo $day; ?>" style="height: 0px;">
                 <label for="booking_<?php echo strtolower($day); ?>"><?php echo $day; ?></label>
 
                 <div class="row <?php echo strtolower($day); ?>_time" style="display:none;">
-                    <div class="form-group col-md-4 serex-date">
-                        <input type="time" class="form-control" name="start_time_<?php echo strtolower($day); ?>" value="">
+                    <div class="form-group col-md-5 serex-date">
+                        <input type="time" class="form-control" name="start_time_<?php echo strtolower($day); ?>" value="" placeholder="Start Time">
                     </div>
-                    <div class="form-group col-md-4 serex-date">
-                        <input type="time" class="form-control" name="end_time_<?php echo strtolower($day); ?>" value="">
+                    <div class="form-group col-md-5 serex-date">
+                        <input type="time" class="form-control" name="end_time_<?php echo strtolower($day); ?>" value="" placeholder="End Time">
+                    </div>
+                    <div class="form-group col-md-5 serex-date">
+                        <input type="time" class="form-control" name="start_time_1_<?php echo strtolower($day); ?>" value="" placeholder="Start Time">
+                    </div>
+                    <div class="form-group col-md-5 serex-date">
+                        <input type="time" class="form-control" name="end_time_1_<?php echo strtolower($day); ?>" value="" placeholder="End Time">
+                    </div>
+                    <div class="form-group col-md-5 serex-date">
+                        <input type="time" class="form-control" name="start_time_2_<?php echo strtolower($day); ?>" value="" placeholder="Start Time">
+                    </div>
+                    <div class="form-group col-md-5 serex-date">
+                        <input type="time" class="form-control" name="end_time_2_<?php echo strtolower($day); ?>" value="" placeholder="End Time">
+                    </div>
+                    <div class="form-group col-md-5 serex-date">
+                        <input type="time" class="form-control" name="start_time_3_<?php echo strtolower($day); ?>" value="" placeholder="Start Time">
+                    </div>
+                    <div class="form-group col-md-5 serex-date">
+                        <input type="time" class="form-control" name="end_time_3_<?php echo strtolower($day); ?>" value="" placeholder="End Time">
                     </div>
                 </div>
             </div>
         </div>
         <?php } ?>
     </div>
+
 
     <!-- Use your own booking system -->
     <div class="form-check">
