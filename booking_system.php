@@ -11,7 +11,7 @@
 <!-- Use inbuilt booking system -->
 <div class="col-md-12" id="booking-details" style="display:none;">
     <div class="form-check">
-        <input class="form-check-input" type="radio" value="1" name="is_booking" id="is_booking" style="height: 13px;">
+        <input class="form-check-input" type="radio" value="1" name="is_booking" id="is_booking" <?php if (!isset($_SESSION['admin_id'])) echo 'style="height: 13px;"'; ?>>
         <label class="form-check-label" for="is_booking">Use inbuilt booking system</label>
     </div>
 
@@ -42,7 +42,7 @@
 
     <!-- Use your own booking system -->
     <div class="form-check">
-        <input class="form-check-input" type="radio" value="0" name="is_booking" id="is_booking_url" style="height: 13px;">
+        <input class="form-check-input" type="radio" value="0" name="is_booking" id="is_booking_url" <?php if (!isset($_SESSION['admin_id'])) echo 'style="height: 13px;"'; ?>>
         <label class="form-check-label" for="is_booking_url">Use your own booking system</label>
     </div>
 
