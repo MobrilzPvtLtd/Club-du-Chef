@@ -98,8 +98,8 @@ if (file_exists('config/product_page_authentication.php')) {
 
                                 </tbody>
                             </table>
-                        </div>
-                    </div>
+                        <!-- </div> -->
+                    <!-- </div> -->
 <!--                    <div id="mycart" class="container tab-pane">-->
 <!--                        <h2>Your cart</h2>-->
 <!--                        <div class="shopping-cart">-->
@@ -473,5 +473,5 @@ if (file_exists('config/product_page_authentication.php')) {
 //                    productRow.remove();
 //                    recalculateCart();
 //                });
-            }
+            // }
         </script>
