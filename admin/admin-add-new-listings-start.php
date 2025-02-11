@@ -89,7 +89,7 @@ include "header.php";
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <input type="text" name="listing_website" class="form-control"
-                                                        placeholder="Webiste(www.rn53themes.net)">
+                                                        placeholder="Webiste Url...">
                                                 </div>
                                             </div>
                                         </div>

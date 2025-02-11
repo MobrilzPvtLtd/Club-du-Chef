@@ -920,7 +920,7 @@ $Zitiziti['STEP5'] = "Step 5";
 
 $Zitiziti['STEP6'] = "Step 6";
 
-$Zitiziti['WEBSITE'] = "Website(www.rn53themes.net)";
+$Zitiziti['WEBSITE'] = "Webiste Url...";
 
 $Zitiziti['SHOP_ADDRESS'] = "Shop address";
 
@@ -2783,13 +2783,13 @@ $Zitiziti['pg_contus_email2'] = "Email: support@company.com";
 
 $Zitiziti['pg_contus_web_tit'] = "Website & Social media:";
 
-$Zitiziti['pg_contus_web'] = "www.rn53themes.net";
+$Zitiziti['pg_contus_web'] = "www.zitiziti.com";
 
 $Zitiziti['pg_contus_fb'] = "Facebook";
 
 $Zitiziti['pg_contus_twi'] = "Twitter";
 
-$Zitiziti['pg_contus_web_link'] = "https://rn53themes.net/";
+$Zitiziti['pg_contus_web_link'] = "https://www.zitiziti.com";
 
 $Zitiziti['pg_contus_fb_link'] = "https://www.facebook.com/53themes";
 

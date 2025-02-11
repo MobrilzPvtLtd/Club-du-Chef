@@ -129,7 +129,7 @@ include "header.php";
                                                 <div class="form-group">
                                                     <input readonly="readonly" id="listing_website" name="listing_website" type="text"
                                                            value="<?php echo $listings_a_row['listing_website']; ?>" class="form-control"
-                                                           placeholder="Webiste(www.rn53themes.net)">
+                                                           placeholder="Webiste Url...">
                                                 </div>
                                             </div>
                                         </div>
