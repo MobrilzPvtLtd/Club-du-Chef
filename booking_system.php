@@ -35,22 +35,10 @@
                         <input type="time" class="form-control" name="end_time_<?php echo strtolower($day); ?>" value="" placeholder="End Time">
                     </div>
                     <div class="form-group col-md-5 serex-date">
-                        <input type="time" class="form-control" name="start_time_1_<?php echo strtolower($day); ?>" value="" placeholder="Start Time">
-                    </div>
-                    <div class="form-group col-md-5 serex-date">
-                        <input type="time" class="form-control" name="end_time_1_<?php echo strtolower($day); ?>" value="" placeholder="End Time">
-                    </div>
-                    <div class="form-group col-md-5 serex-date">
                         <input type="time" class="form-control" name="start_time_2_<?php echo strtolower($day); ?>" value="" placeholder="Start Time">
                     </div>
                     <div class="form-group col-md-5 serex-date">
                         <input type="time" class="form-control" name="end_time_2_<?php echo strtolower($day); ?>" value="" placeholder="End Time">
-                    </div>
-                    <div class="form-group col-md-5 serex-date">
-                        <input type="time" class="form-control" name="start_time_3_<?php echo strtolower($day); ?>" value="" placeholder="Start Time">
-                    </div>
-                    <div class="form-group col-md-5 serex-date">
-                        <input type="time" class="form-control" name="end_time_3_<?php echo strtolower($day); ?>" value="" placeholder="End Time">
                     </div>
                 </div>
             </div>

@@ -21,7 +21,9 @@ if (isset($availability_day_result)) {
             $availability_days[] = [
                 'day' => $day_index,
                 'start_time' => $availability['start_time'],
-                'end_time' => $availability['end_time']
+                'end_time' => $availability['end_time'],
+                'start_time_2' => $availability['start_time_2'],
+                'end_time_2' => $availability['end_time_2'],
             ];
         }
     }
@@ -112,7 +114,6 @@ if (isset($availability_day_result)) {
 
         // Function to update time slots based on selected date
         function updateTimeSlots(selectedDate) {
-            console.log(existDays);  // Log existDays to check the format
 
             // Format the selected date as 'yyyy-mm-dd'
             var dateString = $.datepicker.formatDate('yy-mm-dd', new Date(selectedDate));
@@ -124,13 +125,15 @@ if (isset($availability_day_result)) {
             });
 
             // Check if daySlots are found and contain valid start_time and end_time
-            if (daySlots && daySlots.start_time && daySlots.end_time) {
+            if (daySlots && daySlots.start_time && daySlots.end_time && daySlots.start_time_2 && daySlots.end_time_2) {
                 var startTime = daySlots.start_time;
                 var endTime = daySlots.end_time;
+                var startTime_2 = daySlots.start_time_2;
+                var endTime_2 = daySlots.end_time_2;
 
                 // Generate time slots between start and end times (30-minute intervals)
-                var timeSlots = generateTimeSlots(startTime, endTime, 30); // 30-minute intervals
-
+                var timeSlots = generateTimeSlots(startTime, endTime, startTime_2, endTime_2, 30); // 30-minute intervals
+                
                 $('#booking_time').empty();  
 
                 timeSlots.forEach(function(timeSlot) {
@@ -167,16 +170,29 @@ if (isset($availability_day_result)) {
 
 
         // Function to generate time slots between start time and end time
-        function generateTimeSlots(startTime, endTime, interval) {
+        function generateTimeSlots(startTime, endTime, startTime_2, endTime_2, interval) {
             var slots = [];
+
+            // Convert times to minutes for both ranges
             var start = convertToMinutes(startTime);
             var end = convertToMinutes(endTime);
-            
+
+            var start_2 = convertToMinutes(startTime_2);
+            var end_2 = convertToMinutes(endTime_2);
+
+            // Generate time slots for the first range
             for (var time = start; time < end; time += interval) {
                 slots.push(convertToTimeFormat(time));
             }
+
+            // Generate time slots for the second range
+            for (var time = start_2; time < end_2; time += interval) {
+                slots.push(convertToTimeFormat(time));
+            }
+
             return slots;
         }
+
 
         // Convert time in 'HH:mm' format (24-hour) to total minutes
         // function convertToMinutes(time) {

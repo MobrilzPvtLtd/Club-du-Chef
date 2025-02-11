@@ -288,13 +288,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $user_id = $user_details_row['user_id'];  //User Id
 
-            if ($user_details_row['user_status'] == 'Active') {
+            // if ($user_details_row['user_status'] == 'Active') {
                 // Listing Status
                 $listing_status = "Active";
-            } else {
+            // } else {
                 // Listing Status
-                $listing_status = "Inactive";
-            }
+                // $listing_status = "Inactive";
+            // }
 
 
         } else {

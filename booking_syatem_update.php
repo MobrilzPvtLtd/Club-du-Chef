@@ -13,12 +13,8 @@ $booking_type = isset($booking_type) ? $booking_type : null;
      if ($is_available == 1) {  
         $start_time = $_POST['start_time_' . $day];  
         $end_time = $_POST['end_time_' . $day];  
-        $start_time_1 = $_POST['start_time_1_' . $day];  
-        $end_time_1 = $_POST['end_time_1_' . $day];  
         $start_time_2 = $_POST['start_time_2_' . $day];  
         $end_time_2 = $_POST['end_time_2_' . $day];  
-        $start_time_3 = $_POST['start_time_3_' . $day];  
-        $end_time_3 = $_POST['end_time_3_' . $day];  
  
          // Check if the record for the day already exists
          $check_query = "SELECT * FROM " . TBL . "booking_availability WHERE booking_type_id = '$booking_type_id' AND day = '$day' AND booking_type = '$booking_type'";
@@ -26,10 +22,10 @@ $booking_type = isset($booking_type) ? $booking_type : null;
  
          if (mysqli_num_rows($result) > 0) {
              // If the day already exists, update the availability
-             $update_queries[] = "UPDATE " . TBL . "booking_availability SET start_time = '$start_time', end_time = '$end_time', start_time_1 = '$start_time_1', end_time_1 = '$end_time_1', start_time_2 = '$start_time_2', end_time_2 = '$end_time_2', start_time_3 = '$start_time_3', end_time_3 = '$end_time_3', is_available = 1, created_at = '$curDate' WHERE booking_type_id = '$booking_type_id' AND day = '$day' AND booking_type = '$booking_type'";
+             $update_queries[] = "UPDATE " . TBL . "booking_availability SET start_time = '$start_time', end_time = '$end_time', start_time_2 = '$start_time_2', end_time_2 = '$end_time_2', is_available = 1, created_at = '$curDate' WHERE booking_type_id = '$booking_type_id' AND day = '$day' AND booking_type = '$booking_type'";
          } else {
              // If the day does not exist, insert a new record
-             $insert_queries[] = "INSERT INTO " . TBL . "booking_availability (booking_type_id, day, booking_type,start_time, end_time, start_time_1, end_time_1, start_time_2, end_time_2, start_time_3, end_time_3, is_available, created_at) VALUES ('$booking_type_id', '$day', '$booking_type', '$start_time', '$end_time', '$start_time_1', '$end_time_1', '$start_time_2', '$end_time_2', '$start_time_3', '$end_time_3', 1, '$curDate')";
+             $insert_queries[] = "INSERT INTO " . TBL . "booking_availability (booking_type_id, day, booking_type,start_time, end_time, start_time_2, end_time_2, is_available, created_at) VALUES ('$booking_type_id', '$day', '$booking_type', '$start_time', '$end_time', '$start_time_2', '$end_time_2', 1, '$curDate')";
          }
      } else {
          // If the checkbox is not checked, set is_available to 0
