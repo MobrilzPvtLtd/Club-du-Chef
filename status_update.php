@@ -135,14 +135,19 @@ if (isset($_GET["start_date"]) || isset($_GET["end_date"])) {
                     <form action="/status_update.php" method="POST">
                         <input type="hidden" value="<?php echo $booking_id ?>" name="booking_id">
                         <select name="status" class="form-select text-white 
-                            <?php echo ($bookingrow['status'] == 'disapproved') ? 'bg-danger' : 'bg-success'; ?>" onchange="this.form.submit()">
-                            <option value="disapproved" 
-                                <?php echo ($bookingrow['status'] == 'disapproved') ? 'selected' : ''; ?>>
-                                Disapproved
+                        <?php echo ($bookingrow['status'] == 'disapproved') ? 'bg-danger' : 
+                            ($bookingrow['status'] == 'pending' ? 'bg-warning' : 'bg-success'); ?>" onchange="this.form.submit()">
+                            <option value="pending" 
+                                <?php echo ($bookingrow['status'] == 'pending') ? 'selected' : ''; ?>>
+                                Pending
                             </option>
                             <option value="approved" 
                                 <?php echo ($bookingrow['status'] == 'approved') ? 'selected' : ''; ?>>
                                 Approved
+                            </option>
+                            <option value="disapproved" 
+                                <?php echo ($bookingrow['status'] == 'disapproved') ? 'selected' : ''; ?>>
+                                Disapproved
                             </option>
                         </select>
                     </form>

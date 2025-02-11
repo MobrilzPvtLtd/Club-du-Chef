@@ -146,15 +146,19 @@ function getAllbooking()
                                     <td>
                                         <form action="/status_update.php" method="POST">
                                             <input type="hidden" value="<?php echo $booking_id ?>" name="booking_id">
-                                            <select name="status" class="form-select text-white" style="background-color: <?php echo ($bookingrow['status'] == 'disapproved') ? '#dc3545' : '#28a745'; ?>"
+                                            <select name="status" class="form-select text-white" style="background-color: <?php echo ($bookingrow['status'] == 'disapproved') ? '#dc3545' : ($bookingrow['status'] == 'pending' ? '#FEBE10' : '#28a745'); ?>"
                                                 onchange="this.form.submit()">
-                                                <option value="disapproved" 
-                                                    <?php echo ($bookingrow['status'] == 'disapproved') ? 'selected' : ''; ?>>
-                                                    Disapproved
+                                                <option value="pending" 
+                                                    <?php echo ($bookingrow['status'] == 'pending') ? 'selected' : ''; ?>>
+                                                    Pending
                                                 </option>
                                                 <option value="approved" 
                                                     <?php echo ($bookingrow['status'] == 'approved') ? 'selected' : ''; ?>>
                                                     Approved
+                                                </option>
+                                                <option value="disapproved" 
+                                                    <?php echo ($bookingrow['status'] == 'disapproved') ? 'selected' : ''; ?>>
+                                                    Disapproved
                                                 </option>
                                             </select>
                                         </form>

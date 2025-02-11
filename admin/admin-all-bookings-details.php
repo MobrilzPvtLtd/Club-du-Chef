@@ -113,8 +113,9 @@ if ($booking_details_row['booking_type'] == 'event') {
                             <tr>
                                 <th scope="row">Status</th>
                                 <td>
-                                    <p style="color: white; border:none;" class="btn btn-sm <?php echo ($booking_details_row['status'] == 'disapproved') ? 'bg-danger' : 'bg-success'; ?>">
-                                        <?php echo ($booking_details_row['status'] == 'disapproved') ? 'Disapproved' : 'Approved'; ?>
+                                    <p style="color: white; border:none; background-color: 
+                                    <?php echo ($booking_details_row['status'] == 'disapproved') ? '#dc3545' :  ($booking_details_row['status'] == 'pending' ? '#ffc107' : '#28a745'); ?>" class="btn btn-sm">
+                                        <?php echo ($booking_details_row['status'] == 'disapproved') ? 'Disapproved' :  ($booking_details_row['status'] == 'pending' ? 'Pending' : 'Approved'); ?>
                                     </p>
                                 </td>
                             </tr>
