@@ -1069,6 +1069,7 @@ $Zitiziti['LISTING_DETAILS_WHO_ARE_LIKE_THIS'] = "Who all are like this";
 $Zitiziti['ENQUIRY_DETAILS'] = "Enquiry Details";
 
 $Zitiziti['BOOKING_ENQUIRY_DETAILS'] = "Booking Enquiry Details";
+$Zitiziti['BOOKING_ENQUIRY'] = "Booking Enquiry";
 
 $Zitiziti['PAGE_NAME'] = "Page name";
 

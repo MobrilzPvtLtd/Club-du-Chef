@@ -508,9 +508,7 @@ $all_texts_row = getAllTexts(); //Fetch All Text Data
                         <h4>Booking</h4>
                     </li>
                     <li class="ic-db">
-                        <a href="admin-all-bookings.php" class="<?php if ($current_page == 'admin-all-bookings.php') {
-                                                            echo 'mact';
-                                                        } ?>">Booking Enquiry</a>
+                        <a href="admin-all-bookings.php" class="<?php if ($current_page == 'admin-all-bookings.php') { echo 'mact'; } ?>">Booking Enquiry</a>
                     </li>
 
                     <?php

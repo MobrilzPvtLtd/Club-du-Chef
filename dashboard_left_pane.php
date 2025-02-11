@@ -121,7 +121,8 @@
                                 if ($current_page == "business-all-bookings.php") {
                                    echo "db-lact";
                                } ?>">
-                               <img src="<?php echo $slash; ?>images/icon/booking.png" alt=""/><?php echo $Zitiziti['BOOKING_ENQUIRY']; ?>
+                               <img src="<?php echo $slash; ?>images/icon/booking.png" alt=""/>
+                               <?php echo $Zitiziti['BOOKING_ENQUIRY']; ?>
                             </a>
                         </li>
 

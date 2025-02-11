@@ -1070,6 +1070,8 @@ $Zitiziti['ENQUIRY_DETAILS'] = "Enquiry Details";
 
 $Zitiziti['BOOKING_ENQUIRY_DETAILS'] = "Booking Enquiry Details";
 
+$Zitiziti['BOOKING_ENQUIRY'] = "Booking Enquiry";
+
 $Zitiziti['PAGE_NAME'] = "Page name";
 
 $Zitiziti['TRACKING_ID'] = "Tracking-id";
