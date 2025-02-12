@@ -63,6 +63,40 @@ $all_texts_row = getAllTexts(); //Fetch All Text Data
     <![endif]-->
 </head>
 
+<style>
+     p.notify001 {
+        color: #fff;
+        background-color: #e62525;
+        width: 1.5vw;
+        height: 3vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 41px;
+        font-size: 12px;
+        position: absolute;
+        left: 35px;
+        top: 0;
+    }
+
+    .ad-menu ul li button {
+        display: block;
+        color: #c3b6b6;
+        font-size: 12px;
+        padding: 10px 20px 10px 50px;
+        position: relative;
+        font-weight: 500;
+        border-left: 3px solid #3330;
+        background: none;
+        border: none;
+    }
+
+    .ad-menu ul li button:hover {
+        background:#5a342f;
+        color:#b98881;
+    }
+</style>
+
 <body>
     <!-- START -->
     <section>
@@ -508,7 +542,26 @@ $all_texts_row = getAllTexts(); //Fetch All Text Data
                         <h4>Booking</h4>
                     </li>
                     <li class="ic-db">
-                        <a href="admin-all-bookings.php" class="<?php if ($current_page == 'admin-all-bookings.php') { echo 'mact'; } ?>">Booking Enquiry</a>
+                        <?php
+                            $bookings = "SELECT seen_count FROM " . TBL . "bookings WHERE seen_count = '0'";
+                            $exist_day_result = mysqli_query($conn, $bookings);
+                        ?>
+                        <form action="../status_update.php" method="POST">
+                            <input type="hidden" value="1" name="seen_count">
+                            <input type="hidden" value="<?php echo $_SESSION['admin_id'] ?>" name="admin_id">
+                            <button type="submit" class="<?php if ($current_page == "admin-all-bookings.php") {
+                                echo "mact";
+                            } ?>">
+                                <?php
+                                    $booking_count = mysqli_num_rows($exist_day_result);
+                                    if ($booking_count > 0) {
+                                        echo '<p class="notify001">' . $booking_count . '</p>';
+                                    }
+                                ?>
+                                Booking Enquiry
+                            </button>
+                        </form>
+                        <!-- <a href="admin-all-bookings.php" class="<?php if ($current_page == 'admin-all-bookings.php') { echo 'mact'; } ?>">Booking Enquiry</a> -->
                     </li>
 
                     <?php

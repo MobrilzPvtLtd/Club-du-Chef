@@ -582,7 +582,31 @@ foreach (getAllCities() as $city) {
                                                                 </a>
                                                             </li>
                                                         <?php } ?>
-                                                        <li>
+                                                        <?php
+                                                            $bookings = "SELECT seen_count FROM " . TBL . "bookings WHERE seen_count = '0'";
+                                                            $exist_day_result = mysqli_query($conn, $bookings);
+                                                        ?>
+                                                        <form action="status_update.php" method="POST">
+                                                            <input type="hidden" value="1" name="seen_count">
+                                                            <button type="submit" class="<?php if ($current_page == "business-all-bookings.php") {
+                                                                echo "db-lact";
+                                                            } ?>" style="border: none;
+                                                                    background-color: #fff;
+                                                                    font-size: 12px;
+                                                                    font-weight: 500;
+                                                                    display: block;
+                                                                    padding: 7px 15px;">
+                                                                <?php
+                                                                    $booking_count = mysqli_num_rows($exist_day_result);
+                                                                    if ($booking_count > 0) {
+                                                                        echo '<p class="notify001">' . $booking_count . '</p>';
+                                                                    }
+                                                                ?>
+                                                                <img src="<?php echo $slash; ?>images/icon/booking.png" alt="" style="width: 23px;margin-right: 5px;" />
+                                                                <?php echo $Zitiziti['BOOKING_ENQUIRY']; ?>
+                                                            </button>
+                                                        </form>
+                                                        <!-- <li>
                                                             <a href="<?php echo $slash; ?>business-all-bookings.php" class="<?php 
                                                                 if ($current_page == "business-all-bookings.php") {
                                                                 echo "db-lact";
@@ -590,7 +614,7 @@ foreach (getAllCities() as $city) {
                                                             <img src="<?php echo $slash; ?>images/icon/booking.png" alt=""/>
                                                             <?php echo $Zitiziti['BOOKING_ENQUIRY']; ?>
                                                             </a>
-                                                        </li>
+                                                        </li> -->
                                                         <li>
                                                             <h4><?php echo $Zitiziti['DASH-LHS-PAY']; ?></h4>
                                                             <a href="<?php echo $slash; ?>db-payment" class="<?php if ($current_page == "db-payment.php") {

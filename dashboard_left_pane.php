@@ -1,10 +1,42 @@
-<?php
-/**
- * Created by Vignesh.
- * User: Vignesh
- */
-?>
+<style>
+    p.notify001 {
+        color: #fff;
+        background-color: #e62525;
+        width: 1.5vw;
+        height: 3vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 41px;
+        font-size: 12px;
+        position: absolute;
+        left: 35px;
+    }
 
+    .ud-lhs-s2 ul li button {
+        font-weight: 500;
+        color: #435769 !important;
+        font-size: 12px;
+        display: block;
+        padding: 7px 17px;
+        margin-right: 15px;
+        background-color: #d9e4ee;
+        border: none;
+    }
+
+    .ud-lhs-s2 ul li button img {
+        width: 28px;
+        margin-right: 15px;
+        padding: 3px;
+        border-radius: 2px;
+        margin-top: -2px;
+    }
+
+    .ud-lhs-s2 ul li button:hover {
+        background: #d0dbe5;
+        border-radius: 0 50px 50px 0
+    }
+</style>
 <!-- START -->
 <!--PRICING DETAILS-->
 <section class="<?php if ($footer_row['admin_language'] == 2) {
@@ -116,14 +148,35 @@
                             </li>
                         <?php } ?>
 
+                        <?php
+                        $bookings = "SELECT seen_count FROM " . TBL . "bookings WHERE seen_count = '0'";
+                        $exist_day_result = mysqli_query($conn, $bookings);
+                        
+                        ?>
                         <li>
-                            <a href="<?php echo $slash; ?>business-all-bookings.php" class="<?php 
+                            <form action="status_update.php" method="POST">
+                                <input type="hidden" value="1" name="seen_count">
+                                <button type="submit" class="<?php if ($current_page == "business-all-bookings.php") {
+                                    echo "db-lact";
+                                } ?>">
+                                    <?php
+                                        $booking_count = mysqli_num_rows($exist_day_result);
+                                        if ($booking_count > 0) {
+                                            echo '<p class="notify001">' . $booking_count . '</p>';
+                                        }
+                                    ?>
+                                    <img src="<?php echo $slash; ?>images/icon/booking.png" alt=""/>
+                                    <?php echo $Zitiziti['BOOKING_ENQUIRY']; ?>
+                                </button>
+                            </form>
+
+                            <!-- <a href="<?php echo $slash; ?>business-all-bookings.php" class="<?php 
                                 if ($current_page == "business-all-bookings.php") {
                                    echo "db-lact";
                                } ?>">
                                <img src="<?php echo $slash; ?>images/icon/booking.png" alt=""/>
                                <?php echo $Zitiziti['BOOKING_ENQUIRY']; ?>
-                            </a>
+                            </a> -->
                         </li>
 
                         <li>
