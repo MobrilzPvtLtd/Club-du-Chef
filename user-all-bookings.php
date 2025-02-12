@@ -71,7 +71,6 @@ function getAllbooking()
                         <th>Time</th>
                         <th>Booking Type</th>
                         <th>Booking Type Name</th>
-                        <th>Status</th>
                         <th>Action</th>
                     </tr>
                 </tr>
@@ -80,7 +79,8 @@ function getAllbooking()
                     <?php
                         $si = 1;
                         $session_user_id = $_SESSION['user_id'];
-
+                        // print_r($session_user_id);
+                        // die();
                         foreach (getAllbooking() as $bookingrow) {
                             $booking_id = $bookingrow['booking_id'];
                             $booking_type_id = $bookingrow['booking_type_id'];
@@ -108,7 +108,7 @@ function getAllbooking()
                                 $place_row = getIdPlaces($booking_type_id); 
                             }
                             
-                            if ($bookingrow['seller_id'] == $session_user_id) {
+                            if ($bookingrow['user_id'] == $session_user_id) {
                                 ?>
                                 <tr>
                                     <td><?php echo $si; ?></td>
@@ -150,26 +150,6 @@ function getAllbooking()
                                         <?php
                                     }
                                     ?>
-                                    <td>
-                                        <form action="/status_update.php" method="POST">
-                                            <input type="hidden" value="<?php echo $booking_id ?>" name="booking_id">
-                                            <select name="status" class="form-select text-white" style="background-color: <?php echo ($bookingrow['status'] == 'disapproved') ? '#dc3545' : ($bookingrow['status'] == 'pending' ? '#FEBE10' : '#28a745'); ?>"
-                                                onchange="this.form.submit()">
-                                                <option value="pending" 
-                                                    <?php echo ($bookingrow['status'] == 'pending') ? 'selected' : ''; ?>>
-                                                    Pending
-                                                </option>
-                                                <option value="approved" 
-                                                    <?php echo ($bookingrow['status'] == 'approved') ? 'selected' : ''; ?>>
-                                                    Approved
-                                                </option>
-                                                <option value="disapproved" 
-                                                    <?php echo ($bookingrow['status'] == 'disapproved') ? 'selected' : ''; ?>>
-                                                    Disapproved
-                                                </option>
-                                            </select>
-                                        </form>
-                                    </td>
 
                                     <td>
                                         <a class="db-list-edit" href="admin-all-bookings-details.php?row=<?php echo $booking_id; ?>">View</a>

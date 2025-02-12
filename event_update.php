@@ -190,7 +190,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     ,event_image='" . $event_image . "', event_status='" . $event_status . "', event_type='" . $event_type . "', isenquiry='" . $isenquiry . "'
     ,event_slug='" . $event_slug . "', is_booking ='" . $is_booking . "',booking_url ='" . $booking_url . "' where event_id='" . $event_id . "'";
 
-
         $event_res = mysqli_query($conn, $event_qry);
 
         $booking_type_id = $event_id;

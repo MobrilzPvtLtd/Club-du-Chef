@@ -9,7 +9,7 @@ $booking_type = isset($booking_type) ? $booking_type : null;
 
  foreach ($days as $day) {
      $is_available = isset($_POST[$day]) && !empty($_POST[$day]) ? 1 : 0;
-
+    
      if ($is_available == 1) {  
         $start_time = $_POST['start_time_' . $day];  
         $end_time = $_POST['end_time_' . $day];  

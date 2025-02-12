@@ -519,6 +519,7 @@ $Zitiziti['HOM-EXPLORE-PAGE-7'] = "Explore all Services";
 $Zitiziti['HOM-NO1-HOTEL-BOOKING'] = "#1 Hotel booking website";
 
 $Zitiziti['BOOKING_ENQUIRY'] = "Booking Enquiry";
+$Zitiziti['BOOKING'] = "Booking";
 
 $Zitiziti['HOM-HOTELS-RESORTS'] = "Hotel and Resort";
 
