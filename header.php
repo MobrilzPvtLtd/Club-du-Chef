@@ -672,6 +672,7 @@ foreach (getAllCities() as $city) {
                                                             } ?>"><img loading="lazy" src="<?php echo $slash; ?>/images/icon/profile.png" alt="" /><?php echo $Zitiziti['PROFI_JOB_SEEKER_TIT']; ?>
                                                             </a>
                                                         </li>
+                                                        <?php if ($user_details_row['user_type'] == "General") { ?>
                                                         <li>
                                                             <h4><?php echo $Zitiziti['BOOKING']; ?></h4>
                                                             <a href="<?php echo $slash; ?>user-all-bookings.php"
@@ -680,6 +681,7 @@ foreach (getAllCities() as $city) {
                                                                 } ?>"><img loading="lazy" src="<?php echo $slash; ?>images/icon/booking.png"
                                                             alt="" /><?php echo $Zitiziti['BOOKING_ENQUIRY']; ?></a>
                                                         </li>
+                                                        <?php } ?>
                                                     <?php } ?>
                                                     <li>
                                                         <h4><?php echo $Zitiziti['DASH-LHS-ACTI']; ?></h4>
