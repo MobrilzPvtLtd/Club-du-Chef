@@ -585,8 +585,9 @@ foreach (getAllCities() as $city) {
                                                         <?php
                                                             $bookings = "SELECT seen_count FROM " . TBL . "bookings WHERE seen_count = '0'";
                                                             $exist_day_result = mysqli_query($conn, $bookings);
+                                                            
                                                         ?>
-                                                        <form action="status_update.php" method="POST">
+                                                        <form action="../status_update.php" method="POST">
                                                             <input type="hidden" value="1" name="seen_count">
                                                             <button type="submit" class="<?php if ($current_page == "business-all-bookings.php") {
                                                                 echo "db-lact";
@@ -675,8 +676,7 @@ foreach (getAllCities() as $city) {
                                                         <?php if ($user_details_row['user_type'] == "General") { ?>
                                                         <li>
                                                             <h4><?php echo $Zitiziti['BOOKING']; ?></h4>
-                                                            <a href="<?php echo $slash; ?>user-all-bookings.php"
-                                                                class="<?php if ($current_page == "user-all-bookings.php") {
+                                                            <a href="<?php echo $slash; ?>user-all-bookings.php" class="<?php if ($current_page == "user-all-bookings.php") {
                                                                     echo "db-lact";
                                                                 } ?>"><img loading="lazy" src="<?php echo $slash; ?>images/icon/booking.png"
                                                             alt="" /><?php echo $Zitiziti['BOOKING_ENQUIRY']; ?></a>

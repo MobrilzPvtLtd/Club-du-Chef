@@ -53,7 +53,7 @@ if (file_exists('config/product_page_authentication.php')) {
                                     <th><?php echo $Zitiziti['S_NO']; ?></th>
                                     <th><?php echo $Zitiziti['PRODUCT_NAME']; ?></th>
                                     <th><?php echo $Zitiziti['VIEWS']; ?></th>
-                                    <th><?php echo $Zitiziti['STATUS']; ?></th>
+                                    <!-- <th><?php echo $Zitiziti['STATUS']; ?></th> -->
                                     <th><?php echo $Zitiziti['EDIT']; ?></th>
                                     <th><?php echo $Zitiziti['DELETE']; ?></th>
                                     <th><?php echo $Zitiziti['PREVIEW']; ?></th>
@@ -80,7 +80,7 @@ if (file_exists('config/product_page_authentication.php')) {
                                         <td>
                                             <span class="db-list-rat"><?php echo product_pageview_count($productrow['product_id']); ?></span>
                                         </td>
-                                        <td><span class="db-list-ststus"><?php echo $productrow['product_status']; ?></span>
+                                        <!-- <td><span class="db-list-ststus"><?php echo $productrow['product_status']; ?></span> -->
                                         </td>
                                         <td><a href="edit-product?code=<?php echo $productrow['product_code']; ?>"
                                             class="db-list-edit"><?php echo $Zitiziti['EDIT']; ?></a></td>

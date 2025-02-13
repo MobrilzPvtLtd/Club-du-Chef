@@ -87,16 +87,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $user_id = $user_details_row['user_id'];  //User Id
 
-            if ($user_details_row['user_status'] == 'Active') {
+            // if ($user_details_row['user_status'] == 'Active') {
                 // Event Status
                 $event_status = "Active";
-            } else {
+            // } else {
                 // Event Status
-                $event_status = "Inactive";
-            }
+                // $event_status = "Inactive";
+            // }
 
         } else {
-            $user_status = "Inactive";
+            $user_status = "Active";
 
             $qry = "INSERT INTO " . TBL . "users 
 					(first_name, last_name, email_id, mobile_number, register_mode, user_status, user_cdt) 

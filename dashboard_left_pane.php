@@ -154,7 +154,7 @@
 
                         ?>
                         <li>
-                            <form action="status_update.php" method="POST">
+                            <form action="../status_update.php" method="POST">
                                 <input type="hidden" value="1" name="seen_count">
                                 <button type="submit" class="<?php if ($current_page == "business-all-bookings.php") {
                                                                     echo "db-lact";

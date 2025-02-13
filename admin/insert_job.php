@@ -81,16 +81,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $user_id = $user_details_row['user_id'];  //User Id
 
-            if ($user_details_row['user_status'] == 'Active') {
+            // if ($user_details_row['user_status'] == 'Active') {
                 // Listing Status
                 $listing_status = "Active";
-            } else {
+            // } else {
                 // Listing Status
-                $listing_status = "Inactive";
-            }
+                // $listing_status = "Inactive";
+            // }
 
         } else {
-            $user_status = "Inactive";
+            $user_status = "Active";
 
             $qry = "INSERT INTO " . TBL . "users 
 					(first_name, last_name, email_id, mobile_number, register_mode, user_status, user_cdt) 
@@ -124,7 +124,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $user_id = $lastID; //User Id
 
             // product Status
-            $job_status = "Inactive";
+            $job_status = "Active";
 
         }
 //    Condition to get User Id Ends
