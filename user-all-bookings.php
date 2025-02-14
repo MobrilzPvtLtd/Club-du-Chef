@@ -59,7 +59,7 @@ function getAllbooking()
                     </div>
                 </div> -->
             </div>
-            <table class="responsive-table bordered">
+            <table class="responsive-table bordered" id="myTable">
                 <thead>
                 <tr>
                     <tr>

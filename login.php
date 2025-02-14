@@ -48,8 +48,7 @@ if (isset($_SESSION['user_name']) && !empty($_SESSION['user_name'])) {
                                        placeholder="<?php echo $Zitiziti['ENTER_PASSWORD_STAR']; ?>" required
                                        value="">
                             </div>
-                            <button type="submit" name="login_submit" value="submit"
-                                    class="btn btn-primary"><?php echo $Zitiziti['SIGN_IN']; ?>
+                            <button type="submit" name="login_submit" value="submit" class="btn btn-primary"><?php echo $Zitiziti['SIGN_IN']; ?>
                             </button>
                         </form>
 

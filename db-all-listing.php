@@ -27,7 +27,7 @@ if (file_exists('config/listing_page_authentication.php')) {
 				<?php include "page_level_message.php"; ?>
 				<a href="add-listing-start" class="db-tit-btn"><?php echo $Zitiziti['ADD_NEW_LISTING']; ?></a>
 				<div class="table-responsive">
-					<table class="table bordered">
+					<table class="table bordered" id="myTable">
 						<thead>
 							<tr>
 								<th><?php echo $Zitiziti['S_NO']; ?></th>

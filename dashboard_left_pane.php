@@ -157,8 +157,8 @@
                             <form action="../status_update.php" method="POST">
                                 <input type="hidden" value="1" name="seen_count">
                                 <button type="submit" class="<?php if ($current_page == "business-all-bookings.php") {
-                                                                    echo "db-lact";
-                                                                } ?>">
+                                        echo "db-lact";
+                                    } ?>">
                                     <?php
                                     $booking_count = mysqli_num_rows($exist_day_result);
                                     if ($booking_count > 0) {
@@ -171,9 +171,9 @@
                             </form>
 
                             <!-- <a href="<?php echo $slash; ?>business-all-bookings.php" class="<?php
-                                                                                                    if ($current_page == "business-all-bookings.php") {
-                                                                                                        echo "db-lact";
-                                                                                                    } ?>">
+                                if ($current_page == "business-all-bookings.php") {
+                                    echo "db-lact";
+                                } ?>">
                                <img src="<?php echo $slash; ?>images/icon/booking.png" alt=""/>
                                <?php echo $Zitiziti['BOOKING_ENQUIRY']; ?>
                             </a> -->
@@ -251,15 +251,16 @@
                                     alt="" /><?php echo $Zitiziti['PROFI_JOB_SEEKER_TIT']; ?></a>
                         </li>
                     <?php } ?>
-
-                    <li>
-                        <h4><?php echo $Zitiziti['BOOKING']; ?></h4>
-                        <a href="<?php echo $slash; ?>user-all-bookings.php"
-                            class="<?php if ($current_page == "user-all-bookings.php") {
-                                echo "db-lact";
-                            } ?>"><img loading="lazy" src="<?php echo $slash; ?>images/icon/booking.png"
-                        alt="" /><?php echo $Zitiziti['BOOKING_ENQUIRY']; ?></a>
-                    </li>
+                    <?php if ($user_details_row['user_type'] == "General") { ?>
+                        <li>
+                            <h4><?php echo $Zitiziti['BOOKING']; ?></h4>
+                            <a href="<?php echo $slash; ?>user-all-bookings.php"
+                                class="<?php if ($current_page == "user-all-bookings.php") {
+                                    echo "db-lact";
+                                } ?>"><img loading="lazy" src="<?php echo $slash; ?>images/icon/booking.png"
+                            alt="" /><?php echo $Zitiziti['BOOKING_ENQUIRY']; ?></a>
+                        </li>
+                    <?php } ?>
                     <li>
                         <h4><?php echo $Zitiziti['DASH-LHS-ACTI']; ?></h4>
                         <a href="<?php echo $slash; ?>jobs/db-user-applied-jobs"><img

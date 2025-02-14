@@ -46,20 +46,13 @@ function getAllbooking()
         <div class="ud-cen-s2">
             <h2><?php echo $Zitiziti['ENQUIRY_DETAILS']; ?></h2>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-12">
                     <div class="form-group">
                         <input type="text" name="datefilter" class="form-control" placeholder="Date filter">
                     </div>
                 </div>
-                <!-- <div class="col-md-3">
-                </div>
-                <div class="col-md-3 text-end">
-                    <div class="form-group">
-                        <input type="text" name="booking_search" class="form-control" placeholder="Search...">
-                    </div>
-                </div> -->
             </div>
-            <table class="responsive-table bordered">
+            <table class="responsive-table bordered" id="myTable">
                 <thead>
                 <tr>
                     <tr>

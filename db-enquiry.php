@@ -22,7 +22,7 @@ include "dashboard_left_pane.php";
         <div class="ud-cen-s2">
             <h2><?php echo $Zitiziti['ENQUIRY_DETAILS']; ?></h2>
             <?php include "page_level_message.php"; ?>
-            <table class="responsive-table bordered">
+            <table class="responsive-table bordered" id="myTable">
                 <thead>
                 <tr>
                     <th><?php echo $Zitiziti['S_NO']; ?></th>

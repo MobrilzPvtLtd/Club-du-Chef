@@ -9,15 +9,13 @@ if (file_exists('config/info.php')) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (isset($_POST['login_submit'])) {
-
-
+    // if (isset($_POST['login_submit'])) {
         $email_id = mysqli_real_escape_string($conn, $_POST["email_id"]);
         $password = mysqli_real_escape_string($conn, $_POST["password"]);
 
         $src = $_POST["src"];
 
-//        $login = mysqli_query($conn,"SELECT * FROM " . TBL . "users  WHERE email_id = '$email_id' AND user_status= 'Active'");
+        // $login = mysqli_query($conn,"SELECT * FROM " . TBL . "users  WHERE email_id = '$email_id' AND user_status= 'Active'");
         $login = mysqli_query($conn, "SELECT * FROM " . TBL . "users  WHERE email_id = '$email_id'");
 
         if (mysqli_num_rows($login) > 0) {
@@ -63,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header("location: login");
         }
 
-    }
+    // }
 } else {
 
     $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];

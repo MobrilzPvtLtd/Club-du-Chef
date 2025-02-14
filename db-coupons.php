@@ -100,7 +100,7 @@ if (file_exists('config/coupon_page_authentication.php')) {
                     </div>
                 </div>
                 <div id="couponacc" class="container tab-pane fade">
-                    <table class="responsive-table bordered">
+                    <table class="responsive-table bordered" id="myTable">
                         <thead>
                         <tr>
                             <th><?php echo $Zitiziti['S_NO']; ?></th>

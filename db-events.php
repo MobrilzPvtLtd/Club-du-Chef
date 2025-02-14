@@ -26,7 +26,7 @@ if (file_exists('config/event_page_authentication.php')) {
                     <h2><?php echo $Zitiziti['EVENT_DETAILS']; ?></h2>
                     <?php include "page_level_message.php"; ?>
                     <a href="create-new-event" class="db-tit-btn"><?php echo $Zitiziti['ADD_NEW_EVENT']; ?></a>
-                    <table class="responsive-table bordered">
+                    <table class="responsive-table bordered" id="myTable">
 							<thead>
 								<tr>
 									<th><?php echo $Zitiziti['S_NO']; ?></th>

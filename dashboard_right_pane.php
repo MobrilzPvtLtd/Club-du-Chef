@@ -320,6 +320,14 @@ include "footer.php";
 <script src="<?php echo $slash; ?>js/custom.js"></script>
 <script src="<?php echo $slash; ?>js/jquery.validate.min.js"></script>
 <script src="<?php echo $slash; ?>js/custom_validation.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready( function () {
+        $('#myTable').DataTable(); // Initialize DataTable
+    } );
+</script>
 <script>
     $('.listing_open_close_switch').click(function () {
         var idd = $(this).attr('id');  //-->this will alert id of checked checkbox.
