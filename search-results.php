@@ -97,7 +97,7 @@ else {
     echo "lg-arb";
 } ?> event-body ser-resu">
     <div class="container">
-        <div class="">
+        <div class="row">
             <ul id="intseres">
 
                 <?php

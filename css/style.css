@@ -27137,6 +27137,17 @@ a[data-command='p'] {
     }
 
 }
+@media screen and (min-width:481px) and (max-width:767px){
+
+    .ser-resu ul li {
+        padding-bottom: 20px;
+        float: left;
+        width: 50%;
+        border: 6px solid #3330
+    }
+}
+
+
 
 @media screen and (max-width:576px) {
     .hom-ads .container {
@@ -27520,7 +27531,12 @@ a[data-command='p'] {
     .fl-di{
         flex-direction: column;
     }
-
+    .ser-resu ul li {
+        padding-bottom: 20px;
+        float: left;
+        width: 50%;
+        border: 6px solid #3330
+    }
 
     .ban-short-links ul li {
         width: 33.333%
