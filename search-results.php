@@ -52,7 +52,7 @@ if($select_search != ''){
 <section class="<?php if ($footer_row['admin_language'] == 2) {
     echo "lg-arb";
 } ?> ser-head">
-    <div class="container d-flex justify-content-center">
+    <div class="container d-flex justify-content-center fl-di">
         <div class="blog-head-inn">
             <h1 class="ps-4"><?php echo $Zitiziti['SEARCH-RESULTS-SEARCH-RESULTS']; ?></h1>
         </div>
@@ -60,10 +60,12 @@ if($select_search != ''){
             <form>
                 <ul>
                     <li class="sr-sea">
-                        <input type="text" id="select-search" value="<?php echo $select_search; ?>" class="autocomplete" placeholder="<?php echo $Zitiziti['SEARCH-RESULTS-SEARCH-ANYTHING-PLACEHOLDER']; ?>">
+                        <input type="text" id="select-search" value="<?php echo $select_search; ?>" class="autocomplete"
+                            placeholder="<?php echo $Zitiziti['SEARCH-RESULTS-SEARCH-ANYTHING-PLACEHOLDER']; ?>">
                     </li>
                     <li class="sr-btn">
-                        <input type="submit" id="search_result_page_filter_submit" name="filter_submit"  value="<?php echo $Zitiziti['SEARCH']; ?>" class="filter_submit">
+                        <input type="submit" id="search_result_page_filter_submit" name="filter_submit"
+                            value="<?php echo $Zitiziti['SEARCH']; ?>" class="filter_submit">
                     </li>
                 </ul>
             </form>
@@ -76,14 +78,16 @@ if($select_search != ''){
 //No results found section
 if (mysqli_num_rows($listings_query) <= 0 && mysqli_num_rows($event_query) <= 0 && mysqli_num_rows($blog_query) <= 0 && mysqli_num_rows($product_query) <= 0 && mysqli_num_rows($job_query) <= 0 && mysqli_num_rows($expert_query) <= 0 || $select_search == NULL || empty($select_search)) {
     ?>
-    <div class="container text-center"><?php echo $Zitiziti['SEARCH-RESULTS-OOPS-NO-RESULTS-FOUND']; ?> <b><?php echo $select_search; ?></b>. <?php echo $Zitiziti['SEARCH-RESULTS-PLEASE-TRY-WITH-OTHER']; ?></div>
-    <?php
+<div class="container text-center"><?php echo $Zitiziti['SEARCH-RESULTS-OOPS-NO-RESULTS-FOUND']; ?>
+    <b><?php echo $select_search; ?></b>. <?php echo $Zitiziti['SEARCH-RESULTS-PLEASE-TRY-WITH-OTHER']; ?></div>
+<?php
 }
 else {
     $count = mysqli_num_rows($listings_query) + mysqli_num_rows($event_query) +  mysqli_num_rows($blog_query) + mysqli_num_rows($product_query) + mysqli_num_rows($job_query)+ mysqli_num_rows($expert_query);
     ?>
-    <div class="container ser-re-hu"><?php echo $Zitiziti['SEARCH-RESULTS-HURRAY']; ?> <?php echo $count; ?> <?php echo $Zitiziti['SEARCH-RESULTS-RESULTS-FOUND-FOR']; ?> <b><?php echo $select_search; ?></b>.</div>
-    <?php
+<div class="container ser-re-hu"><?php echo $Zitiziti['SEARCH-RESULTS-HURRAY']; ?> <?php echo $count; ?>
+    <?php echo $Zitiziti['SEARCH-RESULTS-RESULTS-FOUND-FOR']; ?> <b><?php echo $select_search; ?></b>.</div>
+<?php
 }
 ?>
 
@@ -104,21 +108,21 @@ else {
                         $decoded_city_slugs = (array)json_decode($listings_row['city_slug'], true);
                         if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                 ?>
-                        <li>
-                            <div class="smbox">
-                                <div class="ser0"><img
-                                        src="<?php if ($listings_row['profile_image'] != NULL || !empty($listings_row['profile_image'])) {
+                <li>
+                    <div class="smbox">
+                        <div class="ser0"><img src="<?php if ($listings_row['profile_image'] != NULL || !empty($listings_row['profile_image'])) {
                                             echo "images/listings/" . $listings_row['profile_image'];
                                         } else {
                                             echo "images/listings/" . $footer_row['listing_default_image'];
                                         } ?>">
-                                </div>
-                                <div class="ser1">
-                                    <a href="<?php echo $LISTING_URL.urlModifier($listings_row['listing_slug']); ?>"><?php echo $listings_row['listing_name']; ?></a>
-                                </div>
-                                <span class="ser2"><?php echo $Zitiziti['LISTING']; ?></span>
-                                <div class="ser3">
-                                    <?php
+                        </div>
+                        <div class="ser1">
+                            <a
+                                href="<?php echo $LISTING_URL.urlModifier($listings_row['listing_slug']); ?>"><?php echo $listings_row['listing_name']; ?></a>
+                        </div>
+                        <span class="ser2"><?php echo $Zitiziti['LISTING']; ?></span>
+                        <div class="ser3">
+                            <?php
                                     if (strlen($listings_row['listing_description']) >= 50) {
                                         $pos = strpos($listings_row['listing_description'], ' ', 50);
                                         echo substr(stripslashes($listings_row['listing_description']), 0, $pos);
@@ -128,12 +132,13 @@ else {
 
                                     ?>
 
-                                </div>
-                            <span class="ser4">
-                                <a href="<?php echo $LISTING_URL.urlModifier($listings_row['listing_slug']); ?>"><?php echo $LISTING_URL.urlModifier($listings_row['listing_slug']); ?></a>
-                            </span>
-                            </div>
-                        </li>
+                        </div>
+                        <span class="ser4">
+                            <a
+                                href="<?php echo $LISTING_URL.urlModifier($listings_row['listing_slug']); ?>"><?php echo $LISTING_URL.urlModifier($listings_row['listing_slug']); ?></a>
+                        </span>
+                    </div>
+                </li>
                 <?php
                         }
                     }
@@ -149,18 +154,19 @@ else {
                         $decoded_city_slugs = (array)json_decode($events_row['city_slug'], true);
                         if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                     ?>
-                        <li>
-                            <div class="smbox">
-                                <div class="ser0">
-                                    <img loading="lazy" src="images/events/<?php echo $events_row['event_image']; ?>" alt="">
-                                </div>
-                                <div class="ser1">
-                                    <a href="<?php echo $EVENT_URL.urlModifier($events_row['event_slug']); ?>"><?php echo $events_row['event_name']; ?></a>
-                                </div>
-                                <span class="ser2 ser-ev"><?php echo $Zitiziti['EVENT']; ?></span>
-                                <div class="ser3">
+                <li>
+                    <div class="smbox">
+                        <div class="ser0">
+                            <img loading="lazy" src="images/events/<?php echo $events_row['event_image']; ?>" alt="">
+                        </div>
+                        <div class="ser1">
+                            <a
+                                href="<?php echo $EVENT_URL.urlModifier($events_row['event_slug']); ?>"><?php echo $events_row['event_name']; ?></a>
+                        </div>
+                        <span class="ser2 ser-ev"><?php echo $Zitiziti['EVENT']; ?></span>
+                        <div class="ser3">
 
-                                    <?php
+                            <?php
                                     if (strlen($events_row['event_description']) >= 50) {
                                         $pos = strpos($events_row['event_description'], ' ', 50);
                                         echo substr(stripslashes($events_row['event_description']), 0, $pos);
@@ -168,12 +174,13 @@ else {
                                         echo stripslashes($events_row['event_description']);
                                     }
                                     ?>
-                                </div>
-                            <span class="ser4">
-                                <a href="<?php echo $EVENT_URL.urlModifier($events_row['event_slug']); ?>"><?php echo $EVENT_URL.urlModifier($events_row['event_slug']); ?></a>
-                            </span>
-                            </div>
-                        </li>
+                        </div>
+                        <span class="ser4">
+                            <a
+                                href="<?php echo $EVENT_URL.urlModifier($events_row['event_slug']); ?>"><?php echo $EVENT_URL.urlModifier($events_row['event_slug']); ?></a>
+                        </span>
+                    </div>
+                </li>
                 <?php
                         }
                     }
@@ -187,17 +194,17 @@ else {
                         $decoded_city_slugs = (array)json_decode($blog_row['city_slug'], true);
                         if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                         ?>
-                        <li>
-                            <div class="smbox">
-                                <div class="ser0">
-                                    <img loading="lazy" src="images/blogs/<?php echo $blog_row['blog_image']; ?>" alt="">
-                                </div>
-                                <div class="ser1"><a
-                                        href="<?php echo $BLOG_URL.urlModifier($blog_row['blog_slug']); ?>"><?php echo $blog_row['blog_name']; ?></a>
-                                </div>
-                                <span class="ser2 ser-bl"><?php echo $Zitiziti['BLOG']; ?></span>
-                                <div class="ser3">
-                                    <?php
+                <li>
+                    <div class="smbox">
+                        <div class="ser0">
+                            <img loading="lazy" src="images/blogs/<?php echo $blog_row['blog_image']; ?>" alt="">
+                        </div>
+                        <div class="ser1"><a
+                                href="<?php echo $BLOG_URL.urlModifier($blog_row['blog_slug']); ?>"><?php echo $blog_row['blog_name']; ?></a>
+                        </div>
+                        <span class="ser2 ser-bl"><?php echo $Zitiziti['BLOG']; ?></span>
+                        <div class="ser3">
+                            <?php
                                     if (strlen($blog_row['blog_description']) >= 50) {
                                         $pos = strpos($blog_row['blog_description'], ' ', 50);
                                         echo substr(stripslashes($blog_row['blog_description']), 0, $pos);
@@ -206,13 +213,14 @@ else {
                                     }
 
                                     ?>
-                                </div>
-                            <span class="ser4">
-                                <a href="<?php echo $BLOG_URL.urlModifier($blog_row['blog_slug']); ?>"><?php echo $BLOG_URL.urlModifier($blog_row['blog_slug']); ?></a>
-                            </span>
-                            </div>
-                        </li>
-                        <?php
+                        </div>
+                        <span class="ser4">
+                            <a
+                                href="<?php echo $BLOG_URL.urlModifier($blog_row['blog_slug']); ?>"><?php echo $BLOG_URL.urlModifier($blog_row['blog_slug']); ?></a>
+                        </span>
+                    </div>
+                </li>
+                <?php
                         }
                     }
                 }
@@ -225,17 +233,19 @@ else {
                         $decoded_city_slugs = (array)json_decode($product_row['city_slug'], true);
                         if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                         ?>
-                        <li>
-                            <div class="smbox">
-                                <div class="ser0">
-                                    <img loading="lazy" src="images/products/<?php echo array_shift(explode(',', $product_row['gallery_image'])); ?>" alt="">
-                                </div>
-                                <div class="ser1"><a
-                                        href="<?php echo $PRODUCT_URL.urlModifier($product_row['product_slug']); ?>"><?php echo $product_row['product_name']; ?></a>
-                                </div>
-                                <span class="ser2 ser-bl"><?php echo $Zitiziti['PRODUCT']; ?></span>
-                                <div class="ser3">
-                                    <?php
+                <li>
+                    <div class="smbox">
+                        <div class="ser0">
+                            <img loading="lazy"
+                                src="images/products/<?php echo array_shift(explode(',', $product_row['gallery_image'])); ?>"
+                                alt="">
+                        </div>
+                        <div class="ser1"><a
+                                href="<?php echo $PRODUCT_URL.urlModifier($product_row['product_slug']); ?>"><?php echo $product_row['product_name']; ?></a>
+                        </div>
+                        <span class="ser2 ser-bl"><?php echo $Zitiziti['PRODUCT']; ?></span>
+                        <div class="ser3">
+                            <?php
                                     if (strlen($product_row['product_description']) >= 50) {
                                         $pos = strpos($product_row['product_description'], ' ', 50);
                                         echo substr(stripslashes($product_row['product_description']), 0, $pos);
@@ -244,13 +254,14 @@ else {
                                     }
 
                                     ?>
-                                </div>
-                            <span class="ser4">
-                                <a href="<?php echo $PRODUCT_URL.urlModifier($product_row['product_slug']); ?>"><?php echo $PRODUCT_URL.urlModifier($product_row['product_slug']); ?></a>
-                            </span>
-                            </div>
-                        </li>
-                        <?php
+                        </div>
+                        <span class="ser4">
+                            <a
+                                href="<?php echo $PRODUCT_URL.urlModifier($product_row['product_slug']); ?>"><?php echo $PRODUCT_URL.urlModifier($product_row['product_slug']); ?></a>
+                        </span>
+                    </div>
+                </li>
+                <?php
                         }
                     }
                 }
@@ -263,17 +274,17 @@ else {
                         $decoded_city_slugs = (array)json_decode($job_row['city_slug'], true);
                         if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                         ?>
-                        <li>
-                            <div class="smbox">
-                                <div class="ser0">
-                                    <img loading="lazy" src="jobs/images/jobs/<?php echo $job_row['company_logo']; ?>" alt="">
-                                </div>
-                                <div class="ser1"><a
-                                        href="<?php echo $JOB_URL.urlModifier($job_row['job_slug']); ?>"><?php echo $job_row['job_title']; ?></a>
-                                </div>
-                                <span class="ser2 ser-bl"><?php echo $Zitiziti['JOB']; ?></span>
-                                <div class="ser3">
-                                    <?php
+                <li>
+                    <div class="smbox">
+                        <div class="ser0">
+                            <img loading="lazy" src="jobs/images/jobs/<?php echo $job_row['company_logo']; ?>" alt="">
+                        </div>
+                        <div class="ser1"><a
+                                href="<?php echo $JOB_URL.urlModifier($job_row['job_slug']); ?>"><?php echo $job_row['job_title']; ?></a>
+                        </div>
+                        <span class="ser2 ser-bl"><?php echo $Zitiziti['JOB']; ?></span>
+                        <div class="ser3">
+                            <?php
                                     if (strlen($job_row['job_description']) >= 50) {
                                         $pos = strpos($job_row['job_description'], ' ', 50);
                                         echo substr(stripslashes($job_row['job_description']), 0, $pos);
@@ -282,13 +293,14 @@ else {
                                     }
 
                                     ?>
-                                </div>
-                            <span class="ser4">
-                                <a href="<?php echo $JOB_URL.urlModifier($job_row['job_slug']); ?>"><?php echo $JOB_URL.urlModifier($job_row['job_slug']); ?></a>
-                            </span>
-                            </div>
-                        </li>
-                        <?php
+                        </div>
+                        <span class="ser4">
+                            <a
+                                href="<?php echo $JOB_URL.urlModifier($job_row['job_slug']); ?>"><?php echo $JOB_URL.urlModifier($job_row['job_slug']); ?></a>
+                        </span>
+                    </div>
+                </li>
+                <?php
                         }
                     }
                 }
@@ -301,21 +313,24 @@ else {
                         $decoded_city_slugs = (array)json_decode($expert_row['city_slug'], true);
                         if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                         ?>
-                        <li>
-                            <div class="smbox">
-                                <div class="ser0">
-                                    <img loading="lazy" src="service-experts/images/services/<?php echo $expert_row['profile_image']; ?>" alt="">
-                                </div>
-                                <div class="ser1"><a
-                                        href="<?php echo $SERVICE_EXPERT_URL . urlModifier($expert_row['expert_slug']); ?>"><?php echo $expert_row['profile_name']; ?></a>
-                                </div>
-                                <span class="ser2 ser-bl"><?php echo $Zitiziti['SERVICE-EXPERTS']; ?></span>
-                            <span class="ser4">
-                                <a href="<?php echo $SERVICE_EXPERT_URL . urlModifier($expert_row['expert_slug']); ?>"><?php echo $SERVICE_EXPERT_URL . urlModifier($expert_row['expert_slug']); ?></a>
-                            </span>
-                            </div>
-                        </li>
-                        <?php
+                <li>
+                    <div class="smbox">
+                        <div class="ser0">
+                            <img loading="lazy"
+                                src="service-experts/images/services/<?php echo $expert_row['profile_image']; ?>"
+                                alt="">
+                        </div>
+                        <div class="ser1"><a
+                                href="<?php echo $SERVICE_EXPERT_URL . urlModifier($expert_row['expert_slug']); ?>"><?php echo $expert_row['profile_name']; ?></a>
+                        </div>
+                        <span class="ser2 ser-bl"><?php echo $Zitiziti['SERVICE-EXPERTS']; ?></span>
+                        <span class="ser4">
+                            <a
+                                href="<?php echo $SERVICE_EXPERT_URL . urlModifier($expert_row['expert_slug']); ?>"><?php echo $SERVICE_EXPERT_URL . urlModifier($expert_row['expert_slug']); ?></a>
+                        </span>
+                    </div>
+                </li>
+                <?php
                         }
                     }
                 }
@@ -326,6 +341,11 @@ else {
         </div>
 
     </div>
+
+    </div>
+
+    </div>
+
 </section>
 <!--END-->
 
@@ -341,21 +361,24 @@ else {
                         <h4><?php echo $Zitiziti['LEAD-GET-QUOTE']; ?></h4>
                         <form>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>" required>
+                                <input type="text" class="form-control"
+                                    placeholder="<?php echo $Zitiziti['LEAD-NAME-PLACEHOLDER']; ?>" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>"
-                                       pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                                       title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
+                                <input type="email" class="form-control"
+                                    placeholder="<?php echo $Zitiziti['ENTER_EMAIL_STAR']; ?>"
+                                    pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
+                                    title="<?php echo $Zitiziti['LEAD-INVALID-EMAIL-TITLE']; ?>" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
-                                       pattern="[7-9]{1}[0-9]{9}"
-                                       title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>" required>
+                                <input type="text" class="form-control"
+                                    placeholder="<?php echo $Zitiziti['LEAD-MOBILE-PLACEHOLDER']; ?>"
+                                    pattern="[7-9]{1}[0-9]{9}"
+                                    title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>" required>
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control" rows="3"
-                                          placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
+                                    placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary"><?php echo $Zitiziti['SUBMIT']; ?></button>
                         </form>
@@ -376,8 +399,12 @@ include "footer.php";
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery-ui.js"></script>
-<script type="text/javascript">var webpage_full_link ='<?php echo $webpage_full_link;?>';</script>
-<script type="text/javascript">var login_url ='<?php echo $LOGIN_URL;?>';</script>
+<script type="text/javascript">
+var webpage_full_link = '<?php echo $webpage_full_link;?>';
+</script>
+<script type="text/javascript">
+var login_url = '<?php echo $LOGIN_URL;?>';
+</script>
 <script src="js/custom.js"></script>
 </body>
 
