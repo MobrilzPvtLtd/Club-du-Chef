@@ -82,21 +82,17 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <select onChange="getProductSubCategory(this.value);"
-                                                                    name="category_id"
-                                                                    id="category_id" class="chosen-select form-control">
-                                                                <option value="">Select Category</option>
-                                                                <?php
-                                                                foreach (getAllProductCategories() as $categories_row) {
-                                                                    ?>
-                                                                    <option <?php if ($_SESSION['category_id'] == $categories_row['category_id']) {
-                                                                        echo "selected";
-                                                                    } ?>
-                                                                        value="<?php echo $categories_row['category_id']; ?>"><?php echo $categories_row['category_name']; ?></option>
-                                                                    <?php
-                                                                }
-                                                                ?>
-                                                            </select>
+                                                        <select onChange="getSubCategory(this.value);" name="category_id" id="category_id" class="chosen-select">
+                                                            <option value="">Select Category</option>
+                                                            <?php
+                                                            foreach (getAllCategories() as $categories_row) {
+                                                            ?>
+                                                                <option
+                                                                    value="<?php echo $categories_row['category_id']; ?>"><?php echo $categories_row['category_name']; ?></option>
+                                                            <?php
+                                                            }
+                                                            ?>
+                                                        </select>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -297,12 +293,12 @@ include "header.php";
 <script src="../js/select-opt.js"></script>
 <script src="js/admin-custom.js"></script>
 <script>
-    function getProductSubCategory(val) {
+    function getSubCategory(val) {
         $.ajax({
             type: "POST",
-            url: "../product_sub_category_process.php",
+            url: "../sub_category_process.php",
             data: 'category_id=' + val,
-            success: function (data) {
+            success: function(data) {
                 $("#sub_category_id").html(data);
                 $('#sub_category_id').trigger("chosen:updated");
             }

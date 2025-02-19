@@ -85,21 +85,19 @@ include "header.php";
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <select name="category_id"
-                                                                id="category_id" class="chosen-select form-control">
+                                                        <select name="category_id" id="category_id" class="chosen-select">
                                                             <option value="">Select Category</option>
                                                             <?php
-                                                            foreach (getAllBlogCategories() as $categories_row) {
-                                                                ?>
+                                                            foreach (getAllCategories() as $categories_row) {
+                                                            ?>
                                                                 <option <?php if ($blogs_a_row['category_id'] == $categories_row['category_id']) {
-                                                                    echo "selected";
-                                                                } ?>
+                                                                            echo "selected";
+                                                                        } ?>
                                                                     value="<?php echo $categories_row['category_id']; ?>"><?php echo $categories_row['category_name']; ?></option>
-                                                                <?php
+                                                            <?php
                                                             }
                                                             ?>
                                                         </select>
-
                                                     </div>
                                                 </div>
                                             </div>

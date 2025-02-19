@@ -185,7 +185,7 @@ include "header.php";
                                                         </div>
                                                     </div>
                                                     <!--FILED END-->
-                                                    <div class="row">
+                                                    <!-- <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="form-group">
                                                                 <label class="tit">Location</label>
@@ -205,7 +205,7 @@ include "header.php";
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div> -->
                                                     <!--FILED END-->
                                                     <div class="row">
                                                         <div class="col-md-12">
@@ -221,19 +221,16 @@ include "header.php";
                                                         <div class="col-md-12">
                                                             <div class="form-group">
                                                                 <label class="tit">Job category</label>
-                                                                <select onChange="getJobSubCategory(this.value);"
-                                                                        class="form-control"
-                                                                        name="category_id">
+                                                                <select onChange="getSubCategory(this.value);" name="category_id" id="category_id" class="chosen-select">
                                                                     <option value="">Select Category</option>
                                                                     <?php
-                                                                    foreach (getAllJobCategories() as $categories_row) {
-                                                                        ?>
-                                                                        <option
-                                                                            <?php if ($job_a_row['category_id'] == $categories_row['category_id']) {
-                                                                                echo "selected";
-                                                                            } ?>
+                                                                    foreach (getAllCategories() as $categories_row) {
+                                                                    ?>
+                                                                        <option <?php if ($job_a_row['category_id'] == $categories_row['category_id']) {
+                                                                                    echo "selected";
+                                                                                } ?>
                                                                             value="<?php echo $categories_row['category_id']; ?>"><?php echo $categories_row['category_name']; ?></option>
-                                                                        <?php
+                                                                    <?php
                                                                     }
                                                                     ?>
                                                                 </select>
@@ -245,23 +242,18 @@ include "header.php";
                                                         <div class="col-md-12">
                                                             <div class="form-group">
                                                                 <label class="tit">Job sub-category</label>
-                                                                <select class="form-control" id="sub_category_id"
-                                                                        name="sub_category_id">
+                                                                <select name="sub_category_id" id="sub_category_id" class="chosen-select form-control">
                                                                     <?php
-                                                                    foreach (getCategoryJobSubCategories($job_a_row['category_id']) as $sub_categories_row) {
-                                                                        if ($job_a_row['sub_category_id'] != 0) {
-                                                                            ?>
-                                                                            <option <?php
-                                                                            if ($sub_categories_row['sub_category_id'] == $job_a_row['sub_category_id']) {
-                                                                                echo "selected";
-                                                                            } ?>
-                                                                                value="<?php echo $sub_categories_row['sub_category_id']; ?>"><?php echo $sub_categories_row['sub_category_name']; ?></option>
-                                                                            <?php
-                                                                        } else {
-                                                                            ?>
-                                                                            <option value="">Job sub-category</option>
-                                                                            <?php
-                                                                        }
+                                                                    foreach (getCategorySubCategories($job_a_row['category_id']) as $sub_categories_row) {
+                                                                    ?>
+                                                                        <option <?php $catArray = explode(',', $job_a_row['sub_category_id']);
+                                                                                foreach ($catArray as $cat_Array) {
+                                                                                    if ($sub_categories_row['sub_category_id'] == $cat_Array) {
+                                                                                        echo "selected";
+                                                                                    }
+                                                                                } ?>
+                                                                            value="<?php echo $sub_categories_row['sub_category_id']; ?>"><?php echo $sub_categories_row['sub_category_name']; ?></option>
+                                                                    <?php
                                                                     }
                                                                     ?>
                                                                 </select>
@@ -453,12 +445,12 @@ include "header.php";
     CKEDITOR.replace('job_description');
 </script>
 <script>
-    function getJobSubCategory(val) {
+    function getSubCategory(val) {
         $.ajax({
             type: "POST",
-            url: "../job_sub_category_process.php",
+            url: "../sub_category_process.php",
             data: 'category_id=' + val,
-            success: function (data) {
+            success: function(data) {
                 $("#sub_category_id").html(data);
                 $('#sub_category_id').trigger("chosen:updated");
             }

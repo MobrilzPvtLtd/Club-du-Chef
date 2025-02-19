@@ -170,7 +170,7 @@ a:hover{-webkit-transition:all .5s ease;-moz-transition:all .5s ease;-o-transiti
 .login-main{-webkit-box-shadow:0 5px 5px 0 rgba(154,160,185,.05),0 5px 30px 0 rgba(166,173,201,.22);box-shadow:0 5px 5px 0 rgba(154,160,185,.05),0 5px 30px 0 rgba(166,173,201,.22);background:#fff;width:460px;margin:0 auto;display:table;border-radius:10px}
 .log h4{text-align:center;font-size: 18px;font-weight:600;margin-bottom:25px;}
 .log p{font-size:14px;text-align:center;color:#81898d}
-.log div input,.log div select{height: 42px;border: 1px solid #dce0ea;font-size:12px;font-weight:500;}
+.log div input,.log div select{border: 1px solid #dce0ea;font-size:12px;font-weight:500;}
 .log div button.btn{width:100%;background:#12b347;background: #4c7af1;background-image: linear-gradient(
 300deg,#4c21f8,#cb20e0 95%);border:0;font-weight:600;font-size:17px;padding:10px 0;border-radius: 5px;}
 .log div a.btn{width:100%;background:#ffa778;border:0;font-weight:600;font-size:17px;padding:10px 0;border-radius:50px}

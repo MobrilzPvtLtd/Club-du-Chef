@@ -135,7 +135,7 @@ include "header.php";
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="row">
+                                                    <!-- <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="form-group">
                                                                 <label class="tit">Location</label>
@@ -152,7 +152,7 @@ include "header.php";
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div> -->
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="form-group">
@@ -166,15 +166,14 @@ include "header.php";
                                                         <div class="col-md-12">
                                                             <div class="form-group">
                                                                 <label class="tit">Job category</label>
-                                                                <select onChange="getJobSubCategory(this.value);"
-                                                                        class="form-control chosen-select" name="category_id">
+                                                                <select onChange="getSubCategory(this.value);" name="category_id" id="category_id" class="form-control chosen-select">
                                                                     <option value="">Select Category</option>
                                                                     <?php
-                                                                    foreach (getAllJobCategories() as $categories_row) {
-                                                                        ?>
+                                                                    foreach (getAllCategories() as $categories_row) {
+                                                                    ?>
                                                                         <option
                                                                             value="<?php echo $categories_row['category_id']; ?>"><?php echo $categories_row['category_name']; ?></option>
-                                                                        <?php
+                                                                    <?php
                                                                     }
                                                                     ?>
                                                                 </select>
@@ -338,12 +337,12 @@ include "header.php";
     CKEDITOR.replace('job_description');
 </script>
 <script>
-    function getJobSubCategory(val) {
+    function getSubCategory(val) {
         $.ajax({
             type: "POST",
-            url: "../job_sub_category_process.php",
+            url: "../sub_category_process.php",
             data: 'category_id=' + val,
-            success: function (data) {
+            success: function(data) {
                 $("#sub_category_id").html(data);
                 $('#sub_category_id').trigger("chosen:updated");
             }

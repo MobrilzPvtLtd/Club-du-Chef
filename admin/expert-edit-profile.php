@@ -48,281 +48,292 @@ include "header.php";
                            name="id_proof_old"
                            class="validate">
                     <div class="ud-cen-s2 job-form">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label class="tit">Choose user *</label>
-                                <select class="chosen-select" name="user_id">
-                                    <?php
-                                    foreach (getAllUser() as $ad_users_row) {
-                                        ?>
-                                        <option <?php if ($service_expert_row['user_id'] == $ad_users_row['user_id']) {
-                                            echo "selected";
-                                        } ?>
-                                            value="<?php echo $ad_users_row['user_id']; ?>"><?php echo $ad_users_row['first_name']; ?></option>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="tit">Choose user *</label>
+                                    <select class="chosen-select" name="user_id">
                                         <?php
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <!-- <div class="form-group">
-                                <label class="tit">City</label>
-                                <select onChange="getExpertArea(this.value);" class="chosen-select" name="city_id">
-                                    <option value=""><?php echo "Select City"; ?></option>
-                                    <?php
-                                    foreach (getAllExpertCities() as $city_row) {
-                                        ?>
-                                        <option <?php $catArray = explode(',', $service_expert_row['city_id']);
-                                        foreach ($catArray as $cat_Array) {
-                                            if ($city_row['country_id'] == $cat_Array) {
+                                        foreach (getAllUser() as $ad_users_row) {
+                                            ?>
+                                            <option <?php if ($service_expert_row['user_id'] == $ad_users_row['user_id']) {
                                                 echo "selected";
-                                            }
-                                        } ?>
-                                            value="<?php echo $city_row['country_id']; ?>"><?php echo $city_row['country_name']; ?></option>
-                                        <?php
-                                    }
-                                    ?>
-                                </select>
-                            </div> -->
-                            <div class="form-group">
-                                <label class="tit">Service start time</label>
-                                <select class="chosen-select" name="available_time_start">
-                                    <?php
-                                    $time = '4:00'; // start
-                                    for ($i = 0; $i <= 19; $i++) {
-                                        $prev = date('g:i a', strtotime($time)); // format the start time
-                                        $next = strtotime('+60mins', strtotime($time)); // add 60 mins
-                                        $time = date('g:i A', $next); // format the next time
-                                        ?>
-                                        <option <?php if ($service_expert_row['available_time_start'] == $time) {
-                                            echo "selected";
-                                        } ?> value="<?php echo $time; ?>"><?php echo $time; ?></option>
-                                        <?php
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="tit">Service close time</label>
-                                <select class="chosen-select" name="available_time_end">
-                                    <?php
-                                    $time = '5:00'; // start
-                                    for ($i = 0; $i <= 18; $i++) {
-                                        $prev = date('g:i a', strtotime($time)); // format the start time
-                                        $next = strtotime('+60mins', strtotime($time)); // add 60 mins
-                                        $time = date('g:i A', $next); // format the next time
-                                        ?>
-                                        <option <?php if ($service_expert_row['available_time_end'] == $time) {
-                                            echo "selected";
-                                        } ?> value="<?php echo $time; ?>"><?php echo $time; ?></option>
-                                        <?php
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="tit">Profile image</label>
-                                <input type="file" name="profile_image" class="form-control">
-                            </div>
-
-                            <?php
-                            include "../booking_system_edit.php";
-                            ?>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="tit">Work profession/Category</label>
-                                <select onChange="getSubCategory(this.value);" name="category_id" id="category_id" class="chosen-select">
-                                    <option value="">Select Category</option>
-                                    <?php
-                                    foreach (getAllCategories() as $categories_row) {
-                                    ?>
-                                        <option <?php if ($service_expert_row['category_id'] == $categories_row['category_id']) {
-                                                    echo "selected";
-                                                } ?>
-                                            value="<?php echo $categories_row['category_id']; ?>"><?php echo $categories_row['category_name']; ?></option>
-                                    <?php
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="tit">Year of experience</label>
-                                <input type="text" onkeypress="return isNumber(event)" name="years_of_experience"
-                                    value="<?php echo $service_expert_row['years_of_experience']; ?>"
-                                    class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="tit">Base fare</label>
-                                <input type="text" name="base_fare" onkeypress="return isNumber(event)"
-                                    value="<?php echo $service_expert_row['base_fare']; ?>" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="tit">Profile cover image</label>
-                                <input type="file" name="cover_image" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label class="tit">Services can do</label>
-                                <select class="chosen-select" required="required" multiple="multiple" id="sub_category_id"
-                                        name="sub_category_id[]">
-                                    <?php
-                                    foreach (getAllExpertSubCategories() as $sub_cat_row) {
-                                        ?>
-                                        <option <?php $catArray = explode(',', $service_expert_row['sub_category_id']);
-                                        foreach ($catArray as $cat_Array) {
-                                            if ($sub_cat_row['sub_category_id'] == $cat_Array) {
-                                                echo "selected";
-                                            }
-                                        } ?>
-                                            value="<?php echo $sub_cat_row['sub_category_id']; ?>"><?php echo $sub_cat_row['sub_category_name']; ?></option>
-                                        <?php
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label class="tit">Cities</label>
-                                <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" class="chosen-select form-control">
-                                <?php
-                                    foreach (getAllCities() as $city) {
-                                        if (strtolower($city['city_name']) == 'www') {
-                                            continue;
+                                            } ?>
+                                                value="<?php echo $ad_users_row['user_id']; ?>"><?php echo $ad_users_row['first_name']; ?></option>
+                                            <?php
                                         }
                                         ?>
-                                        <option <?php echo in_array($city['city_slug'], (array)json_decode($service_expert_row['city_slug'], true)) ? 'selected' : '' ?>
-                                            value="<?php echo $city['city_slug']; ?>">
-                                            <?php echo $city['city_name']; ?>
-                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="tit">Cities</label>
+                                    <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" class="chosen-select form-control">
                                     <?php
-                                    }
-                                    ?>
-                                </select>
-                                <!-- <select class="chosen-select" multiple name="area_id[]" id="area_id">
-                                    <?php
-                                    foreach (getAllExpertAreas() as $areas_row) {
-                                        ?>
-                                        <option <?php $catArray = explode(',', $service_expert_row['area_id']);
-                                        foreach ($catArray as $cat_Array) {
-                                            if ($areas_row['city_id'] == $cat_Array) {
-                                                echo "selected";
+                                        foreach (getAllCities() as $city) {
+                                            if (strtolower($city['city_name']) == 'www') {
+                                                continue;
                                             }
-                                        } ?>
-                                            value="<?php echo $areas_row['city_id']; ?>"><?php echo $areas_row['city_name']; ?></option>
+                                            ?>
+                                            <option <?php echo in_array($city['city_slug'], (array)json_decode($service_expert_row['city_slug'], true)) ? 'selected' : '' ?>
+                                                value="<?php echo $city['city_slug']; ?>">
+                                                <?php echo $city['city_name']; ?>
+                                            </option>
                                         <?php
-                                    }
-                                    ?>
-                                </select> -->
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label class="tit">Payment accept</label>
-                                <select class="chosen-select" multiple name="payment_id[]">
-                                    <?php
-                                    foreach (getAllExpertPayments() as $payment_row) {
+                                        }
                                         ?>
-                                        <option <?php $catArray = explode(',', $service_expert_row['payment_id']);
-                                        foreach ($catArray as $cat_Array) {
-                                            if ($payment_row['payment_id'] == $cat_Array) {
-                                                echo "selected";
-                                            }
-                                        } ?>
-                                            value="<?php echo $payment_row['payment_id']; ?>"><?php echo $payment_row['payment_name']; ?></option>
+                                    </select>
+                                    <!-- <select class="chosen-select" multiple name="area_id[]" id="area_id">
                                         <?php
-                                    }
-                                    ?>
-                                </select>
+                                        foreach (getAllExpertAreas() as $areas_row) {
+                                            ?>
+                                            <option <?php $catArray = explode(',', $service_expert_row['area_id']);
+                                            foreach ($catArray as $cat_Array) {
+                                                if ($areas_row['city_id'] == $cat_Array) {
+                                                    echo "selected";
+                                                }
+                                            } ?>
+                                                value="<?php echo $areas_row['city_id']; ?>"><?php echo $areas_row['city_name']; ?></option>
+                                            <?php
+                                        }
+                                        ?>
+                                    </select> -->
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group jb-fm-box-hig">
-                                <h5 data-toggle="collapse" data-target="#jb-expe">Experience details</h5>
-                                <div id="jb-expe" class="collapse coll-box">
-                                    <input type="text" name="experience_1"
-                                        value="<?php echo $service_expert_row['experience_1']; ?>"
-                                        class="form-control">
-                                    <hr>
-                                    <input type="text" name="experience_2"
-                                        value="<?php echo $service_expert_row['experience_2']; ?>"
-                                        class="form-control">
-                                    <hr>
-                                    <input type="text" name="experience_3"
-                                        value="<?php echo $service_expert_row['experience_3']; ?>"
-                                        class="form-control">
-                                    <hr>
-                                    <input type="text" name="experience_4"
-                                        value="<?php echo $service_expert_row['experience_4']; ?>"
+                            <div class="col-md-6">
+                                <!-- <div class="form-group">
+                                    <label class="tit">City</label>
+                                    <select onChange="getExpertArea(this.value);" class="chosen-select" name="city_id">
+                                        <option value=""><?php echo "Select City"; ?></option>
+                                        <?php
+                                        foreach (getAllExpertCities() as $city_row) {
+                                            ?>
+                                            <option <?php $catArray = explode(',', $service_expert_row['city_id']);
+                                            foreach ($catArray as $cat_Array) {
+                                                if ($city_row['country_id'] == $cat_Array) {
+                                                    echo "selected";
+                                                }
+                                            } ?>
+                                                value="<?php echo $city_row['country_id']; ?>"><?php echo $city_row['country_name']; ?></option>
+                                            <?php
+                                        }
+                                        ?>
+                                    </select>
+                                </div> -->
+                                <div class="form-group">
+                                    <label class="tit">Service start time</label>
+                                    <select class="chosen-select" name="available_time_start">
+                                        <?php
+                                        $time = '4:00'; // start
+                                        for ($i = 0; $i <= 19; $i++) {
+                                            $prev = date('g:i a', strtotime($time)); // format the start time
+                                            $next = strtotime('+60mins', strtotime($time)); // add 60 mins
+                                            $time = date('g:i A', $next); // format the next time
+                                            ?>
+                                            <option <?php if ($service_expert_row['available_time_start'] == $time) {
+                                                echo "selected";
+                                            } ?> value="<?php echo $time; ?>"><?php echo $time; ?></option>
+                                            <?php
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="tit">Service close time</label>
+                                    <select class="chosen-select" name="available_time_end">
+                                        <?php
+                                        $time = '5:00'; // start
+                                        for ($i = 0; $i <= 18; $i++) {
+                                            $prev = date('g:i a', strtotime($time)); // format the start time
+                                            $next = strtotime('+60mins', strtotime($time)); // add 60 mins
+                                            $time = date('g:i A', $next); // format the next time
+                                            ?>
+                                            <option <?php if ($service_expert_row['available_time_end'] == $time) {
+                                                echo "selected";
+                                            } ?> value="<?php echo $time; ?>"><?php echo $time; ?></option>
+                                            <?php
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="tit">Profile image</label>
+                                    <input type="file" name="profile_image" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="tit">Profile cover image</label>
+                                    <input type="file" name="cover_image" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="tit">Year of experience</label>
+                                    <input type="text" onkeypress="return isNumber(event)" name="years_of_experience"
+                                        value="<?php echo $service_expert_row['years_of_experience']; ?>"
                                         class="form-control">
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group jb-fm-box-hig">
-                                <h5 data-toggle="collapse" data-target="#jb-edu">Education and Qualifications</h5>
-                                <div id="jb-edu" class="collapse coll-box">
-                                    <input type="text" name="education_1"
-                                        value="<?php echo $service_expert_row['education_1']; ?>"
-                                        class="form-control">
-                                    <hr>
-                                    <input type="text" name="education_2"
-                                        value="<?php echo $service_expert_row['education_2']; ?>"
-                                        class="form-control">
-                                    <hr>
-                                    <input type="text" name="education_3"
-                                        value="<?php echo $service_expert_row['education_3']; ?>"
-                                        class="form-control">
-                                    <hr>
-                                    <input type="text" name="education_4"
-                                        value="<?php echo $service_expert_row['education_4']; ?>"
-                                        class="form-control">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="tit">Base fare</label>
+                                    <input type="text" name="base_fare" onkeypress="return isNumber(event)"
+                                        value="<?php echo $service_expert_row['base_fare']; ?>" class="form-control">
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group jb-fm-box-hig">
-                                <h5 data-toggle="collapse" data-target="#jb-addi">Additional information</h5>
-                                <div id="jb-addi" class="collapse coll-box">
-                                    <input type="text" name="additional_info_1"
-                                        value="<?php echo $service_expert_row['additional_info_1']; ?>"
-                                        class="form-control"
-                                        placeholder="<?php echo "Extra courses"; ?>">
-                                    <hr>
-                                    <input type="text" name="additional_info_2"
-                                        value="<?php echo $service_expert_row['additional_info_2']; ?>"
-                                        class="form-control"
-                                        placeholder="<?php echo "Training details"; ?>">
-                                    <hr>
-                                    <input type="text" name="additional_info_3"
-                                        value="<?php echo $service_expert_row['additional_info_3']; ?>"
-                                        class="form-control"
-                                        placeholder="<?php echo "Others 1"; ?>">
-                                    <hr>
-                                    <input type="text" name="additional_info_4"
-                                        value="<?php echo $service_expert_row['additional_info_4']; ?>"
-                                        class="form-control"
-                                        placeholder="<?php echo "Others 2"; ?>">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="tit">Work profession/Category</label>
+                                    <select onChange="getSubCategory(this.value);" name="category_id" id="category_id" class="chosen-select">
+                                        <option value="">Select Category</option>
+                                        <?php
+                                        foreach (getAllCategories() as $categories_row) {
+                                        ?>
+                                            <option <?php if ($service_expert_row['category_id'] == $categories_row['category_id']) {
+                                                        echo "selected";
+                                                    } ?>
+                                                value="<?php echo $categories_row['category_id']; ?>"><?php echo $categories_row['category_name']; ?></option>
+                                        <?php
+                                        }
+                                        ?>
+                                    </select>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group col-md-6 serex-date">
-                            <label class="tit"><?php echo "Date of Birth"; ?></label>
-                            <input type="text" name="date_of_birth"
-                                value="<?php echo $service_expert_row['date_of_birth']; ?>" class="form-control"
-                                id="dobfield">
-                        </div>
-
-                        <div class="form-group col-md-6 serex-time">
-                            <label class="tit"><?php echo "ID proof"; ?></label>
-                            <input type="file" name="id_proof" class="form-control">
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <button type="submit" name="service_expert_submit" class="btn btn-primary"><?php echo "Submit Now"; ?></button>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="tit">Services can do</label>
+                                    <select name="sub_category_id[]" id="sub_category_id" multiple class="chosen-select form-control">
+                                        <?php
+                                        foreach (getCategorySubCategories($service_expert_row['category_id']) as $sub_categories_row) {
+                                        ?>
+                                            <option <?php $catArray = explode(',', $service_expert_row['sub_category_id']);
+                                                    foreach ($catArray as $cat_Array) {
+                                                        if ($sub_categories_row['sub_category_id'] == $cat_Array) {
+                                                            echo "selected";
+                                                        }
+                                                    } ?>
+                                                value="<?php echo $sub_categories_row['sub_category_id']; ?>"><?php echo $sub_categories_row['sub_category_name']; ?></option>
+                                        <?php
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <?php
+                                include "../booking_system_edit.php";
+                                ?>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="tit">Payment accept</label>
+                                    <select class="chosen-select" multiple name="payment_id[]">
+                                        <?php
+                                        foreach (getAllExpertPayments() as $payment_row) {
+                                            ?>
+                                            <option <?php $catArray = explode(',', $service_expert_row['payment_id']);
+                                            foreach ($catArray as $cat_Array) {
+                                                if ($payment_row['payment_id'] == $cat_Array) {
+                                                    echo "selected";
+                                                }
+                                            } ?>
+                                                value="<?php echo $payment_row['payment_id']; ?>"><?php echo $payment_row['payment_name']; ?></option>
+                                            <?php
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6 serex-date">
+                                <label class="tit"><?php echo "Date of Birth"; ?></label>
+                                <input type="text" name="date_of_birth"
+                                    value="<?php echo $service_expert_row['date_of_birth']; ?>" class="form-control"
+                                    id="dobfield">
+                            </div>
+                            <div class="form-group col-md-6 serex-time">
+                                <label class="tit"><?php echo "ID proof"; ?></label>
+                                <input type="file" name="id_proof" class="form-control">
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group jb-fm-box-hig">
+                                    <h5 data-toggle="collapse" data-target="#jb-expe">Experience details</h5>
+                                    <div id="jb-expe" class="collapse coll-box">
+                                        <input type="text" name="experience_1"
+                                            value="<?php echo $service_expert_row['experience_1']; ?>"
+                                            class="form-control">
+                                        <hr>
+                                        <input type="text" name="experience_2"
+                                            value="<?php echo $service_expert_row['experience_2']; ?>"
+                                            class="form-control">
+                                        <hr>
+                                        <input type="text" name="experience_3"
+                                            value="<?php echo $service_expert_row['experience_3']; ?>"
+                                            class="form-control">
+                                        <hr>
+                                        <input type="text" name="experience_4"
+                                            value="<?php echo $service_expert_row['experience_4']; ?>"
+                                            class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group jb-fm-box-hig">
+                                    <h5 data-toggle="collapse" data-target="#jb-edu">Education and Qualifications</h5>
+                                    <div id="jb-edu" class="collapse coll-box">
+                                        <input type="text" name="education_1"
+                                            value="<?php echo $service_expert_row['education_1']; ?>"
+                                            class="form-control">
+                                        <hr>
+                                        <input type="text" name="education_2"
+                                            value="<?php echo $service_expert_row['education_2']; ?>"
+                                            class="form-control">
+                                        <hr>
+                                        <input type="text" name="education_3"
+                                            value="<?php echo $service_expert_row['education_3']; ?>"
+                                            class="form-control">
+                                        <hr>
+                                        <input type="text" name="education_4"
+                                            value="<?php echo $service_expert_row['education_4']; ?>"
+                                            class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group jb-fm-box-hig">
+                                    <h5 data-toggle="collapse" data-target="#jb-addi">Additional information</h5>
+                                    <div id="jb-addi" class="collapse coll-box">
+                                        <input type="text" name="additional_info_1"
+                                            value="<?php echo $service_expert_row['additional_info_1']; ?>"
+                                            class="form-control"
+                                            placeholder="<?php echo "Extra courses"; ?>">
+                                        <hr>
+                                        <input type="text" name="additional_info_2"
+                                            value="<?php echo $service_expert_row['additional_info_2']; ?>"
+                                            class="form-control"
+                                            placeholder="<?php echo "Training details"; ?>">
+                                        <hr>
+                                        <input type="text" name="additional_info_3"
+                                            value="<?php echo $service_expert_row['additional_info_3']; ?>"
+                                            class="form-control"
+                                            placeholder="<?php echo "Others 1"; ?>">
+                                        <hr>
+                                        <input type="text" name="additional_info_4"
+                                            value="<?php echo $service_expert_row['additional_info_4']; ?>"
+                                            class="form-control"
+                                            placeholder="<?php echo "Others 2"; ?>">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <button type="submit" name="service_expert_submit" class="btn btn-primary"><?php echo "Submit Now"; ?></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -372,14 +383,14 @@ include "header.php";
     }
 </script>
 <script>
-    function getExpertArea(val) {
+    function getSubCategory(val) {
         $.ajax({
             type: "POST",
-            url: "../service-experts/expert_area_process.php",
-            data: 'country_id=' + val,
-            success: function (data) {
-                $("#area_id").html(data);
-                $('#area_id').trigger("chosen:updated");
+            url: "../sub_category_process.php",
+            data: 'category_id=' + val,
+            success: function(data) {
+                $("#sub_category_id").html(data);
+                $('#sub_category_id').trigger("chosen:updated");
             }
         });
     }

@@ -74,20 +74,19 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <select name="category_id"
-                                                                    id="category_id" class="chosen-select form-control">
-                                                                <option value="">Select Category</option>
-                                                                <?php
-                                                                foreach (getAllEventCategories() as $categories_row) {
-                                                                    ?>
-                                                                    <option <?php if ($_SESSION['category_id'] == $categories_row['category_id']) {
-                                                                        echo "selected";
-                                                                    } ?>
-                                                                        value="<?php echo $categories_row['category_id']; ?>"><?php echo $categories_row['category_name']; ?></option>
-                                                                    <?php
-                                                                }
-                                                                ?>
-                                                            </select>
+                                                        <select name="category_id" id="category_id" class="chosen-select">
+                                                            <option value="">Select Category</option>
+                                                            <?php
+                                                            foreach (getAllCategories() as $categories_row) {
+                                                            ?>
+                                                                <option <?php if ($_SESSION['category_id'] == $categories_row['category_id']) {
+                                                                    echo "selected";
+                                                                } ?>
+                                                                value="<?php echo $categories_row['category_id']; ?>"><?php echo $categories_row['category_name']; ?></option>
+                                                            <?php
+                                                            }
+                                                            ?>
+                                                        </select>
                                                         </div>
                                                     </div>
                                                 </div>

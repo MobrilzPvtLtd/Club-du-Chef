@@ -73,18 +73,16 @@ include "header.php";
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <select name="category_id" required="required"
-                                                                    class="chosen-select form-control" id="category_id">
-                                                                <option value="">Select category</option>
+                                                            <select name="category_id" required="required" id="category_id" class="chosen-select">
+                                                                <option value="">Select Category</option>
                                                                 <?php
-                                                                foreach (getAllNewsCategories() as $row) {
-                                                                    ?>
-                                                                    <option <?php
-                                                                    if ($row['category_id'] == $news_row['category_id']) {
-                                                                        echo "selected";
-                                                                    } ?>
-                                                                        value="<?php echo $row['category_id']; ?>"><?php echo $row['category_name']; ?></option>
-                                                                    <?php
+                                                                foreach (getAllCategories() as $categories_row) {
+                                                                ?>
+                                                                    <option <?php if ($news_row['category_id'] == $categories_row['category_id']) {
+                                                                                echo "selected";
+                                                                            } ?>
+                                                                        value="<?php echo $categories_row['category_id']; ?>"><?php echo $categories_row['category_name']; ?></option>
+                                                                <?php
                                                                 }
                                                                 ?>
                                                             </select>
