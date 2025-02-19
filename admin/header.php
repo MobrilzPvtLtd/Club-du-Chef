@@ -564,6 +564,73 @@ $all_texts_row = getAllTexts(); //Fetch All Text Data
                         <!-- <a href="admin-all-bookings.php" class="<?php if ($current_page == 'admin-all-bookings.php') { echo 'mact'; } ?>">Booking Enquiry</a> -->
                     </li>
 
+                    <?php if ($admin_row['admin_country_options'] == 1) { ?>
+                        <li>
+                            <h4>Country & City</h4>
+                        </li>
+                        <li class="ic-cou">
+                            <a href="#" class="<?php if ($current_page == 'admin-all-country.php' || $current_page == 'admin-add-country.php') {
+                                    echo 'mact';
+                                } ?>">Country</a>
+                            <div>
+                                <ol>
+                                    <li>
+                                        <a href="admin-all-country.php">All Country</a>
+                                    </li>
+                                    <li>
+                                        <a href="admin-add-country.php">Add New Country</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </li>
+                    <?php } ?>
+
+                    <?php if ($admin_row['admin_city_options'] == 1) { ?>
+                        <li class="ic-cit">
+                            <a href="#"
+                                class="<?php if ($current_page == 'admin-all-city.php' || $current_page == 'admin-add-city.php') {
+                                            echo 'mact';
+                                        } ?>">City</a>
+                            <div>
+                                <ol>
+                                    <li>
+                                        <a href="admin-all-city.php">All City</a>
+                                    </li>
+                                    <li>
+                                        <a href="admin-add-city.php">Add New City</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </li>
+                    <?php } ?>
+
+                    <?php if ($admin_row['admin_category_options'] == 1) { ?>
+                        <li>
+                            <h4>Categories</h4>
+                        </li>
+                        <li class="ic-cat">
+                            <a href="#" class="<?php if ($current_page == 'admin-all-category.php' || $current_page == 'admin-add-new-category.php' || $current_page == 'admin-all-sub-category.php' || $current_page == 'admin-add-new-sub-category.php') {
+                                echo 'mact';
+                            } ?>">Category</a>
+                            <div>
+                                <ol>
+                                    <li>
+                                        <a href="admin-all-category.php">All Category</a>
+                                    </li>
+                                    <li>
+                                        <a href="admin-add-new-category.php">Add new Category</a>
+                                    </li>
+                                    <li>
+                                        <a href="admin-all-sub-category.php">All Sub Category</a>
+                                    </li>
+                                    <li>
+                                        <a href="admin-add-new-sub-category.php">Add new Sub Category</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </li>
+                    <?php } ?>
+
                     <?php
                     if ($footer_row['admin_listing_show'] == 1) {
                         if ($admin_row['admin_listing_options'] == 1) { ?>
@@ -596,36 +663,12 @@ $all_texts_row = getAllTexts(); //Fetch All Text Data
                                 </div>
                             </li>
 
-                        <?php }
-                        if ($admin_row['admin_category_options'] == 1) { ?>
-                            <li class="ic-cat">
-                                <a href="#"
-                                    class="<?php if ($current_page == 'admin-all-category.php' || $current_page == 'admin-add-new-category.php' || $current_page == 'admin-all-sub-category.php' || $current_page == 'admin-add-new-sub-category.php') {
-                                                echo 'mact';
-                                            } ?>">Listing Category</a>
-                                <div>
-                                    <ol>
-                                        <li>
-                                            <a href="admin-all-category.php">All Category</a>
-                                        </li>
-                                        <li>
-                                            <a href="admin-add-new-category.php">Add new Category</a>
-                                        </li>
-                                        <li>
-                                            <a href="admin-all-sub-category.php">All Sub Category</a>
-                                        </li>
-                                        <li>
-                                            <a href="admin-add-new-sub-category.php">Add new Sub Category</a>
-                                        </li>
-                                    </ol>
-                                </div>
-                            </li>
                         <?php } ?>
+                        
                         <li class="ic-poi">
-                            <a href="#"
-                                class="<?php if ($current_page == 'admin-all-promotions.php' || $current_page == 'admin-promote-now.php' || $current_page == 'admin-all-points.php' || $current_page == 'admin-point-setting.php') {
-                                            echo 'mact';
-                                        } ?>">Listing Promotions</a>
+                            <a href="#" class="<?php if ($current_page == 'admin-all-promotions.php' || $current_page == 'admin-promote-now.php' || $current_page == 'admin-all-points.php' || $current_page == 'admin-point-setting.php') {
+                                echo 'mact';
+                            } ?>">Listing Promotions</a>
                             <div>
                                 <ol>
                                     <li>
@@ -646,10 +689,9 @@ $all_texts_row = getAllTexts(); //Fetch All Text Data
                         <?php
                         if ($admin_row['admin_enquiry_options'] == 1) { ?>
                             <li class="ic-enq">
-                                <a href="#"
-                                    class="<?php if ($current_page == 'admin-all-enquiry.php' || $current_page == 'admin-saved-enquiry.php') {
-                                                echo 'mact';
-                                            } ?>">Enquiry & Get Quote</a>
+                                <a href="#" class="<?php if ($current_page == 'admin-all-enquiry.php' || $current_page == 'admin-saved-enquiry.php') {
+                                    echo 'mact';
+                                } ?>">Enquiry & Get Quote</a>
                                 <div>
                                     <ol>
                                         <li>
@@ -665,10 +707,9 @@ $all_texts_row = getAllTexts(); //Fetch All Text Data
                         <?php }
                         if ($admin_row['admin_review_options'] == 1) { ?>
                             <li class="ic-rev">
-                                <a href="#"
-                                    class="<?php if ($current_page == 'admin-all-reviews.php' || $current_page == 'admin-saved-reviews.php') {
-                                                echo 'mact';
-                                            } ?>">Reviews</a>
+                                <a href="#" class="<?php if ($current_page == 'admin-all-reviews.php' || $current_page == 'admin-saved-reviews.php') {
+                                    echo 'mact';
+                                } ?>">Reviews</a>
                                 <div>
                                     <ol>
                                         <li>
@@ -683,10 +724,9 @@ $all_texts_row = getAllTexts(); //Fetch All Text Data
                         <?php }
                         if ($admin_row['admin_listing_filter_options'] == 1) { ?>
                             <li class="ic-fil">
-                                <a href="#"
-                                    class="<?php if ($current_page == 'admin-all-filters.php' || $current_page == 'admin-filter-features.php' || $current_page == 'admin-filter-category.php') {
-                                                echo 'mact';
-                                            } ?>">Listing Filter</a>
+                                <a href="#" class="<?php if ($current_page == 'admin-all-filters.php' || $current_page == 'admin-filter-features.php' || $current_page == 'admin-filter-category.php') {
+                                    echo 'mact';
+                                } ?>">Listing Filter</a>
                                 <div>
                                     <ol>
                                         <li>
@@ -694,43 +734,6 @@ $all_texts_row = getAllTexts(); //Fetch All Text Data
                                         </li>
                                         <li>
                                             <a href="admin-filter-features.php">Features</a>
-                                        </li>
-                                    </ol>
-                                </div>
-                            </li>
-
-                        <?php }
-                        if ($admin_row['admin_country_options'] == 1) { ?>
-                            <li class="ic-cou">
-                                <a href="#"
-                                    class="<?php if ($current_page == 'admin-all-country.php' || $current_page == 'admin-add-country.php') {
-                                                echo 'mact';
-                                            } ?>">Country</a>
-                                <div>
-                                    <ol>
-                                        <li>
-                                            <a href="admin-all-country.php">All Country</a>
-                                        </li>
-                                        <li>
-                                            <a href="admin-add-country.php">Add New Country</a>
-                                        </li>
-                                    </ol>
-                                </div>
-                            </li>
-                        <?php }
-                        if ($admin_row['admin_city_options'] == 1) { ?>
-                            <li class="ic-cit">
-                                <a href="#"
-                                    class="<?php if ($current_page == 'admin-all-city.php' || $current_page == 'admin-add-city.php') {
-                                                echo 'mact';
-                                            } ?>">City</a>
-                                <div>
-                                    <ol>
-                                        <li>
-                                            <a href="admin-all-city.php">All City</a>
-                                        </li>
-                                        <li>
-                                            <a href="admin-add-city.php">Add New City</a>
                                         </li>
                                     </ol>
                                 </div>
@@ -768,7 +771,7 @@ $all_texts_row = getAllTexts(); //Fetch All Text Data
                                     </ol>
                                 </div>
                             </li>
-                            <li class="ic-cat">
+                            <!-- <li class="ic-cat">
                                 <a href="#"
                                     class="<?php if ($current_page == 'expert-all-category.php' || $current_page == 'expert-add-new-category.php' || $current_page == 'expert-all-sub-category.php' || $current_page == 'expert-add-new-sub-category.php' || $current_page == 'expert-home-category-change.php') {
                                                 echo 'mact';
@@ -792,7 +795,7 @@ $all_texts_row = getAllTexts(); //Fetch All Text Data
                                         </li>
                                     </ol>
                                 </div>
-                            </li>
+                            </li> -->
                             <!-- <li class="ic-cit">
                                 <a href="#"
                                     class="<?php if ($current_page == 'expert-all-city.php' || $current_page == 'expert-add-new-city.php' || $current_page == 'expert-edit-city.php' || $current_page == 'expert-delete-city.php' || $current_page == 'expert-all-area.php' || $current_page == 'expert-add-new-area.php' || $current_page == 'expert-edit-area.php' || $current_page == 'expert-delete-area.php') {

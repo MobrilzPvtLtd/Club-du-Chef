@@ -95,15 +95,14 @@ include "header.php";
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="tit">Work profession <span style="color: red;">*</span></label>
-                                <select onChange="getExpertSubCategory(this.value);" class="chosen-select"
-                                        name="category_id">
-                                    <option value=""><?php echo "Select Work Profession"; ?></option>
+                                <select onChange="getSubCategory(this.value);" name="category_id" id="category_id" class="chosen-select">
+                                    <option value="">Select Category</option>
                                     <?php
-                                    foreach (getAllExpertCategories() as $categories_row) {
-                                        ?>
+                                    foreach (getAllCategories() as $categories_row) {
+                                    ?>
                                         <option
                                             value="<?php echo $categories_row['category_id']; ?>"><?php echo $categories_row['category_name']; ?></option>
-                                        <?php
+                                    <?php
                                     }
                                     ?>
                                 </select>

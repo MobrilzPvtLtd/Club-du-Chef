@@ -9,7 +9,6 @@ if (file_exists('config/info.php')) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
     // if (isset($_POST['register_submit'])) {
 
         $trap_box = $_POST["trap_box"];

@@ -41,7 +41,7 @@ if (is_array($decoded_city_slugs) && count($decoded_city_slugs) > 0) {
 }
 
 // Fetch query of booking_availability
-$check_query = "SELECT day, start_time, end_time FROM " . TBL . "booking_availability WHERE booking_type_id = '{$events_a_row['event_id']}' AND is_available = 1 AND booking_type = 'event'";
+$check_query = "SELECT day, start_time, end_time, start_time_2, end_time_2 FROM " . TBL . "booking_availability WHERE booking_type_id = '{$events_a_row['event_id']}' AND is_available = 1 AND booking_type = 'event'";
 $availability_day_result = mysqli_query($conn, $check_query);
 
 // Fetch existing booking dates from the database
