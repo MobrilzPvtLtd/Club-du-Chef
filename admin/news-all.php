@@ -41,7 +41,7 @@ include "header.php";
 
                             $category_id = $newsrow['category_id'];
 
-                            $category_row = getNewsCategory($category_id);
+                            $category_row = getCategory($category_id);
 
                             ?>
 								<tr>

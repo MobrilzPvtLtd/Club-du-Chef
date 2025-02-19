@@ -41,7 +41,7 @@ include "header.php";
 
                             $category_id = $placerow['category_id'];
 
-                            $category_row = getPlaceCategory($category_id);
+                            $category_row = getCategory($category_id);
 
                             ?>
 								<tr>
