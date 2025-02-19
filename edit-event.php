@@ -92,7 +92,7 @@ if (file_exists('config/event_page_authentication.php')) {
                                                         id="category_id" class="chosen-select form-control">
                                                     <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                                     <?php
-                                                    foreach (getAllEventCategories() as $categories_row) {
+                                                    foreach (getAllCategories() as $categories_row) {
                                                         ?>
                                                         <option <?php if ($events_a_row['category_id'] == $categories_row['category_id']) {
                                                             echo "selected";

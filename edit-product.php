@@ -98,11 +98,11 @@ if (file_exists('config/product_page_authentication.php')) {
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <select onChange="getProductSubCategory(this.value);" name="category_id"
+                                                <select onChange="getSubCategory(this.value);" name="category_id"
                                                         id="category_id" class="chosen-select form-control">
                                                     <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                                     <?php
-                                                    foreach (getAllProductCategories() as $categories_row) {
+                                                    foreach (getAllCategories() as $categories_row) {
                                                         ?>
                                                         <option <?php if ($products_a_row['category_id'] == $categories_row['category_id']) {
                                                             echo "selected";
@@ -124,7 +124,7 @@ if (file_exists('config/product_page_authentication.php')) {
                                                 <select name="sub_category_id[]" id="sub_category_id" multiple
                                                         class="chosen-select form-control">
                                                     <?php
-                                                    foreach (getCategoryProductSubCategories($products_a_row['category_id']) as $sub_categories_row) {
+                                                    foreach (getCategorySubCategories($products_a_row['category_id']) as $sub_categories_row) {
                                                         ?>
                                                         <option <?php $catArray = explode(',', $products_a_row['sub_category_id']);
                                                         foreach ($catArray as $cat_Array) {
@@ -329,8 +329,7 @@ if (file_exists('config/product_page_authentication.php')) {
                             <!--FILED START-->
                             <div class="row">
                                 <div class="col-md-12">
-                                    <button type="submit" name="product_submit"
-                                            class="btn btn-primary"><?php echo $Zitiziti['UPDATE_AND_SUBMIT']; ?></button>
+                                    <button type="submit" name="product_submit" class="btn btn-primary"><?php echo $Zitiziti['UPDATE_AND_SUBMIT']; ?></button>
                                 </div>
                                 <div class="col-md-12">
                                     <a href="dashboard" class="skip"><?php echo $Zitiziti['GO_TO_USER_DASHBOARD']; ?>
@@ -367,12 +366,12 @@ if (file_exists('config/product_page_authentication.php')) {
     CKEDITOR.replace('product_description');
 </script>
 <script>
-    function getProductSubCategory(val) {
+    function getSubCategory(val) {
         $.ajax({
             type: "POST",
-            url: "product_sub_category_process.php",
+            url: "../sub_category_process.php",
             data: 'category_id=' + val,
-            success: function (data) {
+            success: function(data) {
                 $("#sub_category_id").html(data);
                 $('#sub_category_id').trigger("chosen:updated");
             }

@@ -8,8 +8,7 @@ if (file_exists('config/info.php')) {
     include('config/info.php');
 }
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-    if (isset($_POST['product_submit'])) {
+    // if (isset($_POST['product_submit'])) {
 
         $is_booking = $_POST["is_booking"];
         $booking_url = $_POST["booking_url"];
@@ -315,7 +314,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         //    product Update Part Ends
 
-    }
+    // }
 } else {
 
     $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];

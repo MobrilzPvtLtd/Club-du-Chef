@@ -83,7 +83,7 @@ $job_profile_row = getUserJobProfile($user_id);
                                 <select class="chosen-select" required="required" name="sub_category_id">
                                     <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                     <?php
-                                    foreach (getAllJobSubCategories() as $sub_categories_row) {
+                                    foreach (getAllSubCategories() as $sub_categories_row) {
                                         ?>
                                         <option
                                             <?php if ($job_profile_row['sub_category_id'] == $sub_categories_row['sub_category_id']) {

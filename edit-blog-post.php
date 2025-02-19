@@ -83,7 +83,7 @@ if (file_exists('config/blog_page_authentication.php')) {
                                                         id="category_id" class="chosen-select form-control">
                                                     <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                                     <?php
-                                                    foreach (getAllBlogCategories() as $categories_row) {
+                                                    foreach (getAllCategories() as $categories_row) {
                                                         ?>
                                                         <option <?php if ($blogs_a_row['category_id'] == $categories_row['category_id']) {
                                                             echo "selected";

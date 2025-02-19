@@ -84,11 +84,11 @@ if($product_count_user >= $plan_type_product_count){
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <select onChange="getProductSubCategory(this.value);" name="category_id"
+                                                <select onChange="getSubCategory(this.value);" name="category_id"
                                                         id="category_id" class="chosen-select form-control">
                                                     <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                                     <?php
-                                                    foreach (getAllProductCategories() as $categories_row) {
+                                                    foreach (getAllCategories() as $categories_row) {
                                                         ?>
                                                         <option <?php if ($_SESSION['category_id'] == $categories_row['category_id']) {
                                                             echo "selected";
@@ -300,12 +300,12 @@ if($product_count_user >= $plan_type_product_count){
     CKEDITOR.replace('product_description');
 </script>
 <script>
-    function getProductSubCategory(val) {
+    function getSubCategory(val) {
         $.ajax({
             type: "POST",
-            url: "product_sub_category_process.php",
+            url: "../sub_category_process.php",
             data: 'category_id=' + val,
-            success: function (data) {
+            success: function(data) {
                 $("#sub_category_id").html(data);
                 $('#sub_category_id').trigger("chosen:updated");
             }

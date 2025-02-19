@@ -119,10 +119,10 @@ if (file_exists('../config/job_page_authentication.php')) {
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="tit"><?php echo $Zitiziti['JOB-CATEGORY-LABEL']; ?></label>
-                                    <select onChange="getJobSubCategory(this.value);" class="chosen-select" name="category_id">
+                                    <select onChange="getSubCategory(this.value);" class="chosen-select" name="category_id">
                                         <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                         <?php
-                                        foreach (getAllJobCategories() as $categories_row) {
+                                        foreach (getAllCategories() as $categories_row) {
                                             ?>
                                             <option
                                                 <?php if ($job_a_row['category_id'] == $categories_row['category_id']) {
@@ -138,7 +138,7 @@ if (file_exists('../config/job_page_authentication.php')) {
                                     <label class="tit"><?php echo $Zitiziti['JOB-SUB-CATEGORY-LABEL']; ?></label>
                                     <select class="chosen-select" id="sub_category_id" name="sub_category_id">
                                         <?php
-                                        foreach (getCategoryJobSubCategories($job_a_row['category_id']) as $sub_categories_row) {
+                                        foreach (getCategorySubCategories($job_a_row['category_id']) as $sub_categories_row) {
                                             if ($job_a_row['sub_category_id'] != 0) {
                                                 ?>
                                                 <option <?php
@@ -271,12 +271,12 @@ include "../footer.php";
 <script src="../js/jquery.validate.min.js"></script>
 <script src="../js/custom_validation.js"></script>
 <script>
-    function getJobSubCategory(val) {
+    function getSubCategory(val) {
         $.ajax({
             type: "POST",
-            url: "job_sub_category_process.php",
+            url: "../sub_category_process.php",
             data: 'category_id=' + val,
-            success: function (data) {
+            success: function(data) {
                 $("#sub_category_id").html(data);
                 $('#sub_category_id').trigger("chosen:updated");
             }
