@@ -616,7 +616,7 @@ include "../footer.php";
                                 <select class="chosen-select" disabled="disabled" required="required" name="enquiry_category_old">
                                     <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                     <?php
-                                    foreach (getAllActiveExpertCategoriesPos() as $lead_categories_row) {
+                                    foreach (getAllActiveCategoriesPos() as $lead_categories_row) {
                                         ?>
                                         <option <?php if($expert_profile_row['category_id'] == $lead_categories_row['category_id']){ echo 'selected';} ?> value="<?php echo $lead_categories_row['category_id']; ?>"><?php echo $lead_categories_row['category_name']; ?></option>
                                         <?php
