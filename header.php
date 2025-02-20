@@ -256,13 +256,23 @@ foreach (getAllCities() as $city) {
             <?php if ($footer_row['admin_install_flag'] == 0) {
                 kwohereza($SHYIRAMO);
             } ?>
-            <div <?php if ($current_page == "index.php" || $current_page == "all-category.php") { ?> class="hom-head"
-                style=" background-image: url(images/<?php echo $footer_row['home_page_banner']; ?>);" <?php } ?>>
+            <div <?php if ($current_page == "index.php" || $current_page == "all-category.php") { ?>
+                    class="hom-head"
+                    <?php 
+                    if ($CurrentCity == 'calp') {
+                    ?>
+                        style="background-image: url('images/home-zitiziti-calp.jpg');"
+                    <?php } else { ?> 
+                        style="background-image: url('images/<?php echo $footer_row['home_page_banner']; ?>');"
+                    <?php } ?> 
+                <?php } ?>
+
+                >
                 <div class="hom-top">
                     <div class="container">
                         <div class="row">
                             <div class="hom-nav d-flex justify-content-md-center justify-content-sm-start <?php if (!isset($_SESSION['user_name']) && empty($_SESSION['user_name'])) {
-                                                                                                            } else { ?> db-open <?php } ?>">
+                            } else { ?> db-open <?php } ?>">
                                 <!--MOBILE MENU-->
 
                                 <?php if ($imageShow && !empty($imagesLogo)): ?>
