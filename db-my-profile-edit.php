@@ -30,7 +30,12 @@ include "dashboard_left_pane.php";
 							<tbody>
 								<tr>
                                     <td><?php echo $Zitiziti['NAME']; ?></td>
-									<td><?php echo $user_details_row['first_name']; ?></td>
+									<td>
+                                        <div class="form-group">
+                                          <input type="text" name="first_name" class="form-control" value="<?php echo $user_details_row['first_name']; ?>">
+                                        </div>
+                                    </td>
+									<!-- <td><?php echo $user_details_row['first_name']; ?></td> -->
 								</tr>
                                 <tr>
                                     <td><?php echo $Zitiziti['EMAIL_ID']; ?></td>

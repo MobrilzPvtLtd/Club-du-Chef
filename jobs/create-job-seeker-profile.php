@@ -46,7 +46,7 @@ $job_profile_row = getUserJobProfile($user_id);
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="tit"><?php echo $Zitiziti['JOB-INTERVIEW-EMPLOYEE-NAME-LABEL']; ?>*</label>
-                                <input type="text" name="profile_name" value="<?php echo $job_profile_row['profile_name'] != NULL ? $job_profile_row['profile_name'] : $user_details_row['first_name']; ?>" class="form-control" readonly="readonly">
+                                <input type="text" name="profile_name" value="<?php echo $job_profile_row['profile_name'] != NULL ? $job_profile_row['profile_name'] : $user_details_row['first_name']; ?>" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label class="tit"><?php echo $Zitiziti['JOB-INTERVIEW-CURRENT-COMPANY-LABEL']; ?></label>

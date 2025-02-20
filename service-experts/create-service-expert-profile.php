@@ -61,7 +61,7 @@ $edit_a_row = $service_expert_row;
                                         <label class="tit"><?php echo $Zitiziti['NAME']; ?>*</label>
                                         <input type="text" name="profile_name"
                                             value="<?php echo $service_expert_row['profile_name'] != NULL ? $service_expert_row['profile_name'] : $user_details_row['first_name']; ?>"
-                                            class="form-control" readonly="readonly">
+                                            class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-6">

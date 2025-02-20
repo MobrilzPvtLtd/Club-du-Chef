@@ -115,7 +115,7 @@ include "dashboard_left_pane.php";
 								</tr>
                                 <tr>
                                     <td class="py-2 px-0 ">
-                                        <a href="db-my-profile-edit" class="db-pro-bot-btn mt-0 py-0"><?php echo $Zitiziti['EDIT_MY_PROFILE']; ?></a>
+                                        <a href="db-my-profile-edit" class="db-pro-bot-btn"><?php echo $Zitiziti['EDIT_MY_PROFILE']; ?></a>
                                         <a href="db-payment" class="db-pro-bot-btn"><?php echo $Zitiziti['UPGRADE']; ?></a>
                                     </td>
 									<td></td>

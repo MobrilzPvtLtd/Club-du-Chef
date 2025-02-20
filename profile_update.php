@@ -9,13 +9,11 @@ if (file_exists('config/info.php')) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
     if (isset($_POST['profile_update_submit'])) {
-
-
+        
         $user_code = $_SESSION['user_code']; //Session User Code
-
-        // $first_name = $_POST["first_name"];
+        
+        $first_name = $_POST["first_name"];
         $last_name = $_POST["last_name"];
         $mobile_number = $_POST["mobile_number"];
         $email_id = $_POST["email_id"];
@@ -108,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
 
-        $sql = mysqli_query($conn, "UPDATE  " . TBL . "users SET  last_name ='" . $last_name . "'
+        $sql = mysqli_query($conn, "UPDATE  " . TBL . "users SET  last_name ='" . $last_name . "', first_name ='" . $first_name . "'
      ,date_of_birth ='" . $date_of_birth . "', user_city ='" . $user_city . "', profile_image ='" . $profile_image . "'
      ,password ='" . $password . "', user_facebook ='" . $user_facebook . "', user_twitter ='" . $user_twitter . "'
      ,user_youtube ='" . $user_youtube . "', user_website ='" . $user_website . "'

@@ -4,7 +4,7 @@ include "home_page_top_section.php";
 
 if ($current_home_page != '2' && $current_home_page != '3') {
 ?>
-    <div class="ban-ql">
+    <div class="ban-ql mb-5">
         <div class="container">
             <div class="row">
                 <?php 
