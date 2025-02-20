@@ -749,7 +749,6 @@ foreach (getAllCities() as $city) {
                                 <div class="mob-menu">
                                     <div class="mob-me-ic"><i class="material-icons">menu</i></div>
                                     <div class="mob-me-all">
-
                                         <div class="mob-me-clo"><i class="material-icons">close</i></div>
                                         <?php
                                         if (!isset($_SESSION['user_name']) && empty($_SESSION['user_name'])) {

@@ -66,7 +66,7 @@ include "header.php";
                                                                     class="chosen-select form-control" id="category_id">
                                                                 <option value="">Select category</option>
                                                                 <?php
-                                                                foreach (getAllNewsCategories() as $row) {
+                                                                foreach (getAllCategories() as $row) {
                                                                     ?>
                                                                     <option <?php
                                                                     if ($row['category_id'] == $news_row['category_id']) {

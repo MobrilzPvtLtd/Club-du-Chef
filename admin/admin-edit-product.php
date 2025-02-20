@@ -47,7 +47,7 @@ include "header.php";
                                         <?php include "../page_level_message.php"; ?>
                                         <ul>
                                             <li>
-                                            <div class="row">
+                                                <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
                                                             <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" required="required" class="chosen-select form-control">

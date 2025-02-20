@@ -57,20 +57,20 @@ include "header.php";
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="tit">City</label>
-                                <select disabled="disabled" onChange="getExpertArea(this.value);" class="chosen-select" name="city_id">
-                                    <option value=""><?php echo "Select City"; ?></option>
+                                <select class="chosen-select" name="city_slug[]" disabled="disabled">
+                                    <option value=""><?php echo $Zitiziti['JOB-SELECT-JOB-CITY-LABEL']; ?></option>
                                     <?php
-                                    foreach (getAllExpertCities() as $city_row) {
-                                        ?>
-                                        <option <?php $catArray = explode(',', $service_expert_row['city_id']);
-                                        foreach ($catArray as $cat_Array) {
-                                            if ($city_row['country_id'] == $cat_Array) {
-                                                echo "selected";
-                                            }
-                                        } ?>
-                                            value="<?php echo $city_row['country_id']; ?>"><?php echo $city_row['country_name']; ?></option>
-                                        <?php
-                                    }
+                                    foreach (getAllCities() as $city) {
+                                        if (strtolower($city['city_name']) == 'www') {
+                                            continue;
+                                        }
+                                    ?>
+                                        <option <?php echo in_array($city['city_slug'], (array)json_decode($service_expert_row['city_slug'], true)) ? 'selected' : '' ?>
+                                            value="<?php echo $city['city_slug']; ?>">
+                                            <?php echo $city['city_name']; ?>
+                                        </option>
+                                    <?php
+                                        }
                                     ?>
                                 </select>
                             </div>
@@ -118,7 +118,7 @@ include "header.php";
                                         name="category_id">
                                     <option value=""><?php echo "Select Work Profession"; ?></option>
                                     <?php
-                                    foreach (getAllExpertCategories() as $categories_row) {
+                                    foreach (getAllCategories() as $categories_row) {
                                         ?>
                                         <option <?php
                                         if ($categories_row['category_id'] == $service_expert_row['category_id']) {
@@ -148,15 +148,17 @@ include "header.php";
                                 <select disabled="disabled" class="chosen-select" required="required" multiple="multiple" id="sub_category_id"
                                         name="sub_category_id[]">
                                     <?php
-                                    foreach (getAllExpertSubCategories() as $sub_cat_row) {
+                                    foreach (getCategorySubCategories($service_expert_row['category_id']) as $sub_categories_row) {
                                         ?>
                                         <option <?php $catArray = explode(',', $service_expert_row['sub_category_id']);
                                         foreach ($catArray as $cat_Array) {
-                                            if ($sub_cat_row['sub_category_id'] == $cat_Array) {
+                                            if ($sub_categories_row['sub_category_id'] == $cat_Array) {
                                                 echo "selected";
+
                                             }
+
                                         } ?>
-                                            value="<?php echo $sub_cat_row['sub_category_id']; ?>"><?php echo $sub_cat_row['sub_category_name']; ?></option>
+                                            value="<?php echo $sub_categories_row['sub_category_id']; ?>"><?php echo $sub_categories_row['sub_category_name']; ?></option>
                                         <?php
                                     }
                                     ?>

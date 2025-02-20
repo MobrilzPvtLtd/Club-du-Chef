@@ -147,7 +147,7 @@ include "header.php";
                                         <!--FILED END-->
 
                                         <!--FILED START-->
-                                        <div class="row">
+                                        <!-- <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <select disabled="disabled" name="country_id" required="required" class="form-control">
@@ -166,14 +166,28 @@ include "header.php";
                                                     </select>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!--FILED END-->
                                         <!--FILED START-->
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <input readonly="readonly" id="select-city" name="city_id" value="<?php echo $cities_row['city_name']; ?>"
-                                                           required="required" type="text" class="form-control" placeholder="City name">
+                                                <select class="chosen-select" name="city_slug[]" disabled="disabled">
+                                                    <option value=""><?php echo $Zitiziti['JOB-SELECT-JOB-CITY-LABEL']; ?></option>
+                                                    <?php
+                                                    foreach (getAllCities() as $city) {
+                                                        if (strtolower($city['city_name']) == 'www') {
+                                                            continue;
+                                                        }
+                                                    ?>
+                                                        <option <?php echo in_array($city['city_slug'], (array)json_decode($listings_a_row['city_slug'], true)) ? 'selected' : '' ?>
+                                                            value="<?php echo $city['city_slug']; ?>">
+                                                            <?php echo $city['city_name']; ?>
+                                                        </option>
+                                                    <?php
+                                                        }
+                                                    ?>
+                                                </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -204,14 +218,20 @@ include "header.php";
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <select disabled="disabled" name="sub_category_id" id="sub_category_id"
-                                                            class="form-control">
-                                                        <option value="">Select Sub Category</option>
+                                                    <select disabled="disabled" name="sub_category_id[]"
+                                                            id="sub_category_id" multiple
+                                                            class="chosen-select form-control">
+
                                                         <?php
-                                                        foreach (getAllSubCategories() as $sub_categories_row) {
+                                                        foreach (getCategorySubCategories($listings_a_row['category_id']) as $sub_categories_row) {
                                                             ?>
-                                                            <option <?php if ($listings_a_row['sub_category_id'] == $sub_categories_row['sub_category_id']) {
-                                                                echo "selected";
+                                                            <option <?php $catArray = explode(',', $listings_a_row['sub_category_id']);
+                                                            foreach ($catArray as $cat_Array) {
+                                                                if ($sub_categories_row['sub_category_id'] == $cat_Array) {
+                                                                    echo "selected";
+
+                                                                }
+
                                                             } ?>
                                                                 value="<?php echo $sub_categories_row['sub_category_id']; ?>"><?php echo $sub_categories_row['sub_category_name']; ?></option>
                                                             <?php

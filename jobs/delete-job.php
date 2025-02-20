@@ -80,28 +80,38 @@ if (file_exists('../config/job_page_authentication.php')) {
                                     <input type="text" value="<?php echo $job_a_row['educational_qualification']; ?>" readonly="readonly" name="educational_qualification" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label class="tit"><?php echo $Zitiziti['LOCATION']; ?></label>
-                                    <select disabled="disabled" class="chosen-select" name="job_location">
-                                        <option value="1">Chennai</option>
-                                        <option value="2">Bangalore</option>
-                                        <option value="3">Delhi</option>
-                                        <option value="4">Kerala</option>
+                                    <label class="tit"><?php echo $Zitiziti['CITY']; ?></label>
+                                    <select class="chosen-select" name="city_slug[]" disabled="disabled">
+                                        <option value=""><?php echo $Zitiziti['JOB-SELECT-JOB-CITY-LABEL']; ?></option>
+                                        <?php
+                                        foreach (getAllCities() as $city) {
+                                            if (strtolower($city['city_name']) == 'www') {
+                                                continue;
+                                            }
+                                        ?>
+                                            <option <?php echo in_array($city['city_slug'], (array)json_decode($job_a_row['city_slug'], true)) ? 'selected' : '' ?>
+                                                value="<?php echo $city['city_slug']; ?>">
+                                                <?php echo $city['city_name']; ?>
+                                            </option>
+                                        <?php
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="tit"><?php echo $Zitiziti['JOB-CATEGORY-LABEL']; ?></label>
-                                    <select disabled="disabled" class="chosen-select" name="job_location">
-                                        <option value=""><?php echo $Zitiziti['JOB-SELECT-JOB-LOCATION-LABEL']; ?></option>
+                                    <select disabled="disabled" onChange="getSubCategory(this.value);" class="chosen-select" name="category_id">
+                                        <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                         <?php
-                                        foreach (getAllJobCities() as $cities_row) {
+                                        foreach (getAllCategories() as $categories_row) {
                                             ?>
                                             <option
-                                                <?php if ($job_a_row['job_location'] == $cities_row['city_id']) {
+                                                <?php if ($job_a_row['category_id'] == $categories_row['category_id']) {
                                                     echo "selected";
                                                 } ?>
-                                                value="<?php echo $cities_row['city_id']; ?>"><?php echo $cities_row['city_name']; ?></option>
+                                                value="<?php echo $categories_row['category_id']; ?>"><?php echo $categories_row['category_name']; ?></option>
                                             <?php
                                         }
                                         ?>
@@ -111,7 +121,7 @@ if (file_exists('../config/job_page_authentication.php')) {
                                     <label class="tit"><?php echo $Zitiziti['JOB-SUB-CATEGORY-LABEL']; ?></label>
                                     <select disabled="disabled" class="chosen-select" id="sub_category_id" name="sub_category_id">
                                         <?php
-                                        foreach (getCategoryJobSubCategories($job_a_row['category_id']) as $sub_categories_row) {
+                                        foreach (getCategorySubCategories($job_a_row['category_id']) as $sub_categories_row) {
                                             if ($job_a_row['sub_category_id'] != 0) {
                                                 ?>
                                                 <option <?php

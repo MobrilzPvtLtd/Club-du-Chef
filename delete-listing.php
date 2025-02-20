@@ -200,16 +200,20 @@ if (file_exists('config/listing_page_authentication.php')) {
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <select disabled="disabled" name="sub_category_id"
-                                                            id="sub_category_id"
-                                                            class="form-control">
-                                                        <option
-                                                            value=""><?php echo $Zitiziti['SELECT_SUB_CATEGORY']; ?></option>
+                                                    <select disabled="disabled" name="sub_category_id[]"
+                                                            id="sub_category_id" multiple
+                                                            class="chosen-select form-control">
+
                                                         <?php
-                                                        foreach (getAllSubCategories() as $sub_categories_row) {
+                                                        foreach (getCategorySubCategories($listings_a_row['category_id']) as $sub_categories_row) {
                                                             ?>
-                                                            <option <?php if ($listings_a_row['sub_category_id'] == $sub_categories_row['sub_category_id']) {
-                                                                echo "selected";
+                                                            <option <?php $catArray = explode(',', $listings_a_row['sub_category_id']);
+                                                            foreach ($catArray as $cat_Array) {
+                                                                if ($sub_categories_row['sub_category_id'] == $cat_Array) {
+                                                                    echo "selected";
+
+                                                                }
+
                                                             } ?>
                                                                 value="<?php echo $sub_categories_row['sub_category_id']; ?>"><?php echo $sub_categories_row['sub_category_name']; ?></option>
                                                             <?php

@@ -73,7 +73,7 @@ if (file_exists('config/event_page_authentication.php')) {
                                                         id="category_id" class="chosen-select form-control">
                                                     <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                                     <?php
-                                                    foreach (getAllEventCategories() as $categories_row) {
+                                                    foreach (getAllCategories() as $categories_row) {
                                                         ?>
                                                         <option <?php if ($events_a_row['category_id'] == $categories_row['category_id']) {
                                                             echo "selected";
@@ -89,7 +89,7 @@ if (file_exists('config/event_page_authentication.php')) {
                                     </div>
                                     <!--FILED END-->
 
-                                    <div class="row">
+                                    <!-- <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <select disabled="disabled" onChange="geteventCities(this.value);" name="country_id" required="required"
@@ -114,32 +114,28 @@ if (file_exists('config/event_page_authentication.php')) {
                                                 </select>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!--FILED END-->
 
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <select disabled="disabled" data-placeholder="<?php echo $Zitiziti['SELECT_YOUR_CITY']; ?>"
-                                                        name="city_id[]" id="city_id"
-                                                        multiple required="required"
-                                                        class="chosen-select form-control">
-                                                    <?php
-                                                    $cityArray = explode(',', $events_a_row['city_id']);
-                                                    foreach ($cityArray as $cit_Array) {
-                                                        ?>
-                                                        <option <?php
-                                                        echo "selected";
-
-                                                        $city_row = getCity($cit_Array);
-
-                                                        ?>
-                                                                value="<?php echo $city_row['city_id']; ?>"><?php echo $city_row['city_name']; ?></option>
-                                                        <?php
+                                            <select class="chosen-select" name="city_slug[]" disabled="disabled">
+                                                <option value=""><?php echo $Zitiziti['JOB-SELECT-JOB-CITY-LABEL']; ?></option>
+                                                <?php
+                                                foreach (getAllCities() as $city) {
+                                                    if (strtolower($city['city_name']) == 'www') {
+                                                        continue;
                                                     }
-                                                    ?>
-
-                                                </select>
+                                                ?>
+                                                    <option <?php echo in_array($city['city_slug'], (array)json_decode($events_a_row['city_slug'], true)) ? 'selected' : '' ?>
+                                                        value="<?php echo $city['city_slug']; ?>">
+                                                        <?php echo $city['city_name']; ?>
+                                                    </option>
+                                                <?php
+                                                    }
+                                                ?>
+                                            </select>
                                             </div>
                                         </div>
                                     </div>

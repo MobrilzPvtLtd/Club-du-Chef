@@ -36,6 +36,27 @@ include "header.php";
                                         <?php include "../page_level_message.php"; ?>
                                         <ul>
                                             <li>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <select disabled="disabled" data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" required="required" class="chosen-select form-control">
+                                                                <?php
+                                                                foreach (getAllCities() as $city) {
+                                                                    if (strtolower($city['city_name']) == 'www') {
+                                                                        continue;
+                                                                    }
+                                                                    ?>
+                                                                   <option <?php echo in_array($city['city_slug'], (array)json_decode($products_a_row['city_slug'], true)) ? 'selected' : '' ?>
+                                                                        value="<?php echo $city['city_slug']; ?>">
+                                                                        <?php echo $city['city_name']; ?>
+                                                                    </option>
+                                                                <?php
+                                                                }
+                                                                ?>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <!--FILED START-->
                                                 <div class="row">
                                                     <div class="col-md-12">
@@ -80,7 +101,7 @@ include "header.php";
                                                                     id="category_id" class="chosen-select form-control">
                                                                 <option value="">Select Category</option>
                                                                 <?php
-                                                                foreach (getAllProductCategories() as $categories_row) {
+                                                                foreach (getAllCategories() as $categories_row) {
                                                                     ?>
                                                                     <option <?php if ($products_a_row['category_id'] == $categories_row['category_id']) {
                                                                         echo "selected";
@@ -103,7 +124,7 @@ include "header.php";
                                                                     multiple
                                                                     class="chosen-select form-control">
                                                                 <?php
-                                                                foreach (getCategoryProductSubCategories($products_a_row['category_id']) as $sub_categories_row) {
+                                                                foreach (getCategorySubCategories($products_a_row['category_id']) as $sub_categories_row) {
                                                                     ?>
                                                                     <option <?php $catArray = explode(',', $products_a_row['sub_category_id']);
                                                                     foreach ($catArray as $cat_Array) {
@@ -320,12 +341,12 @@ include "header.php";
 <script src="../js/select-opt.js"></script>
 <script src="js/admin-custom.js"></script>
 <script>
-    function getProductSubCategory(val) {
+    function getSubCategory(val) {
         $.ajax({
             type: "POST",
-            url: "../product_sub_category_process.php",
+            url: "../sub_category_process.php",
             data: 'category_id=' + val,
-            success: function (data) {
+            success: function(data) {
                 $("#sub_category_id").html(data);
                 $('#sub_category_id').trigger("chosen:updated");
             }
