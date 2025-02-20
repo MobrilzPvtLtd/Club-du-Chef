@@ -71,7 +71,6 @@ if ($current_home_page != '2' && $current_home_page != '3') {
                     <p><?php echo $Zitiziti['HOM-POP-SUB-TIT']; ?></p>
                 </div>
                 <div class="plac-hom-all-pla">
-
                     <ul>
                         <?php
                         if ($current_home_page == '3' || $current_home_page == '4' || $current_home_page == '5' || $current_home_page == '6' || $current_home_page == '7' || $current_home_page == '8' || $current_home_page == '9') {

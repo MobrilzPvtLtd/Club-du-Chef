@@ -101,7 +101,7 @@ if($footer_row['admin_expert_show'] != 1) {
                         <li class="sr-sea">
                             <select class="chosen-select py-1 rounded-start" id="expert-select-search1" name="expert-select-search">
                                 <?php
-                                foreach (getAllActiveExpertCategoriesPos() as $expert_search_categories_row) {
+                                foreach (getAllActiveCategoriesPos() as $expert_search_categories_row) {
 
                                     $search_category_name = $expert_search_categories_row['category_name'];
 
@@ -142,11 +142,11 @@ if($footer_row['admin_expert_show'] != 1) {
             <div class="job-pop-tag">
                 <?php
                 if($CurrentCity == 'www'){
-                    $categories = getAllExpertCategoriesOrderByExpertsTableLimit(5);
+                    $categories = getSlugCategory(5);
                 }else{
-                    $categories = getAllExpertCategoriesOrderByExpertsTableLimit(12);
+                    $categories = getSlugCategory(12);
                 }
-
+                
                 foreach ($categories as $expert_trend_categories_row) {
 
                     $trend_category_name = $expert_trend_categories_row['category_name'];
@@ -179,7 +179,7 @@ if($footer_row['admin_expert_show'] != 1) {
                 <div class="land-pack">
                     <ul>
                         <?php
-                        foreach (getAllActiveExpertCategoriesPos() as $expert_categories_row) {
+                        foreach (getAllActiveCategoriesPos() as $expert_categories_row) {
                             $decoded_city_slugs = (array)json_decode($expert_categories_row['city_slug'], true);
                             if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                                 $category_name = $expert_categories_row['category_name'];

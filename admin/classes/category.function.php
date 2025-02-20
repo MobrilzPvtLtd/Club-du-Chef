@@ -116,6 +116,17 @@ function getSubCountCategory()
 
 }
 
+//Get All Experts with given Category Id and Expert Id
+function getAllCategoriesLimit($arg)
+{
+    global $conn;
+
+    $sql = "SELECT * FROM " . TBL . "categories  where category_id != '".$arg."' ORDER BY category_id DESC LIMIT 3";
+    $rs = mysqli_query($conn, $sql);
+    return $rs;
+
+}
+
 //Get All Category Count
 function getCountCategoryCategory($arg)
 {
