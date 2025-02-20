@@ -276,9 +276,9 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                         <ul>
                             <?php
                             if (isset($_GET['category'])) {
-                                $sub_category_qry = getCategoryJobSubCategories($category_id);
+                                $sub_category_qry = getCategorySubCategories($category_id);
                             } else {
-                                $sub_category_qry = getAllJobSubCategories();
+                                $sub_category_qry = getAllSubCategories();
                             }
                             foreach ($sub_category_qry as $sub_category_row) {
 
@@ -498,7 +498,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
     
                                         if ($get_subcategory1 != NULL) {
     
-                                            $job_sub_category_row = getSlugJobSubCategory($get_subcategory1);
+                                            $job_sub_category_row = getSlugSubCategory($get_subcategory1);
     
                                             $hyphend_sub_category_name = urlModifier($job_sub_category_row['sub_category_slug']);
                                             ?>
@@ -701,19 +701,23 @@ include "../footer.php";
 
 <!--on page scroll load data ends-->
 <script>
-    function jobSubcategoryFilter(val) {
+    function SubcategoryFilter(val) {
+        breadcrumbs(val); 
+        footerCategoryInfo(val); 
+        topServiceCategory(val);
         $(".sub_cat_section").css("opacity", 0);
         $.ajax({
             type: "POST",
-            url: "<?php echo $slash; ?>jobs/job_sub_category_filter.php",
+            url: "<?php echo $slash; ?>sub_category_filter.php",
             data: 'category_id=' + val,
-            success: function (data) {
+            success: function(data) {
                 if (data == null) {
                     $(".sub_cat_section").remove();
                 } else {
                     $(".sub_cat_section").html(data);
                     $(".sub_cat_section").css("opacity", 1);
                 }
+
             }
         });
     }

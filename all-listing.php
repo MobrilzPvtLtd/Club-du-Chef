@@ -1625,11 +1625,9 @@ include "footer.php";
 <!--on page scroll load data ends-->
 <script>
     function SubcategoryFilter(val) {
-        //        alert(val);
-        //        $(".sub_cat_section").remove();
-        breadcrumbs(val); //Function call to change breadcrumb
-        footerCategoryInfo(val); //Function call to change footer category data
-        topServiceCategory(val); //Function call to change footer category data
+        breadcrumbs(val); 
+        footerCategoryInfo(val); 
+        topServiceCategory(val);
         $(".sub_cat_section").css("opacity", 0);
         $.ajax({
             type: "POST",

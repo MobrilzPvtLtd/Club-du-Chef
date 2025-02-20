@@ -69,6 +69,17 @@ function getSlugCategory($arg)
 
 }
 
+//Get All Categories
+function getAllCategoriesOrderByTableLimit($arg)
+{
+    global $conn;
+
+    $sql = "SELECT T1.*, COUNT(T2.category_id) AS views FROM " . TBL . "categories AS T1 LEFT JOIN " . TBL . "jobs AS T2 ON T1.category_id = T2.category_id GROUP BY T1.category_id ORDER BY views DESC LIMIT $arg";
+    $rs = mysqli_query($conn, $sql);
+    return $rs;
+
+}
+
 //Get particular Category Name using category id
 function getCategoryName($arg)
 {

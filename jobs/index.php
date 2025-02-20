@@ -88,7 +88,7 @@ if($footer_row['admin_job_show'] != 1) {
                             <li class="sr-sea">
                                 <select class="chosen-select py-1 rounded-start" id="job-select-search" name="serjobs">
                                     <?php
-                                    foreach (getAllJobCategories() as $job_search_categories_row) {
+                                    foreach (getAllCategories() as $job_search_categories_row) {
 
                                     $search_category_name = $job_search_categories_row['category_name'];
 
@@ -133,9 +133,9 @@ if($footer_row['admin_job_show'] != 1) {
                 <div class="job-pop-tag">
                     <?php
                     if($CurrentCity == 'www'){
-                        $categories = getAllJobCategoriesOrderByJobsTableLimit(5);
+                        $categories = getAllCategoriesOrderByTableLimit(5);
                     }else{
-                        $categories = getAllJobCategoriesOrderByJobsTableLimit(12);
+                        $categories = getAllCategoriesOrderByTableLimit(12);
                     }
                     foreach ($categories as $job_trend_categories_row) {
 
@@ -190,7 +190,7 @@ if($footer_row['admin_job_show'] != 1) {
 
                             $category_id = $job_categories_row['category_id'];
 
-                            $total_jobs_category = getCountCategoryJob($category_id);
+                            $total_jobs_category = getCountCategoryCategory($category_id);
 
                             $decoded_city_slugs = (array)json_decode($job_categories_row['city_slug'], true);
                             if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {

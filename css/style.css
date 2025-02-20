@@ -22944,12 +22944,12 @@ a[data-command='p'] {
 
 .plac-hom-search .job-sear ul li.sr-sea:before {
     content: "place";
-    margin: 3px 0 0 15px
+    margin: 15px 0 0 15px
 }
 
 .plac-hom-search .job-sear ul li.sr-btn button {
     padding: 6px 12px;
-    height: 50px
+    height: 60px
 }
 
 
@@ -22963,7 +22963,7 @@ a[data-command='p'] {
 
 .plac-hom-tit {
     position: relative;
-    padding-left: 80px;
+    padding-left: 80px !important;
     width: 100%;
     padding-bottom: 40px
 }
