@@ -24,7 +24,7 @@ if (!isset($conn) || !$conn) {
 
 // Use the TBL constant
 // $sql = "SELECT * FROM " . TBL . "cities GROUP BY city_name ORDER BY city_id DESC";
-$sql = "SELECT * FROM " . TBL . "cities ORDER BY city_id DESC";
+$sql = "SELECT * FROM " . TBL . "cities WHERE city_slug IS NOT NULL ORDER BY city_id DESC";
 $citys = mysqli_query($conn, $sql);
 
 if (!$citys) {
