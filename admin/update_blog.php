@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $email_id = $_POST["email_id"];
 
         $register_mode = "Direct";
-        $user_status = "Inactive";
+        $user_status = "Active";
 
 // Common blog Details
         $blog_name = $_POST["blog_name"];
@@ -52,13 +52,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $user_rs = mysqli_query($conn, $user_sql);
         $usersqlrow = mysqli_fetch_array($user_rs);
 
-        if ($usersqlrow['user_status'] == 'Active') {
+        // if ($usersqlrow['user_status'] == 'Active') {
             // Blog Status
             $blog_status = "Active";
-        } else {
-            // Blog Status
-            $blog_status = "Inactive";
-        }
+        // } else {
+        //     // Blog Status
+        //     $blog_status = "Inactive";
+        // }
 
 // blog Status
 //        $blog_status = "Active";

@@ -44,7 +44,7 @@ $check = mysqli_num_rows($email_check);
 
 if ($check == '0' || empty($check)) { // if new user . Insert a new record
 
-    $user_status = "Inactive";
+    $user_status = "Active";
 
 
     $query = mysqli_query($conn, "INSERT INTO " . TBL . "users 

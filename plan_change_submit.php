@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $user_plan = $_POST["user_plan"];
         $user_type = "Service provider";
-        $user_status = "Inactive";
+        $user_status = "Active";
         $payment_status = "";
 
         $listing_user_id = $_SESSION['user_id'];

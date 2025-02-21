@@ -80,13 +80,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $user_rs = mysqli_query($conn, $user_sql);
         $usersqlrow = mysqli_fetch_array($user_rs);
         
-        if($usersqlrow['user_status'] == 'Active'){
+        // if($usersqlrow['user_status'] == 'Active'){
             // Event Status
             $event_status = "Active";
-        }else{
+        // }else{
             // Event Status
-            $event_status = "Inactive";
-        }
+            // $event_status = "Inactive";
+        // }
 
 
         // Event Status

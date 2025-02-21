@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
         $user_id = $listings_a_row["user_id"];
 
         $register_mode = "Direct";
-        $user_status = "Inactive";
+        $user_status = "Active";
 
 // Common Listing Details
 

@@ -298,7 +298,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
         } else {
-            $user_status = "Inactive";
+            $user_status = "Active";
 
             $qry = "INSERT INTO " . TBL . "users 
 					(first_name, last_name, email_id, mobile_number, register_mode, user_status, user_cdt) 

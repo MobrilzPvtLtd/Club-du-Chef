@@ -37,7 +37,7 @@ if (isset($_POST['listing_submit'])) {
     $_SESSION['email_id'] = $_POST["email_id"];
 
     $_SESSION['register_mode'] = "Direct";
-    $_SESSION['user_status'] = "Inactive";
+    $_SESSION['user_status'] = "Active";
 
 // Common Listing Details
     $_SESSION['listing_name'] = $_POST["listing_name"];

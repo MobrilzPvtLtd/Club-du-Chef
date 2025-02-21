@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         }
         $register_mode = "Direct";
-        $user_status = "Inactive";
+        $user_status = "Active";
 
         $user_address = $_POST["user_address"];
         $user_facebook = $_POST["user_facebook"];

@@ -127,7 +127,7 @@ $all_texts_row = getAllTexts(); //Fetch All Text Data
                         <li><a href="profile.php">Dashboard</a></li>
                         <li><a href="profile.php">Profile page</a></li>
                         <li><a href="admin-all-users.php">All users</a></li>
-                        <li><a href="admin-new-user-requests.php">New user requests</a></li>
+                        <!-- <li><a href="admin-new-user-requests.php">New user requests</a></li> -->
                         <li><a href="admin-new-cod-requests.php">Cash on delivery(COD) requests</a></li>
                         <li><a href="admin-all-users-general.php">General users</a></li>
                         <li><a href="admin-all-users-service-provider.php">Services providers</a></li>
@@ -285,12 +285,12 @@ $all_texts_row = getAllTexts(); //Fetch All Text Data
                             </a>
                             <div>
                                 <ol>
-                                    <li>
+                                    <!-- <li>
                                         <a href="admin-new-user-requests.php">New User Requests</a>
-                                    </li>
-                                    <li>
+                                    </li> -->
+                                    <!-- <li>
                                         <a href="admin-new-cod-requests.php">New COD Payment Requests</a>
-                                    </li>
+                                    </li> -->
                                     <?php
                                     foreach (getAllPlanType() as $plan_type_row) {
                                         $name[] = array('name' => $plan_type_row['plan_type_name']);
