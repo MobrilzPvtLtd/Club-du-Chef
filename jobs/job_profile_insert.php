@@ -18,7 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $current_company = $_POST["current_company"];
         $notice_period = $_POST["notice_period"];
         $educational_qualification = $_POST["educational_qualification"];
-        $sub_category_id = $_POST["sub_category_id"];
+        // $sub_category_id = $_POST["sub_category_id"];
+        $category_id = $_POST["category_id"];
         $years_of_experience = $_POST["years_of_experience"];
         $available_time_start = $_POST["available_time_start"];
 
@@ -51,11 +52,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $prefix = ',';
         }
 
-        $sub_category_sql = "SELECT * FROM  " . TBL . "job_sub_categories where sub_category_id='" . $sub_category_id . "'";
-        $sub_category_rs = mysqli_query($conn, $sub_category_sql);
-        $sub_category_row = mysqli_fetch_array($sub_category_rs);
+        // $sub_category_sql = "SELECT * FROM  " . TBL . "job_sub_categories where sub_category_id='" . $sub_category_id . "'";
+        // $sub_category_rs = mysqli_query($conn, $sub_category_sql);
+        // $sub_category_row = mysqli_fetch_array($sub_category_rs);
 
-        $category_id = $sub_category_row["category_id"];
+        // $category_id = $sub_category_row["category_id"];
 
         $job_profile_status = "Active";
 
@@ -177,7 +178,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      , experience_1='" . $experience_1 . "', experience_2 ='" . $experience_2 . "', experience_3='" . $experience_3 . "', experience_4 ='" . $experience_4 . "'
      , education_1='" . $education_1 . "', education_2 ='" . $education_2 . "', education_3 ='" . $education_3 . "', education_4 ='" . $education_4 . "'
      , additional_info_1='" . $additional_info_1 . "', additional_info_2 ='" . $additional_info_2 . "', additional_info_3='" . $additional_info_3 . "', additional_info_4 ='" . $additional_info_4 . "'
-     , category_id='" . $category_id . "', sub_category_id='" . $sub_category_id . "', job_profile_udt ='" . $curDate . "', job_profile_status='" . $job_profile_status . "', job_profile_slug ='" . $job_profile_slug . "'
+     , category_id='" . $category_id . "', job_profile_udt ='" . $curDate . "', job_profile_status='" . $job_profile_status . "', job_profile_slug ='" . $job_profile_slug . "'
        where job_profile_id ='" . $job_profile_id . "'");
 
         } else {
@@ -211,14 +212,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					, experience_1, experience_2, experience_3, experience_4
 					, education_1, education_2, education_3, education_4
 					, additional_info_1, additional_info_2, additional_info_3, additional_info_4
-					, category_id, sub_category_id
+					, category_id
 					, job_profile_udt, job_profile_status, job_profile_slug, job_profile_cdt)
 					VALUES 
 					('$user_id', '$profile_name', '$current_company', '$years_of_experience', '$notice_period', '$available_time_start', '$educational_qualification', '$cover_image', '$job_profile_image', '$job_profile_resume', '$skill_set'
 					, '$experience_1', '$experience_2', '$experience_3', '$experience_4'
 					, '$education_1', '$education_2', '$education_3', '$education_4'
 					, '$additional_info_1', '$additional_info_2', '$additional_info_3', '$additional_info_4'
-					, '$category_id', '$sub_category_id',
+					, '$category_id',
 					 '$curDate', '$job_profile_status', '$job_profile_slug', '$curDate')";
 
             $job_profile_profile_res = mysqli_query($conn, $job_profile_profile_qry);
