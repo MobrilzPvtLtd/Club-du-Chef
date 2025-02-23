@@ -27,7 +27,7 @@ include "header.php";
                                     <th>Sub Category Name</th>
                                     <th>Main Category Name</th>
 									<th>Created date</th>
-									<th>Listing</th>
+									<th>Type</th>
 									<th>Edit</th>
 									<th>Delete</th>
 								</tr>
@@ -57,8 +57,8 @@ include "header.php";
                                     <td><b class="db-list-rat"><?php echo $row['sub_category_name']; ?></b></td>
                                     <td><b class="db-list-rat"><?php echo $cat_sql_row['category_name']; ?></b></td>
                                     <td><?php echo dateFormatconverter($row['sub_category_cdt']); ?></td>
-                                    <td><span class="db-list-ststus" data-toggle="tooltip"
-                                              title="Total listings in this category"><?php echo $category_listing_count; ?></span></td>
+                                    <td><?php echo $row['type']; ?></td>
+                                    <!-- <td><span class="db-list-ststus" data-toggle="tooltip" title="Total listings in this category"><?php echo $category_listing_count; ?></span></td> -->
                                     <td><a href="admin-sub-category-edit.php?row=<?php echo $row['sub_category_id']; ?>" class="db-list-edit">Edit</a></td>
                                     <td><a href="admin-sub-category-delete.php?row=<?php echo $row['sub_category_id']; ?>" class="db-list-edit">Delete</a></td>
                                 </tr>

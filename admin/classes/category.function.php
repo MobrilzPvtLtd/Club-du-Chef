@@ -26,7 +26,7 @@ function getAllCategoriesPos()
 {
     global $conn;
 
-    $sql = "SELECT * FROM " . TBL . "categories ORDER BY category_filter_pos_id ASC";
+    $sql = "SELECT * FROM " . TBL . "categories WHERE type = 'listing' ORDER BY category_filter_pos_id ASC";
     $rs = mysqli_query($conn, $sql);
     return $rs;
 
@@ -43,7 +43,7 @@ function getAllActiveCategoriesPos()
 
 }
 
-//Get particular Category using category id
+//Get particular Category using category id for sabcategory
 function getCategory($arg)
 {
     global $conn;
@@ -60,7 +60,7 @@ function getNameCategory($arg)
 {
     global $conn;
 
-    $sql = "SELECT * FROM  " . TBL . "categories where category_name='".$arg."'";
+    $sql = "SELECT * FROM  " . TBL . "categories where category_name='".$arg."' AND type = 'listing'";
     $rs = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($rs);
     return $row;
@@ -72,21 +72,10 @@ function getSlugCategory($arg)
 {
     global $conn;
 
-    $sql = "SELECT * FROM  " . TBL . "categories where category_slug='".$arg."'";
+    $sql = "SELECT * FROM  " . TBL . "categories where category_slug='".$arg."' AND type = 'listing'";
     $rs = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($rs);
     return $row;
-
-}
-
-//Get All Categories
-function getAllCategoriesOrderByTableLimit($arg)
-{
-    global $conn;
-
-    $sql = "SELECT T1.*, COUNT(T2.category_id) AS views FROM " . TBL . "categories AS T1 LEFT JOIN " . TBL . "jobs AS T2 ON T1.category_id = T2.category_id GROUP BY T1.category_id ORDER BY views DESC LIMIT $arg";
-    $rs = mysqli_query($conn, $sql);
-    return $rs;
 
 }
 
@@ -95,7 +84,7 @@ function getCategoryName($arg)
 {
     global $conn;
 
-    $sql = "SELECT category_name FROM  " . TBL . "categories where category_id='".$arg."'";
+    $sql = "SELECT category_name FROM  " . TBL . "categories where category_id='".$arg."' AND type = 'listing'";
     $rs = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($rs);
     return $row[0];
@@ -107,7 +96,7 @@ function getCategorySlug($arg)
 {
     global $conn;
 
-    $sql = "SELECT category_slug FROM  " . TBL . "categories where category_id='".$arg."'";
+    $sql = "SELECT category_slug FROM  " . TBL . "categories where category_id='".$arg."' type = 'listing'";
     $rs = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($rs);
     return $row[0];
@@ -119,7 +108,7 @@ function getCountCategory()
 {
     global $conn;
 
-    $sql = "SELECT * FROM " . TBL . "categories ORDER BY category_id DESC";
+    $sql = "SELECT * FROM " . TBL . "categories WHERE type = 'listing' ORDER BY category_id DESC";
     $rs = mysqli_query($conn, $sql);
     $row = mysqli_num_rows($rs);
     return $row;
@@ -130,7 +119,7 @@ function getSubCountCategory()
 {
     global $conn;
 
-    $sql = "SELECT * FROM " . TBL . "sub_categories ORDER BY sub_category_id DESC";
+    $sql = "SELECT * FROM " . TBL . "sub_categories WHERE type = 'listing' ORDER BY sub_category_id DESC";
     $rs = mysqli_query($conn, $sql);
     $row = mysqli_num_rows($rs);
     return $row;
@@ -142,7 +131,7 @@ function getAllCategoriesLimit($arg)
 {
     global $conn;
 
-    $sql = "SELECT * FROM " . TBL . "categories  where category_id != '".$arg."' ORDER BY category_id DESC LIMIT 3";
+    $sql = "SELECT * FROM " . TBL . "categories where category_id != '".$arg."' AND type = 'listing' ORDER BY category_id DESC LIMIT 3";
     $rs = mysqli_query($conn, $sql);
     return $rs;
 
@@ -153,7 +142,7 @@ function getCountCategoryCategory($arg)
 {
     global $conn;
 
-    $sql = "SELECT * FROM " . TBL . "categories where category_id='".$arg."'";
+    $sql = "SELECT * FROM " . TBL . "categories where category_id='".$arg."' AND type = 'listing'";
     $rs = mysqli_query($conn, $sql);
     $row = mysqli_num_rows($rs);
     return $row;
