@@ -27,7 +27,7 @@ include "header.php";
                                     <th>Category Name</th>
                                     <th>Category Image</th>
 									<th>Created date</th>
-									<th>Listing</th>
+									<th>Type</th>
                                     <th>Sub Cate</th>
 									<th>Edit</th>
                                     <th>View Sub Cate</th>
@@ -38,7 +38,6 @@ include "header.php";
                             <?php
                             $si=1;
                             foreach (getAllCategoriesPos() as $row) {
-
                                 $category_id = $row['category_id'];
 
                                 $category_listing_count = getCountCategoryListing($category_id);
@@ -51,8 +50,8 @@ include "header.php";
                                     <td><b class="db-list-rat"><?php echo $row['category_name']; ?></b></td>
                                     <td><img src="../images/services/<?php echo $row['category_image']; ?>" alt=""></td>
                                     <td><?php echo dateFormatconverter($row['category_cdt']); ?></td>
-                                    <td><span class="db-list-ststus" data-toggle="tooltip"
-                                              title="Total listings in this category"><?php echo $category_listing_count; ?></span></td>
+                                    <td><?php echo $row['type']; ?></td>
+                                    <!-- <td><span class="db-list-ststus" data-toggle="tooltip" title="Total listings in this category"><?php echo $category_listing_count; ?></span></td> -->
                                     <td><span class="db-list-ststus"><?php echo $category_sub_category_count; ?></span></td>
                                     <td><a href="admin-category-edit.php?row=<?php echo $row['category_id']; ?>" class="db-list-edit">Edit</a></td>
                                     <td><a href="admin-all-sub-category.php?cat=<?php echo $row['category_id']; ?>" class="db-list-edit">View</a></td>

@@ -28,6 +28,7 @@ include "header.php";
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
+                                                    <label for="city">City</label>
                                                     <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" required="required" class="chosen-select form-control">
                                                         <?php
                                                         foreach (getAllCities() as $city) {
@@ -41,6 +42,23 @@ include "header.php";
                                                         <?php
                                                         }
                                                         ?>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="type">Type</label>
+                                                    <select name="type" id="type" required="required" class="chosen-select form-control">
+                                                        <option value="listing">Listing</option>
+                                                        <option value="expert">expert</option>
+                                                        <option value="job">job</option>
+                                                        <option value="product">product</option>
+                                                        <option value="event">event</option>
+                                                        <option value="blog">blog</option>
+                                                        <option value="place">place</option>
+                                                        <option value="news">news</option>
                                                     </select>
                                                 </div>
                                             </div>

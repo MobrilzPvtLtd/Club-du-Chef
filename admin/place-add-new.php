@@ -68,7 +68,7 @@ include "header.php";
                                                             <select name="category_id" required="required" id="category_id" class="chosen-select">
                                                                 <option value="">Select Category</option>
                                                                 <?php
-                                                                foreach (getAllCategories() as $categories_row) {
+                                                                foreach (getAllPlaceCategories() as $categories_row) {
                                                                 ?>
                                                                     <option
                                                                     value="<?php echo $categories_row['category_id']; ?>"><?php echo $categories_row['category_name']; ?></option>

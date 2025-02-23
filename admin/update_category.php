@@ -17,6 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $category_image_old = $_POST['category_image_old'];
         $category_status = "Active";
 
+        $type = $_POST['type'];
+
         $city_slug = $_POST['city_slug'];
         if (is_array($city_slug)) {
             $city_slug = array_map(function($city) use ($conn) {
@@ -85,14 +87,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             return $newLink;
         }
 
-
         $category_name1 = trim(preg_replace('/[^A-Za-z0-9]/', ' ', $category_name));
         $category_slug = checkListinggCategorySlug($category_name1, $category_id);
-
 
         $sql = mysqli_query($conn, "UPDATE  " . TBL . "categories SET 
         category_name='" . $category_name . "', 
         city_slug='" . $city_slug_json . "', 
+        type='" . $type . "', 
         category_status='" . $category_status . "', 
         category_image='" . $category_image . "', 
         category_slug='" . $category_slug . "'

@@ -191,7 +191,7 @@ include "header.php";
                                                     <select onChange="getSubCategory(this.value);" name="category_id" id="category_id" class="form-control">
                                                         <option value="">Select Category</option>
                                                         <?php
-                                                        foreach (getAllCategories() as $categories_row) {
+                                                        foreach (getAllCategoriesListing() as $categories_row) {
                                                         ?>
                                                             <option
                                                                 value="<?php echo $categories_row['category_id']; ?>"><?php echo $categories_row['category_name']; ?></option>

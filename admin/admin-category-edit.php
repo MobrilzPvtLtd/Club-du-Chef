@@ -34,6 +34,7 @@ include "header.php";
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
+                                                    <label for="city">City</label>
                                                     <select data-placeholder="<?php echo "Select Your City"; ?>" name="city_slug[]" id="city_slug" required="required" class="chosen-select form-control">
                                                         <?php
                                                         foreach (getAllCities() as $city) {
@@ -48,6 +49,24 @@ include "header.php";
                                                         <?php
                                                         }
                                                         ?>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="type">Type</label>
+                                                    <select name="type" id="type" required="required" class="chosen-select form-control">
+                                                        <option value="listing" <?php echo $row['type'] == 'listing' ? 'selected' : '' ?>>Listing</option>
+                                                        <option value="expert" <?php echo $row['type'] == 'expert' ? 'selected' : '' ?>>expert</option>
+                                                        <option value="job" <?php echo $row['type'] == 'job' ? 'selected' : '' ?>>job</option>
+                                                        <option value="product" <?php echo $row['type'] == 'product' ? 'selected' : '' ?>>product</option>
+                                                        <option value="event" <?php echo $row['type'] == 'event' ? 'selected' : '' ?>>event</option>
+                                                        <option value="blog" <?php echo $row['type'] == 'blog' ? 'selected' : '' ?>>blog</option>
+                                                        <option value="place" <?php echo $row['type'] == 'place' ? 'selected' : '' ?>>place</option>
+                                                        <option value="news" <?php echo $row['type'] == 'news' ? 'selected' : '' ?>>news</option>
                                                     </select>
                                                 </div>
                                             </div>

@@ -94,7 +94,7 @@ include "header.php";
                                                             <select name="category_id" id="category_id" class="chosen-select">
                                                                 <option value="">Select Category</option>
                                                                 <?php
-                                                                foreach (getAllCategories() as $categories_row) {
+                                                                foreach (getAllPlaceCategories() as $categories_row) {
                                                                 ?>
                                                                     <option <?php if ($place_row['category_id'] == $categories_row['category_id']) {
                                                                                 echo "selected";

@@ -5,7 +5,7 @@ function getAllExpertCategories()
 {
     global $conn;
 
-    $sql = "SELECT * FROM " . TBL . "categories ORDER BY category_id DESC";
+    $sql = "SELECT * FROM " . TBL . "categories WHERE type = 'expert' ORDER BY category_id DESC";
     $rs = mysqli_query($conn, $sql);
     return $rs;
 

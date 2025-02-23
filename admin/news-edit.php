@@ -76,7 +76,7 @@ include "header.php";
                                                             <select name="category_id" required="required" id="category_id" class="chosen-select">
                                                                 <option value="">Select Category</option>
                                                                 <?php
-                                                                foreach (getAllCategories() as $categories_row) {
+                                                                foreach (getAllNewsCategories() as $categories_row) {
                                                                 ?>
                                                                     <option <?php if ($news_row['category_id'] == $categories_row['category_id']) {
                                                                                 echo "selected";

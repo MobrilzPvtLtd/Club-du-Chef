@@ -193,7 +193,7 @@ include "header.php";
                                     <select onChange="getSubCategory(this.value);" name="category_id" id="category_id" class="chosen-select">
                                         <option value="">Select Category</option>
                                         <?php
-                                        foreach (getAllCategories() as $categories_row) {
+                                        foreach (getAllExpertCategories() as $categories_row) {
                                         ?>
                                             <option <?php if ($service_expert_row['category_id'] == $categories_row['category_id']) {
                                                         echo "selected";

@@ -1,5 +1,15 @@
 <?php
 
+//Get All Categories For Listing
+function getAllCategoriesListing()
+{
+    global $conn;
+
+    $sql = "SELECT * FROM " . TBL . "categories WHERE type = 'listing' ORDER BY category_id DESC";
+    $rs = mysqli_query($conn, $sql);
+    return $rs;
+
+}
 //Get All Categories
 function getAllCategories()
 {
