@@ -103,7 +103,7 @@ if ($blog_count_user >= $plan_type_blog_count) {
                                                         id="category_id" class="chosen-select form-control">
                                                     <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                                     <?php
-                                                    foreach (getAllCategories() as $categories_row) {
+                                                    foreach (getAllBlogCategories() as $categories_row) {
                                                         ?>
                                                         <option <?php if ($_SESSION['category_id'] == $categories_row['category_id']) {
                                                             echo "selected";

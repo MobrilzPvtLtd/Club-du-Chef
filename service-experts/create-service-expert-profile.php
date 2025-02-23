@@ -167,7 +167,7 @@ $edit_a_row = $service_expert_row;
                                             name="category_id">
                                             <option value=""><?php echo $Zitiziti['SERVICE-EXPERT-SELECT-WORK-PROFESSION-LABEL']; ?></option>
                                             <?php
-                                            foreach (getAllCategories() as $categories_row) {
+                                            foreach (getAllExpertCategories() as $categories_row) {
                                             ?>
                                                 <option <?php
                                                         if ($categories_row['category_id'] == $service_expert_row['category_id']) {

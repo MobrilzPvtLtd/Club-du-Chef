@@ -21,7 +21,7 @@ function getAllCategories()
 
 }
 
-//Get All Categories order by position Id
+//Get All Categories order by position Id for category section
 function getAllCategoriesPos()
 {
     global $conn;
@@ -185,7 +185,7 @@ function getCategorySeoScore($arg)
         case category_faq_8_ques when '' then 0 else 1 end +
         case category_faq_8_ans when '' then 0 else 1 end +
         case category_google_schema when '' then 0 else 1 end ) 
-        * 100 / 20 as complete FROM " . TBL . "categories WHERE category_id = $arg";
+        * 100 / 20 as complete FROM " . TBL . "categories WHERE category_id = $arg AND type = 'listing'";
     $rs = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($rs);
     return $row[0];

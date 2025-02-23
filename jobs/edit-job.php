@@ -122,7 +122,7 @@ if (file_exists('../config/job_page_authentication.php')) {
                                     <select onChange="getSubCategory(this.value);" class="chosen-select" name="category_id">
                                         <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                         <?php
-                                        foreach (getAllCategories() as $categories_row) {
+                                        foreach (getAllJobCategories() as $categories_row) {
                                             ?>
                                             <option
                                                 <?php if ($job_a_row['category_id'] == $categories_row['category_id']) {

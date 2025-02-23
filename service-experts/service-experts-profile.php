@@ -459,7 +459,7 @@ $exist_day_result = mysqli_query($conn, $bookings);
 
                                 $except_category_id = $except_list_row['category_id'];
 
-                                $except_expert_profile_category_row = getCategory($except_category_id);
+                                $except_expert_profile_category_row = getExpertCategory($except_category_id);
 
                                 $except_expert_category_name = $except_expert_profile_category_row['category_name'];
 
@@ -501,15 +501,15 @@ $exist_day_result = mysqli_query($conn, $bookings);
                             <h4><?php echo $Zitiziti['SERVICE-EXPERT-TRENDING-SERVICES']; ?></h4>
                             <ul>
                                 <?php
-                                foreach (getAllCategoriesLimit($expert_profile_category_id) as $except_category_row) {
+                                foreach (getExceptAllExpertCategories($expert_profile_category_id) as $except_category_row) {
 
                                     $except_category_id = $except_category_row['category_id'];
 
-                                    $except_expert_profile_category_row = getCategory($except_category_id);
+                                    $except_expert_profile_category_row = getExpertCategory($except_category_id);
 
                                     $except_category_name = $except_category_row['category_name'];
 
-                                    $total_experts_category = getCountCategory($except_category_id);
+                                    $total_experts_category = getCountCategoryExperts($except_category_id);
 
                                     ?>
                                     <li>

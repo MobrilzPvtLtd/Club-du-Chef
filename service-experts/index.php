@@ -142,9 +142,9 @@ if($footer_row['admin_expert_show'] != 1) {
             <div class="job-pop-tag">
                 <?php
                 if($CurrentCity == 'www'){
-                    $categories = getAllCategoriesOrderByTableLimit(5);
+                    $categories = getAllExpertCategoriesOrderByExpertsTableLimit(5);
                 }else{
-                    $categories = getAllCategoriesOrderByTableLimit(12);
+                    $categories = getAllExpertCategoriesOrderByExpertsTableLimit(12);
                 }
                 
                 foreach ($categories as $expert_trend_categories_row) {

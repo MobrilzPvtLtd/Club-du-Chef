@@ -67,7 +67,7 @@ if (file_exists('config/product_page_authentication.php')) {
                                                         id="category_id" class="chosen-select form-control">
                                                     <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                                     <?php
-                                                    foreach (getAllCategories() as $categories_row) {
+                                                    foreach (getAllProductCategories() as $categories_row) {
                                                         ?>
                                                         <option <?php if ($products_a_row['category_id'] == $categories_row['category_id']) {
                                                             echo "selected";

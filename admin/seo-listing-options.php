@@ -35,7 +35,7 @@ include "header.php";
                         <tbody>
                         <?php
                         $si = 1;
-                        foreach (getAllCategories() as $row) {
+                        foreach (getAllCategoriesListing() as $row) {
 
                             $cat_id = $row['category_id'];
 

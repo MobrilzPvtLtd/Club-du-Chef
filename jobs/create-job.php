@@ -107,7 +107,7 @@ if ($job_count_user >= $plan_type_job_count) {
                                     <select onChange="getSubCategory(this.value);" class="chosen-select" name="category_id">
                                         <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                         <?php
-                                        foreach (getAllCategories() as $categories_row) {
+                                        foreach (getAllJobCategories() as $categories_row) {
                                             ?>
                                             <option value="<?php echo $categories_row['category_id']; ?>"><?php echo $categories_row['category_name']; ?></option>
                                             <?php

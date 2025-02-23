@@ -80,16 +80,16 @@ $job_profile_row = getUserJobProfile($user_id);
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="tit"><?php echo $Zitiziti['JOB-INTERVIEW-JOB-PROFESSION-LABEL']; ?></label>
-                                <select class="chosen-select" required="required" name="sub_category_id">
+                                <select class="chosen-select" required="required" name="category_id">
                                     <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                     <?php
-                                    foreach (getAllSubCategories() as $sub_categories_row) {
+                                    foreach (getAllJobCategories() as $sub_categories_row) {
                                         ?>
                                         <option
-                                            <?php if ($job_profile_row['sub_category_id'] == $sub_categories_row['sub_category_id']) {
+                                            <?php if ($job_profile_row['category_id'] == $sub_categories_row['category_id']) {
                                                 echo "selected";
                                             } ?>
-                                            value="<?php echo $sub_categories_row['sub_category_id']; ?>"><?php echo $sub_categories_row['sub_category_name']; ?></option>
+                                            value="<?php echo $sub_categories_row['category_id']; ?>"><?php echo $sub_categories_row['category_name']; ?></option>
                                         <?php
                                     }
                                     ?>

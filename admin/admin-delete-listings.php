@@ -199,7 +199,7 @@ include "header.php";
                                                     <select disabled="disabled" name="category_id" id="category_id" class="form-control">
                                                         <option value="">Select Category</option>
                                                         <?php
-                                                        foreach (getAllCategories() as $categories_row) {
+                                                        foreach (getAllCategoriesListing() as $categories_row) {
                                                             ?>
                                                             <option <?php if ($listings_a_row['category_id'] == $categories_row['category_id']) {
                                                                 echo "selected";

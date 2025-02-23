@@ -211,7 +211,7 @@ include "header.php";
                                                                         name="category_id">
                                                                     <option value="">Select Category</option>
                                                                     <?php
-                                                                    foreach (getAllCategories() as $categories_row) {
+                                                                    foreach (getAllJobCategories() as $categories_row) {
                                                                         ?>
                                                                         <option
                                                                             <?php if ($job_a_row['category_id'] == $categories_row['category_id']) {

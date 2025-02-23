@@ -181,7 +181,7 @@ if (file_exists('config/listing_page_authentication.php')) {
                                                         <option
                                                             value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                                         <?php
-                                                        foreach (getAllCategories() as $categories_row) {
+                                                        foreach (getAllCategoriesListing() as $categories_row) {
                                                             ?>
                                                             <option <?php if ($listings_a_row['category_id'] == $categories_row['category_id']) {
                                                                 echo "selected";
