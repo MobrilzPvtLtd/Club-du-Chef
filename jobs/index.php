@@ -190,7 +190,7 @@ if($footer_row['admin_job_show'] != 1) {
 
                             $category_id = $job_categories_row['category_id'];
 
-                            $total_jobs_category = getCountCategoryCategory($category_id);
+                            $total_jobs_category = getCountCategoryJob($category_id);
 
                             $decoded_city_slugs = (array)json_decode($job_categories_row['city_slug'], true);
                             if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {

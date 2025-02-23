@@ -10,6 +10,7 @@ if (isset($_POST['sub_category_submit'])) {
     if($_POST['sub_category_name'] != NULL){
         $cnt = count($_POST['sub_category_name']);
         }
+    $type = $_POST['type'];
     $category_id = $_POST['category_id'];
 
 
@@ -97,8 +98,8 @@ if (isset($_POST['sub_category_submit'])) {
     }
 
 
-        $sql = mysqli_query($conn, "INSERT INTO  " . TBL . "sub_categories (sub_category_name,sub_category_status, sub_category_slug,category_id,sub_category_cdt)
-VALUES ('$sub_category_name','$sub_category_status', '$sub_category_slug','$category_id','$curDate')");
+        $sql = mysqli_query($conn, "INSERT INTO  " . TBL . "sub_categories (sub_category_name,sub_category_status, sub_category_slug,category_id,type,sub_category_cdt)
+VALUES ('$sub_category_name','$sub_category_status', '$sub_category_slug','$category_id','$type','$curDate')");
 
         $LID = mysqli_insert_id($conn);
         $lastID = $LID;

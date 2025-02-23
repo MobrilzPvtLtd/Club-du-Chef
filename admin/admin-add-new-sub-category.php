@@ -24,16 +24,35 @@ include "header.php";
 							<span class="add-list-rem-btn scat-rem-btn" data-toggle="tooltip" title="Click to remove Sub Category field">-</span>
                             
                              <form  name="sub_category_form" id="sub_category_form" method="post" action="insert_sub_category.php" enctype="multipart/form-data" class="cre-dup-form cre-dup-form-show">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="type">Type</label>
+                                            <select name="type" onChange="getCategory(this.value);" required="required" class="chosen-select form-control">
+                                                <option value="">Select Type</option>
+                                                <option value="listing">Listing</option>
+                                                <option value="expert">expert</option>
+                                                <option value="job">job</option>
+                                                <option value="product">product</option>
+                                                <option value="event">event</option>
+                                                <option value="blog">blog</option>
+                                                <option value="place">place</option>
+                                                <option value="news">news</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
                                  <div class="row">
                                      <div class="col-md-12">
                                         <div class="form-group">
+                                            <label for="type">Category</label>
                                             <select name="category_id" class="form-control" id="category_name">
                                                 <?php
-                                                foreach (getAllCategories() as $row) {
+                                                // foreach (getAllCategories() as $row) {
                                                 ?>
-                                                <option value="<?php echo $row['category_id']; ?>"><?php echo $row['category_name']; ?></option>
+                                                <!-- <option value="<?php echo $row['category_id']; ?>"><?php echo $row['category_name']; ?></option> -->
                                                     <?php
-                                                    }
+                                                    // }
                                                     ?>
                                             </select>
 
@@ -77,6 +96,19 @@ include "header.php";
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery-ui.js"></script>
     <script src="js/admin-custom.js"></script> <script src="../js/select-opt.js"></script>
+
+    <script>
+        function getCategory(val) {
+            $.ajax({
+                type: "POST",
+                url: "../sub_category_process.php",
+                data: 'type=' + val,
+                success: function(data) {
+                    $("#category_name").html(data);
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

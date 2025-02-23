@@ -198,7 +198,7 @@ $exist_day_result = mysqli_query($conn, $bookings);
                                 <?php
                                 $sub_category = explode(',', $expert_profile_row['sub_category_id']);
                                 foreach ($sub_category as $sub_category_id) {
-                                    $sub_category_name = getSubCategory($sub_category_id);
+                                    $sub_category_name = getExpertSubCategory($sub_category_id);
                                     ?>
                                     <span><?php echo $sub_category_name['sub_category_name']; ?></span>
                                     <?php
@@ -616,7 +616,7 @@ include "../footer.php";
                                 <select class="chosen-select" disabled="disabled" required="required" name="enquiry_category_old">
                                     <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                     <?php
-                                    foreach (getAllActiveCategoriesPos() as $lead_categories_row) {
+                                    foreach (getAllActiveExpertCategoriesPos() as $lead_categories_row) {
                                         ?>
                                         <option <?php if($expert_profile_row['category_id'] == $lead_categories_row['category_id']){ echo 'selected';} ?> value="<?php echo $lead_categories_row['category_id']; ?>"><?php echo $lead_categories_row['category_name']; ?></option>
                                         <?php

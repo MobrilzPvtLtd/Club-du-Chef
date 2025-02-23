@@ -18,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $category_status = "Active";
 
         $type = $_POST['type'];
+        $category_filter = 0;
 
         $city_slug = $_POST['city_slug'];
         if (is_array($city_slug)) {
@@ -94,6 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         category_name='" . $category_name . "', 
         city_slug='" . $city_slug_json . "', 
         type='" . $type . "', 
+        category_filter='" . $category_filter . "', 
         category_status='" . $category_status . "', 
         category_image='" . $category_image . "', 
         category_slug='" . $category_slug . "'

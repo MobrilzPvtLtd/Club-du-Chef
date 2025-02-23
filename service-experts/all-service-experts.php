@@ -19,7 +19,7 @@ if (isset($_GET['category']) && $_GET['category'] != '.php') {
 
     $category_search_slug = str_replace('-', ' ', $category_search_slug1);
 
-    $cat_search_row = getSlugCategory($category_search_slug);  //Fetch Category Id using category name
+    $cat_search_row = getSlugExpertCategory($category_search_slug);  //Fetch Category Id using category name
 
     $category_id = $cat_search_row['category_id'];
 
@@ -212,7 +212,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                             <select name="cat_check" id="cat_check" class="cat_check chosen-select">
                                 <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                 <?php
-                                foreach (getAllActiveCategoriesPos() as $categories_row) {
+                                foreach (getAllActiveExpertCategoriesPos() as $categories_row) {
                                     ?>
                                     <option <?php if ($category_slug == $categories_row['category_slug']) {
                                         echo 'selected';
@@ -885,7 +885,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                                 <select class="chosen-select" required="required" name="enquiry_category">
                                     <option value=""><?php echo $Zitiziti['SELECT_CATEGORY']; ?></option>
                                     <?php
-                                    foreach (getAllActiveCategoriesPos() as $lead_categories_row) {
+                                    foreach (getAllActiveExpertCategoriesPos() as $lead_categories_row) {
                                         ?>
                                         <option value="<?php echo $lead_categories_row['category_id']; ?>"><?php echo $lead_categories_row['category_name']; ?></option>
                                         <?php

@@ -79,7 +79,7 @@ if ($current_home_page != '2' && $current_home_page != '3') {
                         } else {
                             $all_cat_function = getAllTopCategories();
                         }
-
+                        
                         foreach ($all_cat_function as $toprow) {
 
                             $category_name = $toprow['category_name'];

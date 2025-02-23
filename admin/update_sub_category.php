@@ -16,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sub_category_id = $_POST['sub_category_id'];
         $sub_category_name = $_POST['sub_category_name'];
         $sub_category_image_old = $_POST['sub_category_image_old'];
+        $type = $_POST['type'];
         $category_id = $_POST['category_id'];
         $sub_category_status = "Active";
 
@@ -84,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
         $sql = mysqli_query($conn, "UPDATE  " . TBL . "sub_categories SET sub_category_name='" . $sub_category_name . "', sub_category_status='" . $sub_category_status . "'
-     , category_id='" . $category_id . "', sub_category_slug='" . $sub_category_slug . "'
+     , category_id='" . $category_id . "', type='" . $type . "', sub_category_slug='" . $sub_category_slug . "'
      where sub_category_id='" . $sub_category_id . "'");
 
         if ($sql) {

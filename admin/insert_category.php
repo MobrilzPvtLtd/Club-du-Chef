@@ -30,6 +30,7 @@ if (isset($_POST['category_submit'])) {
         $category_status = "Active";
 
         $type = $_POST['type'];
+        $category_filter = 0;
 
         $city_slug = $_POST['city_slug'];
         if (is_array($city_slug)) {
@@ -112,8 +113,8 @@ if (isset($_POST['category_submit'])) {
             $category_slug = $category_name1;
         }
 
-        $sql = mysqli_query($conn, "INSERT INTO  " . TBL . "categories (category_name,city_slug,type,category_status,category_image,category_filter_pos_id,category_slug,category_cdt)
-VALUES ('$category_name','$city_slug_json','$type','$category_status','$category_image','$category_filter_pos_id', '$category_slug', '$curDate')");
+        $sql = mysqli_query($conn, "INSERT INTO  " . TBL . "categories (category_name,city_slug,type,category_filter,category_status,category_image,category_filter_pos_id,category_slug,category_cdt)
+VALUES ('$category_name','$city_slug_json','$type','$category_filter','$category_status','$category_image','$category_filter_pos_id', '$category_slug', '$curDate')");
 
         $LID = mysqli_insert_id($conn);
         $lastID = $LID;

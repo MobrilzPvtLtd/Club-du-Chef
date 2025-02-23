@@ -37,7 +37,7 @@ function getAllActiveCategoriesPos()
 {
     global $conn;
 
-    $sql = "SELECT * FROM " . TBL . "categories WHERE category_filter = 0 ORDER BY category_filter_pos_id ASC";
+    $sql = "SELECT * FROM " . TBL . "categories WHERE category_filter = 0 AND type = 'listing' ORDER BY category_filter_pos_id ASC";
     $rs = mysqli_query($conn, $sql);
     return $rs;
 

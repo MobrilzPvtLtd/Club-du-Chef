@@ -27,19 +27,37 @@ include "header.php";
                             ?>
                             <form name="sub_category_form" id="sub_category_form" method="post" action="update_sub_category.php" enctype="multipart/form-data" class="cre-dup-form cre-dup-form-show">
                                 <input type="hidden" class="validate" id="sub_category_id" name="sub_category_id" value="<?php echo $row['sub_category_id']; ?>" required="required">
-
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
+                                            <label for="type">Type</label>
+                                            <select name="type" onChange="getCategory(this.value);" required="required" class="chosen-select form-control">
+                                                <option value="">Select Type</option>
+                                                <option value="listing" <?php echo $row['type'] == 'listing' ? 'selected' : '' ?>>Listing</option>
+                                                <option value="expert" <?php echo $row['type'] == 'expert' ? 'selected' : '' ?>>expert</option>
+                                                <option value="job" <?php echo $row['type'] == 'job' ? 'selected' : '' ?>>job</option>
+                                                <option value="product" <?php echo $row['type'] == 'product' ? 'selected' : '' ?>>product</option>
+                                                <option value="event" <?php echo $row['type'] == 'event' ? 'selected' : '' ?>>event</option>
+                                                <option value="blog" <?php echo $row['type'] == 'blog' ? 'selected' : '' ?>>blog</option>
+                                                <option value="place" <?php echo $row['type'] == 'place' ? 'selected' : '' ?>>place</option>
+                                                <option value="news" <?php echo $row['type'] == 'news' ? 'selected' : '' ?>>news</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="type">Category</label>
                                             <select name="category_id" class="form-control" id="category_name">
                                                 <?php
-                                                foreach (getAllCategories() as $row_1) {
+                                                // foreach (getAllCategories() as $row_1) {
 
                                                     ?>
-                                                    <option <?php if($row_1['category_id']== $row['category_id']){ echo "selected"; } ?>
-                                                        value="<?php echo $row_1['category_id']; ?>"><?php echo $row_1['category_name']; ?></option>
+                                                    <!-- <option <?php if($row_1['category_id']== $row['category_id']){ echo "selected"; } ?> -->
+                                                        <!-- value="<?php echo $row_1['category_id']; ?>"><?php echo $row_1['category_name']; ?></option> -->
                                                     <?php
-                                                }
+                                                // }
                                                 ?>
                                             </select>
 
@@ -83,6 +101,24 @@ include "header.php";
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery-ui.js"></script>
     <script src="js/admin-custom.js"></script> <script src="../js/select-opt.js"></script>
+    <script>
+        function getCategory(val) {
+            $.ajax({
+                type: "POST",
+                url: "../sub_category_process.php",
+                data: 'type=' + val,
+                success: function(data) {
+                    $("#category_name").html(data);
+                }
+            });
+        }
+        $(document).ready(function() {
+            var selectedType = $("select[name='type']").val();
+            if (selectedType) {
+                getCategory(selectedType);
+            }
+        });
+    </script>
 </body>
 
 </html>
