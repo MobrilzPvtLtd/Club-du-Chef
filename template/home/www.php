@@ -153,12 +153,11 @@ include "home_page_mid_section.php"
                         ?>
                         <a href="<?php echo stripslashes($get_ad_row['ad_link']); ?>">
                             <span><?php echo $Zitiziti['AD']; ?></span>
-
                             <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $webpage_full_link; ?>images/ads/<?php if ($ad_enquiry_photo != NULL || !empty($ad_enquiry_photo)) {
-                                                                                                                                                                                            echo $ad_enquiry_photo;
-                                                                                                                                                                                        } else {
-                                                                                                                                                                                            echo "ads2.jpg";
-                                                                                                                                                                                        } ?>" alt="">
+                            echo $ad_enquiry_photo;
+                            } else {
+                            echo "ads2.jpg";
+                            } ?>" alt="">
                         </a>
                     </div>
                 </div>
