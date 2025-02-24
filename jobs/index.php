@@ -142,12 +142,12 @@ if($footer_row['admin_job_show'] != 1) {
                         $trend_category_name = $job_trend_categories_row['category_name'];
 
                         $trend_category_id = $job_trend_categories_row['category_id'];
-                        $decoded_city_slugs = (array)json_decode($job_trend_categories_row['city_slug'], true);
-                        if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
+                        // $decoded_city_slugs = (array)json_decode($job_trend_categories_row['city_slug'], true);
+                        // if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                         ?>
                         <a href="<?php echo $ALL_JOBS_URL . urlModifier($job_trend_categories_row['category_slug']); ?>"><?php echo $trend_category_name; ?></a>
                         <?php
-                        }
+                        // }
                     }
                     ?>
                 </div>
@@ -192,8 +192,8 @@ if($footer_row['admin_job_show'] != 1) {
 
                             $total_jobs_category = getCountCategoryJob($category_id);
 
-                            $decoded_city_slugs = (array)json_decode($job_categories_row['city_slug'], true);
-                            if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
+                            // $decoded_city_slugs = (array)json_decode($job_categories_row['city_slug'], true);
+                            // if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                             ?>
                             <li>
                                 <div>
@@ -203,7 +203,7 @@ if($footer_row['admin_job_show'] != 1) {
                                 </div>
                             </li>
                             <?php
-                            }
+                            // }
                         }
                         ?>
                     </ul>

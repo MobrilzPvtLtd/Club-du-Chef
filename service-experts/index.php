@@ -153,12 +153,12 @@ if($footer_row['admin_expert_show'] != 1) {
 
                     $trend_category_id = $expert_trend_categories_row['category_id'];
 
-                    $decoded_city_slugs = (array)json_decode($expert_trend_categories_row['city_slug'], true);
-                    if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
+                    // $decoded_city_slugs = (array)json_decode($expert_trend_categories_row['city_slug'], true);
+                    // if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                     ?>
                     <a href="<?php echo $ALL_EXPERTS_URL . urlModifier($expert_trend_categories_row['category_slug']); ?>"><?php echo $trend_category_name; ?></a>
                     <?php
-                    }
+                    // }
                 }
                 ?>
             </div>
@@ -180,8 +180,8 @@ if($footer_row['admin_expert_show'] != 1) {
                     <ul>
                         <?php
                         foreach (getAllExpertCategoriesPos() as $expert_categories_row) {
-                            $decoded_city_slugs = (array)json_decode($expert_categories_row['city_slug'], true);
-                            if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
+                            // $decoded_city_slugs = (array)json_decode($expert_categories_row['city_slug'], true);
+                            // if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                                 $category_name = $expert_categories_row['category_name'];
 
                                 $category_id = $expert_categories_row['category_id'];
@@ -207,7 +207,7 @@ if($footer_row['admin_expert_show'] != 1) {
                                     </div>
                                 </li>
                         <?php
-                            }
+                            // }
                         }
                         ?>
                     </ul>
