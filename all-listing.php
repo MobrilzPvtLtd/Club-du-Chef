@@ -306,10 +306,10 @@ foreach (getAllCities() as $city) {
                                                         <div class="ne-1">
                                                             <img
                                                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?><?php if ($nearby_listrow['profile_image'] != NULL || !empty($nearby_listrow['profile_image'])) {
-                                                                                                                                                                                                echo "images/listings/" . $nearby_listrow['profile_image'];
-                                                                                                                                                                                            } else {
-                                                                                                                                                                                                echo "images/listings/" . $footer_row['listing_default_image'];
-                                                                                                                                                                                            } ?>">
+                                                            echo "images/listings/" . $nearby_listrow['profile_image'];
+                                                            } else {
+                                                            echo "images/listings/" . $footer_row['listing_default_image'];
+                                                            } ?>">
                                                         </div>
                                                         <div class="ne-2">
                                                             <h5><?php echo $nearby_listrow['listing_name']; ?></h5>
@@ -413,9 +413,9 @@ foreach (getAllCities() as $city) {
                                     <ul>
                                         <?php
                                         if (isset($_GET['category'])) {
-                                            $sub_category_qry = getCategorySubCategories($category_id);
+                                            $sub_category_qry = getCategorySubCategoriesListing($category_id);
                                         } else {
-                                            $sub_category_qry = getAllSubCategories();
+                                            $sub_category_qry = getAllSubCategoriesListing();
                                         }
                                         foreach ($sub_category_qry as $sub_category_row) {
 

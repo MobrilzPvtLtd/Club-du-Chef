@@ -338,10 +338,11 @@ include "header.php";
 </script>
 <script>
     function getSubCategory(val) {
+        var category_type = "job";
         $.ajax({
             type: "POST",
             url: "../sub_category_process.php",
-            data: 'category_id=' + val,
+            data: { category_id: val, category_type: category_type },
             success: function(data) {
                 $("#sub_category_id").html(data);
                 $('#sub_category_id').trigger("chosen:updated");

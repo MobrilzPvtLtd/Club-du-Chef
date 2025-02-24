@@ -276,9 +276,9 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                         <ul>
                             <?php
                             if (isset($_GET['category'])) {
-                                $sub_category_qry = getCategorySubCategories($category_id);
+                                $sub_category_qry = getCategoryJobSubCategories($category_id);
                             } else {
-                                $sub_category_qry = getAllSubCategories();
+                                $sub_category_qry = getAllJobSubCategories();
                             }
                             foreach ($sub_category_qry as $sub_category_row) {
 

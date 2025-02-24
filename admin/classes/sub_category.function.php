@@ -22,6 +22,28 @@ function getCategorySubCategories($arg)
 
 }
 
+//Get All Sub Categories
+function getAllSubCategoriesListing()
+{
+    global $conn;
+
+    $sql = "SELECT * FROM " . TBL . "sub_categories WHERE type = 'listing' ORDER BY sub_category_id DESC";
+    $rs = mysqli_query($conn, $sql);
+    return $rs;
+
+}
+
+//Get All Sub Category with given Category Id
+function getCategorySubCategoriesListing($arg)
+{
+    global $conn;
+
+    $sql = "SELECT * FROM " . TBL . "sub_categories where category_id='".$arg."' AND type = 'listing' ORDER BY sub_category_id DESC";
+    $rs = mysqli_query($conn, $sql);
+    return $rs;
+
+}
+
 //Get particular Category using category id
 function getSubCategory($arg)
 {

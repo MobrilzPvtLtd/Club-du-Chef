@@ -43,7 +43,7 @@ function getAllCategoriesPos()
 
 }
 
-//Get All Active Categories order by position Id
+//Get All Active Categories order by position Id for listing
 function getAllActiveCategoriesPos()
 {
     global $conn;

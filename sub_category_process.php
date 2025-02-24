@@ -5,6 +5,7 @@ if (file_exists('config/info.php')) {
     include('config/info.php');
 }
 
+// get category by type for subcategory 
 if(isset($_POST['type'])){
     $type = $_POST['type'];
     foreach (getAllCategories() as $categories_row) {
@@ -17,6 +18,7 @@ if(isset($_POST['type'])){
     
 }else{
     $category_id = $_POST['category_id'];
+    $category_type = $_POST['category_type'];
     //get matched data from Sub - category table
     
     if(getCountSubCategoryCategory($category_id) <= 0){
@@ -25,7 +27,19 @@ if(isset($_POST['type'])){
         <?php
     }else {
     
-    foreach (getCategorySubCategories($category_id) as $sub_categories_row) {
+    if($category_type == "listing"){
+        $CategorySub = getCategorySubCategoriesListing($category_id);
+    }elseif($category_type == "expert"){
+        $CategorySub = getCategoryExpertSubCategories($category_id);
+    }elseif ($category_type == "job") {
+        $CategorySub = getCategoryJobSubCategories($category_id);
+    }elseif ($category_type == "product") {
+        $CategorySub = getCategoryProductSubCategories($category_id);
+    }else{
+        $CategorySub = getCategorySubCategories($category_id);
+    }
+
+    foreach ($CategorySub as $sub_categories_row) {
     
         ?>
     

@@ -186,7 +186,7 @@ $edit_a_row = $service_expert_row;
                                         <select class="chosen-select" required="required" multiple="multiple" id="sub_category_id"
                                             name="sub_category_id[]">
                                             <?php
-                                            foreach (getAllSubCategories() as $sub_cat_row) {
+                                            foreach (getAllExpertSubCategories() as $sub_cat_row) {
                                             ?>
                                                 <option <?php $catArray = explode(',', $service_expert_row['sub_category_id']);
                                                         foreach ($catArray as $cat_Array) {
@@ -392,10 +392,11 @@ include "../footer.php";
 
 <script>
     function getSubCategory(val) {
+        var category_type = "expert";
         $.ajax({
             type: "POST",
             url: "../sub_category_process.php",
-            data: 'category_id=' + val,
+            data: { category_id: val, category_type: category_type },
             success: function(data) {
                 $("#sub_category_id").html(data);
                 $('#sub_category_id').trigger("chosen:updated");

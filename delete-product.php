@@ -310,10 +310,11 @@ if (file_exists('config/product_page_authentication.php')) {
 <script src="js/custom_validation.js"></script>
 <script>
     function getSubCategory(val) {
+        var category_type = "product";
         $.ajax({
             type: "POST",
             url: "../sub_category_process.php",
-            data: 'category_id=' + val,
+            data: { category_id: val, category_type: category_type },
             success: function (data) {
                 $("#sub_category_id").html(data);
                 $('#sub_category_id').trigger("chosen:updated");

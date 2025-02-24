@@ -207,9 +207,9 @@ seopageview($page_id); //Function To Find Page View
                                     <ul>
                                         <?php
                                         if (isset($_GET['category'])) {
-                                            $sub_category_qry = getCategorySubCategories($category_id);
+                                            $sub_category_qry = getCategorySubCategoriesListing($category_id);
                                         } else {
-                                            $sub_category_qry = getAllSubCategories();
+                                            $sub_category_qry = getAllSubCategoriesListing();
                                         }
                                         foreach ($sub_category_qry as $sub_category_row) {
 

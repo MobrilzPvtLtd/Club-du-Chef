@@ -235,9 +235,9 @@ if($lat && $lng) {
             <option value=""><?php echo $Zitiziti['SELECT_SUB_CATEGORY']; ?></option>
             <?php
             if (isset($_GET['category'])) {
-                $sub_category_qry = getCategorySubCategories($category_id);
+                $sub_category_qry = getCategorySubCategoriesListing($category_id);
             } else {
-                $sub_category_qry = getAllSubCategories();
+                $sub_category_qry = getAllSubCategoriesListing();
             }
             foreach ($sub_category_qry as $sub_category_row) { ?>
                 <option <?php if ($_SESSION['sub_cat_check'] === $sub_category_row['sub_category_id']) {
