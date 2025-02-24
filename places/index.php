@@ -120,8 +120,8 @@ if (isset($_GET['category'])) {
 
                             $category_row = getPlaceCategory($category_id);
 
-                            $decoded_city_slugs = (array)json_decode($placerow['city_slug'], true);
-                            if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
+                            // $decoded_city_slugs = (array)json_decode($placerow['city_slug'], true);
+                            // if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                             ?>
                             <li>
                                 <div class="plac-hom-box">
@@ -137,7 +137,7 @@ if (isset($_GET['category'])) {
                                 </div>
                             </li>
                             <?php
-                            }
+                            // }
                         }
                         } else {
                             ?>

@@ -113,8 +113,8 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
 
                         $news_category_name = $news_category_row['category_name'];
 
-                        $decoded_city_slugs = (array)json_decode($newsrow['city_slug'], true);
-                        if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
+                        // $decoded_city_slugs = (array)json_decode($newsrow['city_slug'], true);
+                        // if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                         ?>
                         <!--BIG POST START-->
                         <div class="news-home-box news-home-box1">
@@ -144,7 +144,7 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                         </div>
                         <!--END BIG POST START-->
                         <?php
-                        }
+                        // }
                     }
                 } else {
                     ?>
@@ -190,12 +190,12 @@ if (isset($_REQUEST['city']) && !empty($_REQUEST['city'])) {
                             foreach (getAllNewsCategoriesPos() as $news_right_side_category_row) {
 
                                 $count_news_per_category = getCountCategoryNews($news_right_side_category_row['category_id']);
-                                $decoded_city_slugs = (array)json_decode($news_right_side_category_row['city_slug'], true);
-                                if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
+                                // $decoded_city_slugs = (array)json_decode($news_right_side_category_row['city_slug'], true);
+                                // if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                             ?>
                                 <li><a href="<?php echo $ALL_NEWS_URL . urlModifier($news_right_side_category_row['category_slug']); ?>"><span><?php echo $count_news_per_category; ?></span><b><?php echo $news_right_side_category_row['category_name']; ?></b></a></li>
                                 <?php
-                                }
+                                // }
                             }
                             ?>
                         </ul>
