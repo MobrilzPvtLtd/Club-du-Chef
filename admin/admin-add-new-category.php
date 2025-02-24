@@ -52,13 +52,13 @@ include "header.php";
                                                     <label for="type">Type</label>
                                                     <select name="type" id="type" required="required" class="chosen-select form-control">
                                                         <option value="listing">Listing</option>
-                                                        <option value="expert">expert</option>
-                                                        <option value="job">job</option>
-                                                        <option value="product">product</option>
-                                                        <option value="event">event</option>
-                                                        <option value="blog">blog</option>
-                                                        <option value="place">place</option>
-                                                        <option value="news">news</option>
+                                                        <option value="expert">Expert</option>
+                                                        <option value="job">Job</option>
+                                                        <option value="product">Product</option>
+                                                        <option value="event">Event</option>
+                                                        <option value="blog">Blog</option>
+                                                        <option value="place">Place</option>
+                                                        <option value="news">News</option>
                                                     </select>
                                                 </div>
                                             </div>

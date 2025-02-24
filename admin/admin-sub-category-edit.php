@@ -34,13 +34,13 @@ include "header.php";
                                             <select name="type" onChange="getCategory(this.value);" required="required" class="chosen-select form-control">
                                                 <option value="">Select Type</option>
                                                 <option value="listing" <?php echo $row['type'] == 'listing' ? 'selected' : '' ?>>Listing</option>
-                                                <option value="expert" <?php echo $row['type'] == 'expert' ? 'selected' : '' ?>>expert</option>
-                                                <option value="job" <?php echo $row['type'] == 'job' ? 'selected' : '' ?>>job</option>
-                                                <option value="product" <?php echo $row['type'] == 'product' ? 'selected' : '' ?>>product</option>
-                                                <option value="event" <?php echo $row['type'] == 'event' ? 'selected' : '' ?>>event</option>
-                                                <option value="blog" <?php echo $row['type'] == 'blog' ? 'selected' : '' ?>>blog</option>
-                                                <option value="place" <?php echo $row['type'] == 'place' ? 'selected' : '' ?>>place</option>
-                                                <option value="news" <?php echo $row['type'] == 'news' ? 'selected' : '' ?>>news</option>
+                                                <option value="expert" <?php echo $row['type'] == 'expert' ? 'selected' : '' ?>>Expert</option>
+                                                <option value="job" <?php echo $row['type'] == 'job' ? 'selected' : '' ?>>Job</option>
+                                                <option value="product" <?php echo $row['type'] == 'product' ? 'selected' : '' ?>>Product</option>
+                                                <option value="event" <?php echo $row['type'] == 'event' ? 'selected' : '' ?>>Event</option>
+                                                <option value="blog" <?php echo $row['type'] == 'blog' ? 'selected' : '' ?>>Blog</option>
+                                                <option value="place" <?php echo $row['type'] == 'place' ? 'selected' : '' ?>>Place</option>
+                                                <option value="news" <?php echo $row['type'] == 'news' ? 'selected' : '' ?>>News</option>
                                             </select>
                                         </div>
                                     </div>
