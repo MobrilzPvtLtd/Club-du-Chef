@@ -20,15 +20,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $type = $_POST['type'];
         $category_filter = 0;
 
-        $city_slug = $_POST['city_slug'];
-        if (is_array($city_slug)) {
-            $city_slug = array_map(function($city) use ($conn) {
-                return mysqli_real_escape_string($conn, $city);
-            }, $city_slug);
-            $city_slug_json = json_encode($city_slug);
-        } else {
-            $city_slug_json = json_encode([]);
-        }
+        $city_slug = null;
+        // if (is_array($city_slug)) {
+        //     $city_slug = array_map(function($city) use ($conn) {
+        //         return mysqli_real_escape_string($conn, $city);
+        //     }, $city_slug);
+        //     $city_slug_json = json_encode($city_slug);
+        // } else {
+        //     $city_slug_json = json_encode([]);
+        // }
 
 //************ Category Name Already Exist Check Starts ***************
 

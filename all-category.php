@@ -69,8 +69,8 @@ foreach (getAllCities() as $city) {
                     <div class="sh-all-scat">
                         <?php
                         foreach (getAllCategoriesPosListing() as $category_sql_row) {
-                            $decoded_city_slugs = (array)json_decode($category_sql_row['city_slug'], true);
-                            if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
+                            // $decoded_city_slugs = (array)json_decode($category_sql_row['city_slug'], true);
+                            // if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                         ?>
                             <ul id="tail-re">
                                 <li>
@@ -104,7 +104,7 @@ foreach (getAllCities() as $city) {
                                 </li>
                             </ul>
                         <?php
-                            }
+                            // }
                         }
                         ?>
                     </div>

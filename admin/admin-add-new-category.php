@@ -25,7 +25,7 @@ include "header.php";
                              <form name="category_form" id="category_form" method="post" action="insert_category.php" class="cre-dup-form cre-dup-form-show" enctype="multipart/form-data">
                                  <ul>
                                      <li>
-                                        <div class="row">
+                                        <!-- <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label for="city">City</label>
@@ -45,7 +45,7 @@ include "header.php";
                                                     </select>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">

@@ -90,8 +90,8 @@ if ($current_home_page != '2' && $current_home_page != '3') {
                             } else {
                                 $category_sql_row = getCategory($category_name);
                             }
-                            $decoded_city_slugs = (array)json_decode($category_sql_row['city_slug'], true);
-                            if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
+                            // $decoded_city_slugs = (array)json_decode($category_sql_row['city_slug'], true);
+                            // if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                         ?>
                             <li>
                                 <div class="plac-hom-box">
@@ -120,7 +120,7 @@ if ($current_home_page != '2' && $current_home_page != '3') {
                                 </div>
                             </li>
                         <?php
-                            }
+                            // }
                         }
                         ?>
                     </ul>
