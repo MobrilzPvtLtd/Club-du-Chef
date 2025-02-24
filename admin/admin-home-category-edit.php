@@ -34,7 +34,7 @@ include "header.php";
                                                 <select name="category_name" class="form-control" id="category_name">
 
                                                     <?php
-                                                    foreach (getAllCategoriesPos() as $li_row){
+                                                    foreach (getAllCategoriesPosListing() as $li_row){
                                                         ?>
                                                         <option
                                                             value="<?php echo $li_row['category_id']; ?>" <?php if ($li_row['category_id'] == $row['category_name']) {

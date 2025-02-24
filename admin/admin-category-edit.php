@@ -59,6 +59,7 @@ include "header.php";
                                                 <div class="form-group">
                                                     <label for="type">Type</label>
                                                     <select name="type" id="type" required="required" class="chosen-select form-control">
+                                                        <option value="">Select Category</option>
                                                         <option value="listing" <?php echo $row['type'] == 'listing' ? 'selected' : '' ?>>Listing</option>
                                                         <option value="expert" <?php echo $row['type'] == 'expert' ? 'selected' : '' ?>>expert</option>
                                                         <option value="job" <?php echo $row['type'] == 'job' ? 'selected' : '' ?>>job</option>

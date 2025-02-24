@@ -37,7 +37,7 @@ include "header.php";
                     <ul id="sortable">
                         <?php
                         $si = 1;
-                        foreach (getAllCategoriesPos() as $row) {
+                        foreach (getAllCategoriesPosListing() as $row) {
                             ?>
                             <li id="sort_<?php echo $row['category_id'] ?>" class="ui-state-default"><i class="material-icons">view_comfy</i> <?php echo $row['category_name']; ?></li>
                             <?php

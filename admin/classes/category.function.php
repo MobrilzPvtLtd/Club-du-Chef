@@ -21,12 +21,23 @@ function getAllCategories()
 
 }
 
+//Get All Categories order by position Id for listing section
+function getAllCategoriesPosListing()
+{
+    global $conn;
+
+    $sql = "SELECT * FROM " . TBL . "categories WHERE type = 'listing' ORDER BY category_filter_pos_id ASC";
+    $rs = mysqli_query($conn, $sql);
+    return $rs;
+
+}
+
 //Get All Categories order by position Id for category section
 function getAllCategoriesPos()
 {
     global $conn;
 
-    $sql = "SELECT * FROM " . TBL . "categories WHERE type = 'listing' ORDER BY category_filter_pos_id ASC";
+    $sql = "SELECT * FROM " . TBL . "categories ORDER BY category_filter_pos_id ASC";
     $rs = mysqli_query($conn, $sql);
     return $rs;
 

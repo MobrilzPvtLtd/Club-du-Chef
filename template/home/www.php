@@ -75,7 +75,7 @@ if ($current_home_page != '2' && $current_home_page != '3') {
                         <?php
                         if ($current_home_page == '3' || $current_home_page == '4' || $current_home_page == '5' || $current_home_page == '6' || $current_home_page == '7' || $current_home_page == '8' || $current_home_page == '9') {
 
-                            $all_cat_function = getAllCategoriesPos();
+                            $all_cat_function = getAllCategoriesPosListing();
                         } else {
                             $all_cat_function = getAllTopCategories();
                         }

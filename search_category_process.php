@@ -10,7 +10,7 @@ $type_id = $_POST['type_id'];
 if ($type_id == 1) {     //Listings Category
 
 //get matched data from listing category table
-    foreach (getAllCategoriesPos() as $row) {
+    foreach (getAllCategoriesPosListing() as $row) {
         ?>
         <option value="<?php echo $row['category_slug']; ?>"><?php echo $row['category_name']; ?></option>
         <?php

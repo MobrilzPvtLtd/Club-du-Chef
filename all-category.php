@@ -68,7 +68,7 @@ foreach (getAllCities() as $city) {
                 <div class="col-md-9">
                     <div class="sh-all-scat">
                         <?php
-                        foreach (getAllCategoriesPos() as $category_sql_row) {
+                        foreach (getAllCategoriesPosListing() as $category_sql_row) {
                             $decoded_city_slugs = (array)json_decode($category_sql_row['city_slug'], true);
                             if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
                         ?>
