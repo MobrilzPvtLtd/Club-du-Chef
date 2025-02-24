@@ -307,7 +307,7 @@ $listing_codea = $_GET['row'];
                                                 class="chosen-select form-control">
                                            
                                             <?php
-                                            foreach (getCategorySubCategories($listings_a_row['category_id']) as $sub_categories_row) {
+                                            foreach (getAllSubCategoriesListing($listings_a_row['category_id']) as $sub_categories_row) {
                                                 ?>
                                                 <option <?php $catArray = explode(',', $listings_a_row['sub_category_id']);
                                                 foreach ($catArray as $cat_Array) {
