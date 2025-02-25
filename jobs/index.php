@@ -132,11 +132,8 @@ if($footer_row['admin_job_show'] != 1) {
                 </div>
                 <div class="job-pop-tag">
                     <?php
-                    if($CurrentCity == 'www'){
-                        $categories = getAllJobCategoriesOrderByJobsTableLimit(5);
-                    }else{
-                        $categories = getAllJobCategoriesOrderByJobsTableLimit(12);
-                    }
+                    $categories = getAllJobCategoriesOrderByJobsTableLimit(5);
+                    
                     foreach ($categories as $job_trend_categories_row) {
 
                         $trend_category_name = $job_trend_categories_row['category_name'];
