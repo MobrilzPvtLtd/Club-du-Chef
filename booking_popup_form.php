@@ -27,7 +27,7 @@ if (isset($availability_day_result)) {
             ];
         }
     }
-
+   
     $available_days = array_map(function($slot) { return $slot['day']; }, $availability_days);
     $available_slots = json_encode($availability_days);
 
@@ -118,14 +118,14 @@ if (isset($availability_day_result)) {
             // Format the selected date as 'yyyy-mm-dd'
             var dateString = $.datepicker.formatDate('yy-mm-dd', new Date(selectedDate));
             var dayOfWeek = new Date(selectedDate).getDay();
-
+            
             // Find the available slots for the selected day
             var daySlots = availableSlots.find(function(slot) {
                 return slot.day === dayOfWeek;  // Match the selected day
             });
 
             // Check if daySlots are found and contain valid start_time and end_time
-            if (daySlots && daySlots.start_time && daySlots.end_time && daySlots.start_time_2 && daySlots.end_time_2) {
+            if (daySlots && daySlots.start_time && daySlots.end_time || daySlots.start_time_2 && daySlots.end_time_2) {
                 var startTime = daySlots.start_time;
                 var endTime = daySlots.end_time;
                 var startTime_2 = daySlots.start_time_2;
