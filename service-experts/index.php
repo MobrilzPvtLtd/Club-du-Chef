@@ -191,9 +191,7 @@ if($footer_row['admin_expert_show'] != 1) {
                                 <li>
                                     <div class="land-pack-grid">
                                         <div class="land-pack-grid-img">
-                                            <img
-                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>service-experts/images/services/<?php echo $expert_categories_row['category_image']; ?>"
-                                                alt="">
+                                        <img src="../images/services/<?php echo $expert_categories_row['category_image']; ?>" alt="">
                                         </div>
                                         <div class="land-pack-grid-text">
                                             <h4><?php echo $category_name; ?>

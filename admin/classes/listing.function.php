@@ -157,7 +157,7 @@ function getCountCategoryListing($arg)
 
     global $conn;
 
-    $sql = "SELECT * FROM " . TBL . "listings WHERE (JSON_CONTAINS(city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www') AND listing_is_delete != '2' AND category_id = '$arg' AND listing_status= 'Active'";
+    $sql = "SELECT * FROM " . TBL . "listings WHERE (JSON_CONTAINS(city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www') AND listing_is_delete != '2' AND category_id = '$arg'";
     $rs = mysqli_query($conn, $sql);
     $row = mysqli_num_rows($rs);
     return $row;
@@ -218,7 +218,7 @@ function getCountSubCategoryListing($arg)
 {
     global $conn;
 
-    $sql = "SELECT * FROM " . TBL . "listings WHERE listing_is_delete != '2' AND find_in_set('$arg',sub_category_id) AND listing_status= 'Active'";
+    $sql = "SELECT * FROM " . TBL . "listings WHERE listing_is_delete != '2' AND find_in_set('$arg',sub_category_id)";
     $rs = mysqli_query($conn, $sql);
     $row = mysqli_num_rows($rs);
     return $row;
