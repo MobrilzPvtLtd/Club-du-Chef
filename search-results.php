@@ -5,46 +5,48 @@ include "header.php";
 if(isset($_GET['q'])) {
     $select_search = $_GET['q'];
 
+    $CurrentCity = isset($_SESSION['city']) ? $_SESSION['city'] : 'www';
+
 if($select_search != ''){
 //get matched data from listings table
     $listings_qry = "SELECT * FROM " . TBL . "listings WHERE listing_description LIKE '%$select_search%' 
      OR listing_address LIKE '%$select_search%'  OR service_id LIKE '%$select_search%' OR service_1_name LIKE '%$select_search%' 
      OR service_1_detail LIKE '%$select_search%' OR listing_info_question LIKE '%$select_search%' OR listing_info_answer LIKE '%$select_search%'
      OR service_locations LIKE '%$select_search%' OR listing_name LIKE '%$select_search%' 
-     AND listing_status= 'Active' AND listing_is_delete != '2'  ";
+     AND (JSON_CONTAINS(city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www') AND listing_is_delete != '2'  ";
     $listings_query = mysqli_query($conn, $listings_qry);
 } else{
     //get matched data from listings table
-    $listings_qry = "SELECT * FROM " . TBL . "listings WHERE listing_status= 'Active' AND listing_is_delete != '2'  ";
+    $listings_qry = "SELECT * FROM " . TBL . "listings WHERE (JSON_CONTAINS(city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www') AND listing_is_delete != '2'  ";
     $listings_query = mysqli_query($conn, $listings_qry);
 }
 
 //get matched data from events table
     $event_qry = "SELECT * FROM " . TBL . "events WHERE event_description LIKE '%$select_search%' 
-    OR event_name LIKE '%$select_search%' OR event_address LIKE '%$select_search%' AND event_status= 'Active'";
+    OR event_name LIKE '%$select_search%' OR event_address LIKE '%$select_search%' AND (JSON_CONTAINS(city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www')";
     $event_query = mysqli_query($conn, $event_qry);
 
 //get matched data from blog table
     $blog_qry = "SELECT * FROM " . TBL . "blogs WHERE blog_description LIKE '%$select_search%' 
-    OR blog_name LIKE '%$select_search%' AND blog_status= 'Active'";
+    OR blog_name LIKE '%$select_search%' AND (JSON_CONTAINS(city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www')";
     $blog_query = mysqli_query($conn, $blog_qry);
 
 //get matched data from product table
     $product_qry = "SELECT * FROM " . TBL . "products WHERE product_description LIKE '%$select_search%' 
     OR product_name LIKE '%$select_search%' OR product_info_question LIKE '%$select_search%' 
     OR product_info_answer LIKE '%$select_search%' OR product_highlights LIKE '%$select_search%' 
-    OR product_tags LIKE '%$select_search%' AND product_status= 'Active'";
+    OR product_tags LIKE '%$select_search%' AND (JSON_CONTAINS(city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www')";
     $product_query = mysqli_query($conn, $product_qry);
 
 //get matched data from Job table
     $job_qry = "SELECT * FROM " . TBL . "jobs WHERE job_description LIKE '%$select_search%' 
     OR job_title LIKE '%$select_search%' OR job_small_description LIKE '%$select_search%' 
     OR job_company_name LIKE '%$select_search%' OR skill_set LIKE '%$select_search%' 
-    OR contact_person LIKE '%$select_search%' AND job_status= 'Active'";
+    OR contact_person LIKE '%$select_search%' AND (JSON_CONTAINS(city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www')";
     $job_query = mysqli_query($conn, $job_qry);
 
     //get matched data from Service Expert table
-    $expert_qry = "SELECT * FROM " . TBL . "experts WHERE profile_name LIKE '%$select_search%' AND expert_status= 'Active'";
+    $expert_qry = "SELECT * FROM " . TBL . "experts WHERE profile_name LIKE '%$select_search%' AND (JSON_CONTAINS(city_slug, '\"$CurrentCity\"') OR '$CurrentCity' = 'www')";
     $expert_query = mysqli_query($conn, $expert_qry);
 }
 ?>
@@ -59,13 +61,24 @@ if($select_search != ''){
         <div class="ban-search">
             <form>
                 <ul>
-                    <li class="sr-sea">
+                    <!-- <li class="sr-sea">
                         <input type="text" id="select-search" value="<?php echo $select_search; ?>" class="autocomplete"
                             placeholder="<?php echo $Zitiziti['SEARCH-RESULTS-SEARCH-ANYTHING-PLACEHOLDER']; ?>">
                     </li>
                     <li class="sr-btn">
                         <input type="submit" id="search_result_page_filter_submit" name="filter_submit"
                             value="<?php echo $Zitiziti['SEARCH']; ?>" class="filter_submit">
+                    </li> -->
+                    <li class="sr-sea">
+                        <input type="text" autocomplete="off" id="select-search" value="<?php echo $select_search; ?>" placeholder="<?php echo $Zitiziti['SEARCHBOX_LABEL']; ?>"
+                            class="search-field rounded" required>
+
+                        <ul id="results" class="tser-res tser-res1">
+                        </ul>
+                    </li>
+                    <li class="sr-btn">
+                        <input type="submit" id="filter_submit" name="filter_submit"
+                            value="<?php echo $Zitiziti['SEARCH']; ?>" class="filter_submit rounded">
                     </li>
                 </ul>
             </form>
