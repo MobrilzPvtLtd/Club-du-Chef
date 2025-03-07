@@ -69,7 +69,7 @@ if (file_exists('../config/news_page_authentication.php')) {
     <div class="news-hom-top-inn">
         <div class="container">
             <div class="row">
-                <div class="news-hom-ban-ads pb-3">
+                <!-- <div class="news-hom-ban-ads pb-3">
                     <?php
                     $ad_position_id = 7;   //Ad position on News Home Page Top
                     $get_ad_row = getAds($ad_position_id);
@@ -78,7 +78,7 @@ if (file_exists('../config/news_page_authentication.php')) {
                     <a href="<?php echo htmlspecialchars(stripslashes($get_ad_row['ad_link'])); ?>">
                         <img loading="lazy" src="<?php echo htmlspecialchars($slash); ?>/images/ads/<?php echo $ad_enquiry_photo ? htmlspecialchars($ad_enquiry_photo) : 'ads1.png'; ?>" alt="Advertisement">
                     </a>
-                </div>
+                </div> -->
                 <div class="news-com-tit">
                     <h2><?php echo $Zitiziti['NEWS-TRENDINGS']; ?></h2>
                 </div>
@@ -205,15 +205,31 @@ if (file_exists('../config/news_page_authentication.php')) {
                         <div class="txt">
                             <span class="news-cate"><?php echo $latest_news_category_name; ?></span>
                             <h2><?php echo stripslashes($latest_newsrow['news_title']); ?></h2>
-                            <p><?php
-                                if (strlen($latest_newsrow['news_description']) >= 100) {
-                                    $pos = strpos($latest_newsrow['news_description'], ' ', 100);
-                                    echo substr(stripslashes($latest_newsrow['news_description']), 0, $pos).'...';
-                                }else{
-                                    echo stripslashes($latest_newsrow['news_description']);
-                                }
-
-                                ?></p>
+                            <p>
+                                <?php
+                                    // if (strlen($latest_newsrow['news_description']) >= 100) {
+                                    //     $pos = strpos($latest_newsrow['news_description'], ' ', 100);
+                                    //     echo substr(stripslashes($latest_newsrow['news_description']), 0, $pos).'...';
+                                    // }else{
+                                    //     echo stripslashes($latest_newsrow['news_description']);
+                                    // }
+                                    if (strlen($latest_newsrow['news_description']) >= 100) {
+                                        $description = $latest_newsrow['news_description'];
+                                        $pos = strpos($description, ' ', 100);
+                                        if ($pos === false) {
+                                            $pos = strlen($description); 
+                                        }
+                                    
+                                        $truncated_description = substr($description, 0, $pos);
+                                    
+                                        $stripped_description = strip_tags($truncated_description);
+                                    
+                                        echo stripslashes($stripped_description) . '...';
+                                    } else {
+                                        echo stripslashes($latest_newsrow['news_description']);
+                                    }
+                                ?>
+                            </p>
                             <span class="news-date"><?php echo dateFormatconverter($latest_newsrow['news_cdt']); ?></span>
                             <span class="news-views"><?php echo AddingZero_BeforeNumber(news_detail_pageview_count($latest_newsrow['news_id'])); ?> <?php echo $Zitiziti['VIEWS']; ?></span>
                         </div>
@@ -252,12 +268,21 @@ if (file_exists('../config/news_page_authentication.php')) {
                         <h4><?php echo $Zitiziti['HOM-EXP-TIT1']; ?></h4>
                         <ul>
                             <?php
-                            foreach (getAllNewsCategoriesPos() as $news_right_side_category_row) {
-                                $count_news_per_category = getCountCategoryNews($news_right_side_category_row['category_id']);
-                                // $decoded_city_slugs = (array)json_decode($news_right_side_category_row['city_slug'], true);
-                                // if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
-                            ?>
-                                <li><a href="<?php echo $ALL_NEWS_URL . urlModifier($news_right_side_category_row['category_slug']); ?>"><span><?php echo $count_news_per_category; ?></span><b><?php echo $news_right_side_category_row['category_name']; ?></b></a></li>
+                                foreach (getAllNewsCategoriesPos() as $news_right_side_category_row) {
+                                    $count_news_per_category = getCountCategoryNews($news_right_side_category_row['category_id']);
+                                    // $decoded_city_slugs = (array)json_decode($news_right_side_category_row['city_slug'], true);
+                                    // if ($CurrentCity == 'www' || in_array($CurrentCity, $decoded_city_slugs)) {
+                                ?>
+                                <li>
+                                    <a href="<?php echo $ALL_NEWS_URL . urlModifier($news_right_side_category_row['category_slug']); ?>" style="background: url(<?php echo $webpage_full_link; ?>images/services/<?php echo $news_right_side_category_row['category_image']; ?>);">
+                                        <span>
+                                            <?php echo $count_news_per_category; ?>
+                                        </span>
+                                        <b>
+                                            <?php echo $news_right_side_category_row['category_name']; ?>
+                                        </b>
+                                    </a>
+                                </li>
                             <?php
                                 // }
                             }
@@ -281,7 +306,7 @@ if (file_exists('../config/news_page_authentication.php')) {
                                 <li>
                                     <div class="hot-page2-hom-pre-1">
                                         <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php echo $slash; ?>/news/images/news/<?php echo $right_section_trending_news_sql_row['news_image']; ?>"
-                                             alt="">
+                                            alt="">
                                     </div>
                                     <div class="hot-page2-hom-pre-2">
                                         <h5><?php echo stripslashes($right_section_trending_news_sql_row['news_title']); ?></h5>

@@ -22304,7 +22304,7 @@ a[data-command='p'] {
 }
 
 .news-rhs-cate ul li a {
-    background: url(../images/home4.jpg);
+    /* background: url(../images/home4.jpg); */
     display: block;
     padding: 15px 30px;
     border-radius: 5px;
@@ -22316,7 +22316,7 @@ a[data-command='p'] {
 }
 
 .news-rhs-cate ul li:nth-child(1) a {
-    background-position: -41px -464px
+    background-position: -41px -464px !important;
 }
 
 .news-rhs-cate ul li:nth-child(2) a {
