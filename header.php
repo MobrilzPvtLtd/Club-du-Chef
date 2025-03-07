@@ -1161,19 +1161,19 @@ foreach (getAllCities() as $city) {
 
                                                 <ul id="results" class="tser-res tser-res1">
                                                     <!-- <?php
-                                                            $si = 1;
-                                                            foreach (getAllSearch() as $search_header_row) {
-                                                            ?>
-                                                            <li>
-                                                                <div>
-                                                                    <h4><?php echo $search_header_row['search_title']; ?></h4>
-                                                                    <span><?php echo $search_header_row['search_tag_line']; ?></span>
-                                                                    <a href="<?php echo $search_header_row['search_list_link']; ?>"></a>
-                                                                </div>
-                                                            </li>
+                                                        $si = 1;
+                                                        foreach (getAllSearch() as $search_header_row) {
+                                                        ?>
+                                                        <li>
+                                                            <div>
+                                                                <h4><?php echo $search_header_row['search_title']; ?></h4>
+                                                                <span><?php echo $search_header_row['search_tag_line']; ?></span>
+                                                                <a href="<?php echo $search_header_row['search_list_link']; ?>"></a>
+                                                            </div>
+                                                        </li>
                                                         <?php
-                                                            }
-                                                        ?> -->
+                                                        }
+                                                    ?> -->
                                                 </ul>
                                             </li>
                                             <li class="sr-btn">
