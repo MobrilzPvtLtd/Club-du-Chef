@@ -11,8 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (isset($_POST['event_submit'])) {
 
-        $is_booking = $_POST["is_booking"];
-        $booking_url = $_POST["booking_url"];
+        $is_booking = $_POST["is_booking"] ?? 0;
+        $booking_url = $_POST["booking_url"] ?? null;
 
 // Basic Personal Details
         $first_name = $_POST["first_name"];

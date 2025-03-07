@@ -11,8 +11,8 @@ if (file_exists('config/info.php')) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['listing_submit'])) {
 
-        $is_booking = $_POST["is_booking"];
-        $booking_url = $_POST["booking_url"];
+        $is_booking = $_POST["is_booking"] ?? 0;
+        $booking_url = $_POST["booking_url"] ?? null;
 
         $src_path = $_POST["src_path"];
 
