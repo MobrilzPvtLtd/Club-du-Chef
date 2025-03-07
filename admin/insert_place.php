@@ -11,8 +11,8 @@ if (file_exists('config/info.php')) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['place_submit'])) {
 
-        $is_booking = $_POST["is_booking"];
-        $booking_url = $_POST["booking_url"];
+        $is_booking = $_POST["is_booking"] ?? 0;
+        $booking_url = $_POST["booking_url"] ?? null;
         
         $city_slug = $_POST['city_slug'];
         if (is_array($city_slug)) {
