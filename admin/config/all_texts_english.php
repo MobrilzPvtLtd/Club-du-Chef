@@ -2458,6 +2458,8 @@ $Zitiziti['GENERAL_USER_NOT_ACTIVATED_MESSAGE'] = "Important: Your Profile has n
 
 $Zitiziti['OOPS_SOMETHING_WENT_WRONG'] = "Oops!! Something Went Wrong Try Later!!!";
 
+$Zitiziti['PLEASE_COMPLETE_CAPTCHA_VERIFICATION'] = "Please complete the CAPTCHA verification!!!";
+
 $Zitiziti['ENQUIRY_SUCCESSFUL_MESSAGE'] = "Your Enquiry Is Submitted Successfully!!!";
 
 $Zitiziti['PLACE_ADD_SUCCESSFUL_MESSAGE'] = "Your Place Add Request Is Submitted Successfully!!!";

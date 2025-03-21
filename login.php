@@ -163,8 +163,12 @@ if (isset($_SESSION['user_name']) && !empty($_SESSION['user_name'])) {
                                 <a href="pricing-details" class="frmtip"
                                    target="_blank"><?php echo $Zitiziti['PLAN_DETAILS']; ?></a>
                             </div>
-                            <button type="submit" name="register_submit"
-                                    class="btn btn-primary"><?php echo $Zitiziti['REGISTER_NOW']; ?></button>
+
+                            <div class="form-group">
+                                <div class="g-recaptcha"  data-sitekey="6LcDOPIqAAAAAH46XFxPWbXyylXoV_vkVSKLHee9"></div>
+                            </div>
+
+                            <button type="submit" name="register_submit" class="btn btn-primary"><?php echo $Zitiziti['REGISTER_NOW']; ?></button>
                         </form>
                         <?php
                         if ($footer_row['admin_google_login'] == 1 || $footer_row['admin_facebook_login'] == 1) {
