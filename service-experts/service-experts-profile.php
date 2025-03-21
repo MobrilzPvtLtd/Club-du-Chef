@@ -660,6 +660,14 @@ include "../footer.php";
                             <div class="form-group">
                                 <textarea class="form-control" name="enquiry_message" id="enquiry_message" placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                             </div>
+
+                            <div id="recaptcha_error"
+                                    style="display: none;color: red;"><?php echo $Zitiziti['PLEASE_COMPLETE_CAPTCHA_VERIFICATION']; ?>
+                            </div>
+                            <div class="form-group">
+                                <div class="g-recaptcha" data-sitekey="<?php echo $RECAPTCHA_SITE_KEY['RECAPTCHA_SITE_KEY']; ?>"></div>
+                            </div>
+                            
                             <input type="hidden" name="" id="source">
                             <button <?php if ($session_user_id == NULL || empty($session_user_id)) {
                                 ?> disabled="disabled" <?php } ?> type="submit" id="expert_detail_enquiry_submit"

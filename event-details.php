@@ -123,6 +123,14 @@ $exist_day_result = mysqli_query($conn, $bookings);
                                         <textarea class="form-control" rows="3" name="enquiry_message"
                                                   placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                                     </div>
+
+                                    <div id="recaptcha_error"
+                                            style="display: none;color: red;"><?php echo $Zitiziti['PLEASE_COMPLETE_CAPTCHA_VERIFICATION']; ?>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="g-recaptcha" data-sitekey="<?php echo $RECAPTCHA_SITE_KEY['RECAPTCHA_SITE_KEY']; ?>"></div>
+                                    </div>
+                                    
                                     <input type="hidden" id="source">
                                     <?php if (!isset($_SESSION['user_code']) && empty($_SESSION['user_code'])){ ?>
                                 </fieldset>
@@ -406,9 +414,13 @@ $('.multiple-items1').slick({
                         if (html == 1) {
                             $("#event_detail_enq_success").show();
                             $("#event_detail_enquiry_form")[0].reset();
+                            $("#recaptcha_error").hide();
                         } else {
                             if (html == 3) {
                                 $("#event_detail_enq_same").show();
+                                $("#event_detail_enquiry_form")[0].reset();
+                            }else if (html == 4) {
+                                $("#recaptcha_error").show();
                                 $("#event_detail_enquiry_form")[0].reset();
                             }else {
                                 $("#event_detail_enq_fail").show();

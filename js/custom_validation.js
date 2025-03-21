@@ -865,9 +865,13 @@ $("#expert_detail_enquiry_submit").click(function () {
                     if (html == 500500) {
                         $("#expert_detail_enq_fail").show();
                         $("#expert_detail_enquiry_form")[0].reset();
+                        $("#recaptcha_error").hide();
                     } else {
                         if (html == 403403) {
                             $("#expert_detail_enq_same").show();
+                            $("#expert_detail_enquiry_form")[0].reset();
+                        }else if (html == 403404) {
+                            $("#recaptcha_error").show();
                             $("#expert_detail_enquiry_form")[0].reset();
                         } else {
                             $("#expert_detail_enq_success").show();
@@ -919,6 +923,7 @@ $("#popup_job_enquiry_submit").click(function () {
                     if (html == 1) {
                         $("#pop_enq_success").show();
                         $("#popup_job_enquiry_form")[0].reset();
+                        $("#recaptcha_error").hide();
                     } else {
                         if (html == 3) {
                             $("#pop_enq_same").show();
@@ -931,6 +936,10 @@ $("#popup_job_enquiry_submit").click(function () {
                         if (html == 5) {
                             $("#pop_enq_already_applied").show();
                             $("#popup_enquiry_form")[0].reset();
+                        }
+                        if (html == 6) {
+                            $("#recaptcha_error").show();
+                            $("#popup_job_enquiry_form")[0].reset();
                         } else {
                             $("#pop_enq_fail").show();
                             $("#popup_job_enquiry_form")[0].reset();
