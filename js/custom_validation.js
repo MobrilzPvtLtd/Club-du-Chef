@@ -363,7 +363,7 @@ $("#home_slide_enquiry_submit").click(function () {
             } else {
                 var link = 'enquiry_submit.php';
             }
-
+            
             $.ajax({
                 type: "POST",
                 data: $("#home_slide_enquiry_form").serialize(),
@@ -375,9 +375,13 @@ $("#home_slide_enquiry_submit").click(function () {
                     if (html == 1) {
                         $("#home_slide_enq_success").show();
                         $("#home_slide_enquiry_form")[0].reset();
+                        $("#recaptcha_error").hide();
                     } else {
                         if (html == 3) {
                             $("#home_slide_enq_same").show();
+                            $("#home_slide_enquiry_form")[0].reset();
+                        }else if (html == 4) {
+                            $("#recaptcha_error").show();
                             $("#home_slide_enquiry_form")[0].reset();
                         } else {
                             $("#home_slide_enq_fail").show();
@@ -607,6 +611,10 @@ $("#review_submit").click(function () {
                     if (html == 1) {
                         $("#review_success").show();
                         $("#review_form")[0].reset();
+                        $("#recaptcha_error").hide();
+                    }else if (html == 3) {
+                        $("#recaptcha_error").show();
+                        $("#review_form")[0].reset();
                     } else {
                         $("#review_fail").show();
                         $("#review_form")[0].reset();
@@ -721,6 +729,10 @@ $("#popup_enquiry_submit").click(function () {
                     if (html == 1) {
                         $("#pop_enq_success").show();
                         $("#popup_enquiry_form")[0].reset();
+                        $("#popup_recaptcha_error").hide();
+                    }else if (html == 4) {
+                        $("#popup_recaptcha_error").show();
+                        $("#home_slide_enquiry_form")[0].reset();
                     } else {
                         if (html == 3) {
                             $("#pop_enq_same").show();

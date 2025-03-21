@@ -1339,7 +1339,8 @@ $exist_day_result = mysqli_query($conn, $bookings);
                                     <div class="pglist-p-com-ti">
                                         <h3>
                                             <span><?php echo $Zitiziti['LISTING_DETAILS_WRITE_YOUR']; ?></span> <?php echo $Zitiziti['REVIEWS']; ?>
-                                        </h3></div>
+                                        </h3>
+                                    </div>
                                     <div class="list-pg-inn-sp">
                                         <div class="list-pg-write-rev">
                                             <form class="col" <?php if ($session_plan_type_row['plan_type_ratings'] == 0 && $user_details_row['user_type'] != "General") {
@@ -1357,7 +1358,8 @@ $exist_day_result = mysqli_query($conn, $bookings);
                                                      style="text-align:center;display: none;color: green;"><?php echo $Zitiziti['LISTING_DETAILS_REVIEW_SUCCESS_MESSAGE']; ?>
                                                 </div>
                                                 <div id="review_fail"
-                                                     style="text-align:center;display: none;color: red;"><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?></div>
+                                                     style="text-align:center;display: none;color: red;"><?php echo $Zitiziti['OOPS_SOMETHING_WENT_WRONG']; ?>
+                                                </div>
                                                 <div class="row">
                                                     <div>
                                                         <fieldset class="rating">
@@ -1437,6 +1439,15 @@ $exist_day_result = mysqli_query($conn, $bookings);
                                                             name="review_message"></textarea>
                                                     </div>
                                                 </div>
+
+                                                
+                                                <div class="form-group">
+                                                    <div class="g-recaptcha" data-sitekey="<?php echo $RECAPTCHA_SITE_KEY['RECAPTCHA_SITE_KEY']; ?>"></div>
+                                                </div>
+                                                <div id="recaptcha_error"
+                                                     style="display: none;color: red;"><?php echo $Zitiziti['PLEASE_COMPLETE_CAPTCHA_VERIFICATION']; ?>
+                                                </div>
+                                                
                                                 <div class="row">
                                                     <div class="input-field col s12">
                                                         <?php if ($session_plan_type_row['plan_type_ratings'] == 0 && $user_details_row['user_type'] != "General") { ?>
@@ -1791,6 +1802,14 @@ include "footer.php";
                                 <textarea class="form-control" rows="3" name="enquiry_message"
                                           placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                             </div>
+
+                            <div class="form-group">
+                                <div class="g-recaptcha" data-sitekey="<?php echo $RECAPTCHA_SITE_KEY['RECAPTCHA_SITE_KEY']; ?>"></div>
+                            </div>
+                            <div id="popup_recaptcha_error" class="log" style="display: none;">
+                                <p style="color: red;"><?php echo $Zitiziti['PLEASE_COMPLETE_CAPTCHA_VERIFICATION']; ?></p>
+                            </div>
+                            
                             <input type="hidden" id="source">
                             <?php if ($session_plan_type_row['plan_type_ratings'] == 0 && $user_details_row['user_type'] != "General") { ?>
                                 <button disabled="disabled" type="submit" id="popup_enquiry_submit"

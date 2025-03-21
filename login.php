@@ -165,7 +165,7 @@ if (isset($_SESSION['user_name']) && !empty($_SESSION['user_name'])) {
                             </div>
 
                             <div class="form-group">
-                                <div class="g-recaptcha"  data-sitekey="6LcDOPIqAAAAAH46XFxPWbXyylXoV_vkVSKLHee9"></div>
+                                <div class="g-recaptcha" data-sitekey="<?php echo $RECAPTCHA_SITE_KEY['RECAPTCHA_SITE_KEY']; ?>"></div>
                             </div>
 
                             <button type="submit" name="register_submit" class="btn btn-primary"><?php echo $Zitiziti['REGISTER_NOW']; ?></button>
