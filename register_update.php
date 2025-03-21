@@ -11,28 +11,62 @@ if (file_exists('config/info.php')) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // if (isset($_POST['register_submit'])) {
 
+    // Your Google reCAPTCHA Secret Key
+    $secretKey = '6LcDOPIqAAAAABKPk_zJ3VvPkEJu0-m_qJsvWvVW';
+
+    // Response from the reCAPTCHA widget
+    $recaptchaResponse = $_POST['g-recaptcha-response'];
+
+    // Validate reCAPTCHA
+    $url = 'https://www.google.com/recaptcha/api/siteverify';
+    $data = [
+        'secret' => $secretKey,
+        'response' => $recaptchaResponse
+    ];
+   
+    // Use cURL to send the request to Google for verification
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $response = curl_exec($ch);
+    curl_close($ch);
+
+    // Decode the response from Google reCAPTCHA API
+    $responseKeys = json_decode($response, true);
+
+    // Check if reCAPTCHA validation was successful
+    if (intval($responseKeys["success"]) !== 1) {
+        $_SESSION['status_msg'] = $Zitiziti['PLEASE_COMPLETE_CAPTCHA_VERIFICATION'];
+        $_SESSION['register_status_msg'] = 1;
+
+        header('Location: login?login=register');
+        exit();
+    } else {
+        
         $trap_box = $_POST["trap_box"];
-
+    
         $mode_path = $_POST["mode_path"];
-
+    
         if (!empty($trap_box) || $trap_box != NULL) {
-
+    
             if ($mode_path == "XeBaCk_MoDeX_PATHXHU") {
-
+    
                 $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
-
+    
                 header('Location: admin/admin-add-new-user.php');
                 exit();
             } else {
                 $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
                 $_SESSION['register_status_msg'] = 1;
-
+    
                 header('Location: login?login=register');
                 exit();
             }
         }
-
-
+    
+    
         $first_name = $_POST["first_name"];
         $last_name = $_POST["last_name"];
         $mobile_number = $_POST["mobile_number"];
@@ -40,44 +74,44 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $password = $_POST["password"];
         $password_hash = md5($_POST["password"]);
         $user_type = $_POST["user_type"];
-
+    
         $star_password = "*********";
-
+    
         if ($user_type == "General") {
-
+    
             $user_plan = '0';
-
+    
             $user_points = 0;
-
+    
         } elseif ($user_type == "job seeker") {
-
+    
             $user_plan = '';
-
+    
             $user_points = 0;
-
+    
         } elseif ($user_type == "Service provider") {
-
+    
             $user_plan = $_POST["user_plan"];
-
+    
             $plan_type = "SELECT * FROM " . TBL . "plan_type WHERE plan_type_status='Active' AND plan_type_id = '$user_plan'";
-
+    
             $rs_plan_type = mysqli_query($conn, $plan_type);
             $plan_type_row = mysqli_fetch_array($rs_plan_type);
-
+    
             $user_points = $plan_type_row['plan_type_points'];
-
+    
         }
         $register_mode = "Direct";
         $user_status = "Active";
-
+    
         $user_address = $_POST["user_address"];
         $user_facebook = $_POST["user_facebook"];
         $user_twitter = $_POST["user_twitter"];
         $user_youtube = $_POST["user_youtube"];
         $user_website = $_POST["user_website"];
-
+    
         $_FILES['profile_image']['name'];
-
+    
         if (!empty($_FILES['profile_image']['name'])) {
             $file = rand(1000, 100000) . $_FILES['profile_image']['name'];
             $file_loc = $_FILES['profile_image']['tmp_name'];
@@ -95,8 +129,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $profile_image = '';
             }
         }
-
-
+    
+    
         function checkUserSlug($link, $counter = 1)
         {
             global $conn;
@@ -110,17 +144,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     break;
                 }
             } while (1);
-
+    
             return $newLink;
         }
-
+    
         $first_name1 = trim(preg_replace('/[^A-Za-z0-9]/', ' ', $first_name));
         $user_slug = checkUserSlug($first_name1);
-
+    
         // Email Verification Code Starts
-
+    
         $verification_code = generateNumberOnlyRandomString(5);
-
+    
         function checkUniqueVerificationLink($link, $counter = 1)
         {
             global $conn;
@@ -134,84 +168,79 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     break;
                 }
             } while (1);
-
+    
             return $newLink;
         }
-
+    
         $verification_link = checkUniqueVerificationLink(generateAlphabetsOnlyRandomString(112));
-
+    
         $webpage_full_link_with_verification_link = $webpage_full_link . "activate?q=" . $verification_link;
-
+    
         $verification_status = 1; //**** If 0 means Activated 1 Means Not activated **//
-
-
+    
+    
         //************ Email Already Exist Check Starts ***************
-
-
+    
+    
         $email_exist_check = mysqli_query($conn, "SELECT * FROM " . TBL . "users WHERE email_id = '$email_id' ");
-
-
+    
+    
         if (mysqli_num_rows($email_exist_check) > 0) {
-
-
             if ($mode_path == "XeBaCk_MoDeX_PATHXHU") {
-
+    
                 $_SESSION['status_msg'] = $Zitiziti['GIVEN_EMAIL_ID_ALREADY_EXISTS_MESSAGE'];
-
+    
                 header('Location: admin/admin-add-new-user.php');
                 exit();
             } else {
-
+    
                 $_SESSION['status_msg'] = $Zitiziti['GIVEN_EMAIL_ID_ALREADY_EXISTS_MESSAGE'];
                 $_SESSION['register_status_msg'] = 1;
-
+    
                 header('Location: login?login=register');
                 exit();
             }
-
+    
         }
-
+    
         //************ Email Already Exist Check Ends ***************
-
+    
         //************ Mobile Number Already Exist Check Starts ***************
-
-
+    
+    
         $mobile_exist_check = mysqli_query($conn, "SELECT * FROM " . TBL . "users  WHERE mobile_number = '$mobile_number' ");
-
+    
         if (mysqli_num_rows($mobile_exist_check) > 0) {
-
-
             if ($mode_path == "XeBaCk_MoDeX_PATHXHU") {
-
+    
                 $_SESSION['status_msg'] = $Zitiziti['GIVEN_MOBILE_NUMBER_ALREADY_EXISTS_MESSAGE'];
-
+    
                 header('Location: admin/admin-add-new-user.php');
                 exit();
             } else {
-
+    
                 $_SESSION['status_msg'] = $Zitiziti['GIVEN_MOBILE_NUMBER_ALREADY_EXISTS_MESSAGE'];
                 $_SESSION['register_status_msg'] = 1;
-
+    
                 header('Location: login?login=register');
                 exit();
             }
-
+    
         }
-
+    
         //************ Mobile Number Already Exist Check Ends ***************
-
+    
         $qry = "INSERT INTO " . TBL . "users 
-					(first_name, last_name, email_id, mobile_number, password, user_type, user_plan, register_mode, user_address, profile_image
-					, user_points, user_facebook, user_twitter, user_youtube, user_website, user_slug, verification_code, verification_link,verification_status, user_status, user_clear_notification_cdt, user_cdt)
-					VALUES ('$first_name', '$last_name', '$email_id', '$mobile_number', '$password_hash', '$user_type', '$user_plan', '$register_mode',
-					 '$user_address', '$profile_image', '$user_points', '$user_facebook','$user_twitter', '$user_youtube', '$user_website',
-					 '$user_slug','$verification_code','$verification_link','$verification_status','$user_status', '$curDate', '$curDate')";
-
-
+                    (first_name, last_name, email_id, mobile_number, password, user_type, user_plan, register_mode, user_address, profile_image
+                    , user_points, user_facebook, user_twitter, user_youtube, user_website, user_slug, verification_code, verification_link,verification_status, user_status, user_clear_notification_cdt, user_cdt)
+                    VALUES ('$first_name', '$last_name', '$email_id', '$mobile_number', '$password_hash', '$user_type', '$user_plan', '$register_mode',
+                     '$user_address', '$profile_image', '$user_points', '$user_facebook','$user_twitter', '$user_youtube', '$user_website',
+                     '$user_slug','$verification_code','$verification_link','$verification_status','$user_status', '$curDate', '$curDate')";
+    
         $res = mysqli_query($conn, $qry);
         $LID = mysqli_insert_id($conn);
         $lastID = $LID;
-
+    
         switch (strlen($LID)) {
             case 1:
                 $LID = '00' . $LID;
@@ -223,118 +252,116 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $LID = $LID;
                 break;
         }
-
+    
         $userID = 'USER' . $LID;
-
+    
         $upqry = "UPDATE " . TBL . "users 
-					  SET user_code = '$userID' 
-					  WHERE user_id = $lastID";
-
+                      SET user_code = '$userID' 
+                      WHERE user_id = $lastID";
+    
         $upres = mysqli_query($conn, $upqry);
-
+    
         //****************************    Admin Primary email fetch starts    *************************
-
+    
         $admin_primary_email_fetch = mysqli_query($conn, "SELECT * FROM " . TBL . "footer  WHERE footer_id = '1' ");
         $admin_primary_email_fetchrow = mysqli_fetch_array($admin_primary_email_fetch);
         $admin_primary_email = $admin_primary_email_fetchrow['admin_primary_email'];
         $admin_footer_copyright = $admin_primary_email_fetchrow['footer_copyright'];
         $admin_site_name = $admin_primary_email_fetchrow['website_address'];
         $admin_address = $admin_primary_email_fetchrow['footer_address'];
-
+    
         //****************************    Admin Primary email fetch ends    *************************
-
+    
         if ($upres) {
-
+    
             $admin_email = $admin_primary_email; // Admin Email Id
-
+    
             $webpage_full_link_with_login = $webpage_full_link . "login";  //URL Login Link
-
+    
             $USER_INSERT_ADMIN_SUBJECT = $Zitiziti['USER_INSERT_ADMIN_SUBJECT'];
-
+    
             //****************************    Admin email starts    *************************
-
+    
             $to = $admin_email;
             $subject = "$admin_site_name $USER_INSERT_ADMIN_SUBJECT";
-
+    
             $admin_sql_fetch = mysqli_query($conn, "SELECT * FROM " . TBL . "mail WHERE mail_id = 2 "); //Admin mail template fetch
             $admin_sql_fetch_row = mysqli_fetch_array($admin_sql_fetch);
-
+    
             $mail_template_admin = $admin_sql_fetch_row['mail_template'];
-
+    
             $message1 = stripslashes(str_replace(array('\'.$admin_site_name.\'', '\' . $first_name . \'', '\' . $email_id . \'', '\' . $password . \'', '\'.$admin_footer_copyright.\'', '\'.$admin_address.\'', '\'.$webpage_full_link.\'', '\'.$webpage_full_link_with_login.\'', '\'.$admin_primary_email.\''),
                 array('' . $admin_site_name . '', '' . $first_name . '', '' . $email_id . '', '' . $star_password . '', '' . $admin_footer_copyright . '', '' . $admin_address . '', '' . $webpage_full_link . '', '' . $webpage_full_link_with_login . '', '' . $admin_primary_email . ''), $mail_template_admin));
-
+    
             $headers = "From: " . "$email_id" . "\r\n";
             $headers .= "Reply-To: " . "$email_id" . "\r\n";
             $headers .= "MIME-Version: 1.0\r\n";
             $headers .= "Content-Type: text/html; charset=utf-8\r\n";
-
-
+    
+    
             mail($to, $subject, $message1, $headers); //admin email
-
-
+    
+    
             //****************************    Admin email ends    *************************
-
+    
             //****************************    Client email starts    *************************
-
+    
             $to1 = $email_id;
             $USER_INSERT_CLIENT_SUBJECT = $Zitiziti['USER_INSERT_CLIENT_SUBJECT'];
             $subject1 = "$admin_site_name $USER_INSERT_CLIENT_SUBJECT";
-
+    
             $client_sql_fetch = mysqli_query($conn, "SELECT * FROM " . TBL . "mail WHERE mail_id = 1 "); //User mail template fetch
             $client_sql_fetch_row = mysqli_fetch_array($client_sql_fetch);
-
+    
             $mail_template_client = $client_sql_fetch_row['mail_template'];
-
+    
             $message2 = stripslashes(str_replace(array('\'.$admin_site_name.\'', '\' . $first_name . \'', '\' . $email_id . \'', '\' . $password . \'', '\'.$admin_footer_copyright.\'', '\'.$admin_address.\'', '\'.$webpage_full_link.\'', '\'.$webpage_full_link_with_login.\'', '\'.$verify_code.\'', '\'.$webpage_full_link_with_verification_link.\'', '\'.$admin_primary_email.\''),
                 array('' . $admin_site_name . '', '' . $first_name . '', '' . $email_id . '', '' . $star_password . '', '' . $admin_footer_copyright . '', '' . $admin_address . '', '' . $webpage_full_link . '', '' . $webpage_full_link_with_login . '', '' . $verification_code . '', '' . $webpage_full_link_with_verification_link . '', '' . $admin_primary_email . ''), $mail_template_client));
-
+    
             $headers1 = "From: " . "$admin_email" . "\r\n";
             $headers1 .= "Reply-To: " . "$admin_email" . "\r\n";
             $headers1 .= "MIME-Version: 1.0\r\n";
             $headers1 .= "Content-Type: text/html; charset=utf-8\r\n";
-
-
+    
+    
             mail($to1, $subject1, $message2, $headers1); //admin email
-
+    
             //****************************    client email ends    *************************
-
-
+    
+    
             if ($mode_path == "XeBaCk_MoDeX_PATHXHU") {
                 $_SESSION['status_msg'] = $Zitiziti['USER_INSERT_SUCCESS_MESSAGE'];  // Success Message in session
-
+    
                 header('Location: admin/admin-new-user-requests.php');
                 exit();
             } else {
-
+    
                 $_SESSION['status_msg'] = $Zitiziti['USER_INSERT_SUCCESS_MESSAGE'];  // Success Message in session
                 $_SESSION['register_status_msg'] = 1;
-
+    
                 header('Location: login?login=register');
                 exit();
             }
-
+    
         } else {
-
-
+    
+    
             if ($mode_path == "XeBaCk_MoDeX_PATHXHU") {
                 $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
-
+    
                 header('Location: admin/admin-add-new-user.php');
                 exit();
             } else {
                 $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
                 $_SESSION['register_status_msg'] = 1;
-
+    
                 header('Location: login?login=register');
                 exit();
             }
         }
-
+    }
     // }
 } else {
-
-
     if ($mode_path == "XeBaCk_MoDeX_PATHXHU") {
         $_SESSION['status_msg'] = $Zitiziti['OOPS_SOMETHING_WENT_WRONG'];
 
