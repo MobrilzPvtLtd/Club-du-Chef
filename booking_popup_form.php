@@ -78,6 +78,16 @@ if (isset($availability_day_result)) {
                         <textarea name="comment" class="form-control" required></textarea>
                     </div>
 
+                    <div class="form-group col-md-12">
+                        <div class="g-recaptcha" data-sitekey="<?php echo $RECAPTCHA_SITE_KEY['RECAPTCHA_SITE_KEY']; ?>" required></div>
+                    </div>
+                    <?php
+                    if (isset($_SESSION['booking_status_msg'])) {
+                        include "page_level_message.php";
+                        unset($_SESSION['booking_status_msg']);
+                    }
+                    ?>
+
                     <button type="submit" class="btn btn-primary float-end">Submit</button>
                 </form>
             </div>

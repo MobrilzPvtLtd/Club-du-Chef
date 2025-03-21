@@ -373,6 +373,14 @@ include "../footer.php";
                                        title="<?php echo $Zitiziti['LEAD-INVALID-MOBILE-TITLE']; ?>"
                                        required>
                             </div>
+
+                            <div id="recaptcha_error"
+                                    style="display: none;color: red;"><?php echo $Zitiziti['PLEASE_COMPLETE_CAPTCHA_VERIFICATION']; ?>
+                            </div>
+                            <div class="form-group">
+                                <div class="g-recaptcha" data-sitekey="<?php echo $RECAPTCHA_SITE_KEY['RECAPTCHA_SITE_KEY']; ?>"></div>
+                            </div>
+                            
                             <input type="hidden" id="source">
                             <button <?php if ($session_user_id == NULL || empty($session_user_id)) {
                                 ?> disabled="disabled" <?php } ?> type="submit" id="popup_job_enquiry_submit"

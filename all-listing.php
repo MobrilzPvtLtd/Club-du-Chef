@@ -619,6 +619,9 @@ foreach (getAllCities() as $city) {
                                     <div id="home_slide_enq_same" class="log" style="display: none;">
                                         <p><?php echo $Zitiziti['ENQUIRY_OWN_LISTING_MESSAGE']; ?></p>
                                     </div>
+                                    <div id="recaptcha_error" class="log" style="display: none;">
+                                        <p><?php echo $Zitiziti['PLEASE_COMPLETE_CAPTCHA_VERIFICATION']; ?></p>
+                                    </div>
                                     <form name="home_slide_enquiry_form" id="home_slide_enquiry_form" method="post"
                                         enctype="multipart/form-data">
                                         <input type="hidden" class="form-control"
@@ -670,6 +673,11 @@ foreach (getAllCities() as $city) {
                                                 placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                                         </div>
                                         <input type="hidden" id="source">
+
+                                        <div class="form-group">
+                                            <div class="g-recaptcha" data-sitekey="<?php echo $RECAPTCHA_SITE_KEY['RECAPTCHA_SITE_KEY']; ?>"></div>
+                                        </div>
+
                                         <button type="submit" id="home_slide_enquiry_submit"
                                             name="home_slide_enquiry_submit"
                                             class="btn btn-primary"><?php echo $Zitiziti['SUBMIT_REQUIREMENTS']; ?>

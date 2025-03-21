@@ -364,6 +364,14 @@ include "footer.php";
                                 <textarea class="form-control" rows="3" name="enquiry_message"
                                           placeholder="<?php echo $Zitiziti['LEAD-MESSAGE-PLACEHOLDER']; ?>"></textarea>
                             </div>
+
+                            <div id="recaptcha_error"
+                                    style="display: none;color: red;"><?php echo $Zitiziti['PLEASE_COMPLETE_CAPTCHA_VERIFICATION']; ?>
+                            </div>
+                            <div class="form-group">
+                                <div class="g-recaptcha" data-sitekey="<?php echo $RECAPTCHA_SITE_KEY['RECAPTCHA_SITE_KEY']; ?>"></div>
+                            </div>
+
                             <input type="hidden" id="source">
                             <button  <?php if ($session_user_id == NULL || empty($session_user_id)) {
                                 ?> disabled="disabled" <?php } ?> type="submit" id="product_detail_enquiry_submit" name="enquiry_submit"
@@ -487,9 +495,13 @@ $('.multiple-items1').slick({
                         if (html == 1) {
                             $("#product_detail_enq_success").show();
                             $("#product_detail_enquiry_form")[0].reset();
+                            $("#recaptcha_error").hide();
                         } else {
                             if (html == 3) {
                                 $("#product_detail_enq_same").show();
+                                $("#product_detail_enquiry_form")[0].reset();
+                            }else if (html == 4) {
+                                $("#recaptcha_error").show();
                                 $("#product_detail_enquiry_form")[0].reset();
                             }else {
                                 $("#product_detail_enq_fail").show();
